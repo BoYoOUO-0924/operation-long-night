@@ -1,0 +1,8 @@
+# 伺服器執行檔、函式庫、世界存檔與備份（體積大或會自動產生）
+server/
+backups/
+*.jar
+# 機密
+.secrets/
+*.log
+__pycache__/
