@@ -10,12 +10,14 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.CustomizeGuiOverlayEvent;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
@@ -24,20 +26,30 @@ import net.minecraftforge.client.gui.overlay.VanillaGuiOverlay;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-/** 戰術介面：取代原版的愛心、盔甲、飢餓、經驗條、快捷欄與王條。 */
+/**
+ * 戰術介面（寫實風）：頂部方位羅盤（隊友、目標）、左上目標、右上敵軍兵力、左側小隊狀態、
+ * 左下生命與護甲、下方固定物品欄（選中為黃色）。彈藥沿用 TaCZ 自己的顯示。
+ */
 public final class Hud {
     private Hud() {}
 
-    static final int PANEL = 0x99141A22, DIM = 0x33FFFFFF, WHITE = 0xFFFFFFFF, GRAY = 0xFFC8C8C8,
-            AMBER = 0xFFFAC775, TEAL = 0xFF5DCAA5, ORANGE = 0xFFEF9F27, RED = 0xFFE24B4A, PINK = 0xFFF09595, BLUE = 0xFF85B7EB;
-    static final String[] SQUAD = {"白鴉", "戰車", "狐狸"};
+    static final int SHADE = 0x80101418, SHADE_LIGHT = 0x50101418, DIM = 0x40FFFFFF, WHITE = 0xFFFFFFFF, GRAY = 0xFFB8BCC2,
+            AMBER = 0xFFF2C230, AMBER_DARK = 0xFF2A2208, TEAL = 0xFF5DCAA5, ORANGE = 0xFFEF9F27, RED = 0xFFE24B4A,
+            PINK = 0xFFF09595, BLUE = 0xFF6FA8E8;
+
+    /** 小隊：名字、圖示（unifont 字元）。 */
+    static final String[][] SQUAD = {{"白鴉", "⌖"}, {"戰車", "⛨"}, {"狐狸", "≋"}};
 
     // ---------- 字型與繪圖小工具 ----------
-    static MutableComponent t(String s) { return Component.literal(s).withStyle(st -> st.withFont(LnAi.FONT)); }
+    /** 全形標點在 Rajdhani／思源黑體混排時間距會跑掉，換成半形。 */
+    static String norm(String s) {
+        return s.replace("：", ": ").replace("！", "! ").replace("，", ", ").replace("？", "? ");
+    }
+
+    static MutableComponent t(String s) { return Component.literal(norm(s)).withStyle(st -> st.withFont(LnAi.FONT)); }
 
     static int width(String s) { return Minecraft.getInstance().font.width(t(s)); }
 
-    /** 畫字；centered = 以 x 為中心。 */
     static void text(GuiGraphics g, String s, int x, int y, int color, boolean centered) {
         Font f = Minecraft.getInstance().font;
         MutableComponent c = t(s);
@@ -54,9 +66,19 @@ public final class Hud {
         g.pose().popPose();
     }
 
+    static void small(GuiGraphics g, String s, int x, int y, int color, boolean centered) {
+        g.pose().pushPose();
+        g.pose().translate(x, y, 0);
+        g.pose().scale(0.75f, 0.75f, 1);
+        text(g, s, 0, 0, color, centered);
+        g.pose().popPose();
+    }
+
+    /** 粗線條：底下一條深色陰影，讓雪地上也看得到。 */
     static void bar(GuiGraphics g, int x, int y, int w, int h, float v, int color) {
+        g.fill(x - 1, y - 1, x + w + 1, y + h + 1, 0x90000000);
         g.fill(x, y, x + w, y + h, DIM);
-        g.fill(x, y, x + Math.round(w * Math.max(0, Math.min(1, v))), y + h, color);
+        g.fill(x, y, x + Math.round(w * Mth.clamp(v, 0, 1)), y + h, color);
     }
 
     static void box(GuiGraphics g, int x, int y, int w, int h, int color) {
@@ -68,6 +90,8 @@ public final class Hud {
 
     static boolean active() { return ClientInput.active(Minecraft.getInstance().player); }
 
+    static String pad3(int n) { return String.format("%03d", Math.max(0, n)); }
+
     // ---------- 註冊與隱藏原版 ----------
     @Mod.EventBusSubscriber(modid = LnAi.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static final class Setup {
@@ -76,6 +100,9 @@ public final class Hud {
             e.registerAboveAll("ln_hud", (gui, g, pt, w, h) -> { if (active()) draw(g, w, h); });
         }
     }
+
+    static Component bossName = null;
+    static long bossAt = -100;
 
     @Mod.EventBusSubscriber(modid = LnAi.MODID, value = Dist.CLIENT)
     public static final class Hide {
@@ -89,18 +116,20 @@ public final class Hud {
                 e.setCanceled(true);
         }
 
-        /** 王條（敵軍剩餘兵力）換成細條＋自己的字。 */
+        /** 聊天（對白）往上移，避開左下的生命面板。 */
+        @SubscribeEvent
+        public static void chat(CustomizeGuiOverlayEvent.Chat e) {
+            if (active()) e.setPosY(e.getPosY() - 64);
+        }
+
+        /** 王條（敵軍剩餘兵力）不畫在中間，改成右上角一行字。 */
         @SubscribeEvent
         public static void boss(CustomizeGuiOverlayEvent.BossEventProgress e) {
             if (!active()) return;
             e.setCanceled(true);
-            GuiGraphics g = e.getGuiGraphics();
-            int cx = e.getWindow().getGuiScaledWidth() / 2, y = e.getY() + 2;
-            Component name = e.getBossEvent().getName().copy().withStyle(st -> st.withFont(LnAi.FONT));
-            Font f = Minecraft.getInstance().font;
-            g.drawString(f, name, cx - f.width(name) / 2, y, WHITE, true);
-            bar(g, cx - 90, y + 11, 180, 3, e.getBossEvent().getProgress(), RED);
-            e.setIncrement(20);
+            e.setIncrement(0);
+            bossName = e.getBossEvent().getName();
+            bossAt = ClientState.now();
         }
     }
 
@@ -109,14 +138,16 @@ public final class Hud {
         Minecraft mc = Minecraft.getInstance();
         LocalPlayer p = mc.player;
         long now = ClientState.now();
-        // 介面寬度不到 560 時整體縮小，避免物品欄和血量、彈藥疊在一起
-        float s = Math.min(1f, w / 560f);
+        float s = Math.min(1f, w / 560f);   // 介面太窄時整體縮小
         g.pose().pushPose();
         g.pose().scale(s, s, 1);
         w = Math.round(w / s);
         h = Math.round(h / s);
+        refreshSquad(p, now);
+        compass(g, p, w);
         objective(g, p);
-        squad(g, p, now);
+        enemies(g, w, now);
+        squad(g, p);
         feed(g, w, h, now);
         center(g, w, h, now);
         health(g, p, h);
@@ -124,63 +155,131 @@ public final class Hud {
         g.pose().popPose();
     }
 
-    static void objective(GuiGraphics g, LocalPlayer p) {
-        if (ClientState.objective.isEmpty()) return;
-        int x = 8, y = 8;
-        text(g, "目標", x, y, AMBER, false);
-        y += 11;
-        for (var line : Minecraft.getInstance().font.split(t(ClientState.objective), 150)) {
-            g.drawString(Minecraft.getInstance().font, line, x, y, WHITE, true);
-            y += 10;
-        }
-        if (ClientState.waypoint != null)
-            text(g, "距離 " + Math.round(Math.sqrt(p.distanceToSqr(ClientState.waypoint))) + "m", x, y, GRAY, false);
+    // ---- 頂部方位羅盤 ----
+    static final int COMPASS_W = 240, SPAN = 120;   // 寬度、可見角度
+
+    /** 水平方位角：0 = 北，90 = 東。 */
+    static float heading(LocalPlayer p) { return Mth.wrapDegrees(p.getYRot() + 180f) < 0 ? Mth.wrapDegrees(p.getYRot() + 180f) + 360 : Mth.wrapDegrees(p.getYRot() + 180f); }
+
+    static float bearing(Vec3 from, Vec3 to) {
+        float b = (float) Math.toDegrees(Math.atan2(to.x - from.x, -(to.z - from.z)));
+        return b < 0 ? b + 360 : b;
     }
 
+    static void compass(GuiGraphics g, LocalPlayer p, int w) {
+        int cx = w / 2, y = 10;
+        float head = heading(p), ppd = COMPASS_W / (float) SPAN;
+        g.fill(cx - COMPASS_W / 2, y + 6, cx + COMPASS_W / 2, y + 7, 0x60FFFFFF);
+        String[] names = {"N", "NE", "E", "SE", "S", "SW", "W", "NW"};
+        for (int d = 0; d < 360; d += 15) {
+            float delta = Mth.wrapDegrees(d - head);
+            if (Math.abs(delta) > SPAN / 2f) continue;
+            int x = cx + Math.round(delta * ppd);
+            int alpha = (int) (255 * (1 - Math.abs(delta) / (SPAN / 2f) * 0.7f));
+            int col = (alpha << 24) | 0xFFFFFF;
+            if (d % 45 == 0) {
+                g.fill(x, y + 2, x + 1, y + 7, col);
+                text(g, names[d / 45], x + 1, y - 8, col, true);
+            } else {
+                g.fill(x, y + 4, x + 1, y + 7, col);
+                if (d % 30 == 0) small(g, pad3(d), x + 1, y - 6, (alpha * 3 / 4 << 24) | 0xFFFFFF, true);
+            }
+        }
+        text(g, "▼", cx + 1, y + 8, AMBER, true);
+        Vec3 eye = p.position();
+        // 隊友
+        for (String[] m : SQUAD) {
+            LivingEntity e = find(m[0]);
+            if (e != null) marker(g, cx, y, ppd, head, bearing(eye, e.position()), m[1], m[0], TEAL);
+        }
+        // 目標
+        if (ClientState.waypoint != null)
+            marker(g, cx, y, ppd, head, bearing(eye, ClientState.waypoint), "◆", "OBJ " + Math.round(Math.sqrt(p.distanceToSqr(ClientState.waypoint))) + "M", AMBER);
+    }
+
+    static void marker(GuiGraphics g, int cx, int y, float ppd, float head, float bearing, String icon, String label, int color) {
+        float delta = Mth.wrapDegrees(bearing - head);
+        boolean edge = Math.abs(delta) > SPAN / 2f;
+        float d = Mth.clamp(delta, -SPAN / 2f, SPAN / 2f);
+        int x = cx + Math.round(d * ppd);
+        int col = edge ? (color & 0x00FFFFFF) | 0x90000000 : color;
+        text(g, edge ? (delta < 0 ? "◀" : "▶") : icon, x + 1, y + 18, col, true);
+        if (!edge) small(g, label, x + 1, y + 29, col, true);
+    }
+
+    // ---- 左上目標 ----
+    static void objective(GuiGraphics g, LocalPlayer p) {
+        if (ClientState.objective.isEmpty()) return;
+        int x = 10, y = 10;
+        g.fill(x - 4, y - 3, x - 2, y + 21, AMBER);
+        String line = "OBJ // " + ClientState.objective;
+        Font f = Minecraft.getInstance().font;
+        var lines = f.split(t(line), 170);
+        for (var l : lines) { g.drawString(f, l, x, y, WHITE, true); y += 10; }
+        if (ClientState.waypoint != null)
+            text(g, "距離 " + Math.round(Math.sqrt(p.distanceToSqr(ClientState.waypoint))) + "M", x, y + 1, AMBER, false);
+    }
+
+    // ---- 右上敵軍兵力 ----
+    static void enemies(GuiGraphics g, int w, long now) {
+        if (bossName == null || now - bossAt > 5 || now < bossAt) return;
+        String s = norm(bossName.getString()).trim();
+        int x = w - 10 - width(s);
+        text(g, "●", x - 9, 10, RED, false);
+        text(g, s, x, 10, WHITE, false);
+    }
+
+    // ---- 左側小隊狀態 ----
     private static final List<LivingEntity> squadCache = new ArrayList<>();
     private static long squadAt = -100;
 
+    static void refreshSquad(LocalPlayer p, long now) {
+        if (now - squadAt <= 10 && now >= squadAt) return;
+        squadAt = now;
+        squadCache.clear();
+        for (Entity e : Minecraft.getInstance().level.entitiesForRendering())
+            if (e instanceof LivingEntity le && le != p && le.hasCustomName()) {
+                String n = le.getCustomName().getString();
+                for (String[] s : SQUAD) if (s[0].equals(n)) squadCache.add(le);
+            }
+    }
+
     static LivingEntity find(String name) {
-        for (LivingEntity e : squadCache) if (e.isAlive() && e.hasCustomName() && e.getCustomName().getString().equals(name)) return e;
+        for (LivingEntity e : squadCache) if (e.isAlive() && e.getCustomName().getString().equals(name)) return e;
         return null;
     }
 
-    static void squad(GuiGraphics g, LocalPlayer p, long now) {
-        if (now - squadAt > 10 || now < squadAt) {
-            squadAt = now;
-            squadCache.clear();
-            for (Entity e : Minecraft.getInstance().level.entitiesForRendering())
-                if (e instanceof LivingEntity le && le != p && le.hasCustomName()) {
-                    String n = le.getCustomName().getString();
-                    for (String s : SQUAD) if (s.equals(n)) squadCache.add(le);
-                }
-        }
+    static void squad(GuiGraphics g, LocalPlayer p) {
         if (squadCache.isEmpty()) return;
-        int x = 8, y = 76, wdt = 92;
-        g.fill(x - 4, y - 4, x + wdt + 4, y + 13 + SQUAD.length * 17, PANEL);
-        text(g, "獵犬小隊", x, y, TEAL, false);
-        y += 13;
-        for (String s : SQUAD) {
-            LivingEntity e = find(s);
-            text(g, s, x, y, e == null ? 0xFF777777 : WHITE, false);
-            if (e == null) { right(g, "—", x + wdt, y, GRAY); y += 17; continue; }
-            right(g, Math.round(e.distanceTo(p)) + "m", x + wdt, y, GRAY);
+        int x = 10, y = 64, rowW = 112;
+        small(g, "獵犬小隊", x, y, GRAY, false);
+        y += 9;
+        for (String[] m : SQUAD) {
+            LivingEntity e = find(m[0]);
+            g.fill(x, y, x + rowW, y + 18, SHADE);
+            g.fill(x, y, x + 16, y + 18, 0x60FFFFFF);
+            text(g, m[1], x + 8, y + 5, e == null ? 0xFF777777 : WHITE, true);
+            text(g, m[0], x + 20, y + 2, e == null ? 0xFF777777 : WHITE, false);
+            if (e == null) { right(g, "—", x + rowW - 4, y + 2, GRAY); y += 21; continue; }
+            right(g, String.format("%02dM", Math.min(99, Math.round(e.distanceTo(p)))), x + rowW - 4, y + 2, GRAY);
             float v = e.getHealth() / e.getMaxHealth();
-            bar(g, x, y + 10, wdt, 2, v, v > 0.6f ? TEAL : v > 0.3f ? ORANGE : RED);
-            y += 17;
+            bar(g, x + 20, y + 12, rowW - 24, 2, v, v > 0.6f ? TEAL : v > 0.3f ? ORANGE : RED);
+            y += 21;
         }
     }
 
+    // ---- 右側擊殺紀錄 ----
     static void feed(GuiGraphics g, int w, int h, long now) {
-        int y = h * 2 / 5;
+        int y = 40;
         ClientState.FEED.removeIf(f -> now - f.time() > 120 || now < f.time());
         for (ClientState.Feed f : ClientState.FEED) {
-            String a = f.killer(), b = " 擊倒了 ", c = f.role();
-            int x = w - 8 - width(a + b + c);
+            String a = f.killer(), b = "  ✕  ", c = f.role();
+            int x = w - 10 - width(a + b + c);
+            g.fill(x - 4, y - 2, w - 6, y + 10, SHADE_LIGHT);
             text(g, a, x, y, f.mine() ? AMBER : TEAL, false);
             text(g, b, x + width(a), y, GRAY, false);
             text(g, c, x + width(a + b), y, PINK, false);
-            y += 11;
+            y += 13;
         }
     }
 
@@ -188,7 +287,7 @@ public final class Hud {
         if (now - ClientState.bigKillTime < 30 && now >= ClientState.bigKillTime)
             text(g, ClientState.bigKill, w / 2, h / 2 + 22, PINK, true);
         if (now - ClientState.arcTime <= 1 && now >= ClientState.arcTime)
-            text(g, ClientState.arcDist < 0 ? "落點 —" : "落點 " + Math.round(ClientState.arcDist) + "m", w / 2, h / 2 + 12, WHITE, true);
+            text(g, ClientState.arcDist < 0 ? "落點 —" : "落點 " + Math.round(ClientState.arcDist) + "M", w / 2, h / 2 + 12, WHITE, true);
         Gear.Med m = ClientState.healMed;
         if (m != null) {
             float left = Math.max(0, ClientState.healTotal - (now - ClientState.healStart)) / 20f;
@@ -198,6 +297,7 @@ public final class Hud {
         }
     }
 
+    // ---- 左下生命與護甲 ----
     static float durability(ItemStack s) {
         if (s.isEmpty()) return -1;
         if (!s.isDamageableItem() || s.getMaxDamage() <= 0) return 1;
@@ -205,54 +305,55 @@ public final class Hud {
     }
 
     static void health(GuiGraphics g, LocalPlayer p, int h) {
-        int x = 8, y = h - 50, wdt = 110;
-        g.fill(x - 4, y - 4, x + wdt + 4, h - 4, PANEL);
+        int x = 10, y = h - 54, wdt = 120;
+        g.fill(x - 6, y - 6, x + wdt + 6, h - 6, SHADE_LIGHT);
         int hp = Math.round(p.getHealth() / p.getMaxHealth() * 100);
-        big(g, String.valueOf(hp), x, y, hp > 30 ? WHITE : PINK, 2f);
-        text(g, "生命", x + width(String.valueOf(hp)) * 2 + 4, y + 7, GRAY, false);
-        bar(g, x, y + 19, wdt, 4, p.getHealth() / p.getMaxHealth(), hp > 30 ? WHITE : RED);
+        int col = hp > 30 ? WHITE : PINK;
+        big(g, String.valueOf(hp), x, y, col, 2.2f);
+        int nx = x + Math.round(width(String.valueOf(hp)) * 2.2f) + 3;
+        text(g, "/ 100", nx, y + 4, GRAY, false);
+        small(g, "HP", nx, y + 14, GRAY, false);
+        bar(g, x, y + 24, wdt, 3, p.getHealth() / p.getMaxHealth(), hp > 30 ? WHITE : RED);
         float helm = durability(p.getItemBySlot(EquipmentSlot.HEAD)), vest = durability(p.getItemBySlot(EquipmentSlot.CHEST));
-        int half = wdt / 2 - 3;
-        text(g, "頭盔", x, y + 27, GRAY, false);
-        bar(g, x, y + 37, half, 3, Math.max(0, helm), helm < 0 ? DIM : BLUE);
-        text(g, "防彈衣", x + half + 6, y + 27, GRAY, false);
-        bar(g, x + half + 6, y + 37, half, 3, Math.max(0, vest), vest < 0 ? DIM : BLUE);
+        small(g, "防彈衣", x, y + 31, GRAY, false);
+        bar(g, x + 30, y + 32, wdt - 30, 3, Math.max(0, vest), vest < 0 ? DIM : BLUE);
+        small(g, "頭盔", x, y + 40, GRAY, false);
+        bar(g, x + 30, y + 41, wdt - 30, 3, Math.max(0, helm), helm < 0 ? DIM : BLUE);
         if (p.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) && p.hasEffect(MobEffects.DIG_SLOWDOWN))
-            text(g, "寒冷：移動變慢", x, y - 16, BLUE, false);
+            text(g, "❄ 寒冷：移動變慢", x, y - 18, BLUE, false);
     }
 
+    // ---- 下方固定物品欄 ----
     static void slots(GuiGraphics g, LocalPlayer p, int w, int h) {
         Inventory inv = p.getInventory();
         int[] slots = {0, 1, Gear.SLOT_GRENADE, Gear.SLOT_MED};
-        String[] names = {"1 主武器", "2 副武器", "4 投擲", "5 醫療"};
-        int bw = 60, bh = 26, gap = 3, x0 = Math.max(130, w / 2 - (bw * 4 + gap * 3) / 2 - 20), y = h - bh - 6;
+        String[] keys = {"1", "2", "4", "5"};
+        int bw = 66, bh = 22, gap = 3, x0 = Math.max(150, w / 2 - (bw * 4 + gap * 3) / 2), y = h - bh - 8;
         for (int i = 0; i < 4; i++) {
             int x = x0 + i * (bw + gap);
             boolean sel = inv.selected == slots[i];
-            g.fill(x, y, x + bw, y + bh, sel ? 0xCC141A22 : PANEL);
-            box(g, x, y, bw, bh, sel ? WHITE : 0x55FFFFFF);
-            text(g, names[i], x + 4, y + 3, GRAY, false);
+            g.fill(x, y, x + bw, y + bh, sel ? 0xE0F2C230 : SHADE);
+            if (!sel) g.fill(x, y + bh - 1, x + bw, y + bh, 0x40FFFFFF);
+            int fg = sel ? AMBER_DARK : WHITE, sub = sel ? AMBER_DARK : GRAY;
             ItemStack s = inv.getItem(slots[i]);
             String line;
+            ItemStack icon = s;
             if (i == 2) {
-                Gear.Grenade gr = ClientState.grenade;
-                ItemStack shown = Gear.Grenade.of(s) != null ? s : new ItemStack(gr.item());
-                Gear.Grenade cur = Gear.Grenade.of(shown);
-                int n = cur == null ? 0 : ClientInput.count(inv, cur);
-                line = (cur == null ? gr.label : cur.label).split(" ")[0] + " ×" + n;
-                if (n > 0) g.renderItem(shown, x + bw - 18, y + 9);
+                Gear.Grenade cur = Gear.Grenade.of(s);
+                if (cur == null) { cur = ClientState.grenade; icon = new ItemStack(cur.item()); }
+                line = cur.label.split(" ")[0] + " ×" + ClientInput.count(inv, cur);
             } else if (i == 3) {
                 int n = 0;
                 for (Gear.Med m : Gear.Med.values()) n += ClientInput.count(inv, m);
                 Gear.Med m = Gear.Med.of(s);
                 line = (m == null ? "醫療" : m.label) + " ×" + n;
-                if (!s.isEmpty()) g.renderItem(s, x + bw - 18, y + 9);
             } else {
                 line = s.isEmpty() ? "—" : s.getHoverName().getString();
-                if (!s.isEmpty()) g.renderItem(s, x + bw - 18, y + 9);
             }
-            while (width(line) > bw - 22 && line.length() > 1) line = line.substring(0, line.length() - 1);
-            text(g, line, x + 4, y + 14, WHITE, false);
+            small(g, keys[i], x + 3, y + 2, sub, false);
+            if (!icon.isEmpty()) g.renderItem(icon, x + 3, y + 5);
+            while (width(line) > bw - 25 && line.length() > 1) line = line.substring(0, line.length() - 1);
+            g.drawString(Minecraft.getInstance().font, t(line), x + 22, y + 8, fg, !sel);
         }
     }
 }

@@ -52,7 +52,13 @@ def surf(x, z):
     return t if t != s else t + 1
 
 
+def norm(text):
+    """全形標點在戰術字型裡間距會跑掉，換成半形。"""
+    return text.replace("：", ": ").replace("！", "! ").replace("，", ", ").replace("？", "? ")
+
+
 def say_line(who, text):
+    text = norm(text)
     color = SPK.get(who, "white")
     if who == "目標":
         return [f"tellraw @a {jtext([{'text': '▶ 目標：', 'color': color, 'bold': True}, {'text': text, 'color': 'white'}])}",
