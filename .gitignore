@@ -6,3 +6,4 @@ backups/
 .secrets/
 *.log
 __pycache__/
+generators/out/__pycache__/

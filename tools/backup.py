@@ -11,13 +11,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 
-world = ROOT / "server" / "world"
+import rcon  # noqa: E402
+
+world = rcon.world_dir()
 note = "_".join(sys.argv[1:]) or "manual"
-dest = ROOT / "backups" / f"{datetime.now():%Y%m%d-%H%M%S}_{note}"
+dest = ROOT / "backups" / f"{datetime.now():%Y%m%d-%H%M%S}_{world.name}_{note}"
 
 online = False
 try:
-    import rcon
     rcon.run(["save-off", "save-all flush"])
     online = True
 except OSError:

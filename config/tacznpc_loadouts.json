@@ -297,5 +297,27 @@
         "id": "tacznpcs:entity/villager2.png"
       }
     ]
+  },
+  "ln_officer": {
+    "aligned": [
+      "blue",
+      "players"
+    ],
+    "opposed": [],
+    "equipment": {
+      "table": "ln:npc/empty",
+      "dropChances": {
+        "mainhand": 0,
+        "head": 0,
+        "chest": 0,
+        "legs": 0,
+        "feet": 0
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/default.png"
+      }
+    ]
   }
 }

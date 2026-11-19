@@ -46,9 +46,19 @@ def run(commands):
     return out
 
 
+def world_dir() -> Path:
+    """依 server.properties 的 level-name 找到目前使用的世界資料夾。"""
+    props = (ROOT / "server" / "server.properties").read_text(encoding="utf-8")
+    for line in props.splitlines():
+        if line.startswith("level-name="):
+            return ROOT / "server" / line.split("=", 1)[1].strip()
+    return ROOT / "server" / "world"
+
+
 def deploy():
     src = ROOT / "datapack"
-    dst = ROOT / "server" / "world" / "datapacks"
+    dst = world_dir() / "datapacks"
+    dst.mkdir(parents=True, exist_ok=True)
     for pack in src.iterdir():
         if pack.is_dir():
             target = dst / pack.name
