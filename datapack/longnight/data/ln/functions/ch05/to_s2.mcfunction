@@ -9,5 +9,5 @@ tp @e[tag=ln_baiya] 88 142 959
 data merge entity @e[tag=ln_officer,limit=1] {NoAI:1b}
 spawnpoint @a 104 136 965
 effect clear @a slowness
-bossbar set ln:obj name {"text": "目標：在車庫找到零件箱"}
+bossbar set ln:obj name {"text": "目標：在車庫找到零件箱", "font": "lnai:ui"}
 bossbar set ln:obj color yellow

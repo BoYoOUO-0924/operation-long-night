@@ -1,4 +1,5 @@
 # 由 tools/build_level.py 自動產生，請勿手動修改
-tellraw @a [{"text": "▶ 目標：", "color": "yellow", "bold": true}, {"text": "擊退主攻部隊！注意地上的紅色標記，那是砲彈落點。", "color": "white"}]
-title @a actionbar {"text": "擊退主攻部隊！注意地上的紅色標記，那是砲彈落點。", "color": "yellow"}
+tellraw @a {"text": "", "font": "lnai:ui", "extra": [{"text": "▶ 目標：", "color": "yellow", "bold": true}, {"text": "擊退主攻部隊！注意地上的紅色標記，那是砲彈落點。", "color": "white"}]}
+lnhud objective @a 擊退主攻部隊！注意地上的紅色標記，那是砲彈落點。
 execute as @a at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.6 1.2
+lnhud waypoint @a clear

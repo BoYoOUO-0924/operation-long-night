@@ -20,10 +20,10 @@ bossbar set ln:obj players @a
 bossbar set ln:obj visible true
 bossbar set ln:obj max 1
 bossbar set ln:obj value 1
-bossbar set ln:obj name {"text": "目標：前往山上的氣象站"}
+bossbar set ln:obj name {"text": "目標：前往山上的氣象站", "font": "lnai:ui"}
 bossbar set ln:obj color yellow
 title @a times 20 80 20
-title @a subtitle {"text": "零下四十度", "color": "gray"}
-title @a title {"text": "第五章　寒霜陷阱", "color": "white", "bold": true}
+title @a subtitle {"text": "零下四十度", "color": "gray", "font": "lnai:ui"}
+title @a title {"text": "第五章　寒霜陷阱", "color": "white", "bold": true, "font": "lnai:ui"}
 scoreboard players set #stage ln 1
 scoreboard players set #t ln 0

@@ -1,10 +1,7 @@
 package dev.longnight.lnai;
 
 import java.util.Map;
-import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -48,22 +45,19 @@ final class CombatEvents {
         victim.saveWithoutId(tag);
         String role = ROLE.getOrDefault(tag.getString("template"), "敵兵");
 
-        MutableComponent killer;
-        if (s instanceof ServerPlayer p) {
-            killer = Component.literal(p.getGameProfile().getName()).withStyle(ChatFormatting.AQUA, ChatFormatting.BOLD);
-            p.displayClientMessage(Component.literal("✕ 擊殺 " + role).withStyle(ChatFormatting.RED, ChatFormatting.BOLD), true);
-            level.playSound(null, p.blockPosition(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS, 0.7f, 0.6f);
+        String killer;
+        ServerPlayer shooterPlayer = s instanceof ServerPlayer sp ? sp : null;
+        if (shooterPlayer != null) {
+            killer = shooterPlayer.getGameProfile().getName();
+            level.playSound(null, shooterPlayer.blockPosition(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS, 0.7f, 0.6f);
         } else if (s != null && s.hasCustomName()) {
-            killer = s.getCustomName().copy().withStyle(ChatFormatting.BOLD);
+            killer = s.getCustomName().getString();
         } else if (s instanceof LivingEntity le && "blue".equals(Orders.side(le))) {
-            killer = Component.literal("友軍").withStyle(ChatFormatting.AQUA);
+            killer = "友軍";
         } else {
             return;
         }
-        Component msg = Component.literal("⌖ ").withStyle(ChatFormatting.DARK_GRAY)
-                .append(killer)
-                .append(Component.literal(" 擊倒了 ").withStyle(ChatFormatting.GRAY))
-                .append(Component.literal(role).withStyle(ChatFormatting.RED));
-        for (ServerPlayer p : level.players()) p.sendSystemMessage(msg);
+        for (ServerPlayer p : level.players())
+            Net.to(p, new Net.Kill(p == shooterPlayer ? "你" : killer, role, true, p == shooterPlayer));
     }
 }
