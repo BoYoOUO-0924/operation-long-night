@@ -5,7 +5,10 @@ function ln:build/station_place
 kill @e[type=item]
 time set 18000
 weather thunder 1000000
-scoreboard players set #wave ln 0
+scoreboard players set #c2 ln 2
+scoreboard players set #c3 ln 3
+scoreboard players set #c8 ln 8
+scoreboard players set #c100 ln 100
 gamemode adventure @a
 clear @a
 spreadplayers 178 958 0 3 false @a

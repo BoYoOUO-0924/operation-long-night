@@ -407,6 +407,8 @@ c.box(22, 0, 32, 30, 0, 38, "polished_andesite")             # 油槽底座
 c.box(27, 1, 25, 27, 3, 25, "air")
 c.box(25, 1, 27, 29, 2, 28, "iron_block")
 c.set(26, 3, 27, "lightning_rod[facing=up]")
+c.set(28, 3, 27, "lever[face=floor,facing=north,powered=true]")   # 發電機開關（劇情事件會關掉它）
+GEN_LEVER = (28, 3 + c.oy, 27)
 c.set(30, 6, 28, "campfire[lit=false,signal_fire=false]")
 for zc in (33, 37):                                          # 圓筒油槽（側躺）
     for x in range(22, 31):
@@ -470,6 +472,10 @@ anchors = {
     "parts_button": a(44, 2, 12),
     "checkpoint": a(20, 1, 10),
     "boiler": a(bx, 1, bz),
+    "generator_lever": a(*GEN_LEVER),
+    "def_tank": a(40, 1, 10),
+    "def_fox": a(3, 1, 10),
+    "center": a(23, 1, 10),
     "viewpoint": a(70, 18, 48),
     "start_center": [178, 958],
     "enemy_spawns": {

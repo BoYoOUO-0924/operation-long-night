@@ -2718,6 +2718,7 @@ setblock ~30 ~10 ~26 light_gray_concrete
 fill ~38 ~10 ~26 ~45 ~10 ~26 light_gray_concrete
 setblock ~24 ~10 ~27 light_gray_concrete_powder
 setblock ~26 ~10 ~27 lightning_rod[facing=up]
+setblock ~28 ~10 ~27 lever[face=floor,facing=north,powered=true]
 setblock ~30 ~10 ~27 light_gray_concrete
 fill ~38 ~10 ~27 ~45 ~10 ~27 light_gray_concrete
 setblock ~24 ~10 ~28 light_gray_concrete

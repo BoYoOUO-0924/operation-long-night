@@ -7,3 +7,7 @@ backups/
 *.log
 __pycache__/
 generators/out/__pycache__/
+.toolchain/
+mod/build/
+mod/.gradle/
+mod/run/

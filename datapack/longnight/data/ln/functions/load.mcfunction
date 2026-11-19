@@ -1,6 +1,7 @@
 # 長夜：載入時初始化（不會重置進行中的關卡）
 scoreboard objectives add ln dummy
 scoreboard objectives add ln_mark dummy
+scoreboard objectives add ln_age dummy
 bossbar add ln:obj ""
 gamerule doMobSpawning false
 gamerule keepInventory true
