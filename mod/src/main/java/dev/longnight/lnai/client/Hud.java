@@ -35,9 +35,9 @@ public final class Hud {
     private Hud() {}
 
     // 低彩度色盤
-    static final int TEXT = 0xFFD9D6CC, SUB = 0xFF8E8C84, FAINT = 0xFF5E5D58, ACCENT = 0xFFB9AE8C,
-            OK = 0xFF8FA08A, WARN = 0xFFB59A5E, BAD = 0xFFA4564C, STEEL = 0xFF8E9AA6,
-            PANEL = 0x70000000, TRACK = 0x30FFFFFF;
+    static final int TEXT = 0xFFE4E2DA, SUB = 0xFFC8D0D8, FAINT = 0xFFA4ACB4, ACCENT = 0xFFB9AE8C, OBJ = 0xFFFFB020,
+            OK = 0xFF9DB497, WARN = 0xFFD2AE62, BAD = 0xFFC8604F, STEEL = 0xFF8E9AA6,
+            PANEL = 0x70000000, TRACK = 0x4DE6E6E6;
 
     /** 小隊：名字、圖示（unifont 字元）。 */
     static final String[][] SQUAD = {{"白鴉", "⌖"}, {"戰車", "⛨"}, {"狐狸", "≋"}};
@@ -184,13 +184,14 @@ public final class Hud {
     static void compass(GuiGraphics g, LocalPlayer p, int w) {
         int cx = w / 2, y = 10;
         float head = heading(p), ppd = COMPASS_W / (float) SPAN;
-        g.fill(cx - COMPASS_W / 2, y + 6, cx + COMPASS_W / 2, y + 7, 0x40FFFFFF);
+        g.fillGradient(0, 0, w, y + 46, 0x66000000, 0x00000000);   // 整條上緣淡出，任何天氣都看得清楚刻度
+        g.fill(cx - COMPASS_W / 2, y + 6, cx + COMPASS_W / 2, y + 7, 0x80FFFFFF);
         String[] names = {"N", "NE", "E", "SE", "S", "SW", "W", "NW"};
         for (int d = 0; d < 360; d += 15) {
             float delta = Mth.wrapDegrees(d - head);
             if (Math.abs(delta) > SPAN / 2f) continue;
             int x = cx + Math.round(delta * ppd);
-            float f = 1 - Math.abs(delta) / (SPAN / 2f) * 0.75f;
+            float f = 1 - Math.abs(delta) / (SPAN / 2f) * 0.5f;
             if (d % 45 == 0) {
                 g.fill(x, y + 2, x + 1, y + 7, fade(TEXT, f));
                 text(g, names[d / 45], x + 1, y - 8, fade(TEXT, f), true);
@@ -206,7 +207,7 @@ public final class Hud {
             if (e != null) marker(g, cx, y, ppd, head, bearing(eye, e.position()), m[1], m[0], OK);
         }
         if (ClientState.waypoint != null)
-            marker(g, cx, y, ppd, head, bearing(eye, ClientState.waypoint), "◇", "OBJ " + Math.round(Math.sqrt(p.distanceToSqr(ClientState.waypoint))) + "M", ACCENT);
+            marker(g, cx, y, ppd, head, bearing(eye, ClientState.waypoint), "◆", "OBJ " + Math.round(Math.sqrt(p.distanceToSqr(ClientState.waypoint))) + "M", OBJ);
     }
 
     static void marker(GuiGraphics g, int cx, int y, float ppd, float head, float bearing, String icon, String label, int color) {
@@ -222,8 +223,8 @@ public final class Hud {
     static void objective(GuiGraphics g, LocalPlayer p) {
         if (ClientState.objective.isEmpty()) return;
         int x = 10, y = 10;
-        g.fill(x - 4, y - 2, x - 3, y + 20, fade(ACCENT, 0.8f));
-        small(g, "OBJ", x, y, ACCENT, false);
+        g.fill(x - 4, y - 2, x - 3, y + 20, OBJ);
+        small(g, "OBJ", x, y, OBJ, false);
         y += 8;
         Font f = Minecraft.getInstance().font;
         for (var l : f.split(t(ClientState.objective), 170)) { g.drawString(f, l, x, y, TEXT, true); y += 10; }
@@ -234,10 +235,22 @@ public final class Hud {
     // ---- 右上敵軍兵力 ----
     static void enemies(GuiGraphics g, int w, long now) {
         if (bossName == null || now - bossAt > 5 || now < bossAt) return;
-        String s = norm(bossName.getString()).trim();
+        var m = java.util.regex.Pattern.compile("[0-9]+").matcher(bossName.getString());
+        int[] n = {-1, -1};
+        for (int i = 0; i < 2 && m.find(); i++) n[i] = Integer.parseInt(m.group());
+        String s = n[1] >= 0 ? "敵軍剩餘兵力 " + pad3(n[0]) + "   |   場上 " + String.format("%02d", n[1]) : norm(bossName.getString()).trim();
         int x = w - 10 - width(s);
-        text(g, "•", x - 7, 10, BAD, false);
+        diamond(g, x - 9, 13, 3, 0x40FF3B30);   // 微光
+        diamond(g, x - 9, 13, 2, 0xFFE0403A);
         text(g, s, x, 10, SUB, false);
+    }
+
+    /** 實心菱形，中心 (cx, cy)，半徑 r。 */
+    static void diamond(GuiGraphics g, int cx, int cy, int r, int color) {
+        for (int i = -r; i <= r; i++) {
+            int half = r - Math.abs(i);
+            g.fill(cx - half, cy + i, cx + half + 1, cy + i + 1, color);
+        }
     }
 
     // ---- 左側小隊 ----
@@ -270,7 +283,7 @@ public final class Hud {
             int fg = e == null ? FAINT : TEXT;
             g.fill(x, y, x + rowW, y + 17, PANEL);
             g.fill(x, y, x + 1, y + 17, e == null ? FAINT : SUB);
-            text(g, m[1], x + 8, y + 4, e == null ? FAINT : SUB, true);
+            text(g, m[1], x + 8, y + 4, e == null ? FAINT : TEXT, true);
             text(g, m[0], x + 17, y + 2, fg, false);
             if (e == null) { right(g, "—", x + rowW - 4, y + 2, FAINT); y += 19; continue; }
             small(g, String.format("%02dM", Math.min(99, Math.round(e.distanceTo(p)))), x + rowW - 4 - Math.round(width("00M") * 0.75f), y + 3, SUB, false);
@@ -366,10 +379,30 @@ public final class Hud {
     }
 
     // ---- 右下彈藥 ----
+    static final net.minecraft.resources.ResourceLocation GRENADE_ICON = new net.minecraft.resources.ResourceLocation(LnAi.MODID, "textures/gui/grenade.png"),
+            MED_ICON = new net.minecraft.resources.ResourceLocation(LnAi.MODID, "textures/gui/med.png");
+
     static void ammo(GuiGraphics g, LocalPlayer p, int w, int h) {
-        Ammo.Info a = Ammo.of(p.getMainHandItem(), p.getInventory());
+        // 投擲物、醫療數量（一直顯示）：[4] 手雷 ×2   [5] 繃帶 ×8
+        Inventory inv = p.getInventory();
+        Gear.Grenade gr = ClientInput.pickGrenade(inv, ClientState.grenade);
+        int gn = gr == null ? 0 : ClientInput.count(inv, gr), mn = 0;
+        for (Gear.Med m : Gear.Med.values()) mn += ClientInput.count(inv, m);
+        g.fillGradient(w - 150, h - 70, w, h, 0x00000000, 0x55000000);   // 右下淡淡的底，雪地上也看得清
+        int qx = w - 12, qy = h - 14;
+        String ms = "×" + mn, gs = "×" + gn;
+        qx -= width(ms);
+        text(g, ms, qx, qy, mn == 0 ? FAINT : TEXT, false);
+        tinted(g, MED_ICON, qx - 12, qy - 1, 10, mn == 0 ? FAINT : TEXT);
+        small(g, "5", qx - 19, qy + 1, SUB, false);
+        qx -= 34 + width(gs);
+        text(g, gs, qx, qy, gn == 0 ? FAINT : TEXT, false);
+        tinted(g, GRENADE_ICON, qx - 12, qy - 1, 10, gn == 0 ? FAINT : TEXT);
+        small(g, "4", qx - 19, qy + 1, SUB, false);
+
+        Ammo.Info a = Ammo.of(p.getMainHandItem(), inv);
         if (a == null) return;
-        int x = w - 12, y = h - 44;
+        int x = w - 12, y = h - 56;
         small(g, a.name() + (a.mode().isEmpty() ? "" : "  ·  " + a.mode()), x - Math.round(width(a.name() + (a.mode().isEmpty() ? "" : "  ·  " + a.mode())) * 0.75f), y, SUB, false);
         String res = a.reserve() < 0 ? "" : " / " + a.reserve();
         int rw = width(res);
