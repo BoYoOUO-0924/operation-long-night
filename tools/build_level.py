@@ -420,16 +420,16 @@ fn("to_s5", [
     *goto(5),
     "execute store result score #players ln if entity @a[gamemode=adventure]",
     "execute if score #players ln matches ..0 run scoreboard players set #players ln 1",
-    # 兵力：1 人 20，每多 1 人 +7；同時在場上限：6，每多 1 人 +2
+    # 兵力：1 人 40，每多 1 人 +14；同時在場上限：10，每多 1 人 +3
     "scoreboard players operation #budget ln = #players ln",
     "scoreboard players remove #budget ln 1",
     "scoreboard players operation #max ln = #budget ln",
-    "scoreboard players set #k ln 7",
+    "scoreboard players set #k ln 14",
     "scoreboard players operation #budget ln *= #k ln",
-    "scoreboard players add #budget ln 20",
-    "scoreboard players set #k ln 2",
+    "scoreboard players add #budget ln 40",
+    "scoreboard players set #k ln 3",
     "scoreboard players operation #max ln *= #k ln",
-    "scoreboard players add #max ln 6",
+    "scoreboard players add #max ln 10",
     "scoreboard players operation #total ln = #budget ln",
     "scoreboard players set #sq ln 0",
     "scoreboard players set #route ln 0",
@@ -453,11 +453,11 @@ fn("s5", [
     "scoreboard players operation #left ln += #alive ln",
     "execute store result bossbar ln:obj value run scoreboard players get #left ln",
     f"bossbar set ln:obj name {name_json}",
-    # 導演：每 20 秒派一組；場上快沒人時 6 秒就補
+    # 導演：每 15 秒派一組；場上少於 4 人時 6 秒就補
     "scoreboard players add #dt ln 1",
-    "execute if score #final ln matches 0 if score #budget ln matches 7.. if score #dt ln matches 400.. if score #alive ln < #max ln run function ln:ch05/dir/spawn_next",
-    "execute if score #final ln matches 1 if score #budget ln matches 1.. if score #dt ln matches 400.. if score #alive ln < #max ln run function ln:ch05/dir/spawn_next",
-    "execute if score #budget ln matches 7.. if score #dt ln matches 120.. if score #alive ln matches ..1 run function ln:ch05/dir/spawn_next",
+    "execute if score #final ln matches 0 if score #budget ln matches 7.. if score #dt ln matches 300.. if score #alive ln < #max ln run function ln:ch05/dir/spawn_next",
+    "execute if score #final ln matches 1 if score #budget ln matches 1.. if score #dt ln matches 300.. if score #alive ln < #max ln run function ln:ch05/dir/spawn_next",
+    "execute if score #budget ln matches 7.. if score #dt ln matches 120.. if score #alive ln matches ..3 run function ln:ch05/dir/spawn_next",
     "execute if score #final ln matches 0 if score #budget ln matches ..6 if score #alive ln matches 0 run function ln:ch05/ev/final",
     # 掃描器每 15 秒
     "scoreboard players add #pulse ln 1",

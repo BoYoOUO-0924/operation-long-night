@@ -8,9 +8,9 @@ scoreboard players operation #left ln += #alive ln
 execute store result bossbar ln:obj value run scoreboard players get #left ln
 bossbar set ln:obj name [{"text": "敵軍剩餘兵力：", "color": "red"}, {"score": {"name": "#left", "objective": "ln"}, "color": "white"}, {"text": "　場上：", "color": "red"}, {"score": {"name": "#alive", "objective": "ln"}, "color": "white"}]
 scoreboard players add #dt ln 1
-execute if score #final ln matches 0 if score #budget ln matches 7.. if score #dt ln matches 400.. if score #alive ln < #max ln run function ln:ch05/dir/spawn_next
-execute if score #final ln matches 1 if score #budget ln matches 1.. if score #dt ln matches 400.. if score #alive ln < #max ln run function ln:ch05/dir/spawn_next
-execute if score #budget ln matches 7.. if score #dt ln matches 120.. if score #alive ln matches ..1 run function ln:ch05/dir/spawn_next
+execute if score #final ln matches 0 if score #budget ln matches 7.. if score #dt ln matches 300.. if score #alive ln < #max ln run function ln:ch05/dir/spawn_next
+execute if score #final ln matches 1 if score #budget ln matches 1.. if score #dt ln matches 300.. if score #alive ln < #max ln run function ln:ch05/dir/spawn_next
+execute if score #budget ln matches 7.. if score #dt ln matches 120.. if score #alive ln matches ..3 run function ln:ch05/dir/spawn_next
 execute if score #final ln matches 0 if score #budget ln matches ..6 if score #alive ln matches 0 run function ln:ch05/ev/final
 scoreboard players add #pulse ln 1
 execute if score #pulse ln matches 300.. run function ln:ch05/dir/pulse

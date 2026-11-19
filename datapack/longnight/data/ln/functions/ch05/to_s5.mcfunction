@@ -6,12 +6,12 @@ execute if score #players ln matches ..0 run scoreboard players set #players ln 
 scoreboard players operation #budget ln = #players ln
 scoreboard players remove #budget ln 1
 scoreboard players operation #max ln = #budget ln
-scoreboard players set #k ln 7
+scoreboard players set #k ln 14
 scoreboard players operation #budget ln *= #k ln
-scoreboard players add #budget ln 20
-scoreboard players set #k ln 2
+scoreboard players add #budget ln 40
+scoreboard players set #k ln 3
 scoreboard players operation #max ln *= #k ln
-scoreboard players add #max ln 6
+scoreboard players add #max ln 10
 scoreboard players operation #total ln = #budget ln
 scoreboard players set #sq ln 0
 scoreboard players set #route ln 0
