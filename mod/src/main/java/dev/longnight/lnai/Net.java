@@ -31,7 +31,7 @@ public final class Net {
 
         void handle(Supplier<NetworkEvent.Context> ctx) {
             ServerPlayer p = ctx.get().getSender();
-            ctx.get().enqueueWork(() -> { if (p != null) Loadout.handle(p, this); });
+            if (p != null) Loadout.handle(p, this);
             ctx.get().setPacketHandled(true);
         }
     }

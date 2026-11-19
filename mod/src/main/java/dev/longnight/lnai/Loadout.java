@@ -11,7 +11,10 @@ import net.minecraft.world.item.ItemStack;
 final class Loadout {
     private Loadout() {}
 
+    private static final org.slf4j.Logger LOG = com.mojang.logging.LogUtils.getLogger();
+
     static void handle(ServerPlayer p, Net.Action a) {
+        LOG.debug("[lnai] action {} from {}", a, p.getGameProfile().getName());
         if (p.isSpectator() || !p.isAlive()) return;
         switch (a.kind()) {
             case Net.Action.MED_AUTO -> {

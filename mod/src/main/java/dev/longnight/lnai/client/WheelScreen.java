@@ -15,6 +15,7 @@ public class WheelScreen extends Screen {
     private final int key;
     private final int prevSlot;
     private int hover = -1;
+    int forced = -1;   // 開發測試用：指定選項
 
     WheelScreen(boolean grenade, int key, int prevSlot) {
         super(Component.literal(grenade ? "投擲物" : "醫療"));
@@ -46,8 +47,8 @@ public class WheelScreen extends Screen {
     public void render(GuiGraphics g, int mx, int my, float pt) {
         int cx = width / 2, cy = height / 2, r = 62;
         double dx = mx - cx, dy = my - cy;
-        hover = -1;
-        if (dx * dx + dy * dy > 18 * 18) {
+        hover = forced;
+        if (forced < 0 && dx * dx + dy * dy > 18 * 18) {
             double a = Math.atan2(dy, dx), best = 9;
             for (int i = 0; i < size(); i++) {
                 double d = Math.abs(Math.atan2(Math.sin(a - angle(i)), Math.cos(a - angle(i))));
@@ -66,7 +67,7 @@ public class WheelScreen extends Screen {
             Hud.text(g, label(i), x, y + 1, n > 0 ? 0xFFFFFFFF : 0xFF777777, true);
             Hud.text(g, "×" + n, x, y + 11, n > 0 ? 0xFFC8C8C8 : 0xFF777777, true);
         }
-        Hud.text(g, "放開按鍵確認", cx, cy + r + 30, 0xFF9A9A9A, true);
+        Hud.text(g, "放開按鍵確認", cx, cy + 14, 0xFF9A9A9A, true);
     }
 
     @Override

@@ -45,6 +45,9 @@ public final class GrenadeArc {
         Vec3 own = p.getDeltaMovement();
         Vec3 vel = new Vec3(fx, fy, fz).normalize().scale(power).add(own.x, p.onGround() ? 0 : own.y, own.z);
         Vec3 pos = p.getPosition(pt).add(0, p.getEyeHeight() - 0.1, 0);
+        Vec3 start = pos;
+        // 畫線的起點往右手邊、往下挪一點，第一人稱才看得出弧線（實際飛行仍從眼睛高度算）
+        Vec3 side = new Vec3(-Mth.cos(yRot * Mth.DEG_TO_RAD), 0, -Mth.sin(yRot * Mth.DEG_TO_RAD)).scale(0.35).add(0, -0.3, 0);
 
         Vec3 cam = e.getCamera().getPosition();
         PoseStack ps = e.getPoseStack();
@@ -58,11 +61,15 @@ public final class GrenadeArc {
             Vec3 next = pos.add(vel);
             BlockHitResult r = p.level().clip(new ClipContext(pos, next, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, p));
             if (r.getType() != HitResult.Type.MISS) next = r.getLocation();
-            if (i > 0 || pos.distanceToSqr(next) > 0) line(vc, pose, pos.subtract(cam), next.subtract(cam), 255, 255, 255, alpha);
+            double fade = Math.max(0, 1 - i / 6.0);   // 前幾段從手的位置淡入到真正的軌跡
+            Vec3 a = pos.add(side.scale(Math.max(0, 1 - i / 6.0))).subtract(cam), b = next.add(side.scale(Math.max(0, 1 - (i + 1) / 6.0))).subtract(cam);
+            if (i > 0) line(vc, pose, a, b, 255, 255, 255, (int) (alpha * (1 - fade * 0.5)));
             if (r.getType() != HitResult.Type.MISS) { hit = next; break; }
             pos = next;
             if (gr.moveFirst) vel = vel.subtract(0, gr.gravity, 0);
         }
+        ClientState.arcDist = hit == null ? -1 : Math.sqrt(Math.pow(hit.x - start.x, 2) + Math.pow(hit.z - start.z, 2));
+        ClientState.arcTime = ClientState.now();
         if (hit != null) {
             int[] c = gr == Gear.Grenade.SMOKE ? new int[]{200, 200, 200} : new int[]{240, 80, 70};
             double r = gr == Gear.Grenade.SMOKE ? 3.0 : 2.5;

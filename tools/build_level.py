@@ -373,6 +373,7 @@ fn("cleanup", [
     "effect clear @a",
     "schedule clear ln:ch05/evdlg/generator_fail_1",
     "lnhud objective @a",
+    "gamerule naturalRegeneration true",
 ])
 fn("start", [
     "function ln:ch05/cleanup",
@@ -386,6 +387,7 @@ fn("start", [
     "scoreboard players set #c8 ln 8",
     "scoreboard players set #c100 ln 100",
     "gamemode adventure @a",
+    "gamerule naturalRegeneration false",
     "team join ln_blue @a",
     "clear @a",
     f"spreadplayers {sx} {sz} 0 3 false @a",

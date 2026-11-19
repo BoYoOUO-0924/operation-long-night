@@ -109,12 +109,19 @@ public final class Hud {
         Minecraft mc = Minecraft.getInstance();
         LocalPlayer p = mc.player;
         long now = ClientState.now();
+        // 介面寬度不到 560 時整體縮小，避免物品欄和血量、彈藥疊在一起
+        float s = Math.min(1f, w / 560f);
+        g.pose().pushPose();
+        g.pose().scale(s, s, 1);
+        w = Math.round(w / s);
+        h = Math.round(h / s);
         objective(g, p);
         squad(g, p, now);
         feed(g, w, h, now);
         center(g, w, h, now);
         health(g, p, h);
         slots(g, p, w, h);
+        g.pose().popPose();
     }
 
     static void objective(GuiGraphics g, LocalPlayer p) {
@@ -180,6 +187,8 @@ public final class Hud {
     static void center(GuiGraphics g, int w, int h, long now) {
         if (now - ClientState.bigKillTime < 30 && now >= ClientState.bigKillTime)
             text(g, ClientState.bigKill, w / 2, h / 2 + 22, PINK, true);
+        if (now - ClientState.arcTime <= 1 && now >= ClientState.arcTime)
+            text(g, ClientState.arcDist < 0 ? "落點 —" : "落點 " + Math.round(ClientState.arcDist) + "m", w / 2, h / 2 + 12, WHITE, true);
         Gear.Med m = ClientState.healMed;
         if (m != null) {
             float left = Math.max(0, ClientState.healTotal - (now - ClientState.healStart)) / 20f;
@@ -216,7 +225,7 @@ public final class Hud {
         Inventory inv = p.getInventory();
         int[] slots = {0, 1, Gear.SLOT_GRENADE, Gear.SLOT_MED};
         String[] names = {"1 主武器", "2 副武器", "4 投擲", "5 醫療"};
-        int bw = 64, bh = 26, gap = 3, x0 = w / 2 - (bw * 4 + gap * 3) / 2, y = h - bh - 6;
+        int bw = 60, bh = 26, gap = 3, x0 = Math.max(130, w / 2 - (bw * 4 + gap * 3) / 2 - 20), y = h - bh - 6;
         for (int i = 0; i < 4; i++) {
             int x = x0 + i * (bw + gap);
             boolean sel = inv.selected == slots[i];

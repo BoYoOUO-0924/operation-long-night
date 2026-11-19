@@ -19,6 +19,10 @@ public final class ClientState {
     public static int healTotal = 0;
     public static long healStart = 0;
 
+    // 投擲落點距離（-1 = 沒有落點）
+    public static double arcDist = -1;
+    public static long arcTime = -100;
+
     // 目標
     public static String objective = "";
     public static Vec3 waypoint = null;
