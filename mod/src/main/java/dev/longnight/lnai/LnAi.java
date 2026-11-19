@@ -29,6 +29,8 @@ public class LnAi {
 
     public LnAi() {
         MinecraftForge.EVENT_BUS.addListener(this::onJoin);
+        MinecraftForge.EVENT_BUS.addListener(CombatEvents::onAttack);
+        MinecraftForge.EVENT_BUS.addListener(CombatEvents::onDeath);
     }
 
     private void onJoin(EntityJoinLevelEvent event) {

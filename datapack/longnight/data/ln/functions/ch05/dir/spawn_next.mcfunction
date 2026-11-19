@@ -20,6 +20,7 @@ execute if score #slot ln matches 4 run function ln:ch05/dir/name_4
 execute if score #slot ln matches 5 run function ln:ch05/dir/name_5
 execute if score #slot ln matches 6 run function ln:ch05/dir/name_6
 execute if score #slot ln matches 7 run function ln:ch05/dir/name_7
+team join ln_red @e[tag=ln_new]
 execute store result score #n ln if entity @e[tag=ln_new]
 scoreboard players operation #budget ln -= #n ln
 tag @e[tag=ln_new] remove ln_new

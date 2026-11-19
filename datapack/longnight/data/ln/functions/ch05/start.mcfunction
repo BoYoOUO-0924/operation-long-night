@@ -10,6 +10,7 @@ scoreboard players set #c3 ln 3
 scoreboard players set #c8 ln 8
 scoreboard players set #c100 ln 100
 gamemode adventure @a
+team join ln_blue @a
 clear @a
 spreadplayers 178 958 0 3 false @a
 execute as @a at @s run spawnpoint @s ~ ~ ~

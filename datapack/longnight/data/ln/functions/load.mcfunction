@@ -3,6 +3,12 @@ scoreboard objectives add ln dummy
 scoreboard objectives add ln_mark dummy
 scoreboard objectives add ln_age dummy
 bossbar add ln:obj ""
+team add ln_blue
+team modify ln_blue color aqua
+team modify ln_blue friendlyFire false
+team modify ln_blue seeFriendlyInvisibles true
+team add ln_red
+team modify ln_red color red
 gamerule doMobSpawning false
 gamerule keepInventory true
 gamerule doImmediateRespawn true

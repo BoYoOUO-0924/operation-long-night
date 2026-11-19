@@ -116,6 +116,8 @@ def summon_ally(tag, name, color, template, slot, pos):
 sx, sz = A["start_center"]
 fn("spawn_allies_start", [summon_ally(*a, pos=f"{sx} 250 {sz}") for a in ALLIES] + [
     f"spreadplayers {sx} {sz} 2 5 false @e[tag=ln_new]",
+    "team join ln_blue @e[tag=ln_new]",
+    "effect give @e[tag=ln_new,tag=!ln_officer] glowing infinite 0 true",
     "tag @e[tag=ln_new] remove ln_new",
 ])
 
@@ -175,6 +177,7 @@ spawn_next = [
     "scoreboard players operation #flip ln %= #c2 ln",
     *[f"execute if score #route ln matches {i} run function ln:ch05/dir/route_{name}" for i, name in enumerate(ORDER)],
     *[f"execute if score #slot ln matches {k} run function ln:ch05/dir/name_{k}" for k in range(8)],
+    "team join ln_red @e[tag=ln_new]",
     "execute store result score #n ln if entity @e[tag=ln_new]",
     "scoreboard players operation #budget ln -= #n ln",
     "tag @e[tag=ln_new] remove ln_new",
@@ -252,7 +255,7 @@ fn("ev/gen_fixed", [
 
 # ================================================================== 事件：主攻（武裝皮卡 + 迫擊砲）
 ex = ROUTES["east"]
-PATH = [(x, surf(x, 962), 962) for x in range(176, 139, -4)]
+PATH = [(x, surf(x, 962), 962) for x in range(164, 139, -4)]
 tech_spawn = PATH[0]
 fn("ev/final", [
     "scoreboard players set #final ln 1",
@@ -263,7 +266,9 @@ fn("ev/final", [
     f'summon tacznpcs:npc {tech_spawn[0]} {tech_spawn[1] + 2} {tech_spawn[2]} {{template:"red_support",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_techgun"],ForgeData:{{ln_side:"red",ln_hunt:64}}}}',
     f'summon tacznpcs:npc {tech_spawn[0]} {tech_spawn[1] + 2} {tech_spawn[2]} {{template:"red_assault",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_techgun"],ForgeData:{{ln_side:"red",ln_hunt:64}}}}',
     "execute as @e[tag=ln_techgun] run ride @s mount @e[tag=ln_tech,limit=1]",
+    "team join ln_red @e[tag=ln_techgun]",
     "scoreboard players set #tp ln 1",
+    "scoreboard players set #tpt ln 0",
     "scoreboard players set #mort ln 6",
     "scoreboard players set #mt ln 0",
 ])
@@ -271,7 +276,18 @@ drive = []
 for i, (x, y, z) in enumerate(PATH[1:], start=1):
     drive.append(f"execute if score #tp ln matches {i} as @e[tag=ln_tech] at @s facing {x} {y + 0.2} {z} run tp @s ^ ^ ^0.3")
     drive.append(f"execute if score #tp ln matches {i} as @e[tag=ln_tech] at @s positioned {x} {y} {z} if entity @s[distance=..1.5] run scoreboard players add #tp ln 1")
+drive += [
+    "scoreboard players add #tpt ln 1",
+    f"execute if score #tp ln matches {len(PATH)}.. run function ln:ch05/ev/tech_arrive",
+    "execute if score #tpt ln matches 400.. run function ln:ch05/ev/tech_arrive",
+]
 fn("ev/drive", drive)
+fn("ev/tech_arrive", [
+    "scoreboard players set #tp ln 0",
+    "execute as @e[tag=ln_techgun] run ride @s dismount",
+    f"execute as @e[tag=ln_techgun] run data merge entity @s {wp(ROUTES['east']['assault'], 3, 64)}",
+    f"tellraw @a {jtext([{'text': '[白鴉] ', 'color': 'aqua', 'bold': True}, {'text': '皮卡停了，槍手下車了！東邊車庫外！', 'color': 'white'}])}",
+])
 
 fn("ev/mortar_tick", [
     "scoreboard players add #mt ln 1",
@@ -298,6 +314,9 @@ fn("loadout", [
     'give @a[gamemode=adventure] tacz:modern_kinetic_gun{GunId:"tacz:glock_17",GunCurrentAmmoCount:17,HasBulletInBarrel:1b} 1',
     "function ln:ch05/ammo",
     "give @a[gamemode=adventure] cooked_beef 16",
+    "give @a[gamemode=adventure] golden_apple 3",
+    "item replace entity @a[gamemode=adventure] armor.head with iron_helmet",
+    "item replace entity @a[gamemode=adventure] armor.chest with iron_chestplate",
 ])
 
 # ================================================================== 流程
@@ -320,6 +339,7 @@ fn("start", [
     "scoreboard players set #c8 ln 8",
     "scoreboard players set #c100 ln 100",
     "gamemode adventure @a",
+    "team join ln_blue @a",
     "clear @a",
     f"spreadplayers {sx} {sz} 0 3 false @a",
     "execute as @a at @s run spawnpoint @s ~ ~ ~",
@@ -381,10 +401,11 @@ fn("s3", [
 ])
 # 4 準備：隊友就防守位置
 fn("to_s4", [
-    *goto(4), "function ln:ch05/ammo", *bossbar("準備防守：敵軍即將抵達", "red"),
+    *goto(4), "function ln:ch05/ammo", "give @a[gamemode=adventure] golden_apple 2", *bossbar("準備防守：敵軍即將抵達", "red"),
     "bossbar set ln:obj max 400",
-    f"data merge entity @e[tag=ln_tank,limit=1] {wp(A['def_tank'], 2, 40)}",
-    f"data merge entity @e[tag=ln_fox,limit=1] {wp(A['def_fox'], 2, 40)}",
+    "execute as @e[tag=ln_tank] run data merge entity @s {ForgeData:{ln_follow:1b,ln_hunt:40}}",
+    "execute as @e[tag=ln_fox] run data merge entity @s {ForgeData:{ln_follow:1b,ln_hunt:40}}",
+    f"tellraw @a {jtext([{'text': '[戰車] ', 'color': 'gold', 'bold': True}, {'text': '我和狐狸跟著你，你往哪打我們就往哪打。白鴉在塔上掩護。', 'color': 'white'}])}",
     f"data merge entity @e[tag=ln_baiya,limit=1] {wp(A['baiya_tower'], 1, 64)}",
 ])
 dialogue("prepare")
