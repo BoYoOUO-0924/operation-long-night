@@ -1,6 +1,6 @@
 # 由 tools/build_level.py 自動產生，請勿手動修改
 function ln:ch05/cleanup
-forceload add 60 900 240 1010
+forceload add 50 900 240 1020
 function ln:build/station_place
 kill @e[type=item]
 time set 18000
@@ -8,7 +8,7 @@ weather thunder 1000000
 scoreboard players set #wave ln 0
 gamemode adventure @a
 clear @a
-spreadplayers 172 960 0 3 false @a
+spreadplayers 178 958 0 3 false @a
 execute as @a at @s run spawnpoint @s ~ ~ ~
 function ln:ch05/loadout
 function ln:ch05/spawn_allies_start

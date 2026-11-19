@@ -146,7 +146,7 @@ fn("cleanup", [
 ])
 fn("start", [
     "function ln:ch05/cleanup",
-    "forceload add 60 900 240 1010",
+    "forceload add 50 900 240 1020",
     "function ln:build/station_place",
     "kill @e[type=item]",
     "time set 18000",
@@ -275,8 +275,14 @@ for name, body in files.items():
     p.write_text(body, encoding="utf-8")
 
 o = A["origin"]
+p = A["pad"]
 (PACK / "build/station_place.mcfunction").write_text(
     "# 在固定位置重建 7 號氣象站（由 tools/build_level.py 產生）\n"
-    f"forceload add {o[0] - 10} {o[2] - 10} {o[0] + 40} {o[2] + 30}\n"
+    f"forceload add {p[0]} {p[1]} {p[2]} {p[3]}\n"
     f"execute positioned {xyz(o)} run function ln:build/weather_station\n", encoding="utf-8")
+v = A["viewpoint"]
+(PACK / "view_station.mcfunction").write_text(
+    "# 傳送到可以看到整座氣象站的位置（創造模式審視建築用）\n"
+    "gamemode creative @s\n"
+    f"tp @s {xyz(v)} facing {o[0] + 22} {o[1] + 2} {o[2] + 14}\n", encoding="utf-8")
 print(f"已產生 {len(files)} 個函式到 {OUT.relative_to(ROOT)}")

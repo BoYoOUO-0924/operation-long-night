@@ -1,16 +1,16 @@
 # 由 tools/build_level.py 自動產生，請勿手動修改
-summon tacznpcs:npc 118 250 918 {template:"red_assault",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_north"]}
-summon tacznpcs:npc 118 250 918 {template:"red_assault",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_north"]}
-summon tacznpcs:npc 118 250 918 {template:"red_support",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_north"]}
-summon tacznpcs:npc 120 250 998 {template:"red_assault",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_south"]}
-summon tacznpcs:npc 120 250 998 {template:"red_cqb",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_south"]}
-summon tacznpcs:npc 120 250 998 {template:"red_cqb",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_south"]}
+summon tacznpcs:npc 118 250 912 {template:"red_assault",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_north"]}
+summon tacznpcs:npc 118 250 912 {template:"red_assault",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_north"]}
+summon tacznpcs:npc 118 250 912 {template:"red_support",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_north"]}
+summon tacznpcs:npc 118 250 1010 {template:"red_assault",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_south"]}
+summon tacznpcs:npc 118 250 1010 {template:"red_cqb",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_south"]}
+summon tacznpcs:npc 118 250 1010 {template:"red_cqb",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_new_south"]}
 execute if score #players ln matches 2.. run function ln:ch05/wave/extra2
 execute if score #players ln matches 3.. run function ln:ch05/wave/extra2
 execute if score #players ln matches 4.. run function ln:ch05/wave/extra2
-execute if entity @e[tag=ln_new_north] run spreadplayers 118 918 2 8 false @e[tag=ln_new_north]
+execute if entity @e[tag=ln_new_north] run spreadplayers 118 912 2 8 false @e[tag=ln_new_north]
 tag @e[tag=ln_new_north] remove ln_new_north
-execute if entity @e[tag=ln_new_south] run spreadplayers 120 998 2 8 false @e[tag=ln_new_south]
+execute if entity @e[tag=ln_new_south] run spreadplayers 118 1010 2 8 false @e[tag=ln_new_south]
 tag @e[tag=ln_new_south] remove ln_new_south
 tag @e[tag=ln_new] remove ln_new
 execute store result bossbar ln:obj max if entity @e[tag=ln_enemy]
