@@ -50,6 +50,27 @@ final class Loadout {
         return null;
     }
 
+    /** 快捷欄整理：3 號只放近戰武器，6～9 號不放東西，其他都收進背包。 */
+    static void tidy(ServerPlayer p) {
+        if (p.isCreative() || p.isSpectator()) return;
+        Inventory inv = p.getInventory();
+        for (int slot = 2; slot < 9; slot++) {
+            if (slot == Gear.SLOT_GRENADE || slot == Gear.SLOT_MED) continue;
+            ItemStack s = inv.getItem(slot);
+            if (s.isEmpty() || (slot == 2 && isMelee(s))) continue;
+            int free = -1;
+            for (int i = 9; i < inv.items.size(); i++) if (inv.items.get(i).isEmpty()) { free = i; break; }
+            if (free < 0) continue;
+            inv.setItem(free, s);
+            inv.setItem(slot, ItemStack.EMPTY);
+            if (inv.selected == slot) inv.selected = 0;
+        }
+    }
+
+    static boolean isMelee(ItemStack s) {
+        return s.getItem() instanceof net.minecraft.world.item.SwordItem || s.getItem() instanceof net.minecraft.world.item.AxeItem;
+    }
+
     static int count(Inventory inv, Predicate<ItemStack> f) {
         int n = 0;
         for (int i = 0; i < inv.items.size(); i++) if (f.test(inv.items.get(i))) n += inv.items.get(i).getCount();

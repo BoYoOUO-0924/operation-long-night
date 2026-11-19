@@ -351,7 +351,9 @@ fn("ev/mortar_tick", [
 
 # ================================================================== 裝備
 fn("ammo", [
-    'give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:556x45"} 120',
+    # 一次 give 最多 100 發，分兩次
+    'give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:556x45"} 60',
+    'give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:556x45"} 60',
     'give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:9mm"} 34',
 ])
 # 快捷欄固定：1 主武器、2 副武器、3 近戰（空）、4 投擲物、5 醫療；其餘放背包，由 lnai 模組按 4／5 時換上來

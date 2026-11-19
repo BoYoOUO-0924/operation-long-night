@@ -55,17 +55,17 @@ public class WheelScreen extends Screen {
                 if (d < best) { best = d; hover = i; }
             }
         }
-        g.fill(cx - 20, cy - 10, cx + 20, cy + 10, 0x99141A22);
-        Hud.text(g, grenade ? "投擲物" : "醫療", cx, cy - 4, 0xFFC8C8C8, true);
+        g.fill(cx - 20, cy - 10, cx + 20, cy + 10, 0x90000000);
+        Hud.text(g, grenade ? "投擲物" : "醫療", cx, cy - 4, 0xFF8E8C84, true);
         for (int i = 0; i < size(); i++) {
             int x = cx + (int) (Math.cos(angle(i)) * r), y = cy + (int) (Math.sin(angle(i)) * r);
             boolean on = i == hover, cur = grenade && Gear.Grenade.values()[i] == ClientState.grenade;
             int n = count(i);
-            g.fill(x - 34, y - 20, x + 34, y + 20, on ? 0xE0141A22 : 0xA0141A22);
-            Hud.box(g, x - 34, y - 20, 68, 40, on ? 0xFFFFFFFF : cur ? 0xFFFAC775 : 0x55FFFFFF);
+            g.fill(x - 34, y - 20, x + 34, y + 20, on ? 0xC0202020 : 0x90000000);
+            Hud.box(g, x - 34, y - 20, 68, 40, on ? 0xFFFFFFFF : cur ? 0xFFB9AE8C : 0x55FFFFFF);
             g.renderItem(icon(i), x - 8, y - 17);
             Hud.text(g, label(i), x, y + 1, n > 0 ? 0xFFFFFFFF : 0xFF777777, true);
-            Hud.text(g, "×" + n, x, y + 11, n > 0 ? 0xFFC8C8C8 : 0xFF777777, true);
+            Hud.text(g, "×" + n, x, y + 11, n > 0 ? 0xFF8E8C84 : 0xFF777777, true);
         }
         Hud.text(g, "放開按鍵確認", cx, cy + 14, 0xFF9A9A9A, true);
     }

@@ -58,6 +58,7 @@ public final class ClientState {
     }
 
     public static void onObjective(Net.Objective o) {
+        if (!o.text().equals(objective)) Hud.pokeSlots();
         objective = o.text();
         waypoint = o.hasWp() ? new Vec3(o.x(), o.y(), o.z()) : null;
     }
