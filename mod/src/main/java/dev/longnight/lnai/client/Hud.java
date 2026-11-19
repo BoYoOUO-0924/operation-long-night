@@ -87,6 +87,14 @@ public final class Hud {
         g.fill(x, y, x + Math.round(w * Mth.clamp(v, 0, 1)), y + h, color);
     }
 
+    /** 鍵盤按鍵樣式的小方塊：深色底、亮框、底部加厚當鍵帽厚度。 */
+    static void keycap(GuiGraphics g, String key, int x, int y) {
+        g.fill(x, y, x + 11, y + 12, 0xB0101418);
+        box(g, x, y, 11, 12, 0xCCC8D0D8);
+        g.fill(x + 1, y + 10, x + 10, y + 11, 0x99C8D0D8);
+        text(g, key, x + 6, y + 2, TEXT, true);
+    }
+
     static void box(GuiGraphics g, int x, int y, int w, int h, int color) {
         g.fill(x, y, x + w, y + 1, color);
         g.fill(x, y + h - 1, x + w, y + h, color);
@@ -394,11 +402,11 @@ public final class Hud {
         qx -= width(ms);
         text(g, ms, qx, qy, mn == 0 ? FAINT : TEXT, false);
         tinted(g, MED_ICON, qx - 12, qy - 1, 10, mn == 0 ? FAINT : TEXT);
-        small(g, "5", qx - 19, qy + 1, SUB, false);
-        qx -= 34 + width(gs);
+        keycap(g, "5", qx - 26, qy - 2);
+        qx -= 40 + width(gs);
         text(g, gs, qx, qy, gn == 0 ? FAINT : TEXT, false);
         tinted(g, GRENADE_ICON, qx - 12, qy - 1, 10, gn == 0 ? FAINT : TEXT);
-        small(g, "4", qx - 19, qy + 1, SUB, false);
+        keycap(g, "4", qx - 26, qy - 2);
 
         Ammo.Info a = Ammo.of(p.getMainHandItem(), inv);
         if (a == null) return;
