@@ -1,0 +1,301 @@
+{
+  "illagers": {
+    "aligned": [
+      "illagers",
+      "monster"
+    ],
+    "opposed": [
+      "villagers"
+    ],
+    "equipment": {
+      "table": "tacznpcs:npc/illager",
+      "dropChances": {
+        "mainhand": 1,
+        "head": 0.2,
+        "chest": 0.2,
+        "legs": 0.2,
+        "feet": 0.2
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/illager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/illager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/illager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/illager2.png"
+      }
+    ]
+  },
+  "villagers": {
+    "aligned": [
+      "villagers"
+    ],
+    "opposed": [
+      "illagers",
+      "monster"
+    ],
+    "equipment": {
+      "table": "tacznpcs:npc/villager",
+      "dropChances": {
+        "mainhand": 1,
+        "head": 0.2,
+        "chest": 0.2,
+        "legs": 0.2,
+        "feet": 0.2
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/villager2.png"
+      },
+      {
+        "id": "tacznpcs:entity/villager2.png"
+      },
+      {
+        "id": "tacznpcs:entity/villager2.png"
+      },
+      {
+        "id": "tacznpcs:entity/villager1.png"
+      }
+    ]
+  },
+  "default": {
+    "primary": "%tacz:glock_17",
+    "skin": {
+      "id": "tacznpcs:entity/default.png"
+    },
+    "opposed": [
+      "monster"
+    ]
+  },
+  "red_assault": {
+    "aligned": [
+      "red"
+    ],
+    "opposed": [
+      "blue",
+      "players",
+      "monster"
+    ],
+    "equipment": {
+      "table": "battle:npc/red_assault",
+      "dropChances": {
+        "mainhand": 0,
+        "head": 0,
+        "chest": 0,
+        "legs": 0,
+        "feet": 0
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/illager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/illager2.png"
+      }
+    ]
+  },
+  "red_support": {
+    "aligned": [
+      "red"
+    ],
+    "opposed": [
+      "blue",
+      "players",
+      "monster"
+    ],
+    "equipment": {
+      "table": "battle:npc/red_support",
+      "dropChances": {
+        "mainhand": 0,
+        "head": 0,
+        "chest": 0,
+        "legs": 0,
+        "feet": 0
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/illager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/illager2.png"
+      }
+    ]
+  },
+  "red_sniper": {
+    "aligned": [
+      "red"
+    ],
+    "opposed": [
+      "blue",
+      "players",
+      "monster"
+    ],
+    "equipment": {
+      "table": "battle:npc/red_sniper",
+      "dropChances": {
+        "mainhand": 0,
+        "head": 0,
+        "chest": 0,
+        "legs": 0,
+        "feet": 0
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/illager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/illager2.png"
+      }
+    ]
+  },
+  "red_cqb": {
+    "aligned": [
+      "red"
+    ],
+    "opposed": [
+      "blue",
+      "players",
+      "monster"
+    ],
+    "equipment": {
+      "table": "battle:npc/red_cqb",
+      "dropChances": {
+        "mainhand": 0,
+        "head": 0,
+        "chest": 0,
+        "legs": 0,
+        "feet": 0
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/illager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/illager2.png"
+      }
+    ]
+  },
+  "blue_assault": {
+    "aligned": [
+      "blue",
+      "players"
+    ],
+    "opposed": [
+      "red",
+      "monster"
+    ],
+    "equipment": {
+      "table": "battle:npc/blue_assault",
+      "dropChances": {
+        "mainhand": 0,
+        "head": 0,
+        "chest": 0,
+        "legs": 0,
+        "feet": 0
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/villager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/villager2.png"
+      }
+    ]
+  },
+  "blue_support": {
+    "aligned": [
+      "blue",
+      "players"
+    ],
+    "opposed": [
+      "red",
+      "monster"
+    ],
+    "equipment": {
+      "table": "battle:npc/blue_support",
+      "dropChances": {
+        "mainhand": 0,
+        "head": 0,
+        "chest": 0,
+        "legs": 0,
+        "feet": 0
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/villager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/villager2.png"
+      }
+    ]
+  },
+  "blue_sniper": {
+    "aligned": [
+      "blue",
+      "players"
+    ],
+    "opposed": [
+      "red",
+      "monster"
+    ],
+    "equipment": {
+      "table": "battle:npc/blue_sniper",
+      "dropChances": {
+        "mainhand": 0,
+        "head": 0,
+        "chest": 0,
+        "legs": 0,
+        "feet": 0
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/villager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/villager2.png"
+      }
+    ]
+  },
+  "blue_cqb": {
+    "aligned": [
+      "blue",
+      "players"
+    ],
+    "opposed": [
+      "red",
+      "monster"
+    ],
+    "equipment": {
+      "table": "battle:npc/blue_cqb",
+      "dropChances": {
+        "mainhand": 0,
+        "head": 0,
+        "chest": 0,
+        "legs": 0,
+        "feet": 0
+      }
+    },
+    "skin": [
+      {
+        "id": "tacznpcs:entity/villager1.png"
+      },
+      {
+        "id": "tacznpcs:entity/villager2.png"
+      }
+    ]
+  }
+}
