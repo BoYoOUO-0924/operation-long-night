@@ -9,16 +9,17 @@ import random
 class Canvas:
     def __init__(self, seed=7):
         self.blocks = {}          # (x,y,z) -> block state 字串
+        self.oy = 0               # 目前結構的高度偏移（讓每棟建築貼合自己的地面）
         self.pre = []             # 建築前要先跑的指令（清空、地基）
         self.post = []            # 建築後的指令（告示牌、實體等）
         self.rng = random.Random(seed)
 
     # ---- 基本操作 -------------------------------------------------
     def set(self, x, y, z, block):
-        self.blocks[(x, y, z)] = block
+        self.blocks[(x, y + self.oy, z)] = block
 
     def get(self, x, y, z):
-        return self.blocks.get((x, y, z))
+        return self.blocks.get((x, y + self.oy, z))
 
     def box(self, x1, y1, z1, x2, y2, z2, block):
         for x in range(min(x1, x2), max(x1, x2) + 1):

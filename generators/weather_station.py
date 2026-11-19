@@ -1,82 +1,109 @@
-"""第五章：廢棄高山氣象站「7 號站」生成器（第 2 版：灰白水泥、空間加大）。
+"""第五章：廢棄高山氣象站「7 號站」生成器（第 3 版：貼合真實地形）。
 
 參考真實高山／極地氣象站的組成，簡化成：
-  1. 主樓（觀測、通訊、生活）    2. 車庫（雪地履帶車）    3. 探空氣球施放棚
+  1. 主樓（觀測、通訊、生活）    2. 車庫（SBW 皮卡車）      3. 探空氣球施放棚
   4. 觀測場（百葉箱、雨量計、積雪尺、風速計）    5. 柴油發電小屋 + 油槽
   6. 無線電天線塔                7. 屋頂瞭望塔
 
+地形做法：不整平大平台。每棟建築依自己腳下的地面決定樓板高度，
+低的一側用石磚地基墊高，高的一側切掉；建築四周只做 2～5 格、寬度不規則的緩坡。
+
+執行前先產生高度圖：
+  python tools/heightmap.py <乾淨世界> 60 900 210 1030 generators/out/heightmap_ch05.json
 執行：python generators/weather_station.py
-輸出：datapack/longnight/data/ln/functions/build/weather_station.mcfunction
-      generators/out/weather_station.json（劇情錨點的絕對座標）
-局部座標：x 往東、z 往南、y=0 是地板；原點是主樓西北角。
+局部座標：x 往東、z 往南、y=0 是主樓地板；原點是主樓西北角。
 """
 import json
 import math
+import random
 from pathlib import Path
 
 from canvas import Canvas
 
 ROOT = Path(__file__).resolve().parent.parent
-ORIGIN = (100, 136, 948)
+HM = json.loads((ROOT / "generators/out/heightmap_ch05.json").read_text(encoding="utf-8"))
+OX, OZ = 84, 955                       # 主樓西北角（天然的平坦岩棚上）
 
 c = Canvas(seed=7)
 
-# ================================================================ 調色盤（灰白水泥，低對比）
+
+def ground_abs(x, z):
+    """絕對座標 (x,z) 的地表最上層方塊 y，以及上層是否為鬆雪（雪層／粉雪）。"""
+    t = HM["top"][z - HM["z1"]][x - HM["x1"]]
+    s = HM["solid"][z - HM["z1"]][x - HM["x1"]]
+    return t, t != s
+
+
+def floor_for(x1, x2, z1, z2):
+    """結構的樓板高度：取腳下地面的第 70 百分位（略高於平均，下坡側用地基墊高）。"""
+    hs = sorted(ground_abs(OX + x, OZ + z)[0] for x in range(x1, x2 + 1) for z in range(z1, z2 + 1))
+    return hs[int(len(hs) * 0.7)]
+
+
+# ---------------------------------------------------------------- 調色盤（灰白水泥，低對比）
 wall = c.pick([("light_gray_concrete", 88), ("light_gray_concrete_powder", 9), ("stone", 3)])
 base = c.pick([("stone_bricks", 75), ("cracked_stone_bricks", 25)])
 inner = c.pick([("white_concrete", 85), ("white_concrete_powder", 15)])
 TRIM = "polished_andesite"
 ROOF = "light_gray_concrete"
 WOOD = c.pick([("spruce_planks", 90), ("dark_oak_planks", 10)])
+H = 6          # 屋頂（=天花板）高度；室內淨高 y1..5
 
-# 主樓與附屬建築範圍（x1, x2, z1, z2）
 MAIN = (0, 34, 0, 20)
 GARAGE = (34, 46, 0, 13)
-H = 6          # 屋頂（=天花板）高度；室內淨高 y1..5
-PAD = (-12, 58, -12, 40)   # 整平的平台範圍
-BLEND = 12                  # 平台外圍與山坡融合的寬度
+OY = floor_for(0, 46, 0, 20)            # 主樓樓板的絕對高度
+ORIGIN = (OX, OY, OZ)
 
 
-# ================================================================ 整地：平台 + 與地形融合的斜坡
-def terrain():
-    x1, x2, z1, z2 = PAD
-    # 平台本體（分兩段避免超過 fill 上限）
-    for a in range(x1, x2 + 1, 16):
-        b = min(a + 15, x2)
-        c.pre.append(f"fill ~{a} ~1 ~{z1} ~{b} ~24 ~{z2} air")
-        c.pre.append(f"fill ~{a} ~-10 ~{z1} ~{b} ~-1 ~{z2} stone replace air")
-    c.pre.append(f"fill ~{x1} ~0 ~{z1} ~{x2} ~0 ~{z2} snow_block")
-    # 外圍：把地形夾在「上斜面」與「下斜面」之間，切掉懸崖、填平落差
-    hmap = {}
-    for x in range(x1 - BLEND, x2 + BLEND + 1):
-        for z in range(z1 - BLEND, z2 + BLEND + 1):
-            dx = max(x1 - x, 0, x - x2)
-            dz = max(z1 - z, 0, z - z2)
+def G(x, z):
+    """局部座標 (x,z) 的地表高度（相對主樓樓板）與是否為鬆雪。"""
+    t, soft = ground_abs(OX + x, OZ + z)
+    return t - OY, soft
+
+
+def on_ground(x, z):
+    """放置小物件的 y（相對主樓樓板）：鬆雪就取代它，否則放在上面。"""
+    g, soft = G(x, z)
+    return g if soft else g + 1
+
+
+rng = random.Random(42)
+
+
+def site(x1, x2, z1, z2, floor, apron=4):
+    """為一個結構整地：地基、清空內部、四周不規則緩坡。floor 為相對主樓樓板的高度。"""
+    c.pre.append(f"fill ~{x1} ~{floor + 1} ~{z1} ~{x2} ~{floor + 16} ~{z2} air")
+    for x in range(x1, x2 + 1):
+        for z in range(z1, z2 + 1):
+            g, _ = G(x, z)
+            edge = x in (x1, x2) or z in (z1, z2)
+            for y in range(g + 1, floor):
+                c.blocks[(x, y, z)] = "stone_bricks" if edge else "stone"
+    for x in range(x1 - apron - 3, x2 + apron + 4):
+        for z in range(z1 - apron - 3, z2 + apron + 4):
+            dx, dz = max(x1 - x, 0, x - x2), max(z1 - z, 0, z - z2)
             d = math.hypot(dx, dz)
-            if 0 < d <= BLEND:
-                hmap[(x, z)] = max(1, round(d * 0.8))
-    rows = {}
-    for (x, z), h in hmap.items():
-        rows.setdefault((z, h), []).append(x)
-    for (z, h), xs in rows.items():
-        xs.sort()
-        start = prev = xs[0]
-        for x in xs[1:] + [None]:
-            if x is not None and x == prev + 1:
-                prev = x
+            width = apron + rng.choice([-1, 0, 0, 1, 2, 3])
+            if not 0 < d <= width:
                 continue
-            c.pre += [
-                f"fill ~{start} ~{h + 1} ~{z} ~{prev} ~28 ~{z} air",                       # 削掉上方
-                f"fill ~{start} ~{h} ~{z} ~{prev} ~{h} ~{z} snow_block replace #minecraft:base_stone_overworld",
-                f"fill ~{start} ~{h} ~{z} ~{prev} ~{h} ~{z} snow_block replace #minecraft:dirt",
-                f"fill ~{start} ~-16 ~{z} ~{prev} ~{-h - 1} ~{z} stone replace air",          # 填下方
-                f"fill ~{start} ~{-h} ~{z} ~{prev} ~{-h} ~{z} snow_block replace air",
-            ]
-            if x is not None:
-                start = prev = x
+            g, _ = G(x, z)
+            w = d / width
+            w = w * w * (3 - 2 * w)                    # smoothstep
+            target = round(floor + (g - floor) * w)
+            if g < target:
+                for y in range(g + 1, target):
+                    c.blocks.setdefault((x, y, z), "stone")
+                c.blocks[(x, target, z)] = "snow_block"
+            elif g > target:
+                for y in range(target + 1, g + 2):
+                    c.blocks[(x, y, z)] = "air"
+                c.blocks[(x, target, z)] = "snow_block"
 
 
-terrain()
+# 把整個區域的粉雪換成雪塊（避免玩家和 NPC 陷進去）
+for a in range(-24, 72, 16):
+    for b in range(-28, 56, 16):
+        c.pre.append(f"fill ~{a} ~-14 ~{b} ~{a + 15} ~14 ~{b + 15} snow_block replace powder_snow")
 c.pre.append("kill @e[tag=ln_deco]")
 
 
@@ -122,6 +149,7 @@ def building(x1, x2, z1, z2, h=H, floor=WOOD):
 
 # ================================================================ 1. 主樓
 X1, X2, Z1, Z2 = MAIN
+site(X1, GARAGE[1], Z1, Z2, 0)
 building(X1, X2, Z1, Z2)
 CZ1, CZ2 = 9, 11                          # 走廊（3 格寬）
 c.box(X1 + 1, 0, CZ1, X2 - 1, 0, CZ2, "polished_andesite")
@@ -268,17 +296,8 @@ c.box(gx2, 5, 3, gx2, 5, 8, "iron_trapdoor[facing=east,half=top,open=false]")
 c.set(gx2, 1, 3, "iron_bars[north=true,south=true]")
 window(38, gz1, "x")
 window(41, gz2, "x")
-# 雪地履帶車
-c.box(37, 1, 3, 43, 1, 3, "black_concrete")
-c.box(37, 1, 7, 43, 1, 7, "black_concrete")
-c.box(37, 1, 4, 43, 1, 6, "gray_concrete")
-c.box(37, 2, 3, 43, 3, 7, "orange_concrete")
-c.box(41, 3, 3, 43, 4, 7, "orange_concrete")
-c.box(42, 4, 3, 43, 4, 7, "light_blue_stained_glass")
-c.box(41, 4, 4, 41, 4, 6, "light_blue_stained_glass")
-c.box(37, 4, 4, 40, 4, 6, "gray_concrete")
-c.set(43, 3, 4, "redstone_lamp")
-c.set(43, 3, 6, "redstone_lamp")
+# 皮卡車（Superb Warfare 載具，車頭朝東大門）
+c.post.append('summon superbwarfare:sodayo_pick_up ~40.5 ~1 ~6.5 {Rotation:[-90f,0f],Tags:["ln_deco","ln_vehicle"]}')
 # 工作台、物資、零件箱（玩家要按的按鈕）
 c.box(gx1 + 1, 1, 12, gx1 + 4, 1, 12, "barrel[facing=north]")
 c.set(36, 1, 1, "anvil[facing=east]")
@@ -325,6 +344,8 @@ for (x, z) in [(14, 4), (20, 16), (8, 15)]:
 
 # ================================================================ 4. 探空氣球施放棚（東南，x38..45, z22..30）
 sx1, sx2, sz1, sz2 = 38, 45, 22, 30
+c.oy = floor_for(sx1, sx2, sz1, sz2) - OY
+site(sx1, sx2, sz1, sz2, c.oy)
 building(sx1, sx2, sz1, sz2, h=8, floor="polished_andesite")
 c.box(sx1 + 2, 1, sz1, sx2 - 2, 6, sz1, "air")             # 北側挑高大門
 c.box(sx1 + 2, 7, sz1, sx2 - 2, 7, sz1, TRIM)
@@ -336,32 +357,53 @@ c.set(42, 4, 26, "white_wool")
 c.box(41, 3, 26, 41, 4, 26, "white_wool")
 c.box(42, 5, 26, 42, 7, 26, "chain[axis=y]")
 lamp(41, 24, y=7)
+c.oy = 0
 
 # ================================================================ 5. 觀測場（西南，x2..14, z25..35，圍欄）
 ox1, ox2, oz1, oz2 = 2, 14, 25, 35
 for x in range(ox1, ox2 + 1):
     for z in range(oz1, oz2 + 1):
-        if x in (ox1, ox2):
-            c.set(x, 1, z, "spruce_fence[north=true,south=true]")
-        elif z in (oz1, oz2):
-            c.set(x, 1, z, "spruce_fence[east=true,west=true]")
-c.set(8, 1, oz1, "spruce_fence_gate[facing=north,open=true]")
+        if x in (ox1, ox2) or z in (oz1, oz2):
+            st = "spruce_fence[north=true,south=true]" if x in (ox1, ox2) else "spruce_fence[east=true,west=true]"
+            if x == 8 and z == oz1:
+                st = "spruce_fence_gate[facing=north,open=true]"
+            c.blocks[(x, on_ground(x, z), z)] = st
+
+
+def at_ground(x1, x2, z1, z2):
+    """把接下來的物件放在這塊範圍的地面上（取最高點，下方補雪）。"""
+    top = max(on_ground(x, z) for x in range(x1, x2 + 1) for z in range(z1, z2 + 1))
+    for x in range(x1, x2 + 1):
+        for z in range(z1, z2 + 1):
+            for y in range(on_ground(x, z), top):
+                c.blocks[(x, y, z)] = "snow_block"
+    c.oy = top - 1
+
+
 for (x, z) in [(4, 28), (7, 28)]:                            # 兩座百葉箱
+    at_ground(x, x + 1, z - 1, z + 1)
     for dx, dz in [(0, 0), (1, 0), (0, 1), (1, 1)]:
         c.box(x + dx, 1, z + dz, x + dx, 2, z + dz, "spruce_fence")
     c.box(x, 3, z, x + 1, 4, z + 1, "white_concrete")
     c.set(x, 3, z - 1, "birch_trapdoor[facing=north,half=bottom,open=true]")
     c.box(x, 5, z, x + 1, 5, z + 1, "smooth_stone_slab")
+at_ground(11, 11, 28, 28)
 c.set(11, 1, 28, "cauldron")                                 # 雨量計
+at_ground(11, 11, 32, 32)
 c.box(11, 1, 32, 11, 4, 32, "birch_fence")                   # 積雪尺
 c.set(11, 5, 32, "red_concrete")
+at_ground(4, 6, 32, 34)
 c.box(5, 1, 33, 5, 7, 33, "spruce_fence")                    # 風速計／風向標
 c.set(5, 8, 33, "lightning_rod[facing=up]")
 for dx, dz in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
     c.set(5 + dx, 7, 33 + dz, "cobblestone_wall")
+c.oy = 0
 
 # ================================================================ 6. 柴油發電小屋 + 油槽（主樓南側，x24..32, z24..30）
+c.oy = floor_for(22, 30, 25, 38) - OY
+site(22, 30, 25, 38, c.oy, apron=3)
 building(24, 30, 25, 30, h=5, floor="polished_andesite")
+c.box(22, 0, 32, 30, 0, 38, "polished_andesite")             # 油槽底座
 c.box(27, 1, 25, 27, 3, 25, "air")
 c.box(25, 1, 27, 29, 2, 28, "iron_block")
 c.set(26, 3, 27, "lightning_rod[facing=up]")
@@ -374,34 +416,33 @@ for zc in (33, 37):                                          # 圓筒油槽（�
         c.set(x, 3, zc + 1, "iron_trapdoor[facing=north,half=bottom,open=false]")
     c.box(22, 1, zc - 1, 22, 3, zc + 1, "light_gray_concrete")
     c.box(30, 1, zc - 1, 30, 3, zc + 1, "light_gray_concrete")
+c.oy = 0
 
 # ================================================================ 7. 天線塔（東北，x52, z-4）
 mx, mz = 52, -4
+c.oy = on_ground(mx, mz) - 1
 c.box(mx, 1, mz, mx, 26, mz, "iron_bars")
 for y in (8, 16, 24):
     c.set(mx, y, mz, "red_concrete")
 c.set(mx, 27, mz, "red_concrete")
 c.set(mx, 28, mz, "redstone_torch")
 for dx, dz in [(4, 0), (-4, 0), (0, 4), (0, -4)]:          # 拉索地錨
+    c.oy = on_ground(mx + dx, mz + dz) - 1
     c.set(mx + dx, 1, mz + dz, "cobblestone_wall")
+c.oy = 0
 
-# ================================================================ 院子積雪、牆邊雪堆
-built = set()
-for (x, y, z) in c.blocks:
-    if y >= 1:
-        built.add((x, z))
-for x in range(PAD[0], PAD[1] + 1):
-    for z in range(PAD[2], PAD[3] + 1):
-        if (x, z) in built:
+# ================================================================ 牆邊雪堆（北、西迎風面較厚）
+walls_xz = {(x, z) for (x, y, z), b in c.blocks.items() if y == 1 and b not in ("air",) and "snow" not in b}
+for (x, z) in list(walls_xz):
+    for dx, dz in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
+        nx, nz = x + dx, z + dz
+        if (nx, nz) in walls_xz or (nx, 1, nz) in c.blocks or (nx, 0, nz) not in c.blocks:
             continue
-        near_wall = any((x + dx, z + dz) in built for dx, dz in [(1, 0), (-1, 0), (0, 1), (0, -1)])
-        windward = z < 3 or x < 3                    # 北風、西風吹來的一側雪比較厚
-        if near_wall and windward and c.chance(0.85):
-            c.set(x, 1, z, f"snow[layers={c.rng.randint(4, 7)}]")
-        elif near_wall and c.chance(0.6):
-            c.set(x, 1, z, f"snow[layers={c.rng.randint(2, 4)}]")
-        elif c.chance(0.5):
-            c.set(x, 1, z, f"snow[layers={c.rng.randint(1, 2)}]")
+        if c.blocks[(nx, 0, nz)] != "snow_block":
+            continue
+        thick = (dz == -1 or dx == -1)
+        if c.chance(0.85 if thick else 0.5):
+            c.blocks[(nx, 1, nz)] = f"snow[layers={c.rng.randint(4, 7) if thick else c.rng.randint(1, 3)}]"
 
 # 告示牌（車庫大門旁）
 c.post.append(
@@ -420,7 +461,7 @@ def a(x, y, z):
 
 anchors = {
     "origin": list(ORIGIN),
-    "pad": [ORIGIN[0] + PAD[0] - BLEND, ORIGIN[2] + PAD[2] - BLEND, ORIGIN[0] + PAD[1] + BLEND, ORIGIN[2] + PAD[3] + BLEND],
+    "pad": [OX - 24, OZ - 28, OX + 71, OZ + 55],
     "garage_door_outside": a(49, 1, 6),
     "fox_bench": a(9, 1, 6),
     "tank_radio": a(6, 1, 7),
