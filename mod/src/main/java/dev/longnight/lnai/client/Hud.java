@@ -327,19 +327,42 @@ public final class Hud {
         small(g, "HP", nx, y + 4, SUB, false);
         small(g, "/100", nx, y + 12, FAINT, false);
         bar(g, x, y + 22, 96, 2, hpv, hp > 30 ? TEXT : BAD);
-        // 護甲：頭盔、防彈衣圖示，下面一條耐久
+        // 護甲：頭盔、防彈衣圖示（顏色＝耐久），右邊百分比
         ItemStack[] gear = {p.getItemBySlot(EquipmentSlot.HEAD), p.getItemBySlot(EquipmentSlot.CHEST)};
+        net.minecraft.resources.ResourceLocation[] tex = {HELMET, VEST};
         for (int i = 0; i < 2; i++) {
-            int gx = x + i * 30, gy = y + 28;
-            ItemStack s = gear[i];
-            float d = durability(s);
-            g.fill(gx, gy, gx + 26, gy + 18, PANEL);
-            if (s.isEmpty()) small(g, i == 0 ? "盔" : "甲", gx + 13, gy + 5, FAINT, true);
-            else icon(g, s, gx + 6, gy + 1, 0.875f);
-            bar(g, gx + 2, gy + 16, 22, 1, Math.max(0, d), d < 0 ? FAINT : d > 0.5f ? STEEL : d > 0.2f ? WARN : BAD);
+            int gx = x + i * 50, gy = y + 29;
+            float d = durability(gear[i]);
+            int gc = d < 0 ? FAINT : d > 0.5f ? TEXT : d > 0.2f ? WARN : BAD;
+            g.fill(gx, gy, gx + 46, gy + 18, PANEL);
+            tinted(g, tex[i], gx + 2, gy + 1, 16, gc);
+            small(g, d < 0 ? "—" : Math.round(d * 100) + "%", gx + 21, gy + 3, gc, false);
+            bar(g, gx + 21, gy + 12, 21, 1, Math.max(0, d), gc);
         }
+        // 異常狀態：亮藍色提示
+        int sy = y - 16;
         if (p.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) && p.hasEffect(MobEffects.DIG_SLOWDOWN))
-            small(g, "寒冷：移動變慢", x + 64, y + 34, STEEL, false);
+            sy = status(g, "❄ 寒冷：移動變慢", x, sy);
+    }
+
+    static final net.minecraft.resources.ResourceLocation HELMET = new net.minecraft.resources.ResourceLocation(LnAi.MODID, "textures/gui/helmet.png"),
+            VEST = new net.minecraft.resources.ResourceLocation(LnAi.MODID, "textures/gui/vest.png");
+    static final int STATUS = 0xFF5BC0FF;
+
+    static void tinted(GuiGraphics g, net.minecraft.resources.ResourceLocation tex, int x, int y, int size, int argb) {
+        com.mojang.blaze3d.systems.RenderSystem.enableBlend();
+        g.setColor(((argb >> 16) & 0xFF) / 255f, ((argb >> 8) & 0xFF) / 255f, (argb & 0xFF) / 255f, ((argb >>> 24) & 0xFF) / 255f);
+        g.blit(tex, x, y, size, size, 0, 0, 32, 32, 32, 32);
+        g.setColor(1, 1, 1, 1);
+    }
+
+    /** 狀態提示：亮藍字＋深色底，回傳下一個的 y（往上排）。 */
+    static int status(GuiGraphics g, String s, int x, int y) {
+        int w = width(s);
+        g.fill(x - 2, y - 2, x + w + 3, y + 10, 0x90000814);
+        g.fill(x - 2, y - 2, x - 1, y + 10, STATUS);
+        text(g, s, x + 1, y, STATUS, false);
+        return y - 14;
     }
 
     // ---- 右下彈藥 ----
