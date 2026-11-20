@@ -916,5 +916,41 @@
     "stream": false
    }
   ]
+ },
+ "music.ch05_ice": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "lnai:music/ch05_ice",
+    "stream": true
+   }
+  ]
+ },
+ "music.ch05_suspense": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "lnai:music/ch05_suspense",
+    "stream": true
+   }
+  ]
+ },
+ "music.ch05_battle": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "lnai:music/ch05_battle",
+    "stream": true
+   }
+  ]
+ },
+ "music.ch05_after": {
+  "category": "music",
+  "sounds": [
+   {
+    "name": "lnai:music/ch05_after",
+    "stream": true
+   }
+  ]
  }
 }

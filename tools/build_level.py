@@ -384,6 +384,7 @@ fn("loadout", [
 
 # ================================================================== 流程
 fn("cleanup", [
+    "lnhud music @a stop 60",
     "kill @e[tag=ln]",
     "scoreboard players set #stage ln 0",
     "bossbar set ln:obj visible false",
@@ -419,6 +420,7 @@ fn("start", [
     *bossbar("目標：前往山上的氣象站"),
     # 開場過場（章節標題在過場裡顯示）；過場最後會切到階段 1（上山）
     *goto(0),
+    "lnhud music @a ch05_ice 20",   # 配樂（levels/music.json）：開場到抵達氣象站
     "lnhud cutscene @a ln:ch05_intro",
 ])
 fn("stop", ["function ln:ch05/cleanup", "gamemode creative @a",
@@ -456,6 +458,7 @@ fn("s2", [
     f"execute if score #t ln matches 40.. if block {btn} minecraft:stone_button[powered=true] run function ln:ch05/to_s3",
 ])
 fn("to_s3", [
+    "lnhud music @a ch05_suspense 80",
     *goto(3),
     *bossbar("（劇情）狐狸正在修理掃描器"),
     f"execute positioned {xyz(A['fox_bench'])} run playsound minecraft:block.beacon.activate master @a ~ ~ ~ 1 1.5",
@@ -486,6 +489,7 @@ fn("s4", [
 # 5 小隊戰
 dialogue("combat_start")
 fn("to_s5", [
+    "lnhud music @a ch05_battle 40",
     *goto(5),
     "execute store result score #players ln if entity @a[gamemode=adventure]",
     "execute if score #players ln matches ..0 run scoreboard players set #players ln 1",
@@ -549,7 +553,7 @@ fn("s5", [
     "execute if score #final ln matches 1 if score #budget ln matches ..0 if score #alive ln matches 0 run function ln:ch05/to_s7",
 ])
 # 7 收尾
-fn("to_s7", [*goto(7), *bossbar("防守成功", "green"), "bossbar set ln:obj value 0",
+fn("to_s7", [*goto(7), "lnhud music @a ch05_after 100", *bossbar("防守成功", "green"), "bossbar set ln:obj value 0",
              "kill @e[tag=ln_tech]", "kill @e[tag=ln_mortar]"])
 end7 = dialogue("outro") + 5 * TPS
 fn("s7", ["function ln:ch05/dlg/outro", f"execute if score #t ln matches {end7} run function ln:ch05/finish"])

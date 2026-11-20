@@ -14,3 +14,5 @@ mod/run/
 
 # 語音試聽與實驗檔（不進版本控制）
 voice/preview/
+# 配樂原始 MP3（不進版本控制）
+music/src/

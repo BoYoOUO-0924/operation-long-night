@@ -1,0 +1,38 @@
+{
+  "_說明": "配樂清單與授權紀錄（公開發佈要用）。cue 名稱就是遊戲裡的 /lnhud music <cue>。新增配樂：加一筆、把 MP3 放到 music/src/ 或下載資料夾，執行 tools/make_music.py。",
+  "license_note": "Pixabay Content License（https://pixabay.com/service/license-summary/）：可免費用於作品、可修改、不需署名；不可把原曲單獨轉售或散布。仍在 docs 與發佈頁附上來源以示尊重。",
+  "tracks": {
+    "ch05_ice": {
+      "title": "Cinematic Ambient Winter Wind",
+      "author": "soundreality",
+      "page": "https://pixabay.com/music/ambient-cinematic-ambient-winter-wind-483167/",
+      "file": "soundreality-cinematic-ambient-winter-wind-483167.mp3",
+      "license": "Pixabay Content License",
+      "use": "第五章 開場過場、上山、抵達氣象站（冷冽、孤寂）"
+    },
+    "ch05_suspense": {
+      "title": "Suspense Cinematic",
+      "author": "sub_clair",
+      "page": "https://pixabay.com/music/suspense-suspense-cinematic-633037/",
+      "file": "sub_clair-suspense-cinematic-633037.mp3",
+      "license": "Pixabay Content License",
+      "use": "第五章 揭露叛徒、準備防守（不安、張力累積）"
+    },
+    "ch05_battle": {
+      "title": "Warzone Tension (Military Dark Cinematic)",
+      "author": "wbmstudio",
+      "page": "https://pixabay.com/music/military-historical-warzone-tension-military-dark-cinematic-595392/",
+      "file": "wbmstudio-warzone-tension-military-dark-cinematic-595392.mp3",
+      "license": "Pixabay Content License",
+      "use": "第五章 防守戰（循環）"
+    },
+    "ch05_after": {
+      "title": "Dark Sad Ambient Piano",
+      "author": "Ashot_Danielyan",
+      "page": "https://pixabay.com/music/ambient-dark-sad-ambient-piano-113208/",
+      "file": "ashot_danielyan-dark-sad-ambient-piano-113208.mp3",
+      "license": "Pixabay Content License",
+      "use": "第五章 戰後收尾（低落、悲傷）"
+    }
+  }
+}

@@ -1,4 +1,5 @@
 # 由 tools/build_level.py 自動產生，請勿手動修改
+lnhud music @a ch05_battle 40
 scoreboard players set #stage ln 5
 scoreboard players set #t ln 0
 execute store result score #players ln if entity @a[gamemode=adventure]

@@ -165,6 +165,18 @@ public final class Net {
         }
     }
 
+    /** 關卡配樂：cue = 曲目名稱（空字串 = 停止）；fade = 淡入淡出幾 tick */
+    public record Music(String cue, int fade) {
+        void write(FriendlyByteBuf b) { b.writeUtf(cue); b.writeVarInt(fade); }
+
+        static Music read(FriendlyByteBuf b) { return new Music(b.readUtf(), b.readVarInt()); }
+
+        void handle(Supplier<NetworkEvent.Context> ctx) {
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> dev.longnight.lnai.client.MusicPlayer.play(cue, fade));
+            ctx.get().setPacketHandled(true);
+        }
+    }
+
     static void register() {
         int id = 0;
         CH.messageBuilder(Action.class, id++, NetworkDirection.PLAY_TO_SERVER)
@@ -183,6 +195,8 @@ public final class Net {
                 .encoder(Say::write).decoder(Say::read).consumerMainThread((m, c) -> m.handle(c)).add();
         CH.messageBuilder(Team.class, id++, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Team::write).decoder(Team::read).consumerMainThread((m, c) -> m.handle(c)).add();
+        CH.messageBuilder(Music.class, id++, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(Music::write).decoder(Music::read).consumerMainThread((m, c) -> m.handle(c)).add();
         CH.messageBuilder(DownedSync.class, id++, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(DownedSync::write).decoder(DownedSync::read).consumerMainThread((m, c) -> m.handle(c)).add();
         CH.messageBuilder(Revive.class, id++, NetworkDirection.PLAY_TO_SERVER)

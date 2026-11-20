@@ -26,4 +26,5 @@ bossbar set ln:obj name {"text": "目標：前往山上的氣象站", "font": "l
 bossbar set ln:obj color yellow
 scoreboard players set #stage ln 0
 scoreboard players set #t ln 0
+lnhud music @a ch05_ice 20
 lnhud cutscene @a ln:ch05_intro

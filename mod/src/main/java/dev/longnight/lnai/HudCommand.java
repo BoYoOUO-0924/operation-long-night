@@ -66,6 +66,13 @@ final class HudCommand {
                                                         .executes(c -> say(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "color"),
                                                                 com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "dur"),
                                                                 StringArgumentType.getString(c, "who"), StringArgumentType.getString(c, "text")))))))))
+                // /lnhud music <玩家> <曲目> [淡入淡出 tick]　／　/lnhud music <玩家> stop [tick]
+                .then(Commands.literal("music").then(Commands.argument("targets", EntityArgument.players())
+                        .then(Commands.argument("cue", StringArgumentType.word())
+                                .executes(c -> music(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "cue"), 60))
+                                .then(Commands.argument("fade", com.mojang.brigadier.arguments.IntegerArgumentType.integer(0, 400))
+                                        .executes(c -> music(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "cue"),
+                                                com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade")))))))
                 .then(Commands.literal("teamdebug").then(Commands.argument("on", com.mojang.brigadier.arguments.BoolArgumentType.bool())
                         .executes(c -> { TeamSync.debug = com.mojang.brigadier.arguments.BoolArgumentType.getBool(c, "on"); return 1; })))
                 .then(Commands.literal("trace").then(Commands.argument("type", ResourceLocationArgument.id())
@@ -109,8 +116,20 @@ final class HudCommand {
         return ps.size();
     }
 
-    /** 玩家重新連線時補送目前的目標。 */
-    static void resend(ServerPlayer p) { send(List.of(p)); }
+    private static String lastMusic = "";
+
+    private static int music(Collection<ServerPlayer> ps, String cue, int fade) {
+        String c = cue.equals("stop") ? "" : cue;
+        lastMusic = c;
+        for (ServerPlayer p : ps) Net.to(p, new Net.Music(c, fade));
+        return ps.size();
+    }
+
+    /** 玩家重新連線時補送目前的目標與配樂。 */
+    static void resend(ServerPlayer p) {
+        send(List.of(p));
+        if (!lastMusic.isEmpty()) Net.to(p, new Net.Music(lastMusic, 40));
+    }
 
     // ---- 軌跡測量 ----
     private record Trace(Entity e, int[] age) {}
