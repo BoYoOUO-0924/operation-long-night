@@ -57,6 +57,15 @@ final class HudCommand {
                 .then(Commands.literal("anim").then(Commands.argument("targets", EntityArgument.entities())
                         .then(Commands.argument("name", StringArgumentType.word())
                                 .executes(c -> anim(EntityArgument.getEntities(c, "targets"), StringArgumentType.getString(c, "name"))))))
+                // /lnhud say <玩家> <名字顏色 RRGGBB> <顯示 tick> <說話的人> <台詞>
+                .then(Commands.literal("say").then(Commands.argument("targets", EntityArgument.players())
+                        .then(Commands.argument("color", StringArgumentType.word())
+                                .then(Commands.argument("dur", com.mojang.brigadier.arguments.IntegerArgumentType.integer(1, 2000))
+                                        .then(Commands.argument("who", StringArgumentType.string())
+                                                .then(Commands.argument("text", StringArgumentType.greedyString())
+                                                        .executes(c -> say(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "color"),
+                                                                com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "dur"),
+                                                                StringArgumentType.getString(c, "who"), StringArgumentType.getString(c, "text")))))))))
                 .then(Commands.literal("trace").then(Commands.argument("type", ResourceLocationArgument.id())
                         .then(Commands.argument("pos", Vec3Argument.vec3())
                                 .then(Commands.argument("vx", FloatArgumentType.floatArg())
@@ -88,6 +97,14 @@ final class HudCommand {
         String a = name.equals("stop") ? "" : name;
         for (Entity e : es) Net.around(e, new Net.Anim(e.getId(), a));
         return es.size();
+    }
+
+    private static int say(Collection<ServerPlayer> ps, String color, int dur, String who, String text) {
+        int rgb;
+        try { rgb = Integer.parseInt(color.replace("#", ""), 16); } catch (NumberFormatException ex) { rgb = 0xE4E2DA; }
+        Net.Say msg = new Net.Say(who, rgb, text, dur);
+        for (ServerPlayer p : ps) Net.to(p, msg);
+        return ps.size();
     }
 
     /** 玩家重新連線時補送目前的目標。 */

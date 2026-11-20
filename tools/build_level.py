@@ -57,8 +57,13 @@ def norm(text):
     return text.replace("：", ": ").replace("！", "! ").replace("，", ", ").replace("？", "? ")
 
 
+# 名字顏色（字幕用比較柔和的寫實色）
+SUB_COLOR = {"aqua": "#7FC8D8", "gold": "#E0B050", "green": "#8CC08C", "gray": "#B4B4B4",
+             "dark_red": "#D05050", "yellow": "#FFB020", "dark_aqua": "#5BA8B0", "white": "#E4E2DA"}
+
+
 def say_line(who, text):
-    text = norm(text)
+    text = norm(text).strip()
     color = SPK.get(who, "white")
     if who == "目標":
         return [f"tellraw @a {jtext([{'text': '▶ 目標：', 'color': color, 'bold': True}, {'text': text, 'color': 'white'}])}",
@@ -68,7 +73,10 @@ def say_line(who, text):
         return [f"tellraw @a {jtext([{'text': '（提示）', 'color': color}, {'text': text, 'color': 'gray', 'italic': True}])}"]
     sound = ("minecraft:block.note_block.basedrum master @s ~ ~ ~ 0.8 0.5" if who == "守夜人"
              else "minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8")
-    return [f"tellraw @a {jtext([{'text': f'[{who}] ', 'color': color, 'bold': True}, {'text': text, 'color': 'white'}])}",
+    # 角色對白：畫面中下方的字幕（client/DialogSubs.java），顯示時間依字數決定
+    dur = max(70, min(240, 40 + len(text) * 5))
+    hexc = SUB_COLOR.get(color, "#E4E2DA").lstrip("#")
+    return [f'lnhud say @a {hexc} {dur} "{who}" {text}',
             f"execute as @a at @s run playsound {sound}"]
 
 
@@ -331,7 +339,7 @@ fn("ev/tech_arrive", [
     "scoreboard players set #tp ln 0",
     "execute as @e[tag=ln_techgun] run ride @s dismount",
     f"execute as @e[tag=ln_techgun] run data merge entity @s {wp(ROUTES['east']['assault'], 3, 64)}",
-    f"tellraw @a {jtext([{'text': '[白鴉] ', 'color': 'aqua', 'bold': True}, {'text': '皮卡停了，槍手下車了！東邊車庫外！', 'color': 'white'}])}",
+    *say_line("白鴉", "皮卡停了，槍手下車了！東邊車庫外！"),
 ])
 
 fn("ev/mortar_tick", [
@@ -463,7 +471,7 @@ fn("to_s4", [
     "bossbar set ln:obj max 400",
     "execute as @e[tag=ln_tank] run data merge entity @s {ForgeData:{ln_follow:1b,ln_hunt:40}}",
     "execute as @e[tag=ln_fox] run data merge entity @s {ForgeData:{ln_follow:1b,ln_hunt:40}}",
-    f"tellraw @a {jtext([{'text': '[戰車] ', 'color': 'gold', 'bold': True}, {'text': '我和狐狸跟著你，你往哪打我們就往哪打。白鴉在塔上掩護。', 'color': 'white'}])}",
+    *say_line("戰車", "我和狐狸跟著你，你往哪打我們就往哪打。白鴉在塔上掩護。"),
     f"data merge entity @e[tag=ln_baiya,limit=1] {wp(A['baiya_tower'], 1, 64)}",
 ])
 dialogue("prepare")
@@ -582,8 +590,6 @@ print(f"已產生 {len(files)} 個函式到 {OUT.relative_to(ROOT)}")
 
 # ================================================================== 過場動畫（levels/cutscenes/*.json → data/ln/cutscenes/）
 # 字幕的名字顏色沿用對白的 speakers 設定（換成比較柔和的寫實色）
-SUB_COLOR = {"aqua": "#7FC8D8", "gold": "#E0B050", "green": "#8CC08C", "gray": "#B4B4B4",
-             "dark_red": "#D05050", "yellow": "#FFB020", "dark_aqua": "#5BA8B0", "white": "#E4E2DA"}
 CUT_OUT = ROOT / "datapack/longnight/data/ln/cutscenes"
 CUT_OUT.mkdir(parents=True, exist_ok=True)
 for old in CUT_OUT.glob("*.json"):

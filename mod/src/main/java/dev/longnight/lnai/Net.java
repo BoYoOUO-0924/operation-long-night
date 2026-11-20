@@ -99,6 +99,18 @@ public final class Net {
         }
     }
 
+    /** 遊玩中的對白字幕：who = 說話的人（可空）、color = 名字顏色 RGB、dur = 顯示幾 tick。 */
+    public record Say(String who, int color, String text, int dur) {
+        void write(FriendlyByteBuf b) { b.writeUtf(who); b.writeInt(color); b.writeUtf(text); b.writeVarInt(dur); }
+
+        static Say read(FriendlyByteBuf b) { return new Say(b.readUtf(), b.readInt(), b.readUtf(), b.readVarInt()); }
+
+        void handle(Supplier<NetworkEvent.Context> ctx) {
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> dev.longnight.lnai.client.DialogSubs.add(who, color, text, dur));
+            ctx.get().setPacketHandled(true);
+        }
+    }
+
     static void register() {
         int id = 0;
         CH.messageBuilder(Action.class, id++, NetworkDirection.PLAY_TO_SERVER)
@@ -113,6 +125,8 @@ public final class Net {
                 .encoder(Cutscene::write).decoder(Cutscene::read).consumerMainThread((m, c) -> m.handle(c)).add();
         CH.messageBuilder(Anim.class, id++, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Anim::write).decoder(Anim::read).consumerMainThread((m, c) -> m.handle(c)).add();
+        CH.messageBuilder(Say.class, id++, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(Say::write).decoder(Say::read).consumerMainThread((m, c) -> m.handle(c)).add();
     }
 
     /** 送給看得到這個實體的所有玩家（含實體自己，如果它是玩家） */

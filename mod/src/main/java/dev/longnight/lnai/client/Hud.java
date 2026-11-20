@@ -120,6 +120,7 @@ public final class Hud {
         @SubscribeEvent
         public static void overlays(RegisterGuiOverlaysEvent e) {
             e.registerAboveAll("ln_hud", (gui, g, pt, w, h) -> { if (active()) draw(g, w, h); });
+            e.registerAboveAll("ln_say", (gui, g, pt, w, h) -> DialogSubs.draw(g, w, h, pt));
         }
     }
 
