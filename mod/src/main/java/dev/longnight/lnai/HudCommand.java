@@ -66,6 +66,8 @@ final class HudCommand {
                                                         .executes(c -> say(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "color"),
                                                                 com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "dur"),
                                                                 StringArgumentType.getString(c, "who"), StringArgumentType.getString(c, "text")))))))))
+                .then(Commands.literal("teamdebug").then(Commands.argument("on", com.mojang.brigadier.arguments.BoolArgumentType.bool())
+                        .executes(c -> { TeamSync.debug = com.mojang.brigadier.arguments.BoolArgumentType.getBool(c, "on"); return 1; })))
                 .then(Commands.literal("trace").then(Commands.argument("type", ResourceLocationArgument.id())
                         .then(Commands.argument("pos", Vec3Argument.vec3())
                                 .then(Commands.argument("vx", FloatArgumentType.floatArg())

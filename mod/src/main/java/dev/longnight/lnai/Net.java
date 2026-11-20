@@ -111,6 +111,32 @@ public final class Net {
         }
     }
 
+    /** 一位真人隊友的狀態。idx = P1～P4 編號（0 起算）；armor = 頭盔＋防彈衣平均耐久，-1 = 沒穿。 */
+    public record Mate(int entity, String name, int idx, float hp, float max, float armor, int meds, boolean dead,
+                       double x, double y, double z) {
+        void write(FriendlyByteBuf b) {
+            b.writeVarInt(entity); b.writeUtf(name); b.writeVarInt(idx); b.writeFloat(hp); b.writeFloat(max);
+            b.writeFloat(armor); b.writeVarInt(meds); b.writeBoolean(dead); b.writeDouble(x); b.writeDouble(y); b.writeDouble(z);
+        }
+
+        static Mate read(FriendlyByteBuf b) {
+            return new Mate(b.readVarInt(), b.readUtf(), b.readVarInt(), b.readFloat(), b.readFloat(), b.readFloat(),
+                    b.readVarInt(), b.readBoolean(), b.readDouble(), b.readDouble(), b.readDouble());
+        }
+    }
+
+    /** 所有真人玩家的狀態（含自己），每 10 tick 一次。 */
+    public record Team(java.util.List<Mate> mates) {
+        void write(FriendlyByteBuf b) { b.writeCollection(mates, (bb, m) -> m.write(bb)); }
+
+        static Team read(FriendlyByteBuf b) { return new Team(b.readList(Mate::read)); }
+
+        void handle(Supplier<NetworkEvent.Context> ctx) {
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> dev.longnight.lnai.client.ClientState.onTeam(mates));
+            ctx.get().setPacketHandled(true);
+        }
+    }
+
     static void register() {
         int id = 0;
         CH.messageBuilder(Action.class, id++, NetworkDirection.PLAY_TO_SERVER)
@@ -127,6 +153,8 @@ public final class Net {
                 .encoder(Anim::write).decoder(Anim::read).consumerMainThread((m, c) -> m.handle(c)).add();
         CH.messageBuilder(Say.class, id++, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Say::write).decoder(Say::read).consumerMainThread((m, c) -> m.handle(c)).add();
+        CH.messageBuilder(Team.class, id++, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(Team::write).decoder(Team::read).consumerMainThread((m, c) -> m.handle(c)).add();
     }
 
     /** 送給看得到這個實體的所有玩家（含實體自己，如果它是玩家） */

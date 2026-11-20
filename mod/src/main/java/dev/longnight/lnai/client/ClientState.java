@@ -34,6 +34,12 @@ public final class ClientState {
     public static String bigKill = "";
     public static long bigKillTime = -100;
 
+    /** 真人玩家狀態（含自己），伺服器每 10 tick 更新 */
+    public static java.util.List<Net.Mate> team = java.util.List.of();
+    public static long teamAt = -100;
+
+    public static void onTeam(java.util.List<Net.Mate> mates) { team = mates; teamAt = now(); }
+
     static long now() {
         Minecraft mc = Minecraft.getInstance();
         return mc.level == null ? 0 : mc.level.getGameTime();

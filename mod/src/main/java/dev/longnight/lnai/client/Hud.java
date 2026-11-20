@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import dev.longnight.lnai.Gear;
 import dev.longnight.lnai.LnAi;
+import dev.longnight.lnai.Net;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
@@ -120,6 +121,7 @@ public final class Hud {
         @SubscribeEvent
         public static void overlays(RegisterGuiOverlaysEvent e) {
             e.registerAboveAll("ln_hud", (gui, g, pt, w, h) -> { if (active()) draw(g, w, h); });
+            e.registerBelowAll("ln_mates", (gui, g, pt, w, h) -> { if (active()) MateMarkers.draw(g, w, h, pt); });
             e.registerAboveAll("ln_say", (gui, g, pt, w, h) -> DialogSubs.draw(g, w, h, pt));
         }
     }
@@ -215,6 +217,8 @@ public final class Hud {
             LivingEntity e = find(m[0]);
             if (e != null) marker(g, cx, y, ppd, head, bearing(eye, e.position()), m[1], m[0], OK);
         }
+        for (Net.Mate m : mates(p))
+            if (!m.dead()) marker(g, cx, y, ppd, head, bearing(eye, matePos(m, 1)), "●", "P" + (m.idx() + 1), pcol(m.idx()));
         if (ClientState.waypoint != null)
             marker(g, cx, y, ppd, head, bearing(eye, ClientState.waypoint), "◆", "OBJ " + Math.round(Math.sqrt(p.distanceToSqr(ClientState.waypoint))) + "M", OBJ);
     }
@@ -282,23 +286,96 @@ public final class Hud {
         return null;
     }
 
+    /** P1～P4 的代表色：冰藍、螢光綠、琥珀橘、亮紫（HUD 色條、羅盤點、頭上標記同一個顏色） */
+    static final int[] PCOL = {0xFF7FC8E8, 0xFF8EE07A, 0xFFF0A040, 0xFFC08CF0};
+
+    static int pcol(int idx) { return PCOL[Math.floorMod(idx, PCOL.length)]; }
+
+    /** 其他真人隊友（不含自己）；超過 2 秒沒更新就當作沒有 */
+    static java.util.List<Net.Mate> mates(LocalPlayer p) {
+        if (ClientState.now() - ClientState.teamAt > 40) return java.util.List.of();
+        java.util.List<Net.Mate> out = new java.util.ArrayList<>();
+        for (Net.Mate m : ClientState.team) if (m.entity() != p.getId()) out.add(m);
+        return out;
+    }
+
+    static Net.Mate self(LocalPlayer p) {
+        for (Net.Mate m : ClientState.team) if (m.entity() == p.getId()) return m;
+        return null;
+    }
+
+    /** 隊友目前位置：在附近就用實體的平滑位置，太遠就用伺服器回報的位置 */
+    static Vec3 matePos(Net.Mate m, float pt) {
+        Entity e = Minecraft.getInstance().level.getEntity(m.entity());
+        return e != null ? e.getPosition(pt) : new Vec3(m.x(), m.y(), m.z());
+    }
+
     static void squad(GuiGraphics g, LocalPlayer p) {
-        if (squadCache.isEmpty()) return;
-        int x = 10, y = 60, rowW = 104;
+        java.util.List<Net.Mate> ms = mates(p);
+        if (squadCache.isEmpty() && ms.isEmpty()) return;
+        int x = 10, y = 60, rowW = 120;
+        Net.Mate me = self(p);
         small(g, "SQUAD // 獵犬", x, y, FAINT, false);
+        if (me != null && !ms.isEmpty()) small(g, "P" + (me.idx() + 1), x + rowW - 4 - Math.round(width("P0") * 0.75f), y, pcol(me.idx()), false);
         y += 9;
-        for (String[] m : SQUAD) {
+        long now = ClientState.now();
+        boolean blink = (now / 6) % 2 == 0;
+        // 上半部：真人隊友（完整狀態列）
+        for (Net.Mate m : ms) {
+            int c = pcol(m.idx());
+            float v = m.max() <= 0 ? 0 : m.hp() / m.max();
+            boolean danger = !m.dead() && v < 0.3f;
+            int bg = m.dead() ? 0x70202020 : danger ? (blink ? 0x90601818 : 0x70401010) : PANEL;
+            g.fill(x, y, x + rowW, y + 21, bg);
+            g.fill(x, y, x + 2, y + 21, m.dead() ? FAINT : c);
+            int fg = m.dead() ? FAINT : TEXT;
+            text(g, m.name(), x + 6, y + 2, fg, false);
+            if (m.dead()) {
+                right(g, "陣亡", x + rowW - 4, y + 2, FAINT);
+            } else {
+                Vec3 mp = matePos(m, 1);
+                String d = String.format("%02dM", Math.min(99, Math.round(mp.distanceTo(p.position()))));
+                small(g, d, x + rowW - 4 - Math.round(width(d) * 0.75f), y + 3, SUB, false);
+                // 缺醫療品又受傷：名字旁亮一個白色十字，提醒分繃帶
+                if (m.meds() == 0 && v < 0.5f) text(g, "✚", x + 8 + width(m.name()), y + 2, blink ? 0xFFFFFFFF : 0xFFC0C0C0, false);
+            }
+            bar(g, x + 6, y + 13, rowW - 10, 1, m.dead() ? 0 : v, m.dead() ? FAINT : v > 0.6f ? OK : v > 0.3f ? WARN : 0xFFFF8A78);
+            if (m.armor() >= 0 && !m.dead()) {
+                g.fill(x + 6, y + 16, x + 6 + Math.round((rowW - 10) * Mth.clamp(m.armor(), 0, 1)), y + 17, 0xFF6F9FC8);
+            }
+            y += 23;
+        }
+        if (ms.isEmpty()) {
+            // 單人：維持原本三條完整欄位
+            for (String[] m : SQUAD) {
+                LivingEntity e = find(m[0]);
+                int fg = e == null ? FAINT : TEXT;
+                g.fill(x, y, x + 104, y + 17, PANEL);
+                g.fill(x, y, x + 1, y + 17, e == null ? FAINT : SUB);
+                text(g, m[1], x + 8, y + 4, e == null ? FAINT : TEXT, true);
+                text(g, m[0], x + 17, y + 2, fg, false);
+                if (e == null) { right(g, "—", x + 104 - 4, y + 2, FAINT); y += 19; continue; }
+                small(g, String.format("%02dM", Math.min(99, Math.round(e.distanceTo(p)))), x + 104 - 4 - Math.round(width("00M") * 0.75f), y + 3, SUB, false);
+                float v = e.getHealth() / e.getMaxHealth();
+                bar(g, x + 17, y + 12, 104 - 21, 1, v, v > 0.6f ? OK : v > 0.3f ? WARN : BAD);
+                y += 19;
+            }
+            return;
+        }
+        // 下半部：NPC 壓縮成一排小標籤（圖示＋名字＋距離）
+        y += 1;
+        int cw = (rowW - 4) / 3;
+        for (int i = 0; i < SQUAD.length; i++) {
+            String[] m = SQUAD[i];
             LivingEntity e = find(m[0]);
+            int cx = x + i * (cw + 2);
+            g.fill(cx, y, cx + cw, y + 13, PANEL);
+            g.fill(cx, y + 12, cx + cw, y + 13, e == null ? FAINT : SUB);
             int fg = e == null ? FAINT : TEXT;
-            g.fill(x, y, x + rowW, y + 17, PANEL);
-            g.fill(x, y, x + 1, y + 17, e == null ? FAINT : SUB);
-            text(g, m[1], x + 8, y + 4, e == null ? FAINT : TEXT, true);
-            text(g, m[0], x + 17, y + 2, fg, false);
-            if (e == null) { right(g, "—", x + rowW - 4, y + 2, FAINT); y += 19; continue; }
-            small(g, String.format("%02dM", Math.min(99, Math.round(e.distanceTo(p)))), x + rowW - 4 - Math.round(width("00M") * 0.75f), y + 3, SUB, false);
-            float v = e.getHealth() / e.getMaxHealth();
-            bar(g, x + 17, y + 12, rowW - 21, 1, v, v > 0.6f ? OK : v > 0.3f ? WARN : BAD);
-            y += 19;
+            text(g, m[1], cx + 5, y + 2, fg, true);
+            small(g, m[0], cx + 10, y + 3, fg, false);
+            String d = e == null ? "—" : String.format("%02d", Math.min(99, Math.round(e.distanceTo(p))));
+            small(g, d, cx + cw - 2 - Math.round(width(d) * 0.75f), y + 3, SUB, false);
         }
     }
 
