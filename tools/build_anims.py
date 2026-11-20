@@ -74,6 +74,16 @@ made.append(anim("guard", 2.0, {
     "head": osc([0, -10, 0], [0, 10, 0], 1, 2.0),
 }, loop=True))
 
+# 救援：單膝跪地（整個人往下沉，右膝往前、左腿往後跪），上身前傾，雙手往前下方規律按壓
+made.append(anim("revive", 0.6, {
+    "right_leg": {0: [-70, 0, 0], 0.6: [-70, 0, 0]},
+    "left_leg": {0: [60, 0, 0], 0.6: [60, 0, 0]},
+    "torso": osc([22, 0, 0], [30, 0, 0], 1, 0.6),
+    "right_arm": osc([-55, 0, 8], [-38, 0, 8], 1, 0.6),
+    "left_arm": osc([-55, 0, -8], [-38, 0, -8], 1, 0.6),
+    "head": {0: [35, 0, 0], 0.6: [35, 0, 0]},
+}, loop=True, pos={"body": {0: [0, -6, 0], 0.6: [0, -6, 0]}}))
+
 for old in OUT.glob("*.json"):
     if old.stem not in made:
         old.unlink()

@@ -137,6 +137,35 @@ public final class Downed {
     private static void releaseNpc(Mob m) {
         if (m.isAlive()) m.setNoAi(false);
         m.getNavigation().stop();
+        Net.around(m, new Net.Anim(m.getId(), ""));
+    }
+
+    // ---------------------------------------------------------------- 救人者：跪下、不能移動
+    private static final UUID FREEZE = UUID.fromString("6c1b0f7e-3f0a-4d4e-9a51-1b2c7d0e5a11");
+    private static final Set<UUID> KNEELING = new HashSet<>();
+
+    private static void updateRescuers(MinecraftServer s) {
+        Set<UUID> now = new HashSet<>();
+        for (State st : DOWN.values()) if (st.reviver != null) now.add(st.reviver);
+        for (ServerPlayer p : s.getPlayerList().getPlayers()) {
+            UUID id = p.getUUID();
+            boolean on = now.contains(id), was = KNEELING.contains(id);
+            if (on == was) continue;
+            var a = p.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED);
+            if (on) {
+                KNEELING.add(id);
+                p.setSprinting(false);
+                if (a != null && a.getModifier(FREEZE) == null)
+                    a.addTransientModifier(new net.minecraft.world.entity.ai.attributes.AttributeModifier(FREEZE, "ln_revive", -1,
+                            net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation.MULTIPLY_TOTAL));
+                Net.around(p, new Net.Anim(p.getId(), "revive"));
+            } else {
+                KNEELING.remove(id);
+                if (a != null) a.removeModifier(FREEZE);
+                Net.around(p, new Net.Anim(p.getId(), ""));
+            }
+        }
+        KNEELING.removeIf(id -> s.getPlayerList().getPlayer(id) == null);
     }
 
     // ---------------------------------------------------------------- 救援（玩家）
@@ -196,6 +225,7 @@ public final class Downed {
                 }
             }
         }
+        updateRescuers(s);
         checkWipe(s);
     }
 
@@ -216,7 +246,13 @@ public final class Downed {
             if (d <= 1.8 || st.npcAge > NPC_GIVE_UP) {
                 if (d > 1.8) m.teleportTo(p.getX() + 1, p.getY(), p.getZ());   // 路走不通：直接到旁邊，避免單人卡死
                 m.getNavigation().stop();
+                m.setDeltaMovement(net.minecraft.world.phys.Vec3.ZERO);
+                m.setSprinting(false);
                 m.setNoAi(true);
+                m.setYRot(yawTo(m, p));
+                m.setYBodyRot(m.getYRot());
+                m.setYHeadRot(m.getYRot());
+                Net.around(m, new Net.Anim(m.getId(), "revive"));
                 st.npcWorking = true;
                 st.progress = 0;
                 st.progressMax = NPC_REVIVE_TICKS;
