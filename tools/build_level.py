@@ -356,11 +356,12 @@ fn("ammo", [
     'give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:556x45"} 60',
     'give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:9mm"} 34',
 ])
-# 快捷欄固定：1 主武器、2 副武器、3 近戰（空）、4 投擲物、5 醫療；其餘放背包，由 lnai 模組按 4／5 時換上來
+# 快捷欄固定：1 主武器、2 副武器、3 近戰（軍刀）、4 投擲物、5 醫療；其餘放背包，由 lnai 模組按 4／5 時換上來
 P = "@a[gamemode=adventure]"
 fn("loadout", [
     f'item replace entity {P} hotbar.0 with tacz:modern_kinetic_gun{{GunId:"tacz:m4a1",GunCurrentAmmoCount:30,HasBulletInBarrel:1b}}',
     f'item replace entity {P} hotbar.1 with tacz:modern_kinetic_gun{{GunId:"tacz:glock_17",GunCurrentAmmoCount:17,HasBulletInBarrel:1b}}',
+    f"item replace entity {P} hotbar.2 with superbwarfare:knife",
     f"item replace entity {P} hotbar.3 with superbwarfare:hand_grenade 2",
     f"item replace entity {P} hotbar.4 with lnai:bandage 4",
     "function ln:ch05/ammo",

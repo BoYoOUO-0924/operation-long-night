@@ -21,9 +21,9 @@ public final class Net {
             new ResourceLocation(LnAi.MODID, "main"), () -> VER, VER::equals, VER::equals);
 
     // ---- 玩家 → 伺服器 ----
-    /** kind: 0 = 自動選醫療、1 = 指定醫療（arg = Med 序號）、2 = 裝備投擲物（arg = Grenade 序號）。prevSlot = 按鍵前手上的欄位。 */
+    /** kind: 0 = 自動選醫療、1 = 指定醫療（arg = Med 序號）、2 = 裝備投擲物（arg = Grenade 序號）、3 = 快速近戰。prevSlot = 按鍵前手上的欄位。 */
     public record Action(int kind, int arg, int prevSlot) {
-        public static final int MED_AUTO = 0, MED_PICK = 1, GRENADE = 2;
+        public static final int MED_AUTO = 0, MED_PICK = 1, GRENADE = 2, MELEE = 3;
 
         void write(FriendlyByteBuf b) { b.writeByte(kind); b.writeByte(arg); b.writeByte(prevSlot); }
 

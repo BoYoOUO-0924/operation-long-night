@@ -1,6 +1,7 @@
 # 由 tools/build_level.py 自動產生，請勿手動修改
 item replace entity @a[gamemode=adventure] hotbar.0 with tacz:modern_kinetic_gun{GunId:"tacz:m4a1",GunCurrentAmmoCount:30,HasBulletInBarrel:1b}
 item replace entity @a[gamemode=adventure] hotbar.1 with tacz:modern_kinetic_gun{GunId:"tacz:glock_17",GunCurrentAmmoCount:17,HasBulletInBarrel:1b}
+item replace entity @a[gamemode=adventure] hotbar.2 with superbwarfare:knife
 item replace entity @a[gamemode=adventure] hotbar.3 with superbwarfare:hand_grenade 2
 item replace entity @a[gamemode=adventure] hotbar.4 with lnai:bandage 4
 function ln:ch05/ammo

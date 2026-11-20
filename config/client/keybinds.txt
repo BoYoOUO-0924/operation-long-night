@@ -1,0 +1,23 @@
+# 《代號：長夜》建議按鍵（貼進 .minecraft/options.txt）
+key_key.sprint:key.keyboard.left.shift
+key_key.sneak:key.keyboard.left.control
+key_key.inventory:key.keyboard.tab
+key_key.playerlist:key.keyboard.grave.accent
+key_key.swapOffhand:key.keyboard.unknown
+key_key.saveToolbarActivator:key.keyboard.unknown
+key_key.loadToolbarActivator:key.keyboard.unknown
+key_key.tacz.fire_select.desc:key.keyboard.b
+key_key.tacz.crawl.desc:key.keyboard.z
+key_key.tacz.refit.desc:key.keyboard.i
+key_key.tacz.zoom.desc:key.keyboard.n
+key_key.tacz.melee.desc:key.keyboard.unknown
+key_key.tacz.interact.desc:key.keyboard.f
+key_key.superbwarfare.fire_mode:key.keyboard.b
+key_key.superbwarfare.melee:key.keyboard.unknown
+key_key.superbwarfare.breath:key.keyboard.left.shift
+key_key.superbwarfare.free_camera:key.keyboard.left.alt
+key_key.superbwarfare.dismount:key.keyboard.e
+key_gui.xaero_new_waypoint:key.keyboard.unknown
+key_gui.xaero_enlarge_map:key.keyboard.unknown
+key_key.lnai.melee:key.keyboard.v
+key_key.lnai.crouch:key.keyboard.c

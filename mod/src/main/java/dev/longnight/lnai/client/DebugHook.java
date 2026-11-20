@@ -71,6 +71,13 @@ public final class DebugHook {
                 case "release" -> KeyMapping.set(mc.options.keyUse.getKey(), false);
                 case "look" -> { mc.player.setYRot(Float.parseFloat(a[1])); mc.player.setXRot(Float.parseFloat(a[2])); }
                 case "wait" -> wait = Integer.parseInt(a[1]);
+                case "key", "down", "up" -> {   // 模擬真的鍵盤事件：key = 按一下，down／up = 按住／放開
+                    int code = com.mojang.blaze3d.platform.InputConstants.getKey("key.keyboard." + a[1]).getValue();
+                    long win = mc.getWindow().getWindow();
+                    if (!a[0].equals("up")) mc.keyboardHandler.keyPress(win, code, 0, org.lwjgl.glfw.GLFW.GLFW_PRESS, 0);
+                    if (!a[0].equals("down")) mc.keyboardHandler.keyPress(win, code, 0, org.lwjgl.glfw.GLFW.GLFW_RELEASE, 0);
+                }
+                case "melee" -> dev.longnight.lnai.Net.CH.sendToServer(new dev.longnight.lnai.Net.Action(dev.longnight.lnai.Net.Action.MELEE, 0, mc.player.getInventory().selected));
                 case "tap" -> {
                     int which = a[1].equals("4") ? Gear.SLOT_GRENADE : Gear.SLOT_MED;
                     ClientInput.prevSlot = mc.player.getInventory().selected;

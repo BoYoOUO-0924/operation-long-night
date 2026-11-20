@@ -40,6 +40,7 @@ final class Heal {
     static void onTick(TickEvent.PlayerTickEvent e) {
         if (e.phase != TickEvent.Phase.END || !(e.player instanceof ServerPlayer p)) return;
         if (p.tickCount % 10 == 0) Loadout.tidy(p);
+        Melee.tick(p);
         Job j = JOBS.get(p.getUUID());
         if (j == null) return;
         if (!p.isAlive() || p.getInventory().selected != Gear.SLOT_MED || !j.med.is(p.getInventory().getItem(Gear.SLOT_MED))) {

@@ -33,6 +33,7 @@ final class Loadout {
                 Gear.Grenade g = Gear.Grenade.values()[a.arg()];
                 if (!equip(p.getInventory(), Gear.SLOT_GRENADE, g::is)) tell(p, "沒有" + g.label);
             }
+            case Net.Action.MELEE -> Melee.quick(p, a.prevSlot());
             default -> {}
         }
     }

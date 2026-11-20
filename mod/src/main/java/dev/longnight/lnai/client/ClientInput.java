@@ -4,6 +4,7 @@ import com.mojang.blaze3d.platform.InputConstants;
 import dev.longnight.lnai.Gear;
 import dev.longnight.lnai.LnAi;
 import dev.longnight.lnai.Net;
+import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Inventory;
@@ -23,6 +24,12 @@ import org.lwjgl.glfw.GLFW;
 @Mod.EventBusSubscriber(modid = LnAi.MODID, value = Dist.CLIENT)
 public final class ClientInput {
     private ClientInput() {}
+
+    /** 快速近戰鍵（預設 V）。 */
+    public static final KeyMapping MELEE = new KeyMapping("key.lnai.melee", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_V, "key.categories.lnai");
+    /** 第二個蹲下鍵（預設 C；原版蹲下改在左 Ctrl，一個動作只能綁一個鍵，所以另外加這個）。 */
+    public static final KeyMapping CROUCH = new KeyMapping("key.lnai.crouch", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_C, "key.categories.lnai");
+    static boolean crouchHeld = false;
 
     static final int HOLD_TICKS = 5;   // 按住 0.25 秒算長按
     static int heldKey = -1;          // 3 = 投擲、4 = 醫療
@@ -94,6 +101,16 @@ public final class ClientInput {
         Inventory inv = mc.player.getInventory();
         if (inv.selected > Gear.LAST_SLOT) inv.selected = lastValidSlot;   // 6～9 鎖住
         if (inv.selected != Gear.SLOT_MED) lastValidSlot = inv.selected;
+        // C 也能蹲下：按住時壓住原版蹲下鍵，放開時還原成原版鍵的實際狀態
+        boolean c = CROUCH.isDown() && mc.screen == null;
+        if (c) mc.options.keyShift.setDown(true);
+        else if (crouchHeld) {
+            InputConstants.Key k = mc.options.keyShift.getKey();
+            mc.options.keyShift.setDown(k.getType() == InputConstants.Type.KEYSYM && InputConstants.isKeyDown(mc.getWindow().getWindow(), k.getValue()));
+        }
+        crouchHeld = c;
+        while (MELEE.consumeClick())
+            if (mc.screen == null) Net.CH.sendToServer(new Net.Action(Net.Action.MELEE, 0, inv.selected));
         if (heldKey >= 0 && mc.screen == null) {
             if (++heldTicks == HOLD_TICKS) mc.setScreen(new WheelScreen(heldKey == Gear.SLOT_GRENADE, keyOf(heldKey), prevSlot));
         }
