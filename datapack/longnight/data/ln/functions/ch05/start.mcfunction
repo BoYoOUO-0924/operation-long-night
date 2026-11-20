@@ -27,4 +27,5 @@ bossbar set ln:obj color yellow
 scoreboard players set #stage ln 0
 scoreboard players set #t ln 0
 lnhud music @a ch05_ice 20
+lnhud ambient @a blizzard_loop 40
 lnhud cutscene @a ln:ch05_intro

@@ -1,0 +1,72 @@
+{
+  "_說明": "音效清單。合成的音效寫在 tools/make_sfx.py（沒有授權問題）；recorded 是 Freesound 上 CC0（完全公開、不需署名）的錄音，要由你登入 Freesound 下載，放在下載資料夾即可。trim = 只取 [開始秒, 結束秒]；fade = 結尾淡出秒數。",
+  "recorded": {
+    "breath_cold": {
+      "what": "寒冷中的喘息",
+      "title": "ColdBreath.wav",
+      "author": "kaligari",
+      "page": "https://freesound.org/people/kaligari/sounds/35389/",
+      "license": "CC0",
+      "trim": [
+        0.8,
+        4.2
+      ],
+      "fade": 1.2
+    },
+    "metal_groan": {
+      "what": "車廂金屬扭曲的呻吟",
+      "title": "metal locker open close creaks slow groan.flac",
+      "author": "kyles",
+      "page": "https://freesound.org/people/kyles/sounds/454081/",
+      "license": "CC0",
+      "trim": [
+        18.0,
+        21.6
+      ],
+      "fade": 0.8
+    },
+    "door_kick": {
+      "what": "踹開鐵門",
+      "title": "Metal Door Impacted, Swings open",
+      "author": "DeqstersLab",
+      "page": "https://freesound.org/people/DeqstersLab/sounds/767041/",
+      "license": "CC0"
+    },
+    "ice_crack": {
+      "what": "護目鏡結霜的冰裂聲",
+      "title": "Ice Cracks",
+      "author": "karlis.stigis",
+      "page": "https://freesound.org/people/karlis.stigis/sounds/168712/",
+      "license": "CC0",
+      "trim": [
+        4.5,
+        6.3
+      ],
+      "fade": 0.4
+    },
+    "mortar_launch": {
+      "what": "迫擊砲發射",
+      "title": "Mortar Shots.flac",
+      "author": "qubodup",
+      "page": "https://freesound.org/people/qubodup/sounds/184382/",
+      "license": "CC0",
+      "trim": [
+        1.4,
+        3.6
+      ],
+      "fade": 0.8
+    },
+    "metal_debris": {
+      "what": "殘骸金屬掉落",
+      "title": "Scrap metal dropping / crashing",
+      "author": "SamsterBirdies",
+      "page": "https://freesound.org/people/SamsterBirdies/sounds/587443/",
+      "license": "CC0",
+      "trim": [
+        0.0,
+        2.2
+      ],
+      "fade": 0.6
+    }
+  }
+}

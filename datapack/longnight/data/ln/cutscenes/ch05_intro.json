@@ -1133,11 +1133,11 @@
   },
   {
    "at": 50,
-   "run": "playsound minecraft:block.anvil.land ambient @a 208 112 958 0.7 0.5"
+   "run": "playsound lnai:sfx.metal_groan ambient @a 208 112 958 1.2 0.8"
   },
   {
    "at": 110,
-   "run": "playsound minecraft:entity.iron_golem.damage ambient @a 207 112 960 1.0 0.5"
+   "run": "playsound lnai:sfx.metal_debris ambient @a 207 112 960 1.0 0.85"
   },
   {
    "at": 120,
@@ -1145,7 +1145,7 @@
   },
   {
    "at": 170,
-   "run": "playsound minecraft:block.chain.break ambient @a 203 112 962 1.0 0.5"
+   "run": "playsound lnai:sfx.metal_groan ambient @a 203 112 962 0.8 0.65"
   },
   {
    "at": 204,
@@ -1165,11 +1165,7 @@
   },
   {
    "at": 211,
-   "run": "playsound minecraft:entity.zombie.attack_iron_door ambient @a 197 109 968 1.4 0.7"
-  },
-  {
-   "at": 212,
-   "run": "playsound minecraft:block.anvil.land ambient @a 197 109 968 0.6 0.6"
+   "run": "playsound lnai:sfx.door_kick ambient @a 197 109 968 1.6 1.0"
   },
   {
    "at": 272,
@@ -1225,19 +1221,19 @@
   },
   {
    "at": 250,
-   "run": "playsound minecraft:entity.horse.breathe ambient @a 195 110 968 0.5 1.6"
+   "run": "playsound lnai:sfx.breath_cold ambient @a 195 110 968 0.8 1.0"
   },
   {
    "at": 310,
-   "run": "playsound minecraft:entity.horse.breathe ambient @a 195 110 968 0.5 1.6"
+   "run": "playsound lnai:sfx.breath_cold ambient @a 195 110 968 0.8 1.0"
   },
   {
    "at": 370,
-   "run": "playsound minecraft:entity.horse.breathe ambient @a 195 110 968 0.5 1.6"
+   "run": "playsound lnai:sfx.breath_cold ambient @a 195 110 968 0.8 1.0"
   },
   {
    "at": 340,
-   "run": "playsound minecraft:block.note_block.hat ambient @a 194 110 966.5 0.3 0.6"
+   "run": "playsound lnai:sfx.scanner_fail ambient @a 194 110 966.5 0.6 1.0"
   },
   {
    "at": 440,
@@ -1257,11 +1253,7 @@
   },
   {
    "at": 520,
-   "run": "playsound minecraft:block.respawn_anchor.deplete ambient @a 174.6 130.0 974.0 1.0 0.5"
-  },
-  {
-   "at": 520,
-   "run": "playsound minecraft:entity.generic.explode ambient @a 174.6 130.0 974.0 0.25 0.5"
+   "run": "playsound lnai:sfx.boom ambient @a 174.6 130.0 974.0 1.6 1.0"
   },
   {
    "at": 440,
@@ -1317,7 +1309,7 @@
   },
   {
    "at": 792,
-   "run": "playsound minecraft:block.glass.break ambient @a 176.5 126 971.5 0.35 1.9"
+   "run": "playsound lnai:sfx.ice_crack ambient @a 176.5 126 971.5 0.9 1.0"
   },
   {
    "at": 794,

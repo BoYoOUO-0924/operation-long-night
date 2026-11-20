@@ -68,16 +68,13 @@ def say_line(who, text):
     if who == "目標":
         return [f"tellraw @a {jtext([{'text': '▶ 目標：', 'color': color, 'bold': True}, {'text': text, 'color': 'white'}])}",
                 f"lnhud objective @a {text}",
-                "execute as @a at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 0.6 1.2"]
+                "execute as @a at @s run playsound lnai:sfx.objective master @s ~ ~ ~ 0.8 1"]
     if who == "提示":
         return [f"tellraw @a {jtext([{'text': '（提示）', 'color': color}, {'text': text, 'color': 'gray', 'italic': True}])}"]
-    sound = ("minecraft:block.note_block.basedrum master @s ~ ~ ~ 0.8 0.5" if who == "守夜人"
-             else "minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8")
     # 角色對白：畫面中下方的字幕（client/DialogSubs.java），顯示時間依字數決定
     dur = max(70, min(240, 40 + len(text) * 5))
     hexc = SUB_COLOR.get(color, "#E4E2DA").lstrip("#")
-    return [f'lnhud say @a {hexc} {dur} "{who}" {text}',
-            f"execute as @a at @s run playsound {sound}"]
+    return [f'lnhud say @a {hexc} {dur} "{who}" {text}']   # 有角色語音，不再另外播提示音
 
 
 OBJ_WP = {  # 對白段落 → 目標導航點（None = 清除）
@@ -268,7 +265,7 @@ SECTORS = {  # 名稱：volume（相對中心）
 }
 pulse = [
     f"execute positioned {cx} {cy} {cz} run effect give @e[tag=ln_enemy,distance=..90] glowing 3 0 true",
-    f"execute as @a at @s run playsound minecraft:block.beacon.power_select master @s ~ ~ ~ 0.5 1.8",
+    f"execute as @a at @s run playsound lnai:sfx.scanner_pulse master @s ~ ~ ~ 0.7 1",
 ]
 parts = [{"text": "[狐狸] ", "color": "green", "bold": True}, {"text": "掃描：", "color": "white"}]
 for i, (name, (x0, z0, dx, dz)) in enumerate(SECTORS.items()):
@@ -351,8 +348,8 @@ fn("ev/mortar_tick", [
     "execute if score #mt ln matches 80 run scoreboard players set #mt ln 0",
     "scoreboard players add @e[tag=ln_mortar] ln_age 1",
     "execute as @e[tag=ln_mortar] at @s run particle minecraft:dust 1 0 0 2 ~ ~0.2 ~ 1.5 0 1.5 0 6 force @a",
-    "execute as @e[tag=ln_mortar,scores={ln_age=10}] at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 2 0.5",
-    "execute as @e[tag=ln_mortar,scores={ln_age=30}] at @s run playsound minecraft:entity.arrow.shoot master @a ~ ~20 ~ 2 0.3",
+    "execute as @e[tag=ln_mortar,scores={ln_age=10}] at @s run playsound lnai:sfx.mortar_launch master @a ~ ~ ~ 3 1",
+    "execute as @e[tag=ln_mortar,scores={ln_age=30}] at @s run playsound lnai:sfx.mortar_whistle master @a ~ ~8 ~ 3 1",
     'execute as @e[tag=ln_mortar,scores={ln_age=50}] at @s run summon superbwarfare:mortar_shell ~ ~40 ~ {Motion:[0.0d,-2.0d,0.0d]}',
     "kill @e[tag=ln_mortar,scores={ln_age=50..}]",
 ])
@@ -385,6 +382,7 @@ fn("loadout", [
 # ================================================================== 流程
 fn("cleanup", [
     "lnhud music @a stop 60",
+    "lnhud ambient @a stop 60",
     "kill @e[tag=ln]",
     "scoreboard players set #stage ln 0",
     "bossbar set ln:obj visible false",
@@ -420,7 +418,8 @@ fn("start", [
     *bossbar("目標：前往山上的氣象站"),
     # 開場過場（章節標題在過場裡顯示）；過場最後會切到階段 1（上山）
     *goto(0),
-    "lnhud music @a ch05_ice 20",   # 配樂（levels/music.json）：開場到抵達氣象站
+    "lnhud music @a ch05_ice 20",
+    "lnhud ambient @a blizzard_loop 40",   # 暴風雪環境音（室內會自動變小聲）   # 配樂（levels/music.json）：開場到抵達氣象站
     "lnhud cutscene @a ln:ch05_intro",
 ])
 fn("stop", ["function ln:ch05/cleanup", "gamemode creative @a",
@@ -461,14 +460,14 @@ fn("to_s3", [
     "lnhud music @a ch05_suspense 80",
     *goto(3),
     *bossbar("（劇情）狐狸正在修理掃描器"),
-    f"execute positioned {xyz(A['fox_bench'])} run playsound minecraft:block.beacon.activate master @a ~ ~ ~ 1 1.5",
+    f"execute positioned {xyz(A['fox_bench'])} run playsound lnai:sfx.scanner_ready master @a ~ ~ ~ 1 1",
 ])
 # 3 揭露
 end3 = dialogue("reveal") + 4 * TPS
 fn("s3", [
     "function ln:ch05/dlg/reveal",
     "execute if score #t ln matches 180 run effect give @e[tag=ln_officer] glowing 12 0 true",
-    "execute if score #t ln matches 180 as @a at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 1 2",
+    "execute if score #t ln matches 180 as @a at @s run playsound lnai:sfx.scanner_pulse master @s ~ ~ ~ 1 1.35",
     f"execute if score #t ln matches {end3} run function ln:ch05/to_s4",
 ])
 # 4 準備：隊友就防守位置

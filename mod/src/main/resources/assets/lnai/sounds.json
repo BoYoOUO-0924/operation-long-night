@@ -952,5 +952,140 @@
     "stream": true
    }
   ]
+ },
+ "sfx.blizzard_loop": {
+  "category": "ambient",
+  "sounds": [
+   {
+    "name": "lnai:sfx/blizzard_loop",
+    "stream": true
+   }
+  ]
+ },
+ "sfx.boom": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/boom",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.scanner_fail": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/scanner_fail",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.scanner_pulse": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/scanner_pulse",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.scanner_ready": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/scanner_ready",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.objective": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/objective",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.mortar_whistle": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/mortar_whistle",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.radio_on": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/radio_on",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.radio_off": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/radio_off",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.breath_cold": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/breath_cold",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.metal_groan": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/metal_groan",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.door_kick": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/door_kick",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.ice_crack": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/ice_crack",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.mortar_launch": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/mortar_launch",
+    "stream": false
+   }
+  ]
+ },
+ "sfx.metal_debris": {
+  "category": "master",
+  "sounds": [
+   {
+    "name": "lnai:sfx/metal_debris",
+    "stream": false
+   }
+  ]
  }
 }

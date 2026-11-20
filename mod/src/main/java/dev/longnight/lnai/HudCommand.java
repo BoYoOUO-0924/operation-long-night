@@ -73,6 +73,13 @@ final class HudCommand {
                                 .then(Commands.argument("fade", com.mojang.brigadier.arguments.IntegerArgumentType.integer(0, 400))
                                         .executes(c -> music(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "cue"),
                                                 com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade")))))))
+                // /lnhud ambient <玩家> <環境音> [淡入淡出 tick]　／　stop：例如暴風雪 blizzard_loop
+                .then(Commands.literal("ambient").then(Commands.argument("targets", EntityArgument.players())
+                        .then(Commands.argument("cue", StringArgumentType.word())
+                                .executes(c -> ambient(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "cue"), 60))
+                                .then(Commands.argument("fade", com.mojang.brigadier.arguments.IntegerArgumentType.integer(0, 400))
+                                        .executes(c -> ambient(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "cue"),
+                                                com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade")))))))
                 .then(Commands.literal("teamdebug").then(Commands.argument("on", com.mojang.brigadier.arguments.BoolArgumentType.bool())
                         .executes(c -> { TeamSync.debug = com.mojang.brigadier.arguments.BoolArgumentType.getBool(c, "on"); return 1; })))
                 .then(Commands.literal("trace").then(Commands.argument("type", ResourceLocationArgument.id())
@@ -125,10 +132,21 @@ final class HudCommand {
         return ps.size();
     }
 
-    /** 玩家重新連線時補送目前的目標與配樂。 */
+    private static String lastAmbient = "";
+
+    /** 環境音和配樂共用同一個封包，cue 前面加「amb:」區分 */
+    private static int ambient(Collection<ServerPlayer> ps, String cue, int fade) {
+        String c = cue.equals("stop") ? "" : cue;
+        lastAmbient = c;
+        for (ServerPlayer p : ps) Net.to(p, new Net.Music("amb:" + c, fade));
+        return ps.size();
+    }
+
+    /** 玩家重新連線時補送目前的目標、配樂與環境音。 */
     static void resend(ServerPlayer p) {
         send(List.of(p));
         if (!lastMusic.isEmpty()) Net.to(p, new Net.Music(lastMusic, 40));
+        if (!lastAmbient.isEmpty()) Net.to(p, new Net.Music("amb:" + lastAmbient, 40));
     }
 
     // ---- 軌跡測量 ----

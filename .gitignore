@@ -16,3 +16,7 @@ mod/run/
 voice/preview/
 # 配樂原始 MP3（不進版本控制）
 music/src/
+
+# 音效原始錄音（不進版本控制）
+sfx/src/
+sfx/preview/

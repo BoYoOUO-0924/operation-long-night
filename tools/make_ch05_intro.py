@@ -99,10 +99,10 @@ for t in (0.5, 4, 7):                                      # 遠處殘骸冒出�
           "particle minecraft:lava 204 108 945 2 0.3 2 0 6 force @a")
 sound(0, "minecraft:item.elytra.flying", [204, 112, 940], 0.6, 0.55)
 sound(0.2, "minecraft:block.fire.ambient", [204, 109, 945], 1.6, 0.8)
-sound(2.5, "minecraft:block.anvil.land", [208, 112, 958], 0.7, 0.5)       # 金屬扭曲的呻吟
-sound(5.5, "minecraft:entity.iron_golem.damage", [207, 112, 960], 1.0, 0.5)
+sound(2.5, "lnai:sfx.metal_groan", [208, 112, 958], 1.2, 0.8)            # 車廂金屬扭曲的呻吟
+sound(5.5, "lnai:sfx.metal_debris", [207, 112, 960], 1.0, 0.85)          # 殘骸掉落
 sound(6, "minecraft:block.fire.ambient", [209, 113, 955], 1.6, 0.7)
-sound(8.5, "minecraft:block.chain.break", [203, 112, 962], 1.0, 0.5)
+sound(8.5, "lnai:sfx.metal_groan", [203, 112, 962], 0.8, 0.65)
 
 # ---------------------------------------------------------------- Shot 2 絕境集結（10～22 秒）
 def eye(x):
@@ -121,8 +121,7 @@ at(10.55,
    f"setblock {DX} {DY} {DZ} iron_door[facing=west,half=lower,hinge=left,open=true]",
    f"setblock {DX} {DY + 1} {DZ} iron_door[facing=west,half=upper,hinge=left,open=true]",
    f"particle minecraft:cloud {DX - 0.5} {DY + 1} {DZ + 0.5} 0.3 0.6 0.3 0.05 15 force @a")
-sound(10.55, "minecraft:entity.zombie.attack_iron_door", DOOR, 1.4, 0.7)
-sound(10.6, "minecraft:block.anvil.land", DOOR, 0.6, 0.6)
+sound(10.55, "lnai:sfx.door_kick", DOOR, 1.6, 1.0)                     # 踹開鐵門
 shakes.append({"at": int(10.55 * S), "dur": 5, "amp": 1.6})
 # 戰車：衝出門口，往坡上架槍警戒
 move(11.0, 2.5, "ln_tank", [[DX + 1.5, DY, DZ + 0.5], [DX - 1.5, DY - 1, DZ + 0.5], [DX - 3.0, DY + 1, DZ - 0.3]])
@@ -139,8 +138,8 @@ say(14.2, "戰車", "媽的，軌道全被炸爛了……大家都還喘著氣�
 for t in (11.5, 12.3, 13.1, 14.0, 15.0, 16.2, 17.4, 18.6, 19.8):   # 踏雪聲
     sound(t, "minecraft:block.snow.step", [DX - 2, DY, DZ], 0.9, 0.8)
 for t in (12.5, 15.5, 18.5):                                       # 喘息（先用相近的音效代替）
-    sound(t, "minecraft:entity.horse.breathe", [DX - 2, DY + 1, DZ], 0.5, 1.6)
-sound(17.0, "minecraft:block.note_block.hat", [DX - 3, DY + 1, DZ - 1.5], 0.3, 0.6)   # 掃描器沒反應的嗶聲
+    sound(t, "lnai:sfx.breath_cold", [DX - 2, DY + 1, DZ], 0.8, 1.0)
+sound(17.0, "lnai:sfx.scanner_fail", [DX - 3, DY + 1, DZ - 1.5], 0.6, 1.0)   # 掃描器沒反應的嗶聲
 
 # ---------------------------------------------------------------- Shot 3 目標揭示（22～34 秒）
 RX, RZ = RIDGE
@@ -159,8 +158,7 @@ key(26, OTS, STATION_LOOK, fov=46)
 key(30, [OTS[0] - 0.5, OTS[1] + 0.5, OTS[2]], STATION_LOOK, fov=40, handheld=0.35)
 key(34, [OTS[0] - 0.9, OTS[1] + 0.8, OTS[2]], STATION_LOOK, fov=37)
 shakes.append({"at": int(26 * S), "dur": 4, "amp": 1.0})
-sound(26, "minecraft:block.respawn_anchor.deplete", OTS, 1.0, 0.5)       # 低頻重音
-sound(26, "minecraft:entity.generic.explode", OTS, 0.25, 0.5)
+sound(26, "lnai:sfx.boom", OTS, 1.6, 1.0)                               # 低頻重音
 sound(22, "minecraft:item.elytra.flying", OTS, 0.25, 0.4)              # 風聲轉沉
 say(27.0, "狐狸", "體溫掉太快了！兩點鐘方向山腰有座舊氣象站，先衝進去生火！", 5.5)
 # 琥珀燈閃爍（亮 → 暗 → 亮）
@@ -176,7 +174,7 @@ at(33.0,
 key(34, [186.0, 132.0, 978.0], [PLAYER_SPOT[0], 125.5, PLAYER_SPOT[1]], cut=True, fov=58, handheld=0.2)
 key(37.5, [180.0, 127.6, 973.6], [PLAYER_SPOT[0] - 4, 126.5, PLAYER_SPOT[1] - 0.8], fov=66, ease="linear")
 key(40, "player", ease="linear", handheld=0)
-sound(39.6, "minecraft:block.glass.break", [PLAYER_SPOT[0], 126, PLAYER_SPOT[1]], 0.35, 1.9)   # 護目鏡結霜的冰裂聲
+sound(39.6, "lnai:sfx.ice_crack", [PLAYER_SPOT[0], 126, PLAYER_SPOT[1]], 0.9, 1.0)   # 護目鏡結霜的冰裂聲
 sound(39.7, "minecraft:block.powder_snow.step", [PLAYER_SPOT[0], 126, PLAYER_SPOT[1]], 1.0, 0.8)
 at(39.8, "effect give @a[gamemode=adventure] slowness 8 0 true",
          "execute as @a at @s run spawnpoint @s ~ ~ ~",

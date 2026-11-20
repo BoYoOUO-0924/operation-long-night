@@ -77,17 +77,31 @@ def collect():
     return out
 
 
+def _sfx(name, sr):
+    """讀合成的對講機按鍵聲（tools/make_sfx.py 產生），轉成語音的取樣率"""
+    f = ROOT / f"mod/src/main/resources/assets/lnai/sounds/sfx/{name}.ogg"
+    if not f.exists():
+        return None
+    x, r = sf.read(str(f), always_2d=True)
+    x = x.mean(axis=1)
+    if r != sr:
+        x = signal.resample_poly(x, sr, r)
+    return x
+
+
 def radio(wav, sr):
-    """對講機效果：300～3400 Hz 帶通、輕微失真、底噪，前後加按鍵喀聲"""
+    """對講機效果：300～3400 Hz 帶通、輕微失真、底噪，前後加按鍵聲（radio_on／radio_off）"""
     b, a = signal.butter(4, [300 / (sr / 2), 3400 / (sr / 2)], btype="band")
     y = signal.lfilter(b, a, wav)
     y = np.tanh(y * 3.0) / np.tanh(3.0)
     rng = np.random.default_rng(7)
     y = y + rng.normal(0, 0.012, len(y))
-    click = np.concatenate([rng.normal(0, 0.25, int(sr * 0.012)), np.zeros(int(sr * 0.05))])
-    tail = np.concatenate([np.zeros(int(sr * 0.05)), rng.normal(0, 0.18, int(sr * 0.02))])
-    hiss = rng.normal(0, 0.03, int(sr * 0.08))
-    y = np.concatenate([click, hiss, y, hiss, tail])
+    on, off = _sfx("radio_on", sr), _sfx("radio_off", sr)
+    if on is None or off is None:
+        on = rng.normal(0, 0.25, int(sr * 0.012))
+        off = rng.normal(0, 0.18, int(sr * 0.02))
+    hiss = rng.normal(0, 0.03, int(sr * 0.06))
+    y = np.concatenate([on * 0.5, hiss, y, hiss, off * 0.5])
     return (y / max(1e-6, np.abs(y).max()) * 0.85).astype(np.float32)
 
 
@@ -110,7 +124,19 @@ def main():
     ap.add_argument("--only", help="只處理這個角色")
     ap.add_argument("--redo", action="store_true", help="重做台詞（參考音檔不重做）")
     ap.add_argument("--refs-only", action="store_true", help="只做參考音檔（試聽聲音用）")
+    ap.add_argument("--radio-only", action="store_true", help="只用現有的原聲重做無線電版（換按鍵聲時用，不需要 AI）")
     args = ap.parse_args()
+
+    if args.radio_only:
+        n = 0
+        for f in sorted(SND.glob("*.ogg")):
+            if f.name.endswith(".radio.ogg"):
+                continue
+            wav, sr = sf.read(str(f), dtype="float32")
+            write_ogg(SND / f"{f.stem}.radio.ogg", radio(wav, sr), sr)
+            n += 1
+        print(f"重做無線電版 {n} 句")
+        return
 
     import torch
     from qwen_tts import Qwen3TTSModel
