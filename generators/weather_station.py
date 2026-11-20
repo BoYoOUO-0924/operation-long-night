@@ -308,6 +308,14 @@ c.set(45, 1, 12, "barrel[facing=up]")
 lamp(40, 10)
 lamp(40, 2, p=0.5)
 
+# ================================================================ 2b. 車庫大門上方的琥珀色緊急燈（開場過場的視覺目標）
+# 立在屋頂、大門正上方的燈柱（從山下的鐵路越過山脊也看得到）
+AMBER = (gx2, H + 3, 5)
+c.post.append(f"fill ~{gx2 + 1} ~5 ~5 ~{gx2 + 1} ~6 ~6 air")      # 清掉舊版掛在門口的燈
+c.box(gx2, H + 1, 5, gx2, H + 2, 5, "iron_bars")
+c.box(gx2, H + 3, 5, gx2, H + 3, 6, "ochre_froglight")
+c.box(gx2, H + 4, 5, gx2, H + 4, 6, "iron_trapdoor[facing=east,half=bottom,open=false]")
+
 # ================================================================ 3. 瞭望塔（主樓西北角屋頂，白鴉的狙擊點）
 tx1, tx2, tz1, tz2 = 0, 7, 0, 7
 ty = H + 1
@@ -335,6 +343,23 @@ c.set(3, ty + 13, 3, "red_concrete")
 c.set(3, ty + 14, 3, "redstone_torch")
 for (x, z) in [(5, 2), (5, 5)]:
     c.set(x, ty + 6, z, "daylight_detector")
+
+# 主樓屋頂：生鏽的雷達罩（半球形，從山下往上看的地標）
+RADAR = (26, H + 1, 10)
+rx, ry, rz = RADAR
+c.box(rx - 3, ry, rz - 3, rx + 3, ry, rz + 3, TRIM)                         # 底座
+rust = c.pick([("white_terracotta", 55), ("light_gray_terracotta", 25), ("orange_terracotta", 8),
+               ("brown_terracotta", 7), ("light_gray_concrete", 5)])
+R = 4.6
+for dx in range(-5, 6):
+    for dy in range(0, 6):
+        for dz in range(-5, 6):
+            d = (dx * dx + (dy * 1.15) ** 2 + dz * dz) ** 0.5
+            if R - 1.1 < d <= R:
+                c.set(rx + dx, ry + 1 + dy, rz + dz, rust())
+            elif d <= R - 1.1:
+                c.set(rx + dx, ry + 1 + dy, rz + dz, "air")
+c.set(rx, ry + 7, rz, "lightning_rod[facing=up]")
 
 # 主樓屋頂設備：排煙、通風口
 c.set(28, H + 1, 4, "campfire[lit=true,signal_fire=false]")
@@ -470,6 +495,8 @@ anchors = {
     "officer_radio": a(4, 1, 6),
     "baiya_tower": a(4, ty, 4),
     "parts_button": a(44, 2, 12),
+    "amber_light": a(*AMBER),
+    "radar": a(rx, ry + 3, rz),
     "checkpoint": a(20, 1, 10),
     "boiler": a(bx, 1, bz),
     "generator_lever": a(*GEN_LEVER),

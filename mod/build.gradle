@@ -130,6 +130,9 @@ dependencies {
     // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
+    // Player Animator（NPC 角色動作）：只用它自己的 API，編譯時參考即可，執行時由 mods 資料夾提供
+    compileOnly files("libs/player-animation-lib-forge-1.0.2-rc1+1.20.jar")
+
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")

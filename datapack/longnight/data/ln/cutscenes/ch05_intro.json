@@ -1,0 +1,1351 @@
+{
+ "letterbox": 0.11,
+ "fade_in": 25,
+ "fade_out": 0,
+ "frost_after": 70,
+ "protect": true,
+ "freeze": [
+  "ln_ally"
+ ],
+ "titles": [
+  {
+   "at": 30,
+   "dur": 110,
+   "text": "第五章　寒霜陷阱",
+   "sub": "零下四十度"
+  }
+ ],
+ "camera": [
+  {
+   "t": 0,
+   "pos": [
+    201.6,
+    109.4,
+    931.0
+   ],
+   "look_at": [
+    203.0,
+    109.0,
+    945.0
+   ],
+   "fov": 52,
+   "handheld": 0.25
+  },
+  {
+   "t": 80,
+   "pos": [
+    201.4,
+    110.2,
+    938.5
+   ],
+   "look_at": [
+    203.0,
+    109.5,
+    952.0
+   ],
+   "fov": 54
+  },
+  {
+   "t": 150,
+   "pos": [
+    200.8,
+    113.5,
+    944.0
+   ],
+   "look_at": [
+    202.0,
+    111.0,
+    960.0
+   ],
+   "fov": 58
+  },
+  {
+   "t": 200,
+   "pos": [
+    199.5,
+    117.0,
+    947.0
+   ],
+   "look_at": [
+    201.0,
+    111.0,
+    965.0
+   ],
+   "fov": 62
+  },
+  {
+   "t": 200,
+   "pos": [
+    194.6,
+    110.60000000000001,
+    972.2
+   ],
+   "look_at": [
+    197,
+    110.0,
+    968.5
+   ],
+   "cut": true,
+   "fov": 60,
+   "handheld": 0.9
+  },
+  {
+   "t": 260,
+   "pos": [
+    194.3,
+    110.60000000000001,
+    972.4
+   ],
+   "look_at": [
+    195.5,
+    109.9,
+    968.6
+   ],
+   "fov": 60
+  },
+  {
+   "t": 340,
+   "pos": [
+    192.6,
+    112.60000000000001,
+    972.8
+   ],
+   "look_at": [
+    193.0,
+    111.0,
+    969.2
+   ],
+   "fov": 62
+  },
+  {
+   "t": 440,
+   "pos": [
+    190.8,
+    114.60000000000001,
+    973.0
+   ],
+   "look_at": [
+    190.5,
+    112.6,
+    969.6
+   ],
+   "fov": 62
+  },
+  {
+   "t": 440,
+   "pos": [
+    175.2,
+    128.6,
+    974.1
+   ],
+   "look_at": [
+    162.0,
+    127.5,
+    974.0
+   ],
+   "cut": true,
+   "fov": 68,
+   "handheld": 0.6
+  },
+  {
+   "t": 520,
+   "pos": [
+    174.6,
+    130.0,
+    974.0
+   ],
+   "look_at": [
+    120.0,
+    144.5,
+    962.5
+   ],
+   "fov": 46
+  },
+  {
+   "t": 600,
+   "pos": [
+    174.1,
+    130.5,
+    974.0
+   ],
+   "look_at": [
+    120.0,
+    144.5,
+    962.5
+   ],
+   "fov": 40,
+   "handheld": 0.35
+  },
+  {
+   "t": 680,
+   "pos": [
+    173.7,
+    130.8,
+    974.0
+   ],
+   "look_at": [
+    120.0,
+    144.5,
+    962.5
+   ],
+   "fov": 37
+  },
+  {
+   "t": 680,
+   "pos": [
+    186.0,
+    132.0,
+    978.0
+   ],
+   "look_at": [
+    176.5,
+    125.5,
+    971.5
+   ],
+   "cut": true,
+   "fov": 58,
+   "handheld": 0.2
+  },
+  {
+   "t": 750,
+   "pos": [
+    180.0,
+    127.6,
+    973.6
+   ],
+   "look_at": [
+    172.5,
+    126.5,
+    970.7
+   ],
+   "fov": 66,
+   "ease": "linear"
+  },
+  {
+   "t": 800,
+   "pos": "player",
+   "ease": "linear",
+   "handheld": 0
+  }
+ ],
+ "shakes": [
+  {
+   "at": 211,
+   "dur": 5,
+   "amp": 1.6
+  },
+  {
+   "at": 520,
+   "dur": 4,
+   "amp": 1.0
+  }
+ ],
+ "subtitles": [
+  {
+   "at": 284,
+   "dur": 100,
+   "who": "戰車",
+   "text": "媽的, 軌道全被炸爛了……大家都還喘著氣嗎? ",
+   "color": "#E0B050"
+  },
+  {
+   "at": 540,
+   "dur": 110,
+   "who": "狐狸",
+   "text": "體溫掉太快了! 兩點鐘方向山腰有座舊氣象站, 先衝進去生火! ",
+   "color": "#8CC08C"
+  }
+ ],
+ "moves": [
+  {
+   "at": 220,
+   "dur": 50,
+   "tag": "ln_tank",
+   "path": [
+    [
+     198.5,
+     109,
+     968.5
+    ],
+    [
+     195.5,
+     108,
+     968.5
+    ],
+    [
+     194.0,
+     110,
+     967.7
+    ]
+   ]
+  },
+  {
+   "at": 244,
+   "dur": 190,
+   "tag": "ln_baiya",
+   "path": [
+    [
+     199.5,
+     109,
+     968.9
+    ],
+    [
+     196.2,
+     108,
+     968.9
+    ],
+    [
+     190.5,
+     113,
+     969.8
+    ]
+   ]
+  },
+  {
+   "at": 244,
+   "dur": 190,
+   "tag": "ln_officer",
+   "path": [
+    [
+     199.5,
+     109,
+     968.2
+    ],
+    [
+     196.2,
+     108,
+     968.2
+    ],
+    [
+     190.5,
+     113,
+     969.1
+    ]
+   ]
+  },
+  {
+   "at": 290,
+   "dur": 80,
+   "tag": "ln_fox",
+   "path": [
+    [
+     200.2,
+     109,
+     968.5
+    ],
+    [
+     196.2,
+     108,
+     968.5
+    ],
+    [
+     194.0,
+     110,
+     966.5
+    ]
+   ]
+  },
+  {
+   "at": 438,
+   "dur": 3,
+   "tag": "ln_tank",
+   "path": [
+    [
+     172.0,
+     126,
+     973.1
+    ],
+    [
+     171.9,
+     126,
+     973.1
+    ]
+   ]
+  },
+  {
+   "at": 438,
+   "dur": 3,
+   "tag": "ln_baiya",
+   "path": [
+    [
+     172.0,
+     126,
+     974.9
+    ],
+    [
+     171.9,
+     126,
+     974.9
+    ]
+   ]
+  },
+  {
+   "at": 438,
+   "dur": 3,
+   "tag": "ln_officer",
+   "path": [
+    [
+     173.6,
+     126,
+     976.3
+    ],
+    [
+     173.5,
+     126,
+     976.3
+    ]
+   ]
+  },
+  {
+   "at": 438,
+   "dur": 3,
+   "tag": "ln_fox",
+   "path": [
+    [
+     172.8,
+     126,
+     971.4
+    ],
+    [
+     172.7,
+     126,
+     971.4
+    ]
+   ]
+  }
+ ],
+ "commands": [
+  {
+   "at": 0,
+   "run": "time set 18000"
+  },
+  {
+   "at": 0,
+   "run": "weather thunder 1000000"
+  },
+  {
+   "at": 0,
+   "run": "setblock 197 109 968 iron_door[facing=west,half=lower,hinge=left,open=false]"
+  },
+  {
+   "at": 0,
+   "run": "setblock 197 110 968 iron_door[facing=west,half=upper,hinge=left,open=false]"
+  },
+  {
+   "at": 0,
+   "run": "spreadplayers 205 916 0 1 false @a"
+  },
+  {
+   "at": 0,
+   "run": "tp @e[tag=ln_tank] 198.5 109 968.5 90 0"
+  },
+  {
+   "at": 0,
+   "run": "tp @e[tag=ln_baiya] 199.5 109 969.6 90 0"
+  },
+  {
+   "at": 0,
+   "run": "tp @e[tag=ln_officer] 199.5 109 968.4 90 0"
+  },
+  {
+   "at": 0,
+   "run": "tp @e[tag=ln_fox] 200.2 109 966.8 90 0"
+  },
+  {
+   "at": 0,
+   "run": "lnhud anim @e[tag=ln_ally] stop"
+  },
+  {
+   "at": 0,
+   "run": "effect clear @e[tag=ln_ally] glowing"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:snowflake 204 113 940.0 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:white_ash 204 113 940.0 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 10,
+   "run": "particle minecraft:snowflake 204 113 940.75 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 10,
+   "run": "particle minecraft:white_ash 204 113 940.75 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 20,
+   "run": "particle minecraft:snowflake 204 113 941.5 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 20,
+   "run": "particle minecraft:white_ash 204 113 941.5 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:snowflake 204 113 942.25 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:white_ash 204 113 942.25 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:snowflake 204 113 943.0 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:white_ash 204 113 943.0 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 50,
+   "run": "particle minecraft:snowflake 204 113 943.75 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 50,
+   "run": "particle minecraft:white_ash 204 113 943.75 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 60,
+   "run": "particle minecraft:snowflake 204 113 944.5 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 60,
+   "run": "particle minecraft:white_ash 204 113 944.5 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:snowflake 204 113 945.25 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:white_ash 204 113 945.25 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:snowflake 204 113 946.0 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:white_ash 204 113 946.0 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 90,
+   "run": "particle minecraft:snowflake 204 113 946.75 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 90,
+   "run": "particle minecraft:white_ash 204 113 946.75 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 100,
+   "run": "particle minecraft:snowflake 204 113 947.5 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 100,
+   "run": "particle minecraft:white_ash 204 113 947.5 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:snowflake 204 113 948.25 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:white_ash 204 113 948.25 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:snowflake 204 113 949.0 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:white_ash 204 113 949.0 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 130,
+   "run": "particle minecraft:snowflake 204 113 949.75 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 130,
+   "run": "particle minecraft:white_ash 204 113 949.75 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 140,
+   "run": "particle minecraft:snowflake 204 113 950.5 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 140,
+   "run": "particle minecraft:white_ash 204 113 950.5 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:snowflake 204 113 951.25 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:white_ash 204 113 951.25 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:snowflake 204 113 952.0 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:white_ash 204 113 952.0 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 170,
+   "run": "particle minecraft:snowflake 204 113 952.75 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 170,
+   "run": "particle minecraft:white_ash 204 113 952.75 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 180,
+   "run": "particle minecraft:snowflake 204 113 953.5 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 180,
+   "run": "particle minecraft:white_ash 204 113 953.5 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:snowflake 204 113 954.25 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:white_ash 204 113 954.25 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 210,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 210,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 220,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 220,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 250,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 250,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 260,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 260,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 290,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 290,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 300,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 300,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 330,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 330,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 340,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 340,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 370,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 370,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 380,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 380,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 410,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 410,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 420,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 420,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:snowflake 193 111 970 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:white_ash 193 111 970 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 450,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 450,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 460,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 460,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 480,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 480,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 490,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 490,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 500,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 500,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 510,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 510,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 520,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 520,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 530,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 530,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 540,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 540,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 550,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 550,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 560,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 560,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 570,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 570,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 580,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 580,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 590,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 590,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 600,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 600,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 610,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 610,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 620,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 620,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 630,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 630,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 640,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 640,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 650,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 650,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 660,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 660,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 670,
+   "run": "particle minecraft:snowflake 177 130 974 7 4 7 0.25 143 force @a"
+  },
+  {
+   "at": 670,
+   "run": "particle minecraft:white_ash 177 130 974 8 4 8 0 165 force @a"
+  },
+  {
+   "at": 680,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 680,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 690,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 690,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 700,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 700,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 710,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 710,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 720,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 720,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 730,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 730,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 740,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 740,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 750,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 750,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 760,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 760,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 770,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 770,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 780,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 780,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 790,
+   "run": "particle minecraft:snowflake 178 128 972 7 4 7 0.25 260 force @a"
+  },
+  {
+   "at": 790,
+   "run": "particle minecraft:white_ash 178 128 972 8 4 8 0 300 force @a"
+  },
+  {
+   "at": 10,
+   "run": "particle minecraft:large_smoke 208 113 958 1.5 1.5 3 0.02 25 force @a"
+  },
+  {
+   "at": 10,
+   "run": "particle minecraft:lava 204 108 945 2 0.3 2 0 6 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:large_smoke 208 113 958 1.5 1.5 3 0.02 25 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:lava 204 108 945 2 0.3 2 0 6 force @a"
+  },
+  {
+   "at": 140,
+   "run": "particle minecraft:large_smoke 208 113 958 1.5 1.5 3 0.02 25 force @a"
+  },
+  {
+   "at": 140,
+   "run": "particle minecraft:lava 204 108 945 2 0.3 2 0 6 force @a"
+  },
+  {
+   "at": 0,
+   "run": "playsound minecraft:item.elytra.flying ambient @a 204 112 940 0.6 0.55"
+  },
+  {
+   "at": 4,
+   "run": "playsound minecraft:block.fire.ambient ambient @a 204 109 945 1.6 0.8"
+  },
+  {
+   "at": 50,
+   "run": "playsound minecraft:block.anvil.land ambient @a 208 112 958 0.7 0.5"
+  },
+  {
+   "at": 110,
+   "run": "playsound minecraft:entity.iron_golem.damage ambient @a 207 112 960 1.0 0.5"
+  },
+  {
+   "at": 120,
+   "run": "playsound minecraft:block.fire.ambient ambient @a 209 113 955 1.6 0.7"
+  },
+  {
+   "at": 170,
+   "run": "playsound minecraft:block.chain.break ambient @a 203 112 962 1.0 0.5"
+  },
+  {
+   "at": 204,
+   "run": "lnhud anim @e[tag=ln_tank] kick"
+  },
+  {
+   "at": 211,
+   "run": "setblock 197 109 968 iron_door[facing=west,half=lower,hinge=left,open=true]"
+  },
+  {
+   "at": 211,
+   "run": "setblock 197 110 968 iron_door[facing=west,half=upper,hinge=left,open=true]"
+  },
+  {
+   "at": 211,
+   "run": "particle minecraft:cloud 196.5 110 968.5 0.3 0.6 0.3 0.05 15 force @a"
+  },
+  {
+   "at": 211,
+   "run": "playsound minecraft:entity.zombie.attack_iron_door ambient @a 197 109 968 1.4 0.7"
+  },
+  {
+   "at": 212,
+   "run": "playsound minecraft:block.anvil.land ambient @a 197 109 968 0.6 0.6"
+  },
+  {
+   "at": 272,
+   "run": "lnhud anim @e[tag=ln_tank] guard"
+  },
+  {
+   "at": 240,
+   "run": "lnhud anim @e[tag=ln_baiya] support"
+  },
+  {
+   "at": 240,
+   "run": "lnhud anim @e[tag=ln_officer] limp"
+  },
+  {
+   "at": 320,
+   "run": "lnhud anim @e[tag=ln_fox] wrist_tap"
+  },
+  {
+   "at": 230,
+   "run": "playsound minecraft:block.snow.step ambient @a 195 109 968 0.9 0.8"
+  },
+  {
+   "at": 246,
+   "run": "playsound minecraft:block.snow.step ambient @a 195 109 968 0.9 0.8"
+  },
+  {
+   "at": 262,
+   "run": "playsound minecraft:block.snow.step ambient @a 195 109 968 0.9 0.8"
+  },
+  {
+   "at": 280,
+   "run": "playsound minecraft:block.snow.step ambient @a 195 109 968 0.9 0.8"
+  },
+  {
+   "at": 300,
+   "run": "playsound minecraft:block.snow.step ambient @a 195 109 968 0.9 0.8"
+  },
+  {
+   "at": 324,
+   "run": "playsound minecraft:block.snow.step ambient @a 195 109 968 0.9 0.8"
+  },
+  {
+   "at": 348,
+   "run": "playsound minecraft:block.snow.step ambient @a 195 109 968 0.9 0.8"
+  },
+  {
+   "at": 372,
+   "run": "playsound minecraft:block.snow.step ambient @a 195 109 968 0.9 0.8"
+  },
+  {
+   "at": 396,
+   "run": "playsound minecraft:block.snow.step ambient @a 195 109 968 0.9 0.8"
+  },
+  {
+   "at": 250,
+   "run": "playsound minecraft:entity.horse.breathe ambient @a 195 110 968 0.5 1.6"
+  },
+  {
+   "at": 310,
+   "run": "playsound minecraft:entity.horse.breathe ambient @a 195 110 968 0.5 1.6"
+  },
+  {
+   "at": 370,
+   "run": "playsound minecraft:entity.horse.breathe ambient @a 195 110 968 0.5 1.6"
+  },
+  {
+   "at": 340,
+   "run": "playsound minecraft:block.note_block.hat ambient @a 194 110 966.5 0.3 0.6"
+  },
+  {
+   "at": 440,
+   "run": "lnhud anim @e[tag=ln_tank] guard"
+  },
+  {
+   "at": 440,
+   "run": "lnhud anim @e[tag=ln_baiya] stop"
+  },
+  {
+   "at": 440,
+   "run": "lnhud anim @e[tag=ln_officer] shiver"
+  },
+  {
+   "at": 532,
+   "run": "lnhud anim @e[tag=ln_fox] point"
+  },
+  {
+   "at": 520,
+   "run": "playsound minecraft:block.respawn_anchor.deplete ambient @a 174.6 130.0 974.0 1.0 0.5"
+  },
+  {
+   "at": 520,
+   "run": "playsound minecraft:entity.generic.explode ambient @a 174.6 130.0 974.0 0.25 0.5"
+  },
+  {
+   "at": 440,
+   "run": "playsound minecraft:item.elytra.flying ambient @a 174.6 130.0 974.0 0.25 0.4"
+  },
+  {
+   "at": 480,
+   "run": "fill 130 144 960 130 144 961 orange_terracotta"
+  },
+  {
+   "at": 488,
+   "run": "fill 130 144 960 130 144 961 ochre_froglight"
+  },
+  {
+   "at": 512,
+   "run": "fill 130 144 960 130 144 961 orange_terracotta"
+  },
+  {
+   "at": 516,
+   "run": "fill 130 144 960 130 144 961 ochre_froglight"
+  },
+  {
+   "at": 546,
+   "run": "fill 130 144 960 130 144 961 orange_terracotta"
+  },
+  {
+   "at": 578,
+   "run": "fill 130 144 960 130 144 961 ochre_froglight"
+  },
+  {
+   "at": 582,
+   "run": "fill 130 144 960 130 144 961 orange_terracotta"
+  },
+  {
+   "at": 620,
+   "run": "fill 130 144 960 130 144 961 ochre_froglight"
+  },
+  {
+   "at": 630,
+   "run": "fill 130 144 960 130 144 961 orange_terracotta"
+  },
+  {
+   "at": 650,
+   "run": "fill 130 144 960 130 144 961 ochre_froglight"
+  },
+  {
+   "at": 660,
+   "run": "spreadplayers 176.5 971.5 0 2 false @a"
+  },
+  {
+   "at": 660,
+   "run": "execute as @a at @s run tp @s ~ ~ ~ facing 120.0 144.5 962.5"
+  },
+  {
+   "at": 792,
+   "run": "playsound minecraft:block.glass.break ambient @a 176.5 126 971.5 0.35 1.9"
+  },
+  {
+   "at": 794,
+   "run": "playsound minecraft:block.powder_snow.step ambient @a 176.5 126 971.5 1.0 0.8"
+  },
+  {
+   "at": 796,
+   "run": "effect give @a[gamemode=adventure] slowness 8 0 true"
+  },
+  {
+   "at": 796,
+   "run": "execute as @a at @s run spawnpoint @s ~ ~ ~"
+  },
+  {
+   "at": 796,
+   "run": "lnhud anim @e[tag=ln_ally] stop"
+  },
+  {
+   "at": 796,
+   "run": "effect give @e[tag=ln_ally,tag=!ln_officer] glowing infinite 0 true"
+  },
+  {
+   "at": 796,
+   "run": "scoreboard players set #stage ln 1"
+  },
+  {
+   "at": 796,
+   "run": "scoreboard players set #t ln 0"
+  }
+ ]
+}

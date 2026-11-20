@@ -28,6 +28,7 @@ import com.mojang.logging.LogUtils;
  * /lnhud objective <玩家> <文字>        設定畫面左上的目標（文字為空 = 清除）
  * /lnhud waypoint <玩家> <x y z> | clear  目標的導航點（顯示距離）
  * /lnhud cutscene <玩家> <名稱> | stop   播放／中止過場動畫（見 Cutscenes）
+ * /lnhud anim <實體> <動作> | stop      讓 NPC（或玩家）播放角色動作（assets/lnai/player_animation/）
  * /lnhud trace <實體> <x y z> <vx> <vy>   測量拋射物軌跡（寫進伺服器紀錄，給拋物線預覽校正用）
  */
 final class HudCommand {
@@ -53,6 +54,9 @@ final class HudCommand {
                         .then(Commands.argument("name", ResourceLocationArgument.id())
                                 .suggests((c, b) -> net.minecraft.commands.SharedSuggestionProvider.suggestResource(Cutscenes.names(), b))
                                 .executes(c -> Cutscenes.play(c.getSource(), EntityArgument.getPlayers(c, "targets"), ResourceLocationArgument.getId(c, "name"))))))
+                .then(Commands.literal("anim").then(Commands.argument("targets", EntityArgument.entities())
+                        .then(Commands.argument("name", StringArgumentType.word())
+                                .executes(c -> anim(EntityArgument.getEntities(c, "targets"), StringArgumentType.getString(c, "name"))))))
                 .then(Commands.literal("trace").then(Commands.argument("type", ResourceLocationArgument.id())
                         .then(Commands.argument("pos", Vec3Argument.vec3())
                                 .then(Commands.argument("vx", FloatArgumentType.floatArg())
@@ -78,6 +82,12 @@ final class HudCommand {
         Net.Objective o = lastWp == null ? new Net.Objective(lastText, false, 0, 0, 0)
                 : new Net.Objective(lastText, true, lastWp.x, lastWp.y, lastWp.z);
         for (ServerPlayer p : ps) Net.to(p, o);
+    }
+
+    private static int anim(Collection<? extends Entity> es, String name) {
+        String a = name.equals("stop") ? "" : name;
+        for (Entity e : es) Net.around(e, new Net.Anim(e.getId(), a));
+        return es.size();
     }
 
     /** 玩家重新連線時補送目前的目標。 */

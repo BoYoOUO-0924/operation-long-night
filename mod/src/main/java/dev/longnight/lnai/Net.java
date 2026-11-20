@@ -87,6 +87,18 @@ public final class Net {
         }
     }
 
+    /** 角色動作：entity = NPC 或玩家的實體編號；anim = lnai: 底下的動作名稱，空字串 = 停止。 */
+    public record Anim(int entity, String anim) {
+        void write(FriendlyByteBuf b) { b.writeVarInt(entity); b.writeUtf(anim); }
+
+        static Anim read(FriendlyByteBuf b) { return new Anim(b.readVarInt(), b.readUtf()); }
+
+        void handle(Supplier<NetworkEvent.Context> ctx) {
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> dev.longnight.lnai.client.NpcAnim.play(entity, anim));
+            ctx.get().setPacketHandled(true);
+        }
+    }
+
     static void register() {
         int id = 0;
         CH.messageBuilder(Action.class, id++, NetworkDirection.PLAY_TO_SERVER)
@@ -99,7 +111,12 @@ public final class Net {
                 .encoder(Objective::write).decoder(Objective::read).consumerMainThread((m, c) -> m.handle(c)).add();
         CH.messageBuilder(Cutscene.class, id++, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Cutscene::write).decoder(Cutscene::read).consumerMainThread((m, c) -> m.handle(c)).add();
+        CH.messageBuilder(Anim.class, id++, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(Anim::write).decoder(Anim::read).consumerMainThread((m, c) -> m.handle(c)).add();
     }
+
+    /** 送給看得到這個實體的所有玩家（含實體自己，如果它是玩家） */
+    public static void around(net.minecraft.world.entity.Entity e, Object msg) { CH.send(PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> e), msg); }
 
     public static void to(ServerPlayer p, Object msg) { CH.send(PacketDistributor.PLAYER.with(() -> p), msg); }
 }

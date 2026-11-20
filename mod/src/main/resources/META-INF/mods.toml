@@ -72,3 +72,11 @@ displayTest="MATCH_VERSION"
 # stop your mod loading on the server for example.
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"
+
+# NPC 角色動作（玩家端）
+[[dependencies.${mod_id}]]
+    modId="playeranimator"
+    mandatory=true
+    versionRange="[1.0.2-rc1,)"
+    ordering="AFTER"
+    side="CLIENT"

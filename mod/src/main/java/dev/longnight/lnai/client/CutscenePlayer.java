@@ -38,12 +38,23 @@ import net.minecraftforge.fml.common.Mod;
 public final class CutscenePlayer {
     private CutscenePlayer() {}
 
-    record Key(int t, Vec3 pos, float yaw, float pitch, float roll, float fov, Vec3 look, boolean cut, boolean linear) {}
+    /** player = 這一格是「玩家自己的眼睛」（位置、角度、視角大小都跟玩家一樣，用來把鏡頭交還給玩家）；
+     *  fov 是 NaN = 用玩家設定的視角；handheld = 手持晃動幅度（度） */
+    record Key(int t, Vec3 pos, float yaw, float pitch, float roll, float fov, Vec3 look, boolean cut, boolean linear,
+               boolean player, float handheld) {}
+
+    record Shake(int at, int dur, float amp) {}
+
+    /** 畫面中央的大標題（章節名稱）：text 大字、sub 小字 */
+    record Title(int at, int dur, String text, String sub) {}
 
     record Sub(int at, int dur, String who, int color, String text) {}
 
     private static List<Key> keys = List.of();
     private static List<Sub> subs = List.of();
+    private static List<Shake> shakes = List.of();
+    private static List<Title> titles = List.of();
+    private static int frostTotal, frostLeft;
     private static int length, fadeIn, fadeOut, tick;
     private static float bar;
     private static Marker cam;
@@ -60,6 +71,21 @@ public final class CutscenePlayer {
         JsonObject o = JsonParser.parseString(json).getAsJsonObject();
         keys = parseKeys(o.has("camera") ? o.getAsJsonArray("camera") : new JsonArray());
         subs = parseSubs(o.has("subtitles") ? o.getAsJsonArray("subtitles") : new JsonArray());
+        List<Shake> sh = new ArrayList<>();
+        if (o.has("shakes")) for (JsonElement el : o.getAsJsonArray("shakes")) {
+            JsonObject so = el.getAsJsonObject();
+            sh.add(new Shake(so.get("at").getAsInt(), so.has("dur") ? so.get("dur").getAsInt() : 5, f(so, "amp", 1.5f)));
+        }
+        shakes = sh;
+        List<Title> ti = new ArrayList<>();
+        if (o.has("titles")) for (JsonElement el : o.getAsJsonArray("titles")) {
+            JsonObject to = el.getAsJsonObject();
+            ti.add(new Title(to.get("at").getAsInt(), to.has("dur") ? to.get("dur").getAsInt() : 80,
+                    to.get("text").getAsString(), to.has("sub") ? to.get("sub").getAsString() : ""));
+        }
+        titles = ti;
+        frostTotal = o.has("frost_after") ? o.get("frost_after").getAsInt() : 0;
+        frostLeft = 0;
         fadeIn = o.has("fade_in") ? o.get("fade_in").getAsInt() : 15;
         fadeOut = o.has("fade_out") ? o.get("fade_out").getAsInt() : 15;
         bar = o.has("letterbox") ? o.get("letterbox").getAsFloat() : 0.11f;
@@ -87,6 +113,7 @@ public final class CutscenePlayer {
         if (mc.player != null) mc.setCameraEntity(mc.player);
         if (savedCamera != null) mc.options.setCameraType(savedCamera);
         cam = null;
+        frostLeft = frostTotal;
         if (mc.screen instanceof CutsceneScreen) mc.setScreen(null);
     }
 
@@ -96,12 +123,17 @@ public final class CutscenePlayer {
         Key prev = null;
         for (JsonElement e : a) {
             JsonObject k = e.getAsJsonObject();
-            Vec3 pos = vec(k, "pos", prev == null ? Vec3.ZERO : prev.pos);
+            boolean player = k.has("pos") && k.get("pos").isJsonPrimitive() && k.get("pos").getAsString().equals("player");
+            Vec3 pos = player ? Vec3.ZERO : vec(k, "pos", prev == null ? Vec3.ZERO : prev.pos);
             Vec3 look = k.has("look_at") ? vec(k, "look_at", null) : null;
             float yaw = f(k, "yaw", prev == null ? 0 : prev.yaw), pitch = f(k, "pitch", prev == null ? 0 : prev.pitch);
             if (look != null) { float[] yp = aim(pos, look); yaw = yp[0]; pitch = yp[1]; }
-            Key key = new Key(k.get("t").getAsInt(), pos, yaw, pitch, f(k, "roll", 0), f(k, "fov", prev == null ? 70 : prev.fov),
-                    look, k.has("cut") && k.get("cut").getAsBoolean(), k.has("ease") && k.get("ease").getAsString().equals("linear"));
+            float fov = k.has("fov") && k.get("fov").isJsonPrimitive() && k.get("fov").getAsJsonPrimitive().isString()
+                    ? Float.NaN : f(k, "fov", prev == null ? 70 : prev.fov);
+            if (player) { look = null; fov = Float.NaN; }
+            Key key = new Key(k.get("t").getAsInt(), pos, yaw, pitch, f(k, "roll", 0), fov,
+                    look, k.has("cut") && k.get("cut").getAsBoolean(), k.has("ease") && k.get("ease").getAsString().equals("linear"),
+                    player, f(k, "handheld", prev == null ? 0 : prev.handheld));
             out.add(key);
             prev = key;
         }
@@ -125,7 +157,7 @@ public final class CutscenePlayer {
     }
 
     private static Vec3 vec(JsonObject o, String k, Vec3 def) {
-        if (!o.has(k)) return def;
+        if (!o.has(k) || !o.get(k).isJsonArray()) return def;
         JsonArray a = o.getAsJsonArray(k);
         return new Vec3(a.get(0).getAsDouble(), a.get(1).getAsDouble(), a.get(2).getAsDouble());
     }
@@ -139,6 +171,21 @@ public final class CutscenePlayer {
         float pitch = (float) -Math.toDegrees(Math.atan2(d.y, Math.sqrt(d.x * d.x + d.z * d.z)));
         return new float[]{yaw, pitch};
     }
+
+    // ---------------- 「玩家」關鍵格：每次計算時才讀玩家目前的位置與角度 ----------------
+    private static float partialNow;
+
+    private static Vec3 kpos(Key k) {
+        if (!k.player) return k.pos;
+        var p = Minecraft.getInstance().player;
+        return p == null ? k.pos : p.getEyePosition(partialNow);
+    }
+
+    private static float kyaw(Key k) { var p = Minecraft.getInstance().player; return k.player && p != null ? p.getViewYRot(partialNow) : k.yaw; }
+
+    private static float kpitch(Key k) { var p = Minecraft.getInstance().player; return k.player && p != null ? p.getViewXRot(partialNow) : k.pitch; }
+
+    private static float kfov(Key k) { return Float.isNaN(k.fov) ? Minecraft.getInstance().options.fov().get() : k.fov; }
 
     // ---------------- 路線計算 ----------------
     /** 時間 t（可以有小數）時的鏡頭狀態：x y z yaw pitch roll fov */
@@ -155,19 +202,41 @@ public final class CutscenePlayer {
         double e = b.linear ? u : u * u * (3 - 2 * u);   // 預設緩進緩出
         Key p0 = i > 0 && !a.cut ? keys.get(i - 1) : a;
         Key p3 = i + 2 < n && !keys.get(i + 2).cut ? keys.get(i + 2) : b;
-        Vec3 pos = catmull(p0.pos, a.pos, b.pos, p3.pos, e);
+        Vec3 pos = catmull(kpos(p0), kpos(a), kpos(b), kpos(p3), e);
         float yaw, pitch;
         if (a.look != null && b.look != null) {   // 兩格都有注視點：沿路一直盯著（注視點本身也可以移動）
             float[] yp = aim(pos, a.look.lerp(b.look, e));
             yaw = yp[0]; pitch = yp[1];
         } else {
-            yaw = (float) (a.yaw + Mth.wrapDegrees(b.yaw - a.yaw) * e);
-            pitch = (float) Mth.lerp(e, a.pitch, b.pitch);
+            yaw = (float) (kyaw(a) + Mth.wrapDegrees(kyaw(b) - kyaw(a)) * e);
+            pitch = (float) Mth.lerp(e, kpitch(a), kpitch(b));
         }
-        return new double[]{pos.x, pos.y, pos.z, yaw, pitch, Mth.lerp(e, a.roll, b.roll), Mth.lerp(e, a.fov, b.fov)};
+        return new double[]{pos.x, pos.y, pos.z, yaw, pitch, Mth.lerp(e, a.roll, b.roll), Mth.lerp(e, kfov(a), kfov(b)),
+                Mth.lerp(u, a.handheld, b.handheld)};
     }
 
-    private static double[] state(Key k) { return new double[]{k.pos.x, k.pos.y, k.pos.z, k.yaw, k.pitch, k.roll, k.fov}; }
+    private static double[] state(Key k) {
+        Vec3 p = kpos(k);
+        return new double[]{p.x, p.y, p.z, kyaw(k), kpitch(k), k.roll, kfov(k), k.handheld};
+    }
+
+    /** 手持晃動（幾個不同頻率的正弦波疊加）＋ 短促震動，回傳 yaw、pitch、roll 的偏移 */
+    private static float[] wobble(double t, double amp) {
+        float sy = 0, sp = 0, sr = 0;
+        if (amp > 0) {
+            sy = (float) (amp * (Math.sin(t * 0.37) * 0.6 + Math.sin(t * 0.91 + 1.3) * 0.3 + Math.sin(t * 2.3 + 0.4) * 0.1));
+            sp = (float) (amp * (Math.sin(t * 0.53 + 2.1) * 0.6 + Math.sin(t * 1.27 + 0.7) * 0.3 + Math.sin(t * 2.9) * 0.1));
+            sr = (float) (amp * 0.5 * Math.sin(t * 0.29 + 0.5));
+        }
+        for (Shake s : shakes) {
+            double age = t - s.at;
+            if (age < 0 || age > s.dur) continue;
+            double k = s.amp * (1 - age / s.dur);
+            sp += (float) (k * Math.sin(age * 3.1));
+            sy += (float) (k * 0.4 * Math.sin(age * 4.3 + 1));
+        }
+        return new float[]{sy, sp, sr};
+    }
 
     private static Vec3 catmull(Vec3 p0, Vec3 p1, Vec3 p2, Vec3 p3, double t) {
         double t2 = t * t, t3 = t2 * t;
@@ -218,10 +287,13 @@ public final class CutscenePlayer {
     @SubscribeEvent
     public static void angles(ViewportEvent.ComputeCameraAngles e) {
         if (!playing || cam == null) return;
-        double[] s = sample(now((float) e.getPartialTick()));
-        e.setYaw((float) s[3]);
-        e.setPitch((float) s[4]);
-        e.setRoll((float) s[5]);
+        partialNow = (float) e.getPartialTick();
+        double t = now(partialNow);
+        double[] s = sample(t);
+        float[] w = wobble(t, s[7]);
+        e.setYaw((float) s[3] + w[0]);
+        e.setPitch((float) s[4] + w[1]);
+        e.setRoll((float) s[5] + w[2]);
     }
 
     @SubscribeEvent
@@ -233,11 +305,41 @@ public final class CutscenePlayer {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void hand(RenderHandEvent e) { if (playing) e.setCanceled(true); }
 
+    // ---------------- 過場結束後的冰霜外框（原版細雪結凍的畫面） ----------------
+    private static final net.minecraft.resources.ResourceLocation FROST = new net.minecraft.resources.ResourceLocation("textures/misc/powder_snow_outline.png");
+
+    @SubscribeEvent
+    public static void frost(net.minecraftforge.client.event.RenderGuiEvent.Post e) {
+        if (frostLeft <= 0 || playing) return;
+        float a = (float) frostLeft / Math.max(1, frostTotal);
+        a = Math.min(1f, a * 1.6f);   // 前段維持滿，後段淡出
+        GuiGraphics g = e.getGuiGraphics();
+        int w = g.guiWidth(), h = g.guiHeight();
+        com.mojang.blaze3d.systems.RenderSystem.enableBlend();
+        g.setColor(1f, 1f, 1f, a);
+        g.blit(FROST, 0, 0, -90, 0f, 0f, w, h, w, h);
+        g.setColor(1f, 1f, 1f, 1f);
+        com.mojang.blaze3d.systems.RenderSystem.disableBlend();
+    }
+
+    @SubscribeEvent
+    public static void frostTick(TickEvent.ClientTickEvent e) {
+        if (e.phase == TickEvent.Phase.END && frostLeft > 0 && !playing) frostLeft--;
+    }
+
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void overlays(RenderGuiOverlayEvent.Pre e) { if (playing) e.setCanceled(true); }
 
     @SubscribeEvent
     public static void nameTags(RenderNameTagEvent e) { if (playing) e.setResult(Event.Result.DENY); }
+
+    /** 鏡頭衝進玩家眼睛時，不要畫玩家自己的模型（不然會看到頭部模型的內側） */
+    @SubscribeEvent
+    public static void hideSelf(net.minecraftforge.client.event.RenderPlayerEvent.Pre e) {
+        Minecraft mc = Minecraft.getInstance();
+        if (!playing || cam == null || e.getEntity() != mc.player) return;
+        if (cam.position().distanceTo(mc.player.getEyePosition()) < 2.5) e.setCanceled(true);
+    }
 
     // ---------------- 畫面：黑邊、字幕、淡入淡出 ----------------
     static final class CutsceneScreen extends Screen {
@@ -272,6 +374,25 @@ public final class CutscenePlayer {
                 if (age < 0 || age > s.dur) continue;
                 float a = (float) Mth.clamp(Math.min(age / 5.0, (s.dur - age) / 5.0), 0, 1);
                 drawSub(g, s, w, h - Math.max(bh, Math.round(h * 0.11f)) / 2, a);
+            }
+            // 章節大標題：前後 15 tick 淡入淡出
+            for (Title ti : titles) {
+                double age = t - ti.at;
+                if (age < 0 || age > ti.dur) continue;
+                float a = (float) Mth.clamp(Math.min(age / 15.0, (ti.dur - age) / 15.0), 0, 1);
+                int alpha = Math.max(4, Math.round(a * 255)) << 24;
+                g.pose().pushPose();
+                g.pose().translate(w / 2f, h * 0.42f, 0);
+                g.pose().scale(2.6f, 2.6f, 1);
+                Hud.text(g, ti.text, 0, -4, alpha | 0xF2F0EA, true);
+                g.pose().popPose();
+                if (!ti.sub.isEmpty()) {
+                    g.pose().pushPose();
+                    g.pose().translate(w / 2f, h * 0.42f + 22, 0);
+                    g.pose().scale(1.2f, 1.2f, 1);
+                    Hud.text(g, ti.sub, 0, -4, alpha | 0xC8D0D8, true);
+                    g.pose().popPose();
+                }
             }
             // 全畫面淡入淡出
             float black = 0;

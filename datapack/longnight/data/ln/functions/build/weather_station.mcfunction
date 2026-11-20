@@ -490,29 +490,31 @@ setblock ~37 ~0 ~23 snow_block
 fill ~39 ~0 ~23 ~40 ~0 ~23 snow_block
 setblock ~46 ~0 ~23 snow_block
 setblock ~52 ~1 ~-4 iron_bars
-setblock ~0 ~1 ~-1 snow[layers=4]
-setblock ~1 ~1 ~-1 snow[layers=7]
+setblock ~0 ~1 ~-1 snow[layers=5]
+setblock ~1 ~1 ~-1 snow[layers=6]
+setblock ~2 ~1 ~-1 snow[layers=7]
 setblock ~3 ~1 ~-1 snow[layers=4]
-setblock ~4 ~1 ~-1 snow[layers=7]
-fill ~5 ~1 ~-1 ~6 ~1 ~-1 snow[layers=4]
-setblock ~7 ~1 ~-1 snow[layers=6]
-fill ~8 ~1 ~-1 ~9 ~1 ~-1 snow[layers=5]
-fill ~10 ~1 ~-1 ~12 ~1 ~-1 snow[layers=4]
-fill ~21 ~1 ~-1 ~22 ~1 ~-1 snow[layers=6]
+fill ~4 ~1 ~-1 ~5 ~1 ~-1 snow[layers=6]
+fill ~6 ~1 ~-1 ~7 ~1 ~-1 snow[layers=5]
+setblock ~8 ~1 ~-1 snow[layers=7]
+setblock ~9 ~1 ~-1 snow[layers=4]
+setblock ~10 ~1 ~-1 snow[layers=6]
+setblock ~12 ~1 ~-1 snow[layers=7]
+setblock ~13 ~1 ~-1 snow[layers=4]
+setblock ~21 ~1 ~-1 snow[layers=5]
 setblock ~23 ~1 ~-1 snow[layers=7]
-setblock ~25 ~1 ~-1 snow[layers=6]
-fill ~27 ~1 ~-1 ~28 ~1 ~-1 snow[layers=4]
-fill ~29 ~1 ~-1 ~31 ~1 ~-1 snow[layers=7]
-setblock ~32 ~1 ~-1 snow[layers=6]
-setblock ~33 ~1 ~-1 snow[layers=4]
-setblock ~34 ~1 ~-1 snow[layers=7]
-fill ~35 ~1 ~-1 ~36 ~1 ~-1 snow[layers=4]
-setblock ~38 ~1 ~-1 snow[layers=6]
-setblock ~39 ~1 ~-1 snow[layers=4]
-fill ~40 ~1 ~-1 ~42 ~1 ~-1 snow[layers=5]
-setblock ~43 ~1 ~-1 snow[layers=7]
-setblock ~46 ~1 ~-1 snow[layers=6]
-setblock ~-1 ~1 ~0 snow[layers=6]
+setblock ~25 ~1 ~-1 snow[layers=7]
+setblock ~27 ~1 ~-1 snow[layers=7]
+fill ~28 ~1 ~-1 ~29 ~1 ~-1 snow[layers=4]
+setblock ~30 ~1 ~-1 snow[layers=5]
+fill ~31 ~1 ~-1 ~32 ~1 ~-1 snow[layers=4]
+fill ~33 ~1 ~-1 ~35 ~1 ~-1 snow[layers=7]
+setblock ~36 ~1 ~-1 snow[layers=6]
+setblock ~38 ~1 ~-1 snow[layers=4]
+setblock ~40 ~1 ~-1 snow[layers=4]
+fill ~42 ~1 ~-1 ~43 ~1 ~-1 snow[layers=6]
+setblock ~46 ~1 ~-1 snow[layers=5]
+setblock ~-1 ~1 ~0 snow[layers=5]
 setblock ~0 ~1 ~0 polished_andesite
 fill ~1 ~1 ~0 ~3 ~1 ~0 stone_bricks
 setblock ~4 ~1 ~0 cracked_stone_bricks
@@ -537,6 +539,7 @@ fill ~34 ~1 ~0 ~35 ~1 ~0 cracked_stone_bricks
 fill ~36 ~1 ~0 ~40 ~1 ~0 stone_bricks
 setblock ~41 ~1 ~0 cracked_stone_bricks
 fill ~42 ~1 ~0 ~46 ~1 ~0 stone_bricks
+setblock ~-1 ~1 ~1 snow[layers=6]
 setblock ~0 ~1 ~1 stone_bricks
 setblock ~1 ~1 ~1 ladder[facing=south]
 fill ~2 ~1 ~1 ~9 ~1 ~1 gray_concrete
@@ -555,7 +558,8 @@ setblock ~34 ~1 ~1 stone_bricks
 setblock ~36 ~1 ~1 anvil[facing=east]
 setblock ~37 ~1 ~1 grindstone[face=floor,facing=north]
 setblock ~46 ~1 ~1 stone_bricks
-setblock ~-1 ~1 ~2 snow[layers=5]
+setblock ~47 ~1 ~1 snow[layers=3]
+setblock ~-1 ~1 ~2 snow[layers=4]
 setblock ~0 ~1 ~2 cracked_stone_bricks
 setblock ~11 ~1 ~2 white_concrete_powder
 setblock ~14 ~1 ~2 spruce_stairs[facing=south]
@@ -574,7 +578,8 @@ fill ~27 ~1 ~3 ~29 ~1 ~3 magma_block
 setblock ~30 ~1 ~3 iron_block
 setblock ~34 ~1 ~3 stone_bricks
 setblock ~46 ~1 ~3 iron_bars[north=true,south=true]
-setblock ~-1 ~1 ~4 snow[layers=5]
+setblock ~47 ~1 ~3 snow[layers=2]
+setblock ~-1 ~1 ~4 snow[layers=4]
 setblock ~0 ~1 ~4 stone_bricks
 setblock ~11 ~1 ~4 white_concrete
 fill ~14 ~1 ~4 ~19 ~1 ~4 spruce_slab[type=top]
@@ -584,6 +589,7 @@ fill ~27 ~1 ~4 ~29 ~1 ~4 magma_block
 setblock ~30 ~1 ~4 iron_block
 setblock ~34 ~1 ~4 cracked_stone_bricks
 setblock ~46 ~1 ~4 air
+setblock ~-1 ~1 ~5 snow[layers=6]
 setblock ~0 ~1 ~5 stone_bricks
 fill ~3 ~1 ~5 ~7 ~1 ~5 dark_oak_slab[type=top]
 setblock ~11 ~1 ~5 white_concrete
@@ -613,7 +619,7 @@ setblock ~21 ~1 ~7 brewing_stand
 setblock ~22 ~1 ~7 white_concrete
 setblock ~34 ~1 ~7 cracked_stone_bricks
 setblock ~46 ~1 ~7 air
-setblock ~-1 ~1 ~8 snow[layers=5]
+setblock ~-1 ~1 ~8 snow[layers=6]
 setblock ~0 ~1 ~8 stone_bricks
 fill ~1 ~1 ~8 ~3 ~1 ~8 white_concrete
 setblock ~4 ~1 ~8 white_concrete_powder
@@ -1262,7 +1268,7 @@ fill ~18 ~3 ~22 ~35 ~3 ~22 air
 setblock ~38 ~3 ~22 polished_andesite
 setblock ~39 ~3 ~22 stone_bricks
 fill ~40 ~3 ~22 ~43 ~3 ~22 air
-setblock ~44 ~3 ~22 cracked_stone_bricks
+setblock ~44 ~3 ~22 stone_bricks
 setblock ~45 ~3 ~22 polished_andesite
 fill ~-2 ~3 ~23 ~0 ~3 ~23 air
 fill ~2 ~3 ~23 ~3 ~3 ~23 air
@@ -1285,7 +1291,7 @@ setblock ~21 ~3 ~24 snow_block
 setblock ~30 ~3 ~24 air
 setblock ~31 ~3 ~24 snow_block
 setblock ~35 ~3 ~24 air
-setblock ~38 ~3 ~24 cracked_stone_bricks
+setblock ~38 ~3 ~24 stone_bricks
 setblock ~45 ~3 ~24 stone_bricks
 setblock ~2 ~3 ~25 spruce_fence[north=true,south=true]
 fill ~3 ~3 ~25 ~6 ~3 ~25 spruce_fence[east=true,west=true]
@@ -1295,30 +1301,32 @@ setblock ~14 ~3 ~25 spruce_fence[north=true,south=true]
 setblock ~22 ~3 ~25 snow_block
 setblock ~29 ~3 ~25 snow_block
 fill ~31 ~3 ~25 ~33 ~3 ~25 snow_block
-setblock ~38 ~3 ~25 stone_bricks
+setblock ~38 ~3 ~25 cracked_stone_bricks
 setblock ~45 ~3 ~25 stone_bricks
 setblock ~2 ~3 ~26 spruce_fence[north=true,south=true]
 setblock ~36 ~3 ~26 air
-setblock ~38 ~3 ~26 stone_bricks
+setblock ~38 ~3 ~26 cracked_stone_bricks
 setblock ~45 ~3 ~26 stone_bricks
 fill ~34 ~3 ~27 ~35 ~3 ~27 snow_block
 fill ~36 ~3 ~27 ~37 ~3 ~27 air
 setblock ~38 ~3 ~27 stone_bricks
 setblock ~45 ~3 ~27 stone_bricks
 fill ~36 ~3 ~28 ~37 ~3 ~28 air
-setblock ~38 ~3 ~28 cracked_stone_bricks
+setblock ~38 ~3 ~28 stone_bricks
 setblock ~41 ~3 ~28 cauldron
 fill ~43 ~3 ~28 ~44 ~3 ~28 iron_block
 setblock ~45 ~3 ~28 stone_bricks
 setblock ~36 ~3 ~29 snow_block
 setblock ~37 ~3 ~29 air
-setblock ~38 ~3 ~29 cracked_stone_bricks
+setblock ~38 ~3 ~29 stone_bricks
 setblock ~39 ~3 ~29 barrel[facing=up]
 fill ~43 ~3 ~29 ~44 ~3 ~29 iron_block
 setblock ~45 ~3 ~29 stone_bricks
 setblock ~37 ~3 ~30 air
 setblock ~38 ~3 ~30 polished_andesite
-fill ~39 ~3 ~30 ~44 ~3 ~30 stone_bricks
+fill ~39 ~3 ~30 ~42 ~3 ~30 stone_bricks
+setblock ~43 ~3 ~30 cracked_stone_bricks
+setblock ~44 ~3 ~30 stone_bricks
 setblock ~45 ~3 ~30 polished_andesite
 fill ~37 ~3 ~31 ~44 ~3 ~31 air
 setblock ~39 ~3 ~32 snow_block
@@ -1548,12 +1556,14 @@ setblock ~2 ~4 ~29 spruce_fence[north=true,south=true]
 fill ~36 ~4 ~29 ~37 ~4 ~29 air
 setblock ~38 ~4 ~29 light_gray_concrete
 fill ~43 ~4 ~29 ~44 ~4 ~29 iron_block
-setblock ~45 ~4 ~29 light_gray_concrete_powder
+setblock ~45 ~4 ~29 light_gray_concrete
 setblock ~34 ~4 ~30 snow_block
 setblock ~36 ~4 ~30 snow_block
 setblock ~37 ~4 ~30 air
 setblock ~38 ~4 ~30 polished_andesite
-fill ~39 ~4 ~30 ~44 ~4 ~30 light_gray_concrete
+fill ~39 ~4 ~30 ~40 ~4 ~30 light_gray_concrete
+setblock ~41 ~4 ~30 light_gray_concrete_powder
+fill ~42 ~4 ~30 ~44 ~4 ~30 light_gray_concrete
 setblock ~45 ~4 ~30 polished_andesite
 setblock ~36 ~4 ~31 snow_block
 fill ~37 ~4 ~31 ~44 ~4 ~31 air
@@ -1714,7 +1724,7 @@ fill ~21 ~5 ~23 ~22 ~5 ~23 snow_block
 fill ~24 ~5 ~23 ~27 ~5 ~23 stone
 setblock ~28 ~5 ~23 snow_block
 setblock ~31 ~5 ~23 stone
-setblock ~38 ~5 ~23 light_gray_concrete_powder
+setblock ~38 ~5 ~23 light_gray_concrete
 setblock ~45 ~5 ~23 light_gray_concrete
 setblock ~20 ~5 ~24 stone
 setblock ~21 ~5 ~24 air
@@ -1729,17 +1739,17 @@ fill ~20 ~5 ~25 ~21 ~5 ~25 stone
 setblock ~22 ~5 ~25 stone_bricks
 fill ~26 ~5 ~25 ~30 ~5 ~25 stone_bricks
 fill ~31 ~5 ~25 ~33 ~5 ~25 air
-setblock ~38 ~5 ~25 light_gray_concrete_powder
-setblock ~45 ~5 ~25 light_gray_concrete
+setblock ~38 ~5 ~25 light_gray_concrete
+setblock ~45 ~5 ~25 light_gray_concrete_powder
 setblock ~29 ~5 ~26 stone
 setblock ~30 ~5 ~26 stone_bricks
 fill ~31 ~5 ~26 ~32 ~5 ~26 stone
 setblock ~38 ~5 ~26 light_gray_concrete
 fill ~41 ~5 ~26 ~42 ~5 ~26 white_wool
-setblock ~45 ~5 ~26 light_gray_concrete
+setblock ~45 ~5 ~26 light_gray_concrete_powder
 setblock ~34 ~5 ~27 snow_block
 setblock ~35 ~5 ~27 air
-setblock ~38 ~5 ~27 light_gray_concrete
+setblock ~38 ~5 ~27 light_gray_concrete_powder
 setblock ~45 ~5 ~27 light_gray_concrete
 fill ~4 ~5 ~28 ~5 ~5 ~28 spruce_fence
 fill ~7 ~5 ~28 ~8 ~5 ~28 spruce_fence
@@ -1755,7 +1765,7 @@ setblock ~14 ~5 ~29 spruce_fence[north=true,south=true]
 setblock ~33 ~5 ~29 snow_block
 fill ~36 ~5 ~29 ~37 ~5 ~29 air
 setblock ~38 ~5 ~29 light_gray_concrete
-setblock ~45 ~5 ~29 light_gray_concrete
+setblock ~45 ~5 ~29 stone
 setblock ~2 ~5 ~30 spruce_fence[north=true,south=true]
 setblock ~34 ~5 ~30 air
 setblock ~35 ~5 ~30 snow_block
@@ -1799,21 +1809,21 @@ fill ~0 ~6 ~18 ~34 ~6 ~18 light_gray_concrete
 fill ~0 ~6 ~19 ~34 ~6 ~19 light_gray_concrete
 fill ~0 ~6 ~20 ~34 ~6 ~20 light_gray_concrete
 setblock ~38 ~6 ~22 polished_andesite
-setblock ~39 ~6 ~22 light_gray_concrete_powder
+setblock ~39 ~6 ~22 light_gray_concrete
 fill ~40 ~6 ~22 ~43 ~6 ~22 air
 setblock ~44 ~6 ~22 light_gray_concrete
 setblock ~45 ~6 ~22 polished_andesite
 fill ~24 ~6 ~23 ~27 ~6 ~23 snow_block
 setblock ~31 ~6 ~23 snow_block
 setblock ~38 ~6 ~23 light_gray_concrete
-setblock ~45 ~6 ~23 light_gray_concrete
+setblock ~45 ~6 ~23 stone
 fill ~20 ~6 ~24 ~21 ~6 ~24 snow_block
 fill ~22 ~6 ~24 ~25 ~6 ~24 stone
 setblock ~26 ~6 ~24 snow_block
 fill ~27 ~6 ~24 ~29 ~6 ~24 stone
 fill ~30 ~6 ~24 ~32 ~6 ~24 snow_block
 setblock ~38 ~6 ~24 light_gray_concrete
-setblock ~45 ~6 ~24 stone
+setblock ~45 ~6 ~24 light_gray_concrete
 setblock ~20 ~6 ~25 snow_block
 setblock ~21 ~6 ~25 stone
 fill ~22 ~6 ~25 ~30 ~6 ~25 stone_bricks
@@ -1845,7 +1855,7 @@ fill ~28 ~6 ~28 ~29 ~6 ~28 stone
 setblock ~30 ~6 ~28 stone_bricks
 setblock ~31 ~6 ~28 stone
 setblock ~35 ~6 ~28 air
-setblock ~38 ~6 ~28 light_gray_concrete
+setblock ~38 ~6 ~28 light_gray_concrete_powder
 setblock ~45 ~6 ~28 light_gray_concrete
 fill ~4 ~6 ~29 ~5 ~6 ~29 spruce_fence
 fill ~7 ~6 ~29 ~8 ~6 ~29 spruce_fence
@@ -1856,9 +1866,8 @@ setblock ~45 ~6 ~29 light_gray_concrete
 setblock ~14 ~6 ~30 spruce_fence[north=true,south=true]
 fill ~34 ~6 ~30 ~37 ~6 ~30 air
 setblock ~38 ~6 ~30 polished_andesite
-fill ~39 ~6 ~30 ~40 ~6 ~30 light_gray_concrete
-setblock ~41 ~6 ~30 light_gray_concrete_powder
-fill ~42 ~6 ~30 ~44 ~6 ~30 light_gray_concrete
+setblock ~39 ~6 ~30 stone
+fill ~40 ~6 ~30 ~44 ~6 ~30 light_gray_concrete
 setblock ~45 ~6 ~30 polished_andesite
 setblock ~14 ~6 ~31 spruce_fence[north=true,south=true]
 fill ~36 ~6 ~31 ~38 ~6 ~31 air
@@ -2016,7 +2025,7 @@ setblock ~36 ~7 ~5 snow[layers=1]
 fill ~38 ~7 ~5 ~39 ~7 ~5 snow[layers=1]
 setblock ~42 ~7 ~5 snow[layers=3]
 fill ~44 ~7 ~5 ~45 ~7 ~5 snow[layers=1]
-setblock ~46 ~7 ~5 stone_brick_wall
+setblock ~46 ~7 ~5 iron_bars
 setblock ~0 ~7 ~6 light_gray_concrete
 fill ~1 ~7 ~6 ~6 ~7 ~6 air
 setblock ~7 ~7 ~6 light_gray_concrete
@@ -2056,9 +2065,7 @@ setblock ~17 ~7 ~7 snow[layers=2]
 setblock ~19 ~7 ~7 snow[layers=2]
 setblock ~20 ~7 ~7 snow[layers=1]
 setblock ~22 ~7 ~7 snow[layers=2]
-fill ~23 ~7 ~7 ~26 ~7 ~7 snow[layers=3]
-setblock ~28 ~7 ~7 snow[layers=2]
-setblock ~29 ~7 ~7 snow[layers=1]
+fill ~23 ~7 ~7 ~29 ~7 ~7 polished_andesite
 setblock ~30 ~7 ~7 snow[layers=3]
 setblock ~31 ~7 ~7 snow[layers=1]
 fill ~32 ~7 ~7 ~33 ~7 ~7 snow[layers=2]
@@ -2088,10 +2095,7 @@ setblock ~17 ~7 ~8 snow[layers=2]
 setblock ~18 ~7 ~8 snow[layers=1]
 setblock ~20 ~7 ~8 snow[layers=3]
 setblock ~21 ~7 ~8 snow[layers=2]
-setblock ~24 ~7 ~8 snow[layers=1]
-setblock ~25 ~7 ~8 snow[layers=2]
-setblock ~26 ~7 ~8 snow[layers=1]
-fill ~27 ~7 ~8 ~29 ~7 ~8 snow[layers=2]
+fill ~23 ~7 ~8 ~29 ~7 ~8 polished_andesite
 setblock ~30 ~7 ~8 snow[layers=1]
 fill ~31 ~7 ~8 ~32 ~7 ~8 snow[layers=2]
 setblock ~33 ~7 ~8 snow[layers=1]
@@ -2115,11 +2119,7 @@ setblock ~18 ~7 ~9 snow[layers=3]
 setblock ~20 ~7 ~9 snow[layers=1]
 setblock ~21 ~7 ~9 snow[layers=2]
 setblock ~22 ~7 ~9 snow[layers=1]
-setblock ~24 ~7 ~9 snow[layers=2]
-fill ~25 ~7 ~9 ~26 ~7 ~9 snow[layers=3]
-setblock ~27 ~7 ~9 snow[layers=2]
-setblock ~28 ~7 ~9 snow[layers=3]
-setblock ~29 ~7 ~9 snow[layers=1]
+fill ~23 ~7 ~9 ~29 ~7 ~9 polished_andesite
 setblock ~30 ~7 ~9 snow[layers=3]
 setblock ~31 ~7 ~9 snow[layers=1]
 setblock ~32 ~7 ~9 snow[layers=3]
@@ -2146,8 +2146,7 @@ fill ~14 ~7 ~10 ~15 ~7 ~10 snow[layers=1]
 fill ~17 ~7 ~10 ~19 ~7 ~10 snow[layers=2]
 setblock ~20 ~7 ~10 snow[layers=1]
 setblock ~22 ~7 ~10 snow[layers=2]
-setblock ~24 ~7 ~10 snow[layers=1]
-fill ~25 ~7 ~10 ~27 ~7 ~10 snow[layers=3]
+fill ~23 ~7 ~10 ~29 ~7 ~10 polished_andesite
 setblock ~30 ~7 ~10 snow[layers=3]
 setblock ~33 ~7 ~10 snow[layers=3]
 setblock ~34 ~7 ~10 polished_andesite
@@ -2169,11 +2168,7 @@ fill ~16 ~7 ~11 ~17 ~7 ~11 snow[layers=2]
 fill ~18 ~7 ~11 ~19 ~7 ~11 snow[layers=1]
 setblock ~20 ~7 ~11 snow[layers=3]
 setblock ~22 ~7 ~11 snow[layers=3]
-setblock ~24 ~7 ~11 snow[layers=1]
-setblock ~25 ~7 ~11 snow[layers=2]
-setblock ~26 ~7 ~11 snow[layers=3]
-fill ~27 ~7 ~11 ~28 ~7 ~11 snow[layers=2]
-setblock ~29 ~7 ~11 snow[layers=1]
+fill ~23 ~7 ~11 ~29 ~7 ~11 polished_andesite
 setblock ~31 ~7 ~11 snow[layers=1]
 setblock ~32 ~7 ~11 snow[layers=3]
 setblock ~34 ~7 ~11 stone_brick_wall
@@ -2198,11 +2193,7 @@ fill ~17 ~7 ~12 ~18 ~7 ~12 snow[layers=2]
 setblock ~19 ~7 ~12 snow[layers=3]
 setblock ~20 ~7 ~12 snow[layers=2]
 setblock ~21 ~7 ~12 snow[layers=1]
-setblock ~23 ~7 ~12 snow[layers=3]
-fill ~24 ~7 ~12 ~25 ~7 ~12 snow[layers=2]
-setblock ~27 ~7 ~12 snow[layers=1]
-setblock ~28 ~7 ~12 snow[layers=3]
-setblock ~29 ~7 ~12 snow[layers=2]
+fill ~23 ~7 ~12 ~29 ~7 ~12 polished_andesite
 setblock ~30 ~7 ~12 snow[layers=1]
 setblock ~31 ~7 ~12 snow[layers=3]
 setblock ~32 ~7 ~12 snow[layers=1]
@@ -2230,11 +2221,7 @@ setblock ~16 ~7 ~13 snow[layers=1]
 setblock ~17 ~7 ~13 snow[layers=2]
 setblock ~18 ~7 ~13 snow[layers=1]
 fill ~21 ~7 ~13 ~22 ~7 ~13 snow[layers=1]
-setblock ~23 ~7 ~13 snow[layers=3]
-setblock ~24 ~7 ~13 snow[layers=1]
-setblock ~25 ~7 ~13 snow[layers=2]
-setblock ~28 ~7 ~13 snow[layers=2]
-setblock ~29 ~7 ~13 snow[layers=3]
+fill ~23 ~7 ~13 ~29 ~7 ~13 polished_andesite
 setblock ~30 ~7 ~13 snow[layers=2]
 setblock ~31 ~7 ~13 snow[layers=1]
 fill ~32 ~7 ~13 ~33 ~7 ~13 snow[layers=2]
@@ -2395,7 +2382,7 @@ setblock ~45 ~7 ~23 light_gray_concrete
 fill ~22 ~7 ~24 ~25 ~7 ~24 snow_block
 fill ~27 ~7 ~24 ~29 ~7 ~24 snow_block
 setblock ~38 ~7 ~24 light_gray_concrete
-setblock ~45 ~7 ~24 light_gray_concrete
+setblock ~45 ~7 ~24 stone
 setblock ~21 ~7 ~25 snow_block
 fill ~24 ~7 ~25 ~30 ~7 ~25 polished_andesite
 setblock ~31 ~7 ~25 snow_block
@@ -2424,16 +2411,13 @@ fill ~24 ~7 ~29 ~30 ~7 ~29 polished_andesite
 fill ~31 ~7 ~29 ~32 ~7 ~29 snow_block
 setblock ~33 ~7 ~29 air
 setblock ~38 ~7 ~29 light_gray_concrete
-setblock ~45 ~7 ~29 light_gray_concrete
+setblock ~45 ~7 ~29 light_gray_concrete_powder
 setblock ~21 ~7 ~30 snow_block
 fill ~24 ~7 ~30 ~30 ~7 ~30 polished_andesite
 fill ~31 ~7 ~30 ~32 ~7 ~30 snow_block
 fill ~34 ~7 ~30 ~35 ~7 ~30 air
 setblock ~38 ~7 ~30 polished_andesite
-setblock ~39 ~7 ~30 light_gray_concrete_powder
-fill ~40 ~7 ~30 ~41 ~7 ~30 light_gray_concrete
-setblock ~42 ~7 ~30 light_gray_concrete_powder
-fill ~43 ~7 ~30 ~44 ~7 ~30 light_gray_concrete
+fill ~39 ~7 ~30 ~44 ~7 ~30 light_gray_concrete
 setblock ~45 ~7 ~30 polished_andesite
 setblock ~21 ~7 ~31 snow_block
 setblock ~36 ~7 ~31 air
@@ -2481,14 +2465,49 @@ setblock ~14 ~8 ~4 iron_trapdoor[half=bottom,open=false]
 setblock ~0 ~8 ~5 glass_pane[north=true,south=true]
 fill ~1 ~8 ~5 ~6 ~8 ~5 air
 setblock ~7 ~8 ~5 glass_pane[north=true,south=true]
+setblock ~46 ~8 ~5 iron_bars
 setblock ~0 ~8 ~6 light_gray_concrete
 fill ~1 ~8 ~6 ~6 ~8 ~6 air
 setblock ~7 ~8 ~6 light_gray_concrete
+fill ~24 ~8 ~6 ~25 ~8 ~6 light_gray_terracotta
+setblock ~26 ~8 ~6 orange_terracotta
+fill ~27 ~8 ~6 ~28 ~8 ~6 white_terracotta
 setblock ~0 ~8 ~7 polished_andesite
 setblock ~1 ~8 ~7 light_gray_concrete
 fill ~2 ~8 ~7 ~5 ~8 ~7 glass_pane[east=true,west=true]
 setblock ~6 ~8 ~7 light_gray_concrete
 setblock ~7 ~8 ~7 polished_andesite
+fill ~23 ~8 ~7 ~24 ~8 ~7 light_gray_terracotta
+fill ~25 ~8 ~7 ~27 ~8 ~7 air
+setblock ~28 ~8 ~7 light_gray_terracotta
+setblock ~29 ~8 ~7 orange_terracotta
+setblock ~22 ~8 ~8 brown_terracotta
+setblock ~23 ~8 ~8 white_terracotta
+fill ~24 ~8 ~8 ~28 ~8 ~8 air
+setblock ~29 ~8 ~8 brown_terracotta
+setblock ~30 ~8 ~8 white_terracotta
+setblock ~22 ~8 ~9 white_terracotta
+fill ~23 ~8 ~9 ~29 ~8 ~9 air
+setblock ~30 ~8 ~9 white_terracotta
+setblock ~22 ~8 ~10 light_gray_terracotta
+fill ~23 ~8 ~10 ~29 ~8 ~10 air
+setblock ~30 ~8 ~10 white_terracotta
+setblock ~22 ~8 ~11 light_gray_terracotta
+fill ~23 ~8 ~11 ~29 ~8 ~11 air
+setblock ~30 ~8 ~11 white_terracotta
+setblock ~22 ~8 ~12 light_gray_terracotta
+setblock ~23 ~8 ~12 white_terracotta
+fill ~24 ~8 ~12 ~28 ~8 ~12 air
+fill ~29 ~8 ~12 ~30 ~8 ~12 white_terracotta
+setblock ~23 ~8 ~13 brown_terracotta
+setblock ~24 ~8 ~13 light_gray_terracotta
+fill ~25 ~8 ~13 ~27 ~8 ~13 air
+setblock ~28 ~8 ~13 white_terracotta
+setblock ~29 ~8 ~13 light_gray_terracotta
+setblock ~24 ~8 ~14 light_gray_terracotta
+setblock ~25 ~8 ~14 white_terracotta
+setblock ~26 ~8 ~14 orange_terracotta
+fill ~27 ~8 ~14 ~28 ~8 ~14 white_terracotta
 setblock ~8 ~8 ~15 iron_trapdoor[half=bottom,open=false]
 setblock ~20 ~8 ~16 iron_trapdoor[half=bottom,open=false]
 setblock ~38 ~8 ~22 polished_andesite
@@ -2496,12 +2515,12 @@ setblock ~39 ~8 ~22 light_gray_concrete
 fill ~40 ~8 ~22 ~43 ~8 ~22 air
 setblock ~44 ~8 ~22 light_gray_concrete
 setblock ~45 ~8 ~22 polished_andesite
-setblock ~38 ~8 ~23 light_gray_concrete
+setblock ~38 ~8 ~23 stone
 setblock ~45 ~8 ~23 light_gray_concrete
 setblock ~38 ~8 ~24 light_gray_concrete
 setblock ~45 ~8 ~24 light_gray_concrete
 setblock ~24 ~8 ~25 polished_andesite
-fill ~25 ~8 ~25 ~26 ~8 ~25 cracked_stone_bricks
+fill ~25 ~8 ~25 ~26 ~8 ~25 stone_bricks
 setblock ~27 ~8 ~25 air
 fill ~28 ~8 ~25 ~29 ~8 ~25 stone_bricks
 setblock ~30 ~8 ~25 polished_andesite
@@ -2521,22 +2540,24 @@ fill ~4 ~8 ~28 ~5 ~8 ~28 white_concrete
 fill ~7 ~8 ~28 ~8 ~8 ~28 white_concrete
 setblock ~24 ~8 ~28 stone_bricks
 fill ~25 ~8 ~28 ~29 ~8 ~28 iron_block
-setblock ~30 ~8 ~28 stone_bricks
+setblock ~30 ~8 ~28 cracked_stone_bricks
 setblock ~38 ~8 ~28 light_gray_concrete
-setblock ~45 ~8 ~28 stone
+setblock ~45 ~8 ~28 light_gray_concrete
 fill ~4 ~8 ~29 ~5 ~8 ~29 white_concrete
 fill ~7 ~8 ~29 ~8 ~8 ~29 white_concrete
 setblock ~24 ~8 ~29 stone_bricks
-setblock ~30 ~8 ~29 cracked_stone_bricks
+setblock ~30 ~8 ~29 stone_bricks
 setblock ~38 ~8 ~29 light_gray_concrete
 setblock ~45 ~8 ~29 light_gray_concrete
 setblock ~24 ~8 ~30 polished_andesite
-fill ~25 ~8 ~30 ~26 ~8 ~30 stone_bricks
-setblock ~27 ~8 ~30 cracked_stone_bricks
-fill ~28 ~8 ~30 ~29 ~8 ~30 stone_bricks
+setblock ~25 ~8 ~30 stone_bricks
+setblock ~26 ~8 ~30 cracked_stone_bricks
+fill ~27 ~8 ~30 ~29 ~8 ~30 stone_bricks
 setblock ~30 ~8 ~30 polished_andesite
 setblock ~38 ~8 ~30 polished_andesite
-fill ~39 ~8 ~30 ~43 ~8 ~30 light_gray_concrete
+fill ~39 ~8 ~30 ~41 ~8 ~30 light_gray_concrete
+setblock ~42 ~8 ~30 light_gray_concrete_powder
+setblock ~43 ~8 ~30 light_gray_concrete
 setblock ~44 ~8 ~30 light_gray_concrete_powder
 setblock ~45 ~8 ~30 polished_andesite
 setblock ~11 ~8 ~32 birch_fence
@@ -2592,22 +2613,54 @@ setblock ~7 ~9 ~4 glass_pane[north=true,south=true]
 setblock ~0 ~9 ~5 glass_pane[north=true,south=true]
 fill ~1 ~9 ~5 ~6 ~9 ~5 air
 setblock ~7 ~9 ~5 glass_pane[north=true,south=true]
+setblock ~46 ~9 ~5 ochre_froglight
 setblock ~0 ~9 ~6 light_gray_concrete
 fill ~1 ~9 ~6 ~6 ~9 ~6 air
 setblock ~7 ~9 ~6 light_gray_concrete
+setblock ~25 ~9 ~6 orange_terracotta
+setblock ~26 ~9 ~6 white_terracotta
+setblock ~27 ~9 ~6 light_gray_terracotta
+setblock ~46 ~9 ~6 ochre_froglight
 setblock ~0 ~9 ~7 polished_andesite
 setblock ~1 ~9 ~7 light_gray_concrete
 fill ~2 ~9 ~7 ~5 ~9 ~7 glass_pane[east=true,west=true]
 setblock ~6 ~9 ~7 light_gray_concrete_powder
 setblock ~7 ~9 ~7 polished_andesite
+setblock ~23 ~9 ~7 light_gray_terracotta
+setblock ~24 ~9 ~7 white_terracotta
+fill ~25 ~9 ~7 ~27 ~9 ~7 air
+setblock ~28 ~9 ~7 white_terracotta
+setblock ~29 ~9 ~7 brown_terracotta
+setblock ~23 ~9 ~8 light_gray_terracotta
+fill ~24 ~9 ~8 ~28 ~9 ~8 air
+setblock ~29 ~9 ~8 white_terracotta
+setblock ~22 ~9 ~9 white_terracotta
+fill ~23 ~9 ~9 ~29 ~9 ~9 air
+setblock ~30 ~9 ~9 white_terracotta
+setblock ~22 ~9 ~10 light_gray_terracotta
+fill ~23 ~9 ~10 ~29 ~9 ~10 air
+setblock ~30 ~9 ~10 white_terracotta
+setblock ~22 ~9 ~11 brown_terracotta
+fill ~23 ~9 ~11 ~29 ~9 ~11 air
+setblock ~30 ~9 ~11 light_gray_terracotta
+setblock ~23 ~9 ~12 white_terracotta
+fill ~24 ~9 ~12 ~28 ~9 ~12 air
+setblock ~29 ~9 ~12 light_gray_terracotta
+setblock ~23 ~9 ~13 brown_terracotta
+setblock ~24 ~9 ~13 white_terracotta
+fill ~25 ~9 ~13 ~27 ~9 ~13 air
+fill ~28 ~9 ~13 ~29 ~9 ~13 brown_terracotta
+setblock ~25 ~9 ~14 brown_terracotta
+setblock ~26 ~9 ~14 white_terracotta
+setblock ~27 ~9 ~14 light_gray_terracotta
 setblock ~38 ~9 ~22 polished_andesite
-setblock ~39 ~9 ~22 light_gray_concrete_powder
+setblock ~39 ~9 ~22 light_gray_concrete
 fill ~40 ~9 ~22 ~43 ~9 ~22 polished_andesite
 setblock ~44 ~9 ~22 light_gray_concrete
 setblock ~45 ~9 ~22 polished_andesite
 setblock ~38 ~9 ~23 light_gray_concrete
 setblock ~45 ~9 ~23 light_gray_concrete
-setblock ~38 ~9 ~24 light_gray_concrete_powder
+setblock ~38 ~9 ~24 light_gray_concrete
 setblock ~41 ~9 ~24 lantern[hanging=true]
 setblock ~45 ~9 ~24 light_gray_concrete
 setblock ~24 ~9 ~25 polished_andesite
@@ -2615,7 +2668,7 @@ fill ~25 ~9 ~25 ~26 ~9 ~25 light_gray_concrete
 setblock ~27 ~9 ~25 air
 fill ~28 ~9 ~25 ~29 ~9 ~25 light_gray_concrete
 setblock ~30 ~9 ~25 polished_andesite
-setblock ~38 ~9 ~25 light_gray_concrete_powder
+setblock ~38 ~9 ~25 light_gray_concrete
 setblock ~45 ~9 ~25 light_gray_concrete
 setblock ~24 ~9 ~26 light_gray_concrete
 setblock ~30 ~9 ~26 light_gray_concrete
@@ -2641,8 +2694,9 @@ setblock ~30 ~9 ~29 light_gray_concrete
 setblock ~38 ~9 ~29 light_gray_concrete
 setblock ~45 ~9 ~29 light_gray_concrete
 setblock ~24 ~9 ~30 polished_andesite
-setblock ~25 ~9 ~30 light_gray_concrete_powder
-fill ~26 ~9 ~30 ~29 ~9 ~30 light_gray_concrete
+setblock ~25 ~9 ~30 light_gray_concrete
+setblock ~26 ~9 ~30 light_gray_concrete_powder
+fill ~27 ~9 ~30 ~29 ~9 ~30 light_gray_concrete
 setblock ~30 ~9 ~30 polished_andesite
 setblock ~38 ~9 ~30 polished_andesite
 fill ~39 ~9 ~30 ~44 ~9 ~30 light_gray_concrete
@@ -2695,43 +2749,62 @@ setblock ~7 ~10 ~4 light_gray_concrete
 setblock ~0 ~10 ~5 light_gray_concrete
 fill ~1 ~10 ~5 ~6 ~10 ~5 air
 setblock ~7 ~10 ~5 light_gray_concrete
+setblock ~46 ~10 ~5 iron_trapdoor[facing=east,half=bottom,open=false]
 setblock ~0 ~10 ~6 light_gray_concrete
 fill ~1 ~10 ~6 ~6 ~10 ~6 air
 setblock ~7 ~10 ~6 light_gray_concrete
+setblock ~46 ~10 ~6 iron_trapdoor[facing=east,half=bottom,open=false]
 setblock ~0 ~10 ~7 polished_andesite
 fill ~1 ~10 ~7 ~2 ~10 ~7 light_gray_concrete
 setblock ~3 ~10 ~7 light_gray_concrete_powder
 fill ~4 ~10 ~7 ~6 ~10 ~7 light_gray_concrete
 setblock ~7 ~10 ~7 polished_andesite
+fill ~24 ~10 ~7 ~27 ~10 ~7 white_terracotta
+setblock ~28 ~10 ~7 brown_terracotta
+fill ~23 ~10 ~8 ~24 ~10 ~8 white_terracotta
+fill ~25 ~10 ~8 ~27 ~10 ~8 air
+setblock ~28 ~10 ~8 white_terracotta
+setblock ~29 ~10 ~8 light_gray_terracotta
+setblock ~23 ~10 ~9 white_terracotta
+fill ~24 ~10 ~9 ~28 ~10 ~9 air
+setblock ~29 ~10 ~9 orange_terracotta
+setblock ~23 ~10 ~10 white_terracotta
+fill ~24 ~10 ~10 ~28 ~10 ~10 air
+setblock ~29 ~10 ~10 white_terracotta
+setblock ~23 ~10 ~11 light_gray_concrete
+fill ~24 ~10 ~11 ~28 ~10 ~11 air
+setblock ~29 ~10 ~11 brown_terracotta
+fill ~23 ~10 ~12 ~24 ~10 ~12 white_terracotta
+fill ~25 ~10 ~12 ~27 ~10 ~12 air
+fill ~28 ~10 ~12 ~29 ~10 ~12 white_terracotta
+setblock ~24 ~10 ~13 light_gray_terracotta
+setblock ~25 ~10 ~13 brown_terracotta
+fill ~26 ~10 ~13 ~28 ~10 ~13 white_terracotta
 fill ~38 ~10 ~22 ~45 ~10 ~22 light_gray_concrete
 fill ~38 ~10 ~23 ~45 ~10 ~23 light_gray_concrete
 fill ~38 ~10 ~24 ~45 ~10 ~24 light_gray_concrete
 setblock ~24 ~10 ~25 polished_andesite
 fill ~25 ~10 ~25 ~26 ~10 ~25 light_gray_concrete
 setblock ~27 ~10 ~25 air
-setblock ~28 ~10 ~25 stone
-setblock ~29 ~10 ~25 light_gray_concrete
+fill ~28 ~10 ~25 ~29 ~10 ~25 light_gray_concrete
 setblock ~30 ~10 ~25 polished_andesite
 fill ~38 ~10 ~25 ~45 ~10 ~25 light_gray_concrete
 setblock ~24 ~10 ~26 light_gray_concrete
 setblock ~30 ~10 ~26 light_gray_concrete
 fill ~38 ~10 ~26 ~45 ~10 ~26 light_gray_concrete
-setblock ~24 ~10 ~27 light_gray_concrete_powder
+setblock ~24 ~10 ~27 light_gray_concrete
 setblock ~26 ~10 ~27 lightning_rod[facing=up]
 setblock ~28 ~10 ~27 lever[face=floor,facing=north,powered=true]
 setblock ~30 ~10 ~27 light_gray_concrete
 fill ~38 ~10 ~27 ~45 ~10 ~27 light_gray_concrete
 setblock ~24 ~10 ~28 light_gray_concrete
-setblock ~30 ~10 ~28 light_gray_concrete
+setblock ~30 ~10 ~28 light_gray_concrete_powder
 fill ~38 ~10 ~28 ~45 ~10 ~28 light_gray_concrete
 setblock ~24 ~10 ~29 light_gray_concrete
-setblock ~30 ~10 ~29 light_gray_concrete
+setblock ~30 ~10 ~29 light_gray_concrete_powder
 fill ~38 ~10 ~29 ~45 ~10 ~29 light_gray_concrete
 setblock ~24 ~10 ~30 polished_andesite
-fill ~25 ~10 ~30 ~26 ~10 ~30 light_gray_concrete
-setblock ~27 ~10 ~30 light_gray_concrete_powder
-setblock ~28 ~10 ~30 light_gray_concrete
-setblock ~29 ~10 ~30 stone
+fill ~25 ~10 ~30 ~29 ~10 ~30 light_gray_concrete
 setblock ~30 ~10 ~30 polished_andesite
 fill ~38 ~10 ~30 ~45 ~10 ~30 light_gray_concrete
 setblock ~11 ~10 ~32 birch_fence
@@ -2787,69 +2860,83 @@ setblock ~7 ~11 ~6 light_gray_concrete
 setblock ~0 ~11 ~7 polished_andesite
 fill ~1 ~11 ~7 ~6 ~11 ~7 light_gray_concrete
 setblock ~7 ~11 ~7 polished_andesite
-setblock ~38 ~11 ~22 stone_brick_wall
-fill ~39 ~11 ~22 ~40 ~11 ~22 polished_andesite
-setblock ~41 ~11 ~22 stone_brick_wall
-setblock ~42 ~11 ~22 polished_andesite
-fill ~43 ~11 ~22 ~45 ~11 ~22 stone_brick_wall
+setblock ~26 ~11 ~7 light_gray_terracotta
+fill ~24 ~11 ~8 ~28 ~11 ~8 white_terracotta
+fill ~24 ~11 ~9 ~27 ~11 ~9 white_terracotta
+setblock ~28 ~11 ~9 light_gray_terracotta
+setblock ~23 ~11 ~10 orange_terracotta
+setblock ~24 ~11 ~10 white_terracotta
+setblock ~25 ~11 ~10 light_gray_terracotta
+setblock ~26 ~11 ~10 air
+setblock ~27 ~11 ~10 orange_terracotta
+fill ~28 ~11 ~10 ~29 ~11 ~10 white_terracotta
+setblock ~24 ~11 ~11 light_gray_terracotta
+fill ~25 ~11 ~11 ~28 ~11 ~11 white_terracotta
+setblock ~24 ~11 ~12 light_gray_terracotta
+setblock ~25 ~11 ~12 light_gray_concrete
+fill ~26 ~11 ~12 ~27 ~11 ~12 white_terracotta
+setblock ~28 ~11 ~12 light_gray_terracotta
+setblock ~26 ~11 ~13 light_gray_terracotta
+fill ~38 ~11 ~22 ~45 ~11 ~22 stone_brick_wall
 setblock ~38 ~11 ~23 stone_brick_wall
-setblock ~39 ~11 ~23 snow[layers=2]
+setblock ~40 ~11 ~23 snow[layers=3]
 setblock ~41 ~11 ~23 snow[layers=2]
-fill ~42 ~11 ~23 ~44 ~11 ~23 snow[layers=1]
+fill ~43 ~11 ~23 ~44 ~11 ~23 snow[layers=1]
 setblock ~45 ~11 ~23 stone_brick_wall
 setblock ~38 ~11 ~24 stone_brick_wall
-setblock ~40 ~11 ~24 snow[layers=3]
-fill ~42 ~11 ~24 ~43 ~11 ~24 snow[layers=2]
+setblock ~39 ~11 ~24 snow[layers=1]
+fill ~41 ~11 ~24 ~42 ~11 ~24 snow[layers=1]
 setblock ~45 ~11 ~24 stone_brick_wall
 setblock ~24 ~11 ~25 polished_andesite
-fill ~25 ~11 ~25 ~29 ~11 ~25 light_gray_concrete
+setblock ~25 ~11 ~25 light_gray_concrete_powder
+fill ~26 ~11 ~25 ~27 ~11 ~25 light_gray_concrete
+setblock ~28 ~11 ~25 light_gray_concrete_powder
+setblock ~29 ~11 ~25 light_gray_concrete
 setblock ~30 ~11 ~25 polished_andesite
 setblock ~38 ~11 ~25 stone_brick_wall
-fill ~39 ~11 ~25 ~40 ~11 ~25 snow[layers=1]
-setblock ~41 ~11 ~25 snow[layers=3]
-setblock ~42 ~11 ~25 snow[layers=1]
-setblock ~43 ~11 ~25 snow[layers=2]
-setblock ~44 ~11 ~25 snow[layers=1]
-setblock ~45 ~11 ~25 polished_andesite
+setblock ~39 ~11 ~25 snow[layers=2]
+setblock ~40 ~11 ~25 snow[layers=1]
+setblock ~41 ~11 ~25 snow[layers=2]
+fill ~43 ~11 ~25 ~44 ~11 ~25 snow[layers=2]
+setblock ~45 ~11 ~25 stone_brick_wall
 setblock ~24 ~11 ~26 light_gray_concrete
 setblock ~30 ~11 ~26 light_gray_concrete
-setblock ~38 ~11 ~26 stone_brick_wall
-fill ~39 ~11 ~26 ~40 ~11 ~26 snow[layers=1]
-setblock ~41 ~11 ~26 snow[layers=2]
-setblock ~44 ~11 ~26 snow[layers=2]
+setblock ~38 ~11 ~26 polished_andesite
+setblock ~39 ~11 ~26 snow[layers=2]
+setblock ~40 ~11 ~26 snow[layers=1]
+setblock ~41 ~11 ~26 snow[layers=3]
+setblock ~44 ~11 ~26 snow[layers=3]
 setblock ~45 ~11 ~26 stone_brick_wall
 setblock ~24 ~11 ~27 light_gray_concrete
 setblock ~30 ~11 ~27 light_gray_concrete
 setblock ~38 ~11 ~27 stone_brick_wall
-setblock ~39 ~11 ~27 snow[layers=2]
-setblock ~41 ~11 ~27 snow[layers=3]
-setblock ~43 ~11 ~27 snow[layers=2]
+setblock ~39 ~11 ~27 snow[layers=1]
+fill ~41 ~11 ~27 ~42 ~11 ~27 snow[layers=2]
+setblock ~43 ~11 ~27 snow[layers=1]
+setblock ~44 ~11 ~27 snow[layers=3]
 setblock ~45 ~11 ~27 polished_andesite
 setblock ~24 ~11 ~28 light_gray_concrete
 setblock ~30 ~11 ~28 light_gray_concrete
 setblock ~38 ~11 ~28 stone_brick_wall
+setblock ~40 ~11 ~28 snow[layers=2]
 setblock ~41 ~11 ~28 snow[layers=3]
-setblock ~42 ~11 ~28 snow[layers=2]
-setblock ~43 ~11 ~28 snow[layers=3]
-setblock ~45 ~11 ~28 stone_brick_wall
+setblock ~42 ~11 ~28 snow[layers=1]
+setblock ~44 ~11 ~28 snow[layers=1]
+setblock ~45 ~11 ~28 polished_andesite
 setblock ~24 ~11 ~29 light_gray_concrete
 setblock ~30 ~11 ~29 light_gray_concrete
 setblock ~38 ~11 ~29 stone_brick_wall
-setblock ~39 ~11 ~29 snow[layers=3]
-setblock ~40 ~11 ~29 snow[layers=1]
-setblock ~42 ~11 ~29 snow[layers=3]
-setblock ~44 ~11 ~29 snow[layers=3]
-setblock ~45 ~11 ~29 stone_brick_wall
+setblock ~39 ~11 ~29 snow[layers=1]
+setblock ~40 ~11 ~29 snow[layers=2]
+setblock ~41 ~11 ~29 snow[layers=3]
+setblock ~42 ~11 ~29 snow[layers=1]
+setblock ~43 ~11 ~29 snow[layers=2]
+setblock ~44 ~11 ~29 snow[layers=1]
+setblock ~45 ~11 ~29 polished_andesite
 setblock ~24 ~11 ~30 polished_andesite
 fill ~25 ~11 ~30 ~29 ~11 ~30 light_gray_concrete
 setblock ~30 ~11 ~30 polished_andesite
-setblock ~38 ~11 ~30 polished_andesite
-setblock ~39 ~11 ~30 stone_brick_wall
-fill ~40 ~11 ~30 ~41 ~11 ~30 polished_andesite
-setblock ~42 ~11 ~30 stone_brick_wall
-setblock ~43 ~11 ~30 polished_andesite
-setblock ~44 ~11 ~30 stone_brick_wall
-setblock ~45 ~11 ~30 polished_andesite
+fill ~38 ~11 ~30 ~45 ~11 ~30 stone_brick_wall
 setblock ~11 ~11 ~32 red_concrete
 setblock ~5 ~11 ~33 spruce_fence
 setblock ~52 ~12 ~-4 iron_bars
@@ -2861,6 +2948,7 @@ fill ~0 ~12 ~4 ~7 ~12 ~4 light_gray_concrete
 fill ~0 ~12 ~5 ~7 ~12 ~5 light_gray_concrete
 fill ~0 ~12 ~6 ~7 ~12 ~6 light_gray_concrete
 fill ~0 ~12 ~7 ~7 ~12 ~7 light_gray_concrete
+setblock ~26 ~12 ~10 orange_terracotta
 fill ~24 ~12 ~25 ~30 ~12 ~25 light_gray_concrete
 fill ~24 ~12 ~26 ~30 ~12 ~26 light_gray_concrete
 fill ~24 ~12 ~27 ~30 ~12 ~27 light_gray_concrete
@@ -2890,33 +2978,31 @@ setblock ~7 ~13 ~5 stone_brick_wall
 setblock ~0 ~13 ~6 stone_brick_wall
 setblock ~7 ~13 ~6 stone_brick_wall
 fill ~0 ~13 ~7 ~7 ~13 ~7 stone_brick_wall
-setblock ~24 ~13 ~25 polished_andesite
-fill ~25 ~13 ~25 ~30 ~13 ~25 stone_brick_wall
+fill ~24 ~13 ~25 ~30 ~13 ~25 stone_brick_wall
 setblock ~24 ~13 ~26 stone_brick_wall
-fill ~25 ~13 ~26 ~26 ~13 ~26 snow[layers=1]
-setblock ~27 ~13 ~26 snow[layers=2]
-fill ~28 ~13 ~26 ~29 ~13 ~26 snow[layers=1]
-setblock ~30 ~13 ~26 stone_brick_wall
+setblock ~26 ~13 ~26 snow[layers=2]
+setblock ~28 ~13 ~26 snow[layers=2]
+setblock ~30 ~13 ~26 polished_andesite
 setblock ~24 ~13 ~27 stone_brick_wall
-setblock ~25 ~13 ~27 snow[layers=3]
-setblock ~26 ~13 ~27 snow[layers=2]
-setblock ~29 ~13 ~27 snow[layers=1]
+fill ~25 ~13 ~27 ~26 ~13 ~27 snow[layers=3]
+setblock ~27 ~13 ~27 snow[layers=1]
+setblock ~28 ~13 ~27 snow[layers=2]
 setblock ~30 ~13 ~27 stone_brick_wall
-setblock ~24 ~13 ~28 stone_brick_wall
+setblock ~24 ~13 ~28 polished_andesite
 setblock ~25 ~13 ~28 snow[layers=3]
-setblock ~27 ~13 ~28 snow[layers=3]
-setblock ~28 ~13 ~28 snow[layers=2]
-setblock ~29 ~13 ~28 snow[layers=3]
+setblock ~26 ~13 ~28 snow[layers=1]
+fill ~28 ~13 ~28 ~29 ~13 ~28 snow[layers=1]
 setblock ~30 ~13 ~28 campfire[lit=false,signal_fire=false]
 setblock ~24 ~13 ~29 stone_brick_wall
 setblock ~25 ~13 ~29 snow[layers=3]
-setblock ~28 ~13 ~29 snow[layers=3]
-setblock ~29 ~13 ~29 snow[layers=2]
+setblock ~27 ~13 ~29 snow[layers=2]
 setblock ~30 ~13 ~29 stone_brick_wall
-fill ~24 ~13 ~30 ~30 ~13 ~30 stone_brick_wall
+setblock ~24 ~13 ~30 polished_andesite
+fill ~25 ~13 ~30 ~30 ~13 ~30 stone_brick_wall
 setblock ~5 ~13 ~33 lightning_rod[facing=up]
 setblock ~52 ~14 ~-4 iron_bars
 setblock ~3 ~14 ~3 iron_bars
+setblock ~26 ~14 ~10 lightning_rod[facing=up]
 setblock ~52 ~15 ~-4 red_concrete
 setblock ~3 ~15 ~3 iron_bars
 setblock ~52 ~16 ~-4 iron_bars
@@ -2937,4 +3023,5 @@ summon item_frame ~16.5 ~3.5 ~2.5 {Facing:3b,Fixed:1b,Invulnerable:1b,Item:{id:"
 summon item_frame ~20.5 ~3.5 ~2.5 {Facing:3b,Fixed:1b,Invulnerable:1b,Item:{id:"minecraft:clock",Count:1b},Tags:["ln_deco"]}
 summon item_frame ~27.5 ~3.5 ~6.5 {Facing:3b,Fixed:1b,Invulnerable:1b,Item:{id:"minecraft:clock",Count:1b},Tags:["ln_deco"]}
 summon superbwarfare:sodayo_pick_up ~40.5 ~1 ~6.5 {Rotation:[-90f,0f],Tags:["ln_deco","ln_vehicle"]}
+fill ~47 ~5 ~5 ~47 ~6 ~6 air
 setblock ~47 ~3 ~2 spruce_wall_sign[facing=east]{front_text:{messages:['{"text":"МЕТЕОСТАНЦИЯ"}','{"text":"№ 7"}','{"text":"高山氣象站 7 號"}','{"text":""}']}}

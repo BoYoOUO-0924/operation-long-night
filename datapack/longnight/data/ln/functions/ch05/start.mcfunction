@@ -2,6 +2,7 @@
 function ln:ch05/cleanup
 forceload add 50 900 240 1020
 function ln:build/station_place
+function ln:build/wreck_place
 kill @e[type=item]
 time set 18000
 weather thunder 1000000
@@ -23,8 +24,6 @@ bossbar set ln:obj max 1
 bossbar set ln:obj value 1
 bossbar set ln:obj name {"text": "目標：前往山上的氣象站", "font": "lnai:ui"}
 bossbar set ln:obj color yellow
-title @a times 20 80 20
-title @a subtitle {"text": "零下四十度", "color": "gray", "font": "lnai:ui"}
-title @a title {"text": "第五章　寒霜陷阱", "color": "white", "bold": true, "font": "lnai:ui"}
-scoreboard players set #stage ln 1
+scoreboard players set #stage ln 0
 scoreboard players set #t ln 0
+lnhud cutscene @a ln:ch05_intro

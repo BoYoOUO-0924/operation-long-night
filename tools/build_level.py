@@ -388,6 +388,7 @@ fn("start", [
     "function ln:ch05/cleanup",
     "forceload add 50 900 240 1020",
     "function ln:build/station_place",
+    "function ln:build/wreck_place",
     "kill @e[type=item]",
     "time set 18000",
     "weather thunder 1000000",
@@ -408,10 +409,9 @@ fn("start", [
     "bossbar set ln:obj max 1",
     "bossbar set ln:obj value 1",
     *bossbar("目標：前往山上的氣象站"),
-    "title @a times 20 80 20",
-    f"title @a subtitle {jtext({'text': '零下四十度', 'color': 'gray'})}",
-    f"title @a title {jtext({'text': '第五章　寒霜陷阱', 'color': 'white', 'bold': True})}",
-    *goto(1),
+    # 開場過場（章節標題在過場裡顯示）；過場最後會切到階段 1（上山）
+    *goto(0),
+    "lnhud cutscene @a ln:ch05_intro",
 ])
 fn("stop", ["function ln:ch05/cleanup", "gamemode creative @a",
             f"tellraw @a {jtext({'text': '[長夜] 已中止關卡。', 'color': 'red'})}"])
@@ -569,6 +569,10 @@ p = A["pad"]
     "# 在固定位置重建 7 號氣象站（由 tools/build_level.py 產生）\n"
     f"forceload add {p[0]} {p[1]} {p[2]} {p[3]}\n"
     f"execute positioned {xyz(o)} run function ln:build/weather_station\n", encoding="utf-8")
+W = json.loads((ROOT / "generators/out/train_wreck.json").read_text(encoding="utf-8"))
+(PACK / "build/wreck_place.mcfunction").write_text(
+    "# 在固定位置重建列車翻覆現場（由 tools/build_level.py 產生）\n"
+    f"execute positioned {xyz(W['origin'])} run function ln:build/train_wreck\n", encoding="utf-8")
 v = A["viewpoint"]
 (PACK / "view_station.mcfunction").write_text(
     "# 傳送到可以看到整座氣象站的位置（創造模式審視建築用）\n"
