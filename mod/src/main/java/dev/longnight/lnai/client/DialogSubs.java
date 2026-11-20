@@ -23,6 +23,7 @@ public final class DialogSubs {
 
     public static void add(String who, int color, String text, int dur) {
         LINES.add(new Line(who, color, text, ClientState.now(), dur));
+        Voice.play(who, text, false);
         while (LINES.size() > MAX) LINES.remove(0);
     }
 

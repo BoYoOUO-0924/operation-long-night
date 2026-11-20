@@ -276,6 +276,7 @@ public final class CutscenePlayer {
         if (mc.player == null || mc.level == null) { playing = false; cam = null; return; }
         if (tick >= length) { end(); return; }
         tick++;
+        for (Sub s : subs) if (s.at == tick) Voice.play(s.who, s.text, true);   // 字幕出現時播對應的語音
         place(tick);   // 這一 tick 結束時鏡頭應該在 tick 的位置；畫面從上一格內插過來
         if (cam != null && mc.getCameraEntity() != cam) mc.setCameraEntity(cam);
         if (!(mc.screen instanceof CutsceneScreen) && mc.screen == null) mc.setScreen(new CutsceneScreen());
