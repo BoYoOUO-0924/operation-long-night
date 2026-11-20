@@ -282,12 +282,19 @@ fn("ev/gen_fail", [
     "scoreboard players set #evgen ln 1",
     "scoreboard players set #gent ln 0",
     f"setblock {lever} lever[face=floor,facing=north,powered=false]",
+    # 拉桿很小、小屋又暗：在拉桿正上方放一個穿牆可見的發光標籤，修好時移除
+    "kill @e[tag=ln_genhint]",
+    f"setblock {lx} {ly + 1} {lz} light[level=13]",   # 小屋很暗：在拉桿上方放隱形光源
+    f'summon text_display {lx + 0.5} {ly + 2} {lz + 0.5} {{Tags:["ln","ln_genhint"],billboard:"center",see_through:1b,'
+    "transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[4f,4f,4f]},"
+    "brightness:{sky:15,block:15},background:1711276032,text:'" + jtext({"text": "⚡ 拉起拉桿 (右鍵)", "color": "#F0A040"}) + "'}",
     event_dialogue("generator_fail"),
     *force_route("south"),
 ])
 fn("ev/gen_tick", [
     "scoreboard players add #gent ln 1",
     f"particle minecraft:campfire_signal_smoke {lx} {ly + 1} {lz} 0.2 0.5 0.2 0.01 2 force @a",
+    f"particle minecraft:electric_spark {lx + 0.5} {ly + 0.3} {lz + 0.5} 0.15 0.15 0.15 0.05 3 force @a",
     f"execute if score #gent ln matches 1200.. run scoreboard players operation #gm ln = #gent ln",
     f"execute if score #gent ln matches 1200.. run scoreboard players operation #gm ln %= #c100 ln",
     "execute if score #gent ln matches 1200.. if score #gm ln matches 0 run effect give @a[gamemode=adventure] slowness 6 0 true",
@@ -297,6 +304,7 @@ fn("ev/gen_tick", [
 ])
 fn("ev/gen_fixed", [
     "scoreboard players set #evgen ln 2",
+    "kill @e[tag=ln_genhint]",
     "effect clear @a slowness",
     "effect clear @a mining_fatigue",
     "function ln:ch05/ammo",

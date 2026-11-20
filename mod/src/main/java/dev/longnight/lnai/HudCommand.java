@@ -80,6 +80,12 @@ final class HudCommand {
                                 .then(Commands.argument("fade", com.mojang.brigadier.arguments.IntegerArgumentType.integer(0, 400))
                                         .executes(c -> ambient(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "cue"),
                                                 com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade")))))))
+                // /lnhud gundebug <實體>：印出 TaCZ 射擊者的內部狀態（換彈、冷卻、拔槍）
+                .then(Commands.literal("gundebug").then(Commands.argument("e", EntityArgument.entities())
+                        .executes(c -> { for (Entity ent : EntityArgument.getEntities(c, "e")) { String s = gunDebug(ent); LOG.info("[lnai] gundebug {}", s);
+                            c.getSource().sendSuccess(() -> Component.literal(s), false); } return 1; })))
+                .then(Commands.literal("dmgdebug").then(Commands.argument("on", com.mojang.brigadier.arguments.BoolArgumentType.bool())
+                        .executes(c -> { DamageTuning.debug = com.mojang.brigadier.arguments.BoolArgumentType.getBool(c, "on"); return 1; })))
                 .then(Commands.literal("teamdebug").then(Commands.argument("on", com.mojang.brigadier.arguments.BoolArgumentType.bool())
                         .executes(c -> { TeamSync.debug = com.mojang.brigadier.arguments.BoolArgumentType.getBool(c, "on"); return 1; })))
                 .then(Commands.literal("trace").then(Commands.argument("type", ResourceLocationArgument.id())
@@ -130,6 +136,47 @@ final class HudCommand {
         lastMusic = c;
         for (ServerPlayer p : ps) Net.to(p, new Net.Music(c, fade));
         return ps.size();
+    }
+
+    static String gunDebug(Entity e) {
+        StringBuilder sb = new StringBuilder(e.getName().getString()).append(": ");
+        try {
+            Object h = e.getClass().getMethod("getDataHolder").invoke(e);
+            long now = System.currentTimeMillis();
+            for (java.lang.reflect.Field f : h.getClass().getDeclaredFields()) {
+                if (java.lang.reflect.Modifier.isStatic(f.getModifiers())) continue;
+                f.setAccessible(true);
+                Object v = f.get(h);
+                if (v instanceof java.util.function.Supplier<?>) continue;
+                if (v instanceof Long l && l > 1_000_000_000_000L) v = (l - now) + "ms";
+                sb.append(f.getName()).append('=').append(v).append(' ');
+            }
+            sb.append("| ");
+            Class<?> c = e.getClass();
+            while (c != null && c != Object.class) {
+                for (java.lang.reflect.Field f : c.getDeclaredFields()) {
+                    String n = f.getName();
+                    if (!n.startsWith("tacz$")) continue;
+                    f.setAccessible(true);
+                    Object comp = f.get(e);
+                    for (String m : new String[]{"getShootCoolDown", "getDrawCoolDown", "consumesAmmoOrNot"}) {
+                        try { java.lang.reflect.Method mm = comp.getClass().getMethod(m); sb.append(n).append('.').append(m).append('=').append(mm.invoke(comp)).append(' '); }
+                        catch (NoSuchMethodException ignored) {}
+                    }
+                }
+                c = c.getSuperclass();
+            }
+            net.minecraft.world.item.ItemStack st = ((net.minecraft.world.entity.LivingEntity) e).getMainHandItem();
+            for (java.lang.reflect.Method m : st.getItem().getClass().getMethods())
+                if (m.getName().equals("useInventoryAmmo") && m.getParameterCount() == 1) sb.append("useInventoryAmmo=").append(m.invoke(st.getItem(), st)).append(' ');
+            e.getClass().getMethod("reload").invoke(e);
+            java.lang.reflect.Field rs = h.getClass().getDeclaredField("reloadStateType");
+            rs.setAccessible(true);
+            sb.append("| after reload(): ").append(rs.get(h));
+        } catch (Throwable t) {
+            sb.append("err ").append(t);
+        }
+        return sb.toString();
     }
 
     private static String lastAmbient = "";
