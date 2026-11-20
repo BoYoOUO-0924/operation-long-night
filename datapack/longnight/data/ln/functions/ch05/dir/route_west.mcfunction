@@ -13,7 +13,7 @@ execute if score #comp ln matches 2 run summon tacznpcs:npc 54 250 966 {template
 execute if score #comp ln matches 2 if score #players ln matches 3.. run summon tacznpcs:npc 54 250 966 {template:"red_assault",PersistenceRequired:1b,Tags:["ln","ln_enemy","ln_new","ln_dress","rt_west"],ForgeData:{ln_side:"red",ln_slot:3,ln_hunt:16}}
 spreadplayers 54 966 1 6 false @e[tag=ln_new]
 schedule function ln:ch05/dress 2t replace
-execute if score #flip ln matches 0 run lnhud say @a 8CC08C 130 "狐狸" 西門外有人! 他們從高處繞過來了! 
+execute if score #flip ln matches 0 run lnhud say @a 8CC08C 125 "狐狸" 西門外有人! 他們從高處繞過來了!
 execute if score #flip ln matches 0 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8
-execute if score #flip ln matches 1 run lnhud say @a 8CC08C 90 "狐狸" 西邊, 正對西門! 
+execute if score #flip ln matches 1 run lnhud say @a 8CC08C 85 "狐狸" 西邊, 正對西門!
 execute if score #flip ln matches 1 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8

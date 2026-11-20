@@ -15,7 +15,7 @@ final class Loadout {
 
     static void handle(ServerPlayer p, Net.Action a) {
         LOG.debug("[lnai] action {} from {}", a, p.getGameProfile().getName());
-        if (p.isSpectator() || !p.isAlive()) return;
+        if (p.isSpectator() || !p.isAlive() || Downed.isDowned(p)) return;   // 倒地時只能用手槍
         switch (a.kind()) {
             case Net.Action.MED_AUTO -> {
                 Gear.Med m = autoMed(p);

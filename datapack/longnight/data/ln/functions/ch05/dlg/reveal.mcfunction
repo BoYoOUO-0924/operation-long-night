@@ -5,7 +5,7 @@ execute if score #t ln matches 100 run lnhud say @a 8CC08C 120 "狐狸" 等等�
 execute if score #t ln matches 100 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8
 execute if score #t ln matches 180 run lnhud say @a 8CC08C 120 "狐狸" 是軍用追蹤器的頻率——在他身上。
 execute if score #t ln matches 180 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8
-execute if score #t ln matches 260 run lnhud say @a E0B050 180 "戰車" 你這個混帳! 從溺水之城開始, 你就一直在替他們帶路? 
+execute if score #t ln matches 260 run lnhud say @a E0B050 175 "戰車" 你這個混帳! 從溺水之城開始, 你就一直在替他們帶路?
 execute if score #t ln matches 260 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8
 execute if score #t ln matches 340 run lnhud say @a B4B4B4 170 "情報官" 不、不是! 我根本不知道他們把那東西放進我身體裡……
 execute if score #t ln matches 340 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8
@@ -13,7 +13,7 @@ execute if score #t ln matches 420 run lnhud say @a 7FC8D8 120 "白鴉" 北邊�
 execute if score #t ln matches 420 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8
 execute if score #t ln matches 500 run lnhud say @a E0B050 130 "戰車" 那就在他們到之前, 先把叛徒解決掉。
 execute if score #t ln matches 500 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8
-execute if score #t ln matches 560 run lnhud say @a B4B4B4 230 "情報官" 你殺了我, 就永遠進不了總控室! 光有密鑰沒用, 還需要我的視網膜和聲紋! 
+execute if score #t ln matches 560 run lnhud say @a B4B4B4 225 "情報官" 你殺了我, 就永遠進不了總控室! 光有密鑰沒用, 還需要我的視網膜和聲紋!
 execute if score #t ln matches 560 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8
 execute if score #t ln matches 680 run lnhud say @a 8CC08C 155 "狐狸" ……他說的是真的。系統紀錄裡寫著雙重生物認證。
 execute if score #t ln matches 680 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8
@@ -21,7 +21,7 @@ execute if score #t ln matches 780 run lnhud say @a D05050 205 "守夜人" （�
 execute if score #t ln matches 780 run execute as @a at @s run playsound minecraft:block.note_block.basedrum master @s ~ ~ ~ 0.8 0.5
 execute if score #t ln matches 900 run lnhud say @a D05050 120 "守夜人" （無線電）好好享受最後的溫暖吧。
 execute if score #t ln matches 900 run execute as @a at @s run playsound minecraft:block.note_block.basedrum master @s ~ ~ ~ 0.8 0.5
-execute if score #t ln matches 980 run lnhud say @a E0B050 145 "戰車" ……這筆帳我記住了。所有人, 準備防守! 
+execute if score #t ln matches 980 run lnhud say @a E0B050 140 "戰車" ……這筆帳我記住了。所有人, 準備防守!
 execute if score #t ln matches 980 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8
 execute if score #t ln matches 1060 run lnhud say @a 7FC8D8 155 "白鴉" 我在塔上掩護。他們有熱成像, 別在窗邊待太久。
 execute if score #t ln matches 1060 run execute as @a at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.3 1.8

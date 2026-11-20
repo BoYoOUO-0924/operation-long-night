@@ -56,6 +56,9 @@ final class Heal {
         stop(p, j.restore);
     }
 
+    /** 倒地時中斷治療（不切回原本的欄位） */
+    static void cancel(ServerPlayer p) { if (JOBS.containsKey(p.getUUID())) stop(p, -1); }
+
     private static void stop(ServerPlayer p, int restore) {
         JOBS.remove(p.getUUID());
         slow(p, 0);

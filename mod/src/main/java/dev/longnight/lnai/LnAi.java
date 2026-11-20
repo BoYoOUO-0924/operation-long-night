@@ -43,6 +43,9 @@ public class LnAi {
         MinecraftForge.EVENT_BUS.addListener(Cutscenes::onReload);
         MinecraftForge.EVENT_BUS.addListener(Cutscenes::onTick);
         MinecraftForge.EVENT_BUS.addListener(TeamSync::onTick);
+        MinecraftForge.EVENT_BUS.addListener(net.minecraftforge.eventbus.api.EventPriority.HIGHEST, Downed::onDeath);
+        MinecraftForge.EVENT_BUS.addListener(Downed::onAttack);
+        MinecraftForge.EVENT_BUS.addListener(Downed::onTick);
         MinecraftForge.EVENT_BUS.addListener((PlayerEvent.PlayerLoggedInEvent e) -> {
             if (e.getEntity() instanceof ServerPlayer p) HudCommand.resend(p);
         });

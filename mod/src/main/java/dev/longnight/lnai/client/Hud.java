@@ -121,6 +121,7 @@ public final class Hud {
         @SubscribeEvent
         public static void overlays(RegisterGuiOverlaysEvent e) {
             e.registerAboveAll("ln_hud", (gui, g, pt, w, h) -> { if (active()) draw(g, w, h); });
+            e.registerAboveAll("ln_revive", (gui, g, pt, w, h) -> { if (active()) Revive.draw(g, w, h, pt); });
             e.registerBelowAll("ln_mates", (gui, g, pt, w, h) -> { if (active()) MateMarkers.draw(g, w, h, pt); });
             e.registerAboveAll("ln_say", (gui, g, pt, w, h) -> DialogSubs.draw(g, w, h, pt));
         }
@@ -218,7 +219,8 @@ public final class Hud {
             if (e != null) marker(g, cx, y, ppd, head, bearing(eye, e.position()), m[1], m[0], OK);
         }
         for (Net.Mate m : mates(p))
-            if (!m.dead()) marker(g, cx, y, ppd, head, bearing(eye, matePos(m, 1)), "●", "P" + (m.idx() + 1), pcol(m.idx()));
+            if (!m.dead()) marker(g, cx, y, ppd, head, bearing(eye, matePos(m, 1)), m.downed() ? "✚" : "●",
+                    m.downed() ? "倒地" : "P" + (m.idx() + 1), m.downed() ? 0xFFFF8A78 : pcol(m.idx()));
         if (ClientState.waypoint != null)
             marker(g, cx, y, ppd, head, bearing(eye, ClientState.waypoint), "◆", "OBJ " + Math.round(Math.sqrt(p.distanceToSqr(ClientState.waypoint))) + "M", OBJ);
     }
@@ -324,14 +326,17 @@ public final class Hud {
         for (Net.Mate m : ms) {
             int c = pcol(m.idx());
             float v = m.max() <= 0 ? 0 : m.hp() / m.max();
-            boolean danger = !m.dead() && v < 0.3f;
-            int bg = m.dead() ? 0x70202020 : danger ? (blink ? 0x90601818 : 0x70401010) : PANEL;
+            boolean danger = !m.dead() && (v < 0.3f || m.downed());
+            int bg = m.dead() ? 0x70202020 : m.downed() ? (blink ? 0xB0701010 : 0x90480C0C) : danger ? (blink ? 0x90601818 : 0x70401010) : PANEL;
             g.fill(x, y, x + rowW, y + 21, bg);
             g.fill(x, y, x + 2, y + 21, m.dead() ? FAINT : c);
             int fg = m.dead() ? FAINT : TEXT;
             text(g, m.name(), x + 6, y + 2, fg, false);
             if (m.dead()) {
-                right(g, "陣亡", x + rowW - 4, y + 2, FAINT);
+                right(g, "☠ 陣亡", x + rowW - 4, y + 2, FAINT);
+            } else if (m.downed()) {
+                String st = m.revive() > 0 ? "救援中" : "✚ 急救 " + m.bleedSec() + "s";
+                right(g, st, x + rowW - 4, y + 2, m.revive() > 0 ? OK : 0xFFFFB0A0);
             } else {
                 Vec3 mp = matePos(m, 1);
                 String d = String.format("%02dM", Math.min(99, Math.round(mp.distanceTo(p.position()))));
@@ -339,8 +344,9 @@ public final class Hud {
                 // 缺醫療品又受傷：名字旁亮一個白色十字，提醒分繃帶
                 if (m.meds() == 0 && v < 0.5f) text(g, "✚", x + 8 + width(m.name()), y + 2, blink ? 0xFFFFFFFF : 0xFFC0C0C0, false);
             }
-            bar(g, x + 6, y + 13, rowW - 10, 1, m.dead() ? 0 : v, m.dead() ? FAINT : v > 0.6f ? OK : v > 0.3f ? WARN : 0xFFFF8A78);
-            if (m.armor() >= 0 && !m.dead()) {
+            if (m.downed()) bar(g, x + 6, y + 13, rowW - 10, 1, m.revive() > 0 ? m.revive() : m.bleed(), m.revive() > 0 ? OK : 0xFFFF8A78);
+            else bar(g, x + 6, y + 13, rowW - 10, 1, m.dead() ? 0 : v, m.dead() ? FAINT : v > 0.6f ? OK : v > 0.3f ? WARN : 0xFFFF8A78);
+            if (m.armor() >= 0 && !m.dead() && !m.downed()) {
                 g.fill(x + 6, y + 16, x + 6 + Math.round((rowW - 10) * Mth.clamp(m.armor(), 0, 1)), y + 17, 0xFF6F9FC8);
             }
             y += 23;

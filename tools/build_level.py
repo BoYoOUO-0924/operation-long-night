@@ -423,6 +423,9 @@ fn("start", [
 ])
 fn("stop", ["function ln:ch05/cleanup", "gamemode creative @a",
             f"tellraw @a {jtext({'text': '[長夜] 已中止關卡。', 'color': 'red'})}"])
+# 全隊倒地／陣亡（lnai 模組呼叫 ln:wipe）：清掉敵人，從目前階段的開頭重來
+fn("wipe", ["kill @e[tag=ln_enemy]",
+            *[f"execute if score #stage ln matches {i} run function ln:ch05/to_s{i}" for i in (2, 3, 4, 5, 7)]])
 
 # 1 上山（隊友跟著玩家走）
 dialogue("approach")
@@ -582,6 +585,9 @@ W = json.loads((ROOT / "generators/out/train_wreck.json").read_text(encoding="ut
     "# 在固定位置重建列車翻覆現場（由 tools/build_level.py 產生）\n"
     f"execute positioned {xyz(W['origin'])} run function ln:build/train_wreck\n", encoding="utf-8")
 v = A["viewpoint"]
+(PACK / "wipe.mcfunction").write_text(
+    "# 全隊覆沒時由 lnai 模組呼叫：交給目前進行中的章節處理\n"
+    "execute if score #stage ln matches 1.. run function ln:ch05/wipe\n", encoding="utf-8")
 (PACK / "view_station.mcfunction").write_text(
     "# 傳送到可以看到整座氣象站的位置（創造模式審視建築用）\n"
     "gamemode creative @s\n"

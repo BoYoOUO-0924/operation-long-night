@@ -27,8 +27,12 @@ public final class TeamSync {
         List<Net.Mate> mates = new ArrayList<>();
         int idx = 0;
         for (ServerPlayer p : s.getPlayerList().getPlayers()) {
-            if (p.isSpectator()) continue;
-            mates.add(mate(p, p.getGameProfile().getName(), idx++, p.getId(), meds(p)));
+            if (p.isSpectator() && !Downed.isDead(p)) continue;
+            Net.Mate m = mate(p, p.getGameProfile().getName(), idx++, p.getId(), meds(p));
+            if (Downed.isDead(p)) m = new Net.Mate(m.entity(), m.name(), m.idx(), 0, m.max(), m.armor(), m.meds(), true, m.x(), m.y(), m.z(), false, 0, 0, 0, "");
+            else if (Downed.isDowned(p)) m = new Net.Mate(m.entity(), m.name(), m.idx(), m.hp(), m.max(), m.armor(), m.meds(), false, m.x(), m.y(), m.z(),
+                    true, Downed.bleedFrac(p), Downed.bleedSeconds(p), Downed.progress(p), Downed.helper(p));
+            mates.add(m);
         }
         if (debug) {
             String[] fake = {"Kestrel_07", "OrangeTabby", "nightowl"};
@@ -51,7 +55,7 @@ public final class TeamSync {
             armor = armor < 0 ? d / 2 : armor + d / 2;
         }
         return new Net.Mate(id, name, idx, e.getHealth(), e.getMaxHealth(), armor, meds,
-                !e.isAlive() || e.isDeadOrDying(), e.getX(), e.getY(), e.getZ());
+                !e.isAlive() || e.isDeadOrDying(), e.getX(), e.getY(), e.getZ(), false, 0, 0, 0, "");
     }
 
     private static int meds(ServerPlayer p) {

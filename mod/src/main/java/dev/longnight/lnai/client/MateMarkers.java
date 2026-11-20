@@ -41,9 +41,9 @@ public final class MateMarkers {
         if (p == null) return;
         for (Net.Mate m : Hud.mates(p)) {
             if (m.dead()) continue;
-            Vec3 pos = Hud.matePos(m, pt).add(0, 2.25, 0);
+            Vec3 pos = Hud.matePos(m, pt).add(0, m.downed() ? 1.0 : 2.25, 0);
             double dist = pos.distanceTo(p.getEyePosition(pt));
-            if (dist < 4) continue;   // 太近就不擋畫面
+            if (dist < 4 && !m.downed()) continue;   // 太近就不擋畫面（倒地的一定顯示）
             Vector4f v = new Vector4f((float) (pos.x - cam.x), (float) (pos.y - cam.y), (float) (pos.z - cam.z), 1);
             VIEW.transform(v);
             PROJ.transform(v);
@@ -53,8 +53,14 @@ public final class MateMarkers {
             int c = Hud.pcol(m.idx());
             float a = (float) Math.max(0.55, 1 - dist / 160);   // 越遠越淡
             int x = Math.round(sx), y = Math.round(sy);
-            Hud.text(g, "▼", x + 1, y - 4, Hud.fade(c, a), true);
-            Hud.small(g, m.name() + " " + Math.round(dist) + "M", x + 1, y - 12, Hud.fade(c, a * 0.9f), true);
+            if (m.downed()) {   // 倒地：閃爍的紅色十字＋秒數
+                boolean on = (ClientState.now() / 6) % 2 == 0;
+                Hud.text(g, "✚", x + 1, y - 4, on ? 0xFFFF6A5A : 0xFFFFB0A0, true);
+                Hud.small(g, m.name() + " 倒地 " + m.bleedSec() + "s", x + 1, y - 12, 0xFFFFB0A0, true);
+            } else {
+                Hud.text(g, "▼", x + 1, y - 4, Hud.fade(c, a), true);
+                Hud.small(g, m.name() + " " + Math.round(dist) + "M", x + 1, y - 12, Hud.fade(c, a * 0.9f), true);
+            }
         }
     }
 }

@@ -113,15 +113,43 @@ public final class Net {
 
     /** 一位真人隊友的狀態。idx = P1～P4 編號（0 起算）；armor = 頭盔＋防彈衣平均耐久，-1 = 沒穿。 */
     public record Mate(int entity, String name, int idx, float hp, float max, float armor, int meds, boolean dead,
-                       double x, double y, double z) {
+                       double x, double y, double z,
+                       boolean downed, float bleed, int bleedSec, float revive, String helper) {
         void write(FriendlyByteBuf b) {
             b.writeVarInt(entity); b.writeUtf(name); b.writeVarInt(idx); b.writeFloat(hp); b.writeFloat(max);
             b.writeFloat(armor); b.writeVarInt(meds); b.writeBoolean(dead); b.writeDouble(x); b.writeDouble(y); b.writeDouble(z);
+            b.writeBoolean(downed); b.writeFloat(bleed); b.writeVarInt(bleedSec); b.writeFloat(revive); b.writeUtf(helper);
         }
 
         static Mate read(FriendlyByteBuf b) {
             return new Mate(b.readVarInt(), b.readUtf(), b.readVarInt(), b.readFloat(), b.readFloat(), b.readFloat(),
-                    b.readVarInt(), b.readBoolean(), b.readDouble(), b.readDouble(), b.readDouble());
+                    b.readVarInt(), b.readBoolean(), b.readDouble(), b.readDouble(), b.readDouble(),
+                    b.readBoolean(), b.readFloat(), b.readVarInt(), b.readFloat(), b.readUtf());
+        }
+    }
+
+    /** 自己倒地／站起來（客戶端用來強制趴下、切手槍提示） */
+    public record DownedSync(boolean down) {
+        void write(FriendlyByteBuf b) { b.writeBoolean(down); }
+
+        static DownedSync read(FriendlyByteBuf b) { return new DownedSync(b.readBoolean()); }
+
+        void handle(Supplier<NetworkEvent.Context> ctx) {
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> dev.longnight.lnai.client.Revive.onDowned(down));
+            ctx.get().setPacketHandled(true);
+        }
+    }
+
+    /** 玩家 → 伺服器：按住／放開救援鍵。target = 倒地隊友的實體編號 */
+    public record Revive(int target, boolean hold) {
+        void write(FriendlyByteBuf b) { b.writeVarInt(target); b.writeBoolean(hold); }
+
+        static Revive read(FriendlyByteBuf b) { return new Revive(b.readVarInt(), b.readBoolean()); }
+
+        void handle(Supplier<NetworkEvent.Context> ctx) {
+            ServerPlayer p = ctx.get().getSender();
+            if (p != null) Downed.onRevive(p, target, hold);
+            ctx.get().setPacketHandled(true);
         }
     }
 
@@ -155,6 +183,10 @@ public final class Net {
                 .encoder(Say::write).decoder(Say::read).consumerMainThread((m, c) -> m.handle(c)).add();
         CH.messageBuilder(Team.class, id++, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Team::write).decoder(Team::read).consumerMainThread((m, c) -> m.handle(c)).add();
+        CH.messageBuilder(DownedSync.class, id++, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(DownedSync::write).decoder(DownedSync::read).consumerMainThread((m, c) -> m.handle(c)).add();
+        CH.messageBuilder(Revive.class, id++, NetworkDirection.PLAY_TO_SERVER)
+                .encoder(Revive::write).decoder(Revive::read).consumerMainThread((m, c) -> m.handle(c)).add();
     }
 
     /** 送給看得到這個實體的所有玩家（含實體自己，如果它是玩家） */

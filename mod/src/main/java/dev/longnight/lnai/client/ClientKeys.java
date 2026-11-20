@@ -12,5 +12,5 @@ public final class ClientKeys {
     private ClientKeys() {}
 
     @SubscribeEvent
-    public static void register(RegisterKeyMappingsEvent e) { e.register(ClientInput.MELEE); e.register(ClientInput.CROUCH); }
+    public static void register(RegisterKeyMappingsEvent e) { e.register(ClientInput.MELEE); e.register(ClientInput.CROUCH); e.register(Revive.KEY); }
 }
