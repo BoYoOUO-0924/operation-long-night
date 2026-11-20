@@ -27,6 +27,7 @@ import com.mojang.logging.LogUtils;
 /**
  * /lnhud objective <玩家> <文字>        設定畫面左上的目標（文字為空 = 清除）
  * /lnhud waypoint <玩家> <x y z> | clear  目標的導航點（顯示距離）
+ * /lnhud cutscene <玩家> <名稱> | stop   播放／中止過場動畫（見 Cutscenes）
  * /lnhud trace <實體> <x y z> <vx> <vy>   測量拋射物軌跡（寫進伺服器紀錄，給拋物線預覽校正用）
  */
 final class HudCommand {
@@ -47,6 +48,11 @@ final class HudCommand {
                         .then(Commands.literal("clear").executes(c -> waypoint(EntityArgument.getPlayers(c, "targets"), null)))
                         .then(Commands.argument("pos", Vec3Argument.vec3())
                                 .executes(c -> waypoint(EntityArgument.getPlayers(c, "targets"), Vec3Argument.getVec3(c, "pos"))))))
+                .then(Commands.literal("cutscene").then(Commands.argument("targets", EntityArgument.players())
+                        .then(Commands.literal("stop").executes(c -> Cutscenes.stop(EntityArgument.getPlayers(c, "targets"))))
+                        .then(Commands.argument("name", ResourceLocationArgument.id())
+                                .suggests((c, b) -> net.minecraft.commands.SharedSuggestionProvider.suggestResource(Cutscenes.names(), b))
+                                .executes(c -> Cutscenes.play(c.getSource(), EntityArgument.getPlayers(c, "targets"), ResourceLocationArgument.getId(c, "name"))))))
                 .then(Commands.literal("trace").then(Commands.argument("type", ResourceLocationArgument.id())
                         .then(Commands.argument("pos", Vec3Argument.vec3())
                                 .then(Commands.argument("vx", FloatArgumentType.floatArg())

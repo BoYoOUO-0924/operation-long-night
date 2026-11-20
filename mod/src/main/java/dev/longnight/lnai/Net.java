@@ -73,6 +73,20 @@ public final class Net {
         }
     }
 
+    /** 過場動畫：json = 整個過場檔（不含伺服器指令）；空字串 = 中止。 */
+    public record Cutscene(String json) {
+        static final int MAX = 1 << 20;
+
+        void write(FriendlyByteBuf b) { b.writeUtf(json, MAX); }
+
+        static Cutscene read(FriendlyByteBuf b) { return new Cutscene(b.readUtf(MAX)); }
+
+        void handle(Supplier<NetworkEvent.Context> ctx) {
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> dev.longnight.lnai.client.CutscenePlayer.start(json));
+            ctx.get().setPacketHandled(true);
+        }
+    }
+
     static void register() {
         int id = 0;
         CH.messageBuilder(Action.class, id++, NetworkDirection.PLAY_TO_SERVER)
@@ -83,6 +97,8 @@ public final class Net {
                 .encoder(Kill::write).decoder(Kill::read).consumerMainThread((m, c) -> m.handle(c)).add();
         CH.messageBuilder(Objective.class, id++, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Objective::write).decoder(Objective::read).consumerMainThread((m, c) -> m.handle(c)).add();
+        CH.messageBuilder(Cutscene.class, id++, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(Cutscene::write).decoder(Cutscene::read).consumerMainThread((m, c) -> m.handle(c)).add();
     }
 
     public static void to(ServerPlayer p, Object msg) { CH.send(PacketDistributor.PLAYER.with(() -> p), msg); }

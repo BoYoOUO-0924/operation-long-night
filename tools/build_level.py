@@ -575,3 +575,22 @@ v = A["viewpoint"]
     "gamemode creative @s\n"
     f"tp @s {xyz(v)} facing {o[0] + 22} {o[1] + 2} {o[2] + 14}\n", encoding="utf-8")
 print(f"已產生 {len(files)} 個函式到 {OUT.relative_to(ROOT)}")
+
+# ================================================================== 過場動畫（levels/cutscenes/*.json → data/ln/cutscenes/）
+# 字幕的名字顏色沿用對白的 speakers 設定（換成比較柔和的寫實色）
+SUB_COLOR = {"aqua": "#7FC8D8", "gold": "#E0B050", "green": "#8CC08C", "gray": "#B4B4B4",
+             "dark_red": "#D05050", "yellow": "#FFB020", "dark_aqua": "#5BA8B0", "white": "#E4E2DA"}
+CUT_OUT = ROOT / "datapack/longnight/data/ln/cutscenes"
+CUT_OUT.mkdir(parents=True, exist_ok=True)
+for old in CUT_OUT.glob("*.json"):
+    old.unlink()
+cut_files = sorted((ROOT / "levels/cutscenes").glob("*.json"))
+for src in cut_files:
+    cs = json.loads(src.read_text(encoding="utf-8"))
+    cs.pop("_說明", None)
+    for s in cs.get("subtitles", []):
+        s["text"] = norm(s["text"])
+        if "color" not in s and s.get("who") in SPK:
+            s["color"] = SUB_COLOR.get(SPK[s["who"]], "#E4E2DA")
+    (CUT_OUT / src.name).write_text(json.dumps(cs, ensure_ascii=False, indent=1), encoding="utf-8")
+print(f"已產生 {len(cut_files)} 段過場到 {CUT_OUT.relative_to(ROOT)}")
