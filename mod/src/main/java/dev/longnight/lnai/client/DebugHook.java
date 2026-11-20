@@ -77,6 +77,11 @@ public final class DebugHook {
                     if (!a[0].equals("up")) mc.keyboardHandler.keyPress(win, code, 0, org.lwjgl.glfw.GLFW.GLFW_PRESS, 0);
                     if (!a[0].equals("down")) mc.keyboardHandler.keyPress(win, code, 0, org.lwjgl.glfw.GLFW.GLFW_RELEASE, 0);
                 }
+                case "sidearm" -> {   // sidearm px py pz rx ry rz scale hand(0/1)
+                    NpcSidearm.px = Float.parseFloat(a[1]); NpcSidearm.py = Float.parseFloat(a[2]); NpcSidearm.pz = Float.parseFloat(a[3]);
+                    NpcSidearm.rx = Float.parseFloat(a[4]); NpcSidearm.ry = Float.parseFloat(a[5]); NpcSidearm.rz = Float.parseFloat(a[6]);
+                    NpcSidearm.sc = Float.parseFloat(a[7]); NpcSidearm.hand = a[8].equals("1");
+                }
                 case "melee" -> dev.longnight.lnai.Net.CH.sendToServer(new dev.longnight.lnai.Net.Action(dev.longnight.lnai.Net.Action.MELEE, 0, mc.player.getInventory().selected));
                 case "tap" -> {
                     int which = a[1].equals("4") ? Gear.SLOT_GRENADE : Gear.SLOT_MED;
