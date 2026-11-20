@@ -111,7 +111,7 @@ def normalize(wav):
     idx = np.where(np.abs(wav) > 0.01)[0]
     if len(idx):
         wav = wav[max(0, idx[0] - 800): idx[-1] + 2400]
-    return wav / max(1e-6, np.abs(wav).max()) * 0.9
+    return wav / max(1e-6, np.abs(wav).max()) * 0.99   # 遊戲中語音比原先大 10%（過場在 Voice.java 用 0.91 抵銷）
 
 
 def write_ogg(path, wav, sr):

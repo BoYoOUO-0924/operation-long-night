@@ -61,8 +61,8 @@ public final class Voice {
         if (near && speaker != null)
             s = new SimpleSoundInstance(rl, SoundSource.VOICE, 1.3f, 1f, SoundInstance.createUnseededRandom(), false, 0,
                     SoundInstance.Attenuation.LINEAR, speaker.getX(), speaker.getEyeY(), speaker.getZ(), false);
-        else
-            s = new SimpleSoundInstance(rl, SoundSource.VOICE, near ? 1f : 0.85f, 1f, SoundInstance.createUnseededRandom(), false, 0,
+        else   // 原聲檔峰值 0.99（遊戲中比原先大 10%）：過場用 0.91 維持原音量；無線電版 0.85 → 0.935
+            s = new SimpleSoundInstance(rl, SoundSource.VOICE, near ? 0.91f : 0.935f, 1f, SoundInstance.createUnseededRandom(), false, 0,
                     SoundInstance.Attenuation.NONE, 0, 0, 0, true);
         mc.getSoundManager().play(s);
         LAST.put(who, s);
