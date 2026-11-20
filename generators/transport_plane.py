@@ -98,17 +98,29 @@ for z in (0, 1, 2):                                               # 擋風玻璃
     for y in (4, 5, 6):
         for x in range(2, 15):
             if (x, y, z) in shell and z <= 2:
-                c.set(x, y, z, "glass")
+                c.set(x, y, z, "black_stained_glass")             # 抗眩光座艙罩：黑色染色玻璃，沒有白色網格線
 for z in (3, 4):                                                  # 側窗
     for y in (4, 5):
-        c.set(2, y, z, "glass"); c.set(14, y, z, "glass")
-c.box(4, 2, 2, 12, 2, 2, "polished_blackstone")                   # 儀表板
-c.box(4, 3, 2, 12, 3, 2, "light_blue_stained_glass")
-for x in (5, 7, 9, 11):
-    c.set(x, 2, 2, "sea_lantern")
-c.set(6, 3, 3, "lever[face=floor,facing=south]"); c.set(10, 3, 3, "lever[face=floor,facing=south]")
-c.set(8, 2, 3, "polished_blackstone_wall")                        # 中央油門台
+        c.set(2, y, z, "black_stained_glass"); c.set(14, y, z, "black_stained_glass")
+# 傾斜儀表控台：深板岩底座＋往飛行員方向傾斜的深板岩階梯，上面放拉桿與按鈕，正面掛發光展示框（時鐘／羅盤／地圖）
+c.box(4, 2, 2, 12, 2, 2, "polished_deepslate")
+c.box(4, 3, 2, 12, 3, 2, "polished_deepslate_stairs[facing=north,half=bottom]")
+for x in (4, 12):
+    c.set(x, 4, 2, "polished_blackstone_button[face=floor,facing=south]")
+for x in (6, 10):
+    c.set(x, 4, 2, "lever[face=floor,facing=south]")
+for x in (7, 9):
+    c.set(x, 4, 2, "stone_button[face=floor,facing=south]")
+c.set(8, 2, 3, "polished_deepslate_wall")                         # 中央油門台
 c.set(8, 3, 3, "lightning_rod[facing=up]")
+DASH_FRAMES = [(5, 3, 3, "clock"), (7, 3, 3, "compass"), (9, 3, 3, "map"), (11, 3, 3, "clock")]
+# 頭頂開關面板：天花板下的鐵活板門＋往下垂的終界燭
+for x in range(6, 11):
+    for z in (3, 4, 5):
+        if interior(x, 7, z):
+            c.set(x, 7, z, "iron_trapdoor[half=top,facing=south,open=false]")
+for (x, z) in ((7, 4), (9, 4), (8, 5)):
+    c.set(x, 6, z, "end_rod[facing=down]")
 PILOT_SEATS = [(6, 2, 4), (10, 2, 4)]
 for (x, y, z) in PILOT_SEATS:
     c.set(x, y, z, "blackstone_stairs[facing=south]")
@@ -158,6 +170,31 @@ c.box(2, 2, 34, 3, 2, 36, "green_terracotta")
 for z in (30, 36):
     c.set(4, 2, z, "chain[axis=x]")
 
+# ---------------------------------------------------------------- 戰術物資箱（取代突兀的單顆方塊）
+CRATES = [  # 位置, 種類
+    ((3, 1, 10), "gray_shulker_box[facing=up]"), ((3, 2, 10), "green_shulker_box[facing=up]"),
+    ((3, 1, 11), "black_shulker_box[facing=up]"),
+    ((13, 1, 10), "green_shulker_box[facing=up]"), ((13, 1, 12), "gray_shulker_box[facing=up]"),
+    ((3, 2, 6), "black_shulker_box[facing=up]"), ((13, 2, 6), "gray_shulker_box[facing=up]"),
+    ((3, 1, 15), "green_shulker_box[facing=up]"), ((3, 1, 27), "gray_shulker_box[facing=up]"),
+    ((14, 1, 27), "gray_shulker_box[facing=up]"), ((14, 2, 27), "black_shulker_box[facing=up]"),
+]
+for (pos, b) in CRATES:
+    c.set(*pos, b)
+# 鐵活板門包覆的物資箱（綠色箱體四面貼鐵板）
+for (x, z) in ((12, 14), (4, 38)):
+    c.set(x, 1, z, "green_terracotta")
+    c.set(x, 2, z, "iron_trapdoor[half=bottom,facing=north,open=false]")
+    c.set(x + 1, 1, z, "iron_trapdoor[facing=east,open=true]"); c.set(x - 1, 1, z, "iron_trapdoor[facing=west,open=true]")
+    c.set(x, 1, z - 1, "iron_trapdoor[facing=north,open=true]"); c.set(x, 1, z + 1, "iron_trapdoor[facing=south,open=true]")
+# 戰術彈藥箱：深色橡木階梯（倒放）＋告示牌標示口徑
+AMMO = [((13, 1, 11), "west", "5.56 NATO"), ((3, 1, 19), "east", "7.62x39"), ((14, 1, 13), "west", "12 GA")]
+for ((x, y, z), face, label) in AMMO:
+    c.set(x, y, z, f"dark_oak_stairs[facing={face},half=top]")
+    sx = x - 1 if face == "west" else x + 1
+    c.set(sx, y, z, f"dark_oak_wall_sign[facing={face}]")
+    c.post.append("data merge block ~%d ~%d ~%d {front_text:{color:\"white\",has_glowing_text:1b,messages:['\"\"','{\"text\":\"%s\"}','{\"text\":\"AMMO\"}','\"\"']}}" % (sx, y, z, label))
+
 # ---------------------------------------------------------------- 機尾、跳板
 c.set(1, 4, 42, "redstone_lamp[lit=false]"); c.set(1, 4, 43, "lime_concrete")   # 跳傘燈（紅：準備／綠：跳）
 c.set(15, 4, 42, "redstone_lamp[lit=false]"); c.set(15, 4, 43, "lime_concrete")
@@ -172,23 +209,79 @@ for x in range(2, 15):
     c.set(x, 1, RAIL_Z, "iron_bars")                              # 安全護欄（跳傘時拆掉）
 
 # ---------------------------------------------------------------- 外觀：上單翼、四具發動機、T 型尾翼
-for x in range(-22, 39):
-    for z in range(16, 25):
-        if x < 0 or x > 16:
-            sweep = abs(x - CX) // 6                                # 後掠
-            if 16 + sweep <= z <= 24 - (abs(x - CX) // 9):
-                c.set(x, 8, z, "light_gray_concrete")
-for ex in (-14, -5, 21, 30):
-    c.box(ex - 1, 5, 14, ex + 1, 7, 21, "gray_concrete")
-    c.box(ex, 6, 13, ex, 6, 13, "black_concrete")
-c.set(-22, 8, 20, "redstone_lamp[lit=true]"); c.set(38, 8, 20, "glowstone")   # 翼尖航行燈
+# 機鼻：從駕駛艙前牆往前延伸 7 格，截面橢圓逐漸收窄；上半平滑石英、下半灰色混凝土，最前端深色雷達罩
+NOSE = [(4.4, 2.7), (4.1, 2.5), (3.6, 2.2), (3.0, 1.9), (2.3, 1.5), (1.6, 1.1), (0.9, 0.7)]
+for k, (rx, ry) in enumerate(NOSE, start=1):
+    z = -k
+    cy = 2.3 - k * 0.12                                            # 機鼻略往下垂
+    cells_k = [(x, y) for x in range(0, 17) for y in range(0, 6)
+               if ((x - CX) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1.0]
+    top = {}
+    for (x, y) in cells_k:
+        top[x] = max(top.get(x, -1), y)
+    for (x, y) in cells_k:
+        if k >= 6:
+            b = "blackstone" if (x + y) % 2 else "polished_blackstone"      # 雷達罩（撞色）
+        elif y >= cy:
+            b = "smooth_quartz"
+        else:
+            b = "gray_concrete"
+        if y == top[x] and k <= 5 and y >= cy and abs(x - CX) >= 1:
+            b = "smooth_quartz_slab[type=bottom]"                  # 頂部邊緣用半磚削出錐度
+        c.set(x, y, z, b)
+
+
+def fuselage(x, y, z):
+    return interior(x, y, z) or (x, y, z) in shell
+
+
+# 主翼：上單翼，翼根加寬（z 12..28）、往翼尖收窄並後掠
+for x in range(-24, 41):
+    d = max(0, abs(x - CX) - 4)                                     # 離機背邊緣的距離
+    if d > 27:
+        continue
+    le = 12 + d * 0.42
+    te = 28 - d * 0.16
+    for z in range(int(le), int(te) + 1):
+        if not fuselage(x, 8, z):
+            c.set(x, 8, z, "light_gray_concrete")
+        if d <= 7 and not fuselage(x, 7, z) and z <= te - 1:
+            c.set(x, 7, z, "gray_concrete")                         # 翼根加厚
+# 四具大型渦輪發動機短艙：用深板岩牆＋鐵砧吊在機翼下方
+NACELLES = []
+for d in (9, 18):
+    for x0 in (4 - d, 12 + d):
+        le = int(12 + d * 0.42)
+        z1, z2 = le - 5, le + 5
+        for z in range(z1, z2 + 1):
+            r = 2.2 if z1 < z < z2 else 1.6
+            for x in range(x0 - 2, x0 + 3):
+                for y in range(2, 7):
+                    if (x - x0) ** 2 + (y - 4.5) ** 2 <= r * r:
+                        if z == z1:
+                            b = "black_concrete" if (x - x0) ** 2 + (y - 4.5) ** 2 <= 1.3 else "gray_concrete"
+                        elif z == z2:
+                            b = "polished_blackstone"
+                        else:
+                            b = "light_gray_concrete" if y >= 5 else "gray_concrete"
+                        c.set(x, y, z, b)
+        for z in range(le - 1, le + 4):
+            c.set(x0, 7, z, "polished_deepslate_wall")                # 吊架
+        c.set(x0, 7, le + 1, "anvil[facing=north]")
+        NACELLES.append((x0, z1, z2))
+# 翼尖航行燈：左紅右綠，發光方塊外面包染色玻璃
+for (tx, core, glass) in ((CX - 4 - 28, "shroomlight", "red_stained_glass"), (CX + 4 + 28, "verdant_froglight", "lime_stained_glass")):
+    tz = int(12 + 27 * 0.42) + 1
+    c.set(tx, 8, tz, core)
+    for (ddx, ddy, ddz) in ((-1, 0, 0), (1, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, -1), (0, 0, 1)):
+        c.set(tx + ddx, 8 + ddy, tz + ddz, glass)
 for z in range(36, 47):
     h = 9 + (z - 36)
     c.box(CX, 9, z, CX, min(h, 20), z, "light_gray_concrete")      # 垂直尾翼
 c.box(CX - 9, 20, 42, CX + 9, 20, 47, "light_gray_concrete")       # 水平尾翼
 
 # ---------------------------------------------------------------- 實體裝飾（建造時一起放）
-c.pre += [f"fill ~-24 ~-2 ~{z0} ~40 ~22 ~{z0 + 18} air" for z0 in (-2, 17, 36)]
+c.pre += [f"fill ~-26 ~-2 ~{z0} ~42 ~22 ~{z0 + 17} air" for z0 in (-9, 9, 27, 45)]
 c.pre.append("kill @e[tag=ln_lobby_deco]")
 for (x, y, z, gun) in RACK_GUNS:
     c.post.append(
@@ -204,6 +297,8 @@ c.post.append(
     'summon text_display ~2.05 ~4.6 ~21 {Tags:["ln_lobby_deco"],billboard:"fixed",'
     "transformation:{left_rotation:[0f,0.7071f,0f,0.7071f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]},"
     "background:0,text:'{\"text\":\"軍械庫  ARMORY\",\"color\":\"#F0A040\",\"font\":\"lnai:ui\"}'}")
+for (x, y, z, item) in DASH_FRAMES:
+    c.post.append(f'summon glow_item_frame ~{x} ~{y} ~{z} {{Tags:["ln_lobby_deco"],Facing:3b,Fixed:1b,Invisible:0b,Item:{{id:"minecraft:{item}",Count:1b}}}}')
 # 補光（看不見的光源）：讓貨艙不要太暗
 for z in range(10, Z_TAIL, 4):
     for x in (3, 13):
@@ -220,7 +315,7 @@ def a(x, y, z):
 
 anchors = {
     "origin": list(ORIGIN),
-    "box": [ORIGIN[0] - 24, ORIGIN[1] - 2, ORIGIN[2] - 2, ORIGIN[0] + 40, ORIGIN[1] + 22, ORIGIN[2] + 56],
+    "box": [ORIGIN[0] - 26, ORIGIN[1] - 2, ORIGIN[2] - 9, ORIGIN[0] + 42, ORIGIN[1] + 22, ORIGIN[2] + 62],
     "floor_y": ORIGIN[1],
     "spawn": a(8, 1, 16),
     "table": a(8, 1, 11),

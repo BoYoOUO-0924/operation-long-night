@@ -1,13 +1,14 @@
 # 由 tools/build_lobby.py 自動產生，請勿手動修改
-forceload add -334 898 -270 956
-fillbiome -334 270 898 -270 294 905 minecraft:the_void
-fillbiome -334 270 906 -270 294 913 minecraft:the_void
-fillbiome -334 270 914 -270 294 921 minecraft:the_void
-fillbiome -334 270 922 -270 294 929 minecraft:the_void
-fillbiome -334 270 930 -270 294 937 minecraft:the_void
-fillbiome -334 270 938 -270 294 945 minecraft:the_void
-fillbiome -334 270 946 -270 294 953 minecraft:the_void
-fillbiome -334 270 954 -270 294 956 minecraft:the_void
+forceload add -336 891 -268 962
+fillbiome -336 270 891 -268 294 898 minecraft:the_void
+fillbiome -336 270 899 -268 294 906 minecraft:the_void
+fillbiome -336 270 907 -268 294 914 minecraft:the_void
+fillbiome -336 270 915 -268 294 922 minecraft:the_void
+fillbiome -336 270 923 -268 294 930 minecraft:the_void
+fillbiome -336 270 931 -268 294 938 minecraft:the_void
+fillbiome -336 270 939 -268 294 946 minecraft:the_void
+fillbiome -336 270 947 -268 294 954 minecraft:the_void
+fillbiome -336 270 955 -268 294 962 minecraft:the_void
 execute positioned -310 272 900 run function ln:build/transport_plane
 kill @e[tag=ln_lobby]
 summon tacznpcs:npc -303.5 273.75 904.5 {template:"blue_support",templateInitialized:1b,skin:{texture:"tacznpcs:entity/villager1.png",slim:0b},NoAI:1b,NoGravity:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:1b,Rotation:[180f,0f],Tags:["ln_lobby","lb_pilot"],HandItems:[{},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:3355443}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:4934475}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:5592405}}},{id:"zerocontact:helmet_airframe",Count:1b}]}

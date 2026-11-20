@@ -13,5 +13,5 @@ execute store result score #pl ln if entity @a[gamemode=adventure]
 execute store result score #rd ln if entity @a[gamemode=adventure,tag=ln_ready]
 function ln:lobby/show_status
 execute if score #lobby ln matches 1 if score #pl ln matches 1.. if score #rd ln = #pl ln run function ln:lobby/go
-execute if score #lobby ln matches 1 as @a[x=-334,y=212,z=898,dx=64,dy=82,dz=58] at @s if entity @s[y=212,dy=57] run function ln:lobby/caught
+execute if score #lobby ln matches 1 as @a[x=-336,y=212,z=891,dx=68,dy=82,dz=71] at @s if entity @s[y=212,dy=57] run function ln:lobby/caught
 execute if score #lobby ln matches 2 run function ln:lobby/jump_tick
