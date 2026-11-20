@@ -84,6 +84,16 @@ final class HudCommand {
                 .then(Commands.literal("gundebug").then(Commands.argument("e", EntityArgument.entities())
                         .executes(c -> { for (Entity ent : EntityArgument.getEntities(c, "e")) { String s = gunDebug(ent); LOG.info("[lnai] gundebug {}", s);
                             c.getSource().sendSuccess(() -> Component.literal(s), false); } return 1; })))
+                // /lnhud tint <玩家> <AARRGGBB> [淡入淡出 tick] [pulse]：全螢幕色調（00000000 = 關閉）
+                .then(Commands.literal("tint").then(Commands.argument("targets", EntityArgument.players())
+                        .then(Commands.argument("argb", StringArgumentType.word())
+                                .executes(c -> tint(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "argb"), 20, false))
+                                .then(Commands.argument("fade", com.mojang.brigadier.arguments.IntegerArgumentType.integer(0, 400))
+                                        .executes(c -> tint(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "argb"),
+                                                com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade"), false))
+                                        .then(Commands.literal("pulse")
+                                                .executes(c -> tint(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "argb"),
+                                                        com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade"), true)))))))
                 .then(Commands.literal("dmgdebug").then(Commands.argument("on", com.mojang.brigadier.arguments.BoolArgumentType.bool())
                         .executes(c -> { DamageTuning.debug = com.mojang.brigadier.arguments.BoolArgumentType.getBool(c, "on"); return 1; })))
                 .then(Commands.literal("teamdebug").then(Commands.argument("on", com.mojang.brigadier.arguments.BoolArgumentType.bool())
@@ -177,6 +187,11 @@ final class HudCommand {
             sb.append("err ").append(t);
         }
         return sb.toString();
+    }
+
+    private static int tint(Collection<ServerPlayer> ps, String argb, int fade, boolean pulse) {
+        for (ServerPlayer p : ps) Net.to(p, new Net.Music("tint:" + argb + ":" + fade + ":" + (pulse ? 1 : 0), fade));
+        return ps.size();
     }
 
     private static String lastAmbient = "";

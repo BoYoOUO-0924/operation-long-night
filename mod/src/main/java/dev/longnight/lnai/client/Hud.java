@@ -122,6 +122,7 @@ public final class Hud {
         public static void overlays(RegisterGuiOverlaysEvent e) {
             e.registerAboveAll("ln_hud", (gui, g, pt, w, h) -> { if (active()) draw(g, w, h); });
             e.registerAboveAll("ln_revive", (gui, g, pt, w, h) -> { if (active()) Revive.draw(g, w, h, pt); });
+            e.registerBelowAll("ln_tint", (gui, g, pt, w, h) -> ScreenTint.draw(g, w, h, pt));
             e.registerBelowAll("ln_mates", (gui, g, pt, w, h) -> { if (active()) MateMarkers.draw(g, w, h, pt); });
             e.registerAboveAll("ln_say", (gui, g, pt, w, h) -> DialogSubs.draw(g, w, h, pt));
         }

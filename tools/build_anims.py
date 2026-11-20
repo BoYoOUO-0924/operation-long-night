@@ -84,6 +84,15 @@ made.append(anim("revive", 0.6, {
     "head": {0: [35, 0, 0], 0.6: [35, 0, 0]},
 }, loop=True, pos={"body": {0: [0, -6, 0], 0.6: [0, -6, 0]}}))
 
+# 坐姿（飛行員）：大腿往前平舉、小腿自然，雙手往前放在操縱桿／儀表板上，頭微微動
+made.append(anim("sit_pilot", 4.0, {
+    "right_leg": {0: [-88, 4, 0], 4.0: [-88, 4, 0]},
+    "left_leg": {0: [-88, -4, 0], 4.0: [-88, -4, 0]},
+    "right_arm": osc([-48, -6, 0], [-44, -6, 0], 1, 4.0),
+    "left_arm": osc([-40, 8, 0], [-36, 8, 0], 1, 4.0),
+    "head": osc([4, -6, 0], [6, 8, 0], 1, 4.0),
+}, loop=True))
+
 for old in OUT.glob("*.json"):
     if old.stem not in made:
         old.unlink()

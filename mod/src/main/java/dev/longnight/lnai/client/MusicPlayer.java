@@ -27,13 +27,15 @@ public final class MusicPlayer {
 
     /** cue 空字串 = 停止；「amb:」開頭的是環境音；fade = 淡入淡出幾 tick */
     public static void play(String cue, int fade) {
-        if (cue.startsWith("amb:")) AMBIENT.play(cue.substring(4), fade);
+        if (cue.startsWith("tint:")) ScreenTint.set(cue.substring(5));
+        else if (cue.startsWith("amb:")) AMBIENT.play(cue.substring(4), fade);
         else MUSIC.play(cue, fade);
     }
 
     @SubscribeEvent
     public static void tick(TickEvent.ClientTickEvent e) {
         if (e.phase != TickEvent.Phase.END) return;
+        ScreenTint.tick();
         Minecraft mc = Minecraft.getInstance();
         if (mc.level == null) { MUSIC.reset(); AMBIENT.reset(); return; }
         if (MUSIC.current != null) mc.getMusicManager().stopPlaying();   // 原版背景音樂不要跟關卡配樂疊在一起

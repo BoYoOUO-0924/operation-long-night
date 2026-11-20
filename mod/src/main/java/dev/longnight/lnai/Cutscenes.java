@@ -142,6 +142,12 @@ final class Cutscenes {
             stopFor(p);
             Net.to(p, new Net.Cutscene(""));
         }
+        // 沒有人在看的過場整個取消：剩下的指令不再執行（例如過場結尾的「進入第 1 階段」），凍結的 NPC 解凍
+        RUNNING.removeIf(r -> {
+            if (!r.viewers.isEmpty()) return false;
+            for (net.minecraft.world.entity.Mob mob : r.frozen) if (mob.isAlive()) mob.setNoAi(false);
+            return true;
+        });
         return ps.size();
     }
 

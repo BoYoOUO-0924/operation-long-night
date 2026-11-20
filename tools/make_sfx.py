@@ -176,10 +176,19 @@ def radio_off():
     return np.concatenate([squelch, click, np.zeros(int(0.03 * SR))])
 
 
+def jump_alarm():
+    """跳傘警報：刺耳的兩聲方波蜂鳴（約 1 秒，關卡裡每秒重播一次）"""
+    t = t_(0.32)
+    tone = np.sign(np.sin(2 * np.pi * 740 * t)) * 0.5 + np.sign(np.sin(2 * np.pi * 1110 * t)) * 0.3
+    tone = bp(tone, 300, 4000) * env(len(t), 0.005, 0.03)
+    gap = np.zeros(int(0.12 * SR))
+    return np.concatenate([tone, gap, tone, np.zeros(int(0.24 * SR))]) * 0.8
+
+
 SYNTH = {
     "blizzard_loop": blizzard, "boom": boom, "scanner_fail": scanner_fail, "scanner_pulse": scanner_pulse,
     "scanner_ready": scanner_ready, "objective": objective, "mortar_whistle": mortar_whistle,
-    "radio_on": radio_on, "radio_off": radio_off,
+    "radio_on": radio_on, "radio_off": radio_off, "jump_alarm": jump_alarm,
 }
 
 
