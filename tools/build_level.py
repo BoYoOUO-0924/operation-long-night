@@ -364,16 +364,14 @@ fn("ev/mortar_tick", [
 
 # ================================================================== 裝備
 fn("ammo", [
-    # 一次 give 最多 100 發，分兩次
-    'give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:556x45"} 60',
-    'give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:556x45"} 60',
-    'give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:9mm"} 34',
+    # 依每個人手上的兩把槍發對應口徑（大廳可以自由配槍）：主武器 4 個彈匣、副武器 2 個
+    "lnkit ammo @a[gamemode=adventure] 4 2 add",
 ])
 # 快捷欄固定：1 主武器、2 副武器、3 近戰（軍刀）、4 投擲物、5 醫療；其餘放背包，由 lnai 模組按 4／5 時換上來
 P = "@a[gamemode=adventure]"
 fn("loadout", [
-    f'item replace entity {P} hotbar.0 with tacz:modern_kinetic_gun{{GunId:"tacz:m4a1",GunCurrentAmmoCount:30,HasBulletInBarrel:1b}}',
-    f'item replace entity {P} hotbar.1 with tacz:modern_kinetic_gun{{GunId:"tacz:glock_17",GunCurrentAmmoCount:17,HasBulletInBarrel:1b}}',
+    # 大廳選過的槍（含配件）跳傘時記下來，這裡還原；沒選過的人發這章的預設武器
+    f"lnkit restore {P} m4a1 glock_17",
     f"item replace entity {P} hotbar.2 with superbwarfare:knife",
     f"item replace entity {P} hotbar.3 with superbwarfare:hand_grenade 2",
     f"item replace entity {P} hotbar.4 with lnai:bandage 4",
@@ -385,6 +383,7 @@ fn("loadout", [
     f"item replace entity {P} armor.head with zerocontact:{PLAYER_GEAR[0]}",
     f"item replace entity {P} armor.chest with zerocontact:{PLAYER_GEAR[1]}",
     f"effect give {P} saturation infinite 0 true",
+    f"execute as {P} run function ln:lobby/kit_extras",          # 戰術套件（大廳座位背包選的）
 ])
 
 # ================================================================== 流程

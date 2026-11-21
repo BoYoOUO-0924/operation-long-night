@@ -2,6 +2,12 @@
 function ln:lobby/clouds
 scoreboard players add #lt ln 1
 execute if score #lt ln matches 200.. run function ln:lobby/anims
+execute if score #lt ln matches 200.. run function ln:lobby/refill
+execute if score #lt ln matches 200.. as @a[gamemode=adventure,x=-336,y=212,z=891,dx=68,dy=82,dz=71] run lnkit ammo @s 4 2 fill
+function ln:lobby/picks
+execute if score #lobby ln matches 1 run function ln:lobby/drone_move
+execute as @e[tag=lb_drone,nbt={HurtTime:10s}] at @s run function ln:lobby/drone_hit
+execute if score #lobby ln matches 1 run function ln:lobby/chat_tick
 execute if score #lt ln matches 200.. run scoreboard players set #lt ln 0
 execute as @e[tag=lb_prev] if data entity @s interaction run function ln:lobby/sel_prev
 execute as @e[tag=lb_next] if data entity @s interaction run function ln:lobby/sel_next

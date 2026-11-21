@@ -63,6 +63,8 @@ def in_lobby(extra=""):
 
 SPAWN = P["spawn"]
 TP_SPAWN = f"tp @s {SPAWN[0] + 0.5} {SPAWN[1]} {SPAWN[2] + 0.5} 180 0"
+# 大廳試槍用：依手上兩把槍的口徑補子彈（主武器 4 個彈匣、副武器 2 個），每 10 秒補一次
+AMMO_BOX = 'lnkit ammo @s 4 2 fill'
 tx, ty, tz = P["table"]
 TOP = ty + 1            # 桌面上緣
 
@@ -196,6 +198,7 @@ fn("enter", [
 fn("enter_one", [
     "tag @s remove ln_ready", "tag @s remove ln_jumped", "tag @s add ln_seen",
     "gamemode adventure @s", "clear @s", "effect clear @s",
+    "lnkit restore @s none none", AMMO_BOX, "function ln:lobby/kit_tags", "scoreboard players set @s ln_hits 0",
     "team join ln_blue @s",
     TP_SPAWN,
     f"spawnpoint @s {xyz(SPAWN)}",
@@ -222,6 +225,7 @@ fn("reset_jump", lights_norm + [
     f"fill {xyz(r1)} {xyz(r2)} iron_bars",
     f"fill {xyz(e1)} {xyz(e2)} air",
     f"fill {e1[0]} {e1[1] + 1} {e1[2]} {e2[0]} {e2[1] + 1} {e2[2]} air",
+    "function ln:lobby/drone_spawn",
 ])
 fn("go", lights_red + [
     "scoreboard players set #lobby ln 2",
@@ -232,6 +236,7 @@ fn("go", lights_red + [
     f"fill {e1[0]} {e1[1] + 1} {e1[2]} {e1[0]} {e1[1] + 1} {e2[2]} iron_bars",
     f"fill {e2[0]} {e1[1] + 1} {e1[2]} {e2[0]} {e1[1] + 1} {e2[2]} iron_bars",
     "lnhud tint @a 55B01010 30 pulse",
+    "function ln:lobby/drone_hide",
     "lnhud objective @a 戰鬥紅光：到機尾待命，跳傘燈轉綠就跳",
     "execute as @a at @s run playsound minecraft:block.piston.contract master @s ~ ~ ~ 1 0.5",
 ])
@@ -257,10 +262,239 @@ fn("launch", [
     "function ln:lobby/reset_jump",
     "tag @a remove ln_ready", "tag @a remove ln_jumped",
     "effect clear @a",
+    "lnkit stash @a[gamemode=adventure]",
     *start_cmds,
     "lnhud tint @a 00000000 30",
     f"forceload remove {BX1} {BZ1} {BX2} {BZ2}",
 ])
+
+
+# ================================================================== 第二階段：軍械庫、兵種、戰術套件、靶場、小隊閒聊
+def W(x, y, z):
+    """飛機局部座標 → 世界座標"""
+    return (O[0] + x, FY + y, O[2] + z)
+
+
+ROT_EAST = "left_rotation:[0f,0.7071f,0f,0.7071f],right_rotation:[0f,0f,0f,1f]"     # 文字面向東（走道）
+ROT_WEST = "left_rotation:[0f,0.7071f,0f,-0.7071f],right_rotation:[0f,0f,0f,1f]"    # 文字面向西
+ROT_UP = "left_rotation:[0.7071f,0f,0f,0.7071f],right_rotation:[0f,0.7071f,0f,0.7071f]"   # 槍管朝上直立
+ROT_FLAT = "left_rotation:[-0.7071f,0f,0f,0.7071f],right_rotation:[0f,0f,0f,1f]"   # 平放在桌上
+
+
+def label(pos, text_json, rot, scale, tags, bg=0):
+    x, y, z = pos
+    tl = json.dumps(["ln_lobby"] + list(tags))
+    return (f"summon text_display {x:.2f} {y:.2f} {z:.2f} {{Tags:{tl},billboard:\"fixed\",background:{bg},"
+            f"transformation:{{{rot},translation:[0f,0f,0f],scale:[{scale}f,{scale}f,{scale}f]}},text:'{sq(text_json)}'}}")
+
+
+def button(pos, w, h, tag):
+    x, y, z = pos
+    return f"summon interaction {x:.2f} {y:.2f} {z:.2f} {{Tags:[\"ln_lobby\",\"lb_pick\",\"{tag}\"],width:{w}f,height:{h}f,response:1b}}"
+
+
+def gun_display(pos, gun, rot, scale):
+    x, y, z = pos
+    return (f'summon item_display {x:.2f} {y:.2f} {z:.2f} {{Tags:["ln_lobby"],item:{{id:"tacz:modern_kinetic_gun",Count:1b,tag:{{GunId:"tacz:{gun}"}}}},'
+            f'item_display:"fixed",transformation:{{{rot},translation:[0f,0f,0f],scale:[{scale}f,{scale}f,{scale}f]}}}}')
+
+
+picks = {}       # 互動實體 tag → 點下去要做的事（以點的玩家身分執行）
+DONE_SOUND = "playsound minecraft:item.armor.equip_iron master @s ~ ~ ~ 0.8 1.1"
+AMMO_FILL = "lnkit ammo @s 4 2 fill"
+
+
+def bar(text, col="#8EE07A"):
+    return "title @s actionbar " + jt({"text": text, "color": col})
+
+
+# ---- 槍架：10 把長槍直立掛在牆上，點槍就換到第 1 格；手槍平放在折疊工作台上，點了換到第 2 格
+LONG_GUNS = [("m4a1", "M4A1"), ("hk416d", "HK416D"), ("ak47", "AK-47"), ("scar_l", "SCAR-L"), ("hk_mp5a5", "MP5A5"),
+             ("vector45", "Vector .45"), ("mk14", "MK14"), ("ai_awp", "AWP"), ("m249", "M249"), ("m1014", "M1014")]
+for i, (gun, name) in enumerate(LONG_GUNS):
+    z = 15.6 + i * 1.2
+    place.append(gun_display(W(1.7, 3.3, z), gun, ROT_UP, 0.9))
+    place.append(label(W(2.02, 2.42, z), jt({"text": name, "color": "#E4E2DA"}), ROT_EAST, 0.35, []))
+    place.append(button(W(2.05, 2.7, z), 0.9, 1.15, f"lb_g{i}"))
+    picks[f"lb_g{i}"] = [f"lnkit gun @s {gun}", AMMO_FILL, DONE_SOUND, bar(f"主武器：{name}")]
+PISTOLS = [("glock_17", "Glock 17"), ("p320", "P320"), ("m1911", "M1911"), ("b93r", "B93R"), ("deagle", "沙漠之鷹")]
+for i, (gun, name) in enumerate(PISTOLS):
+    z = 20.3 + i * 0.68
+    place.append(gun_display(W(2.5, 2.08, z), gun, ROT_FLAT, 0.55))
+    place.append(button(W(2.5, 1.95, z), 0.6, 0.35, f"lb_h{i}"))
+    picks[f"lb_h{i}"] = [f"lnkit gun @s {gun}", AMMO_FILL, DONE_SOUND, bar(f"副武器：{name}")]
+place.append(label(W(2.6, 2.55, 21.7), jt({"text": "手槍", "color": "#F0A040"}), ROT_EAST, 0.4, []))
+
+# ---- 軍刀展示架：戰術刀＋兩種刺刀（刺刀是 TaCZ 配件，裝在步槍槍口）
+KNIVES = [("superbwarfare:knife", "戰術刀", "item replace entity @s hotbar.2 with superbwarfare:knife"),
+          ("tacz:attachment{AttachmentId:\"tacz:bayonet_m9\"}", "M9 刺刀", "give @s tacz:attachment{AttachmentId:\"tacz:bayonet_m9\"}"),
+          ("tacz:attachment{AttachmentId:\"tacz:bayonet_6h3\"}", "6H3 刺刀", "give @s tacz:attachment{AttachmentId:\"tacz:bayonet_6h3\"}")]
+for i, (item, name, cmd) in enumerate(KNIVES):
+    z = 15.25 + i * 0.5
+    iid, _, itag = item.partition("{")
+    tag_nbt = f",tag:{{{itag}" if itag else ""
+    place.append(f'summon item_display {W(1.62, 2.35, z)[0]:.2f} {FY + 2.35:.2f} {O[2] + z:.2f} {{Tags:["ln_lobby"],item:{{id:"{iid}",Count:1b{tag_nbt}}},'
+                 f'item_display:"fixed",transformation:{{left_rotation:[0f,0.7071f,0f,0.7071f],right_rotation:[0f,0f,0.3827f,0.9239f],translation:[0f,0f,0f],scale:[0.5f,0.5f,0.5f]}}}}')
+    place.append(button(W(2.0, 2.15, z), 0.45, 0.4, f"lb_k{i}"))
+    picks[f"lb_k{i}"] = [cmd, DONE_SOUND, bar(f"拿取：{name}")]
+place.append(label(W(2.02, 2.72, 15.75), jt({"text": "軍刀", "color": "#F0A040"}), ROT_EAST, 0.35, []))
+
+# ---- 一鍵兵種（軍械庫尾端的終端機）
+CLASSES = [
+    ("突擊兵", "hk416d SCOPE=sight_t2,GRIP=grip_vertical_military", "glock_17", "HK416D ＋ Glock 17"),
+    ("精確射手", "mk14 SCOPE=scope_acog_ta31", "p320", "MK14 ＋ P320"),
+    ("機槍手", "m249 SCOPE=sight_exp3", "m1911", "M249 ＋ M1911"),
+    ("近距突破", "m1014", "b93r", "M1014 ＋ B93R"),
+]
+place.append(label(W(3.6, 3.75, 28.5), jt({"text": "一鍵兵種  LOADOUT", "color": "#F0A040"}), ROT_EAST, 0.5, []))
+for i, (name, pri, sec, desc) in enumerate(CLASSES):
+    y = 3.35 - i * 0.36
+    place.append(label(W(3.6, y, 28.5), jt({"text": f"[ {name} ]", "color": "#E4E2DA"}), ROT_EAST, 0.55, [], 1711276032))
+    place.append(button(W(3.75, y - 0.02, 28.5), 0.5, 0.32, f"lb_c{i}"))
+    picks[f"lb_c{i}"] = [f"lnkit gun @s {pri}", f"lnkit gun @s {sec}", "item replace entity @s hotbar.2 with superbwarfare:knife",
+                         AMMO_FILL, DONE_SOUND, bar(f"{name}：{desc}")]
+
+# ---- 無限配件補給箱：三個木桶，每 10 秒補滿
+ATT = [
+    ["sight_t2", "sight_exp3", "sight_uh1", "sight_552", "sight_coyote", "sight_acro_rifle", "sight_deltapoint_rifle", "sight_fastfire_rifle",
+     "sight_srs_02", "sight_okp7", "sight_pk06_rifle", "scope_acog_ta31", "scope_elcan_4x", "scope_hamr", "scope_lpvo_1_6", "scope_vudu",
+     "scope_mk5hd", "scope_standard_8x", "scope_qmk152", "sight_rmr_dot", "sight_sro_dot", "sight_acro_pistol", "sight_deltapoint_pistol",
+     "sight_fastfire_pistol", "sight_pk06_pistol", "scope_retro_2x", "scope_contender"],
+    ["muzzle_silencer_knight_qd", "muzzle_silencer_mirage", "muzzle_silencer_phantom_s1", "muzzle_silencer_ptilopsis", "muzzle_silencer_ursus",
+     "muzzle_silencer_vulture", "muzzle_silencer_wraith", "muzzle_silencer_sg", "muzzle_brake_cyclone_d2", "muzzle_brake_pioneer",
+     "muzzle_compensator_trident", "muzzle_choke_sg", "muzzle_brake_trex", "grip_vertical_military", "grip_vertical_ranger", "grip_vertical_talon",
+     "grip_magpul_afg_2", "grip_cobra", "grip_td", "grip_rk0", "grip_se_5", "laser_peq15", "laser_compact", "laser_lopro", "laser_nightstick",
+     "bayonet_m9", "bayonet_6h3"],
+    ["extended_mag_1", "extended_mag_2", "extended_mag_3", "light_extended_mag_1", "light_extended_mag_2", "light_extended_mag_3",
+     "sniper_extended_mag_1", "sniper_extended_mag_2", "sniper_extended_mag_3", "shotgun_extended_mag_1", "shotgun_extended_mag_2",
+     "shotgun_extended_mag_3", "stock_tactical_ar", "stock_moe", "stock_m4ss", "stock_carbon_bone_c5", "stock_hk_slim_line", "stock_ripstock",
+     "stock_sba3", "stock_ak12", "oem_stock_tactical", "oem_stock_light", "oem_stock_heavy", "ammo_mod_fmj", "ammo_mod_hp", "ammo_mod_slug",
+     "ammo_mod_i"],
+]
+ATT_NAMES = ["瞄具", "槍口・握把", "彈匣・槍托"]
+refill = []
+for (bx, by, bz), items, name in zip(P["att_barrels"], ATT, ATT_NAMES):
+    nbt = ",".join(f'{{Slot:{k}b,id:"tacz:attachment",Count:1b,tag:{{AttachmentId:"tacz:{a}"}}}}' for k, a in enumerate(items))
+    refill.append(f"data modify block {bx} {by} {bz} Items set value [{nbt}]")
+    place.append(label((bx + 1.02, by + 0.35, bz + 0.5), jt({"text": name, "color": "#F0E6C8"}), ROT_EAST, 0.4, [], 1711276032))
+fn("refill", refill)
+place.append(label(W(3.05, 2.35, 25.5), jt({"text": "配件補給箱（打開自取）", "color": "#F0A040"}), ROT_EAST, 0.4, []))
+
+# ---- 戰術套件：點座位上方的背包切換（醫療 → 爆破 → 偵察）
+KITS = [("醫療", "#8EE07A", "急救包 +2、繃帶 +4，救隊友快一倍"),
+        ("爆破", "#F0A040", "C4 ×2、闊刀地雷 ×2、M67 +2"),
+        ("偵察", "#7FC8E8", "偵察無人機＋遙控螢幕、煙霧彈 +2")]
+KIT_TAGS = ["ln_kit_medic", "ln_kit_demo", "ln_kit_recon"]
+kit_tags = [f"tag @s remove {t}" for t in KIT_TAGS] + [f"tag @s[scores={{ln_kit={k + 1}}}] add {t}" for k, t in enumerate(KIT_TAGS)]
+fn("kit_tags", kit_tags)
+for i, (x, y, z) in enumerate(P["seats"]):
+    place.append(button((x + 0.6, y + 3.0, z + 0.5), 0.8, 1.0, f"lb_s{i}"))
+    place.append(label((x + 0.4, y + 1.75, z + 0.5), jt({"text": "點背包選套件", "color": "#E4E2DA"}), ROT_WEST, 0.9, [f"lb_kit{i}"], 1711276032))
+    seat = ["scoreboard players add @s ln_kit 1", "execute if score @s ln_kit matches 4.. run scoreboard players set @s ln_kit 1",
+            "function ln:lobby/kit_tags", "playsound minecraft:item.armor.equip_leather master @s ~ ~ ~ 0.8 1"]
+    for k, (name, col, desc) in enumerate(KITS):
+        seat.append(f"execute if score @s ln_kit matches {k + 1} run data modify entity @e[tag=lb_kit{i},limit=1] text set value "
+                    f"'{sq(jt({'text': name + '套件', 'color': col}))}'")
+        seat.append(f"execute if score @s ln_kit matches {k + 1} run " + bar(f"{name}套件：{desc}", col))
+    picks[f"lb_s{i}"] = seat
+# 進關卡時依套件多發的裝備（各章 loadout 呼叫）
+fn("kit_extras", [
+    "give @s[tag=ln_kit_medic] lnai:medkit 2", "give @s[tag=ln_kit_medic] lnai:bandage 4",
+    "give @s[tag=ln_kit_demo] superbwarfare:c4_bomb 2", "give @s[tag=ln_kit_demo] superbwarfare:claymore_mine 2",
+    "give @s[tag=ln_kit_demo] superbwarfare:hand_grenade 2",
+    "give @s[tag=ln_kit_recon] superbwarfare:drone 1", "give @s[tag=ln_kit_recon] superbwarfare:monitor 1",
+    "give @s[tag=ln_kit_recon] superbwarfare:m18_smoke_grenade 2",
+])
+
+# 點擊分派：每個互動實體一個函式，以點的玩家身分執行
+for tag, cmds in picks.items():
+    fn(f"pick/{tag}", cmds)
+fn("picks", [f"execute as @e[tag={t}] if data entity @s interaction on target run function ln:lobby/pick/{t}" for t in picks]
+   + ["execute as @e[tag=lb_pick] run data remove entity @s interaction"])
+
+# ---- 機尾拖靶：跳板外一架發光靶機左右擺動，打中會叮一聲並顯示命中數
+DRONE_Z = O[2] + 70
+DRONE_Y = FY - 1.5
+DX = O[0] + 8.5
+place.append(f"forceload add {O[0] - 8} {DRONE_Z - 10} {O[0] + 24} {DRONE_Z + 6}")
+import math
+drone_move = ["scoreboard players add #dr ln 1", "execute if score #dr ln matches 80.. run scoreboard players set #dr ln 0"]
+for k in range(0, 80, 2):
+    a = 2 * math.pi * k / 80
+    drone_move.append(f"execute if score #dr ln matches {k} run tp @e[tag=lb_drone] {DX + 7 * math.sin(a):.2f} {DRONE_Y + 0.6 * math.sin(2 * a):.2f} {DRONE_Z} 0 0")
+fn("drone_move", drone_move)
+
+
+def part(block, sx, sy, sz, tx, ty, tz):
+    return (f'{{id:"minecraft:block_display",Tags:["ln_lobby","lb_drone_part"],Glowing:1b,glow_color_override:16733525,view_range:4f,'
+            f'brightness:{{sky:15,block:15}},block_state:{{Name:"minecraft:{block}"}},'
+            f'transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[{tx}f,{ty}f,{tz}f],scale:[{sx}f,{sy}f,{sz}f]}}}}')
+
+
+DRONE_PARTS = ",".join([
+    part("white_concrete", 2.0, 0.6, 1.4, -1.0, -1.9, -0.7),          # 機身（亮色，夜空裡看得到）
+    part("orange_concrete", 4.0, 0.15, 0.4, -2.0, -1.5, -0.2),       # 機翼
+    part("shroomlight", 0.45, 0.45, 0.45, -2.2, -1.6, -0.2),          # 翼尖燈
+    part("shroomlight", 0.45, 0.45, 0.45, 1.75, -1.6, -0.2),
+    part("red_concrete", 0.9, 0.9, 0.2, -0.45, -1.85, -0.9),          # 機頭靶心（面向飛機）
+    part("white_concrete", 0.45, 0.45, 0.22, -0.225, -1.625, -0.92),
+])
+fn("drone_spawn", [
+    "kill @e[tag=lb_drone_part]",
+    "execute as @e[tag=lb_drone] run data modify entity @s Size set value 0",
+    "tp @e[tag=lb_drone] ~ -200 ~",
+    "kill @e[tag=lb_drone]",
+    f'summon slime {DX} {DRONE_Y} {DRONE_Z} {{Tags:["ln_lobby","lb_drone"],Size:2,NoAI:1b,NoGravity:1b,Silent:1b,PersistenceRequired:1b,'
+    f'DeathLootTable:"minecraft:empty",Health:1000f,Attributes:[{{Name:"generic.max_health",Base:1000d}}],'
+    f'ActiveEffects:[{{Id:14,Duration:-1,Amplifier:0b,ShowParticles:0b}}],Passengers:[{DRONE_PARTS}]}}',
+])
+fn("drone_hide", [
+    "kill @e[tag=lb_drone_part]",
+    "execute as @e[tag=lb_drone] run data modify entity @s Size set value 0",
+    "tp @e[tag=lb_drone] ~ -200 ~",
+    "kill @e[tag=lb_drone]",
+])
+fn("drone_hit", [
+    "execute on attacker run scoreboard players add @s ln_hits 1",
+    "execute on attacker at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~ 1 1.6",
+    "execute on attacker run title @s actionbar " + json.dumps([{"text": "命中靶機  ", "color": "#8EE07A", "font": FONT},
+                                                               {"score": {"name": "@s", "objective": "ln_hits"}, "color": "#F0E6C8", "font": FONT}],
+                                                              ensure_ascii=False),
+    "particle minecraft:flash ~ ~1 ~ 0 0 0 0 1 force",
+    "data modify entity @s Health set value 1000f",
+])
+place.append(label((O[0] + 8.5, FY + 1.6, O[2] + 48.6), jt({"text": "靶場：射擊機尾外的靶機", "color": "#F0A040"}), "left_rotation:[0f,1f,0f,0f],right_rotation:[0f,0f,0f,1f]", 0.5, []))
+
+# ---- 小隊閒聊：玩家走到小隊旁邊時輪播（每段播完冷卻 60 秒）
+CHAT = json.loads((ROOT / "levels/lobby.json").read_text(encoding="utf-8"))["chatter"]
+SUBC = {"戰車": "E0B050", "白鴉": "7FC8D8", "狐狸": "8CC08C"}
+SQ = (O[0] + 13.5, FY + 1, O[2] + 31)
+
+
+def norm(text):
+    return text.replace("：", ": ").replace("！", "! ").replace("，", ", ").replace("？", "? ")
+
+
+chat = ["execute unless score #ct ln matches 0.. run scoreboard players set #ct ln 0",
+        "execute if score #ccd ln matches 1.. run scoreboard players remove #ccd ln 1",
+        f"execute if score #ct ln matches 0 unless score #ccd ln matches 1.. positioned {SQ[0]} {SQ[1]} {SQ[2]} if entity @a[gamemode=adventure,distance=..6] run function ln:lobby/chat_start",
+        "execute if score #ct ln matches 1.. run scoreboard players add #ct ln 1"]
+for c, conv in enumerate(CHAT, start=1):
+    t = 2
+    for who, text in conv:
+        text = norm(text).strip()
+        dur = max(70, min(240, 40 + len(text) * 5))
+        chat.append(f'execute if score #cv ln matches {c} if score #ct ln matches {t} positioned {SQ[0]} {SQ[1]} {SQ[2]} '
+                    f'run lnhud say @a[distance=..16] {SUBC[who]} {dur} "{who}" {text}')
+        t += max(50, 25 + len(text) * 5)
+    chat.append(f"execute if score #cv ln matches {c} if score #ct ln matches {t + 30}.. run function ln:lobby/chat_end")
+fn("chat_tick", chat)
+fn("chat_start", ["scoreboard players set #ct ln 1", "scoreboard players add #cv ln 1",
+                  f"execute if score #cv ln matches {len(CHAT) + 1}.. run scoreboard players set #cv ln 1"])
+fn("chat_end", ["scoreboard players set #ct ln 0", "scoreboard players set #ccd ln 1200"])
+
+place += ["scoreboard objectives add ln_kit dummy", "scoreboard objectives add ln_hits dummy",
+          "scoreboard players set #ct ln 0", "scoreboard players set #ccd ln 0", "function ln:lobby/refill"]
 
 # ================================================================== 每 tick
 # 雲：機外固定的發射點，每 tick 輪流射出幾團往機尾飛的雲（從擋風玻璃和跳板看得到）
@@ -301,6 +535,12 @@ fn("active", [
     "function ln:lobby/clouds",
     "scoreboard players add #lt ln 1",
     "execute if score #lt ln matches 200.. run function ln:lobby/anims",
+    "execute if score #lt ln matches 200.. run function ln:lobby/refill",
+    f"execute if score #lt ln matches 200.. as @a[gamemode=adventure,{in_lobby()}] run {AMMO_BOX}",
+    "function ln:lobby/picks",
+    "execute if score #lobby ln matches 1 run function ln:lobby/drone_move",
+    "execute as @e[tag=lb_drone,nbt={HurtTime:10s}] at @s run function ln:lobby/drone_hit",
+    "execute if score #lobby ln matches 1 run function ln:lobby/chat_tick",
     "execute if score #lt ln matches 200.. run scoreboard players set #lt ln 0",
     # 按鈕
     "execute as @e[tag=lb_prev] if data entity @s interaction run function ln:lobby/sel_prev",
@@ -342,8 +582,9 @@ fn("help", ["tellraw @s " + jt({"text": "大廳：/function ln:lobby/place（重
 
 # ================================================================== 輸出
 OUT.mkdir(parents=True, exist_ok=True)
-for old in OUT.glob("*.mcfunction"):
+for old in OUT.rglob("*.mcfunction"):
     old.unlink()
 for name, lines in files.items():
+    (OUT / f"{name}.mcfunction").parent.mkdir(parents=True, exist_ok=True)
     (OUT / f"{name}.mcfunction").write_text("# 由 tools/build_lobby.py 自動產生，請勿手動修改\n" + "\n".join(lines) + "\n", encoding="utf-8")
 print(f"大廳：{len(files)} 個函式 → {OUT.relative_to(ROOT)}")

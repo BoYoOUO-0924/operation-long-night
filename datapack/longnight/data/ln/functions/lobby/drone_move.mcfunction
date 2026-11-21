@@ -1,0 +1,43 @@
+# 由 tools/build_lobby.py 自動產生，請勿手動修改
+scoreboard players add #dr ln 1
+execute if score #dr ln matches 80.. run scoreboard players set #dr ln 0
+execute if score #dr ln matches 0 run tp @e[tag=lb_drone] -301.50 270.50 970 0 0
+execute if score #dr ln matches 2 run tp @e[tag=lb_drone] -300.40 270.69 970 0 0
+execute if score #dr ln matches 4 run tp @e[tag=lb_drone] -299.34 270.85 970 0 0
+execute if score #dr ln matches 6 run tp @e[tag=lb_drone] -298.32 270.99 970 0 0
+execute if score #dr ln matches 8 run tp @e[tag=lb_drone] -297.39 271.07 970 0 0
+execute if score #dr ln matches 10 run tp @e[tag=lb_drone] -296.55 271.10 970 0 0
+execute if score #dr ln matches 12 run tp @e[tag=lb_drone] -295.84 271.07 970 0 0
+execute if score #dr ln matches 14 run tp @e[tag=lb_drone] -295.26 270.99 970 0 0
+execute if score #dr ln matches 16 run tp @e[tag=lb_drone] -294.84 270.85 970 0 0
+execute if score #dr ln matches 18 run tp @e[tag=lb_drone] -294.59 270.69 970 0 0
+execute if score #dr ln matches 20 run tp @e[tag=lb_drone] -294.50 270.50 970 0 0
+execute if score #dr ln matches 22 run tp @e[tag=lb_drone] -294.59 270.31 970 0 0
+execute if score #dr ln matches 24 run tp @e[tag=lb_drone] -294.84 270.15 970 0 0
+execute if score #dr ln matches 26 run tp @e[tag=lb_drone] -295.26 270.01 970 0 0
+execute if score #dr ln matches 28 run tp @e[tag=lb_drone] -295.84 269.93 970 0 0
+execute if score #dr ln matches 30 run tp @e[tag=lb_drone] -296.55 269.90 970 0 0
+execute if score #dr ln matches 32 run tp @e[tag=lb_drone] -297.39 269.93 970 0 0
+execute if score #dr ln matches 34 run tp @e[tag=lb_drone] -298.32 270.01 970 0 0
+execute if score #dr ln matches 36 run tp @e[tag=lb_drone] -299.34 270.15 970 0 0
+execute if score #dr ln matches 38 run tp @e[tag=lb_drone] -300.40 270.31 970 0 0
+execute if score #dr ln matches 40 run tp @e[tag=lb_drone] -301.50 270.50 970 0 0
+execute if score #dr ln matches 42 run tp @e[tag=lb_drone] -302.60 270.69 970 0 0
+execute if score #dr ln matches 44 run tp @e[tag=lb_drone] -303.66 270.85 970 0 0
+execute if score #dr ln matches 46 run tp @e[tag=lb_drone] -304.68 270.99 970 0 0
+execute if score #dr ln matches 48 run tp @e[tag=lb_drone] -305.61 271.07 970 0 0
+execute if score #dr ln matches 50 run tp @e[tag=lb_drone] -306.45 271.10 970 0 0
+execute if score #dr ln matches 52 run tp @e[tag=lb_drone] -307.16 271.07 970 0 0
+execute if score #dr ln matches 54 run tp @e[tag=lb_drone] -307.74 270.99 970 0 0
+execute if score #dr ln matches 56 run tp @e[tag=lb_drone] -308.16 270.85 970 0 0
+execute if score #dr ln matches 58 run tp @e[tag=lb_drone] -308.41 270.69 970 0 0
+execute if score #dr ln matches 60 run tp @e[tag=lb_drone] -308.50 270.50 970 0 0
+execute if score #dr ln matches 62 run tp @e[tag=lb_drone] -308.41 270.31 970 0 0
+execute if score #dr ln matches 64 run tp @e[tag=lb_drone] -308.16 270.15 970 0 0
+execute if score #dr ln matches 66 run tp @e[tag=lb_drone] -307.74 270.01 970 0 0
+execute if score #dr ln matches 68 run tp @e[tag=lb_drone] -307.16 269.93 970 0 0
+execute if score #dr ln matches 70 run tp @e[tag=lb_drone] -306.45 269.90 970 0 0
+execute if score #dr ln matches 72 run tp @e[tag=lb_drone] -305.61 269.93 970 0 0
+execute if score #dr ln matches 74 run tp @e[tag=lb_drone] -304.68 270.01 970 0 0
+execute if score #dr ln matches 76 run tp @e[tag=lb_drone] -303.66 270.15 970 0 0
+execute if score #dr ln matches 78 run tp @e[tag=lb_drone] -302.60 270.31 970 0 0

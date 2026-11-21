@@ -185,7 +185,7 @@ public final class Downed {
         if (st == null || st.reviver != null || reviver.distanceTo(t) > REVIVE_RANGE) return;
         st.reviver = reviver.getUUID();
         st.progress = 0;
-        st.progressMax = REVIVE_TICKS;
+        st.progressMax = reviver.getTags().contains("ln_kit_medic") ? REVIVE_TICKS / 2 : REVIVE_TICKS;   // 醫療套件：救人快一倍
         if (st.npc != null) { releaseNpc(st.npc); st.npc = null; st.npcWorking = false; }
     }
 

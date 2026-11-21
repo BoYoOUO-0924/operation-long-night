@@ -481,7 +481,8 @@ setblock ~15 ~1 ~23 black_concrete
 setblock ~16 ~1 ~23 light_gray_concrete
 setblock ~0 ~1 ~24 gray_concrete
 setblock ~1 ~1 ~24 polished_deepslate_wall
-fill ~2 ~1 ~24 ~6 ~1 ~24 air
+setblock ~2 ~1 ~24 barrel[facing=east]
+fill ~3 ~1 ~24 ~6 ~1 ~24 air
 setblock ~7 ~1 ~24 rail[shape=north_south]
 setblock ~8 ~1 ~24 air
 setblock ~9 ~1 ~24 rail[shape=north_south]
@@ -490,8 +491,8 @@ setblock ~15 ~1 ~24 black_concrete
 setblock ~16 ~1 ~24 gray_concrete
 setblock ~0 ~1 ~25 light_gray_concrete
 setblock ~1 ~1 ~25 air
-fill ~2 ~1 ~25 ~3 ~1 ~25 polished_deepslate
-fill ~4 ~1 ~25 ~6 ~1 ~25 air
+setblock ~2 ~1 ~25 barrel[facing=east]
+fill ~3 ~1 ~25 ~6 ~1 ~25 air
 setblock ~7 ~1 ~25 rail[shape=north_south]
 setblock ~8 ~1 ~25 air
 setblock ~9 ~1 ~25 rail[shape=north_south]
@@ -501,8 +502,8 @@ setblock ~15 ~1 ~25 air
 setblock ~16 ~1 ~25 light_gray_concrete
 setblock ~0 ~1 ~26 light_gray_concrete
 setblock ~1 ~1 ~26 air
-fill ~2 ~1 ~26 ~3 ~1 ~26 polished_deepslate
-fill ~4 ~1 ~26 ~6 ~1 ~26 air
+setblock ~2 ~1 ~26 barrel[facing=east]
+fill ~3 ~1 ~26 ~6 ~1 ~26 air
 setblock ~7 ~1 ~26 rail[shape=north_south]
 setblock ~8 ~1 ~26 air
 setblock ~9 ~1 ~26 rail[shape=north_south]
@@ -522,7 +523,9 @@ setblock ~14 ~1 ~27 gray_shulker_box[facing=up]
 setblock ~15 ~1 ~27 polished_deepslate_wall
 setblock ~16 ~1 ~27 light_gray_concrete
 setblock ~0 ~1 ~28 gray_concrete
-fill ~1 ~1 ~28 ~6 ~1 ~28 air
+setblock ~1 ~1 ~28 air
+fill ~2 ~1 ~28 ~3 ~1 ~28 polished_deepslate
+fill ~4 ~1 ~28 ~6 ~1 ~28 air
 setblock ~7 ~1 ~28 rail[shape=north_south]
 setblock ~8 ~1 ~28 air
 setblock ~9 ~1 ~28 rail[shape=north_south]
@@ -804,14 +807,12 @@ setblock ~15 ~2 ~24 polished_deepslate_wall
 setblock ~16 ~2 ~24 gray_concrete
 setblock ~0 ~2 ~25 polished_deepslate
 setblock ~1 ~2 ~25 iron_bars
-fill ~2 ~2 ~25 ~3 ~2 ~25 deepslate_tile_slab[type=bottom]
-fill ~4 ~2 ~25 ~14 ~2 ~25 air
+fill ~2 ~2 ~25 ~14 ~2 ~25 air
 setblock ~15 ~2 ~25 red_concrete
 setblock ~16 ~2 ~25 light_gray_concrete
 setblock ~0 ~2 ~26 polished_deepslate
 setblock ~1 ~2 ~26 iron_bars
-fill ~2 ~2 ~26 ~3 ~2 ~26 deepslate_tile_slab[type=bottom]
-fill ~4 ~2 ~26 ~15 ~2 ~26 air
+fill ~2 ~2 ~26 ~15 ~2 ~26 air
 setblock ~16 ~2 ~26 light_gray_concrete
 setblock ~0 ~2 ~27 polished_deepslate
 setblock ~1 ~2 ~27 iron_bars
@@ -820,7 +821,9 @@ setblock ~14 ~2 ~27 black_shulker_box[facing=up]
 setblock ~15 ~2 ~27 polished_deepslate_wall
 setblock ~16 ~2 ~27 light_gray_concrete
 setblock ~0 ~2 ~28 gray_concrete
-fill ~1 ~2 ~28 ~15 ~2 ~28 air
+setblock ~1 ~2 ~28 air
+fill ~2 ~2 ~28 ~3 ~2 ~28 iron_trapdoor[half=bottom,facing=east,open=false]
+fill ~4 ~2 ~28 ~15 ~2 ~28 air
 setblock ~16 ~2 ~28 gray_concrete
 setblock ~0 ~2 ~29 smooth_stone
 fill ~1 ~2 ~29 ~15 ~2 ~29 air
@@ -2424,13 +2427,6 @@ fill ~-1 ~20 ~47 ~17 ~20 ~47 light_gray_concrete
 data merge block ~12 ~1 ~11 {front_text:{color:"white",has_glowing_text:1b,messages:['""','{"text":"5.56 NATO"}','{"text":"AMMO"}','""']}}
 data merge block ~4 ~1 ~19 {front_text:{color:"white",has_glowing_text:1b,messages:['""','{"text":"7.62x39"}','{"text":"AMMO"}','""']}}
 data merge block ~13 ~1 ~13 {front_text:{color:"white",has_glowing_text:1b,messages:['""','{"text":"12 GA"}','{"text":"AMMO"}','""']}}
-summon item_display ~1.7 ~3.3 ~15.8 {Tags:["ln_lobby_deco"],item:{id:"tacz:modern_kinetic_gun",Count:1b,tag:{GunId:"tacz:m4a1"}},item_display:"fixed",transformation:{left_rotation:[0.7071f,0f,0f,0.7071f],right_rotation:[0f,0.7071f,0f,0.7071f],translation:[0f,0f,0f],scale:[0.9f,0.9f,0.9f]}}
-summon item_display ~1.7 ~3.3 ~17.35 {Tags:["ln_lobby_deco"],item:{id:"tacz:modern_kinetic_gun",Count:1b,tag:{GunId:"tacz:hk416d"}},item_display:"fixed",transformation:{left_rotation:[0.7071f,0f,0f,0.7071f],right_rotation:[0f,0.7071f,0f,0.7071f],translation:[0f,0f,0f],scale:[0.9f,0.9f,0.9f]}}
-summon item_display ~1.7 ~3.3 ~18.900000000000002 {Tags:["ln_lobby_deco"],item:{id:"tacz:modern_kinetic_gun",Count:1b,tag:{GunId:"tacz:ak47"}},item_display:"fixed",transformation:{left_rotation:[0.7071f,0f,0f,0.7071f],right_rotation:[0f,0.7071f,0f,0.7071f],translation:[0f,0f,0f],scale:[0.9f,0.9f,0.9f]}}
-summon item_display ~1.7 ~3.3 ~20.450000000000003 {Tags:["ln_lobby_deco"],item:{id:"tacz:modern_kinetic_gun",Count:1b,tag:{GunId:"tacz:scar_l"}},item_display:"fixed",transformation:{left_rotation:[0.7071f,0f,0f,0.7071f],right_rotation:[0f,0.7071f,0f,0.7071f],translation:[0f,0f,0f],scale:[0.9f,0.9f,0.9f]}}
-summon item_display ~1.7 ~3.3 ~22.0 {Tags:["ln_lobby_deco"],item:{id:"tacz:modern_kinetic_gun",Count:1b,tag:{GunId:"tacz:ai_awp"}},item_display:"fixed",transformation:{left_rotation:[0.7071f,0f,0f,0.7071f],right_rotation:[0f,0.7071f,0f,0.7071f],translation:[0f,0f,0f],scale:[0.9f,0.9f,0.9f]}}
-summon item_display ~1.7 ~3.3 ~23.55 {Tags:["ln_lobby_deco"],item:{id:"tacz:modern_kinetic_gun",Count:1b,tag:{GunId:"tacz:m249"}},item_display:"fixed",transformation:{left_rotation:[0.7071f,0f,0f,0.7071f],right_rotation:[0f,0.7071f,0f,0.7071f],translation:[0f,0f,0f],scale:[0.9f,0.9f,0.9f]}}
-summon item_display ~1.7 ~3.3 ~25.1 {Tags:["ln_lobby_deco"],item:{id:"tacz:modern_kinetic_gun",Count:1b,tag:{GunId:"tacz:m870"}},item_display:"fixed",transformation:{left_rotation:[0.7071f,0f,0f,0.7071f],right_rotation:[0f,0.7071f,0f,0.7071f],translation:[0f,0f,0f],scale:[0.9f,0.9f,0.9f]}}
 summon text_display ~14.45 ~3.25 ~16.5 {Tags:["ln_lobby_deco"],billboard:"fixed",transformation:{left_rotation:[0f,0.7071f,0f,-0.7071f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.2f,1.2f,1.2f]},background:0,text:'{"text":"P1","color":"#7FC8E8","font":"lnai:ui"}'}
 summon text_display ~14.45 ~3.25 ~19.5 {Tags:["ln_lobby_deco"],billboard:"fixed",transformation:{left_rotation:[0f,0.7071f,0f,-0.7071f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.2f,1.2f,1.2f]},background:0,text:'{"text":"P2","color":"#8EE07A","font":"lnai:ui"}'}
 summon text_display ~14.45 ~3.25 ~22.5 {Tags:["ln_lobby_deco"],billboard:"fixed",transformation:{left_rotation:[0f,0.7071f,0f,-0.7071f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.2f,1.2f,1.2f]},background:0,text:'{"text":"P3","color":"#F0A040","font":"lnai:ui"}'}

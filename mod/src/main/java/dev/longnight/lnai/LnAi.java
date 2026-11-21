@@ -39,6 +39,7 @@ public class LnAi {
         MinecraftForge.EVENT_BUS.addListener(CombatEvents::onDeath);
         MinecraftForge.EVENT_BUS.addListener(Heal::onTick);
         MinecraftForge.EVENT_BUS.addListener(HudCommand::register);
+        MinecraftForge.EVENT_BUS.addListener(KitCommand::register);
         MinecraftForge.EVENT_BUS.addListener(HudCommand::onServerTick);
         MinecraftForge.EVENT_BUS.addListener(Cutscenes::onReload);
         MinecraftForge.EVENT_BUS.addListener(Cutscenes::onTick);

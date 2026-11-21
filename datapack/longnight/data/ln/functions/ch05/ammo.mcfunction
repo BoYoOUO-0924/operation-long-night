@@ -1,4 +1,2 @@
 # 由 tools/build_level.py 自動產生，請勿手動修改
-give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:556x45"} 60
-give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:556x45"} 60
-give @a[gamemode=adventure] tacz:ammo{AmmoId:"tacz:9mm"} 34
+lnkit ammo @a[gamemode=adventure] 4 2 add

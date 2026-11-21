@@ -74,6 +74,11 @@ def collect():
             add(s.get("who", ""), s.get("text", ""))
     for d in CFG.get("extra_lines", []):
         add(d["who"], d["text"])
+    lobby = ROOT / "levels/lobby.json"          # 大廳小隊閒聊
+    if lobby.exists():
+        for conv in json.loads(lobby.read_text(encoding="utf-8")).get("chatter", []):
+            for who, text in conv:
+                add(who, text)
     return out
 
 

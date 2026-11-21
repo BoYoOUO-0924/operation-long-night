@@ -15,3 +15,4 @@ setblock -295 276 943 lime_concrete
 fill -308 273 946 -296 273 946 iron_bars
 fill -309 272 949 -295 272 952 air
 fill -309 273 949 -295 273 952 air
+function ln:lobby/drone_spawn

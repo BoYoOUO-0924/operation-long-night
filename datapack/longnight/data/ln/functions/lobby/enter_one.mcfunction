@@ -5,6 +5,10 @@ tag @s add ln_seen
 gamemode adventure @s
 clear @s
 effect clear @s
+lnkit restore @s none none
+lnkit ammo @s 4 2 fill
+function ln:lobby/kit_tags
+scoreboard players set @s ln_hits 0
 team join ln_blue @s
 tp @s -301.5 273 916.5 180 0
 spawnpoint @s -302 273 916

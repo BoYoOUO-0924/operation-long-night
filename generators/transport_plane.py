@@ -146,10 +146,12 @@ for z in (17, 23):                                                 # 座椅區�
     c.set(14, 5, z, "sea_lantern")
 c.set(2, 1, 17, "tacz:gun_smith_table[facing=east]")
 c.box(2, 1, 20, 2, 1, 23, "iron_trapdoor[half=top,facing=east,open=false]")      # 折疊工作台（金屬）
-c.box(2, 1, 25, 3, 1, 26, "polished_deepslate")                    # 補給箱（第二階段：無限配件）
-c.box(2, 2, 25, 3, 2, 26, "deepslate_tile_slab[type=bottom]")
-RACK_GUNS = [(1.7, 3.3, 15.8 + i * 1.55, g) for i, g in enumerate(
-    ["tacz:m4a1", "tacz:hk416d", "tacz:ak47", "tacz:scar_l", "tacz:ai_awp", "tacz:m249", "tacz:m870"])]
+ATT_BARRELS = [(2, 1, 24), (2, 1, 25), (2, 1, 26)]                  # 無限配件補給箱（瞄具／槍口握把／彈匣槍托），內容由 build_lobby.py 補滿
+for (x, y, z) in ATT_BARRELS:
+    c.set(x, y, z, "barrel[facing=east]")
+# 一鍵兵種終端機（軍械庫尾端）：按鈕由 build_lobby.py 放
+c.box(2, 1, 28, 3, 1, 28, "polished_deepslate")
+c.box(2, 2, 28, 3, 2, 28, "iron_trapdoor[half=bottom,facing=east,open=false]")
 
 # ---------------------------------------------------------------- 4. P1～P4 傘兵座椅（右側 x=13..15）
 SEATS = []
@@ -285,10 +287,6 @@ c.box(CX - 9, 20, 42, CX + 9, 20, 47, "light_gray_concrete")       # 水平尾�
 # ---------------------------------------------------------------- 實體裝飾（建造時一起放）
 c.pre += [f"fill ~-26 ~-2 ~{z0} ~42 ~22 ~{z0 + 17} air" for z0 in (-9, 9, 27, 45)]
 c.pre.append("kill @e[tag=ln_lobby_deco]")
-for (x, y, z, gun) in RACK_GUNS:
-    c.post.append(
-        f'summon item_display ~{x} ~{y} ~{z} {{Tags:["ln_lobby_deco"],item:{{id:"tacz:modern_kinetic_gun",Count:1b,tag:{{GunId:"{gun}"}}}},'
-        f'item_display:"fixed",transformation:{{left_rotation:[0.7071f,0f,0f,0.7071f],right_rotation:[0f,0.7071f,0f,0.7071f],translation:[0f,0f,0f],scale:[0.9f,0.9f,0.9f]}}}}')   # 槍管朝上直立
 for i, (x, y, z) in enumerate(SEATS):
     col = ["#7FC8E8", "#8EE07A", "#F0A040", "#C08CF0"][i]
     c.post.append(
@@ -376,6 +374,7 @@ anchors = {
     "ramp_end_z": ORIGIN[2] + 52,
     "tail_z": ORIGIN[2] + Z_TAIL,
     "holo": [a(x, y, z) + [b] for (x, y, z, b) in HOLO],
+    "att_barrels": [a(*b) for b in ATT_BARRELS],
 }
 (ROOT / "generators/out").mkdir(exist_ok=True)
 (ROOT / "generators/out/transport_plane.json").write_text(json.dumps(anchors, ensure_ascii=False, indent=2), encoding="utf-8")

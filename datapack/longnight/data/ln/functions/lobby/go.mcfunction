@@ -17,5 +17,6 @@ fill -309 272 949 -295 272 952 polished_andesite
 fill -309 273 949 -309 273 952 iron_bars
 fill -295 273 949 -295 273 952 iron_bars
 lnhud tint @a 55B01010 30 pulse
+function ln:lobby/drone_hide
 lnhud objective @a 戰鬥紅光：到機尾待命，跳傘燈轉綠就跳
 execute as @a at @s run playsound minecraft:block.piston.contract master @s ~ ~ ~ 1 0.5
