@@ -21,8 +21,9 @@ NAME = "代號：長夜 Operation Long Night"
 FORGE = "forge-47.4.16"
 MC = "1.20.1"
 
-# options.txt 只放跟這張地圖有關的設定（其他畫面、音量設定讓朋友自己調）
-OPTION_KEYS = ("lang", "resourcePacks", "key_key.tacz.", "key_key.lnai.")
+# options.txt 放版本、語言、資源包和「全部」按鍵（含原版與其他模組，大家跟主機一樣）；畫面、音量讓朋友自己調
+OPTION_KEYS = ("version:", "lang:", "resourcePacks:", "key_")
+KEYS_TXT = ROOT / "mod/src/main/resources/assets/lnai/keys.txt"   # 模組第一次啟動時強制套用的按鍵
 
 
 def nbt_servers(name, ip):
@@ -44,6 +45,12 @@ def main():
     ap.add_argument("--ip", default="192.168.31.209:25565", help="伺服器位址（寫進朋友的多人遊戲清單）")
     ap.add_argument("--version", default="0.5.0")
     a = ap.parse_args()
+
+    mine = [l for l in (INST / "options.txt").read_text(encoding="utf-8").splitlines() if l.startswith("key_")]
+    shipped = [l for l in KEYS_TXT.read_text(encoding="utf-8").splitlines() if l.startswith("key_")]
+    if mine != shipped:
+        KEYS_TXT.write_text("# 大家統一的按鍵（tools/make_pack.py 會從開發用實例的 options.txt 更新）" + chr(10) + chr(10).join(mine) + chr(10), encoding="utf-8")
+        raise SystemExit("按鍵設定有變：已更新 keys.txt，請先重新編譯模組（gradlew build）並部署，再執行一次打包。")
 
     out = ROOT / "dist" / f"代號長夜-{a.version}.zip"
     out.parent.mkdir(exist_ok=True)
