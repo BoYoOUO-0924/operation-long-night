@@ -355,5 +355,145 @@
   "style": "normal",
   "clarity": 0.84,
   "heard": "美捷奥斯坦奇亚七号苏联时期的高山气象战"
+ },
+ "ddfcb87d9fef": {
+  "who": "戰車",
+  "text": "這批彈鏈誰裝的？三發就卡一次，回去我要找後勤算帳。",
+  "style": "normal",
+  "clarity": 0.91,
+  "heard": "这批弹链谁装的三发就卡一次回去我要找后勤算账"
+ },
+ "ef9ad4260352": {
+  "who": "狐狸",
+  "text": "你上次也這樣說，結果回去就睡死了。",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "你上次也这样说结果回去就睡死了"
+ },
+ "f72c1e8032e4": {
+  "who": "戰車",
+  "text": "……那次不算。",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "那次不算"
+ },
+ "f73db5d8c5dc": {
+  "who": "狐狸",
+  "text": "白鴉，你那片鏡子再擦下去都要擦穿了。",
+  "style": "normal",
+  "clarity": 0.94,
+  "heard": "白鸭 你那片镜子再擦下去都要擦穿了"
+ },
+ "0a239d5209e6": {
+  "who": "白鴉",
+  "text": "起霧一次，就少一個人回家。",
+  "style": "normal",
+  "clarity": 0.91,
+  "heard": "起屋一次就少一个人回家"
+ },
+ "7b9b04335b40": {
+  "who": "狐狸",
+  "text": "……好啦，你繼續。",
+  "style": "normal",
+  "clarity": 0.8,
+  "heard": "好了,你继续"
+ },
+ "ce8c778069f6": {
+  "who": "狐狸",
+  "text": "腕部終端校準好了，等一下你們的位置我都看得到。",
+  "style": "normal",
+  "clarity": 0.9,
+  "heard": "万步终端校准好了等一下你们的位置我都看得到"
+ },
+ "781da9e0f3db": {
+  "who": "戰車",
+  "text": "所以我上廁所你也看得到？",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "所以我上厕所你也看得到"
+ },
+ "2c52c3499962": {
+  "who": "狐狸",
+  "text": "看得到，而且我會截圖。",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "看得到而且我会截图"
+ },
+ "417613fa2d2c": {
+  "who": "戰車",
+  "text": "隊長，等一下落地你先走，我在後面顧你。",
+  "style": "normal",
+  "clarity": 0.94,
+  "heard": "队长等一下落地你先走我在后面顾你"
+ },
+ "2af1a0ebbe62": {
+  "who": "白鴉",
+  "text": "你看得到的地方，我都看得到。",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "你看得到的地方我都看得到"
+ },
+ "199081257693": {
+  "who": "狐狸",
+  "text": "通訊斷了就照備案走，別逞強喔。",
+  "style": "normal",
+  "clarity": 0.92,
+  "heard": "通讯断了就照备案走别逞强哦"
+ },
+ "c9356aa95b58": {
+  "who": "狐狸",
+  "text": "高度一萬米，外面零下五十度。誰要先跳？",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "高度一萬米 外面零下五十度 誰要先跳"
+ },
+ "baaea235d8e1": {
+  "who": "戰車",
+  "text": "誰最重誰先，傘才不會被壓到。",
+  "style": "normal",
+  "clarity": 0.92,
+  "heard": "谁最重谁先散才不会被压到"
+ },
+ "bc49efc64b79": {
+  "who": "狐狸",
+  "text": "那就是你啊。",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "那就是你啊"
+ },
+ "6bf855b13836": {
+  "who": "白鴉",
+  "text": "我同意。",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "我同意"
+ },
+ "0c3a3c929ac0": {
+  "who": "戰車",
+  "text": "這趟打完，我要吃三碗牛肉麵。",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "这趟打完我要吃三碗牛肉面"
+ },
+ "82ba5cc1aec0": {
+  "who": "狐狸",
+  "text": "你上次說兩碗。",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "你上次说两碗"
+ },
+ "3455fc99c4e1": {
+  "who": "戰車",
+  "text": "上次比較輕鬆。",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "上次比较轻松"
+ },
+ "f3c942fd10f6": {
+  "who": "白鴉",
+  "text": "我請。活著回來的話。",
+  "style": "normal",
+  "clarity": 1.0,
+  "heard": "我请活着回来的话"
  }
 }
