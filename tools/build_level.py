@@ -395,6 +395,7 @@ fn("cleanup", [
     "bossbar set ln:obj visible false",
     "effect clear @a",
     "schedule clear ln:ch05/evdlg/generator_fail_1",
+    "schedule clear ln:ch05/to_lobby",
     "lnhud objective @a",
     "gamerule naturalRegeneration true",
 ])
@@ -563,13 +564,21 @@ fn("to_s7", [*goto(7), "lnhud music @a ch05_after 100", *bossbar("防守成功",
              "kill @e[tag=ln_tech]", "kill @e[tag=ln_mortar]"])
 end7 = dialogue("outro") + 5 * TPS
 fn("s7", ["function ln:ch05/dlg/outro", f"execute if score #t ln matches {end7} run function ln:ch05/finish"])
+# 關卡結束：標題 → 7 秒後畫面淡黑 → 全員回到運輸機大廳（之後戰績牆用 #done5 記錄破關）
 fn("finish", [
     "scoreboard players set #stage ln 0",
+    "scoreboard players set #done5 ln 1",
     "bossbar set ln:obj visible false",
+    "lnhud objective @a",
     "title @a times 20 100 30",
-    f"title @a subtitle {jtext({'text': '感謝遊玩！把感想告訴 Claude 吧', 'color': 'gray'})}",
-    f"title @a title {jtext({'text': '試做關卡完成', 'color': 'gold', 'bold': True})}",
-    f"tellraw @a {jtext({'text': '[長夜] 重玩：/function ln:ch05/start　　中止：/function ln:ch05/stop', 'color': 'gold'})}",
+    f"title @a subtitle {jtext({'text': '任務完成・返回運輸機', 'color': 'gray'})}",
+    f"title @a title {jtext({'text': '第五章　寒霜陷阱', 'color': 'gold', 'bold': True})}",
+    "schedule function ln:ch05/to_lobby 140t replace",
+])
+fn("to_lobby", [
+    "lnhud tint @a FF000000 40",
+    "lnhud music @a stop 50",
+    "schedule function ln:lobby/enter 50t replace",
 ])
 fn("tick", [
     "scoreboard players add #t ln 1",

@@ -12,5 +12,5 @@ scoreboard players set @s ln_hits 0
 team join ln_blue @s
 tp @s -301.5 273 916.5 180 0
 spawnpoint @s -302 273 916
-lnhud tint @s 00000000 0
+lnhud tint @s 00000000 40
 lnhud objective @s 在作戰桌選擇章節，全員按「準備就緒」後出發

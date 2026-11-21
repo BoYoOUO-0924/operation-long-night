@@ -202,7 +202,7 @@ fn("enter_one", [
     "team join ln_blue @s",
     TP_SPAWN,
     f"spawnpoint @s {xyz(SPAWN)}",
-    "lnhud tint @s 00000000 0",
+    "lnhud tint @s 00000000 40",                # 從關卡回來時由黑畫面淡入
     "lnhud objective @s " + "在作戰桌選擇章節，全員按「準備就緒」後出發",
 ])
 

@@ -6,5 +6,6 @@ scoreboard players set #stage ln 0
 bossbar set ln:obj visible false
 effect clear @a
 schedule clear ln:ch05/evdlg/generator_fail_1
+schedule clear ln:ch05/to_lobby
 lnhud objective @a
 gamerule naturalRegeneration true
