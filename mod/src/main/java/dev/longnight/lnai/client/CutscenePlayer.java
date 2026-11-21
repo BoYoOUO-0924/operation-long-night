@@ -334,12 +334,12 @@ public final class CutscenePlayer {
     @SubscribeEvent
     public static void nameTags(RenderNameTagEvent e) { if (playing) e.setResult(Event.Result.DENY); }
 
-    /** 鏡頭衝進玩家眼睛時，不要畫玩家自己的模型（不然會看到頭部模型的內側） */
+    /** 過場中不畫其他真人玩家（他們站在開場位置，會擋住鏡頭）；鏡頭衝進自己眼睛時也不畫自己（不然會看到頭部模型的內側） */
     @SubscribeEvent
     public static void hideSelf(net.minecraftforge.client.event.RenderPlayerEvent.Pre e) {
         Minecraft mc = Minecraft.getInstance();
-        if (!playing || cam == null || e.getEntity() != mc.player) return;
-        if (cam.position().distanceTo(mc.player.getEyePosition()) < 2.5) e.setCanceled(true);
+        if (!playing || cam == null) return;
+        if (e.getEntity() != mc.player || cam.position().distanceTo(mc.player.getEyePosition()) < 2.5) e.setCanceled(true);
     }
 
     // ---------------- 畫面：黑邊、字幕、淡入淡出 ----------------

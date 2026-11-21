@@ -69,7 +69,9 @@ final class Loadout {
     }
 
     static boolean isMelee(ItemStack s) {
-        return s.getItem() instanceof net.minecraft.world.item.SwordItem || s.getItem() instanceof net.minecraft.world.item.AxeItem;
+        if (s.getItem() instanceof net.minecraft.world.item.SwordItem || s.getItem() instanceof net.minecraft.world.item.AxeItem) return true;
+        var id = net.minecraftforge.registries.ForgeRegistries.ITEMS.getKey(s.getItem());
+        return id != null && id.getPath().contains("knife");
     }
 
     static int count(Inventory inv, Predicate<ItemStack> f) {

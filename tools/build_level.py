@@ -272,7 +272,7 @@ for i, (name, (x0, z0, dx, dz)) in enumerate(SECTORS.items()):
     pulse.append(f"execute store result score #q{i} ln if entity @e[tag=ln_enemy,x={x0},y=60,z={z0},dx={dx},dy=160,dz={dz}]")
     parts += [{"text": f"{name} ", "color": "gray"}, {"score": {"name": f"#q{i}", "objective": "ln"}, "color": "yellow"},
               {"text": "　", "color": "gray"}]
-pulse.append(f"execute if entity @e[tag=ln_enemy] run tellraw @a {jtext(parts)}")
+pulse.append(f"execute if entity @e[tag=ln_enemy] run title @a actionbar {jtext(parts)}")   # 動作列，不洗聊天
 fn("dir/pulse", pulse)
 
 # ================================================================== 事件：發電機故障
@@ -391,6 +391,7 @@ fn("cleanup", [
     "lnhud music @a stop 60",
     "lnhud ambient @a stop 60",
     "kill @e[tag=ln]",
+    "lnglass restore",                       # 關卡中被子彈打破的玻璃補回去
     "scoreboard players set #stage ln 0",
     "bossbar set ln:obj visible false",
     "effect clear @a",
@@ -576,6 +577,7 @@ fn("finish", [
     "schedule function ln:ch05/to_lobby 140t replace",
 ])
 fn("to_lobby", [
+    "lnglass restore",
     "lnhud tint @a FF000000 40",
     "lnhud music @a stop 50",
     "schedule function ln:lobby/enter 50t replace",

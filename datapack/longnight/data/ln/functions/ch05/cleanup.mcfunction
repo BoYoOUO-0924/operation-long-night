@@ -2,6 +2,7 @@
 lnhud music @a stop 60
 lnhud ambient @a stop 60
 kill @e[tag=ln]
+lnglass restore
 scoreboard players set #stage ln 0
 bossbar set ln:obj visible false
 effect clear @a

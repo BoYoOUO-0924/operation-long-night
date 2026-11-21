@@ -35,7 +35,7 @@ public final class DialogSubs {
         Font f = Minecraft.getInstance().font;
         int maxW = Math.round(Math.min(w * 0.62f, 420) / SCALE);   // 一行最寬（縮放前）
         g.pose().pushPose();
-        g.pose().translate(w / 2f, h - 62, 0);
+        g.pose().translate(w / 2f, h - 82, 0);   // 底下留給動作列（h-68），兩個不重疊
         g.pose().scale(SCALE, SCALE, 1);
         int y = 0;   // 從最下面一句往上排
         for (int i = LINES.size() - 1; i >= 0; i--) {

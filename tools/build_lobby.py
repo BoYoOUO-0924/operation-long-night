@@ -320,15 +320,14 @@ for i, (gun, name) in enumerate(LONG_GUNS):
 PISTOLS = [("glock_17", "Glock 17"), ("p320", "P320"), ("m1911", "M1911"), ("b93r", "B93R"), ("deagle", "沙漠之鷹")]
 for i, (gun, name) in enumerate(PISTOLS):
     z = 20.3 + i * 0.68
-    place.append(gun_display(W(2.5, 2.08, z), gun, ROT_FLAT, 0.55))
+    place.append(gun_display(W(2.5, 2.08, z), gun, ROT_FLAT, 0.75))
     place.append(button(W(2.5, 1.95, z), 0.6, 0.35, f"lb_h{i}"))
     picks[f"lb_h{i}"] = [f"lnkit gun @s {gun}", AMMO_FILL, DONE_SOUND, bar(f"副武器：{name}")]
-place.append(label(W(2.6, 2.55, 21.7), jt({"text": "手槍", "color": "#F0A040"}), ROT_EAST, 0.4, []))
+place.append(label(W(2.6, 2.75, 21.7), jt({"text": "副武器・手槍", "color": "#F0A040"}), ROT_EAST, 0.6, [], 1711276032))
+place.append(label(W(2.6, 2.45, 21.7), jt({"text": "▼ 點桌上的手槍更換", "color": "#E4E2DA"}), ROT_EAST, 0.4, []))
 
 # ---- 軍刀展示架：戰術刀＋兩種刺刀（刺刀是 TaCZ 配件，裝在步槍槍口）
-KNIVES = [("superbwarfare:knife", "戰術刀", "item replace entity @s hotbar.2 with superbwarfare:knife"),
-          ("tacz:attachment{AttachmentId:\"tacz:bayonet_m9\"}", "M9 刺刀", "give @s tacz:attachment{AttachmentId:\"tacz:bayonet_m9\"}"),
-          ("tacz:attachment{AttachmentId:\"tacz:bayonet_6h3\"}", "6H3 刺刀", "give @s tacz:attachment{AttachmentId:\"tacz:bayonet_6h3\"}")]
+KNIVES = [("superbwarfare:knife", "戰術刀", "item replace entity @s hotbar.2 with superbwarfare:knife")]   # 刺刀是槍口配件，在改槍台裝
 for i, (item, name, cmd) in enumerate(KNIVES):
     z = 15.25 + i * 0.5
     iid, _, itag = item.partition("{")
@@ -337,7 +336,8 @@ for i, (item, name, cmd) in enumerate(KNIVES):
                  f'item_display:"fixed",transformation:{{left_rotation:[0f,0.7071f,0f,0.7071f],right_rotation:[0f,0f,0.3827f,0.9239f],translation:[0f,0f,0f],scale:[0.5f,0.5f,0.5f]}}}}')
     place.append(button(W(2.0, 2.15, z), 0.45, 0.4, f"lb_k{i}"))
     picks[f"lb_k{i}"] = [cmd, DONE_SOUND, bar(f"拿取：{name}")]
-place.append(label(W(2.02, 2.72, 15.75), jt({"text": "軍刀", "color": "#F0A040"}), ROT_EAST, 0.35, []))
+place.append(label(W(2.02, 2.72, 15.4), jt({"text": "軍刀", "color": "#F0A040"}), ROT_EAST, 0.35, []))
+place.append(label(W(2.02, 2.0, 15.75), jt({"text": "刺刀請到改槍台裝", "color": "#9A9890"}), ROT_EAST, 0.28, []))
 
 # ---- 一鍵兵種（軍械庫尾端的終端機）
 CLASSES = [
@@ -390,12 +390,12 @@ kit_tags = [f"tag @s remove {t}" for t in KIT_TAGS] + [f"tag @s[scores={{ln_kit=
 fn("kit_tags", kit_tags)
 for i, (x, y, z) in enumerate(P["seats"]):
     place.append(button((x + 0.6, y + 3.0, z + 0.5), 0.8, 1.0, f"lb_s{i}"))
-    place.append(label((x + 0.4, y + 1.75, z + 0.5), jt({"text": "點背包選套件", "color": "#E4E2DA"}), ROT_WEST, 0.9, [f"lb_kit{i}"], 1711276032))
+    place.append(label((x + 0.4, y + 1.75, z + 0.5), jt({"text": "▲ 點上方背包" + chr(10) + "選戰術套件", "color": "#E4E2DA"}), ROT_WEST, 0.9, [f"lb_kit{i}"], 1711276032))
     seat = ["scoreboard players add @s ln_kit 1", "execute if score @s ln_kit matches 4.. run scoreboard players set @s ln_kit 1",
             "function ln:lobby/kit_tags", "playsound minecraft:item.armor.equip_leather master @s ~ ~ ~ 0.8 1"]
     for k, (name, col, desc) in enumerate(KITS):
         seat.append(f"execute if score @s ln_kit matches {k + 1} run data modify entity @e[tag=lb_kit{i},limit=1] text set value "
-                    f"'{sq(jt({'text': name + '套件', 'color': col}))}'")
+                    f"'{sq(jt({'text': name + '套件', 'color': col}, {'text': chr(10) + '再點背包換下一種', 'color': '#9A9890'}))}'")
         seat.append(f"execute if score @s ln_kit matches {k + 1} run " + bar(f"{name}套件：{desc}", col))
     picks[f"lb_s{i}"] = seat
 # 進關卡時依套件多發的裝備（各章 loadout 呼叫）
