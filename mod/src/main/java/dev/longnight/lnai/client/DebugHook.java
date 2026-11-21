@@ -69,6 +69,12 @@ public final class DebugHook {
                 case "confirm" -> { if (mc.screen instanceof WheelScreen w) w.confirm(); }
                 case "use" -> { KeyMapping.set(mc.options.keyUse.getKey(), true); mc.gameMode.useItem(mc.player, InteractionHand.MAIN_HAND); }
                 case "release" -> KeyMapping.set(mc.options.keyUse.getKey(), false);
+                case "useblock" -> KeyMapping.set(mc.options.keyUse.getKey(), true);   // 按住右鍵（之後用 release 放開）
+                case "refittype" -> {  // 改槍介面切到某一類配件（SCOPE、MUZZLE……）
+                    Class<?> at = Class.forName("com.tacz.guns.api.item.attachment.AttachmentType");
+                    @SuppressWarnings({"unchecked", "rawtypes"}) Object v = Enum.valueOf((Class) at, a[1]);
+                    Class.forName("com.tacz.guns.client.animation.screen.RefitTransform").getMethod("changeRefitScreenView", at).invoke(null, v);
+                }
                 case "look" -> { mc.player.setYRot(Float.parseFloat(a[1])); mc.player.setXRot(Float.parseFloat(a[2])); }
                 case "wait" -> wait = Integer.parseInt(a[1]);
                 case "key", "down", "up" -> {   // 模擬真的鍵盤事件：key = 按一下，down／up = 按住／放開

@@ -177,6 +177,31 @@ public final class Net {
         }
     }
 
+    /** 伺服器 → 玩家：打開改槍介面（玩家點了改槍台） */
+    public record RefitOpen() {
+        void write(FriendlyByteBuf b) {}
+
+        static RefitOpen read(FriendlyByteBuf b) { return new RefitOpen(); }
+
+        void handle(Supplier<NetworkEvent.Context> ctx) {
+            DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> dev.longnight.lnai.client.RefitClient::open);
+            ctx.get().setPacketHandled(true);
+        }
+    }
+
+    /** 玩家 → 伺服器：改槍介面目前選的配件種類（空字串 = 介面關掉了） */
+    public record RefitMsg(String type) {
+        void write(FriendlyByteBuf b) { b.writeUtf(type); }
+
+        static RefitMsg read(FriendlyByteBuf b) { return new RefitMsg(b.readUtf(32)); }
+
+        void handle(Supplier<NetworkEvent.Context> ctx) {
+            ServerPlayer p = ctx.get().getSender();
+            if (p != null) Refit.onClient(p, type.isEmpty() ? null : type);
+            ctx.get().setPacketHandled(true);
+        }
+    }
+
     static void register() {
         int id = 0;
         CH.messageBuilder(Action.class, id++, NetworkDirection.PLAY_TO_SERVER)
@@ -201,6 +226,10 @@ public final class Net {
                 .encoder(DownedSync::write).decoder(DownedSync::read).consumerMainThread((m, c) -> m.handle(c)).add();
         CH.messageBuilder(Revive.class, id++, NetworkDirection.PLAY_TO_SERVER)
                 .encoder(Revive::write).decoder(Revive::read).consumerMainThread((m, c) -> m.handle(c)).add();
+        CH.messageBuilder(RefitOpen.class, id++, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(RefitOpen::write).decoder(RefitOpen::read).consumerMainThread((m, c) -> m.handle(c)).add();
+        CH.messageBuilder(RefitMsg.class, id++, NetworkDirection.PLAY_TO_SERVER)
+                .encoder(RefitMsg::write).decoder(RefitMsg::read).consumerMainThread((m, c) -> m.handle(c)).add();
     }
 
     /** 送給看得到這個實體的所有玩家（含實體自己，如果它是玩家） */

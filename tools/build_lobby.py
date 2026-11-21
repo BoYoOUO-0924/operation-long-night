@@ -376,9 +376,10 @@ refill = []
 for (bx, by, bz), items, name in zip(P["att_barrels"], ATT, ATT_NAMES):
     nbt = ",".join(f'{{Slot:{k}b,id:"tacz:attachment",Count:1b,tag:{{AttachmentId:"tacz:{a}"}}}}' for k, a in enumerate(items))
     refill.append(f"data modify block {bx} {by} {bz} Items set value [{nbt}]")
-    place.append(label((bx + 1.02, by + 0.35, bz + 0.5), jt({"text": name, "color": "#F0E6C8"}), ROT_EAST, 0.4, [], 1711276032))
-fn("refill", refill)
-place.append(label(W(3.05, 2.35, 25.5), jt({"text": "配件補給箱（打開自取）", "color": "#F0A040"}), ROT_EAST, 0.4, []))
+# 改槍台取代了配件補給箱（mod 的 Refit：手持槍點 TaCZ 改槍工作台，自動列出這把槍能裝的配件），木桶只留著當布景
+fn("refill", [f"data remove block {bx} {by} {bz} Items" for (bx, by, bz) in P["att_barrels"]])
+place.append(label(W(3.1, 2.75, 17.5), jt({"text": "改槍台", "color": "#F0A040"}), ROT_EAST, 0.6, [], 1711276032))
+place.append(label(W(3.1, 2.45, 17.5), jt({"text": "手持槍械點工作台", "color": "#E4E2DA"}), ROT_EAST, 0.4, []))
 
 # ---- 戰術套件：點座位上方的背包切換（醫療 → 爆破 → 偵察）
 KITS = [("醫療", "#8EE07A", "急救包 +2、繃帶 +4，救隊友快一倍"),
