@@ -280,6 +280,15 @@ for i in range(48):
 clouds = ["scoreboard players add #cl ln 1", "execute if score #cl ln matches 16.. run scoreboard players set #cl ln 0"]
 for i, (x, y, z) in enumerate(EMIT):
     clouds.append(f"execute if score #cl ln matches {i % 16} run particle minecraft:cloud {x:.1f} {y:.1f} {z:.1f} 0 0 1 1.6 0 force @a")
+# 機鼻前方、兩側翼尖：較密的雲流和白色速度線（end_rod），一律往機尾（+z）高速飛過，每 tick 只多 2 顆
+STREAK = []
+for i in range(16):
+    STREAK.append((O[0] + 8 + rng.uniform(-6, 6), FY + rng.uniform(-1, 9), O[2] - rng.uniform(10, 24), "cloud", 1.2))
+for i in range(16):
+    sx = rng.choice([rng.uniform(-30, -14), rng.uniform(30, 46)])
+    STREAK.append((O[0] + sx, FY + 8 + rng.uniform(-3, 3), O[2] + rng.uniform(0, 18), "end_rod", 2.2))
+for i, (x, y, z, kind, spd) in enumerate(STREAK):
+    clouds.append(f"execute if score #cl ln matches {i % 16} run particle minecraft:{kind} {x:.1f} {y:.1f} {z:.1f} 0 0 1 {spd} 0 force @a")
 fn("clouds", clouds)
 
 fn("tick", [

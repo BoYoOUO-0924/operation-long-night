@@ -512,9 +512,11 @@ public final class Hud {
     static void slots(GuiGraphics g, LocalPlayer p, int w, int h, long now) {
         Inventory inv = p.getInventory();
         StringBuilder sig = new StringBuilder().append(inv.selected);
-        for (int i = 0; i <= Gear.LAST_SLOT; i++) { ItemStack s = inv.getItem(i); sig.append('|').append(s.getItem()).append(s.getCount()); }
-        for (Gear.Med m : Gear.Med.values()) sig.append(ClientInput.count(inv, m));
-        for (Gear.Grenade gr : Gear.Grenade.values()) sig.append(ClientInput.count(inv, gr));
+        boolean any = false;   // 身上什麼都沒有（例如大廳）就不顯示物品欄，不然換任務目標時會跳出一排空格
+        for (int i = 0; i <= Gear.LAST_SLOT; i++) { ItemStack s = inv.getItem(i); sig.append('|').append(s.getItem()).append(s.getCount()); any |= !s.isEmpty(); }
+        for (Gear.Med m : Gear.Med.values()) { int n = ClientInput.count(inv, m); sig.append(n); any |= n > 0; }
+        for (Gear.Grenade gr : Gear.Grenade.values()) { int n = ClientInput.count(inv, gr); sig.append(n); any |= n > 0; }
+        if (!any) { slotSig = sig.toString(); return; }
         if (!sig.toString().equals(slotSig)) { slotSig = sig.toString(); pokeSlots(); }
         if (ClientState.healMed != null || Minecraft.getInstance().screen instanceof WheelScreen) slotsUntil = Math.max(slotsUntil, now + 20);
         if (now > slotsUntil || now < slotsUntil - 200) return;

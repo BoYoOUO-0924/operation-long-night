@@ -137,22 +137,24 @@ for x in range(TABLE[0], TABLE[1] + 1):
 HOLO = [(7, 2, 11, "light_blue_stained_glass"), (8, 2, 11, "light_blue_stained_glass"), (9, 2, 11, "cyan_stained_glass")]
 
 # ---------------------------------------------------------------- 3. 機動軍械庫（左側 x=1..3）
-for z in range(15, 28):
-    c.set(1, 2, z, "polished_blackstone"); c.set(1, 3, z, "polished_blackstone"); c.set(1, 4, z, "polished_blackstone")
+for z in range(15, 28):                                            # 掛槍牆：深板岩底板＋鐵柵欄網格
+    for y in (2, 3, 4):
+        c.set(0, y, z, "polished_deepslate"); c.set(1, y, z, "iron_bars")
 for z in range(15, 28, 3):                                         # 暖琥珀工作燈
     c.set(2, 5, z, "ochre_froglight")
 for z in (17, 23):                                                 # 座椅區的冷色頂燈
     c.set(14, 5, z, "sea_lantern")
 c.set(2, 1, 17, "tacz:gun_smith_table[facing=east]")
-c.box(2, 1, 20, 2, 1, 23, "spruce_trapdoor[half=top,facing=east,open=false]")   # 折疊工作台
-c.box(2, 1, 25, 3, 1, 26, "barrel[facing=up]")                    # 補給箱（第二階段：無限配件）
+c.box(2, 1, 20, 2, 1, 23, "iron_trapdoor[half=top,facing=east,open=false]")      # 折疊工作台（金屬）
+c.box(2, 1, 25, 3, 1, 26, "polished_deepslate")                    # 補給箱（第二階段：無限配件）
+c.box(2, 2, 25, 3, 2, 26, "deepslate_tile_slab[type=bottom]")
 RACK_GUNS = [(1.7, 3.3, 15.8 + i * 1.55, g) for i, g in enumerate(
     ["tacz:m4a1", "tacz:hk416d", "tacz:ak47", "tacz:scar_l", "tacz:ai_awp", "tacz:m249", "tacz:m870"])]
 
 # ---------------------------------------------------------------- 4. P1～P4 傘兵座椅（右側 x=13..15）
 SEATS = []
 for i, z in enumerate((16, 19, 22, 25)):
-    c.set(14, 1, z, "red_nether_brick_stairs[facing=east]")
+    c.set(14, 1, z, "crimson_stairs[facing=east]")
     c.set(15, 2, z, "red_concrete"); c.set(15, 3, z, "black_concrete")
     c.set(15, 1, z - 1, "black_concrete"); c.set(15, 1, z + 1, "black_concrete")
     c.set(15, 4, z, "barrel[facing=west]")                         # 背包架（第二階段：戰術套件）
@@ -303,6 +305,48 @@ for (x, y, z, item) in DASH_FRAMES:
 for z in range(10, Z_TAIL, 4):
     for x in (3, 13):
         c.set(x, 6, z, "light[level=11]") if interior(x, 6, z) else None
+
+# ---------------------------------------------------------------- 傘兵靜力繩：座椅上方一條縱向鍊條，每個座位垂一段鍊子、旁邊掛鉤
+for z in range(15, 28):
+    c.set(13, 6, z, "chain[axis=z]")
+for (x, y, z) in SEATS:
+    c.set(13, 5, z, "chain[axis=y]")
+    c.set(14, 4, z, "tripwire_hook[facing=west,attached=false]")
+
+
+def free(x, y, z):
+    return c.get(x, y, z) in (None, "air")
+
+
+# 地板中線：兩排貨物滾輪軌
+for z in range(14, Z_TAIL):
+    for x in (7, 9):
+        if free(x, 1, z):
+            c.set(x, 1, z, "rail[shape=north_south]")
+# 跳板邊緣黃黑警示線
+for x in range(1, 16):
+    c.set(x, 0, Z_TAIL, "yellow_concrete" if x % 2 else "black_concrete")
+# C 型結構肋骨：每 3 格一圈，下段深板岩牆、上段石階梯（原版沒有平滑石階梯）＋平滑石半磚包住天花板
+LIGHT_Z = {z for (_, _, z) in CEIL_LIGHTS}
+for z in range(9, Z_TAIL, 3):
+    for y in range(1, 8):
+        for x in range(1, 16):
+            if not interior(x, y, z) or not free(x, y, z):
+                continue
+            west, east = not interior(x - 1, y, z), not interior(x + 1, y, z)
+            top = not interior(x, y + 1, z)
+            if y <= 4:
+                if west or east:
+                    c.set(x, y, z, "polished_deepslate_wall")
+            elif west or east:
+                c.set(x, y, z, f"stone_stairs[facing={'west' if west else 'east'},half=top]")
+            elif top and not (x == CX and z in LIGHT_Z):
+                c.set(x, y, z, "smooth_stone_slab[type=top]")
+# 天花板管線：兩條避雷針串起每一道肋骨
+for z in range(Z_BULK + 1, Z_TAIL + 1):
+    for x in (6, 10):
+        if free(x, 7, z) and interior(x, 7, z):
+            c.set(x, 7, z, "lightning_rod[facing=south]")
 
 # ---------------------------------------------------------------- 輸出
 out_fn = ROOT / "datapack/longnight/data/ln/functions/build/transport_plane.mcfunction"

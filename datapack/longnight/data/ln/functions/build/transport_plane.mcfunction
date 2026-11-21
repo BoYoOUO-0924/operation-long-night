@@ -264,11 +264,21 @@ setblock ~12 ~0 ~43 polished_deepslate
 fill ~13 ~0 ~43 ~15 ~0 ~43 polished_andesite
 setblock ~16 ~0 ~43 gray_concrete
 setblock ~0 ~0 ~44 gray_concrete
-fill ~1 ~0 ~44 ~3 ~0 ~44 polished_andesite
-setblock ~4 ~0 ~44 polished_deepslate
-fill ~5 ~0 ~44 ~11 ~0 ~44 polished_andesite
-setblock ~12 ~0 ~44 polished_deepslate
-fill ~13 ~0 ~44 ~15 ~0 ~44 polished_andesite
+setblock ~1 ~0 ~44 yellow_concrete
+setblock ~2 ~0 ~44 black_concrete
+setblock ~3 ~0 ~44 yellow_concrete
+setblock ~4 ~0 ~44 black_concrete
+setblock ~5 ~0 ~44 yellow_concrete
+setblock ~6 ~0 ~44 black_concrete
+setblock ~7 ~0 ~44 yellow_concrete
+setblock ~8 ~0 ~44 black_concrete
+setblock ~9 ~0 ~44 yellow_concrete
+setblock ~10 ~0 ~44 black_concrete
+setblock ~11 ~0 ~44 yellow_concrete
+setblock ~12 ~0 ~44 black_concrete
+setblock ~13 ~0 ~44 yellow_concrete
+setblock ~14 ~0 ~44 black_concrete
+setblock ~15 ~0 ~44 yellow_concrete
 setblock ~16 ~0 ~44 gray_concrete
 setblock ~0 ~0 ~45 gray_concrete
 fill ~1 ~0 ~45 ~15 ~0 ~45 polished_andesite
@@ -324,7 +334,9 @@ fill ~7 ~1 ~8 ~9 ~1 ~8 polished_deepslate_stairs[facing=north]
 fill ~10 ~1 ~8 ~15 ~1 ~8 air
 setblock ~16 ~1 ~8 gray_concrete
 setblock ~0 ~1 ~9 light_gray_concrete
-fill ~1 ~1 ~9 ~15 ~1 ~9 air
+setblock ~1 ~1 ~9 polished_deepslate_wall
+fill ~2 ~1 ~9 ~14 ~1 ~9 air
+setblock ~15 ~1 ~9 polished_deepslate_wall
 setblock ~16 ~1 ~9 light_gray_concrete
 setblock ~0 ~1 ~10 light_gray_concrete
 fill ~1 ~1 ~10 ~2 ~1 ~10 air
@@ -347,11 +359,13 @@ setblock ~13 ~1 ~11 dark_oak_stairs[facing=west,half=top]
 fill ~14 ~1 ~11 ~15 ~1 ~11 air
 setblock ~16 ~1 ~11 light_gray_concrete
 setblock ~0 ~1 ~12 gray_concrete
-fill ~1 ~1 ~12 ~4 ~1 ~12 air
+setblock ~1 ~1 ~12 polished_deepslate_wall
+fill ~2 ~1 ~12 ~4 ~1 ~12 air
 fill ~5 ~1 ~12 ~11 ~1 ~12 polished_blackstone
 setblock ~12 ~1 ~12 air
 setblock ~13 ~1 ~12 gray_shulker_box[facing=up]
-fill ~14 ~1 ~12 ~15 ~1 ~12 air
+setblock ~14 ~1 ~12 air
+setblock ~15 ~1 ~12 polished_deepslate_wall
 setblock ~16 ~1 ~12 gray_concrete
 setblock ~0 ~1 ~13 smooth_stone
 fill ~1 ~1 ~13 ~11 ~1 ~13 air
@@ -361,168 +375,298 @@ setblock ~14 ~1 ~13 dark_oak_stairs[facing=west,half=top]
 setblock ~15 ~1 ~13 air
 setblock ~16 ~1 ~13 light_gray_concrete
 setblock ~0 ~1 ~14 light_gray_concrete
-fill ~1 ~1 ~14 ~10 ~1 ~14 air
+fill ~1 ~1 ~14 ~6 ~1 ~14 air
+setblock ~7 ~1 ~14 rail[shape=north_south]
+setblock ~8 ~1 ~14 air
+setblock ~9 ~1 ~14 rail[shape=north_south]
+setblock ~10 ~1 ~14 air
 setblock ~11 ~1 ~14 iron_trapdoor[facing=west,open=true]
 setblock ~12 ~1 ~14 green_terracotta
 setblock ~13 ~1 ~14 iron_trapdoor[facing=east,open=true]
 fill ~14 ~1 ~14 ~15 ~1 ~14 air
 setblock ~16 ~1 ~14 light_gray_concrete
 setblock ~0 ~1 ~15 light_gray_concrete
-fill ~1 ~1 ~15 ~2 ~1 ~15 air
+setblock ~1 ~1 ~15 polished_deepslate_wall
+setblock ~2 ~1 ~15 air
 setblock ~3 ~1 ~15 green_shulker_box[facing=up]
-fill ~4 ~1 ~15 ~11 ~1 ~15 air
+fill ~4 ~1 ~15 ~6 ~1 ~15 air
+setblock ~7 ~1 ~15 rail[shape=north_south]
+setblock ~8 ~1 ~15 air
+setblock ~9 ~1 ~15 rail[shape=north_south]
+fill ~10 ~1 ~15 ~11 ~1 ~15 air
 setblock ~12 ~1 ~15 iron_trapdoor[facing=south,open=true]
 fill ~13 ~1 ~15 ~14 ~1 ~15 air
 setblock ~15 ~1 ~15 black_concrete
 setblock ~16 ~1 ~15 light_gray_concrete
 setblock ~0 ~1 ~16 gray_concrete
-fill ~1 ~1 ~16 ~13 ~1 ~16 air
-setblock ~14 ~1 ~16 red_nether_brick_stairs[facing=east]
+fill ~1 ~1 ~16 ~6 ~1 ~16 air
+setblock ~7 ~1 ~16 rail[shape=north_south]
+setblock ~8 ~1 ~16 air
+setblock ~9 ~1 ~16 rail[shape=north_south]
+fill ~10 ~1 ~16 ~13 ~1 ~16 air
+setblock ~14 ~1 ~16 crimson_stairs[facing=east]
 setblock ~15 ~1 ~16 air
 setblock ~16 ~1 ~16 gray_concrete
 setblock ~0 ~1 ~17 light_gray_concrete
 setblock ~1 ~1 ~17 air
 setblock ~2 ~1 ~17 tacz:gun_smith_table[facing=east]
-fill ~3 ~1 ~17 ~14 ~1 ~17 air
+fill ~3 ~1 ~17 ~6 ~1 ~17 air
+setblock ~7 ~1 ~17 rail[shape=north_south]
+setblock ~8 ~1 ~17 air
+setblock ~9 ~1 ~17 rail[shape=north_south]
+fill ~10 ~1 ~17 ~14 ~1 ~17 air
 setblock ~15 ~1 ~17 black_concrete
 setblock ~16 ~1 ~17 light_gray_concrete
 setblock ~0 ~1 ~18 light_gray_concrete
-fill ~1 ~1 ~18 ~14 ~1 ~18 air
+setblock ~1 ~1 ~18 polished_deepslate_wall
+fill ~2 ~1 ~18 ~6 ~1 ~18 air
+setblock ~7 ~1 ~18 rail[shape=north_south]
+setblock ~8 ~1 ~18 air
+setblock ~9 ~1 ~18 rail[shape=north_south]
+fill ~10 ~1 ~18 ~14 ~1 ~18 air
 setblock ~15 ~1 ~18 black_concrete
 setblock ~16 ~1 ~18 light_gray_concrete
 setblock ~0 ~1 ~19 light_gray_concrete
 fill ~1 ~1 ~19 ~2 ~1 ~19 air
 setblock ~3 ~1 ~19 dark_oak_stairs[facing=east,half=top]
 setblock ~4 ~1 ~19 dark_oak_wall_sign[facing=east]
-fill ~5 ~1 ~19 ~13 ~1 ~19 air
-setblock ~14 ~1 ~19 red_nether_brick_stairs[facing=east]
+fill ~5 ~1 ~19 ~6 ~1 ~19 air
+setblock ~7 ~1 ~19 rail[shape=north_south]
+setblock ~8 ~1 ~19 air
+setblock ~9 ~1 ~19 rail[shape=north_south]
+fill ~10 ~1 ~19 ~13 ~1 ~19 air
+setblock ~14 ~1 ~19 crimson_stairs[facing=east]
 setblock ~15 ~1 ~19 air
 setblock ~16 ~1 ~19 smooth_stone
 setblock ~0 ~1 ~20 gray_concrete
 setblock ~1 ~1 ~20 air
-setblock ~2 ~1 ~20 spruce_trapdoor[half=top,facing=east,open=false]
-fill ~3 ~1 ~20 ~14 ~1 ~20 air
+setblock ~2 ~1 ~20 iron_trapdoor[half=top,facing=east,open=false]
+fill ~3 ~1 ~20 ~6 ~1 ~20 air
+setblock ~7 ~1 ~20 rail[shape=north_south]
+setblock ~8 ~1 ~20 air
+setblock ~9 ~1 ~20 rail[shape=north_south]
+fill ~10 ~1 ~20 ~14 ~1 ~20 air
 setblock ~15 ~1 ~20 black_concrete
 setblock ~16 ~1 ~20 gray_concrete
 setblock ~0 ~1 ~21 light_gray_concrete
-setblock ~1 ~1 ~21 air
-setblock ~2 ~1 ~21 spruce_trapdoor[half=top,facing=east,open=false]
-fill ~3 ~1 ~21 ~14 ~1 ~21 air
+setblock ~1 ~1 ~21 polished_deepslate_wall
+setblock ~2 ~1 ~21 iron_trapdoor[half=top,facing=east,open=false]
+fill ~3 ~1 ~21 ~6 ~1 ~21 air
+setblock ~7 ~1 ~21 rail[shape=north_south]
+setblock ~8 ~1 ~21 air
+setblock ~9 ~1 ~21 rail[shape=north_south]
+fill ~10 ~1 ~21 ~14 ~1 ~21 air
 setblock ~15 ~1 ~21 black_concrete
 setblock ~16 ~1 ~21 light_gray_concrete
 setblock ~0 ~1 ~22 light_gray_concrete
 setblock ~1 ~1 ~22 air
-setblock ~2 ~1 ~22 spruce_trapdoor[half=top,facing=east,open=false]
-fill ~3 ~1 ~22 ~13 ~1 ~22 air
-setblock ~14 ~1 ~22 red_nether_brick_stairs[facing=east]
+setblock ~2 ~1 ~22 iron_trapdoor[half=top,facing=east,open=false]
+fill ~3 ~1 ~22 ~6 ~1 ~22 air
+setblock ~7 ~1 ~22 rail[shape=north_south]
+setblock ~8 ~1 ~22 air
+setblock ~9 ~1 ~22 rail[shape=north_south]
+fill ~10 ~1 ~22 ~13 ~1 ~22 air
+setblock ~14 ~1 ~22 crimson_stairs[facing=east]
 setblock ~15 ~1 ~22 air
 setblock ~16 ~1 ~22 smooth_stone
 setblock ~0 ~1 ~23 light_gray_concrete
 setblock ~1 ~1 ~23 air
-setblock ~2 ~1 ~23 spruce_trapdoor[half=top,facing=east,open=false]
-fill ~3 ~1 ~23 ~14 ~1 ~23 air
+setblock ~2 ~1 ~23 iron_trapdoor[half=top,facing=east,open=false]
+fill ~3 ~1 ~23 ~6 ~1 ~23 air
+setblock ~7 ~1 ~23 rail[shape=north_south]
+setblock ~8 ~1 ~23 air
+setblock ~9 ~1 ~23 rail[shape=north_south]
+fill ~10 ~1 ~23 ~14 ~1 ~23 air
 setblock ~15 ~1 ~23 black_concrete
 setblock ~16 ~1 ~23 light_gray_concrete
 setblock ~0 ~1 ~24 gray_concrete
-fill ~1 ~1 ~24 ~14 ~1 ~24 air
+setblock ~1 ~1 ~24 polished_deepslate_wall
+fill ~2 ~1 ~24 ~6 ~1 ~24 air
+setblock ~7 ~1 ~24 rail[shape=north_south]
+setblock ~8 ~1 ~24 air
+setblock ~9 ~1 ~24 rail[shape=north_south]
+fill ~10 ~1 ~24 ~14 ~1 ~24 air
 setblock ~15 ~1 ~24 black_concrete
 setblock ~16 ~1 ~24 gray_concrete
 setblock ~0 ~1 ~25 light_gray_concrete
 setblock ~1 ~1 ~25 air
-fill ~2 ~1 ~25 ~3 ~1 ~25 barrel[facing=up]
-fill ~4 ~1 ~25 ~13 ~1 ~25 air
-setblock ~14 ~1 ~25 red_nether_brick_stairs[facing=east]
+fill ~2 ~1 ~25 ~3 ~1 ~25 polished_deepslate
+fill ~4 ~1 ~25 ~6 ~1 ~25 air
+setblock ~7 ~1 ~25 rail[shape=north_south]
+setblock ~8 ~1 ~25 air
+setblock ~9 ~1 ~25 rail[shape=north_south]
+fill ~10 ~1 ~25 ~13 ~1 ~25 air
+setblock ~14 ~1 ~25 crimson_stairs[facing=east]
 setblock ~15 ~1 ~25 air
 setblock ~16 ~1 ~25 light_gray_concrete
 setblock ~0 ~1 ~26 light_gray_concrete
 setblock ~1 ~1 ~26 air
-fill ~2 ~1 ~26 ~3 ~1 ~26 barrel[facing=up]
-fill ~4 ~1 ~26 ~14 ~1 ~26 air
+fill ~2 ~1 ~26 ~3 ~1 ~26 polished_deepslate
+fill ~4 ~1 ~26 ~6 ~1 ~26 air
+setblock ~7 ~1 ~26 rail[shape=north_south]
+setblock ~8 ~1 ~26 air
+setblock ~9 ~1 ~26 rail[shape=north_south]
+fill ~10 ~1 ~26 ~14 ~1 ~26 air
 setblock ~15 ~1 ~26 black_concrete
 setblock ~16 ~1 ~26 light_gray_concrete
 setblock ~0 ~1 ~27 light_gray_concrete
-fill ~1 ~1 ~27 ~2 ~1 ~27 air
+setblock ~1 ~1 ~27 polished_deepslate_wall
+setblock ~2 ~1 ~27 air
 setblock ~3 ~1 ~27 gray_shulker_box[facing=up]
-fill ~4 ~1 ~27 ~13 ~1 ~27 air
+fill ~4 ~1 ~27 ~6 ~1 ~27 air
+setblock ~7 ~1 ~27 rail[shape=north_south]
+setblock ~8 ~1 ~27 air
+setblock ~9 ~1 ~27 rail[shape=north_south]
+fill ~10 ~1 ~27 ~13 ~1 ~27 air
 setblock ~14 ~1 ~27 gray_shulker_box[facing=up]
-setblock ~15 ~1 ~27 air
+setblock ~15 ~1 ~27 polished_deepslate_wall
 setblock ~16 ~1 ~27 light_gray_concrete
 setblock ~0 ~1 ~28 gray_concrete
-fill ~1 ~1 ~28 ~15 ~1 ~28 air
+fill ~1 ~1 ~28 ~6 ~1 ~28 air
+setblock ~7 ~1 ~28 rail[shape=north_south]
+setblock ~8 ~1 ~28 air
+setblock ~9 ~1 ~28 rail[shape=north_south]
+fill ~10 ~1 ~28 ~15 ~1 ~28 air
 setblock ~16 ~1 ~28 gray_concrete
 setblock ~0 ~1 ~29 light_gray_concrete
-fill ~1 ~1 ~29 ~11 ~1 ~29 air
+fill ~1 ~1 ~29 ~6 ~1 ~29 air
+setblock ~7 ~1 ~29 rail[shape=north_south]
+setblock ~8 ~1 ~29 air
+setblock ~9 ~1 ~29 rail[shape=north_south]
+fill ~10 ~1 ~29 ~11 ~1 ~29 air
 setblock ~12 ~1 ~29 spruce_planks
 setblock ~13 ~1 ~29 barrel[facing=up]
 fill ~14 ~1 ~29 ~15 ~1 ~29 air
 setblock ~16 ~1 ~29 light_gray_concrete
 setblock ~0 ~1 ~30 light_gray_concrete
-setblock ~1 ~1 ~30 air
+setblock ~1 ~1 ~30 polished_deepslate_wall
 fill ~2 ~1 ~30 ~5 ~1 ~30 spruce_slab[type=bottom]
-fill ~6 ~1 ~30 ~12 ~1 ~30 air
+setblock ~6 ~1 ~30 air
+setblock ~7 ~1 ~30 rail[shape=north_south]
+setblock ~8 ~1 ~30 air
+setblock ~9 ~1 ~30 rail[shape=north_south]
+fill ~10 ~1 ~30 ~12 ~1 ~30 air
 setblock ~13 ~1 ~30 barrel[facing=up]
-fill ~14 ~1 ~30 ~15 ~1 ~30 air
+setblock ~14 ~1 ~30 air
+setblock ~15 ~1 ~30 polished_deepslate_wall
 setblock ~16 ~1 ~30 light_gray_concrete
 setblock ~0 ~1 ~31 light_gray_concrete
 setblock ~1 ~1 ~31 air
 fill ~2 ~1 ~31 ~5 ~1 ~31 spruce_slab[type=bottom]
-fill ~6 ~1 ~31 ~15 ~1 ~31 air
+setblock ~6 ~1 ~31 air
+setblock ~7 ~1 ~31 rail[shape=north_south]
+setblock ~8 ~1 ~31 air
+setblock ~9 ~1 ~31 rail[shape=north_south]
+fill ~10 ~1 ~31 ~15 ~1 ~31 air
 setblock ~16 ~1 ~31 light_gray_concrete
 setblock ~0 ~1 ~32 gray_concrete
 setblock ~1 ~1 ~32 air
 fill ~2 ~1 ~32 ~5 ~1 ~32 spruce_slab[type=bottom]
-fill ~6 ~1 ~32 ~15 ~1 ~32 air
+setblock ~6 ~1 ~32 air
+setblock ~7 ~1 ~32 rail[shape=north_south]
+setblock ~8 ~1 ~32 air
+setblock ~9 ~1 ~32 rail[shape=north_south]
+fill ~10 ~1 ~32 ~15 ~1 ~32 air
 setblock ~16 ~1 ~32 gray_concrete
 setblock ~0 ~1 ~33 light_gray_concrete
-setblock ~1 ~1 ~33 air
+setblock ~1 ~1 ~33 polished_deepslate_wall
 fill ~2 ~1 ~33 ~5 ~1 ~33 spruce_slab[type=bottom]
-fill ~6 ~1 ~33 ~13 ~1 ~33 air
+setblock ~6 ~1 ~33 air
+setblock ~7 ~1 ~33 rail[shape=north_south]
+setblock ~8 ~1 ~33 air
+setblock ~9 ~1 ~33 rail[shape=north_south]
+fill ~10 ~1 ~33 ~13 ~1 ~33 air
 setblock ~14 ~1 ~33 black_shulker_box[facing=up]
-setblock ~15 ~1 ~33 air
+setblock ~15 ~1 ~33 polished_deepslate_wall
 setblock ~16 ~1 ~33 smooth_stone
 setblock ~0 ~1 ~34 light_gray_concrete
 setblock ~1 ~1 ~34 air
 fill ~2 ~1 ~34 ~5 ~1 ~34 spruce_slab[type=bottom]
-fill ~6 ~1 ~34 ~15 ~1 ~34 air
+setblock ~6 ~1 ~34 air
+setblock ~7 ~1 ~34 rail[shape=north_south]
+setblock ~8 ~1 ~34 air
+setblock ~9 ~1 ~34 rail[shape=north_south]
+fill ~10 ~1 ~34 ~15 ~1 ~34 air
 setblock ~16 ~1 ~34 light_gray_concrete
 setblock ~0 ~1 ~35 light_gray_concrete
 setblock ~1 ~1 ~35 air
 fill ~2 ~1 ~35 ~5 ~1 ~35 spruce_slab[type=bottom]
-fill ~6 ~1 ~35 ~15 ~1 ~35 air
+setblock ~6 ~1 ~35 air
+setblock ~7 ~1 ~35 rail[shape=north_south]
+setblock ~8 ~1 ~35 air
+setblock ~9 ~1 ~35 rail[shape=north_south]
+fill ~10 ~1 ~35 ~15 ~1 ~35 air
 setblock ~16 ~1 ~35 light_gray_concrete
 setblock ~0 ~1 ~36 gray_concrete
-setblock ~1 ~1 ~36 air
+setblock ~1 ~1 ~36 polished_deepslate_wall
 fill ~2 ~1 ~36 ~5 ~1 ~36 spruce_slab[type=bottom]
-fill ~6 ~1 ~36 ~15 ~1 ~36 air
+setblock ~6 ~1 ~36 air
+setblock ~7 ~1 ~36 rail[shape=north_south]
+setblock ~8 ~1 ~36 air
+setblock ~9 ~1 ~36 rail[shape=north_south]
+fill ~10 ~1 ~36 ~14 ~1 ~36 air
+setblock ~15 ~1 ~36 polished_deepslate_wall
 setblock ~16 ~1 ~36 gray_concrete
 setblock ~0 ~1 ~37 light_gray_concrete
 fill ~1 ~1 ~37 ~3 ~1 ~37 air
 setblock ~4 ~1 ~37 iron_trapdoor[facing=north,open=true]
-fill ~5 ~1 ~37 ~15 ~1 ~37 air
+fill ~5 ~1 ~37 ~6 ~1 ~37 air
+setblock ~7 ~1 ~37 rail[shape=north_south]
+setblock ~8 ~1 ~37 air
+setblock ~9 ~1 ~37 rail[shape=north_south]
+fill ~10 ~1 ~37 ~15 ~1 ~37 air
 setblock ~16 ~1 ~37 light_gray_concrete
 setblock ~0 ~1 ~38 light_gray_concrete
 fill ~1 ~1 ~38 ~2 ~1 ~38 air
 setblock ~3 ~1 ~38 iron_trapdoor[facing=west,open=true]
 setblock ~4 ~1 ~38 green_terracotta
 setblock ~5 ~1 ~38 iron_trapdoor[facing=east,open=true]
-fill ~6 ~1 ~38 ~15 ~1 ~38 air
+setblock ~6 ~1 ~38 air
+setblock ~7 ~1 ~38 rail[shape=north_south]
+setblock ~8 ~1 ~38 air
+setblock ~9 ~1 ~38 rail[shape=north_south]
+fill ~10 ~1 ~38 ~15 ~1 ~38 air
 setblock ~16 ~1 ~38 light_gray_concrete
 setblock ~0 ~1 ~39 light_gray_concrete
-fill ~1 ~1 ~39 ~3 ~1 ~39 air
+setblock ~1 ~1 ~39 polished_deepslate_wall
+fill ~2 ~1 ~39 ~3 ~1 ~39 air
 setblock ~4 ~1 ~39 iron_trapdoor[facing=south,open=true]
-fill ~5 ~1 ~39 ~15 ~1 ~39 air
+fill ~5 ~1 ~39 ~6 ~1 ~39 air
+setblock ~7 ~1 ~39 rail[shape=north_south]
+setblock ~8 ~1 ~39 air
+setblock ~9 ~1 ~39 rail[shape=north_south]
+fill ~10 ~1 ~39 ~14 ~1 ~39 air
+setblock ~15 ~1 ~39 polished_deepslate_wall
 setblock ~16 ~1 ~39 light_gray_concrete
 setblock ~0 ~1 ~40 gray_concrete
-fill ~1 ~1 ~40 ~15 ~1 ~40 air
+fill ~1 ~1 ~40 ~6 ~1 ~40 air
+setblock ~7 ~1 ~40 rail[shape=north_south]
+setblock ~8 ~1 ~40 air
+setblock ~9 ~1 ~40 rail[shape=north_south]
+fill ~10 ~1 ~40 ~15 ~1 ~40 air
 setblock ~16 ~1 ~40 gray_concrete
 setblock ~0 ~1 ~41 light_gray_concrete
-fill ~1 ~1 ~41 ~15 ~1 ~41 air
+fill ~1 ~1 ~41 ~6 ~1 ~41 air
+setblock ~7 ~1 ~41 rail[shape=north_south]
+setblock ~8 ~1 ~41 air
+setblock ~9 ~1 ~41 rail[shape=north_south]
+fill ~10 ~1 ~41 ~15 ~1 ~41 air
 setblock ~16 ~1 ~41 light_gray_concrete
 setblock ~0 ~1 ~42 light_gray_concrete
-fill ~1 ~1 ~42 ~15 ~1 ~42 air
+setblock ~1 ~1 ~42 polished_deepslate_wall
+fill ~2 ~1 ~42 ~6 ~1 ~42 air
+setblock ~7 ~1 ~42 rail[shape=north_south]
+setblock ~8 ~1 ~42 air
+setblock ~9 ~1 ~42 rail[shape=north_south]
+fill ~10 ~1 ~42 ~14 ~1 ~42 air
+setblock ~15 ~1 ~42 polished_deepslate_wall
 setblock ~16 ~1 ~42 light_gray_concrete
 setblock ~0 ~1 ~43 light_gray_concrete
-fill ~1 ~1 ~43 ~15 ~1 ~43 air
+fill ~1 ~1 ~43 ~6 ~1 ~43 air
+setblock ~7 ~1 ~43 rail[shape=north_south]
+setblock ~8 ~1 ~43 air
+setblock ~9 ~1 ~43 rail[shape=north_south]
+fill ~10 ~1 ~43 ~15 ~1 ~43 air
 setblock ~16 ~1 ~43 light_gray_concrete
 setblock ~0 ~1 ~44 gray_concrete
 fill ~1 ~1 ~44 ~15 ~1 ~44 air
@@ -586,7 +730,9 @@ setblock ~0 ~2 ~8 gray_concrete
 fill ~1 ~2 ~8 ~15 ~2 ~8 air
 setblock ~16 ~2 ~8 gray_concrete
 setblock ~0 ~2 ~9 light_gray_concrete
-fill ~1 ~2 ~9 ~15 ~2 ~9 air
+setblock ~1 ~2 ~9 polished_deepslate_wall
+fill ~2 ~2 ~9 ~14 ~2 ~9 air
+setblock ~15 ~2 ~9 polished_deepslate_wall
 setblock ~16 ~2 ~9 light_gray_concrete
 setblock ~0 ~2 ~10 light_gray_concrete
 fill ~1 ~2 ~10 ~2 ~2 ~10 air
@@ -597,7 +743,9 @@ setblock ~0 ~2 ~11 light_gray_concrete
 fill ~1 ~2 ~11 ~15 ~2 ~11 air
 setblock ~16 ~2 ~11 light_gray_concrete
 setblock ~0 ~2 ~12 gray_concrete
-fill ~1 ~2 ~12 ~15 ~2 ~12 air
+setblock ~1 ~2 ~12 polished_deepslate_wall
+fill ~2 ~2 ~12 ~14 ~2 ~12 air
+setblock ~15 ~2 ~12 polished_deepslate_wall
 setblock ~16 ~2 ~12 gray_concrete
 setblock ~0 ~2 ~13 light_gray_concrete
 fill ~1 ~2 ~13 ~15 ~2 ~13 air
@@ -607,63 +755,69 @@ fill ~1 ~2 ~14 ~11 ~2 ~14 air
 setblock ~12 ~2 ~14 iron_trapdoor[half=bottom,facing=north,open=false]
 fill ~13 ~2 ~14 ~15 ~2 ~14 air
 setblock ~16 ~2 ~14 light_gray_concrete
-setblock ~0 ~2 ~15 light_gray_concrete
-setblock ~1 ~2 ~15 polished_blackstone
-fill ~2 ~2 ~15 ~15 ~2 ~15 air
+setblock ~0 ~2 ~15 polished_deepslate
+setblock ~1 ~2 ~15 iron_bars
+fill ~2 ~2 ~15 ~14 ~2 ~15 air
+setblock ~15 ~2 ~15 polished_deepslate_wall
 setblock ~16 ~2 ~15 light_gray_concrete
-setblock ~0 ~2 ~16 gray_concrete
-setblock ~1 ~2 ~16 polished_blackstone
+setblock ~0 ~2 ~16 polished_deepslate
+setblock ~1 ~2 ~16 iron_bars
 fill ~2 ~2 ~16 ~14 ~2 ~16 air
 setblock ~15 ~2 ~16 red_concrete
 setblock ~16 ~2 ~16 gray_concrete
-setblock ~0 ~2 ~17 light_gray_concrete
-setblock ~1 ~2 ~17 polished_blackstone
+setblock ~0 ~2 ~17 polished_deepslate
+setblock ~1 ~2 ~17 iron_bars
 fill ~2 ~2 ~17 ~15 ~2 ~17 air
 setblock ~16 ~2 ~17 light_gray_concrete
-setblock ~0 ~2 ~18 light_gray_concrete
-setblock ~1 ~2 ~18 polished_blackstone
-fill ~2 ~2 ~18 ~15 ~2 ~18 air
+setblock ~0 ~2 ~18 polished_deepslate
+setblock ~1 ~2 ~18 iron_bars
+fill ~2 ~2 ~18 ~14 ~2 ~18 air
+setblock ~15 ~2 ~18 polished_deepslate_wall
 setblock ~16 ~2 ~18 light_gray_concrete
-setblock ~0 ~2 ~19 light_gray_concrete
-setblock ~1 ~2 ~19 polished_blackstone
+setblock ~0 ~2 ~19 polished_deepslate
+setblock ~1 ~2 ~19 iron_bars
 fill ~2 ~2 ~19 ~14 ~2 ~19 air
 setblock ~15 ~2 ~19 red_concrete
 setblock ~16 ~2 ~19 light_gray_concrete
-setblock ~0 ~2 ~20 gray_concrete
-setblock ~1 ~2 ~20 polished_blackstone
+setblock ~0 ~2 ~20 polished_deepslate
+setblock ~1 ~2 ~20 iron_bars
 fill ~2 ~2 ~20 ~15 ~2 ~20 air
 setblock ~16 ~2 ~20 gray_concrete
-setblock ~0 ~2 ~21 light_gray_concrete
-setblock ~1 ~2 ~21 polished_blackstone
-fill ~2 ~2 ~21 ~15 ~2 ~21 air
+setblock ~0 ~2 ~21 polished_deepslate
+setblock ~1 ~2 ~21 iron_bars
+fill ~2 ~2 ~21 ~14 ~2 ~21 air
+setblock ~15 ~2 ~21 polished_deepslate_wall
 setblock ~16 ~2 ~21 light_gray_concrete
-setblock ~0 ~2 ~22 light_gray_concrete
-setblock ~1 ~2 ~22 polished_blackstone
+setblock ~0 ~2 ~22 polished_deepslate
+setblock ~1 ~2 ~22 iron_bars
 fill ~2 ~2 ~22 ~14 ~2 ~22 air
 setblock ~15 ~2 ~22 red_concrete
 setblock ~16 ~2 ~22 light_gray_concrete
-setblock ~0 ~2 ~23 light_gray_concrete
-setblock ~1 ~2 ~23 polished_blackstone
+setblock ~0 ~2 ~23 polished_deepslate
+setblock ~1 ~2 ~23 iron_bars
 fill ~2 ~2 ~23 ~15 ~2 ~23 air
 setblock ~16 ~2 ~23 light_gray_concrete
-setblock ~0 ~2 ~24 gray_concrete
-setblock ~1 ~2 ~24 polished_blackstone
-fill ~2 ~2 ~24 ~15 ~2 ~24 air
+setblock ~0 ~2 ~24 polished_deepslate
+setblock ~1 ~2 ~24 iron_bars
+fill ~2 ~2 ~24 ~14 ~2 ~24 air
+setblock ~15 ~2 ~24 polished_deepslate_wall
 setblock ~16 ~2 ~24 gray_concrete
-setblock ~0 ~2 ~25 light_gray_concrete
-setblock ~1 ~2 ~25 polished_blackstone
-fill ~2 ~2 ~25 ~14 ~2 ~25 air
+setblock ~0 ~2 ~25 polished_deepslate
+setblock ~1 ~2 ~25 iron_bars
+fill ~2 ~2 ~25 ~3 ~2 ~25 deepslate_tile_slab[type=bottom]
+fill ~4 ~2 ~25 ~14 ~2 ~25 air
 setblock ~15 ~2 ~25 red_concrete
 setblock ~16 ~2 ~25 light_gray_concrete
-setblock ~0 ~2 ~26 light_gray_concrete
-setblock ~1 ~2 ~26 polished_blackstone
-fill ~2 ~2 ~26 ~15 ~2 ~26 air
+setblock ~0 ~2 ~26 polished_deepslate
+setblock ~1 ~2 ~26 iron_bars
+fill ~2 ~2 ~26 ~3 ~2 ~26 deepslate_tile_slab[type=bottom]
+fill ~4 ~2 ~26 ~15 ~2 ~26 air
 setblock ~16 ~2 ~26 light_gray_concrete
-setblock ~0 ~2 ~27 light_gray_concrete
-setblock ~1 ~2 ~27 polished_blackstone
+setblock ~0 ~2 ~27 polished_deepslate
+setblock ~1 ~2 ~27 iron_bars
 fill ~2 ~2 ~27 ~13 ~2 ~27 air
 setblock ~14 ~2 ~27 black_shulker_box[facing=up]
-setblock ~15 ~2 ~27 air
+setblock ~15 ~2 ~27 polished_deepslate_wall
 setblock ~16 ~2 ~27 light_gray_concrete
 setblock ~0 ~2 ~28 gray_concrete
 fill ~1 ~2 ~28 ~15 ~2 ~28 air
@@ -672,10 +826,11 @@ setblock ~0 ~2 ~29 smooth_stone
 fill ~1 ~2 ~29 ~15 ~2 ~29 air
 setblock ~16 ~2 ~29 light_gray_concrete
 setblock ~0 ~2 ~30 light_gray_concrete
-setblock ~1 ~2 ~30 air
+setblock ~1 ~2 ~30 polished_deepslate_wall
 fill ~2 ~2 ~30 ~3 ~2 ~30 spruce_planks
 setblock ~4 ~2 ~30 chain[axis=x]
-fill ~5 ~2 ~30 ~15 ~2 ~30 air
+fill ~5 ~2 ~30 ~14 ~2 ~30 air
+setblock ~15 ~2 ~30 polished_deepslate_wall
 setblock ~16 ~2 ~30 light_gray_concrete
 setblock ~0 ~2 ~31 light_gray_concrete
 setblock ~1 ~2 ~31 air
@@ -688,11 +843,12 @@ fill ~2 ~2 ~32 ~3 ~2 ~32 spruce_planks
 fill ~4 ~2 ~32 ~15 ~2 ~32 air
 setblock ~16 ~2 ~32 gray_concrete
 setblock ~0 ~2 ~33 light_gray_concrete
-fill ~1 ~2 ~33 ~3 ~2 ~33 air
+setblock ~1 ~2 ~33 polished_deepslate_wall
+fill ~2 ~2 ~33 ~3 ~2 ~33 air
 fill ~4 ~2 ~33 ~5 ~2 ~33 barrel[facing=up]
 fill ~6 ~2 ~33 ~13 ~2 ~33 air
 setblock ~14 ~2 ~33 daylight_detector[inverted=true]
-setblock ~15 ~2 ~33 air
+setblock ~15 ~2 ~33 polished_deepslate_wall
 setblock ~16 ~2 ~33 light_gray_concrete
 setblock ~0 ~2 ~34 light_gray_concrete
 setblock ~1 ~2 ~34 air
@@ -707,11 +863,12 @@ fill ~4 ~2 ~35 ~5 ~2 ~35 barrel[facing=up]
 fill ~6 ~2 ~35 ~15 ~2 ~35 air
 setblock ~16 ~2 ~35 light_gray_concrete
 setblock ~0 ~2 ~36 gray_concrete
-setblock ~1 ~2 ~36 air
+setblock ~1 ~2 ~36 polished_deepslate_wall
 fill ~2 ~2 ~36 ~3 ~2 ~36 green_terracotta
 setblock ~4 ~2 ~36 chain[axis=x]
 setblock ~5 ~2 ~36 barrel[facing=up]
-fill ~6 ~2 ~36 ~15 ~2 ~36 air
+fill ~6 ~2 ~36 ~14 ~2 ~36 air
+setblock ~15 ~2 ~36 polished_deepslate_wall
 setblock ~16 ~2 ~36 gray_concrete
 setblock ~0 ~2 ~37 light_gray_concrete
 fill ~1 ~2 ~37 ~15 ~2 ~37 air
@@ -722,7 +879,9 @@ setblock ~4 ~2 ~38 iron_trapdoor[half=bottom,facing=north,open=false]
 fill ~5 ~2 ~38 ~15 ~2 ~38 air
 setblock ~16 ~2 ~38 light_gray_concrete
 setblock ~0 ~2 ~39 light_gray_concrete
-fill ~1 ~2 ~39 ~15 ~2 ~39 air
+setblock ~1 ~2 ~39 polished_deepslate_wall
+fill ~2 ~2 ~39 ~14 ~2 ~39 air
+setblock ~15 ~2 ~39 polished_deepslate_wall
 setblock ~16 ~2 ~39 smooth_stone
 setblock ~0 ~2 ~40 gray_concrete
 fill ~1 ~2 ~40 ~15 ~2 ~40 air
@@ -731,7 +890,9 @@ setblock ~0 ~2 ~41 light_gray_concrete
 fill ~1 ~2 ~41 ~15 ~2 ~41 air
 setblock ~16 ~2 ~41 light_gray_concrete
 setblock ~0 ~2 ~42 light_gray_concrete
-fill ~1 ~2 ~42 ~15 ~2 ~42 air
+setblock ~1 ~2 ~42 polished_deepslate_wall
+fill ~2 ~2 ~42 ~14 ~2 ~42 air
+setblock ~15 ~2 ~42 polished_deepslate_wall
 setblock ~16 ~2 ~42 light_gray_concrete
 setblock ~0 ~2 ~43 light_gray_concrete
 fill ~1 ~2 ~43 ~15 ~2 ~43 air
@@ -789,7 +950,9 @@ setblock ~0 ~3 ~8 gray_concrete
 fill ~1 ~3 ~8 ~15 ~3 ~8 air
 setblock ~16 ~3 ~8 gray_concrete
 setblock ~0 ~3 ~9 light_gray_concrete
-fill ~1 ~3 ~9 ~15 ~3 ~9 air
+setblock ~1 ~3 ~9 polished_deepslate_wall
+fill ~2 ~3 ~9 ~14 ~3 ~9 air
+setblock ~15 ~3 ~9 polished_deepslate_wall
 setblock ~16 ~3 ~9 light_gray_concrete
 setblock ~-5 ~3 ~10 gray_concrete
 setblock ~0 ~3 ~10 light_gray_concrete
@@ -803,7 +966,9 @@ setblock ~16 ~3 ~11 light_gray_concrete
 fill ~20 ~3 ~11 ~22 ~3 ~11 gray_concrete
 fill ~-6 ~3 ~12 ~-4 ~3 ~12 gray_concrete
 setblock ~0 ~3 ~12 gray_concrete
-fill ~1 ~3 ~12 ~15 ~3 ~12 air
+setblock ~1 ~3 ~12 polished_deepslate_wall
+fill ~2 ~3 ~12 ~14 ~3 ~12 air
+setblock ~15 ~3 ~12 polished_deepslate_wall
 setblock ~16 ~3 ~12 gray_concrete
 fill ~20 ~3 ~12 ~22 ~3 ~12 gray_concrete
 fill ~-6 ~3 ~13 ~-4 ~3 ~13 gray_concrete
@@ -820,16 +985,17 @@ fill ~20 ~3 ~14 ~22 ~3 ~14 gray_concrete
 setblock ~30 ~3 ~14 gray_concrete
 fill ~-15 ~3 ~15 ~-13 ~3 ~15 gray_concrete
 fill ~-6 ~3 ~15 ~-4 ~3 ~15 gray_concrete
-setblock ~0 ~3 ~15 light_gray_concrete
-setblock ~1 ~3 ~15 polished_blackstone
-fill ~2 ~3 ~15 ~15 ~3 ~15 air
+setblock ~0 ~3 ~15 polished_deepslate
+setblock ~1 ~3 ~15 iron_bars
+fill ~2 ~3 ~15 ~14 ~3 ~15 air
+setblock ~15 ~3 ~15 polished_deepslate_wall
 setblock ~16 ~3 ~15 light_gray_concrete
 fill ~20 ~3 ~15 ~22 ~3 ~15 gray_concrete
 fill ~29 ~3 ~15 ~31 ~3 ~15 gray_concrete
 fill ~-15 ~3 ~16 ~-13 ~3 ~16 gray_concrete
 fill ~-6 ~3 ~16 ~-4 ~3 ~16 gray_concrete
-setblock ~0 ~3 ~16 gray_concrete
-setblock ~1 ~3 ~16 polished_blackstone
+setblock ~0 ~3 ~16 polished_deepslate
+setblock ~1 ~3 ~16 iron_bars
 fill ~2 ~3 ~16 ~14 ~3 ~16 air
 setblock ~15 ~3 ~16 black_concrete
 setblock ~16 ~3 ~16 gray_concrete
@@ -837,24 +1003,25 @@ fill ~20 ~3 ~16 ~22 ~3 ~16 gray_concrete
 fill ~29 ~3 ~16 ~31 ~3 ~16 gray_concrete
 fill ~-15 ~3 ~17 ~-13 ~3 ~17 gray_concrete
 fill ~-6 ~3 ~17 ~-4 ~3 ~17 gray_concrete
-setblock ~0 ~3 ~17 light_gray_concrete
-setblock ~1 ~3 ~17 polished_blackstone
+setblock ~0 ~3 ~17 polished_deepslate
+setblock ~1 ~3 ~17 iron_bars
 fill ~2 ~3 ~17 ~15 ~3 ~17 air
 setblock ~16 ~3 ~17 smooth_stone
 fill ~20 ~3 ~17 ~22 ~3 ~17 gray_concrete
 fill ~29 ~3 ~17 ~31 ~3 ~17 gray_concrete
 fill ~-15 ~3 ~18 ~-13 ~3 ~18 gray_concrete
 fill ~-6 ~3 ~18 ~-4 ~3 ~18 gray_concrete
-setblock ~0 ~3 ~18 light_gray_concrete
-setblock ~1 ~3 ~18 polished_blackstone
-fill ~2 ~3 ~18 ~15 ~3 ~18 air
+setblock ~0 ~3 ~18 polished_deepslate
+setblock ~1 ~3 ~18 iron_bars
+fill ~2 ~3 ~18 ~14 ~3 ~18 air
+setblock ~15 ~3 ~18 polished_deepslate_wall
 setblock ~16 ~3 ~18 light_gray_concrete
 fill ~20 ~3 ~18 ~22 ~3 ~18 gray_concrete
 fill ~29 ~3 ~18 ~31 ~3 ~18 gray_concrete
 fill ~-15 ~3 ~19 ~-13 ~3 ~19 gray_concrete
 fill ~-6 ~3 ~19 ~-4 ~3 ~19 gray_concrete
-setblock ~0 ~3 ~19 light_gray_concrete
-setblock ~1 ~3 ~19 polished_blackstone
+setblock ~0 ~3 ~19 polished_deepslate
+setblock ~1 ~3 ~19 iron_bars
 fill ~2 ~3 ~19 ~14 ~3 ~19 air
 setblock ~15 ~3 ~19 black_concrete
 setblock ~16 ~3 ~19 light_gray_concrete
@@ -862,49 +1029,52 @@ fill ~20 ~3 ~19 ~22 ~3 ~19 gray_concrete
 fill ~29 ~3 ~19 ~31 ~3 ~19 gray_concrete
 fill ~-15 ~3 ~20 ~-13 ~3 ~20 gray_concrete
 setblock ~-5 ~3 ~20 polished_blackstone
-setblock ~0 ~3 ~20 gray_concrete
-setblock ~1 ~3 ~20 polished_blackstone
+setblock ~0 ~3 ~20 polished_deepslate
+setblock ~1 ~3 ~20 iron_bars
 fill ~2 ~3 ~20 ~15 ~3 ~20 air
 setblock ~16 ~3 ~20 gray_concrete
 setblock ~21 ~3 ~20 polished_blackstone
 fill ~29 ~3 ~20 ~31 ~3 ~20 gray_concrete
 fill ~-15 ~3 ~21 ~-13 ~3 ~21 gray_concrete
-setblock ~0 ~3 ~21 light_gray_concrete
-setblock ~1 ~3 ~21 polished_blackstone
-fill ~2 ~3 ~21 ~15 ~3 ~21 air
+setblock ~0 ~3 ~21 polished_deepslate
+setblock ~1 ~3 ~21 iron_bars
+fill ~2 ~3 ~21 ~14 ~3 ~21 air
+setblock ~15 ~3 ~21 polished_deepslate_wall
 setblock ~16 ~3 ~21 light_gray_concrete
 fill ~29 ~3 ~21 ~31 ~3 ~21 gray_concrete
 fill ~-15 ~3 ~22 ~-13 ~3 ~22 gray_concrete
-setblock ~0 ~3 ~22 light_gray_concrete
-setblock ~1 ~3 ~22 polished_blackstone
+setblock ~0 ~3 ~22 polished_deepslate
+setblock ~1 ~3 ~22 iron_bars
 fill ~2 ~3 ~22 ~14 ~3 ~22 air
 setblock ~15 ~3 ~22 black_concrete
 setblock ~16 ~3 ~22 smooth_stone
 fill ~29 ~3 ~22 ~31 ~3 ~22 gray_concrete
 fill ~-15 ~3 ~23 ~-13 ~3 ~23 gray_concrete
-setblock ~0 ~3 ~23 smooth_stone
-setblock ~1 ~3 ~23 polished_blackstone
+setblock ~0 ~3 ~23 polished_deepslate
+setblock ~1 ~3 ~23 iron_bars
 fill ~2 ~3 ~23 ~15 ~3 ~23 air
 setblock ~16 ~3 ~23 light_gray_concrete
 fill ~29 ~3 ~23 ~31 ~3 ~23 gray_concrete
 setblock ~-14 ~3 ~24 polished_blackstone
-setblock ~0 ~3 ~24 gray_concrete
-setblock ~1 ~3 ~24 polished_blackstone
-fill ~2 ~3 ~24 ~15 ~3 ~24 air
+setblock ~0 ~3 ~24 polished_deepslate
+setblock ~1 ~3 ~24 iron_bars
+fill ~2 ~3 ~24 ~14 ~3 ~24 air
+setblock ~15 ~3 ~24 polished_deepslate_wall
 setblock ~16 ~3 ~24 gray_concrete
 setblock ~30 ~3 ~24 polished_blackstone
-setblock ~0 ~3 ~25 light_gray_concrete
-setblock ~1 ~3 ~25 polished_blackstone
+setblock ~0 ~3 ~25 polished_deepslate
+setblock ~1 ~3 ~25 iron_bars
 fill ~2 ~3 ~25 ~14 ~3 ~25 air
 setblock ~15 ~3 ~25 black_concrete
 setblock ~16 ~3 ~25 light_gray_concrete
-setblock ~0 ~3 ~26 light_gray_concrete
-setblock ~1 ~3 ~26 polished_blackstone
+setblock ~0 ~3 ~26 polished_deepslate
+setblock ~1 ~3 ~26 iron_bars
 fill ~2 ~3 ~26 ~15 ~3 ~26 air
 setblock ~16 ~3 ~26 light_gray_concrete
-setblock ~0 ~3 ~27 light_gray_concrete
-setblock ~1 ~3 ~27 polished_blackstone
-fill ~2 ~3 ~27 ~15 ~3 ~27 air
+setblock ~0 ~3 ~27 polished_deepslate
+setblock ~1 ~3 ~27 iron_bars
+fill ~2 ~3 ~27 ~14 ~3 ~27 air
+setblock ~15 ~3 ~27 polished_deepslate_wall
 setblock ~16 ~3 ~27 light_gray_concrete
 setblock ~0 ~3 ~28 gray_concrete
 fill ~1 ~3 ~28 ~15 ~3 ~28 air
@@ -913,9 +1083,10 @@ setblock ~0 ~3 ~29 light_gray_concrete
 fill ~1 ~3 ~29 ~15 ~3 ~29 air
 setblock ~16 ~3 ~29 light_gray_concrete
 setblock ~0 ~3 ~30 light_gray_concrete
-setblock ~1 ~3 ~30 air
+setblock ~1 ~3 ~30 polished_deepslate_wall
 fill ~2 ~3 ~30 ~3 ~3 ~30 spruce_planks
-fill ~4 ~3 ~30 ~15 ~3 ~30 air
+fill ~4 ~3 ~30 ~14 ~3 ~30 air
+setblock ~15 ~3 ~30 polished_deepslate_wall
 setblock ~16 ~3 ~30 light_gray_concrete
 setblock ~0 ~3 ~31 light_gray_concrete
 setblock ~1 ~3 ~31 air
@@ -928,7 +1099,9 @@ fill ~2 ~3 ~32 ~3 ~3 ~32 spruce_planks
 fill ~4 ~3 ~32 ~15 ~3 ~32 air
 setblock ~16 ~3 ~32 gray_concrete
 setblock ~0 ~3 ~33 light_gray_concrete
-fill ~1 ~3 ~33 ~15 ~3 ~33 air
+setblock ~1 ~3 ~33 polished_deepslate_wall
+fill ~2 ~3 ~33 ~14 ~3 ~33 air
+setblock ~15 ~3 ~33 polished_deepslate_wall
 setblock ~16 ~3 ~33 smooth_stone
 setblock ~0 ~3 ~34 light_gray_concrete
 fill ~1 ~3 ~34 ~15 ~3 ~34 air
@@ -937,7 +1110,9 @@ setblock ~0 ~3 ~35 light_gray_concrete
 fill ~1 ~3 ~35 ~15 ~3 ~35 air
 setblock ~16 ~3 ~35 light_gray_concrete
 setblock ~0 ~3 ~36 gray_concrete
-fill ~1 ~3 ~36 ~15 ~3 ~36 air
+setblock ~1 ~3 ~36 polished_deepslate_wall
+fill ~2 ~3 ~36 ~14 ~3 ~36 air
+setblock ~15 ~3 ~36 polished_deepslate_wall
 setblock ~16 ~3 ~36 gray_concrete
 setblock ~0 ~3 ~37 light_gray_concrete
 fill ~1 ~3 ~37 ~15 ~3 ~37 air
@@ -946,7 +1121,9 @@ setblock ~0 ~3 ~38 light_gray_concrete
 fill ~1 ~3 ~38 ~15 ~3 ~38 air
 setblock ~16 ~3 ~38 light_gray_concrete
 setblock ~0 ~3 ~39 light_gray_concrete
-fill ~1 ~3 ~39 ~15 ~3 ~39 air
+setblock ~1 ~3 ~39 polished_deepslate_wall
+fill ~2 ~3 ~39 ~14 ~3 ~39 air
+setblock ~15 ~3 ~39 polished_deepslate_wall
 setblock ~16 ~3 ~39 light_gray_concrete
 setblock ~0 ~3 ~40 gray_concrete
 fill ~1 ~3 ~40 ~15 ~3 ~40 air
@@ -955,7 +1132,9 @@ setblock ~0 ~3 ~41 smooth_stone
 fill ~1 ~3 ~41 ~15 ~3 ~41 air
 setblock ~16 ~3 ~41 light_gray_concrete
 setblock ~0 ~3 ~42 light_gray_concrete
-fill ~1 ~3 ~42 ~15 ~3 ~42 air
+setblock ~1 ~3 ~42 polished_deepslate_wall
+fill ~2 ~3 ~42 ~14 ~3 ~42 air
+setblock ~15 ~3 ~42 polished_deepslate_wall
 setblock ~16 ~3 ~42 smooth_stone
 setblock ~0 ~3 ~43 light_gray_concrete
 fill ~1 ~3 ~43 ~15 ~3 ~43 air
@@ -1008,7 +1187,9 @@ setblock ~0 ~4 ~8 gray_concrete
 fill ~1 ~4 ~8 ~15 ~4 ~8 air
 setblock ~16 ~4 ~8 gray_concrete
 setblock ~0 ~4 ~9 light_gray_concrete
-fill ~1 ~4 ~9 ~15 ~4 ~9 air
+setblock ~1 ~4 ~9 polished_deepslate_wall
+fill ~2 ~4 ~9 ~14 ~4 ~9 air
+setblock ~15 ~4 ~9 polished_deepslate_wall
 setblock ~16 ~4 ~9 light_gray_concrete
 fill ~-6 ~4 ~10 ~-4 ~4 ~10 black_concrete
 setblock ~0 ~4 ~10 light_gray_concrete
@@ -1022,7 +1203,9 @@ setblock ~16 ~4 ~11 light_gray_concrete
 fill ~19 ~4 ~11 ~23 ~4 ~11 gray_concrete
 fill ~-7 ~4 ~12 ~-3 ~4 ~12 gray_concrete
 setblock ~0 ~4 ~12 gray_concrete
-fill ~1 ~4 ~12 ~15 ~4 ~12 air
+setblock ~1 ~4 ~12 polished_deepslate_wall
+fill ~2 ~4 ~12 ~14 ~4 ~12 air
+setblock ~15 ~4 ~12 polished_deepslate_wall
 setblock ~16 ~4 ~12 gray_concrete
 fill ~19 ~4 ~12 ~23 ~4 ~12 gray_concrete
 fill ~-7 ~4 ~13 ~-3 ~4 ~13 gray_concrete
@@ -1039,91 +1222,100 @@ fill ~19 ~4 ~14 ~23 ~4 ~14 gray_concrete
 fill ~29 ~4 ~14 ~31 ~4 ~14 black_concrete
 fill ~-16 ~4 ~15 ~-12 ~4 ~15 gray_concrete
 fill ~-7 ~4 ~15 ~-3 ~4 ~15 gray_concrete
-setblock ~0 ~4 ~15 light_gray_concrete
-setblock ~1 ~4 ~15 polished_blackstone
-fill ~2 ~4 ~15 ~15 ~4 ~15 air
+setblock ~0 ~4 ~15 polished_deepslate
+setblock ~1 ~4 ~15 iron_bars
+fill ~2 ~4 ~15 ~14 ~4 ~15 air
+setblock ~15 ~4 ~15 polished_deepslate_wall
 setblock ~16 ~4 ~15 light_gray_concrete
 fill ~19 ~4 ~15 ~23 ~4 ~15 gray_concrete
 fill ~28 ~4 ~15 ~32 ~4 ~15 gray_concrete
 fill ~-16 ~4 ~16 ~-12 ~4 ~16 gray_concrete
 fill ~-7 ~4 ~16 ~-3 ~4 ~16 gray_concrete
-setblock ~0 ~4 ~16 gray_concrete
-setblock ~1 ~4 ~16 polished_blackstone
-fill ~2 ~4 ~16 ~14 ~4 ~16 air
+setblock ~0 ~4 ~16 polished_deepslate
+setblock ~1 ~4 ~16 iron_bars
+fill ~2 ~4 ~16 ~13 ~4 ~16 air
+setblock ~14 ~4 ~16 tripwire_hook[facing=west,attached=false]
 setblock ~15 ~4 ~16 barrel[facing=west]
 setblock ~16 ~4 ~16 gray_concrete
 fill ~19 ~4 ~16 ~23 ~4 ~16 gray_concrete
 fill ~28 ~4 ~16 ~32 ~4 ~16 gray_concrete
 fill ~-16 ~4 ~17 ~-12 ~4 ~17 gray_concrete
 fill ~-7 ~4 ~17 ~-3 ~4 ~17 gray_concrete
-setblock ~0 ~4 ~17 light_gray_concrete
-setblock ~1 ~4 ~17 polished_blackstone
+setblock ~0 ~4 ~17 polished_deepslate
+setblock ~1 ~4 ~17 iron_bars
 fill ~2 ~4 ~17 ~15 ~4 ~17 air
 setblock ~16 ~4 ~17 light_gray_concrete
 fill ~19 ~4 ~17 ~23 ~4 ~17 gray_concrete
 fill ~28 ~4 ~17 ~32 ~4 ~17 gray_concrete
 fill ~-16 ~4 ~18 ~-12 ~4 ~18 gray_concrete
 fill ~-7 ~4 ~18 ~-3 ~4 ~18 gray_concrete
-setblock ~0 ~4 ~18 light_gray_concrete
-setblock ~1 ~4 ~18 polished_blackstone
-fill ~2 ~4 ~18 ~15 ~4 ~18 air
+setblock ~0 ~4 ~18 polished_deepslate
+setblock ~1 ~4 ~18 iron_bars
+fill ~2 ~4 ~18 ~14 ~4 ~18 air
+setblock ~15 ~4 ~18 polished_deepslate_wall
 setblock ~16 ~4 ~18 light_gray_concrete
 fill ~19 ~4 ~18 ~23 ~4 ~18 gray_concrete
 fill ~28 ~4 ~18 ~32 ~4 ~18 gray_concrete
 fill ~-16 ~4 ~19 ~-12 ~4 ~19 gray_concrete
 fill ~-7 ~4 ~19 ~-3 ~4 ~19 gray_concrete
-setblock ~0 ~4 ~19 light_gray_concrete
-setblock ~1 ~4 ~19 polished_blackstone
-fill ~2 ~4 ~19 ~14 ~4 ~19 air
+setblock ~0 ~4 ~19 polished_deepslate
+setblock ~1 ~4 ~19 iron_bars
+fill ~2 ~4 ~19 ~13 ~4 ~19 air
+setblock ~14 ~4 ~19 tripwire_hook[facing=west,attached=false]
 setblock ~15 ~4 ~19 barrel[facing=west]
 setblock ~16 ~4 ~19 light_gray_concrete
 fill ~19 ~4 ~19 ~23 ~4 ~19 gray_concrete
 fill ~28 ~4 ~19 ~32 ~4 ~19 gray_concrete
 fill ~-16 ~4 ~20 ~-12 ~4 ~20 gray_concrete
 fill ~-6 ~4 ~20 ~-4 ~4 ~20 polished_blackstone
-setblock ~0 ~4 ~20 gray_concrete
-setblock ~1 ~4 ~20 polished_blackstone
+setblock ~0 ~4 ~20 polished_deepslate
+setblock ~1 ~4 ~20 iron_bars
 fill ~2 ~4 ~20 ~15 ~4 ~20 air
 setblock ~16 ~4 ~20 gray_concrete
 fill ~20 ~4 ~20 ~22 ~4 ~20 polished_blackstone
 fill ~28 ~4 ~20 ~32 ~4 ~20 gray_concrete
 fill ~-16 ~4 ~21 ~-12 ~4 ~21 gray_concrete
-setblock ~0 ~4 ~21 light_gray_concrete
-setblock ~1 ~4 ~21 polished_blackstone
-fill ~2 ~4 ~21 ~15 ~4 ~21 air
+setblock ~0 ~4 ~21 polished_deepslate
+setblock ~1 ~4 ~21 iron_bars
+fill ~2 ~4 ~21 ~14 ~4 ~21 air
+setblock ~15 ~4 ~21 polished_deepslate_wall
 setblock ~16 ~4 ~21 light_gray_concrete
 fill ~28 ~4 ~21 ~32 ~4 ~21 gray_concrete
 fill ~-16 ~4 ~22 ~-12 ~4 ~22 gray_concrete
-setblock ~0 ~4 ~22 light_gray_concrete
-setblock ~1 ~4 ~22 polished_blackstone
-fill ~2 ~4 ~22 ~14 ~4 ~22 air
+setblock ~0 ~4 ~22 polished_deepslate
+setblock ~1 ~4 ~22 iron_bars
+fill ~2 ~4 ~22 ~13 ~4 ~22 air
+setblock ~14 ~4 ~22 tripwire_hook[facing=west,attached=false]
 setblock ~15 ~4 ~22 barrel[facing=west]
 setblock ~16 ~4 ~22 light_gray_concrete
 fill ~28 ~4 ~22 ~32 ~4 ~22 gray_concrete
 fill ~-16 ~4 ~23 ~-12 ~4 ~23 gray_concrete
-setblock ~0 ~4 ~23 light_gray_concrete
-setblock ~1 ~4 ~23 polished_blackstone
+setblock ~0 ~4 ~23 polished_deepslate
+setblock ~1 ~4 ~23 iron_bars
 fill ~2 ~4 ~23 ~15 ~4 ~23 air
 setblock ~16 ~4 ~23 light_gray_concrete
 fill ~28 ~4 ~23 ~32 ~4 ~23 gray_concrete
 fill ~-15 ~4 ~24 ~-13 ~4 ~24 polished_blackstone
-setblock ~0 ~4 ~24 gray_concrete
-setblock ~1 ~4 ~24 polished_blackstone
-fill ~2 ~4 ~24 ~15 ~4 ~24 air
+setblock ~0 ~4 ~24 polished_deepslate
+setblock ~1 ~4 ~24 iron_bars
+fill ~2 ~4 ~24 ~14 ~4 ~24 air
+setblock ~15 ~4 ~24 polished_deepslate_wall
 setblock ~16 ~4 ~24 gray_concrete
 fill ~29 ~4 ~24 ~31 ~4 ~24 polished_blackstone
-setblock ~0 ~4 ~25 smooth_stone
-setblock ~1 ~4 ~25 polished_blackstone
-fill ~2 ~4 ~25 ~14 ~4 ~25 air
+setblock ~0 ~4 ~25 polished_deepslate
+setblock ~1 ~4 ~25 iron_bars
+fill ~2 ~4 ~25 ~13 ~4 ~25 air
+setblock ~14 ~4 ~25 tripwire_hook[facing=west,attached=false]
 setblock ~15 ~4 ~25 barrel[facing=west]
 setblock ~16 ~4 ~25 light_gray_concrete
-setblock ~0 ~4 ~26 light_gray_concrete
-setblock ~1 ~4 ~26 polished_blackstone
+setblock ~0 ~4 ~26 polished_deepslate
+setblock ~1 ~4 ~26 iron_bars
 fill ~2 ~4 ~26 ~15 ~4 ~26 air
 setblock ~16 ~4 ~26 smooth_stone
-setblock ~0 ~4 ~27 light_gray_concrete
-setblock ~1 ~4 ~27 polished_blackstone
-fill ~2 ~4 ~27 ~15 ~4 ~27 air
+setblock ~0 ~4 ~27 polished_deepslate
+setblock ~1 ~4 ~27 iron_bars
+fill ~2 ~4 ~27 ~14 ~4 ~27 air
+setblock ~15 ~4 ~27 polished_deepslate_wall
 setblock ~16 ~4 ~27 light_gray_concrete
 setblock ~0 ~4 ~28 gray_concrete
 fill ~1 ~4 ~28 ~15 ~4 ~28 air
@@ -1132,7 +1324,9 @@ setblock ~0 ~4 ~29 light_gray_concrete
 fill ~1 ~4 ~29 ~15 ~4 ~29 air
 setblock ~16 ~4 ~29 light_gray_concrete
 setblock ~0 ~4 ~30 light_gray_concrete
-fill ~1 ~4 ~30 ~15 ~4 ~30 air
+setblock ~1 ~4 ~30 polished_deepslate_wall
+fill ~2 ~4 ~30 ~14 ~4 ~30 air
+setblock ~15 ~4 ~30 polished_deepslate_wall
 setblock ~16 ~4 ~30 light_gray_concrete
 setblock ~0 ~4 ~31 light_gray_concrete
 fill ~1 ~4 ~31 ~15 ~4 ~31 air
@@ -1141,7 +1335,9 @@ setblock ~0 ~4 ~32 gray_concrete
 fill ~1 ~4 ~32 ~15 ~4 ~32 air
 setblock ~16 ~4 ~32 gray_concrete
 setblock ~0 ~4 ~33 light_gray_concrete
-fill ~1 ~4 ~33 ~15 ~4 ~33 air
+setblock ~1 ~4 ~33 polished_deepslate_wall
+fill ~2 ~4 ~33 ~14 ~4 ~33 air
+setblock ~15 ~4 ~33 polished_deepslate_wall
 setblock ~16 ~4 ~33 light_gray_concrete
 setblock ~0 ~4 ~34 light_gray_concrete
 fill ~1 ~4 ~34 ~15 ~4 ~34 air
@@ -1150,7 +1346,9 @@ setblock ~0 ~4 ~35 light_gray_concrete
 fill ~1 ~4 ~35 ~15 ~4 ~35 air
 setblock ~16 ~4 ~35 smooth_stone
 setblock ~0 ~4 ~36 gray_concrete
-fill ~1 ~4 ~36 ~15 ~4 ~36 air
+setblock ~1 ~4 ~36 polished_deepslate_wall
+fill ~2 ~4 ~36 ~14 ~4 ~36 air
+setblock ~15 ~4 ~36 polished_deepslate_wall
 setblock ~16 ~4 ~36 gray_concrete
 setblock ~0 ~4 ~37 light_gray_concrete
 fill ~1 ~4 ~37 ~15 ~4 ~37 air
@@ -1159,7 +1357,9 @@ setblock ~0 ~4 ~38 light_gray_concrete
 fill ~1 ~4 ~38 ~15 ~4 ~38 air
 setblock ~16 ~4 ~38 light_gray_concrete
 setblock ~0 ~4 ~39 light_gray_concrete
-fill ~1 ~4 ~39 ~15 ~4 ~39 air
+setblock ~1 ~4 ~39 polished_deepslate_wall
+fill ~2 ~4 ~39 ~14 ~4 ~39 air
+setblock ~15 ~4 ~39 polished_deepslate_wall
 setblock ~16 ~4 ~39 smooth_stone
 setblock ~0 ~4 ~40 gray_concrete
 fill ~1 ~4 ~40 ~15 ~4 ~40 air
@@ -1207,7 +1407,9 @@ fill ~2 ~5 ~8 ~14 ~5 ~8 air
 fill ~15 ~5 ~8 ~16 ~5 ~8 gray_concrete
 setblock ~0 ~5 ~9 smooth_stone
 setblock ~1 ~5 ~9 light_gray_concrete
-fill ~2 ~5 ~9 ~14 ~5 ~9 air
+setblock ~2 ~5 ~9 stone_stairs[facing=west,half=top]
+fill ~3 ~5 ~9 ~13 ~5 ~9 air
+setblock ~14 ~5 ~9 stone_stairs[facing=east,half=top]
 setblock ~15 ~5 ~9 smooth_stone
 setblock ~16 ~5 ~9 light_gray_concrete
 fill ~-6 ~5 ~10 ~-4 ~5 ~10 black_concrete
@@ -1222,7 +1424,9 @@ fill ~15 ~5 ~11 ~16 ~5 ~11 light_gray_concrete
 fill ~19 ~5 ~11 ~23 ~5 ~11 light_gray_concrete
 fill ~-7 ~5 ~12 ~-3 ~5 ~12 light_gray_concrete
 fill ~0 ~5 ~12 ~1 ~5 ~12 gray_concrete
-fill ~2 ~5 ~12 ~14 ~5 ~12 air
+setblock ~2 ~5 ~12 stone_stairs[facing=west,half=top]
+fill ~3 ~5 ~12 ~13 ~5 ~12 air
+setblock ~14 ~5 ~12 stone_stairs[facing=east,half=top]
 fill ~15 ~5 ~12 ~16 ~5 ~12 gray_concrete
 fill ~19 ~5 ~12 ~23 ~5 ~12 light_gray_concrete
 fill ~-7 ~5 ~13 ~-3 ~5 ~13 light_gray_concrete
@@ -1241,14 +1445,16 @@ fill ~-16 ~5 ~15 ~-12 ~5 ~15 light_gray_concrete
 fill ~-7 ~5 ~15 ~-3 ~5 ~15 light_gray_concrete
 fill ~0 ~5 ~15 ~1 ~5 ~15 light_gray_concrete
 setblock ~2 ~5 ~15 ochre_froglight
-fill ~3 ~5 ~15 ~14 ~5 ~15 air
+fill ~3 ~5 ~15 ~13 ~5 ~15 air
+setblock ~14 ~5 ~15 stone_stairs[facing=east,half=top]
 fill ~15 ~5 ~15 ~16 ~5 ~15 light_gray_concrete
 fill ~19 ~5 ~15 ~23 ~5 ~15 light_gray_concrete
 fill ~28 ~5 ~15 ~32 ~5 ~15 light_gray_concrete
 fill ~-16 ~5 ~16 ~-12 ~5 ~16 light_gray_concrete
 fill ~-7 ~5 ~16 ~-3 ~5 ~16 light_gray_concrete
 fill ~0 ~5 ~16 ~1 ~5 ~16 gray_concrete
-fill ~2 ~5 ~16 ~13 ~5 ~16 air
+fill ~2 ~5 ~16 ~12 ~5 ~16 air
+setblock ~13 ~5 ~16 chain[axis=y]
 setblock ~14 ~5 ~16 iron_trapdoor[half=top,facing=west,open=false]
 fill ~15 ~5 ~16 ~16 ~5 ~16 gray_concrete
 fill ~19 ~5 ~16 ~23 ~5 ~16 light_gray_concrete
@@ -1266,7 +1472,8 @@ fill ~-16 ~5 ~18 ~-12 ~5 ~18 light_gray_concrete
 fill ~-7 ~5 ~18 ~-3 ~5 ~18 light_gray_concrete
 fill ~0 ~5 ~18 ~1 ~5 ~18 light_gray_concrete
 setblock ~2 ~5 ~18 ochre_froglight
-fill ~3 ~5 ~18 ~14 ~5 ~18 air
+fill ~3 ~5 ~18 ~13 ~5 ~18 air
+setblock ~14 ~5 ~18 stone_stairs[facing=east,half=top]
 setblock ~15 ~5 ~18 smooth_stone
 setblock ~16 ~5 ~18 light_gray_concrete
 fill ~19 ~5 ~18 ~23 ~5 ~18 light_gray_concrete
@@ -1274,7 +1481,8 @@ fill ~28 ~5 ~18 ~32 ~5 ~18 light_gray_concrete
 fill ~-16 ~5 ~19 ~-12 ~5 ~19 light_gray_concrete
 fill ~-7 ~5 ~19 ~-3 ~5 ~19 light_gray_concrete
 fill ~0 ~5 ~19 ~1 ~5 ~19 light_gray_concrete
-fill ~2 ~5 ~19 ~13 ~5 ~19 air
+fill ~2 ~5 ~19 ~12 ~5 ~19 air
+setblock ~13 ~5 ~19 chain[axis=y]
 setblock ~14 ~5 ~19 iron_trapdoor[half=top,facing=west,open=false]
 fill ~15 ~5 ~19 ~16 ~5 ~19 light_gray_concrete
 fill ~19 ~5 ~19 ~23 ~5 ~19 light_gray_concrete
@@ -1289,13 +1497,15 @@ fill ~28 ~5 ~20 ~32 ~5 ~20 light_gray_concrete
 fill ~-16 ~5 ~21 ~-12 ~5 ~21 light_gray_concrete
 fill ~0 ~5 ~21 ~1 ~5 ~21 light_gray_concrete
 setblock ~2 ~5 ~21 ochre_froglight
-fill ~3 ~5 ~21 ~14 ~5 ~21 air
+fill ~3 ~5 ~21 ~13 ~5 ~21 air
+setblock ~14 ~5 ~21 stone_stairs[facing=east,half=top]
 fill ~15 ~5 ~21 ~16 ~5 ~21 light_gray_concrete
 fill ~28 ~5 ~21 ~32 ~5 ~21 light_gray_concrete
 fill ~-16 ~5 ~22 ~-12 ~5 ~22 light_gray_concrete
 setblock ~0 ~5 ~22 smooth_stone
 setblock ~1 ~5 ~22 light_gray_concrete
-fill ~2 ~5 ~22 ~13 ~5 ~22 air
+fill ~2 ~5 ~22 ~12 ~5 ~22 air
+setblock ~13 ~5 ~22 chain[axis=y]
 setblock ~14 ~5 ~22 iron_trapdoor[half=top,facing=west,open=false]
 setblock ~15 ~5 ~22 smooth_stone
 setblock ~16 ~5 ~22 light_gray_concrete
@@ -1309,12 +1519,14 @@ fill ~28 ~5 ~23 ~32 ~5 ~23 light_gray_concrete
 fill ~-15 ~5 ~24 ~-13 ~5 ~24 polished_blackstone
 fill ~0 ~5 ~24 ~1 ~5 ~24 gray_concrete
 setblock ~2 ~5 ~24 ochre_froglight
-fill ~3 ~5 ~24 ~14 ~5 ~24 air
+fill ~3 ~5 ~24 ~13 ~5 ~24 air
+setblock ~14 ~5 ~24 stone_stairs[facing=east,half=top]
 fill ~15 ~5 ~24 ~16 ~5 ~24 gray_concrete
 fill ~29 ~5 ~24 ~31 ~5 ~24 polished_blackstone
 setblock ~0 ~5 ~25 smooth_stone
 setblock ~1 ~5 ~25 light_gray_concrete
-fill ~2 ~5 ~25 ~13 ~5 ~25 air
+fill ~2 ~5 ~25 ~12 ~5 ~25 air
+setblock ~13 ~5 ~25 chain[axis=y]
 setblock ~14 ~5 ~25 iron_trapdoor[half=top,facing=west,open=false]
 fill ~15 ~5 ~25 ~16 ~5 ~25 light_gray_concrete
 fill ~0 ~5 ~26 ~1 ~5 ~26 light_gray_concrete
@@ -1322,7 +1534,8 @@ fill ~2 ~5 ~26 ~14 ~5 ~26 air
 fill ~15 ~5 ~26 ~16 ~5 ~26 light_gray_concrete
 fill ~0 ~5 ~27 ~1 ~5 ~27 light_gray_concrete
 setblock ~2 ~5 ~27 ochre_froglight
-fill ~3 ~5 ~27 ~14 ~5 ~27 air
+fill ~3 ~5 ~27 ~13 ~5 ~27 air
+setblock ~14 ~5 ~27 stone_stairs[facing=east,half=top]
 fill ~15 ~5 ~27 ~16 ~5 ~27 light_gray_concrete
 fill ~0 ~5 ~28 ~1 ~5 ~28 gray_concrete
 fill ~2 ~5 ~28 ~14 ~5 ~28 air
@@ -1332,7 +1545,9 @@ setblock ~1 ~5 ~29 light_gray_concrete
 fill ~2 ~5 ~29 ~14 ~5 ~29 air
 fill ~15 ~5 ~29 ~16 ~5 ~29 light_gray_concrete
 fill ~0 ~5 ~30 ~1 ~5 ~30 light_gray_concrete
-fill ~2 ~5 ~30 ~14 ~5 ~30 air
+setblock ~2 ~5 ~30 stone_stairs[facing=west,half=top]
+fill ~3 ~5 ~30 ~13 ~5 ~30 air
+setblock ~14 ~5 ~30 stone_stairs[facing=east,half=top]
 fill ~15 ~5 ~30 ~16 ~5 ~30 light_gray_concrete
 setblock ~0 ~5 ~31 smooth_stone
 setblock ~1 ~5 ~31 light_gray_concrete
@@ -1342,7 +1557,9 @@ fill ~0 ~5 ~32 ~1 ~5 ~32 gray_concrete
 fill ~2 ~5 ~32 ~14 ~5 ~32 air
 fill ~15 ~5 ~32 ~16 ~5 ~32 gray_concrete
 fill ~0 ~5 ~33 ~1 ~5 ~33 light_gray_concrete
-fill ~2 ~5 ~33 ~14 ~5 ~33 air
+setblock ~2 ~5 ~33 stone_stairs[facing=west,half=top]
+fill ~3 ~5 ~33 ~13 ~5 ~33 air
+setblock ~14 ~5 ~33 stone_stairs[facing=east,half=top]
 fill ~15 ~5 ~33 ~16 ~5 ~33 light_gray_concrete
 fill ~0 ~5 ~34 ~1 ~5 ~34 light_gray_concrete
 fill ~2 ~5 ~34 ~14 ~5 ~34 air
@@ -1352,7 +1569,9 @@ fill ~2 ~5 ~35 ~14 ~5 ~35 air
 setblock ~15 ~5 ~35 light_gray_concrete
 setblock ~16 ~5 ~35 smooth_stone
 fill ~0 ~5 ~36 ~1 ~5 ~36 gray_concrete
-fill ~2 ~5 ~36 ~14 ~5 ~36 air
+setblock ~2 ~5 ~36 stone_stairs[facing=west,half=top]
+fill ~3 ~5 ~36 ~13 ~5 ~36 air
+setblock ~14 ~5 ~36 stone_stairs[facing=east,half=top]
 fill ~15 ~5 ~36 ~16 ~5 ~36 gray_concrete
 fill ~0 ~5 ~37 ~1 ~5 ~37 light_gray_concrete
 fill ~2 ~5 ~37 ~14 ~5 ~37 air
@@ -1362,7 +1581,9 @@ fill ~0 ~5 ~38 ~1 ~5 ~38 light_gray_concrete
 fill ~2 ~5 ~38 ~14 ~5 ~38 air
 fill ~15 ~5 ~38 ~16 ~5 ~38 smooth_stone
 fill ~0 ~5 ~39 ~1 ~5 ~39 light_gray_concrete
-fill ~2 ~5 ~39 ~14 ~5 ~39 air
+setblock ~2 ~5 ~39 stone_stairs[facing=west,half=top]
+fill ~3 ~5 ~39 ~13 ~5 ~39 air
+setblock ~14 ~5 ~39 stone_stairs[facing=east,half=top]
 fill ~15 ~5 ~39 ~16 ~5 ~39 light_gray_concrete
 fill ~0 ~5 ~40 ~1 ~5 ~40 gray_concrete
 fill ~2 ~5 ~40 ~14 ~5 ~40 air
@@ -1372,7 +1593,9 @@ fill ~2 ~5 ~41 ~14 ~5 ~41 air
 setblock ~15 ~5 ~41 smooth_stone
 setblock ~16 ~5 ~41 light_gray_concrete
 fill ~0 ~5 ~42 ~1 ~5 ~42 light_gray_concrete
-fill ~2 ~5 ~42 ~14 ~5 ~42 air
+setblock ~2 ~5 ~42 stone_stairs[facing=west,half=top]
+fill ~3 ~5 ~42 ~13 ~5 ~42 air
+setblock ~14 ~5 ~42 stone_stairs[facing=east,half=top]
 fill ~15 ~5 ~42 ~16 ~5 ~42 light_gray_concrete
 fill ~0 ~5 ~43 ~1 ~5 ~43 light_gray_concrete
 fill ~2 ~5 ~43 ~14 ~5 ~43 air
@@ -1414,7 +1637,11 @@ fill ~1 ~6 ~8 ~2 ~6 ~8 gray_concrete
 fill ~3 ~6 ~8 ~13 ~6 ~8 air
 fill ~14 ~6 ~8 ~15 ~6 ~8 gray_concrete
 fill ~1 ~6 ~9 ~2 ~6 ~9 light_gray_concrete
-fill ~3 ~6 ~9 ~13 ~6 ~9 air
+setblock ~3 ~6 ~9 stone_stairs[facing=west,half=top]
+setblock ~4 ~6 ~9 smooth_stone_slab[type=top]
+fill ~5 ~6 ~9 ~11 ~6 ~9 air
+setblock ~12 ~6 ~9 smooth_stone_slab[type=top]
+setblock ~13 ~6 ~9 stone_stairs[facing=east,half=top]
 fill ~14 ~6 ~9 ~15 ~6 ~9 light_gray_concrete
 setblock ~-5 ~6 ~10 gray_concrete
 setblock ~1 ~6 ~10 light_gray_concrete
@@ -1431,7 +1658,11 @@ fill ~14 ~6 ~11 ~15 ~6 ~11 light_gray_concrete
 fill ~20 ~6 ~11 ~22 ~6 ~11 light_gray_concrete
 fill ~-6 ~6 ~12 ~-4 ~6 ~12 light_gray_concrete
 fill ~1 ~6 ~12 ~2 ~6 ~12 gray_concrete
-fill ~3 ~6 ~12 ~13 ~6 ~12 air
+setblock ~3 ~6 ~12 stone_stairs[facing=west,half=top]
+setblock ~4 ~6 ~12 smooth_stone_slab[type=top]
+fill ~5 ~6 ~12 ~11 ~6 ~12 air
+setblock ~12 ~6 ~12 smooth_stone_slab[type=top]
+setblock ~13 ~6 ~12 stone_stairs[facing=east,half=top]
 fill ~14 ~6 ~12 ~15 ~6 ~12 gray_concrete
 fill ~20 ~6 ~12 ~22 ~6 ~12 light_gray_concrete
 fill ~-6 ~6 ~13 ~-4 ~6 ~13 light_gray_concrete
@@ -1451,14 +1682,19 @@ setblock ~30 ~6 ~14 gray_concrete
 fill ~-15 ~6 ~15 ~-13 ~6 ~15 light_gray_concrete
 fill ~-6 ~6 ~15 ~-4 ~6 ~15 light_gray_concrete
 fill ~1 ~6 ~15 ~2 ~6 ~15 light_gray_concrete
-fill ~3 ~6 ~15 ~13 ~6 ~15 air
+setblock ~3 ~6 ~15 stone_stairs[facing=west,half=top]
+setblock ~4 ~6 ~15 smooth_stone_slab[type=top]
+fill ~5 ~6 ~15 ~11 ~6 ~15 air
+setblock ~12 ~6 ~15 smooth_stone_slab[type=top]
+setblock ~13 ~6 ~15 chain[axis=z]
 fill ~14 ~6 ~15 ~15 ~6 ~15 light_gray_concrete
 fill ~20 ~6 ~15 ~22 ~6 ~15 light_gray_concrete
 fill ~29 ~6 ~15 ~31 ~6 ~15 light_gray_concrete
 fill ~-15 ~6 ~16 ~-13 ~6 ~16 light_gray_concrete
 fill ~-6 ~6 ~16 ~-4 ~6 ~16 light_gray_concrete
 fill ~1 ~6 ~16 ~2 ~6 ~16 gray_concrete
-fill ~3 ~6 ~16 ~13 ~6 ~16 air
+fill ~3 ~6 ~16 ~12 ~6 ~16 air
+setblock ~13 ~6 ~16 chain[axis=z]
 fill ~14 ~6 ~16 ~15 ~6 ~16 gray_concrete
 fill ~20 ~6 ~16 ~22 ~6 ~16 light_gray_concrete
 fill ~29 ~6 ~16 ~31 ~6 ~16 light_gray_concrete
@@ -1466,7 +1702,8 @@ fill ~-15 ~6 ~17 ~-13 ~6 ~17 light_gray_concrete
 fill ~-6 ~6 ~17 ~-4 ~6 ~17 light_gray_concrete
 setblock ~1 ~6 ~17 smooth_stone
 setblock ~2 ~6 ~17 light_gray_concrete
-fill ~3 ~6 ~17 ~13 ~6 ~17 air
+fill ~3 ~6 ~17 ~12 ~6 ~17 air
+setblock ~13 ~6 ~17 chain[axis=z]
 fill ~14 ~6 ~17 ~15 ~6 ~17 light_gray_concrete
 fill ~20 ~6 ~17 ~22 ~6 ~17 light_gray_concrete
 fill ~29 ~6 ~17 ~31 ~6 ~17 light_gray_concrete
@@ -1475,15 +1712,18 @@ fill ~-6 ~6 ~18 ~-4 ~6 ~18 light_gray_concrete
 setblock ~1 ~6 ~18 smooth_stone
 setblock ~2 ~6 ~18 light_gray_concrete
 setblock ~3 ~6 ~18 light[level=11]
-fill ~4 ~6 ~18 ~12 ~6 ~18 air
-setblock ~13 ~6 ~18 light[level=11]
+setblock ~4 ~6 ~18 smooth_stone_slab[type=top]
+fill ~5 ~6 ~18 ~11 ~6 ~18 air
+setblock ~12 ~6 ~18 smooth_stone_slab[type=top]
+setblock ~13 ~6 ~18 chain[axis=z]
 fill ~14 ~6 ~18 ~15 ~6 ~18 light_gray_concrete
 fill ~20 ~6 ~18 ~22 ~6 ~18 light_gray_concrete
 fill ~29 ~6 ~18 ~31 ~6 ~18 light_gray_concrete
 fill ~-15 ~6 ~19 ~-13 ~6 ~19 light_gray_concrete
 fill ~-6 ~6 ~19 ~-4 ~6 ~19 light_gray_concrete
 fill ~1 ~6 ~19 ~2 ~6 ~19 light_gray_concrete
-fill ~3 ~6 ~19 ~13 ~6 ~19 air
+fill ~3 ~6 ~19 ~12 ~6 ~19 air
+setblock ~13 ~6 ~19 chain[axis=z]
 setblock ~14 ~6 ~19 light_gray_concrete
 setblock ~15 ~6 ~19 smooth_stone
 fill ~20 ~6 ~19 ~22 ~6 ~19 light_gray_concrete
@@ -1491,13 +1731,18 @@ fill ~29 ~6 ~19 ~31 ~6 ~19 light_gray_concrete
 fill ~-15 ~6 ~20 ~-13 ~6 ~20 light_gray_concrete
 setblock ~-5 ~6 ~20 polished_blackstone
 fill ~1 ~6 ~20 ~2 ~6 ~20 gray_concrete
-fill ~3 ~6 ~20 ~13 ~6 ~20 air
+fill ~3 ~6 ~20 ~12 ~6 ~20 air
+setblock ~13 ~6 ~20 chain[axis=z]
 fill ~14 ~6 ~20 ~15 ~6 ~20 gray_concrete
 setblock ~21 ~6 ~20 polished_blackstone
 fill ~29 ~6 ~20 ~31 ~6 ~20 light_gray_concrete
 fill ~-15 ~6 ~21 ~-13 ~6 ~21 light_gray_concrete
 fill ~1 ~6 ~21 ~2 ~6 ~21 light_gray_concrete
-fill ~3 ~6 ~21 ~13 ~6 ~21 air
+setblock ~3 ~6 ~21 stone_stairs[facing=west,half=top]
+setblock ~4 ~6 ~21 smooth_stone_slab[type=top]
+fill ~5 ~6 ~21 ~11 ~6 ~21 air
+setblock ~12 ~6 ~21 smooth_stone_slab[type=top]
+setblock ~13 ~6 ~21 chain[axis=z]
 setblock ~14 ~6 ~21 light_gray_concrete
 setblock ~15 ~6 ~21 smooth_stone
 fill ~29 ~6 ~21 ~31 ~6 ~21 light_gray_concrete
@@ -1505,31 +1750,41 @@ fill ~-15 ~6 ~22 ~-13 ~6 ~22 light_gray_concrete
 fill ~1 ~6 ~22 ~2 ~6 ~22 light_gray_concrete
 setblock ~3 ~6 ~22 light[level=11]
 fill ~4 ~6 ~22 ~12 ~6 ~22 air
-setblock ~13 ~6 ~22 light[level=11]
+setblock ~13 ~6 ~22 chain[axis=z]
 setblock ~14 ~6 ~22 smooth_stone
 setblock ~15 ~6 ~22 light_gray_concrete
 fill ~29 ~6 ~22 ~31 ~6 ~22 light_gray_concrete
 fill ~-15 ~6 ~23 ~-13 ~6 ~23 light_gray_concrete
 fill ~1 ~6 ~23 ~2 ~6 ~23 light_gray_concrete
-fill ~3 ~6 ~23 ~13 ~6 ~23 air
+fill ~3 ~6 ~23 ~12 ~6 ~23 air
+setblock ~13 ~6 ~23 chain[axis=z]
 fill ~14 ~6 ~23 ~15 ~6 ~23 light_gray_concrete
 fill ~29 ~6 ~23 ~31 ~6 ~23 light_gray_concrete
 setblock ~-14 ~6 ~24 polished_blackstone
 fill ~1 ~6 ~24 ~2 ~6 ~24 gray_concrete
-fill ~3 ~6 ~24 ~13 ~6 ~24 air
+setblock ~3 ~6 ~24 stone_stairs[facing=west,half=top]
+setblock ~4 ~6 ~24 smooth_stone_slab[type=top]
+fill ~5 ~6 ~24 ~11 ~6 ~24 air
+setblock ~12 ~6 ~24 smooth_stone_slab[type=top]
+setblock ~13 ~6 ~24 chain[axis=z]
 fill ~14 ~6 ~24 ~15 ~6 ~24 gray_concrete
 setblock ~30 ~6 ~24 polished_blackstone
 fill ~1 ~6 ~25 ~2 ~6 ~25 light_gray_concrete
-fill ~3 ~6 ~25 ~13 ~6 ~25 air
+fill ~3 ~6 ~25 ~12 ~6 ~25 air
+setblock ~13 ~6 ~25 chain[axis=z]
 fill ~14 ~6 ~25 ~15 ~6 ~25 light_gray_concrete
 fill ~1 ~6 ~26 ~2 ~6 ~26 light_gray_concrete
 setblock ~3 ~6 ~26 light[level=11]
 fill ~4 ~6 ~26 ~12 ~6 ~26 air
-setblock ~13 ~6 ~26 light[level=11]
+setblock ~13 ~6 ~26 chain[axis=z]
 setblock ~14 ~6 ~26 smooth_stone
 setblock ~15 ~6 ~26 light_gray_concrete
 fill ~1 ~6 ~27 ~2 ~6 ~27 light_gray_concrete
-fill ~3 ~6 ~27 ~13 ~6 ~27 air
+setblock ~3 ~6 ~27 stone_stairs[facing=west,half=top]
+setblock ~4 ~6 ~27 smooth_stone_slab[type=top]
+fill ~5 ~6 ~27 ~11 ~6 ~27 air
+setblock ~12 ~6 ~27 smooth_stone_slab[type=top]
+setblock ~13 ~6 ~27 chain[axis=z]
 fill ~14 ~6 ~27 ~15 ~6 ~27 light_gray_concrete
 fill ~1 ~6 ~28 ~2 ~6 ~28 gray_concrete
 fill ~3 ~6 ~28 ~13 ~6 ~28 air
@@ -1539,7 +1794,9 @@ fill ~3 ~6 ~29 ~13 ~6 ~29 air
 fill ~14 ~6 ~29 ~15 ~6 ~29 light_gray_concrete
 fill ~1 ~6 ~30 ~2 ~6 ~30 light_gray_concrete
 setblock ~3 ~6 ~30 light[level=11]
-fill ~4 ~6 ~30 ~12 ~6 ~30 air
+setblock ~4 ~6 ~30 smooth_stone_slab[type=top]
+fill ~5 ~6 ~30 ~11 ~6 ~30 air
+setblock ~12 ~6 ~30 smooth_stone_slab[type=top]
 setblock ~13 ~6 ~30 light[level=11]
 fill ~14 ~6 ~30 ~15 ~6 ~30 light_gray_concrete
 setblock ~1 ~6 ~31 smooth_stone
@@ -1551,7 +1808,11 @@ fill ~1 ~6 ~32 ~2 ~6 ~32 gray_concrete
 fill ~3 ~6 ~32 ~13 ~6 ~32 air
 fill ~14 ~6 ~32 ~15 ~6 ~32 gray_concrete
 fill ~1 ~6 ~33 ~2 ~6 ~33 light_gray_concrete
-fill ~3 ~6 ~33 ~13 ~6 ~33 air
+setblock ~3 ~6 ~33 stone_stairs[facing=west,half=top]
+setblock ~4 ~6 ~33 smooth_stone_slab[type=top]
+fill ~5 ~6 ~33 ~11 ~6 ~33 air
+setblock ~12 ~6 ~33 smooth_stone_slab[type=top]
+setblock ~13 ~6 ~33 stone_stairs[facing=east,half=top]
 fill ~14 ~6 ~33 ~15 ~6 ~33 light_gray_concrete
 fill ~1 ~6 ~34 ~2 ~6 ~34 light_gray_concrete
 setblock ~3 ~6 ~34 light[level=11]
@@ -1563,7 +1824,11 @@ setblock ~2 ~6 ~35 light_gray_concrete
 fill ~3 ~6 ~35 ~13 ~6 ~35 air
 fill ~14 ~6 ~35 ~15 ~6 ~35 light_gray_concrete
 fill ~1 ~6 ~36 ~2 ~6 ~36 gray_concrete
-fill ~3 ~6 ~36 ~13 ~6 ~36 air
+setblock ~3 ~6 ~36 stone_stairs[facing=west,half=top]
+setblock ~4 ~6 ~36 smooth_stone_slab[type=top]
+fill ~5 ~6 ~36 ~11 ~6 ~36 air
+setblock ~12 ~6 ~36 smooth_stone_slab[type=top]
+setblock ~13 ~6 ~36 stone_stairs[facing=east,half=top]
 fill ~14 ~6 ~36 ~15 ~6 ~36 gray_concrete
 setblock ~1 ~6 ~37 light_gray_concrete
 setblock ~2 ~6 ~37 smooth_stone
@@ -1575,7 +1840,11 @@ fill ~4 ~6 ~38 ~12 ~6 ~38 air
 setblock ~13 ~6 ~38 light[level=11]
 fill ~14 ~6 ~38 ~15 ~6 ~38 light_gray_concrete
 fill ~1 ~6 ~39 ~2 ~6 ~39 light_gray_concrete
-fill ~3 ~6 ~39 ~13 ~6 ~39 air
+setblock ~3 ~6 ~39 stone_stairs[facing=west,half=top]
+setblock ~4 ~6 ~39 smooth_stone_slab[type=top]
+fill ~5 ~6 ~39 ~11 ~6 ~39 air
+setblock ~12 ~6 ~39 smooth_stone_slab[type=top]
+setblock ~13 ~6 ~39 stone_stairs[facing=east,half=top]
 setblock ~14 ~6 ~39 smooth_stone
 setblock ~15 ~6 ~39 light_gray_concrete
 fill ~1 ~6 ~40 ~2 ~6 ~40 gray_concrete
@@ -1587,7 +1856,9 @@ fill ~3 ~6 ~41 ~13 ~6 ~41 air
 fill ~14 ~6 ~41 ~15 ~6 ~41 light_gray_concrete
 fill ~1 ~6 ~42 ~2 ~6 ~42 light_gray_concrete
 setblock ~3 ~6 ~42 light[level=11]
-fill ~4 ~6 ~42 ~12 ~6 ~42 air
+setblock ~4 ~6 ~42 smooth_stone_slab[type=top]
+fill ~5 ~6 ~42 ~11 ~6 ~42 air
+setblock ~12 ~6 ~42 smooth_stone_slab[type=top]
 setblock ~13 ~6 ~42 light[level=11]
 fill ~14 ~6 ~42 ~15 ~6 ~42 light_gray_concrete
 setblock ~1 ~6 ~43 smooth_stone
@@ -1626,33 +1897,57 @@ fill ~5 ~7 ~7 ~11 ~7 ~7 gray_concrete
 fill ~12 ~7 ~7 ~13 ~7 ~7 light_gray_concrete
 setblock ~14 ~7 ~7 smooth_stone
 fill ~2 ~7 ~8 ~4 ~7 ~8 gray_concrete
-fill ~5 ~7 ~8 ~11 ~7 ~8 air
+setblock ~5 ~7 ~8 air
+setblock ~6 ~7 ~8 lightning_rod[facing=south]
+fill ~7 ~7 ~8 ~9 ~7 ~8 air
+setblock ~10 ~7 ~8 lightning_rod[facing=south]
+setblock ~11 ~7 ~8 air
 fill ~12 ~7 ~8 ~14 ~7 ~8 gray_concrete
 fill ~2 ~7 ~9 ~4 ~7 ~9 light_gray_concrete
-fill ~5 ~7 ~9 ~11 ~7 ~9 air
+setblock ~5 ~7 ~9 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~9 ~10 ~7 ~9 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~9 stone_stairs[facing=east,half=top]
 setblock ~12 ~7 ~9 light_gray_concrete
 setblock ~13 ~7 ~9 smooth_stone
 setblock ~14 ~7 ~9 light_gray_concrete
 fill ~2 ~7 ~10 ~4 ~7 ~10 light_gray_concrete
-fill ~5 ~7 ~10 ~11 ~7 ~10 air
+setblock ~5 ~7 ~10 air
+setblock ~6 ~7 ~10 lightning_rod[facing=south]
+fill ~7 ~7 ~10 ~9 ~7 ~10 air
+setblock ~10 ~7 ~10 lightning_rod[facing=south]
+setblock ~11 ~7 ~10 air
 fill ~12 ~7 ~10 ~14 ~7 ~10 light_gray_concrete
 setblock ~2 ~7 ~11 smooth_stone
 fill ~3 ~7 ~11 ~4 ~7 ~11 light_gray_concrete
-fill ~5 ~7 ~11 ~11 ~7 ~11 air
+setblock ~5 ~7 ~11 air
+setblock ~6 ~7 ~11 lightning_rod[facing=south]
+fill ~7 ~7 ~11 ~9 ~7 ~11 air
+setblock ~10 ~7 ~11 lightning_rod[facing=south]
+setblock ~11 ~7 ~11 air
 fill ~12 ~7 ~11 ~14 ~7 ~11 light_gray_concrete
 fill ~2 ~7 ~12 ~4 ~7 ~12 gray_concrete
-fill ~5 ~7 ~12 ~11 ~7 ~12 air
+setblock ~5 ~7 ~12 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~12 ~10 ~7 ~12 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~12 stone_stairs[facing=east,half=top]
 fill ~12 ~7 ~12 ~14 ~7 ~12 gray_concrete
 fill ~0 ~7 ~13 ~1 ~7 ~13 gray_concrete
 fill ~2 ~7 ~13 ~4 ~7 ~13 light_gray_concrete
-fill ~5 ~7 ~13 ~11 ~7 ~13 air
+setblock ~5 ~7 ~13 air
+setblock ~6 ~7 ~13 lightning_rod[facing=south]
+fill ~7 ~7 ~13 ~9 ~7 ~13 air
+setblock ~10 ~7 ~13 lightning_rod[facing=south]
+setblock ~11 ~7 ~13 air
 setblock ~12 ~7 ~13 smooth_stone
 fill ~13 ~7 ~13 ~14 ~7 ~13 light_gray_concrete
 fill ~15 ~7 ~13 ~16 ~7 ~13 gray_concrete
 setblock ~-5 ~7 ~14 polished_deepslate_wall
 fill ~-3 ~7 ~14 ~1 ~7 ~14 gray_concrete
 fill ~2 ~7 ~14 ~4 ~7 ~14 light_gray_concrete
-fill ~5 ~7 ~14 ~11 ~7 ~14 air
+setblock ~5 ~7 ~14 air
+setblock ~6 ~7 ~14 lightning_rod[facing=south]
+fill ~7 ~7 ~14 ~9 ~7 ~14 air
+setblock ~10 ~7 ~14 lightning_rod[facing=south]
+setblock ~11 ~7 ~14 air
 setblock ~12 ~7 ~14 smooth_stone
 setblock ~13 ~7 ~14 light_gray_concrete
 setblock ~14 ~7 ~14 smooth_stone
@@ -1662,20 +1957,30 @@ setblock ~-5 ~7 ~15 polished_deepslate_wall
 fill ~-3 ~7 ~15 ~1 ~7 ~15 gray_concrete
 fill ~2 ~7 ~15 ~3 ~7 ~15 light_gray_concrete
 setblock ~4 ~7 ~15 smooth_stone
-fill ~5 ~7 ~15 ~11 ~7 ~15 air
+setblock ~5 ~7 ~15 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~15 ~10 ~7 ~15 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~15 stone_stairs[facing=east,half=top]
 setblock ~12 ~7 ~15 smooth_stone
 fill ~13 ~7 ~15 ~14 ~7 ~15 light_gray_concrete
 fill ~15 ~7 ~15 ~19 ~7 ~15 gray_concrete
 setblock ~21 ~7 ~15 polished_deepslate_wall
 setblock ~-5 ~7 ~16 anvil[facing=north]
 fill ~-3 ~7 ~16 ~4 ~7 ~16 gray_concrete
-fill ~5 ~7 ~16 ~11 ~7 ~16 air
+setblock ~5 ~7 ~16 air
+setblock ~6 ~7 ~16 lightning_rod[facing=south]
+fill ~7 ~7 ~16 ~9 ~7 ~16 air
+setblock ~10 ~7 ~16 lightning_rod[facing=south]
+setblock ~11 ~7 ~16 air
 fill ~12 ~7 ~16 ~19 ~7 ~16 gray_concrete
 setblock ~21 ~7 ~16 anvil[facing=north]
 setblock ~-5 ~7 ~17 polished_deepslate_wall
 fill ~-3 ~7 ~17 ~1 ~7 ~17 gray_concrete
 fill ~2 ~7 ~17 ~4 ~7 ~17 light_gray_concrete
-fill ~5 ~7 ~17 ~11 ~7 ~17 air
+setblock ~5 ~7 ~17 air
+setblock ~6 ~7 ~17 lightning_rod[facing=south]
+fill ~7 ~7 ~17 ~9 ~7 ~17 air
+setblock ~10 ~7 ~17 lightning_rod[facing=south]
+setblock ~11 ~7 ~17 air
 fill ~12 ~7 ~17 ~14 ~7 ~17 light_gray_concrete
 fill ~15 ~7 ~17 ~19 ~7 ~17 gray_concrete
 setblock ~21 ~7 ~17 polished_deepslate_wall
@@ -1684,7 +1989,11 @@ setblock ~-5 ~7 ~18 polished_deepslate_wall
 fill ~-3 ~7 ~18 ~1 ~7 ~18 gray_concrete
 fill ~2 ~7 ~18 ~3 ~7 ~18 light_gray_concrete
 setblock ~4 ~7 ~18 smooth_stone
-fill ~5 ~7 ~18 ~11 ~7 ~18 air
+setblock ~5 ~7 ~18 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~18 ~7 ~7 ~18 smooth_stone_slab[type=top]
+setblock ~8 ~7 ~18 air
+fill ~9 ~7 ~18 ~10 ~7 ~18 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~18 stone_stairs[facing=east,half=top]
 setblock ~12 ~7 ~18 smooth_stone
 fill ~13 ~7 ~18 ~14 ~7 ~18 light_gray_concrete
 fill ~15 ~7 ~18 ~19 ~7 ~18 gray_concrete
@@ -1693,117 +2002,209 @@ setblock ~30 ~7 ~18 polished_deepslate_wall
 setblock ~-14 ~7 ~19 polished_deepslate_wall
 fill ~-3 ~7 ~19 ~1 ~7 ~19 gray_concrete
 fill ~2 ~7 ~19 ~4 ~7 ~19 light_gray_concrete
-fill ~5 ~7 ~19 ~11 ~7 ~19 air
+setblock ~5 ~7 ~19 air
+setblock ~6 ~7 ~19 lightning_rod[facing=south]
+fill ~7 ~7 ~19 ~9 ~7 ~19 air
+setblock ~10 ~7 ~19 lightning_rod[facing=south]
+setblock ~11 ~7 ~19 air
 fill ~12 ~7 ~19 ~13 ~7 ~19 light_gray_concrete
 setblock ~14 ~7 ~19 smooth_stone
 fill ~15 ~7 ~19 ~19 ~7 ~19 gray_concrete
 setblock ~30 ~7 ~19 polished_deepslate_wall
 setblock ~-14 ~7 ~20 anvil[facing=north]
 fill ~-3 ~7 ~20 ~4 ~7 ~20 gray_concrete
-fill ~5 ~7 ~20 ~11 ~7 ~20 air
+setblock ~5 ~7 ~20 air
+setblock ~6 ~7 ~20 lightning_rod[facing=south]
+fill ~7 ~7 ~20 ~9 ~7 ~20 air
+setblock ~10 ~7 ~20 lightning_rod[facing=south]
+setblock ~11 ~7 ~20 air
 fill ~12 ~7 ~20 ~19 ~7 ~20 gray_concrete
 setblock ~30 ~7 ~20 anvil[facing=north]
 setblock ~-14 ~7 ~21 polished_deepslate_wall
 fill ~-3 ~7 ~21 ~1 ~7 ~21 gray_concrete
 fill ~2 ~7 ~21 ~4 ~7 ~21 light_gray_concrete
-fill ~5 ~7 ~21 ~11 ~7 ~21 air
+setblock ~5 ~7 ~21 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~21 ~10 ~7 ~21 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~21 stone_stairs[facing=east,half=top]
 fill ~12 ~7 ~21 ~14 ~7 ~21 light_gray_concrete
 fill ~15 ~7 ~21 ~19 ~7 ~21 gray_concrete
 setblock ~30 ~7 ~21 polished_deepslate_wall
 setblock ~-14 ~7 ~22 polished_deepslate_wall
 fill ~-3 ~7 ~22 ~1 ~7 ~22 gray_concrete
 fill ~2 ~7 ~22 ~4 ~7 ~22 light_gray_concrete
-fill ~5 ~7 ~22 ~11 ~7 ~22 air
+setblock ~5 ~7 ~22 air
+setblock ~6 ~7 ~22 lightning_rod[facing=south]
+fill ~7 ~7 ~22 ~9 ~7 ~22 air
+setblock ~10 ~7 ~22 lightning_rod[facing=south]
+setblock ~11 ~7 ~22 air
 fill ~12 ~7 ~22 ~14 ~7 ~22 light_gray_concrete
 fill ~15 ~7 ~22 ~19 ~7 ~22 gray_concrete
 setblock ~30 ~7 ~22 polished_deepslate_wall
 fill ~-3 ~7 ~23 ~1 ~7 ~23 gray_concrete
 fill ~2 ~7 ~23 ~4 ~7 ~23 light_gray_concrete
-fill ~5 ~7 ~23 ~11 ~7 ~23 air
+setblock ~5 ~7 ~23 air
+setblock ~6 ~7 ~23 lightning_rod[facing=south]
+fill ~7 ~7 ~23 ~9 ~7 ~23 air
+setblock ~10 ~7 ~23 lightning_rod[facing=south]
+setblock ~11 ~7 ~23 air
 fill ~12 ~7 ~23 ~14 ~7 ~23 light_gray_concrete
 fill ~15 ~7 ~23 ~19 ~7 ~23 gray_concrete
 setblock ~-24 ~7 ~24 red_stained_glass
 fill ~-3 ~7 ~24 ~4 ~7 ~24 gray_concrete
-fill ~5 ~7 ~24 ~11 ~7 ~24 air
+setblock ~5 ~7 ~24 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~24 ~10 ~7 ~24 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~24 stone_stairs[facing=east,half=top]
 fill ~12 ~7 ~24 ~19 ~7 ~24 gray_concrete
 setblock ~40 ~7 ~24 lime_stained_glass
 fill ~-3 ~7 ~25 ~1 ~7 ~25 gray_concrete
 fill ~2 ~7 ~25 ~4 ~7 ~25 light_gray_concrete
-fill ~5 ~7 ~25 ~11 ~7 ~25 air
+setblock ~5 ~7 ~25 air
+setblock ~6 ~7 ~25 lightning_rod[facing=south]
+fill ~7 ~7 ~25 ~9 ~7 ~25 air
+setblock ~10 ~7 ~25 lightning_rod[facing=south]
+setblock ~11 ~7 ~25 air
 fill ~12 ~7 ~25 ~14 ~7 ~25 light_gray_concrete
 fill ~15 ~7 ~25 ~19 ~7 ~25 gray_concrete
 fill ~-2 ~7 ~26 ~1 ~7 ~26 gray_concrete
 fill ~2 ~7 ~26 ~4 ~7 ~26 light_gray_concrete
-fill ~5 ~7 ~26 ~11 ~7 ~26 air
+setblock ~5 ~7 ~26 air
+setblock ~6 ~7 ~26 lightning_rod[facing=south]
+fill ~7 ~7 ~26 ~9 ~7 ~26 air
+setblock ~10 ~7 ~26 lightning_rod[facing=south]
+setblock ~11 ~7 ~26 air
 fill ~12 ~7 ~26 ~13 ~7 ~26 light_gray_concrete
 setblock ~14 ~7 ~26 smooth_stone
 fill ~15 ~7 ~26 ~18 ~7 ~26 gray_concrete
 fill ~2 ~7 ~27 ~4 ~7 ~27 light_gray_concrete
-fill ~5 ~7 ~27 ~11 ~7 ~27 air
+setblock ~5 ~7 ~27 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~27 ~10 ~7 ~27 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~27 stone_stairs[facing=east,half=top]
 fill ~12 ~7 ~27 ~14 ~7 ~27 light_gray_concrete
 fill ~2 ~7 ~28 ~4 ~7 ~28 gray_concrete
-fill ~5 ~7 ~28 ~11 ~7 ~28 air
+setblock ~5 ~7 ~28 air
+setblock ~6 ~7 ~28 lightning_rod[facing=south]
+fill ~7 ~7 ~28 ~9 ~7 ~28 air
+setblock ~10 ~7 ~28 lightning_rod[facing=south]
+setblock ~11 ~7 ~28 air
 fill ~12 ~7 ~28 ~14 ~7 ~28 gray_concrete
 fill ~2 ~7 ~29 ~3 ~7 ~29 light_gray_concrete
 setblock ~4 ~7 ~29 smooth_stone
-fill ~5 ~7 ~29 ~11 ~7 ~29 air
+setblock ~5 ~7 ~29 air
+setblock ~6 ~7 ~29 lightning_rod[facing=south]
+fill ~7 ~7 ~29 ~9 ~7 ~29 air
+setblock ~10 ~7 ~29 lightning_rod[facing=south]
+setblock ~11 ~7 ~29 air
 fill ~12 ~7 ~29 ~14 ~7 ~29 light_gray_concrete
 fill ~2 ~7 ~30 ~3 ~7 ~30 light_gray_concrete
 setblock ~4 ~7 ~30 smooth_stone
-fill ~5 ~7 ~30 ~11 ~7 ~30 air
+setblock ~5 ~7 ~30 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~30 ~7 ~7 ~30 smooth_stone_slab[type=top]
+setblock ~8 ~7 ~30 air
+fill ~9 ~7 ~30 ~10 ~7 ~30 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~30 stone_stairs[facing=east,half=top]
 fill ~12 ~7 ~30 ~13 ~7 ~30 light_gray_concrete
 setblock ~14 ~7 ~30 smooth_stone
 fill ~2 ~7 ~31 ~4 ~7 ~31 light_gray_concrete
-fill ~5 ~7 ~31 ~11 ~7 ~31 air
+setblock ~5 ~7 ~31 air
+setblock ~6 ~7 ~31 lightning_rod[facing=south]
+fill ~7 ~7 ~31 ~9 ~7 ~31 air
+setblock ~10 ~7 ~31 lightning_rod[facing=south]
+setblock ~11 ~7 ~31 air
 fill ~12 ~7 ~31 ~14 ~7 ~31 light_gray_concrete
 fill ~2 ~7 ~32 ~4 ~7 ~32 gray_concrete
-fill ~5 ~7 ~32 ~11 ~7 ~32 air
+setblock ~5 ~7 ~32 air
+setblock ~6 ~7 ~32 lightning_rod[facing=south]
+fill ~7 ~7 ~32 ~9 ~7 ~32 air
+setblock ~10 ~7 ~32 lightning_rod[facing=south]
+setblock ~11 ~7 ~32 air
 fill ~12 ~7 ~32 ~14 ~7 ~32 gray_concrete
 fill ~2 ~7 ~33 ~3 ~7 ~33 light_gray_concrete
 setblock ~4 ~7 ~33 smooth_stone
-fill ~5 ~7 ~33 ~11 ~7 ~33 air
+setblock ~5 ~7 ~33 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~33 ~10 ~7 ~33 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~33 stone_stairs[facing=east,half=top]
 setblock ~12 ~7 ~33 light_gray_concrete
 setblock ~13 ~7 ~33 smooth_stone
 setblock ~14 ~7 ~33 light_gray_concrete
 fill ~2 ~7 ~34 ~4 ~7 ~34 light_gray_concrete
-fill ~5 ~7 ~34 ~11 ~7 ~34 air
+setblock ~5 ~7 ~34 air
+setblock ~6 ~7 ~34 lightning_rod[facing=south]
+fill ~7 ~7 ~34 ~9 ~7 ~34 air
+setblock ~10 ~7 ~34 lightning_rod[facing=south]
+setblock ~11 ~7 ~34 air
 setblock ~12 ~7 ~34 light_gray_concrete
 setblock ~13 ~7 ~34 smooth_stone
 setblock ~14 ~7 ~34 light_gray_concrete
 fill ~2 ~7 ~35 ~4 ~7 ~35 light_gray_concrete
-fill ~5 ~7 ~35 ~11 ~7 ~35 air
+setblock ~5 ~7 ~35 air
+setblock ~6 ~7 ~35 lightning_rod[facing=south]
+fill ~7 ~7 ~35 ~9 ~7 ~35 air
+setblock ~10 ~7 ~35 lightning_rod[facing=south]
+setblock ~11 ~7 ~35 air
 fill ~12 ~7 ~35 ~14 ~7 ~35 light_gray_concrete
 fill ~2 ~7 ~36 ~4 ~7 ~36 gray_concrete
-fill ~5 ~7 ~36 ~11 ~7 ~36 air
+setblock ~5 ~7 ~36 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~36 ~10 ~7 ~36 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~36 stone_stairs[facing=east,half=top]
 fill ~12 ~7 ~36 ~14 ~7 ~36 gray_concrete
 fill ~2 ~7 ~37 ~4 ~7 ~37 light_gray_concrete
-fill ~5 ~7 ~37 ~11 ~7 ~37 air
+setblock ~5 ~7 ~37 air
+setblock ~6 ~7 ~37 lightning_rod[facing=south]
+fill ~7 ~7 ~37 ~9 ~7 ~37 air
+setblock ~10 ~7 ~37 lightning_rod[facing=south]
+setblock ~11 ~7 ~37 air
 fill ~12 ~7 ~37 ~14 ~7 ~37 light_gray_concrete
 fill ~2 ~7 ~38 ~4 ~7 ~38 light_gray_concrete
-fill ~5 ~7 ~38 ~11 ~7 ~38 air
+setblock ~5 ~7 ~38 air
+setblock ~6 ~7 ~38 lightning_rod[facing=south]
+fill ~7 ~7 ~38 ~9 ~7 ~38 air
+setblock ~10 ~7 ~38 lightning_rod[facing=south]
+setblock ~11 ~7 ~38 air
 fill ~12 ~7 ~38 ~14 ~7 ~38 light_gray_concrete
 setblock ~2 ~7 ~39 smooth_stone
 fill ~3 ~7 ~39 ~4 ~7 ~39 light_gray_concrete
-fill ~5 ~7 ~39 ~11 ~7 ~39 air
+setblock ~5 ~7 ~39 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~39 ~10 ~7 ~39 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~39 stone_stairs[facing=east,half=top]
 fill ~12 ~7 ~39 ~14 ~7 ~39 light_gray_concrete
 fill ~2 ~7 ~40 ~4 ~7 ~40 gray_concrete
-fill ~5 ~7 ~40 ~11 ~7 ~40 air
+setblock ~5 ~7 ~40 air
+setblock ~6 ~7 ~40 lightning_rod[facing=south]
+fill ~7 ~7 ~40 ~9 ~7 ~40 air
+setblock ~10 ~7 ~40 lightning_rod[facing=south]
+setblock ~11 ~7 ~40 air
 fill ~12 ~7 ~40 ~14 ~7 ~40 gray_concrete
 fill ~2 ~7 ~41 ~3 ~7 ~41 smooth_stone
 setblock ~4 ~7 ~41 light_gray_concrete
-fill ~5 ~7 ~41 ~11 ~7 ~41 air
+setblock ~5 ~7 ~41 air
+setblock ~6 ~7 ~41 lightning_rod[facing=south]
+fill ~7 ~7 ~41 ~9 ~7 ~41 air
+setblock ~10 ~7 ~41 lightning_rod[facing=south]
+setblock ~11 ~7 ~41 air
 setblock ~12 ~7 ~41 light_gray_concrete
 setblock ~13 ~7 ~41 smooth_stone
 setblock ~14 ~7 ~41 light_gray_concrete
 fill ~2 ~7 ~42 ~3 ~7 ~42 light_gray_concrete
 setblock ~4 ~7 ~42 smooth_stone
-fill ~5 ~7 ~42 ~11 ~7 ~42 air
+setblock ~5 ~7 ~42 stone_stairs[facing=west,half=top]
+fill ~6 ~7 ~42 ~7 ~7 ~42 smooth_stone_slab[type=top]
+setblock ~8 ~7 ~42 air
+fill ~9 ~7 ~42 ~10 ~7 ~42 smooth_stone_slab[type=top]
+setblock ~11 ~7 ~42 stone_stairs[facing=east,half=top]
 fill ~12 ~7 ~42 ~14 ~7 ~42 light_gray_concrete
 fill ~2 ~7 ~43 ~4 ~7 ~43 light_gray_concrete
-fill ~5 ~7 ~43 ~11 ~7 ~43 air
+setblock ~5 ~7 ~43 air
+setblock ~6 ~7 ~43 lightning_rod[facing=south]
+fill ~7 ~7 ~43 ~9 ~7 ~43 air
+setblock ~10 ~7 ~43 lightning_rod[facing=south]
+setblock ~11 ~7 ~43 air
 fill ~12 ~7 ~43 ~14 ~7 ~43 light_gray_concrete
 fill ~2 ~7 ~44 ~4 ~7 ~44 gray_concrete
-fill ~5 ~7 ~44 ~11 ~7 ~44 air
+setblock ~5 ~7 ~44 air
+setblock ~6 ~7 ~44 lightning_rod[facing=south]
+fill ~7 ~7 ~44 ~9 ~7 ~44 air
+setblock ~10 ~7 ~44 lightning_rod[facing=south]
+setblock ~11 ~7 ~44 air
 fill ~12 ~7 ~44 ~14 ~7 ~44 gray_concrete
 fill ~7 ~8 ~0 ~9 ~8 ~0 light_gray_concrete
 setblock ~6 ~8 ~1 light_gray_concrete
