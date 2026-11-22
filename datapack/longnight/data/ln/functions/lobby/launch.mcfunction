@@ -6,6 +6,7 @@ tag @a remove ln_ready
 tag @a remove ln_jumped
 effect clear @a
 lnkit stash @a[gamemode=adventure]
+execute if score #chap ln matches 1 run function ln:ch01/start
 execute if score #chap ln matches 5 run function ln:ch05/start
 lnhud tint @a 00000000 30
 forceload remove -336 891 -268 962

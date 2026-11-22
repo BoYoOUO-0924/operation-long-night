@@ -19,6 +19,8 @@ gamerule doWeatherCycle false
 gamerule doFireTick false
 gamerule mobGriefing false
 gamerule announceAdvancements false
-tellraw @a [{"text":"[長夜] ","color":"gold"},{"text":"已載入。大廳（運輸機）：","color":"gray"},{"text":"/function ln:lobby/enter","color":"yellow"},{"text":"　直接開始第五章：","color":"gray"},{"text":"/function ln:ch05/start","color":"yellow"},{"text":"　標記工具：","color":"gray"},{"text":"/function ln_tool:help","color":"yellow"}]
+tellraw @a [{"text":"[長夜] ","color":"gold"},{"text":"已載入。大廳（運輸機）：","color":"gray"},{"text":"/function ln:lobby/enter","color":"yellow"},{"text":"　直接開始第一章：","color":"gray"},{"text":"/function ln:ch01/start","color":"yellow"},{"text":"　第五章：","color":"gray"},{"text":"/function ln:ch05/start","color":"yellow"},{"text":"　標記工具：","color":"gray"},{"text":"/function ln_tool:help","color":"yellow"}]
 scoreboard objectives add ln_kit dummy
 scoreboard objectives add ln_hits dummy
+scoreboard objectives add ln_lit dummy
+scoreboard objectives add ln_pid dummy

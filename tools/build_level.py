@@ -402,6 +402,7 @@ fn("cleanup", [
 ])
 fn("start", [
     "function ln:ch05/cleanup",
+    "scoreboard players set #run ln 5",
     "forceload add 50 900 240 1020",
     "function ln:build/station_place",
     "function ln:build/wreck_place",
@@ -608,7 +609,8 @@ W = json.loads((ROOT / "generators/out/train_wreck.json").read_text(encoding="ut
 v = A["viewpoint"]
 (PACK / "wipe.mcfunction").write_text(
     "# 全隊覆沒時由 lnai 模組呼叫：交給目前進行中的章節處理\n"
-    "execute if score #stage ln matches 1.. run function ln:ch05/wipe\n", encoding="utf-8")
+    "execute if score #run ln matches 1 if score #stage ln matches 1.. run function ln:ch01/wipe\n"
+    "execute unless score #run ln matches 1 if score #stage ln matches 1.. run function ln:ch05/wipe\n", encoding="utf-8")
 (PACK / "view_station.mcfunction").write_text(
     "# 傳送到可以看到整座氣象站的位置（創造模式審視建築用）\n"
     "gamemode creative @s\n"

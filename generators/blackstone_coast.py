@@ -291,6 +291,7 @@ def radar_mast(cx, cz, y, h, tag, face=1):
     for k in range(1, 4):                                                    # 饋源支架
         b.blocks[(cx + face * (2 + k), dc, cz)] = "lightning_rod[facing=east]" if face > 0 else "lightning_rod[facing=west]"
     b.blocks[(cx + face * 6, dc, cz)] = "redstone_lamp[lit=true]"
+    anchors[f"{tag}_box"] = [cx - 2, y + 1, cz - 5, cx + 7, dc + 4, cz + 5]    # 炸毀時清掉的範圍
 
 
 def radome(cx, cz, y, r=4):
@@ -304,6 +305,7 @@ def radome(cx, cz, y, r=4):
                 elif d < r - 0.6:
                     b.blocks[(cx + dx, y + dy, cz + dz)] = "air"
     b.blocks[(cx, y + r + 2, cz)] = "lightning_rod"
+    anchors["radome_box"] = [cx - r, y, cz - r, cx + r, y + r + 2, cz + r]
 
 
 # ================================================================ 模組化零件（kitbash）

@@ -1,5 +1,6 @@
 # 由 tools/build_level.py 自動產生，請勿手動修改
 function ln:ch05/cleanup
+scoreboard players set #run ln 5
 forceload add 50 900 240 1020
 function ln:build/station_place
 function ln:build/wreck_place
