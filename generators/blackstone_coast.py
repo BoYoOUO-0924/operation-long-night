@@ -229,7 +229,15 @@ def pad(x1, z1, x2, z2, y, blk=None):
     """整地：地基墊到 y（含），上方清空 12 格"""
     for x in range(x1, x2 + 1):
         for z in range(z1, z2 + 1):
-            for yy in range(min(g(x, z), y) - 2, y + 1):
+            gz = g(x, z)
+            if gz < y - 6:                       # 地面太低（懸崖外）：只做 3 格厚的懸挑樓板，不要一路灌到海面變柱子
+                bottom = y - 2
+                if gz < SEA:                     # 同時清掉舊版灌出來的柱子
+                    b.pre.append(f"fill ~{x} ~{gz + 1} ~{z} ~{x} ~{SEA} ~{z} water")
+                b.pre.append(f"fill ~{x} ~{max(gz + 1, SEA + 1)} ~{z} ~{x} ~{y - 3} ~{z} air")
+            else:
+                bottom = min(gz, y) - 2
+            for yy in range(bottom, y + 1):
                 b.blocks[(x, yy, z)] = blk() if callable(blk) else (blk or conc())
             for yy in range(y + 1, y + 13):
                 b.blocks.setdefault((x, yy, z), "air")
@@ -249,7 +257,7 @@ def sandbags(cx, cz, r, y, gap=None):
 def camo(x1, z1, x2, z2, y):
     """偽裝網：柵欄柱撐起來的綠褐色地毯"""
     for (x, z) in [(x1, z1), (x1, z2), (x2, z1), (x2, z2)]:
-        for yy in range(g(x, z) + 1, y):
+        for yy in range(max(g(x, z) + 1, y - 7), y):          # 柱子最長 7 格（懸崖外不要一路垂到海面）
             b.blocks[(x, yy, z)] = "spruce_fence"
     for x in range(x1, x2 + 1):
         for z in range(z1, z2 + 1):
@@ -448,7 +456,7 @@ for (dx, dz) in [(-6, -6), (6, -6), (-6, 6), (6, 6)]:
     b.box(bx + dx, by + 1, bz + dz, bx + dx, by + 3, bz + dz, conc())
 c4_point("b", bx, by + 1, bz + 2)
 anchors["radar_b"] = [bx, by + 1, bz]
-for (cx, cz, col) in [(bx - 14, bz + 4, "green_concrete"), (bx + 12, bz - 10, "orange_terracotta")]:   # 貨櫃
+for (cx, cz, col) in [(bx - 14, bz + 4, "green_concrete"), (bx + 4, bz - 13, "orange_terracotta")]:   # 貨櫃
     cy = max(g(x, z) for x in range(cx, cx + 6) for z in range(cz, cz + 3))
     pad(cx, cz, cx + 5, cz + 2, cy)
     b.box(cx, cy + 1, cz, cx + 5, cy + 3, cz + 2, col)
@@ -492,8 +500,8 @@ def casemate(cx, cz):
         b.blocks[(x, g(x, z) + 1, z)] = sandbag()
 
 
-casemate(38, 1312)
-casemate(36, 1340)
+casemate(31, 1312)
+casemate(29, 1342)
 for z in range(1300, 1356):                                                  # 砲堡後方的戰壕（南北向）
     x = 26 + round(1.5 * math.sin(z / 6.0))
     for w in (0, 1):

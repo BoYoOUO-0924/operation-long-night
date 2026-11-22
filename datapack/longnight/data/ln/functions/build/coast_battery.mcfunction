@@ -1,1048 +1,87 @@
 # 由 generators/blackstone_coast.py 自動產生：黑石海岸砲台建築（execute positioned 0 0 0 執行）
 kill @e[tag=ln_coast]
-setblock ~38 ~60 ~1308 light_gray_concrete
-setblock ~39 ~60 ~1308 andesite
-fill ~40 ~60 ~1308 ~43 ~60 ~1308 light_gray_concrete
-setblock ~38 ~60 ~1309 gray_concrete
-setblock ~39 ~60 ~1309 cracked_stone_bricks
-setblock ~40 ~60 ~1309 light_gray_concrete
-setblock ~41 ~60 ~1309 andesite
-setblock ~42 ~60 ~1309 light_gray_concrete
-setblock ~43 ~60 ~1309 gray_concrete
-setblock ~38 ~60 ~1310 gray_concrete
-fill ~39 ~60 ~1310 ~41 ~60 ~1310 light_gray_concrete
-setblock ~42 ~60 ~1310 andesite
-setblock ~43 ~60 ~1310 light_gray_concrete
-setblock ~37 ~60 ~1311 andesite
-setblock ~38 ~60 ~1311 light_gray_concrete
-setblock ~39 ~60 ~1311 andesite
-setblock ~40 ~60 ~1311 light_gray_concrete
-fill ~41 ~60 ~1311 ~43 ~60 ~1311 gray_concrete
-fill ~37 ~60 ~1312 ~40 ~60 ~1312 light_gray_concrete
-setblock ~41 ~60 ~1312 cracked_stone_bricks
-setblock ~42 ~60 ~1312 gray_concrete
-setblock ~43 ~60 ~1312 andesite
-setblock ~38 ~60 ~1313 light_gray_concrete
-setblock ~39 ~60 ~1313 andesite
-setblock ~40 ~60 ~1313 gray_concrete
-setblock ~41 ~60 ~1313 light_gray_concrete
-setblock ~42 ~60 ~1313 andesite
-setblock ~43 ~60 ~1313 tuff
-setblock ~38 ~60 ~1314 tuff
-setblock ~39 ~60 ~1314 light_gray_concrete
-fill ~40 ~60 ~1314 ~41 ~60 ~1314 tuff
-fill ~42 ~60 ~1314 ~43 ~60 ~1314 gray_concrete
-setblock ~40 ~60 ~1315 cracked_stone_bricks
-setblock ~41 ~60 ~1315 light_gray_concrete
-setblock ~42 ~60 ~1315 cracked_stone_bricks
-setblock ~43 ~60 ~1315 light_gray_concrete
-setblock ~42 ~60 ~1316 light_gray_concrete
-setblock ~43 ~60 ~1316 cracked_stone_bricks
-fill ~38 ~61 ~1308 ~39 ~61 ~1308 light_gray_concrete
-setblock ~40 ~61 ~1308 tuff
-setblock ~41 ~61 ~1308 light_gray_concrete
-setblock ~42 ~61 ~1308 tuff
-setblock ~43 ~61 ~1308 light_gray_concrete
-fill ~38 ~61 ~1309 ~43 ~61 ~1309 light_gray_concrete
-fill ~38 ~61 ~1310 ~39 ~61 ~1310 light_gray_concrete
-setblock ~40 ~61 ~1310 cracked_stone_bricks
-fill ~41 ~61 ~1310 ~43 ~61 ~1310 light_gray_concrete
-fill ~37 ~61 ~1311 ~40 ~61 ~1311 light_gray_concrete
-fill ~41 ~61 ~1311 ~42 ~61 ~1311 andesite
-setblock ~43 ~61 ~1311 light_gray_concrete
-setblock ~37 ~61 ~1312 andesite
-fill ~38 ~61 ~1312 ~41 ~61 ~1312 light_gray_concrete
-setblock ~42 ~61 ~1312 tuff
-setblock ~43 ~61 ~1312 gray_concrete
-setblock ~38 ~61 ~1313 andesite
-setblock ~39 ~61 ~1313 light_gray_concrete
-setblock ~40 ~61 ~1313 andesite
-setblock ~41 ~61 ~1313 light_gray_concrete
-setblock ~42 ~61 ~1313 cracked_stone_bricks
-setblock ~43 ~61 ~1313 light_gray_concrete
-setblock ~38 ~61 ~1314 andesite
-setblock ~39 ~61 ~1314 light_gray_concrete
-setblock ~40 ~61 ~1314 andesite
-fill ~41 ~61 ~1314 ~42 ~61 ~1314 light_gray_concrete
-setblock ~43 ~61 ~1314 cracked_stone_bricks
-fill ~40 ~61 ~1315 ~41 ~61 ~1315 light_gray_concrete
-setblock ~42 ~61 ~1315 andesite
-setblock ~43 ~61 ~1315 light_gray_concrete
-fill ~42 ~61 ~1316 ~43 ~61 ~1316 light_gray_concrete
-setblock ~38 ~62 ~1308 andesite
-fill ~39 ~62 ~1308 ~41 ~62 ~1308 light_gray_concrete
-setblock ~42 ~62 ~1308 gray_concrete
-setblock ~43 ~62 ~1308 light_gray_concrete
-fill ~38 ~62 ~1309 ~41 ~62 ~1309 light_gray_concrete
-setblock ~42 ~62 ~1309 gray_concrete
-setblock ~43 ~62 ~1309 light_gray_concrete
-setblock ~37 ~62 ~1310 andesite
-setblock ~38 ~62 ~1310 light_gray_concrete
-setblock ~39 ~62 ~1310 andesite
-fill ~40 ~62 ~1310 ~41 ~62 ~1310 light_gray_concrete
-setblock ~42 ~62 ~1310 gray_concrete
-setblock ~43 ~62 ~1310 andesite
-setblock ~37 ~62 ~1311 light_gray_concrete
-setblock ~38 ~62 ~1311 andesite
-setblock ~39 ~62 ~1311 light_gray_concrete
-setblock ~40 ~62 ~1311 gray_concrete
-fill ~41 ~62 ~1311 ~42 ~62 ~1311 light_gray_concrete
-setblock ~43 ~62 ~1311 gray_concrete
-setblock ~37 ~62 ~1312 andesite
-fill ~38 ~62 ~1312 ~39 ~62 ~1312 light_gray_concrete
-setblock ~40 ~62 ~1312 gray_concrete
-setblock ~41 ~62 ~1312 cracked_stone_bricks
-fill ~42 ~62 ~1312 ~43 ~62 ~1312 light_gray_concrete
-fill ~38 ~62 ~1313 ~41 ~62 ~1313 light_gray_concrete
-setblock ~42 ~62 ~1313 andesite
-setblock ~43 ~62 ~1313 light_gray_concrete
-fill ~38 ~62 ~1314 ~43 ~62 ~1314 light_gray_concrete
-fill ~40 ~62 ~1315 ~41 ~62 ~1315 light_gray_concrete
-setblock ~42 ~62 ~1315 gray_concrete
-setblock ~43 ~62 ~1315 light_gray_concrete
-setblock ~42 ~62 ~1316 tuff
-setblock ~43 ~62 ~1316 light_gray_concrete
-setblock ~38 ~63 ~1308 gray_concrete
-setblock ~39 ~63 ~1308 andesite
-fill ~40 ~63 ~1308 ~43 ~63 ~1308 light_gray_concrete
-setblock ~38 ~63 ~1309 light_gray_concrete
-setblock ~39 ~63 ~1309 andesite
-fill ~40 ~63 ~1309 ~41 ~63 ~1309 light_gray_concrete
-setblock ~42 ~63 ~1309 spruce_fence
-setblock ~43 ~63 ~1309 andesite
-setblock ~37 ~63 ~1310 tuff
-fill ~38 ~63 ~1310 ~39 ~63 ~1310 light_gray_concrete
-fill ~40 ~63 ~1310 ~41 ~63 ~1310 cracked_stone_bricks
-setblock ~42 ~63 ~1310 light_gray_concrete
-setblock ~43 ~63 ~1310 gray_concrete
-setblock ~37 ~63 ~1311 cracked_stone_bricks
-fill ~38 ~63 ~1311 ~39 ~63 ~1311 light_gray_concrete
-setblock ~40 ~63 ~1311 andesite
-setblock ~41 ~63 ~1311 gray_concrete
-setblock ~42 ~63 ~1311 andesite
-setblock ~43 ~63 ~1311 light_gray_concrete
-setblock ~37 ~63 ~1312 gray_concrete
-fill ~38 ~63 ~1312 ~40 ~63 ~1312 light_gray_concrete
-setblock ~41 ~63 ~1312 cracked_stone_bricks
-setblock ~42 ~63 ~1312 light_gray_concrete
-setblock ~43 ~63 ~1312 cracked_stone_bricks
-setblock ~37 ~63 ~1313 cracked_stone_bricks
-fill ~38 ~63 ~1313 ~39 ~63 ~1313 light_gray_concrete
-setblock ~40 ~63 ~1313 tuff
-setblock ~41 ~63 ~1313 light_gray_concrete
-fill ~42 ~63 ~1313 ~43 ~63 ~1313 gray_concrete
-fill ~38 ~63 ~1314 ~39 ~63 ~1314 light_gray_concrete
-fill ~40 ~63 ~1314 ~41 ~63 ~1314 andesite
-setblock ~42 ~63 ~1314 gray_concrete
-setblock ~43 ~63 ~1314 light_gray_concrete
-fill ~40 ~63 ~1315 ~41 ~63 ~1315 light_gray_concrete
-setblock ~42 ~63 ~1315 spruce_fence
-setblock ~43 ~63 ~1315 light_gray_concrete
-setblock ~42 ~63 ~1316 light_gray_concrete
-setblock ~43 ~63 ~1316 andesite
-setblock ~38 ~64 ~1308 light_gray_concrete
-setblock ~39 ~64 ~1308 andesite
-setblock ~40 ~64 ~1308 light_gray_concrete
-setblock ~41 ~64 ~1308 cracked_stone_bricks
-setblock ~42 ~64 ~1308 gray_concrete
-setblock ~43 ~64 ~1308 light_gray_concrete
-fill ~38 ~64 ~1309 ~39 ~64 ~1309 gray_concrete
-fill ~40 ~64 ~1309 ~41 ~64 ~1309 light_gray_concrete
-setblock ~42 ~64 ~1309 spruce_fence
-setblock ~43 ~64 ~1309 light_gray_concrete
-setblock ~37 ~64 ~1310 gray_concrete
-setblock ~38 ~64 ~1310 cracked_stone_bricks
-fill ~39 ~64 ~1310 ~41 ~64 ~1310 gray_concrete
-setblock ~42 ~64 ~1310 light_gray_concrete
-setblock ~43 ~64 ~1310 gray_concrete
-fill ~37 ~64 ~1311 ~38 ~64 ~1311 light_gray_concrete
-setblock ~39 ~64 ~1311 andesite
-setblock ~40 ~64 ~1311 light_gray_concrete
-setblock ~41 ~64 ~1311 andesite
-setblock ~42 ~64 ~1311 light_gray_concrete
-setblock ~43 ~64 ~1311 andesite
-setblock ~37 ~64 ~1312 light_gray_concrete
-setblock ~38 ~64 ~1312 andesite
-fill ~39 ~64 ~1312 ~43 ~64 ~1312 light_gray_concrete
-setblock ~37 ~64 ~1313 light_gray_concrete
-fill ~38 ~64 ~1313 ~40 ~64 ~1313 cracked_stone_bricks
-setblock ~41 ~64 ~1313 gray_concrete
-fill ~42 ~64 ~1313 ~43 ~64 ~1313 light_gray_concrete
-fill ~38 ~64 ~1314 ~41 ~64 ~1314 light_gray_concrete
-setblock ~42 ~64 ~1314 andesite
-setblock ~43 ~64 ~1314 gray_concrete
-setblock ~40 ~64 ~1315 gray_concrete
-setblock ~41 ~64 ~1315 andesite
-setblock ~42 ~64 ~1315 spruce_fence
-setblock ~43 ~64 ~1315 cracked_stone_bricks
-setblock ~42 ~64 ~1316 light_gray_concrete
-setblock ~43 ~64 ~1316 tuff
-setblock ~84 ~64 ~1398 chain[axis=x]
-setblock ~85 ~64 ~1398 iron_bars
-setblock ~84 ~64 ~1399 iron_bars
-setblock ~85 ~64 ~1400 chain[axis=x]
-setblock ~86 ~64 ~1400 iron_bars
-setblock ~85 ~64 ~1401 iron_bars
-setblock ~111 ~64 ~1417 chain[axis=x]
-setblock ~112 ~64 ~1417 iron_bars
-setblock ~111 ~64 ~1418 iron_bars
-setblock ~102 ~64 ~1426 chain[axis=x]
-setblock ~103 ~64 ~1426 iron_bars
-setblock ~101 ~64 ~1427 chain[axis=x]
-setblock ~102 ~64 ~1427 iron_bars
-setblock ~101 ~64 ~1428 iron_bars
-setblock ~108 ~64 ~1440 chain[axis=x]
-setblock ~109 ~64 ~1440 iron_bars
-setblock ~108 ~64 ~1441 iron_bars
-fill ~38 ~65 ~1308 ~40 ~65 ~1308 gray_concrete
-fill ~41 ~65 ~1308 ~43 ~65 ~1308 light_gray_concrete
-setblock ~38 ~65 ~1309 gray_concrete
-setblock ~39 ~65 ~1309 light_gray_concrete
-setblock ~40 ~65 ~1309 gray_concrete
-setblock ~41 ~65 ~1309 light_gray_concrete
-setblock ~42 ~65 ~1309 spruce_fence
-setblock ~43 ~65 ~1309 light_gray_concrete
-fill ~37 ~65 ~1310 ~38 ~65 ~1310 light_gray_concrete
-setblock ~39 ~65 ~1310 andesite
-setblock ~40 ~65 ~1310 gray_concrete
-setblock ~41 ~65 ~1310 andesite
-setblock ~42 ~65 ~1310 light_gray_concrete
-setblock ~43 ~65 ~1310 gray_concrete
-setblock ~37 ~65 ~1311 cracked_stone_bricks
-fill ~38 ~65 ~1311 ~43 ~65 ~1311 light_gray_concrete
-setblock ~37 ~65 ~1312 gray_concrete
-setblock ~38 ~65 ~1312 cracked_stone_bricks
-setblock ~39 ~65 ~1312 light_gray_concrete
-setblock ~40 ~65 ~1312 cracked_stone_bricks
-setblock ~41 ~65 ~1312 light_gray_concrete
-setblock ~42 ~65 ~1312 andesite
-setblock ~43 ~65 ~1312 light_gray_concrete
-setblock ~37 ~65 ~1313 light_gray_concrete
-fill ~38 ~65 ~1313 ~39 ~65 ~1313 gray_concrete
-setblock ~40 ~65 ~1313 tuff
-fill ~41 ~65 ~1313 ~42 ~65 ~1313 gray_concrete
-setblock ~43 ~65 ~1313 andesite
-setblock ~38 ~65 ~1314 tuff
-fill ~39 ~65 ~1314 ~40 ~65 ~1314 gray_concrete
-setblock ~41 ~65 ~1314 tuff
-setblock ~42 ~65 ~1314 light_gray_concrete
-setblock ~43 ~65 ~1314 cracked_stone_bricks
-setblock ~40 ~65 ~1315 light_gray_concrete
-setblock ~41 ~65 ~1315 andesite
-setblock ~42 ~65 ~1315 spruce_fence
-setblock ~43 ~65 ~1315 tuff
-setblock ~42 ~65 ~1316 andesite
-setblock ~43 ~65 ~1316 light_gray_concrete
-setblock ~84 ~65 ~1398 chain[axis=z]
-setblock ~85 ~65 ~1400 chain[axis=z]
-setblock ~111 ~65 ~1417 chain[axis=z]
-setblock ~102 ~65 ~1426 chain[axis=z]
-setblock ~101 ~65 ~1427 chain[axis=z]
-setblock ~108 ~65 ~1440 chain[axis=z]
-setblock ~38 ~66 ~1308 light_gray_concrete
-setblock ~39 ~66 ~1308 gray_concrete
-setblock ~40 ~66 ~1308 light_gray_concrete
-setblock ~41 ~66 ~1308 gray_concrete
-setblock ~42 ~66 ~1308 light_gray_concrete
-setblock ~43 ~66 ~1308 gray_concrete
-setblock ~38 ~66 ~1309 light_gray_concrete
-setblock ~39 ~66 ~1309 gray_concrete
-fill ~40 ~66 ~1309 ~41 ~66 ~1309 light_gray_concrete
-setblock ~42 ~66 ~1309 spruce_fence
-setblock ~43 ~66 ~1309 tuff
-fill ~37 ~66 ~1310 ~39 ~66 ~1310 light_gray_concrete
-setblock ~40 ~66 ~1310 cracked_stone_bricks
-setblock ~41 ~66 ~1310 light_gray_concrete
-setblock ~42 ~66 ~1310 gray_concrete
-setblock ~43 ~66 ~1310 light_gray_concrete
-setblock ~37 ~66 ~1311 cracked_stone_bricks
-setblock ~38 ~66 ~1311 light_gray_concrete
-setblock ~39 ~66 ~1311 gray_concrete
-setblock ~40 ~66 ~1311 light_gray_concrete
-setblock ~41 ~66 ~1311 cracked_stone_bricks
-setblock ~42 ~66 ~1311 light_gray_concrete
-setblock ~43 ~66 ~1311 cracked_stone_bricks
-fill ~37 ~66 ~1312 ~38 ~66 ~1312 light_gray_concrete
-setblock ~39 ~66 ~1312 cracked_stone_bricks
-setblock ~40 ~66 ~1312 tuff
-setblock ~41 ~66 ~1312 andesite
-setblock ~42 ~66 ~1312 cracked_stone_bricks
-setblock ~43 ~66 ~1312 light_gray_concrete
-setblock ~37 ~66 ~1313 gray_concrete
-setblock ~38 ~66 ~1313 andesite
-setblock ~39 ~66 ~1313 light_gray_concrete
-setblock ~40 ~66 ~1313 cracked_stone_bricks
-setblock ~41 ~66 ~1313 gray_concrete
-setblock ~42 ~66 ~1313 light_gray_concrete
-setblock ~43 ~66 ~1313 gray_concrete
-fill ~38 ~66 ~1314 ~39 ~66 ~1314 light_gray_concrete
-setblock ~40 ~66 ~1314 tuff
-setblock ~41 ~66 ~1314 gray_concrete
-fill ~42 ~66 ~1314 ~43 ~66 ~1314 andesite
-fill ~40 ~66 ~1315 ~41 ~66 ~1315 light_gray_concrete
-setblock ~42 ~66 ~1315 spruce_fence
-setblock ~43 ~66 ~1315 light_gray_concrete
-setblock ~42 ~66 ~1316 light_gray_concrete
-setblock ~43 ~66 ~1316 gray_concrete
-setblock ~38 ~67 ~1308 cracked_stone_bricks
-setblock ~39 ~67 ~1308 light_gray_concrete
-setblock ~40 ~67 ~1308 gray_concrete
-setblock ~41 ~67 ~1308 light_gray_concrete
-setblock ~42 ~67 ~1308 gray_concrete
-setblock ~43 ~67 ~1308 light_gray_concrete
-setblock ~38 ~67 ~1309 cracked_stone_bricks
-setblock ~39 ~67 ~1309 andesite
-setblock ~40 ~67 ~1309 light_gray_concrete
-setblock ~41 ~67 ~1309 andesite
-setblock ~42 ~67 ~1309 spruce_fence
-setblock ~43 ~67 ~1309 light_gray_concrete
-setblock ~37 ~67 ~1310 light_gray_concrete
-setblock ~38 ~67 ~1310 andesite
-fill ~39 ~67 ~1310 ~40 ~67 ~1310 light_gray_concrete
-setblock ~41 ~67 ~1310 cracked_stone_bricks
-fill ~42 ~67 ~1310 ~43 ~67 ~1310 light_gray_concrete
-setblock ~37 ~67 ~1311 light_gray_concrete
-setblock ~38 ~67 ~1311 gray_concrete
-fill ~39 ~67 ~1311 ~41 ~67 ~1311 light_gray_concrete
-setblock ~42 ~67 ~1311 andesite
-setblock ~43 ~67 ~1311 light_gray_concrete
-fill ~37 ~67 ~1312 ~38 ~67 ~1312 light_gray_concrete
-setblock ~39 ~67 ~1312 andesite
-fill ~40 ~67 ~1312 ~43 ~67 ~1312 light_gray_concrete
-setblock ~37 ~67 ~1313 gray_concrete
-setblock ~38 ~67 ~1313 light_gray_concrete
-setblock ~39 ~67 ~1313 andesite
-setblock ~40 ~67 ~1313 cracked_stone_bricks
-fill ~41 ~67 ~1313 ~42 ~67 ~1313 light_gray_concrete
-setblock ~43 ~67 ~1313 tuff
-fill ~38 ~67 ~1314 ~41 ~67 ~1314 light_gray_concrete
-setblock ~42 ~67 ~1314 cracked_stone_bricks
-setblock ~43 ~67 ~1314 andesite
-setblock ~40 ~67 ~1315 gray_concrete
-setblock ~41 ~67 ~1315 cracked_stone_bricks
-setblock ~42 ~67 ~1315 spruce_fence
-setblock ~43 ~67 ~1315 andesite
-setblock ~42 ~67 ~1316 andesite
-setblock ~43 ~67 ~1316 light_gray_concrete
-setblock ~38 ~68 ~1308 andesite
-setblock ~39 ~68 ~1308 cracked_stone_bricks
-setblock ~40 ~68 ~1308 gray_concrete
-setblock ~41 ~68 ~1308 light_gray_concrete
-setblock ~42 ~68 ~1308 andesite
-setblock ~43 ~68 ~1308 gray_concrete
-setblock ~38 ~68 ~1309 gray_concrete
-setblock ~39 ~68 ~1309 tuff
-setblock ~40 ~68 ~1309 light_gray_concrete
-setblock ~41 ~68 ~1309 andesite
-setblock ~42 ~68 ~1309 spruce_fence
-setblock ~43 ~68 ~1309 light_gray_concrete
-setblock ~37 ~68 ~1310 light_gray_concrete
-setblock ~38 ~68 ~1310 andesite
-fill ~39 ~68 ~1310 ~41 ~68 ~1310 light_gray_concrete
-setblock ~42 ~68 ~1310 gray_concrete
-setblock ~43 ~68 ~1310 andesite
-fill ~37 ~68 ~1311 ~38 ~68 ~1311 andesite
-fill ~39 ~68 ~1311 ~40 ~68 ~1311 light_gray_concrete
-setblock ~41 ~68 ~1311 cracked_stone_bricks
-setblock ~42 ~68 ~1311 andesite
-setblock ~43 ~68 ~1311 light_gray_concrete
-fill ~37 ~68 ~1312 ~40 ~68 ~1312 light_gray_concrete
-setblock ~41 ~68 ~1312 gray_concrete
-setblock ~42 ~68 ~1312 light_gray_concrete
-setblock ~43 ~68 ~1312 gray_concrete
-setblock ~37 ~68 ~1313 light_gray_concrete
-setblock ~38 ~68 ~1313 andesite
-fill ~39 ~68 ~1313 ~40 ~68 ~1313 light_gray_concrete
-setblock ~41 ~68 ~1313 gray_concrete
-setblock ~42 ~68 ~1313 cracked_stone_bricks
-setblock ~43 ~68 ~1313 light_gray_concrete
-setblock ~38 ~68 ~1314 tuff
-fill ~39 ~68 ~1314 ~40 ~68 ~1314 light_gray_concrete
-setblock ~41 ~68 ~1314 andesite
-fill ~42 ~68 ~1314 ~43 ~68 ~1314 gray_concrete
-setblock ~40 ~68 ~1315 light_gray_concrete
-setblock ~41 ~68 ~1315 cracked_stone_bricks
-setblock ~42 ~68 ~1315 spruce_fence
-setblock ~43 ~68 ~1315 light_gray_concrete
-fill ~42 ~68 ~1316 ~43 ~68 ~1316 light_gray_concrete
-setblock ~38 ~69 ~1308 andesite
-fill ~39 ~69 ~1308 ~41 ~69 ~1308 light_gray_concrete
-setblock ~42 ~69 ~1308 cracked_stone_bricks
-setblock ~43 ~69 ~1308 andesite
-setblock ~38 ~69 ~1309 andesite
-setblock ~39 ~69 ~1309 light_gray_concrete
-setblock ~40 ~69 ~1309 gray_concrete
-setblock ~41 ~69 ~1309 tuff
-setblock ~42 ~69 ~1309 spruce_fence
-setblock ~43 ~69 ~1309 gray_concrete
-setblock ~37 ~69 ~1310 andesite
-fill ~38 ~69 ~1310 ~39 ~69 ~1310 light_gray_concrete
-setblock ~40 ~69 ~1310 andesite
-setblock ~41 ~69 ~1310 light_gray_concrete
-fill ~42 ~69 ~1310 ~43 ~69 ~1310 gray_concrete
-setblock ~37 ~69 ~1311 light_gray_concrete
-setblock ~38 ~69 ~1311 cracked_stone_bricks
-setblock ~39 ~69 ~1311 gray_concrete
-setblock ~40 ~69 ~1311 light_gray_concrete
-setblock ~41 ~69 ~1311 andesite
-fill ~42 ~69 ~1311 ~43 ~69 ~1311 light_gray_concrete
-setblock ~37 ~69 ~1312 light_gray_concrete
-setblock ~38 ~69 ~1312 gray_concrete
-setblock ~39 ~69 ~1312 cracked_stone_bricks
-fill ~40 ~69 ~1312 ~41 ~69 ~1312 light_gray_concrete
-setblock ~42 ~69 ~1312 gray_concrete
-setblock ~43 ~69 ~1312 light_gray_concrete
-setblock ~37 ~69 ~1313 light_gray_concrete
-setblock ~38 ~69 ~1313 tuff
-setblock ~39 ~69 ~1313 cracked_stone_bricks
-setblock ~40 ~69 ~1313 light_gray_concrete
-setblock ~41 ~69 ~1313 gray_concrete
-setblock ~42 ~69 ~1313 light_gray_concrete
-setblock ~43 ~69 ~1313 andesite
-setblock ~38 ~69 ~1314 andesite
-setblock ~39 ~69 ~1314 light_gray_concrete
-setblock ~40 ~69 ~1314 tuff
-fill ~41 ~69 ~1314 ~42 ~69 ~1314 light_gray_concrete
-setblock ~43 ~69 ~1314 tuff
-fill ~40 ~69 ~1315 ~41 ~69 ~1315 light_gray_concrete
-setblock ~42 ~69 ~1315 spruce_fence
-setblock ~43 ~69 ~1315 cracked_stone_bricks
-fill ~42 ~69 ~1316 ~43 ~69 ~1316 light_gray_concrete
-setblock ~38 ~70 ~1308 gray_concrete
-setblock ~39 ~70 ~1308 andesite
-setblock ~40 ~70 ~1308 cracked_stone_bricks
-fill ~41 ~70 ~1308 ~43 ~70 ~1308 light_gray_concrete
-setblock ~38 ~70 ~1309 andesite
-setblock ~39 ~70 ~1309 light_gray_concrete
-setblock ~40 ~70 ~1309 andesite
-setblock ~41 ~70 ~1309 light_gray_concrete
-setblock ~42 ~70 ~1309 spruce_fence
-setblock ~43 ~70 ~1309 light_gray_concrete
-fill ~37 ~70 ~1310 ~38 ~70 ~1310 light_gray_concrete
-setblock ~39 ~70 ~1310 andesite
-setblock ~40 ~70 ~1310 light_gray_concrete
-setblock ~41 ~70 ~1310 gray_concrete
-setblock ~42 ~70 ~1310 cracked_stone_bricks
-setblock ~43 ~70 ~1310 light_gray_concrete
-fill ~37 ~70 ~1311 ~39 ~70 ~1311 light_gray_concrete
-fill ~40 ~70 ~1311 ~41 ~70 ~1311 cracked_stone_bricks
-setblock ~42 ~70 ~1311 light_gray_concrete
-setblock ~43 ~70 ~1311 andesite
-setblock ~37 ~70 ~1312 gray_concrete
-setblock ~38 ~70 ~1312 light_gray_concrete
-fill ~39 ~70 ~1312 ~40 ~70 ~1312 andesite
-fill ~41 ~70 ~1312 ~42 ~70 ~1312 light_gray_concrete
-setblock ~43 ~70 ~1312 gray_concrete
-fill ~37 ~70 ~1313 ~39 ~70 ~1313 light_gray_concrete
-setblock ~40 ~70 ~1313 tuff
-fill ~41 ~70 ~1313 ~42 ~70 ~1313 light_gray_concrete
-setblock ~43 ~70 ~1313 gray_concrete
-setblock ~38 ~70 ~1314 gray_concrete
-setblock ~39 ~70 ~1314 cracked_stone_bricks
-fill ~40 ~70 ~1314 ~42 ~70 ~1314 light_gray_concrete
-setblock ~43 ~70 ~1314 cracked_stone_bricks
-fill ~40 ~70 ~1315 ~41 ~70 ~1315 light_gray_concrete
-setblock ~42 ~70 ~1315 spruce_fence
-setblock ~43 ~70 ~1315 gray_concrete
-setblock ~42 ~70 ~1316 cracked_stone_bricks
-setblock ~43 ~70 ~1316 light_gray_concrete
-setblock ~38 ~71 ~1308 andesite
-fill ~39 ~71 ~1308 ~43 ~71 ~1308 light_gray_concrete
-fill ~38 ~71 ~1309 ~39 ~71 ~1309 light_gray_concrete
-setblock ~40 ~71 ~1309 gray_concrete
-setblock ~41 ~71 ~1309 tuff
-setblock ~42 ~71 ~1309 spruce_fence
-setblock ~43 ~71 ~1309 light_gray_concrete
-fill ~37 ~71 ~1310 ~38 ~71 ~1310 light_gray_concrete
-setblock ~39 ~71 ~1310 tuff
-fill ~40 ~71 ~1310 ~41 ~71 ~1310 light_gray_concrete
-setblock ~42 ~71 ~1310 cracked_stone_bricks
-setblock ~43 ~71 ~1310 gray_concrete
-fill ~37 ~71 ~1311 ~38 ~71 ~1311 andesite
-setblock ~39 ~71 ~1311 light_gray_concrete
-setblock ~40 ~71 ~1311 gray_concrete
-fill ~41 ~71 ~1311 ~43 ~71 ~1311 light_gray_concrete
-setblock ~37 ~71 ~1312 gray_concrete
-setblock ~38 ~71 ~1312 light_gray_concrete
-fill ~39 ~71 ~1312 ~41 ~71 ~1312 cracked_stone_bricks
-setblock ~42 ~71 ~1312 light_gray_concrete
-setblock ~43 ~71 ~1312 andesite
-setblock ~37 ~71 ~1313 light_gray_concrete
-setblock ~38 ~71 ~1313 tuff
-setblock ~39 ~71 ~1313 light_gray_concrete
-setblock ~40 ~71 ~1313 gray_concrete
-setblock ~41 ~71 ~1313 light_gray_concrete
-setblock ~42 ~71 ~1313 tuff
-setblock ~43 ~71 ~1313 light_gray_concrete
-setblock ~38 ~71 ~1314 andesite
-setblock ~39 ~71 ~1314 light_gray_concrete
-setblock ~40 ~71 ~1314 cracked_stone_bricks
-fill ~41 ~71 ~1314 ~43 ~71 ~1314 light_gray_concrete
-fill ~40 ~71 ~1315 ~41 ~71 ~1315 light_gray_concrete
-setblock ~42 ~71 ~1315 spruce_fence
-setblock ~43 ~71 ~1315 andesite
-setblock ~42 ~71 ~1316 light_gray_concrete
-setblock ~43 ~71 ~1316 andesite
-setblock ~38 ~72 ~1308 light_gray_concrete
-setblock ~39 ~72 ~1308 cracked_stone_bricks
-setblock ~40 ~72 ~1308 light_gray_concrete
-setblock ~41 ~72 ~1308 andesite
-setblock ~42 ~72 ~1308 light_gray_concrete
-setblock ~43 ~72 ~1308 cracked_stone_bricks
-setblock ~38 ~72 ~1309 andesite
-setblock ~39 ~72 ~1309 gray_concrete
-fill ~40 ~72 ~1309 ~41 ~72 ~1309 light_gray_concrete
-setblock ~42 ~72 ~1309 spruce_fence
-setblock ~43 ~72 ~1309 light_gray_concrete
-fill ~37 ~72 ~1310 ~42 ~72 ~1310 light_gray_concrete
-setblock ~43 ~72 ~1310 tuff
-fill ~37 ~72 ~1311 ~39 ~72 ~1311 light_gray_concrete
-setblock ~40 ~72 ~1311 gray_concrete
-setblock ~41 ~72 ~1311 cracked_stone_bricks
-setblock ~42 ~72 ~1311 andesite
-setblock ~43 ~72 ~1311 light_gray_concrete
-fill ~37 ~72 ~1312 ~41 ~72 ~1312 light_gray_concrete
-setblock ~42 ~72 ~1312 andesite
-setblock ~43 ~72 ~1312 light_gray_concrete
-setblock ~37 ~72 ~1313 tuff
-fill ~38 ~72 ~1313 ~43 ~72 ~1313 light_gray_concrete
-fill ~38 ~72 ~1314 ~39 ~72 ~1314 cracked_stone_bricks
-setblock ~40 ~72 ~1314 light_gray_concrete
-setblock ~41 ~72 ~1314 andesite
-setblock ~42 ~72 ~1314 tuff
-setblock ~43 ~72 ~1314 gray_concrete
-fill ~40 ~72 ~1315 ~41 ~72 ~1315 light_gray_concrete
-setblock ~42 ~72 ~1315 spruce_fence
-setblock ~43 ~72 ~1315 andesite
-setblock ~42 ~72 ~1316 gray_concrete
-setblock ~43 ~72 ~1316 cracked_stone_bricks
-fill ~38 ~73 ~1308 ~39 ~73 ~1308 light_gray_concrete
-setblock ~40 ~73 ~1308 andesite
-fill ~41 ~73 ~1308 ~43 ~73 ~1308 light_gray_concrete
-setblock ~38 ~73 ~1309 gray_concrete
-fill ~39 ~73 ~1309 ~41 ~73 ~1309 light_gray_concrete
-setblock ~42 ~73 ~1309 spruce_fence
-setblock ~43 ~73 ~1309 light_gray_concrete
-setblock ~37 ~73 ~1310 light_gray_concrete
-setblock ~38 ~73 ~1310 tuff
-fill ~39 ~73 ~1310 ~40 ~73 ~1310 light_gray_concrete
-setblock ~41 ~73 ~1310 gray_concrete
-setblock ~42 ~73 ~1310 light_gray_concrete
-setblock ~43 ~73 ~1310 andesite
-setblock ~37 ~73 ~1311 andesite
-setblock ~38 ~73 ~1311 cracked_stone_bricks
-setblock ~39 ~73 ~1311 light_gray_concrete
-setblock ~40 ~73 ~1311 gray_concrete
-setblock ~41 ~73 ~1311 andesite
-fill ~42 ~73 ~1311 ~43 ~73 ~1311 light_gray_concrete
-setblock ~37 ~73 ~1312 cracked_stone_bricks
-setblock ~38 ~73 ~1312 tuff
-setblock ~39 ~73 ~1312 andesite
-fill ~40 ~73 ~1312 ~42 ~73 ~1312 light_gray_concrete
-setblock ~43 ~73 ~1312 cracked_stone_bricks
-setblock ~37 ~73 ~1313 cracked_stone_bricks
-setblock ~38 ~73 ~1313 light_gray_concrete
-setblock ~39 ~73 ~1313 gray_concrete
-setblock ~40 ~73 ~1313 light_gray_concrete
-fill ~41 ~73 ~1313 ~42 ~73 ~1313 andesite
-setblock ~43 ~73 ~1313 gray_concrete
-fill ~38 ~73 ~1314 ~39 ~73 ~1314 light_gray_concrete
-fill ~40 ~73 ~1314 ~43 ~73 ~1314 andesite
-setblock ~40 ~73 ~1315 light_gray_concrete
-setblock ~41 ~73 ~1315 gray_concrete
-setblock ~42 ~73 ~1315 spruce_fence
-setblock ~43 ~73 ~1315 gray_concrete
-setblock ~42 ~73 ~1316 andesite
-setblock ~43 ~73 ~1316 light_gray_concrete
-setblock ~38 ~74 ~1308 andesite
-setblock ~39 ~74 ~1308 cracked_stone_bricks
-setblock ~40 ~74 ~1308 light_gray_concrete
-setblock ~41 ~74 ~1308 cracked_stone_bricks
-setblock ~42 ~74 ~1308 light_gray_concrete
-setblock ~43 ~74 ~1308 gray_concrete
-setblock ~38 ~74 ~1309 gray_concrete
-fill ~39 ~74 ~1309 ~40 ~74 ~1309 light_gray_concrete
-setblock ~41 ~74 ~1309 andesite
-setblock ~42 ~74 ~1309 spruce_fence
-setblock ~43 ~74 ~1309 cracked_stone_bricks
-setblock ~37 ~74 ~1310 tuff
-setblock ~38 ~74 ~1310 light_gray_concrete
-setblock ~39 ~74 ~1310 andesite
-fill ~40 ~74 ~1310 ~43 ~74 ~1310 light_gray_concrete
-setblock ~37 ~74 ~1311 cracked_stone_bricks
-setblock ~38 ~74 ~1311 gray_concrete
-setblock ~39 ~74 ~1311 light_gray_concrete
-setblock ~40 ~74 ~1311 andesite
-fill ~41 ~74 ~1311 ~42 ~74 ~1311 light_gray_concrete
-setblock ~43 ~74 ~1311 gray_concrete
-setblock ~37 ~74 ~1312 andesite
-fill ~38 ~74 ~1312 ~41 ~74 ~1312 light_gray_concrete
-setblock ~42 ~74 ~1312 andesite
-setblock ~43 ~74 ~1312 light_gray_concrete
-fill ~37 ~74 ~1313 ~39 ~74 ~1313 light_gray_concrete
-setblock ~40 ~74 ~1313 andesite
-setblock ~41 ~74 ~1313 tuff
-setblock ~42 ~74 ~1313 cracked_stone_bricks
-setblock ~43 ~74 ~1313 light_gray_concrete
-fill ~37 ~74 ~1314 ~40 ~74 ~1314 light_gray_concrete
-setblock ~41 ~74 ~1314 cracked_stone_bricks
-setblock ~42 ~74 ~1314 light_gray_concrete
-setblock ~43 ~74 ~1314 tuff
-setblock ~40 ~74 ~1315 cracked_stone_bricks
-setblock ~41 ~74 ~1315 light_gray_concrete
-setblock ~42 ~74 ~1315 spruce_fence
-setblock ~43 ~74 ~1315 light_gray_concrete
-setblock ~42 ~74 ~1316 andesite
-setblock ~43 ~74 ~1316 light_gray_concrete
-setblock ~104 ~74 ~1458 stone_bricks
-setblock ~38 ~75 ~1308 andesite
-setblock ~39 ~75 ~1308 gray_concrete
-setblock ~40 ~75 ~1308 light_gray_concrete
-setblock ~41 ~75 ~1308 tuff
-fill ~42 ~75 ~1308 ~43 ~75 ~1308 light_gray_concrete
-setblock ~38 ~75 ~1309 light_gray_concrete
-setblock ~39 ~75 ~1309 andesite
-setblock ~40 ~75 ~1309 light_gray_concrete
-setblock ~41 ~75 ~1309 gray_concrete
-setblock ~42 ~75 ~1309 spruce_fence
-setblock ~43 ~75 ~1309 light_gray_concrete
-setblock ~37 ~75 ~1310 light_gray_concrete
-setblock ~38 ~75 ~1310 gray_concrete
-setblock ~39 ~75 ~1310 light_gray_concrete
-setblock ~40 ~75 ~1310 cracked_stone_bricks
-setblock ~41 ~75 ~1310 light_gray_concrete
-setblock ~42 ~75 ~1310 gray_concrete
-setblock ~43 ~75 ~1310 light_gray_concrete
-setblock ~37 ~75 ~1311 light_gray_concrete
-setblock ~38 ~75 ~1311 andesite
-setblock ~39 ~75 ~1311 light_gray_concrete
-setblock ~40 ~75 ~1311 andesite
-fill ~41 ~75 ~1311 ~42 ~75 ~1311 cracked_stone_bricks
-setblock ~43 ~75 ~1311 light_gray_concrete
-fill ~37 ~75 ~1312 ~38 ~75 ~1312 light_gray_concrete
-setblock ~39 ~75 ~1312 gray_concrete
-fill ~40 ~75 ~1312 ~41 ~75 ~1312 light_gray_concrete
-setblock ~42 ~75 ~1312 andesite
-setblock ~43 ~75 ~1312 light_gray_concrete
-setblock ~37 ~75 ~1313 light_gray_concrete
-setblock ~38 ~75 ~1313 cracked_stone_bricks
-setblock ~39 ~75 ~1313 andesite
-fill ~40 ~75 ~1313 ~42 ~75 ~1313 light_gray_concrete
-setblock ~43 ~75 ~1313 andesite
-setblock ~37 ~75 ~1314 light_gray_concrete
-setblock ~38 ~75 ~1314 cracked_stone_bricks
-setblock ~39 ~75 ~1314 gray_concrete
-fill ~40 ~75 ~1314 ~43 ~75 ~1314 light_gray_concrete
-setblock ~40 ~75 ~1315 tuff
-setblock ~41 ~75 ~1315 light_gray_concrete
-setblock ~42 ~75 ~1315 spruce_fence
-setblock ~43 ~75 ~1315 gray_concrete
-fill ~42 ~75 ~1316 ~43 ~75 ~1316 andesite
-fill ~103 ~75 ~1458 ~104 ~75 ~1458 stone_bricks
-setblock ~38 ~76 ~1308 gray_concrete
-setblock ~39 ~76 ~1308 light_gray_concrete
-setblock ~40 ~76 ~1308 tuff
-setblock ~41 ~76 ~1308 andesite
-setblock ~42 ~76 ~1308 light_gray_concrete
-setblock ~43 ~76 ~1308 gray_concrete
-fill ~38 ~76 ~1309 ~40 ~76 ~1309 light_gray_concrete
-setblock ~41 ~76 ~1309 gray_concrete
-setblock ~42 ~76 ~1309 spruce_fence
-setblock ~43 ~76 ~1309 light_gray_concrete
-setblock ~37 ~76 ~1310 tuff
-setblock ~38 ~76 ~1310 light_gray_concrete
-setblock ~39 ~76 ~1310 tuff
-setblock ~40 ~76 ~1310 light_gray_concrete
-setblock ~41 ~76 ~1310 andesite
-setblock ~42 ~76 ~1310 tuff
-setblock ~43 ~76 ~1310 andesite
-setblock ~37 ~76 ~1311 tuff
-setblock ~38 ~76 ~1311 light_gray_concrete
-setblock ~39 ~76 ~1311 cracked_stone_bricks
-fill ~40 ~76 ~1311 ~41 ~76 ~1311 gray_concrete
-setblock ~42 ~76 ~1311 light_gray_concrete
-setblock ~43 ~76 ~1311 cracked_stone_bricks
-fill ~37 ~76 ~1312 ~38 ~76 ~1312 light_gray_concrete
-setblock ~39 ~76 ~1312 cracked_stone_bricks
-fill ~40 ~76 ~1312 ~42 ~76 ~1312 light_gray_concrete
-setblock ~43 ~76 ~1312 andesite
-fill ~37 ~76 ~1313 ~38 ~76 ~1313 light_gray_concrete
-fill ~39 ~76 ~1313 ~40 ~76 ~1313 andesite
-setblock ~41 ~76 ~1313 light_gray_concrete
-setblock ~42 ~76 ~1313 cracked_stone_bricks
-setblock ~43 ~76 ~1313 light_gray_concrete
-fill ~37 ~76 ~1314 ~38 ~76 ~1314 andesite
-fill ~39 ~76 ~1314 ~40 ~76 ~1314 light_gray_concrete
-setblock ~41 ~76 ~1314 andesite
-setblock ~42 ~76 ~1314 light_gray_concrete
-setblock ~43 ~76 ~1314 cracked_stone_bricks
-setblock ~40 ~76 ~1315 andesite
-setblock ~41 ~76 ~1315 light_gray_concrete
-setblock ~42 ~76 ~1315 spruce_fence
-setblock ~43 ~76 ~1315 tuff
-fill ~42 ~76 ~1316 ~43 ~76 ~1316 light_gray_concrete
-fill ~102 ~76 ~1458 ~104 ~76 ~1458 stone_bricks
-setblock ~38 ~77 ~1308 light_gray_concrete
-setblock ~39 ~77 ~1308 andesite
-setblock ~40 ~77 ~1308 light_gray_concrete
-setblock ~41 ~77 ~1308 gray_concrete
-fill ~42 ~77 ~1308 ~43 ~77 ~1308 light_gray_concrete
-fill ~38 ~77 ~1309 ~39 ~77 ~1309 light_gray_concrete
-setblock ~40 ~77 ~1309 cracked_stone_bricks
-setblock ~41 ~77 ~1309 light_gray_concrete
-setblock ~42 ~77 ~1309 spruce_fence
-setblock ~43 ~77 ~1309 gray_concrete
-fill ~37 ~77 ~1310 ~38 ~77 ~1310 andesite
-setblock ~39 ~77 ~1310 light_gray_concrete
-fill ~40 ~77 ~1310 ~41 ~77 ~1310 andesite
-setblock ~42 ~77 ~1310 gray_concrete
-setblock ~43 ~77 ~1310 light_gray_concrete
-fill ~37 ~77 ~1311 ~39 ~77 ~1311 andesite
-setblock ~40 ~77 ~1311 gray_concrete
-setblock ~41 ~77 ~1311 andesite
-fill ~42 ~77 ~1311 ~43 ~77 ~1311 light_gray_concrete
-setblock ~37 ~77 ~1312 andesite
-setblock ~38 ~77 ~1312 light_gray_concrete
-setblock ~39 ~77 ~1312 tuff
-fill ~40 ~77 ~1312 ~41 ~77 ~1312 gray_concrete
-setblock ~42 ~77 ~1312 cracked_stone_bricks
-setblock ~43 ~77 ~1312 light_gray_concrete
-setblock ~37 ~77 ~1313 light_gray_concrete
-setblock ~38 ~77 ~1313 cracked_stone_bricks
-setblock ~39 ~77 ~1313 light_gray_concrete
-setblock ~40 ~77 ~1313 andesite
-setblock ~41 ~77 ~1313 tuff
-fill ~42 ~77 ~1313 ~43 ~77 ~1313 light_gray_concrete
-fill ~37 ~77 ~1314 ~41 ~77 ~1314 light_gray_concrete
-setblock ~42 ~77 ~1314 cracked_stone_bricks
-setblock ~43 ~77 ~1314 light_gray_concrete
-setblock ~40 ~77 ~1315 light_gray_concrete
-setblock ~41 ~77 ~1315 tuff
-setblock ~42 ~77 ~1315 spruce_fence
-setblock ~43 ~77 ~1315 andesite
-setblock ~42 ~77 ~1316 andesite
-setblock ~43 ~77 ~1316 cracked_stone_bricks
-fill ~102 ~77 ~1458 ~104 ~77 ~1458 stone_bricks
-setblock ~104 ~77 ~1459 stone_bricks
-setblock ~38 ~78 ~1308 light_gray_concrete
-setblock ~39 ~78 ~1308 gray_concrete
-fill ~40 ~78 ~1308 ~41 ~78 ~1308 light_gray_concrete
-setblock ~42 ~78 ~1308 andesite
-setblock ~43 ~78 ~1308 light_gray_concrete
-fill ~38 ~78 ~1309 ~41 ~78 ~1309 light_gray_concrete
-setblock ~42 ~78 ~1309 spruce_fence
-setblock ~43 ~78 ~1309 light_gray_concrete
-setblock ~37 ~78 ~1310 andesite
-setblock ~38 ~78 ~1310 gray_concrete
-setblock ~39 ~78 ~1310 cracked_stone_bricks
-setblock ~40 ~78 ~1310 light_gray_concrete
-fill ~41 ~78 ~1310 ~43 ~78 ~1310 gray_concrete
-setblock ~37 ~78 ~1311 light_gray_concrete
-setblock ~38 ~78 ~1311 cracked_stone_bricks
-setblock ~39 ~78 ~1311 gray_concrete
-fill ~40 ~78 ~1311 ~42 ~78 ~1311 light_gray_concrete
-setblock ~43 ~78 ~1311 cracked_stone_bricks
-setblock ~37 ~78 ~1312 light_gray_concrete
-fill ~38 ~78 ~1312 ~39 ~78 ~1312 andesite
-fill ~40 ~78 ~1312 ~41 ~78 ~1312 light_gray_concrete
-fill ~42 ~78 ~1312 ~43 ~78 ~1312 andesite
-setblock ~37 ~78 ~1313 cracked_stone_bricks
-setblock ~38 ~78 ~1313 light_gray_concrete
-setblock ~39 ~78 ~1313 andesite
-fill ~40 ~78 ~1313 ~42 ~78 ~1313 light_gray_concrete
-setblock ~43 ~78 ~1313 andesite
-setblock ~37 ~78 ~1314 light_gray_concrete
-fill ~38 ~78 ~1314 ~39 ~78 ~1314 cracked_stone_bricks
-setblock ~40 ~78 ~1314 andesite
-fill ~41 ~78 ~1314 ~42 ~78 ~1314 light_gray_concrete
-setblock ~43 ~78 ~1314 andesite
-fill ~40 ~78 ~1315 ~41 ~78 ~1315 light_gray_concrete
-setblock ~42 ~78 ~1315 spruce_fence
-setblock ~43 ~78 ~1315 light_gray_concrete
-setblock ~42 ~78 ~1316 andesite
-setblock ~43 ~78 ~1316 gray_concrete
-fill ~102 ~78 ~1458 ~104 ~78 ~1458 stone_bricks
-fill ~103 ~78 ~1459 ~104 ~78 ~1459 stone_bricks
-setblock ~38 ~79 ~1308 light_gray_concrete
-fill ~39 ~79 ~1308 ~40 ~79 ~1308 gray_concrete
-setblock ~41 ~79 ~1308 light_gray_concrete
-setblock ~42 ~79 ~1308 andesite
-setblock ~43 ~79 ~1308 light_gray_concrete
-setblock ~38 ~79 ~1309 light_gray_concrete
-setblock ~39 ~79 ~1309 cracked_stone_bricks
-fill ~40 ~79 ~1309 ~41 ~79 ~1309 light_gray_concrete
-setblock ~42 ~79 ~1309 spruce_fence
-setblock ~43 ~79 ~1309 light_gray_concrete
-setblock ~37 ~79 ~1310 andesite
-setblock ~38 ~79 ~1310 light_gray_concrete
-setblock ~39 ~79 ~1310 andesite
-setblock ~40 ~79 ~1310 light_gray_concrete
-setblock ~41 ~79 ~1310 tuff
-fill ~42 ~79 ~1310 ~43 ~79 ~1310 light_gray_concrete
-fill ~37 ~79 ~1311 ~38 ~79 ~1311 light_gray_concrete
-setblock ~39 ~79 ~1311 andesite
-fill ~40 ~79 ~1311 ~41 ~79 ~1311 gray_concrete
-setblock ~42 ~79 ~1311 light_gray_concrete
-setblock ~43 ~79 ~1311 andesite
-fill ~37 ~79 ~1312 ~39 ~79 ~1312 light_gray_concrete
-setblock ~40 ~79 ~1312 gray_concrete
-setblock ~41 ~79 ~1312 light_gray_concrete
-setblock ~42 ~79 ~1312 cracked_stone_bricks
-setblock ~43 ~79 ~1312 light_gray_concrete
-fill ~37 ~79 ~1313 ~38 ~79 ~1313 light_gray_concrete
-setblock ~39 ~79 ~1313 andesite
-setblock ~40 ~79 ~1313 cracked_stone_bricks
-setblock ~41 ~79 ~1313 gray_concrete
-fill ~42 ~79 ~1313 ~43 ~79 ~1313 light_gray_concrete
-fill ~37 ~79 ~1314 ~38 ~79 ~1314 light_gray_concrete
-setblock ~39 ~79 ~1314 cracked_stone_bricks
-fill ~40 ~79 ~1314 ~41 ~79 ~1314 light_gray_concrete
-setblock ~42 ~79 ~1314 gray_concrete
-setblock ~43 ~79 ~1314 cracked_stone_bricks
-setblock ~40 ~79 ~1315 andesite
-setblock ~41 ~79 ~1315 gray_concrete
-setblock ~42 ~79 ~1315 spruce_fence
-setblock ~43 ~79 ~1315 cracked_stone_bricks
-fill ~42 ~79 ~1316 ~43 ~79 ~1316 light_gray_concrete
-fill ~102 ~79 ~1458 ~104 ~79 ~1458 stone_bricks
-fill ~103 ~79 ~1459 ~104 ~79 ~1459 stone_bricks
-setblock ~38 ~80 ~1308 light_gray_concrete
-setblock ~39 ~80 ~1308 andesite
-setblock ~40 ~80 ~1308 gray_concrete
-setblock ~41 ~80 ~1308 andesite
-setblock ~42 ~80 ~1308 light_gray_concrete
-setblock ~43 ~80 ~1308 andesite
-setblock ~38 ~80 ~1309 light_gray_concrete
-setblock ~39 ~80 ~1309 andesite
-setblock ~40 ~80 ~1309 light_gray_concrete
-setblock ~41 ~80 ~1309 cracked_stone_bricks
-setblock ~42 ~80 ~1309 spruce_fence
-setblock ~43 ~80 ~1309 light_gray_concrete
-setblock ~37 ~80 ~1310 gray_concrete
-setblock ~38 ~80 ~1310 cracked_stone_bricks
-setblock ~39 ~80 ~1310 tuff
-fill ~40 ~80 ~1310 ~41 ~80 ~1310 light_gray_concrete
-setblock ~42 ~80 ~1310 cracked_stone_bricks
-setblock ~43 ~80 ~1310 gray_concrete
-fill ~37 ~80 ~1311 ~38 ~80 ~1311 light_gray_concrete
-setblock ~39 ~80 ~1311 andesite
-setblock ~40 ~80 ~1311 gray_concrete
-setblock ~41 ~80 ~1311 light_gray_concrete
-setblock ~42 ~80 ~1311 gray_concrete
-setblock ~43 ~80 ~1311 light_gray_concrete
-setblock ~37 ~80 ~1312 gray_concrete
-setblock ~38 ~80 ~1312 light_gray_concrete
-setblock ~39 ~80 ~1312 gray_concrete
-setblock ~40 ~80 ~1312 tuff
-fill ~41 ~80 ~1312 ~42 ~80 ~1312 light_gray_concrete
-setblock ~43 ~80 ~1312 andesite
-setblock ~37 ~80 ~1313 gray_concrete
-fill ~38 ~80 ~1313 ~43 ~80 ~1313 light_gray_concrete
-setblock ~37 ~80 ~1314 light_gray_concrete
-fill ~38 ~80 ~1314 ~39 ~80 ~1314 gray_concrete
-fill ~40 ~80 ~1314 ~41 ~80 ~1314 light_gray_concrete
-fill ~42 ~80 ~1314 ~43 ~80 ~1314 gray_concrete
-setblock ~40 ~80 ~1315 gray_concrete
-setblock ~41 ~80 ~1315 light_gray_concrete
-setblock ~42 ~80 ~1315 spruce_fence
-setblock ~43 ~80 ~1315 light_gray_concrete
-setblock ~42 ~80 ~1316 light_gray_concrete
-setblock ~43 ~80 ~1316 gray_concrete
-fill ~101 ~80 ~1458 ~104 ~80 ~1458 stone_bricks
-fill ~103 ~80 ~1459 ~104 ~80 ~1459 stone_bricks
-setblock ~38 ~81 ~1308 gray_concrete
-fill ~39 ~81 ~1308 ~41 ~81 ~1308 light_gray_concrete
-setblock ~42 ~81 ~1308 cracked_stone_bricks
-setblock ~43 ~81 ~1308 light_gray_concrete
-fill ~38 ~81 ~1309 ~40 ~81 ~1309 light_gray_concrete
-setblock ~41 ~81 ~1309 andesite
-setblock ~42 ~81 ~1309 spruce_fence
-setblock ~43 ~81 ~1309 light_gray_concrete
-setblock ~37 ~81 ~1310 light_gray_concrete
-setblock ~38 ~81 ~1310 tuff
-fill ~39 ~81 ~1310 ~42 ~81 ~1310 light_gray_concrete
-setblock ~43 ~81 ~1310 andesite
-fill ~37 ~81 ~1311 ~38 ~81 ~1311 light_gray_concrete
-setblock ~39 ~81 ~1311 gray_concrete
-fill ~40 ~81 ~1311 ~42 ~81 ~1311 light_gray_concrete
-setblock ~43 ~81 ~1311 andesite
-fill ~37 ~81 ~1312 ~38 ~81 ~1312 light_gray_concrete
-setblock ~39 ~81 ~1312 cracked_stone_bricks
-setblock ~40 ~81 ~1312 light_gray_concrete
-setblock ~41 ~81 ~1312 cracked_stone_bricks
-setblock ~42 ~81 ~1312 light_gray_concrete
-setblock ~43 ~81 ~1312 tuff
-fill ~37 ~81 ~1313 ~43 ~81 ~1313 light_gray_concrete
-setblock ~37 ~81 ~1314 andesite
-setblock ~38 ~81 ~1314 gray_concrete
-setblock ~39 ~81 ~1314 tuff
-setblock ~40 ~81 ~1314 light_gray_concrete
-setblock ~41 ~81 ~1314 tuff
-setblock ~42 ~81 ~1314 gray_concrete
-setblock ~43 ~81 ~1314 light_gray_concrete
-setblock ~40 ~81 ~1315 light_gray_concrete
-setblock ~41 ~81 ~1315 cracked_stone_bricks
-setblock ~42 ~81 ~1315 spruce_fence
-setblock ~43 ~81 ~1315 light_gray_concrete
-setblock ~42 ~81 ~1316 light_gray_concrete
-setblock ~43 ~81 ~1316 tuff
-fill ~101 ~81 ~1458 ~104 ~81 ~1458 stone_bricks
-fill ~103 ~81 ~1459 ~104 ~81 ~1459 stone_bricks
-setblock ~38 ~82 ~1308 light_gray_concrete
-setblock ~39 ~82 ~1308 gray_concrete
-setblock ~40 ~82 ~1308 light_gray_concrete
-setblock ~41 ~82 ~1308 gray_concrete
-fill ~42 ~82 ~1308 ~43 ~82 ~1308 light_gray_concrete
-fill ~38 ~82 ~1309 ~41 ~82 ~1309 light_gray_concrete
-setblock ~42 ~82 ~1309 spruce_fence
-setblock ~43 ~82 ~1309 light_gray_concrete
-fill ~37 ~82 ~1310 ~38 ~82 ~1310 light_gray_concrete
-setblock ~39 ~82 ~1310 cracked_stone_bricks
-setblock ~40 ~82 ~1310 light_gray_concrete
-setblock ~41 ~82 ~1310 andesite
-setblock ~42 ~82 ~1310 gray_concrete
-setblock ~43 ~82 ~1310 andesite
-fill ~37 ~82 ~1311 ~38 ~82 ~1311 light_gray_concrete
-setblock ~39 ~82 ~1311 gray_concrete
-setblock ~40 ~82 ~1311 light_gray_concrete
-setblock ~41 ~82 ~1311 gray_concrete
-setblock ~42 ~82 ~1311 tuff
-setblock ~43 ~82 ~1311 gray_concrete
-setblock ~37 ~82 ~1312 gray_concrete
-fill ~38 ~82 ~1312 ~39 ~82 ~1312 light_gray_concrete
-setblock ~40 ~82 ~1312 tuff
-setblock ~41 ~82 ~1312 cracked_stone_bricks
-fill ~42 ~82 ~1312 ~43 ~82 ~1312 light_gray_concrete
-fill ~37 ~82 ~1313 ~41 ~82 ~1313 light_gray_concrete
-setblock ~42 ~82 ~1313 tuff
-setblock ~43 ~82 ~1313 cracked_stone_bricks
-setblock ~37 ~82 ~1314 light_gray_concrete
-setblock ~38 ~82 ~1314 gray_concrete
-fill ~39 ~82 ~1314 ~43 ~82 ~1314 light_gray_concrete
-fill ~40 ~82 ~1315 ~41 ~82 ~1315 light_gray_concrete
-setblock ~42 ~82 ~1315 spruce_fence
-setblock ~43 ~82 ~1315 andesite
-fill ~42 ~82 ~1316 ~43 ~82 ~1316 gray_concrete
-fill ~101 ~82 ~1458 ~104 ~82 ~1458 stone_bricks
-fill ~102 ~82 ~1459 ~104 ~82 ~1459 stone_bricks
-fill ~38 ~83 ~1308 ~40 ~83 ~1308 light_gray_concrete
-fill ~41 ~83 ~1308 ~42 ~83 ~1308 andesite
-setblock ~43 ~83 ~1308 gray_concrete
-fill ~38 ~83 ~1309 ~39 ~83 ~1309 gray_concrete
-fill ~40 ~83 ~1309 ~41 ~83 ~1309 light_gray_concrete
-setblock ~42 ~83 ~1309 spruce_fence
-setblock ~43 ~83 ~1309 light_gray_concrete
-setblock ~37 ~83 ~1310 tuff
-fill ~38 ~83 ~1310 ~40 ~83 ~1310 light_gray_concrete
-setblock ~41 ~83 ~1310 cracked_stone_bricks
-setblock ~42 ~83 ~1310 light_gray_concrete
-setblock ~43 ~83 ~1310 cracked_stone_bricks
-fill ~37 ~83 ~1311 ~40 ~83 ~1311 light_gray_concrete
-setblock ~41 ~83 ~1311 andesite
-setblock ~42 ~83 ~1311 light_gray_concrete
-setblock ~43 ~83 ~1311 tuff
-fill ~37 ~83 ~1312 ~38 ~83 ~1312 andesite
-setblock ~39 ~83 ~1312 light_gray_concrete
-fill ~40 ~83 ~1312 ~42 ~83 ~1312 gray_concrete
-setblock ~43 ~83 ~1312 light_gray_concrete
-setblock ~37 ~83 ~1313 gray_concrete
-fill ~38 ~83 ~1313 ~39 ~83 ~1313 light_gray_concrete
-fill ~40 ~83 ~1313 ~41 ~83 ~1313 andesite
-fill ~42 ~83 ~1313 ~43 ~83 ~1313 light_gray_concrete
-fill ~37 ~83 ~1314 ~39 ~83 ~1314 gray_concrete
-setblock ~40 ~83 ~1314 andesite
-setblock ~41 ~83 ~1314 light_gray_concrete
-setblock ~42 ~83 ~1314 andesite
-setblock ~43 ~83 ~1314 light_gray_concrete
-setblock ~40 ~83 ~1315 andesite
-setblock ~41 ~83 ~1315 cracked_stone_bricks
-setblock ~42 ~83 ~1315 spruce_fence
-setblock ~43 ~83 ~1315 light_gray_concrete
-setblock ~42 ~83 ~1316 light_gray_concrete
-setblock ~43 ~83 ~1316 cracked_stone_bricks
-fill ~101 ~83 ~1458 ~104 ~83 ~1458 stone_bricks
-fill ~102 ~83 ~1459 ~104 ~83 ~1459 stone_bricks
-setblock ~104 ~83 ~1460 stone_bricks
-setblock ~38 ~84 ~1308 gray_concrete
-setblock ~39 ~84 ~1308 light_gray_concrete
-setblock ~40 ~84 ~1308 andesite
-setblock ~41 ~84 ~1308 light_gray_concrete
-fill ~42 ~84 ~1308 ~43 ~84 ~1308 cracked_stone_bricks
-setblock ~38 ~84 ~1309 gray_concrete
-setblock ~39 ~84 ~1309 light_gray_concrete
-setblock ~40 ~84 ~1309 tuff
-setblock ~41 ~84 ~1309 light_gray_concrete
-setblock ~42 ~84 ~1309 spruce_fence
-setblock ~43 ~84 ~1309 cracked_stone_bricks
-setblock ~37 ~84 ~1310 andesite
-fill ~38 ~84 ~1310 ~39 ~84 ~1310 light_gray_concrete
-setblock ~40 ~84 ~1310 gray_concrete
-fill ~41 ~84 ~1310 ~42 ~84 ~1310 light_gray_concrete
-setblock ~43 ~84 ~1310 cracked_stone_bricks
-setblock ~37 ~84 ~1311 andesite
-setblock ~38 ~84 ~1311 light_gray_concrete
-setblock ~39 ~84 ~1311 andesite
-setblock ~40 ~84 ~1311 cracked_stone_bricks
-fill ~41 ~84 ~1311 ~43 ~84 ~1311 gray_concrete
-setblock ~37 ~84 ~1312 cracked_stone_bricks
-fill ~38 ~84 ~1312 ~39 ~84 ~1312 light_gray_concrete
-setblock ~40 ~84 ~1312 gray_concrete
-fill ~41 ~84 ~1312 ~43 ~84 ~1312 light_gray_concrete
-fill ~37 ~84 ~1313 ~38 ~84 ~1313 light_gray_concrete
-setblock ~39 ~84 ~1313 andesite
-setblock ~40 ~84 ~1313 light_gray_concrete
-setblock ~41 ~84 ~1313 gray_concrete
-setblock ~42 ~84 ~1313 light_gray_concrete
-setblock ~43 ~84 ~1313 andesite
-setblock ~37 ~84 ~1314 andesite
-fill ~38 ~84 ~1314 ~42 ~84 ~1314 light_gray_concrete
-setblock ~43 ~84 ~1314 cracked_stone_bricks
-fill ~40 ~84 ~1315 ~41 ~84 ~1315 light_gray_concrete
-setblock ~42 ~84 ~1315 spruce_fence
-setblock ~43 ~84 ~1315 light_gray_concrete
-fill ~42 ~84 ~1316 ~43 ~84 ~1316 light_gray_concrete
+fill ~26 ~120 ~1286 ~26 ~125 ~1286 air
+fill ~26 ~122 ~1287 ~26 ~125 ~1287 air
+fill ~27 ~121 ~1286 ~27 ~125 ~1286 air
+fill ~28 ~121 ~1286 ~28 ~125 ~1286 air
+fill ~29 ~122 ~1286 ~29 ~125 ~1286 air
+fill ~31 ~122 ~1292 ~31 ~125 ~1292 air
+fill ~32 ~122 ~1291 ~32 ~125 ~1291 air
+fill ~32 ~118 ~1292 ~32 ~125 ~1292 air
+fill ~32 ~121 ~1293 ~32 ~125 ~1293 air
+fill ~32 ~122 ~1294 ~32 ~125 ~1294 air
+fill ~33 ~122 ~1291 ~33 ~125 ~1291 air
+fill ~33 ~121 ~1292 ~33 ~125 ~1292 air
+fill ~33 ~121 ~1293 ~33 ~125 ~1293 air
+fill ~33 ~122 ~1294 ~33 ~125 ~1294 air
+fill ~34 ~121 ~1292 ~34 ~125 ~1292 air
+fill ~34 ~122 ~1293 ~34 ~125 ~1293 air
+fill ~34 ~122 ~1294 ~34 ~125 ~1294 air
+fill ~33 ~103 ~1308 ~33 ~122 ~1308 air
+fill ~33 ~106 ~1309 ~33 ~122 ~1309 air
+fill ~33 ~110 ~1310 ~33 ~122 ~1310 air
+fill ~34 ~100 ~1308 ~34 ~122 ~1308 air
+fill ~34 ~102 ~1309 ~34 ~122 ~1309 air
+fill ~34 ~104 ~1310 ~34 ~122 ~1310 air
+fill ~35 ~99 ~1308 ~35 ~122 ~1308 air
+fill ~35 ~100 ~1309 ~35 ~122 ~1309 air
+fill ~35 ~102 ~1310 ~35 ~122 ~1310 air
+fill ~35 ~108 ~1311 ~35 ~122 ~1311 air
+fill ~36 ~98 ~1308 ~36 ~122 ~1308 air
+fill ~36 ~99 ~1309 ~36 ~122 ~1309 air
+fill ~36 ~101 ~1310 ~36 ~122 ~1310 air
+fill ~36 ~105 ~1311 ~36 ~122 ~1311 air
+fill ~99 ~96 ~1458 ~99 ~100 ~1458 air
+fill ~100 ~91 ~1458 ~100 ~100 ~1458 air
+fill ~101 ~83 ~1458 ~101 ~100 ~1458 air
+fill ~101 ~92 ~1459 ~101 ~100 ~1459 air
+fill ~102 ~79 ~1458 ~102 ~100 ~1458 air
+fill ~102 ~85 ~1459 ~102 ~100 ~1459 air
+fill ~102 ~94 ~1460 ~102 ~100 ~1460 air
+fill ~103 ~78 ~1458 ~103 ~100 ~1458 air
+fill ~103 ~81 ~1459 ~103 ~100 ~1459 air
+fill ~103 ~89 ~1460 ~103 ~100 ~1460 air
+fill ~103 ~95 ~1461 ~103 ~100 ~1461 air
+fill ~104 ~77 ~1458 ~104 ~100 ~1458 air
+fill ~104 ~80 ~1459 ~104 ~100 ~1459 air
+fill ~104 ~86 ~1460 ~104 ~100 ~1460 air
+fill ~104 ~89 ~1461 ~104 ~100 ~1461 air
+fill ~19 ~104 ~1263 ~19 ~107 ~1263 air
+fill ~20 ~104 ~1263 ~20 ~107 ~1263 air
+fill ~21 ~104 ~1263 ~21 ~107 ~1263 air
+fill ~22 ~104 ~1263 ~22 ~107 ~1263 air
+fill ~39 ~96 ~1297 ~39 ~118 ~1297 air
+fill ~40 ~96 ~1297 ~40 ~118 ~1297 air
+fill ~41 ~97 ~1295 ~41 ~118 ~1295 air
+fill ~41 ~97 ~1296 ~41 ~118 ~1296 air
+fill ~41 ~93 ~1297 ~41 ~118 ~1297 air
+fill ~42 ~97 ~1295 ~42 ~118 ~1295 air
+fill ~42 ~97 ~1296 ~42 ~118 ~1296 air
+fill ~42 ~91 ~1297 ~42 ~118 ~1297 air
+setblock ~82 ~64 ~1398 chain[axis=x]
+fill ~83 ~64 ~1398 ~84 ~64 ~1398 iron_bars
+fill ~82 ~64 ~1399 ~83 ~64 ~1399 iron_bars
+setblock ~87 ~64 ~1399 chain[axis=x]
+setblock ~88 ~64 ~1399 iron_bars
+setblock ~87 ~64 ~1400 iron_bars
+setblock ~104 ~64 ~1415 chain[axis=x]
+setblock ~105 ~64 ~1415 iron_bars
+setblock ~98 ~64 ~1416 chain[axis=x]
+setblock ~99 ~64 ~1416 iron_bars
+setblock ~104 ~64 ~1416 iron_bars
+setblock ~98 ~64 ~1417 iron_bars
+setblock ~120 ~64 ~1429 chain[axis=x]
+setblock ~121 ~64 ~1429 iron_bars
+setblock ~120 ~64 ~1430 iron_bars
+fill ~82 ~65 ~1398 ~83 ~65 ~1398 chain[axis=z]
+setblock ~87 ~65 ~1399 chain[axis=z]
+setblock ~104 ~65 ~1415 chain[axis=z]
+setblock ~98 ~65 ~1416 chain[axis=z]
+setblock ~120 ~65 ~1429 chain[axis=z]
 fill ~73 ~84 ~1407 ~74 ~84 ~1407 light_gray_concrete
 fill ~70 ~84 ~1408 ~72 ~84 ~1408 light_gray_concrete
 setblock ~73 ~84 ~1408 andesite
 setblock ~74 ~84 ~1408 gray_concrete
-fill ~101 ~84 ~1458 ~104 ~84 ~1458 stone_bricks
-fill ~102 ~84 ~1459 ~104 ~84 ~1459 stone_bricks
-setblock ~104 ~84 ~1460 stone_bricks
-setblock ~38 ~85 ~1308 light_gray_concrete
-setblock ~39 ~85 ~1308 gray_concrete
-setblock ~40 ~85 ~1308 light_gray_concrete
-fill ~41 ~85 ~1308 ~42 ~85 ~1308 gray_concrete
-setblock ~43 ~85 ~1308 cracked_stone_bricks
-fill ~38 ~85 ~1309 ~40 ~85 ~1309 light_gray_concrete
-setblock ~41 ~85 ~1309 andesite
-setblock ~42 ~85 ~1309 spruce_fence
-setblock ~43 ~85 ~1309 light_gray_concrete
-setblock ~37 ~85 ~1310 gray_concrete
-setblock ~38 ~85 ~1310 light_gray_concrete
-fill ~39 ~85 ~1310 ~40 ~85 ~1310 cracked_stone_bricks
-setblock ~41 ~85 ~1310 light_gray_concrete
-setblock ~42 ~85 ~1310 cracked_stone_bricks
-setblock ~43 ~85 ~1310 light_gray_concrete
-setblock ~37 ~85 ~1311 gray_concrete
-setblock ~38 ~85 ~1311 light_gray_concrete
-fill ~39 ~85 ~1311 ~40 ~85 ~1311 andesite
-fill ~41 ~85 ~1311 ~43 ~85 ~1311 light_gray_concrete
-setblock ~37 ~85 ~1312 gray_concrete
-fill ~38 ~85 ~1312 ~39 ~85 ~1312 light_gray_concrete
-setblock ~40 ~85 ~1312 gray_concrete
-setblock ~41 ~85 ~1312 andesite
-fill ~42 ~85 ~1312 ~43 ~85 ~1312 light_gray_concrete
-fill ~37 ~85 ~1313 ~43 ~85 ~1313 light_gray_concrete
-fill ~37 ~85 ~1314 ~39 ~85 ~1314 light_gray_concrete
-setblock ~40 ~85 ~1314 gray_concrete
-setblock ~41 ~85 ~1314 andesite
-setblock ~42 ~85 ~1314 tuff
-setblock ~43 ~85 ~1314 gray_concrete
-fill ~40 ~85 ~1315 ~41 ~85 ~1315 andesite
-setblock ~42 ~85 ~1315 spruce_fence
-setblock ~43 ~85 ~1315 light_gray_concrete
-setblock ~42 ~85 ~1316 gray_concrete
-setblock ~43 ~85 ~1316 andesite
 setblock ~73 ~85 ~1404 light_gray_concrete
 setblock ~74 ~85 ~1404 gray_concrete
 fill ~70 ~85 ~1405 ~71 ~85 ~1405 light_gray_concrete
@@ -1058,50 +97,6 @@ setblock ~71 ~85 ~1407 cracked_stone_bricks
 fill ~72 ~85 ~1407 ~74 ~85 ~1407 light_gray_concrete
 fill ~70 ~85 ~1408 ~73 ~85 ~1408 light_gray_concrete
 setblock ~74 ~85 ~1408 gray_concrete
-fill ~101 ~85 ~1458 ~104 ~85 ~1458 stone_bricks
-fill ~102 ~85 ~1459 ~104 ~85 ~1459 stone_bricks
-setblock ~104 ~85 ~1460 stone_bricks
-fill ~38 ~86 ~1308 ~41 ~86 ~1308 light_gray_concrete
-setblock ~42 ~86 ~1308 cracked_stone_bricks
-setblock ~43 ~86 ~1308 andesite
-setblock ~38 ~86 ~1309 cracked_stone_bricks
-setblock ~39 ~86 ~1309 andesite
-setblock ~40 ~86 ~1309 tuff
-setblock ~41 ~86 ~1309 light_gray_concrete
-setblock ~42 ~86 ~1309 spruce_fence
-setblock ~43 ~86 ~1309 light_gray_concrete
-setblock ~37 ~86 ~1310 cracked_stone_bricks
-fill ~38 ~86 ~1310 ~40 ~86 ~1310 light_gray_concrete
-setblock ~41 ~86 ~1310 cracked_stone_bricks
-setblock ~42 ~86 ~1310 light_gray_concrete
-setblock ~43 ~86 ~1310 cracked_stone_bricks
-setblock ~37 ~86 ~1311 light_gray_concrete
-setblock ~38 ~86 ~1311 andesite
-setblock ~39 ~86 ~1311 light_gray_concrete
-setblock ~40 ~86 ~1311 gray_concrete
-setblock ~41 ~86 ~1311 cracked_stone_bricks
-setblock ~42 ~86 ~1311 light_gray_concrete
-setblock ~43 ~86 ~1311 andesite
-fill ~37 ~86 ~1312 ~41 ~86 ~1312 light_gray_concrete
-setblock ~42 ~86 ~1312 andesite
-setblock ~43 ~86 ~1312 light_gray_concrete
-setblock ~37 ~86 ~1313 light_gray_concrete
-setblock ~38 ~86 ~1313 gray_concrete
-setblock ~39 ~86 ~1313 cracked_stone_bricks
-setblock ~40 ~86 ~1313 gray_concrete
-fill ~41 ~86 ~1313 ~43 ~86 ~1313 light_gray_concrete
-fill ~37 ~86 ~1314 ~38 ~86 ~1314 light_gray_concrete
-setblock ~39 ~86 ~1314 andesite
-setblock ~40 ~86 ~1314 cracked_stone_bricks
-setblock ~41 ~86 ~1314 light_gray_concrete
-setblock ~42 ~86 ~1314 andesite
-setblock ~43 ~86 ~1314 light_gray_concrete
-fill ~39 ~86 ~1315 ~41 ~86 ~1315 light_gray_concrete
-setblock ~42 ~86 ~1315 spruce_fence
-setblock ~43 ~86 ~1315 tuff
-setblock ~41 ~86 ~1316 light_gray_concrete
-setblock ~42 ~86 ~1316 andesite
-setblock ~43 ~86 ~1316 tuff
 setblock ~70 ~86 ~1404 light_gray_concrete
 setblock ~71 ~86 ~1404 cracked_stone_bricks
 setblock ~72 ~86 ~1404 gray_concrete
@@ -1121,46 +116,6 @@ fill ~70 ~86 ~1408 ~74 ~86 ~1408 light_gray_concrete
 setblock ~52 ~86 ~1432 light_gray_concrete
 setblock ~51 ~86 ~1433 cracked_stone_bricks
 fill ~52 ~86 ~1433 ~53 ~86 ~1433 light_gray_concrete
-fill ~101 ~86 ~1458 ~104 ~86 ~1458 stone_bricks
-fill ~102 ~86 ~1459 ~104 ~86 ~1459 stone_bricks
-fill ~103 ~86 ~1460 ~104 ~86 ~1460 stone_bricks
-setblock ~104 ~86 ~1461 stone_bricks
-setblock ~38 ~87 ~1308 andesite
-fill ~39 ~87 ~1308 ~40 ~87 ~1308 light_gray_concrete
-setblock ~41 ~87 ~1308 tuff
-setblock ~42 ~87 ~1308 andesite
-setblock ~43 ~87 ~1308 light_gray_concrete
-setblock ~37 ~87 ~1309 gray_concrete
-fill ~38 ~87 ~1309 ~39 ~87 ~1309 light_gray_concrete
-setblock ~40 ~87 ~1309 andesite
-setblock ~41 ~87 ~1309 cracked_stone_bricks
-setblock ~42 ~87 ~1309 spruce_fence
-setblock ~43 ~87 ~1309 light_gray_concrete
-fill ~37 ~87 ~1310 ~39 ~87 ~1310 light_gray_concrete
-setblock ~40 ~87 ~1310 andesite
-fill ~41 ~87 ~1310 ~43 ~87 ~1310 gray_concrete
-setblock ~37 ~87 ~1311 light_gray_concrete
-setblock ~38 ~87 ~1311 tuff
-fill ~39 ~87 ~1311 ~43 ~87 ~1311 light_gray_concrete
-setblock ~37 ~87 ~1312 andesite
-fill ~38 ~87 ~1312 ~40 ~87 ~1312 light_gray_concrete
-setblock ~41 ~87 ~1312 gray_concrete
-setblock ~42 ~87 ~1312 andesite
-setblock ~43 ~87 ~1312 light_gray_concrete
-setblock ~37 ~87 ~1313 cracked_stone_bricks
-fill ~38 ~87 ~1313 ~42 ~87 ~1313 light_gray_concrete
-setblock ~43 ~87 ~1313 gray_concrete
-setblock ~37 ~87 ~1314 light_gray_concrete
-setblock ~38 ~87 ~1314 tuff
-fill ~39 ~87 ~1314 ~40 ~87 ~1314 gray_concrete
-fill ~41 ~87 ~1314 ~42 ~87 ~1314 light_gray_concrete
-setblock ~43 ~87 ~1314 tuff
-setblock ~38 ~87 ~1315 andesite
-fill ~39 ~87 ~1315 ~41 ~87 ~1315 light_gray_concrete
-setblock ~42 ~87 ~1315 spruce_fence
-setblock ~43 ~87 ~1315 light_gray_concrete
-fill ~41 ~87 ~1316 ~42 ~87 ~1316 light_gray_concrete
-setblock ~43 ~87 ~1316 cracked_stone_bricks
 fill ~70 ~87 ~1404 ~71 ~87 ~1404 andesite
 setblock ~72 ~87 ~1404 light_gray_concrete
 setblock ~73 ~87 ~1404 gray_concrete
@@ -1198,61 +153,10 @@ setblock ~61 ~87 ~1432 light_gray_concrete
 setblock ~51 ~87 ~1433 andesite
 fill ~52 ~87 ~1433 ~54 ~87 ~1433 light_gray_concrete
 setblock ~61 ~87 ~1433 light_gray_concrete
-fill ~101 ~87 ~1458 ~104 ~87 ~1458 stone_bricks
-fill ~102 ~87 ~1459 ~104 ~87 ~1459 stone_bricks
-fill ~103 ~87 ~1460 ~104 ~87 ~1460 stone_bricks
-setblock ~104 ~87 ~1461 stone_bricks
-setblock ~42 ~88 ~1297 light_gray_concrete
-setblock ~38 ~88 ~1308 gray_concrete
-fill ~39 ~88 ~1308 ~41 ~88 ~1308 light_gray_concrete
-fill ~42 ~88 ~1308 ~43 ~88 ~1308 cracked_stone_bricks
-setblock ~37 ~88 ~1309 light_gray_concrete
-setblock ~38 ~88 ~1309 andesite
-setblock ~39 ~88 ~1309 light_gray_concrete
-setblock ~40 ~88 ~1309 gray_concrete
-setblock ~41 ~88 ~1309 light_gray_concrete
-setblock ~42 ~88 ~1309 spruce_fence
-setblock ~43 ~88 ~1309 tuff
-fill ~37 ~88 ~1310 ~38 ~88 ~1310 light_gray_concrete
-setblock ~39 ~88 ~1310 andesite
-setblock ~40 ~88 ~1310 gray_concrete
-setblock ~41 ~88 ~1310 light_gray_concrete
-setblock ~42 ~88 ~1310 gray_concrete
-setblock ~43 ~88 ~1310 light_gray_concrete
-setblock ~37 ~88 ~1311 andesite
-setblock ~38 ~88 ~1311 tuff
-setblock ~39 ~88 ~1311 light_gray_concrete
-setblock ~40 ~88 ~1311 cracked_stone_bricks
-fill ~41 ~88 ~1311 ~42 ~88 ~1311 light_gray_concrete
-setblock ~43 ~88 ~1311 gray_concrete
-fill ~37 ~88 ~1312 ~39 ~88 ~1312 light_gray_concrete
-setblock ~40 ~88 ~1312 andesite
-setblock ~41 ~88 ~1312 light_gray_concrete
-setblock ~42 ~88 ~1312 gray_concrete
-setblock ~43 ~88 ~1312 andesite
-setblock ~37 ~88 ~1313 light_gray_concrete
-setblock ~38 ~88 ~1313 tuff
-fill ~39 ~88 ~1313 ~41 ~88 ~1313 light_gray_concrete
-setblock ~42 ~88 ~1313 cracked_stone_bricks
-setblock ~43 ~88 ~1313 andesite
-setblock ~37 ~88 ~1314 andesite
-setblock ~38 ~88 ~1314 cracked_stone_bricks
-fill ~39 ~88 ~1314 ~41 ~88 ~1314 light_gray_concrete
-setblock ~42 ~88 ~1314 andesite
-setblock ~43 ~88 ~1314 gray_concrete
-setblock ~38 ~88 ~1315 gray_concrete
-setblock ~39 ~88 ~1315 light_gray_concrete
-setblock ~40 ~88 ~1315 tuff
-setblock ~41 ~88 ~1315 gray_concrete
-setblock ~42 ~88 ~1315 spruce_fence
-setblock ~43 ~88 ~1315 andesite
-setblock ~41 ~88 ~1316 light_gray_concrete
-setblock ~42 ~88 ~1316 andesite
-setblock ~43 ~88 ~1316 light_gray_concrete
-fill ~58 ~88 ~1401 ~59 ~88 ~1401 iron_bars
+setblock ~58 ~88 ~1401 iron_bars
+setblock ~59 ~88 ~1401 cobweb
 fill ~60 ~88 ~1402 ~62 ~88 ~1402 iron_bars
-setblock ~63 ~88 ~1403 iron_bars
-setblock ~64 ~88 ~1403 cobweb
+fill ~63 ~88 ~1403 ~64 ~88 ~1403 iron_bars
 fill ~65 ~88 ~1404 ~66 ~88 ~1404 iron_bars
 setblock ~70 ~88 ~1404 andesite
 setblock ~71 ~88 ~1404 light_gray_concrete
@@ -1274,7 +178,8 @@ fill ~71 ~88 ~1408 ~72 ~88 ~1408 light_gray_concrete
 setblock ~73 ~88 ~1408 gray_concrete
 setblock ~74 ~88 ~1408 light_gray_concrete
 setblock ~64 ~88 ~1410 polished_blackstone_wall
-fill ~63 ~88 ~1418 ~64 ~88 ~1418 mud_bricks
+setblock ~63 ~88 ~1418 packed_mud
+setblock ~64 ~88 ~1418 mud_bricks
 setblock ~64 ~88 ~1419 mud_bricks
 setblock ~62 ~88 ~1420 green_terracotta
 setblock ~63 ~88 ~1420 polished_blackstone_wall
@@ -1360,59 +265,9 @@ setblock ~56 ~88 ~1433 andesite
 setblock ~57 ~88 ~1433 light_gray_concrete
 setblock ~58 ~88 ~1433 gray_concrete
 fill ~59 ~88 ~1433 ~61 ~88 ~1433 light_gray_concrete
-setblock ~61 ~88 ~1435 andesite
-setblock ~62 ~88 ~1435 light_gray_concrete
+setblock ~61 ~88 ~1435 light_gray_concrete
+setblock ~62 ~88 ~1435 gray_concrete
 setblock ~62 ~88 ~1436 light_gray_concrete
-fill ~100 ~88 ~1458 ~104 ~88 ~1458 stone_bricks
-fill ~102 ~88 ~1459 ~104 ~88 ~1459 stone_bricks
-fill ~103 ~88 ~1460 ~104 ~88 ~1460 stone_bricks
-setblock ~104 ~88 ~1461 stone_bricks
-setblock ~42 ~89 ~1297 gray_concrete
-setblock ~37 ~89 ~1308 cracked_stone_bricks
-setblock ~38 ~89 ~1308 gray_concrete
-setblock ~39 ~89 ~1308 cracked_stone_bricks
-setblock ~40 ~89 ~1308 andesite
-setblock ~41 ~89 ~1308 gray_concrete
-setblock ~42 ~89 ~1308 tuff
-setblock ~43 ~89 ~1308 light_gray_concrete
-setblock ~37 ~89 ~1309 light_gray_concrete
-setblock ~38 ~89 ~1309 gray_concrete
-setblock ~39 ~89 ~1309 light_gray_concrete
-setblock ~40 ~89 ~1309 gray_concrete
-setblock ~41 ~89 ~1309 light_gray_concrete
-setblock ~42 ~89 ~1309 spruce_fence
-setblock ~43 ~89 ~1309 light_gray_concrete
-setblock ~37 ~89 ~1310 cracked_stone_bricks
-setblock ~38 ~89 ~1310 light_gray_concrete
-setblock ~39 ~89 ~1310 andesite
-setblock ~40 ~89 ~1310 light_gray_concrete
-setblock ~41 ~89 ~1310 cracked_stone_bricks
-setblock ~42 ~89 ~1310 andesite
-setblock ~43 ~89 ~1310 light_gray_concrete
-fill ~37 ~89 ~1311 ~39 ~89 ~1311 light_gray_concrete
-fill ~40 ~89 ~1311 ~41 ~89 ~1311 cracked_stone_bricks
-setblock ~42 ~89 ~1311 andesite
-setblock ~43 ~89 ~1311 light_gray_concrete
-setblock ~37 ~89 ~1312 andesite
-setblock ~38 ~89 ~1312 gray_concrete
-fill ~39 ~89 ~1312 ~41 ~89 ~1312 light_gray_concrete
-setblock ~42 ~89 ~1312 andesite
-setblock ~43 ~89 ~1312 light_gray_concrete
-setblock ~37 ~89 ~1313 light_gray_concrete
-fill ~38 ~89 ~1313 ~39 ~89 ~1313 tuff
-fill ~40 ~89 ~1313 ~41 ~89 ~1313 light_gray_concrete
-setblock ~42 ~89 ~1313 cracked_stone_bricks
-setblock ~43 ~89 ~1313 light_gray_concrete
-setblock ~37 ~89 ~1314 tuff
-setblock ~38 ~89 ~1314 andesite
-fill ~39 ~89 ~1314 ~41 ~89 ~1314 light_gray_concrete
-setblock ~42 ~89 ~1314 tuff
-setblock ~43 ~89 ~1314 andesite
-fill ~38 ~89 ~1315 ~40 ~89 ~1315 light_gray_concrete
-setblock ~41 ~89 ~1315 gray_concrete
-setblock ~42 ~89 ~1315 spruce_fence
-setblock ~43 ~89 ~1315 light_gray_concrete
-fill ~41 ~89 ~1316 ~43 ~89 ~1316 light_gray_concrete
 fill ~56 ~89 ~1400 ~57 ~89 ~1400 iron_bars
 setblock ~70 ~89 ~1404 iron_bars
 fill ~71 ~89 ~1404 ~73 ~89 ~1404 air
@@ -1433,7 +288,7 @@ setblock ~64 ~89 ~1419 mud_brick_slab
 setblock ~63 ~89 ~1420 iron_trapdoor[facing=east,half=bottom,open=false]
 setblock ~64 ~89 ~1420 mud_brick_slab
 setblock ~64 ~89 ~1421 mud_brick_slab
-setblock ~63 ~89 ~1422 mud_bricks
+setblock ~63 ~89 ~1422 packed_mud
 setblock ~64 ~89 ~1422 mud_brick_slab
 fill ~51 ~89 ~1423 ~53 ~89 ~1423 light_gray_concrete
 setblock ~54 ~89 ~1423 gray_concrete
@@ -1511,55 +366,10 @@ setblock ~56 ~89 ~1433 light_gray_concrete
 fill ~57 ~89 ~1433 ~59 ~89 ~1433 andesite
 setblock ~60 ~89 ~1433 light_gray_concrete
 setblock ~61 ~89 ~1433 cracked_stone_bricks
-fill ~59 ~89 ~1435 ~61 ~89 ~1435 light_gray_concrete
-setblock ~62 ~89 ~1435 gray_concrete
-setblock ~59 ~89 ~1436 gray_concrete
-fill ~60 ~89 ~1436 ~61 ~89 ~1436 andesite
-setblock ~62 ~89 ~1436 light_gray_concrete
-setblock ~59 ~89 ~1437 gray_concrete
+fill ~59 ~89 ~1435 ~62 ~89 ~1435 light_gray_concrete
+fill ~59 ~89 ~1436 ~62 ~89 ~1436 light_gray_concrete
+setblock ~59 ~89 ~1437 andesite
 fill ~60 ~89 ~1437 ~62 ~89 ~1437 light_gray_concrete
-fill ~100 ~89 ~1458 ~104 ~89 ~1458 stone_bricks
-fill ~101 ~89 ~1459 ~104 ~89 ~1459 stone_bricks
-fill ~103 ~89 ~1460 ~104 ~89 ~1460 stone_bricks
-setblock ~104 ~89 ~1461 stone_bricks
-fill ~41 ~90 ~1297 ~42 ~90 ~1297 light_gray_concrete
-setblock ~37 ~90 ~1308 light_gray_concrete
-setblock ~38 ~90 ~1308 andesite
-setblock ~39 ~90 ~1308 light_gray_concrete
-setblock ~40 ~90 ~1308 cracked_stone_bricks
-fill ~41 ~90 ~1308 ~42 ~90 ~1308 light_gray_concrete
-setblock ~43 ~90 ~1308 andesite
-fill ~37 ~90 ~1309 ~40 ~90 ~1309 light_gray_concrete
-setblock ~41 ~90 ~1309 tuff
-setblock ~42 ~90 ~1309 spruce_fence
-setblock ~43 ~90 ~1309 light_gray_concrete
-setblock ~37 ~90 ~1310 andesite
-setblock ~38 ~90 ~1310 light_gray_concrete
-setblock ~39 ~90 ~1310 cracked_stone_bricks
-setblock ~40 ~90 ~1310 gray_concrete
-setblock ~41 ~90 ~1310 light_gray_concrete
-setblock ~42 ~90 ~1310 andesite
-setblock ~43 ~90 ~1310 gray_concrete
-setblock ~37 ~90 ~1311 light_gray_concrete
-setblock ~38 ~90 ~1311 cracked_stone_bricks
-setblock ~39 ~90 ~1311 light_gray_concrete
-setblock ~40 ~90 ~1311 andesite
-fill ~41 ~90 ~1311 ~43 ~90 ~1311 light_gray_concrete
-setblock ~37 ~90 ~1312 gray_concrete
-setblock ~38 ~90 ~1312 light_gray_concrete
-setblock ~39 ~90 ~1312 andesite
-fill ~40 ~90 ~1312 ~43 ~90 ~1312 light_gray_concrete
-fill ~37 ~90 ~1313 ~38 ~90 ~1313 light_gray_concrete
-setblock ~39 ~90 ~1313 andesite
-fill ~40 ~90 ~1313 ~43 ~90 ~1313 light_gray_concrete
-fill ~37 ~90 ~1314 ~41 ~90 ~1314 light_gray_concrete
-setblock ~42 ~90 ~1314 gray_concrete
-setblock ~43 ~90 ~1314 light_gray_concrete
-fill ~38 ~90 ~1315 ~40 ~90 ~1315 light_gray_concrete
-setblock ~41 ~90 ~1315 andesite
-setblock ~42 ~90 ~1315 spruce_fence
-setblock ~43 ~90 ~1315 light_gray_concrete
-fill ~41 ~90 ~1316 ~43 ~90 ~1316 light_gray_concrete
 setblock ~55 ~90 ~1400 cobweb
 setblock ~70 ~90 ~1404 polished_basalt
 fill ~71 ~90 ~1404 ~73 ~90 ~1404 air
@@ -1664,66 +474,15 @@ setblock ~58 ~90 ~1433 light_gray_concrete
 setblock ~59 ~90 ~1433 gray_concrete
 setblock ~60 ~90 ~1433 light_gray_concrete
 setblock ~61 ~90 ~1433 andesite
-setblock ~59 ~90 ~1435 light_gray_concrete
-setblock ~60 ~90 ~1435 cracked_stone_bricks
-setblock ~61 ~90 ~1435 light_gray_concrete
+setblock ~59 ~90 ~1435 tuff
+fill ~60 ~90 ~1435 ~61 ~90 ~1435 light_gray_concrete
 setblock ~62 ~90 ~1435 gray_concrete
-setblock ~59 ~90 ~1436 andesite
-setblock ~60 ~90 ~1436 light_gray_concrete
-setblock ~61 ~90 ~1436 gray_concrete
-setblock ~62 ~90 ~1436 light_gray_concrete
-setblock ~59 ~90 ~1437 light_gray_concrete
-setblock ~60 ~90 ~1437 gray_concrete
-fill ~61 ~90 ~1437 ~62 ~90 ~1437 light_gray_concrete
-fill ~100 ~90 ~1458 ~104 ~90 ~1458 stone_bricks
-fill ~101 ~90 ~1459 ~104 ~90 ~1459 stone_bricks
-fill ~103 ~90 ~1460 ~104 ~90 ~1460 stone_bricks
-setblock ~104 ~90 ~1461 stone_bricks
-setblock ~41 ~91 ~1297 andesite
-setblock ~42 ~91 ~1297 light_gray_concrete
-setblock ~37 ~91 ~1308 andesite
-setblock ~38 ~91 ~1308 cracked_stone_bricks
-fill ~39 ~91 ~1308 ~41 ~91 ~1308 light_gray_concrete
-setblock ~42 ~91 ~1308 tuff
-setblock ~43 ~91 ~1308 light_gray_concrete
-setblock ~37 ~91 ~1309 light_gray_concrete
-setblock ~38 ~91 ~1309 gray_concrete
-setblock ~39 ~91 ~1309 tuff
-fill ~40 ~91 ~1309 ~41 ~91 ~1309 light_gray_concrete
-setblock ~42 ~91 ~1309 spruce_fence
-setblock ~43 ~91 ~1309 light_gray_concrete
-fill ~37 ~91 ~1310 ~39 ~91 ~1310 light_gray_concrete
-setblock ~40 ~91 ~1310 gray_concrete
-fill ~41 ~91 ~1310 ~42 ~91 ~1310 light_gray_concrete
-setblock ~43 ~91 ~1310 cracked_stone_bricks
-setblock ~37 ~91 ~1311 gray_concrete
-setblock ~38 ~91 ~1311 andesite
-setblock ~39 ~91 ~1311 light_gray_concrete
-setblock ~40 ~91 ~1311 gray_concrete
-setblock ~41 ~91 ~1311 andesite
-fill ~42 ~91 ~1311 ~43 ~91 ~1311 cracked_stone_bricks
-setblock ~37 ~91 ~1312 light_gray_concrete
-setblock ~38 ~91 ~1312 gray_concrete
-setblock ~39 ~91 ~1312 light_gray_concrete
-setblock ~40 ~91 ~1312 cracked_stone_bricks
-fill ~41 ~91 ~1312 ~42 ~91 ~1312 light_gray_concrete
-setblock ~43 ~91 ~1312 tuff
-setblock ~37 ~91 ~1313 light_gray_concrete
-setblock ~38 ~91 ~1313 andesite
-setblock ~39 ~91 ~1313 cracked_stone_bricks
-fill ~40 ~91 ~1313 ~43 ~91 ~1313 light_gray_concrete
-fill ~37 ~91 ~1314 ~41 ~91 ~1314 light_gray_concrete
-setblock ~42 ~91 ~1314 gray_concrete
-setblock ~43 ~91 ~1314 light_gray_concrete
-setblock ~38 ~91 ~1315 light_gray_concrete
-setblock ~39 ~91 ~1315 andesite
-setblock ~40 ~91 ~1315 gray_concrete
-setblock ~41 ~91 ~1315 light_gray_concrete
-setblock ~42 ~91 ~1315 spruce_fence
-setblock ~43 ~91 ~1315 cracked_stone_bricks
-fill ~39 ~91 ~1316 ~41 ~91 ~1316 light_gray_concrete
-setblock ~42 ~91 ~1316 cracked_stone_bricks
-setblock ~43 ~91 ~1316 light_gray_concrete
+setblock ~59 ~90 ~1436 light_gray_concrete
+setblock ~60 ~90 ~1436 andesite
+setblock ~61 ~90 ~1436 cracked_stone_bricks
+setblock ~62 ~90 ~1436 gray_concrete
+fill ~59 ~90 ~1437 ~61 ~90 ~1437 light_gray_concrete
+setblock ~62 ~90 ~1437 gray_concrete
 fill ~53 ~91 ~1399 ~54 ~91 ~1399 iron_bars
 setblock ~70 ~91 ~1404 iron_bars
 fill ~71 ~91 ~1404 ~73 ~91 ~1404 air
@@ -1791,64 +550,15 @@ fill ~54 ~91 ~1433 ~55 ~91 ~1433 mud_bricks
 setblock ~56 ~91 ~1433 packed_mud
 fill ~57 ~91 ~1433 ~58 ~91 ~1433 mud_bricks
 fill ~59 ~91 ~1433 ~61 ~91 ~1433 air
-setblock ~59 ~91 ~1435 light_gray_concrete
-setblock ~60 ~91 ~1435 cracked_stone_bricks
-setblock ~61 ~91 ~1435 light_gray_concrete
-setblock ~62 ~91 ~1435 andesite
-setblock ~59 ~91 ~1436 tuff
-setblock ~60 ~91 ~1436 gray_concrete
-setblock ~61 ~91 ~1436 light_gray_concrete
-setblock ~62 ~91 ~1436 gray_concrete
+setblock ~59 ~91 ~1435 gray_concrete
+fill ~60 ~91 ~1435 ~62 ~91 ~1435 light_gray_concrete
+fill ~59 ~91 ~1436 ~60 ~91 ~1436 light_gray_concrete
+setblock ~61 ~91 ~1436 gray_concrete
+setblock ~62 ~91 ~1436 andesite
 setblock ~59 ~91 ~1437 gray_concrete
-fill ~60 ~91 ~1437 ~62 ~91 ~1437 light_gray_concrete
-fill ~100 ~91 ~1458 ~104 ~91 ~1458 stone_bricks
-fill ~101 ~91 ~1459 ~104 ~91 ~1459 stone_bricks
-fill ~102 ~91 ~1460 ~104 ~91 ~1460 stone_bricks
-setblock ~104 ~91 ~1461 stone_bricks
-fill ~41 ~92 ~1297 ~42 ~92 ~1297 light_gray_concrete
-setblock ~37 ~92 ~1308 andesite
-setblock ~38 ~92 ~1308 light_gray_concrete
-setblock ~39 ~92 ~1308 gray_concrete
-fill ~40 ~92 ~1308 ~43 ~92 ~1308 light_gray_concrete
-setblock ~37 ~92 ~1309 light_gray_concrete
-setblock ~38 ~92 ~1309 cracked_stone_bricks
-setblock ~39 ~92 ~1309 gray_concrete
-fill ~40 ~92 ~1309 ~41 ~92 ~1309 light_gray_concrete
-setblock ~42 ~92 ~1309 spruce_fence
-setblock ~43 ~92 ~1309 andesite
-fill ~37 ~92 ~1310 ~39 ~92 ~1310 light_gray_concrete
-setblock ~40 ~92 ~1310 andesite
-fill ~41 ~92 ~1310 ~43 ~92 ~1310 light_gray_concrete
-setblock ~37 ~92 ~1311 gray_concrete
-fill ~38 ~92 ~1311 ~39 ~92 ~1311 light_gray_concrete
-setblock ~40 ~92 ~1311 gray_concrete
-fill ~41 ~92 ~1311 ~43 ~92 ~1311 light_gray_concrete
-fill ~37 ~92 ~1312 ~38 ~92 ~1312 light_gray_concrete
-setblock ~39 ~92 ~1312 gray_concrete
-fill ~40 ~92 ~1312 ~41 ~92 ~1312 light_gray_concrete
-setblock ~42 ~92 ~1312 gray_concrete
-setblock ~43 ~92 ~1312 light_gray_concrete
-fill ~37 ~92 ~1313 ~39 ~92 ~1313 gray_concrete
-setblock ~40 ~92 ~1313 andesite
-fill ~41 ~92 ~1313 ~42 ~92 ~1313 light_gray_concrete
-setblock ~43 ~92 ~1313 andesite
-fill ~37 ~92 ~1314 ~38 ~92 ~1314 light_gray_concrete
-setblock ~39 ~92 ~1314 andesite
-fill ~40 ~92 ~1314 ~41 ~92 ~1314 light_gray_concrete
-setblock ~42 ~92 ~1314 andesite
-setblock ~43 ~92 ~1314 light_gray_concrete
-setblock ~37 ~92 ~1315 light_gray_concrete
-setblock ~38 ~92 ~1315 andesite
-setblock ~39 ~92 ~1315 light_gray_concrete
-setblock ~40 ~92 ~1315 tuff
-setblock ~41 ~92 ~1315 light_gray_concrete
-setblock ~42 ~92 ~1315 spruce_fence
-setblock ~43 ~92 ~1315 light_gray_concrete
-fill ~38 ~92 ~1316 ~39 ~92 ~1316 light_gray_concrete
-setblock ~40 ~92 ~1316 cracked_stone_bricks
-fill ~41 ~92 ~1316 ~42 ~92 ~1316 light_gray_concrete
-setblock ~43 ~92 ~1316 tuff
-setblock ~52 ~92 ~1398 cobweb
+fill ~60 ~91 ~1437 ~61 ~91 ~1437 light_gray_concrete
+setblock ~62 ~91 ~1437 cracked_stone_bricks
+setblock ~52 ~92 ~1398 iron_bars
 setblock ~70 ~92 ~1404 polished_basalt
 fill ~71 ~92 ~1404 ~73 ~92 ~1404 air
 setblock ~74 ~92 ~1404 polished_basalt
@@ -1909,58 +619,6 @@ setblock ~59 ~92 ~1436 red_concrete
 fill ~60 ~92 ~1436 ~61 ~92 ~1436 iron_block
 setblock ~62 ~92 ~1436 barrel[facing=up]
 fill ~59 ~92 ~1437 ~62 ~92 ~1437 air
-fill ~100 ~92 ~1458 ~104 ~92 ~1458 stone_bricks
-fill ~101 ~92 ~1459 ~104 ~92 ~1459 stone_bricks
-fill ~102 ~92 ~1460 ~104 ~92 ~1460 stone_bricks
-fill ~103 ~92 ~1461 ~104 ~92 ~1461 stone_bricks
-fill ~39 ~93 ~1297 ~41 ~93 ~1297 light_gray_concrete
-setblock ~42 ~93 ~1297 andesite
-setblock ~37 ~93 ~1308 cracked_stone_bricks
-setblock ~38 ~93 ~1308 light_gray_concrete
-setblock ~39 ~93 ~1308 andesite
-fill ~40 ~93 ~1308 ~43 ~93 ~1308 light_gray_concrete
-fill ~37 ~93 ~1309 ~38 ~93 ~1309 gray_concrete
-setblock ~39 ~93 ~1309 tuff
-setblock ~40 ~93 ~1309 light_gray_concrete
-setblock ~41 ~93 ~1309 andesite
-setblock ~42 ~93 ~1309 spruce_fence
-setblock ~43 ~93 ~1309 gray_concrete
-setblock ~37 ~93 ~1310 gray_concrete
-setblock ~38 ~93 ~1310 andesite
-fill ~39 ~93 ~1310 ~42 ~93 ~1310 light_gray_concrete
-setblock ~43 ~93 ~1310 cracked_stone_bricks
-setblock ~37 ~93 ~1311 light_gray_concrete
-setblock ~38 ~93 ~1311 andesite
-setblock ~39 ~93 ~1311 light_gray_concrete
-setblock ~40 ~93 ~1311 andesite
-setblock ~41 ~93 ~1311 light_gray_concrete
-setblock ~42 ~93 ~1311 andesite
-setblock ~43 ~93 ~1311 light_gray_concrete
-setblock ~37 ~93 ~1312 light_gray_concrete
-setblock ~38 ~93 ~1312 tuff
-fill ~39 ~93 ~1312 ~42 ~93 ~1312 light_gray_concrete
-setblock ~43 ~93 ~1312 andesite
-fill ~37 ~93 ~1313 ~41 ~93 ~1313 light_gray_concrete
-setblock ~42 ~93 ~1313 cracked_stone_bricks
-setblock ~43 ~93 ~1313 light_gray_concrete
-setblock ~37 ~93 ~1314 cracked_stone_bricks
-fill ~38 ~93 ~1314 ~39 ~93 ~1314 andesite
-setblock ~40 ~93 ~1314 cracked_stone_bricks
-setblock ~41 ~93 ~1314 light_gray_concrete
-setblock ~42 ~93 ~1314 andesite
-setblock ~43 ~93 ~1314 light_gray_concrete
-setblock ~37 ~93 ~1315 light_gray_concrete
-setblock ~38 ~93 ~1315 gray_concrete
-setblock ~39 ~93 ~1315 light_gray_concrete
-setblock ~40 ~93 ~1315 gray_concrete
-setblock ~41 ~93 ~1315 light_gray_concrete
-setblock ~42 ~93 ~1315 spruce_fence
-setblock ~43 ~93 ~1315 gray_concrete
-setblock ~38 ~93 ~1316 tuff
-setblock ~39 ~93 ~1316 light_gray_concrete
-setblock ~40 ~93 ~1316 cracked_stone_bricks
-setblock ~41 ~93 ~1316 andesite
-fill ~42 ~93 ~1316 ~43 ~93 ~1316 light_gray_concrete
 setblock ~70 ~93 ~1404 iron_bars
 fill ~71 ~93 ~1404 ~73 ~93 ~1404 air
 setblock ~74 ~93 ~1404 iron_bars
@@ -1993,61 +651,6 @@ setblock ~60 ~93 ~1436 smoker[facing=south,lit=true]
 setblock ~61 ~93 ~1436 iron_trapdoor[half=bottom]
 setblock ~62 ~93 ~1436 air
 fill ~59 ~93 ~1437 ~62 ~93 ~1437 air
-fill ~99 ~93 ~1458 ~104 ~93 ~1458 stone_bricks
-fill ~101 ~93 ~1459 ~104 ~93 ~1459 stone_bricks
-fill ~102 ~93 ~1460 ~104 ~93 ~1460 stone_bricks
-fill ~103 ~93 ~1461 ~104 ~93 ~1461 stone_bricks
-setblock ~41 ~94 ~1295 andesite
-setblock ~42 ~94 ~1295 light_gray_concrete
-fill ~41 ~94 ~1296 ~42 ~94 ~1296 andesite
-setblock ~39 ~94 ~1297 light_gray_concrete
-setblock ~40 ~94 ~1297 gray_concrete
-setblock ~41 ~94 ~1297 light_gray_concrete
-setblock ~42 ~94 ~1297 andesite
-setblock ~37 ~94 ~1308 andesite
-setblock ~38 ~94 ~1308 gray_concrete
-fill ~39 ~94 ~1308 ~41 ~94 ~1308 light_gray_concrete
-setblock ~42 ~94 ~1308 gray_concrete
-setblock ~43 ~94 ~1308 andesite
-fill ~37 ~94 ~1309 ~39 ~94 ~1309 light_gray_concrete
-fill ~40 ~94 ~1309 ~41 ~94 ~1309 andesite
-setblock ~42 ~94 ~1309 spruce_fence
-setblock ~43 ~94 ~1309 cracked_stone_bricks
-fill ~37 ~94 ~1310 ~39 ~94 ~1310 light_gray_concrete
-setblock ~40 ~94 ~1310 cracked_stone_bricks
-fill ~41 ~94 ~1310 ~42 ~94 ~1310 light_gray_concrete
-setblock ~43 ~94 ~1310 gray_concrete
-setblock ~37 ~94 ~1311 gray_concrete
-fill ~38 ~94 ~1311 ~41 ~94 ~1311 light_gray_concrete
-setblock ~42 ~94 ~1311 andesite
-setblock ~43 ~94 ~1311 gray_concrete
-setblock ~37 ~94 ~1312 light_gray_concrete
-setblock ~38 ~94 ~1312 tuff
-setblock ~39 ~94 ~1312 cracked_stone_bricks
-setblock ~40 ~94 ~1312 light_gray_concrete
-fill ~41 ~94 ~1312 ~42 ~94 ~1312 tuff
-setblock ~43 ~94 ~1312 light_gray_concrete
-fill ~37 ~94 ~1313 ~38 ~94 ~1313 light_gray_concrete
-setblock ~39 ~94 ~1313 andesite
-fill ~40 ~94 ~1313 ~42 ~94 ~1313 light_gray_concrete
-setblock ~43 ~94 ~1313 cracked_stone_bricks
-setblock ~37 ~94 ~1314 light_gray_concrete
-fill ~38 ~94 ~1314 ~39 ~94 ~1314 cracked_stone_bricks
-setblock ~40 ~94 ~1314 light_gray_concrete
-setblock ~41 ~94 ~1314 gray_concrete
-setblock ~42 ~94 ~1314 cracked_stone_bricks
-setblock ~43 ~94 ~1314 light_gray_concrete
-setblock ~37 ~94 ~1315 light_gray_concrete
-setblock ~38 ~94 ~1315 andesite
-fill ~39 ~94 ~1315 ~41 ~94 ~1315 light_gray_concrete
-setblock ~42 ~94 ~1315 spruce_fence
-setblock ~43 ~94 ~1315 light_gray_concrete
-setblock ~38 ~94 ~1316 gray_concrete
-setblock ~39 ~94 ~1316 tuff
-setblock ~40 ~94 ~1316 light_gray_concrete
-setblock ~41 ~94 ~1316 andesite
-setblock ~42 ~94 ~1316 light_gray_concrete
-setblock ~43 ~94 ~1316 gray_concrete
 fill ~70 ~94 ~1404 ~74 ~94 ~1404 iron_block
 fill ~70 ~94 ~1405 ~74 ~94 ~1405 iron_block
 fill ~70 ~94 ~1406 ~74 ~94 ~1406 iron_block
@@ -2073,58 +676,7 @@ fill ~59 ~94 ~1436 ~60 ~94 ~1436 air
 setblock ~61 ~94 ~1436 lightning_rod
 setblock ~62 ~94 ~1436 air
 fill ~59 ~94 ~1437 ~62 ~94 ~1437 air
-fill ~99 ~94 ~1458 ~104 ~94 ~1458 stone_bricks
-fill ~101 ~94 ~1459 ~104 ~94 ~1459 stone_bricks
-fill ~102 ~94 ~1460 ~104 ~94 ~1460 stone_bricks
-fill ~103 ~94 ~1461 ~104 ~94 ~1461 stone_bricks
-fill ~41 ~95 ~1295 ~42 ~95 ~1295 light_gray_concrete
-setblock ~41 ~95 ~1296 light_gray_concrete
-setblock ~42 ~95 ~1296 gray_concrete
-setblock ~39 ~95 ~1297 light_gray_concrete
-setblock ~40 ~95 ~1297 gray_concrete
-setblock ~41 ~95 ~1297 light_gray_concrete
-setblock ~42 ~95 ~1297 gray_concrete
-setblock ~36 ~95 ~1308 light_gray_concrete
-setblock ~37 ~95 ~1308 tuff
-setblock ~38 ~95 ~1308 light_gray_concrete
-setblock ~39 ~95 ~1308 andesite
-setblock ~40 ~95 ~1308 light_gray_concrete
-setblock ~41 ~95 ~1308 cracked_stone_bricks
-setblock ~42 ~95 ~1308 light_gray_concrete
-setblock ~43 ~95 ~1308 cracked_stone_bricks
-fill ~37 ~95 ~1309 ~41 ~95 ~1309 light_gray_concrete
-setblock ~42 ~95 ~1309 spruce_fence
-setblock ~43 ~95 ~1309 cracked_stone_bricks
-fill ~37 ~95 ~1310 ~38 ~95 ~1310 gray_concrete
-setblock ~39 ~95 ~1310 cracked_stone_bricks
-setblock ~40 ~95 ~1310 tuff
-setblock ~41 ~95 ~1310 light_gray_concrete
-setblock ~42 ~95 ~1310 andesite
-setblock ~43 ~95 ~1310 light_gray_concrete
-fill ~37 ~95 ~1311 ~38 ~95 ~1311 cracked_stone_bricks
-setblock ~39 ~95 ~1311 andesite
-fill ~40 ~95 ~1311 ~41 ~95 ~1311 light_gray_concrete
-setblock ~42 ~95 ~1311 gray_concrete
-setblock ~43 ~95 ~1311 light_gray_concrete
-fill ~37 ~95 ~1312 ~40 ~95 ~1312 light_gray_concrete
-setblock ~41 ~95 ~1312 andesite
-setblock ~42 ~95 ~1312 light_gray_concrete
-setblock ~43 ~95 ~1312 gray_concrete
-fill ~37 ~95 ~1313 ~38 ~95 ~1313 light_gray_concrete
-setblock ~39 ~95 ~1313 cracked_stone_bricks
-fill ~40 ~95 ~1313 ~43 ~95 ~1313 light_gray_concrete
-fill ~37 ~95 ~1314 ~41 ~95 ~1314 light_gray_concrete
-setblock ~42 ~95 ~1314 andesite
-setblock ~43 ~95 ~1314 gray_concrete
-setblock ~37 ~95 ~1315 gray_concrete
-fill ~38 ~95 ~1315 ~40 ~95 ~1315 light_gray_concrete
-setblock ~41 ~95 ~1315 cracked_stone_bricks
-setblock ~42 ~95 ~1315 spruce_fence
-setblock ~43 ~95 ~1315 light_gray_concrete
-fill ~38 ~95 ~1316 ~40 ~95 ~1316 light_gray_concrete
-setblock ~41 ~95 ~1316 andesite
-fill ~42 ~95 ~1316 ~43 ~95 ~1316 light_gray_concrete
-setblock ~51 ~95 ~1398 iron_bars
+setblock ~51 ~95 ~1398 cobweb
 fill ~70 ~95 ~1404 ~74 ~95 ~1404 air
 setblock ~70 ~95 ~1405 air
 fill ~71 ~95 ~1405 ~73 ~95 ~1405 iron_trapdoor[half=bottom]
@@ -2156,63 +708,10 @@ fill ~51 ~95 ~1433 ~61 ~95 ~1433 air
 fill ~59 ~95 ~1435 ~62 ~95 ~1435 air
 fill ~59 ~95 ~1436 ~62 ~95 ~1436 air
 fill ~59 ~95 ~1437 ~62 ~95 ~1437 air
-fill ~98 ~95 ~1458 ~104 ~95 ~1458 stone_bricks
-fill ~100 ~95 ~1459 ~104 ~95 ~1459 stone_bricks
-fill ~102 ~95 ~1460 ~104 ~95 ~1460 stone_bricks
-fill ~102 ~95 ~1461 ~104 ~95 ~1461 stone_bricks
+setblock ~98 ~95 ~1458 stone_bricks
+setblock ~100 ~95 ~1459 stone_bricks
+setblock ~102 ~95 ~1461 stone_bricks
 setblock ~104 ~95 ~1462 stone_bricks
-fill ~41 ~96 ~1295 ~42 ~96 ~1295 light_gray_concrete
-fill ~41 ~96 ~1296 ~42 ~96 ~1296 light_gray_concrete
-fill ~39 ~96 ~1297 ~41 ~96 ~1297 light_gray_concrete
-setblock ~42 ~96 ~1297 gray_concrete
-setblock ~35 ~96 ~1308 light_gray_concrete
-setblock ~36 ~96 ~1308 gray_concrete
-setblock ~37 ~96 ~1308 tuff
-fill ~38 ~96 ~1308 ~39 ~96 ~1308 light_gray_concrete
-setblock ~40 ~96 ~1308 andesite
-fill ~41 ~96 ~1308 ~42 ~96 ~1308 gray_concrete
-setblock ~43 ~96 ~1308 light_gray_concrete
-setblock ~36 ~96 ~1309 light_gray_concrete
-fill ~37 ~96 ~1309 ~38 ~96 ~1309 gray_concrete
-fill ~39 ~96 ~1309 ~41 ~96 ~1309 light_gray_concrete
-setblock ~42 ~96 ~1309 spruce_fence
-setblock ~43 ~96 ~1309 tuff
-setblock ~37 ~96 ~1310 cracked_stone_bricks
-setblock ~38 ~96 ~1310 gray_concrete
-setblock ~39 ~96 ~1310 light_gray_concrete
-setblock ~40 ~96 ~1310 gray_concrete
-fill ~41 ~96 ~1310 ~43 ~96 ~1310 light_gray_concrete
-setblock ~37 ~96 ~1311 andesite
-setblock ~38 ~96 ~1311 light_gray_concrete
-setblock ~39 ~96 ~1311 cracked_stone_bricks
-setblock ~40 ~96 ~1311 light_gray_concrete
-setblock ~41 ~96 ~1311 andesite
-setblock ~42 ~96 ~1311 light_gray_concrete
-setblock ~43 ~96 ~1311 andesite
-fill ~37 ~96 ~1312 ~38 ~96 ~1312 light_gray_concrete
-setblock ~39 ~96 ~1312 gray_concrete
-setblock ~40 ~96 ~1312 cracked_stone_bricks
-setblock ~41 ~96 ~1312 tuff
-fill ~42 ~96 ~1312 ~43 ~96 ~1312 light_gray_concrete
-setblock ~37 ~96 ~1313 light_gray_concrete
-setblock ~38 ~96 ~1313 gray_concrete
-setblock ~39 ~96 ~1313 andesite
-setblock ~40 ~96 ~1313 light_gray_concrete
-setblock ~41 ~96 ~1313 andesite
-fill ~42 ~96 ~1313 ~43 ~96 ~1313 light_gray_concrete
-fill ~37 ~96 ~1314 ~38 ~96 ~1314 light_gray_concrete
-setblock ~39 ~96 ~1314 gray_concrete
-fill ~40 ~96 ~1314 ~43 ~96 ~1314 light_gray_concrete
-setblock ~37 ~96 ~1315 andesite
-setblock ~38 ~96 ~1315 light_gray_concrete
-setblock ~39 ~96 ~1315 gray_concrete
-setblock ~40 ~96 ~1315 light_gray_concrete
-setblock ~41 ~96 ~1315 gray_concrete
-setblock ~42 ~96 ~1315 spruce_fence
-setblock ~43 ~96 ~1315 light_gray_concrete
-fill ~38 ~96 ~1316 ~40 ~96 ~1316 light_gray_concrete
-setblock ~41 ~96 ~1316 gray_concrete
-fill ~42 ~96 ~1316 ~43 ~96 ~1316 light_gray_concrete
 setblock ~50 ~96 ~1398 iron_bars
 fill ~70 ~96 ~1404 ~74 ~96 ~1404 air
 fill ~70 ~96 ~1405 ~74 ~96 ~1405 air
@@ -2242,64 +741,10 @@ fill ~59 ~96 ~1436 ~62 ~96 ~1436 air
 fill ~59 ~96 ~1437 ~62 ~96 ~1437 air
 setblock ~98 ~96 ~1458 stone_bricks
 setblock ~99 ~96 ~1458 green_terracotta
-fill ~100 ~96 ~1458 ~104 ~96 ~1458 stone_bricks
-fill ~99 ~96 ~1459 ~104 ~96 ~1459 stone_bricks
-fill ~101 ~96 ~1460 ~104 ~96 ~1460 stone_bricks
-fill ~102 ~96 ~1461 ~104 ~96 ~1461 stone_bricks
+fill ~99 ~96 ~1459 ~100 ~96 ~1459 stone_bricks
+setblock ~101 ~96 ~1460 stone_bricks
+setblock ~102 ~96 ~1461 stone_bricks
 setblock ~104 ~96 ~1462 stone_bricks
-setblock ~41 ~97 ~1295 gray_concrete
-setblock ~42 ~97 ~1295 light_gray_concrete
-setblock ~41 ~97 ~1296 cracked_stone_bricks
-setblock ~42 ~97 ~1296 light_gray_concrete
-fill ~39 ~97 ~1297 ~41 ~97 ~1297 light_gray_concrete
-setblock ~42 ~97 ~1297 gray_concrete
-setblock ~34 ~97 ~1308 light_gray_concrete
-setblock ~35 ~97 ~1308 cracked_stone_bricks
-setblock ~36 ~97 ~1308 light_gray_concrete
-setblock ~37 ~97 ~1308 andesite
-setblock ~38 ~97 ~1308 tuff
-fill ~39 ~97 ~1308 ~40 ~97 ~1308 light_gray_concrete
-setblock ~41 ~97 ~1308 cracked_stone_bricks
-setblock ~42 ~97 ~1308 gray_concrete
-setblock ~43 ~97 ~1308 tuff
-setblock ~35 ~97 ~1309 light_gray_concrete
-setblock ~36 ~97 ~1309 gray_concrete
-setblock ~37 ~97 ~1309 cracked_stone_bricks
-setblock ~38 ~97 ~1309 andesite
-fill ~39 ~97 ~1309 ~40 ~97 ~1309 light_gray_concrete
-setblock ~41 ~97 ~1309 andesite
-setblock ~42 ~97 ~1309 spruce_fence
-setblock ~43 ~97 ~1309 light_gray_concrete
-setblock ~37 ~97 ~1310 light_gray_concrete
-setblock ~38 ~97 ~1310 gray_concrete
-setblock ~39 ~97 ~1310 andesite
-setblock ~40 ~97 ~1310 cracked_stone_bricks
-setblock ~41 ~97 ~1310 andesite
-fill ~42 ~97 ~1310 ~43 ~97 ~1310 light_gray_concrete
-fill ~37 ~97 ~1311 ~43 ~97 ~1311 light_gray_concrete
-setblock ~37 ~97 ~1312 gray_concrete
-setblock ~38 ~97 ~1312 cracked_stone_bricks
-setblock ~39 ~97 ~1312 andesite
-fill ~40 ~97 ~1312 ~42 ~97 ~1312 light_gray_concrete
-setblock ~43 ~97 ~1312 cracked_stone_bricks
-fill ~37 ~97 ~1313 ~42 ~97 ~1313 light_gray_concrete
-setblock ~43 ~97 ~1313 gray_concrete
-setblock ~37 ~97 ~1314 cracked_stone_bricks
-fill ~38 ~97 ~1314 ~41 ~97 ~1314 light_gray_concrete
-setblock ~42 ~97 ~1314 gray_concrete
-setblock ~43 ~97 ~1314 andesite
-setblock ~37 ~97 ~1315 light_gray_concrete
-setblock ~38 ~97 ~1315 gray_concrete
-setblock ~39 ~97 ~1315 light_gray_concrete
-setblock ~40 ~97 ~1315 gray_concrete
-setblock ~41 ~97 ~1315 cracked_stone_bricks
-setblock ~42 ~97 ~1315 spruce_fence
-setblock ~43 ~97 ~1315 light_gray_concrete
-setblock ~38 ~97 ~1316 light_gray_concrete
-setblock ~39 ~97 ~1316 tuff
-fill ~40 ~97 ~1316 ~41 ~97 ~1316 light_gray_concrete
-setblock ~42 ~97 ~1316 andesite
-setblock ~43 ~97 ~1316 gray_concrete
 setblock ~49 ~97 ~1397 iron_bars
 fill ~70 ~97 ~1404 ~74 ~97 ~1404 air
 fill ~70 ~97 ~1405 ~74 ~97 ~1405 air
@@ -2325,64 +770,12 @@ fill ~59 ~97 ~1435 ~62 ~97 ~1435 air
 fill ~59 ~97 ~1436 ~62 ~97 ~1436 air
 fill ~59 ~97 ~1437 ~62 ~97 ~1437 air
 setblock ~97 ~97 ~1453 mud_bricks
-setblock ~97 ~97 ~1454 packed_mud
-fill ~97 ~97 ~1458 ~104 ~97 ~1458 stone_bricks
-fill ~99 ~97 ~1459 ~104 ~97 ~1459 stone_bricks
-fill ~101 ~97 ~1460 ~104 ~97 ~1460 stone_bricks
-fill ~102 ~97 ~1461 ~104 ~97 ~1461 stone_bricks
+setblock ~97 ~97 ~1454 mud_bricks
+fill ~97 ~97 ~1458 ~98 ~97 ~1458 stone_bricks
+fill ~99 ~97 ~1459 ~100 ~97 ~1459 stone_bricks
+setblock ~101 ~97 ~1460 stone_bricks
+setblock ~102 ~97 ~1461 stone_bricks
 fill ~103 ~97 ~1462 ~104 ~97 ~1462 stone_bricks
-setblock ~41 ~98 ~1295 andesite
-setblock ~42 ~98 ~1295 light_gray_concrete
-fill ~41 ~98 ~1296 ~42 ~98 ~1296 light_gray_concrete
-setblock ~39 ~98 ~1297 andesite
-setblock ~40 ~98 ~1297 cracked_stone_bricks
-setblock ~41 ~98 ~1297 light_gray_concrete
-setblock ~42 ~98 ~1297 tuff
-setblock ~34 ~98 ~1308 gray_concrete
-fill ~35 ~98 ~1308 ~38 ~98 ~1308 light_gray_concrete
-setblock ~39 ~98 ~1308 andesite
-fill ~40 ~98 ~1308 ~43 ~98 ~1308 light_gray_concrete
-setblock ~35 ~98 ~1309 light_gray_concrete
-setblock ~36 ~98 ~1309 gray_concrete
-setblock ~37 ~98 ~1309 andesite
-setblock ~38 ~98 ~1309 light_gray_concrete
-setblock ~39 ~98 ~1309 andesite
-fill ~40 ~98 ~1309 ~41 ~98 ~1309 cracked_stone_bricks
-setblock ~42 ~98 ~1309 spruce_fence
-setblock ~43 ~98 ~1309 light_gray_concrete
-fill ~36 ~98 ~1310 ~40 ~98 ~1310 light_gray_concrete
-setblock ~41 ~98 ~1310 tuff
-setblock ~42 ~98 ~1310 andesite
-setblock ~43 ~98 ~1310 light_gray_concrete
-fill ~37 ~98 ~1311 ~39 ~98 ~1311 light_gray_concrete
-setblock ~40 ~98 ~1311 andesite
-setblock ~41 ~98 ~1311 light_gray_concrete
-setblock ~42 ~98 ~1311 andesite
-setblock ~43 ~98 ~1311 light_gray_concrete
-setblock ~37 ~98 ~1312 gray_concrete
-setblock ~38 ~98 ~1312 light_gray_concrete
-fill ~39 ~98 ~1312 ~41 ~98 ~1312 gray_concrete
-fill ~42 ~98 ~1312 ~43 ~98 ~1312 light_gray_concrete
-setblock ~37 ~98 ~1313 tuff
-setblock ~38 ~98 ~1313 andesite
-fill ~39 ~98 ~1313 ~40 ~98 ~1313 light_gray_concrete
-fill ~41 ~98 ~1313 ~42 ~98 ~1313 andesite
-setblock ~43 ~98 ~1313 cracked_stone_bricks
-setblock ~37 ~98 ~1314 andesite
-setblock ~38 ~98 ~1314 light_gray_concrete
-setblock ~39 ~98 ~1314 gray_concrete
-fill ~40 ~98 ~1314 ~43 ~98 ~1314 light_gray_concrete
-setblock ~37 ~98 ~1315 tuff
-setblock ~38 ~98 ~1315 cracked_stone_bricks
-setblock ~39 ~98 ~1315 light_gray_concrete
-setblock ~40 ~98 ~1315 andesite
-setblock ~41 ~98 ~1315 light_gray_concrete
-setblock ~42 ~98 ~1315 spruce_fence
-setblock ~43 ~98 ~1315 cracked_stone_bricks
-fill ~38 ~98 ~1316 ~39 ~98 ~1316 light_gray_concrete
-fill ~40 ~98 ~1316 ~41 ~98 ~1316 andesite
-setblock ~42 ~98 ~1316 tuff
-setblock ~43 ~98 ~1316 gray_concrete
 setblock ~48 ~98 ~1397 iron_bars
 fill ~70 ~98 ~1404 ~74 ~98 ~1404 air
 fill ~70 ~98 ~1405 ~74 ~98 ~1405 air
@@ -2405,72 +798,11 @@ fill ~59 ~98 ~1436 ~62 ~98 ~1436 air
 fill ~59 ~98 ~1437 ~62 ~98 ~1437 air
 setblock ~97 ~98 ~1453 mud_brick_slab
 setblock ~97 ~98 ~1458 stone_bricks
-setblock ~98 ~98 ~1458 green_terracotta
-fill ~99 ~98 ~1458 ~104 ~98 ~1458 stone_bricks
-fill ~98 ~98 ~1459 ~104 ~98 ~1459 stone_bricks
-fill ~101 ~98 ~1460 ~104 ~98 ~1460 stone_bricks
-fill ~101 ~98 ~1461 ~104 ~98 ~1461 stone_bricks
+setblock ~98 ~98 ~1458 barrel[facing=up]
+fill ~98 ~98 ~1459 ~100 ~98 ~1459 stone_bricks
+setblock ~101 ~98 ~1460 stone_bricks
+fill ~101 ~98 ~1461 ~102 ~98 ~1461 stone_bricks
 fill ~102 ~98 ~1462 ~104 ~98 ~1462 stone_bricks
-fill ~41 ~99 ~1295 ~42 ~99 ~1295 andesite
-fill ~41 ~99 ~1296 ~42 ~99 ~1296 light_gray_concrete
-setblock ~39 ~99 ~1297 light_gray_concrete
-setblock ~40 ~99 ~1297 gray_concrete
-setblock ~41 ~99 ~1297 cracked_stone_bricks
-setblock ~42 ~99 ~1297 light_gray_concrete
-setblock ~34 ~99 ~1308 andesite
-setblock ~35 ~99 ~1308 gray_concrete
-setblock ~36 ~99 ~1308 cracked_stone_bricks
-fill ~37 ~99 ~1308 ~40 ~99 ~1308 light_gray_concrete
-setblock ~41 ~99 ~1308 gray_concrete
-setblock ~42 ~99 ~1308 light_gray_concrete
-setblock ~43 ~99 ~1308 cracked_stone_bricks
-setblock ~34 ~99 ~1309 light_gray_concrete
-setblock ~35 ~99 ~1309 gray_concrete
-setblock ~36 ~99 ~1309 light_gray_concrete
-setblock ~37 ~99 ~1309 cracked_stone_bricks
-setblock ~38 ~99 ~1309 light_gray_concrete
-setblock ~39 ~99 ~1309 andesite
-setblock ~40 ~99 ~1309 cracked_stone_bricks
-setblock ~41 ~99 ~1309 light_gray_concrete
-setblock ~42 ~99 ~1309 spruce_fence
-setblock ~43 ~99 ~1309 gray_concrete
-fill ~35 ~99 ~1310 ~36 ~99 ~1310 light_gray_concrete
-setblock ~37 ~99 ~1310 gray_concrete
-setblock ~38 ~99 ~1310 light_gray_concrete
-setblock ~39 ~99 ~1310 gray_concrete
-setblock ~40 ~99 ~1310 light_gray_concrete
-setblock ~41 ~99 ~1310 gray_concrete
-setblock ~42 ~99 ~1310 cracked_stone_bricks
-setblock ~43 ~99 ~1310 light_gray_concrete
-setblock ~37 ~99 ~1311 light_gray_concrete
-setblock ~38 ~99 ~1311 andesite
-setblock ~39 ~99 ~1311 light_gray_concrete
-setblock ~40 ~99 ~1311 andesite
-setblock ~41 ~99 ~1311 cracked_stone_bricks
-setblock ~42 ~99 ~1311 andesite
-setblock ~43 ~99 ~1311 light_gray_concrete
-fill ~37 ~99 ~1312 ~39 ~99 ~1312 andesite
-fill ~40 ~99 ~1312 ~43 ~99 ~1312 light_gray_concrete
-setblock ~37 ~99 ~1313 light_gray_concrete
-fill ~38 ~99 ~1313 ~39 ~99 ~1313 andesite
-fill ~40 ~99 ~1313 ~41 ~99 ~1313 light_gray_concrete
-setblock ~42 ~99 ~1313 gray_concrete
-setblock ~43 ~99 ~1313 andesite
-setblock ~37 ~99 ~1314 light_gray_concrete
-setblock ~38 ~99 ~1314 andesite
-setblock ~39 ~99 ~1314 light_gray_concrete
-setblock ~40 ~99 ~1314 andesite
-setblock ~41 ~99 ~1314 cracked_stone_bricks
-setblock ~42 ~99 ~1314 light_gray_concrete
-setblock ~43 ~99 ~1314 andesite
-setblock ~37 ~99 ~1315 light_gray_concrete
-setblock ~38 ~99 ~1315 andesite
-setblock ~39 ~99 ~1315 light_gray_concrete
-setblock ~40 ~99 ~1315 andesite
-setblock ~41 ~99 ~1315 gray_concrete
-setblock ~42 ~99 ~1315 spruce_fence
-setblock ~43 ~99 ~1315 light_gray_concrete
-fill ~38 ~99 ~1316 ~43 ~99 ~1316 light_gray_concrete
 fill ~70 ~99 ~1404 ~74 ~99 ~1404 air
 fill ~70 ~99 ~1405 ~74 ~99 ~1405 air
 fill ~70 ~99 ~1406 ~74 ~99 ~1406 air
@@ -2492,69 +824,13 @@ fill ~59 ~99 ~1436 ~62 ~99 ~1436 air
 fill ~59 ~99 ~1437 ~62 ~99 ~1437 air
 fill ~95 ~99 ~1453 ~96 ~99 ~1453 mud_bricks
 fill ~96 ~99 ~1458 ~97 ~99 ~1458 stone_bricks
-setblock ~98 ~99 ~1458 spruce_planks
-fill ~99 ~99 ~1458 ~104 ~99 ~1458 stone_bricks
-fill ~97 ~99 ~1459 ~104 ~99 ~1459 stone_bricks
-fill ~101 ~99 ~1460 ~104 ~99 ~1460 stone_bricks
-fill ~101 ~99 ~1461 ~104 ~99 ~1461 stone_bricks
+setblock ~98 ~99 ~1458 barrel[facing=up]
+fill ~97 ~99 ~1459 ~100 ~99 ~1459 stone_bricks
+setblock ~101 ~99 ~1460 stone_bricks
+fill ~101 ~99 ~1461 ~102 ~99 ~1461 stone_bricks
 fill ~101 ~99 ~1462 ~104 ~99 ~1462 stone_bricks
 fill ~103 ~99 ~1463 ~104 ~99 ~1463 stone_bricks
-fill ~41 ~100 ~1295 ~42 ~100 ~1295 light_gray_concrete
-fill ~41 ~100 ~1296 ~42 ~100 ~1296 light_gray_concrete
-setblock ~39 ~100 ~1297 tuff
-setblock ~40 ~100 ~1297 light_gray_concrete
-fill ~41 ~100 ~1297 ~42 ~100 ~1297 cracked_stone_bricks
-fill ~33 ~100 ~1308 ~40 ~100 ~1308 light_gray_concrete
-setblock ~41 ~100 ~1308 gray_concrete
-fill ~42 ~100 ~1308 ~43 ~100 ~1308 light_gray_concrete
-setblock ~34 ~100 ~1309 andesite
-setblock ~35 ~100 ~1309 light_gray_concrete
-setblock ~36 ~100 ~1309 cracked_stone_bricks
-fill ~37 ~100 ~1309 ~38 ~100 ~1309 light_gray_concrete
-setblock ~39 ~100 ~1309 cracked_stone_bricks
-fill ~40 ~100 ~1309 ~41 ~100 ~1309 light_gray_concrete
-setblock ~42 ~100 ~1309 spruce_fence
-setblock ~43 ~100 ~1309 gray_concrete
-setblock ~35 ~100 ~1310 light_gray_concrete
-setblock ~36 ~100 ~1310 andesite
-fill ~37 ~100 ~1310 ~39 ~100 ~1310 light_gray_concrete
-setblock ~40 ~100 ~1310 gray_concrete
-setblock ~41 ~100 ~1310 andesite
-setblock ~42 ~100 ~1310 light_gray_concrete
-setblock ~43 ~100 ~1310 cracked_stone_bricks
-setblock ~37 ~100 ~1311 light_gray_concrete
-setblock ~38 ~100 ~1311 andesite
-setblock ~39 ~100 ~1311 light_gray_concrete
-setblock ~40 ~100 ~1311 tuff
-fill ~41 ~100 ~1311 ~43 ~100 ~1311 light_gray_concrete
-setblock ~37 ~100 ~1312 light_gray_concrete
-setblock ~38 ~100 ~1312 gray_concrete
-fill ~39 ~100 ~1312 ~40 ~100 ~1312 light_gray_concrete
-setblock ~41 ~100 ~1312 gray_concrete
-setblock ~42 ~100 ~1312 light_gray_concrete
-setblock ~43 ~100 ~1312 tuff
-setblock ~37 ~100 ~1313 tuff
-fill ~38 ~100 ~1313 ~41 ~100 ~1313 light_gray_concrete
-setblock ~42 ~100 ~1313 cracked_stone_bricks
-setblock ~43 ~100 ~1313 light_gray_concrete
-setblock ~37 ~100 ~1314 cracked_stone_bricks
-fill ~38 ~100 ~1314 ~40 ~100 ~1314 light_gray_concrete
-setblock ~41 ~100 ~1314 andesite
-setblock ~42 ~100 ~1314 tuff
-setblock ~43 ~100 ~1314 light_gray_concrete
-fill ~37 ~100 ~1315 ~39 ~100 ~1315 light_gray_concrete
-setblock ~40 ~100 ~1315 andesite
-setblock ~41 ~100 ~1315 light_gray_concrete
-setblock ~42 ~100 ~1315 spruce_fence
-setblock ~43 ~100 ~1315 cracked_stone_bricks
-setblock ~37 ~100 ~1316 light_gray_concrete
-setblock ~38 ~100 ~1316 gray_concrete
-setblock ~39 ~100 ~1316 tuff
-setblock ~40 ~100 ~1316 andesite
-setblock ~41 ~100 ~1316 cracked_stone_bricks
-setblock ~42 ~100 ~1316 light_gray_concrete
-setblock ~43 ~100 ~1316 gray_concrete
-setblock ~47 ~100 ~1396 iron_bars
+setblock ~47 ~100 ~1396 cobweb
 fill ~70 ~100 ~1404 ~74 ~100 ~1404 air
 fill ~70 ~100 ~1405 ~74 ~100 ~1405 air
 fill ~70 ~100 ~1406 ~74 ~100 ~1406 air
@@ -2574,71 +850,16 @@ fill ~51 ~100 ~1433 ~61 ~100 ~1433 air
 fill ~59 ~100 ~1435 ~62 ~100 ~1435 air
 fill ~59 ~100 ~1436 ~62 ~100 ~1436 air
 fill ~59 ~100 ~1437 ~62 ~100 ~1437 air
-fill ~93 ~100 ~1453 ~94 ~100 ~1453 packed_mud
+fill ~93 ~100 ~1453 ~94 ~100 ~1453 mud_bricks
 fill ~95 ~100 ~1453 ~96 ~100 ~1453 mud_brick_slab
 setblock ~93 ~100 ~1454 packed_mud
 fill ~96 ~100 ~1458 ~97 ~100 ~1458 stone_bricks
 setblock ~98 ~100 ~1458 spruce_trapdoor[half=bottom]
-fill ~99 ~100 ~1458 ~104 ~100 ~1458 stone_bricks
-fill ~96 ~100 ~1459 ~104 ~100 ~1459 stone_bricks
-fill ~97 ~100 ~1460 ~104 ~100 ~1460 stone_bricks
-fill ~100 ~100 ~1461 ~104 ~100 ~1461 stone_bricks
+fill ~96 ~100 ~1459 ~100 ~100 ~1459 stone_bricks
+fill ~97 ~100 ~1460 ~101 ~100 ~1460 stone_bricks
+fill ~100 ~100 ~1461 ~102 ~100 ~1461 stone_bricks
 fill ~101 ~100 ~1462 ~104 ~100 ~1462 stone_bricks
 fill ~102 ~100 ~1463 ~104 ~100 ~1463 stone_bricks
-fill ~19 ~101 ~1263 ~21 ~101 ~1263 light_gray_concrete
-setblock ~22 ~101 ~1263 gray_concrete
-fill ~41 ~101 ~1295 ~42 ~101 ~1295 light_gray_concrete
-fill ~41 ~101 ~1296 ~42 ~101 ~1296 light_gray_concrete
-fill ~39 ~101 ~1297 ~40 ~101 ~1297 light_gray_concrete
-setblock ~41 ~101 ~1297 gray_concrete
-setblock ~42 ~101 ~1297 light_gray_concrete
-fill ~33 ~101 ~1308 ~35 ~101 ~1308 light_gray_concrete
-setblock ~36 ~101 ~1308 tuff
-fill ~37 ~101 ~1308 ~38 ~101 ~1308 light_gray_concrete
-setblock ~39 ~101 ~1308 andesite
-fill ~40 ~101 ~1308 ~41 ~101 ~1308 light_gray_concrete
-setblock ~42 ~101 ~1308 gray_concrete
-setblock ~43 ~101 ~1308 light_gray_concrete
-fill ~34 ~101 ~1309 ~40 ~101 ~1309 light_gray_concrete
-setblock ~41 ~101 ~1309 tuff
-setblock ~42 ~101 ~1309 spruce_fence
-setblock ~43 ~101 ~1309 tuff
-setblock ~34 ~101 ~1310 light_gray_concrete
-setblock ~35 ~101 ~1310 andesite
-fill ~36 ~101 ~1310 ~39 ~101 ~1310 light_gray_concrete
-setblock ~40 ~101 ~1310 gray_concrete
-setblock ~41 ~101 ~1310 light_gray_concrete
-setblock ~42 ~101 ~1310 andesite
-setblock ~43 ~101 ~1310 light_gray_concrete
-setblock ~37 ~101 ~1311 andesite
-setblock ~38 ~101 ~1311 light_gray_concrete
-setblock ~39 ~101 ~1311 cracked_stone_bricks
-fill ~40 ~101 ~1311 ~42 ~101 ~1311 light_gray_concrete
-setblock ~43 ~101 ~1311 andesite
-fill ~37 ~101 ~1312 ~40 ~101 ~1312 light_gray_concrete
-setblock ~41 ~101 ~1312 cracked_stone_bricks
-setblock ~42 ~101 ~1312 gray_concrete
-setblock ~43 ~101 ~1312 light_gray_concrete
-setblock ~37 ~101 ~1313 light_gray_concrete
-fill ~38 ~101 ~1313 ~39 ~101 ~1313 andesite
-fill ~40 ~101 ~1313 ~42 ~101 ~1313 light_gray_concrete
-setblock ~43 ~101 ~1313 andesite
-setblock ~37 ~101 ~1314 light_gray_concrete
-setblock ~38 ~101 ~1314 tuff
-setblock ~39 ~101 ~1314 light_gray_concrete
-setblock ~40 ~101 ~1314 cracked_stone_bricks
-setblock ~41 ~101 ~1314 andesite
-setblock ~42 ~101 ~1314 light_gray_concrete
-setblock ~43 ~101 ~1314 andesite
-fill ~37 ~101 ~1315 ~39 ~101 ~1315 light_gray_concrete
-setblock ~40 ~101 ~1315 cracked_stone_bricks
-setblock ~41 ~101 ~1315 light_gray_concrete
-setblock ~42 ~101 ~1315 spruce_fence
-setblock ~43 ~101 ~1315 light_gray_concrete
-setblock ~37 ~101 ~1316 andesite
-setblock ~38 ~101 ~1316 light_gray_concrete
-setblock ~39 ~101 ~1316 cracked_stone_bricks
-fill ~40 ~101 ~1316 ~43 ~101 ~1316 light_gray_concrete
 setblock ~46 ~101 ~1396 iron_bars
 fill ~51 ~101 ~1423 ~61 ~101 ~1423 air
 fill ~51 ~101 ~1424 ~61 ~101 ~1424 air
@@ -2668,76 +889,10 @@ fill ~96 ~101 ~1463 ~104 ~101 ~1463 stone_bricks
 fill ~96 ~101 ~1464 ~104 ~101 ~1464 stone_bricks
 fill ~96 ~101 ~1465 ~104 ~101 ~1465 stone_bricks
 fill ~96 ~101 ~1466 ~104 ~101 ~1466 stone_bricks
-setblock ~19 ~102 ~1263 andesite
-setblock ~20 ~102 ~1263 gray_concrete
-setblock ~21 ~102 ~1263 light_gray_concrete
-setblock ~22 ~102 ~1263 cracked_stone_bricks
-fill ~23 ~102 ~1263 ~24 ~102 ~1263 light_gray_concrete
-setblock ~19 ~102 ~1264 light_gray_concrete
-setblock ~20 ~102 ~1264 gray_concrete
-fill ~21 ~102 ~1264 ~23 ~102 ~1264 light_gray_concrete
-setblock ~41 ~102 ~1295 andesite
-setblock ~42 ~102 ~1295 cracked_stone_bricks
-fill ~41 ~102 ~1296 ~42 ~102 ~1296 light_gray_concrete
-setblock ~39 ~102 ~1297 gray_concrete
-setblock ~40 ~102 ~1297 light_gray_concrete
-setblock ~41 ~102 ~1297 cracked_stone_bricks
-setblock ~42 ~102 ~1297 light_gray_concrete
-fill ~33 ~102 ~1308 ~34 ~102 ~1308 light_gray_concrete
-setblock ~35 ~102 ~1308 gray_concrete
-setblock ~36 ~102 ~1308 cracked_stone_bricks
-setblock ~37 ~102 ~1308 andesite
-fill ~38 ~102 ~1308 ~40 ~102 ~1308 light_gray_concrete
-setblock ~41 ~102 ~1308 cracked_stone_bricks
-setblock ~42 ~102 ~1308 gray_concrete
-setblock ~43 ~102 ~1308 light_gray_concrete
-setblock ~34 ~102 ~1309 spruce_fence
-fill ~35 ~102 ~1309 ~36 ~102 ~1309 light_gray_concrete
-setblock ~37 ~102 ~1309 cracked_stone_bricks
-fill ~38 ~102 ~1309 ~41 ~102 ~1309 light_gray_concrete
-setblock ~42 ~102 ~1309 spruce_fence
-setblock ~43 ~102 ~1309 light_gray_concrete
-setblock ~34 ~102 ~1310 gray_concrete
-setblock ~35 ~102 ~1310 light_gray_concrete
-setblock ~36 ~102 ~1310 gray_concrete
-setblock ~37 ~102 ~1310 cracked_stone_bricks
-setblock ~38 ~102 ~1310 andesite
-setblock ~39 ~102 ~1310 light_gray_concrete
-setblock ~40 ~102 ~1310 gray_concrete
-setblock ~41 ~102 ~1310 light_gray_concrete
-fill ~42 ~102 ~1310 ~43 ~102 ~1310 andesite
-setblock ~36 ~102 ~1311 light_gray_concrete
-setblock ~37 ~102 ~1311 cracked_stone_bricks
-setblock ~38 ~102 ~1311 gray_concrete
-setblock ~39 ~102 ~1311 cracked_stone_bricks
-setblock ~40 ~102 ~1311 gray_concrete
-fill ~41 ~102 ~1311 ~42 ~102 ~1311 light_gray_concrete
-setblock ~43 ~102 ~1311 andesite
-setblock ~37 ~102 ~1312 gray_concrete
-setblock ~38 ~102 ~1312 light_gray_concrete
-setblock ~39 ~102 ~1312 gray_concrete
-fill ~40 ~102 ~1312 ~42 ~102 ~1312 light_gray_concrete
-setblock ~43 ~102 ~1312 andesite
-fill ~37 ~102 ~1313 ~38 ~102 ~1313 gray_concrete
-setblock ~39 ~102 ~1313 light_gray_concrete
-setblock ~40 ~102 ~1313 gray_concrete
-setblock ~41 ~102 ~1313 light_gray_concrete
-setblock ~42 ~102 ~1313 cracked_stone_bricks
-setblock ~43 ~102 ~1313 light_gray_concrete
-fill ~37 ~102 ~1314 ~38 ~102 ~1314 light_gray_concrete
-setblock ~39 ~102 ~1314 tuff
-fill ~40 ~102 ~1314 ~41 ~102 ~1314 light_gray_concrete
-setblock ~42 ~102 ~1314 andesite
-setblock ~43 ~102 ~1314 light_gray_concrete
-fill ~37 ~102 ~1315 ~38 ~102 ~1315 light_gray_concrete
-fill ~39 ~102 ~1315 ~40 ~102 ~1315 andesite
-setblock ~41 ~102 ~1315 gray_concrete
-setblock ~42 ~102 ~1315 spruce_fence
-setblock ~43 ~102 ~1315 gray_concrete
-setblock ~37 ~102 ~1316 light_gray_concrete
-setblock ~38 ~102 ~1316 andesite
-fill ~39 ~102 ~1316 ~42 ~102 ~1316 light_gray_concrete
-setblock ~43 ~102 ~1316 gray_concrete
+setblock ~23 ~102 ~1263 light_gray_concrete
+setblock ~24 ~102 ~1263 cracked_stone_bricks
+fill ~19 ~102 ~1264 ~22 ~102 ~1264 light_gray_concrete
+setblock ~23 ~102 ~1264 gray_concrete
 setblock ~44 ~102 ~1380 polished_blackstone_wall
 fill ~51 ~102 ~1423 ~61 ~102 ~1423 air
 fill ~51 ~102 ~1424 ~61 ~102 ~1424 air
@@ -2763,72 +918,13 @@ fill ~96 ~102 ~1463 ~104 ~102 ~1463 stone_bricks
 fill ~96 ~102 ~1464 ~104 ~102 ~1464 stone_bricks
 fill ~96 ~102 ~1465 ~104 ~102 ~1465 stone_bricks
 fill ~96 ~102 ~1466 ~104 ~102 ~1466 stone_bricks
-setblock ~19 ~103 ~1263 andesite
-fill ~20 ~103 ~1263 ~25 ~103 ~1263 light_gray_concrete
-setblock ~19 ~103 ~1264 light_gray_concrete
-setblock ~20 ~103 ~1264 gray_concrete
+fill ~23 ~103 ~1263 ~24 ~103 ~1263 light_gray_concrete
+setblock ~25 ~103 ~1263 cracked_stone_bricks
+setblock ~19 ~103 ~1264 andesite
+setblock ~20 ~103 ~1264 cracked_stone_bricks
 fill ~21 ~103 ~1264 ~23 ~103 ~1264 light_gray_concrete
-setblock ~24 ~103 ~1264 gray_concrete
-fill ~41 ~103 ~1295 ~42 ~103 ~1295 gray_concrete
-setblock ~41 ~103 ~1296 light_gray_concrete
-setblock ~42 ~103 ~1296 gray_concrete
-setblock ~39 ~103 ~1297 gray_concrete
-setblock ~40 ~103 ~1297 light_gray_concrete
-setblock ~41 ~103 ~1297 gray_concrete
-setblock ~42 ~103 ~1297 light_gray_concrete
-setblock ~33 ~103 ~1308 andesite
-setblock ~34 ~103 ~1308 tuff
-setblock ~35 ~103 ~1308 andesite
-fill ~36 ~103 ~1308 ~37 ~103 ~1308 light_gray_concrete
-setblock ~38 ~103 ~1308 tuff
-setblock ~39 ~103 ~1308 andesite
-fill ~40 ~103 ~1308 ~41 ~103 ~1308 tuff
-setblock ~42 ~103 ~1308 andesite
-setblock ~43 ~103 ~1308 cracked_stone_bricks
-setblock ~33 ~103 ~1309 tuff
-setblock ~34 ~103 ~1309 spruce_fence
-setblock ~35 ~103 ~1309 gray_concrete
-setblock ~36 ~103 ~1309 light_gray_concrete
-setblock ~37 ~103 ~1309 gray_concrete
-setblock ~38 ~103 ~1309 tuff
-fill ~39 ~103 ~1309 ~40 ~103 ~1309 andesite
-setblock ~41 ~103 ~1309 gray_concrete
-setblock ~42 ~103 ~1309 spruce_fence
-setblock ~43 ~103 ~1309 light_gray_concrete
-setblock ~34 ~103 ~1310 cracked_stone_bricks
-fill ~35 ~103 ~1310 ~36 ~103 ~1310 gray_concrete
-setblock ~37 ~103 ~1310 light_gray_concrete
-setblock ~38 ~103 ~1310 tuff
-fill ~39 ~103 ~1310 ~40 ~103 ~1310 light_gray_concrete
-setblock ~41 ~103 ~1310 cracked_stone_bricks
-setblock ~42 ~103 ~1310 light_gray_concrete
-setblock ~43 ~103 ~1310 cracked_stone_bricks
-setblock ~36 ~103 ~1311 andesite
-setblock ~37 ~103 ~1311 light_gray_concrete
-fill ~38 ~103 ~1311 ~40 ~103 ~1311 gray_concrete
-setblock ~41 ~103 ~1311 cracked_stone_bricks
-setblock ~42 ~103 ~1311 light_gray_concrete
-setblock ~43 ~103 ~1311 gray_concrete
-fill ~37 ~103 ~1312 ~38 ~103 ~1312 cracked_stone_bricks
-fill ~39 ~103 ~1312 ~43 ~103 ~1312 light_gray_concrete
-setblock ~37 ~103 ~1313 gray_concrete
-fill ~38 ~103 ~1313 ~41 ~103 ~1313 light_gray_concrete
-setblock ~42 ~103 ~1313 cracked_stone_bricks
-setblock ~43 ~103 ~1313 light_gray_concrete
-setblock ~37 ~103 ~1314 light_gray_concrete
-setblock ~38 ~103 ~1314 gray_concrete
-fill ~39 ~103 ~1314 ~42 ~103 ~1314 light_gray_concrete
-setblock ~43 ~103 ~1314 cracked_stone_bricks
-fill ~37 ~103 ~1315 ~38 ~103 ~1315 light_gray_concrete
-fill ~39 ~103 ~1315 ~41 ~103 ~1315 gray_concrete
-setblock ~42 ~103 ~1315 spruce_fence
-setblock ~43 ~103 ~1315 light_gray_concrete
-fill ~37 ~103 ~1316 ~39 ~103 ~1316 light_gray_concrete
-setblock ~40 ~103 ~1316 gray_concrete
-setblock ~41 ~103 ~1316 light_gray_concrete
-setblock ~42 ~103 ~1316 andesite
-setblock ~43 ~103 ~1316 light_gray_concrete
-setblock ~48 ~103 ~1377 green_terracotta
+setblock ~24 ~103 ~1264 cracked_stone_bricks
+setblock ~48 ~103 ~1377 barrel[facing=up]
 setblock ~44 ~103 ~1380 polished_blackstone_wall
 fill ~59 ~103 ~1435 ~62 ~103 ~1435 air
 fill ~59 ~103 ~1436 ~62 ~103 ~1436 air
@@ -2842,82 +938,20 @@ fill ~96 ~103 ~1463 ~104 ~103 ~1463 stone_bricks
 fill ~96 ~103 ~1464 ~104 ~103 ~1464 stone_bricks
 fill ~96 ~103 ~1465 ~104 ~103 ~1465 stone_bricks
 fill ~96 ~103 ~1466 ~104 ~103 ~1466 stone_bricks
-setblock ~19 ~104 ~1263 gray_concrete
-setblock ~20 ~104 ~1263 light_gray_concrete
-setblock ~21 ~104 ~1263 andesite
-fill ~22 ~104 ~1263 ~23 ~104 ~1263 light_gray_concrete
+setblock ~23 ~104 ~1263 light_gray_concrete
 setblock ~24 ~104 ~1263 gray_concrete
 setblock ~25 ~104 ~1263 light_gray_concrete
 setblock ~19 ~104 ~1264 cracked_stone_bricks
-setblock ~20 ~104 ~1264 andesite
-setblock ~21 ~104 ~1264 gray_concrete
-fill ~22 ~104 ~1264 ~23 ~104 ~1264 light_gray_concrete
-setblock ~24 ~104 ~1264 gray_concrete
-setblock ~25 ~104 ~1264 light_gray_concrete
-fill ~19 ~104 ~1265 ~24 ~104 ~1265 light_gray_concrete
-fill ~41 ~104 ~1295 ~42 ~104 ~1295 light_gray_concrete
-setblock ~41 ~104 ~1296 cracked_stone_bricks
-setblock ~42 ~104 ~1296 andesite
-setblock ~39 ~104 ~1297 gray_concrete
-setblock ~40 ~104 ~1297 light_gray_concrete
-setblock ~41 ~104 ~1297 andesite
-setblock ~42 ~104 ~1297 light_gray_concrete
-fill ~33 ~104 ~1308 ~35 ~104 ~1308 light_gray_concrete
-fill ~36 ~104 ~1308 ~38 ~104 ~1308 cracked_stone_bricks
-setblock ~39 ~104 ~1308 light_gray_concrete
-setblock ~40 ~104 ~1308 gray_concrete
-setblock ~41 ~104 ~1308 light_gray_concrete
-setblock ~42 ~104 ~1308 andesite
-setblock ~43 ~104 ~1308 light_gray_concrete
-setblock ~33 ~104 ~1309 light_gray_concrete
-setblock ~34 ~104 ~1309 spruce_fence
-fill ~35 ~104 ~1309 ~38 ~104 ~1309 light_gray_concrete
-setblock ~39 ~104 ~1309 cracked_stone_bricks
-setblock ~40 ~104 ~1309 andesite
-setblock ~41 ~104 ~1309 light_gray_concrete
-setblock ~42 ~104 ~1309 spruce_fence
-setblock ~43 ~104 ~1309 light_gray_concrete
-setblock ~34 ~104 ~1310 light_gray_concrete
-setblock ~35 ~104 ~1310 cracked_stone_bricks
-setblock ~36 ~104 ~1310 light_gray_concrete
-setblock ~37 ~104 ~1310 andesite
-setblock ~38 ~104 ~1310 light_gray_concrete
-fill ~39 ~104 ~1310 ~40 ~104 ~1310 cracked_stone_bricks
-setblock ~41 ~104 ~1310 light_gray_concrete
-setblock ~42 ~104 ~1310 cracked_stone_bricks
-setblock ~43 ~104 ~1310 light_gray_concrete
-setblock ~36 ~104 ~1311 gray_concrete
-setblock ~37 ~104 ~1311 andesite
-fill ~38 ~104 ~1311 ~39 ~104 ~1311 gray_concrete
-fill ~40 ~104 ~1311 ~41 ~104 ~1311 andesite
-setblock ~42 ~104 ~1311 cracked_stone_bricks
-setblock ~43 ~104 ~1311 andesite
-fill ~37 ~104 ~1312 ~38 ~104 ~1312 andesite
-fill ~39 ~104 ~1312 ~40 ~104 ~1312 light_gray_concrete
-setblock ~41 ~104 ~1312 gray_concrete
-setblock ~42 ~104 ~1312 light_gray_concrete
-setblock ~43 ~104 ~1312 gray_concrete
-fill ~37 ~104 ~1313 ~40 ~104 ~1313 light_gray_concrete
-setblock ~41 ~104 ~1313 tuff
-fill ~42 ~104 ~1313 ~43 ~104 ~1313 light_gray_concrete
-setblock ~37 ~104 ~1314 light_gray_concrete
-setblock ~38 ~104 ~1314 andesite
-fill ~39 ~104 ~1314 ~40 ~104 ~1314 light_gray_concrete
-setblock ~41 ~104 ~1314 andesite
-setblock ~42 ~104 ~1314 light_gray_concrete
-setblock ~43 ~104 ~1314 andesite
-fill ~37 ~104 ~1315 ~38 ~104 ~1315 light_gray_concrete
-setblock ~39 ~104 ~1315 gray_concrete
-fill ~40 ~104 ~1315 ~41 ~104 ~1315 light_gray_concrete
-setblock ~42 ~104 ~1315 spruce_fence
-setblock ~43 ~104 ~1315 light_gray_concrete
-fill ~37 ~104 ~1316 ~38 ~104 ~1316 light_gray_concrete
-setblock ~39 ~104 ~1316 cracked_stone_bricks
-fill ~40 ~104 ~1316 ~43 ~104 ~1316 light_gray_concrete
+fill ~20 ~104 ~1264 ~22 ~104 ~1264 light_gray_concrete
+setblock ~23 ~104 ~1264 cracked_stone_bricks
+setblock ~24 ~104 ~1264 light_gray_concrete
+setblock ~25 ~104 ~1264 cracked_stone_bricks
+setblock ~19 ~104 ~1265 andesite
+fill ~20 ~104 ~1265 ~24 ~104 ~1265 light_gray_concrete
 setblock ~56 ~104 ~1370 gray_concrete
-setblock ~48 ~104 ~1376 green_terracotta
+setblock ~48 ~104 ~1376 spruce_planks
 setblock ~49 ~104 ~1376 barrel[facing=up]
-setblock ~53 ~104 ~1376 iron_bars
+setblock ~53 ~104 ~1376 cobweb
 setblock ~44 ~104 ~1380 polished_blackstone_wall
 fill ~96 ~104 ~1458 ~104 ~104 ~1458 air
 fill ~96 ~104 ~1459 ~98 ~104 ~1459 air
@@ -2954,89 +988,20 @@ fill ~96 ~104 ~1465 ~98 ~104 ~1465 air
 fill ~99 ~104 ~1465 ~101 ~104 ~1465 white_concrete
 fill ~102 ~104 ~1465 ~104 ~104 ~1465 air
 fill ~96 ~104 ~1466 ~104 ~104 ~1466 air
-setblock ~19 ~105 ~1263 gray_concrete
-fill ~20 ~105 ~1263 ~21 ~105 ~1263 light_gray_concrete
-setblock ~22 ~105 ~1263 andesite
-fill ~23 ~105 ~1263 ~24 ~105 ~1263 cracked_stone_bricks
-setblock ~25 ~105 ~1263 light_gray_concrete
-fill ~19 ~105 ~1264 ~23 ~105 ~1264 light_gray_concrete
-setblock ~24 ~105 ~1264 andesite
-setblock ~25 ~105 ~1264 light_gray_concrete
-fill ~19 ~105 ~1265 ~20 ~105 ~1265 light_gray_concrete
-setblock ~21 ~105 ~1265 gray_concrete
-setblock ~22 ~105 ~1265 cracked_stone_bricks
-setblock ~23 ~105 ~1265 gray_concrete
-setblock ~24 ~105 ~1265 tuff
-setblock ~25 ~105 ~1265 andesite
-setblock ~19 ~105 ~1266 gray_concrete
-setblock ~20 ~105 ~1266 andesite
-fill ~21 ~105 ~1266 ~23 ~105 ~1266 light_gray_concrete
-setblock ~24 ~105 ~1266 cracked_stone_bricks
-setblock ~41 ~105 ~1295 gray_concrete
-setblock ~42 ~105 ~1295 andesite
-setblock ~41 ~105 ~1296 light_gray_concrete
-setblock ~42 ~105 ~1296 andesite
-setblock ~39 ~105 ~1297 cracked_stone_bricks
-fill ~40 ~105 ~1297 ~42 ~105 ~1297 light_gray_concrete
-setblock ~33 ~105 ~1308 light_gray_concrete
-setblock ~34 ~105 ~1308 gray_concrete
-setblock ~35 ~105 ~1308 tuff
-setblock ~36 ~105 ~1308 light_gray_concrete
-setblock ~37 ~105 ~1308 cracked_stone_bricks
-fill ~38 ~105 ~1308 ~40 ~105 ~1308 light_gray_concrete
-fill ~41 ~105 ~1308 ~42 ~105 ~1308 andesite
-setblock ~43 ~105 ~1308 light_gray_concrete
-setblock ~33 ~105 ~1309 cracked_stone_bricks
-setblock ~34 ~105 ~1309 spruce_fence
-fill ~35 ~105 ~1309 ~36 ~105 ~1309 light_gray_concrete
-setblock ~37 ~105 ~1309 tuff
-setblock ~38 ~105 ~1309 cracked_stone_bricks
-fill ~39 ~105 ~1309 ~41 ~105 ~1309 light_gray_concrete
-setblock ~42 ~105 ~1309 spruce_fence
-setblock ~43 ~105 ~1309 light_gray_concrete
-setblock ~34 ~105 ~1310 light_gray_concrete
-setblock ~35 ~105 ~1310 gray_concrete
-setblock ~36 ~105 ~1310 light_gray_concrete
-setblock ~37 ~105 ~1310 andesite
-fill ~38 ~105 ~1310 ~39 ~105 ~1310 cracked_stone_bricks
-fill ~40 ~105 ~1310 ~41 ~105 ~1310 light_gray_concrete
-setblock ~42 ~105 ~1310 gray_concrete
-setblock ~43 ~105 ~1310 light_gray_concrete
-setblock ~35 ~105 ~1311 light_gray_concrete
-fill ~36 ~105 ~1311 ~37 ~105 ~1311 andesite
-fill ~38 ~105 ~1311 ~39 ~105 ~1311 light_gray_concrete
-setblock ~40 ~105 ~1311 cracked_stone_bricks
-fill ~41 ~105 ~1311 ~43 ~105 ~1311 light_gray_concrete
-setblock ~37 ~105 ~1312 gray_concrete
-setblock ~38 ~105 ~1312 cracked_stone_bricks
-fill ~39 ~105 ~1312 ~40 ~105 ~1312 light_gray_concrete
-setblock ~41 ~105 ~1312 gray_concrete
-setblock ~42 ~105 ~1312 andesite
-setblock ~43 ~105 ~1312 light_gray_concrete
-setblock ~37 ~105 ~1313 light_gray_concrete
-fill ~38 ~105 ~1313 ~39 ~105 ~1313 andesite
-setblock ~40 ~105 ~1313 cracked_stone_bricks
-setblock ~41 ~105 ~1313 andesite
-setblock ~42 ~105 ~1313 light_gray_concrete
-setblock ~43 ~105 ~1313 andesite
-setblock ~37 ~105 ~1314 light_gray_concrete
-setblock ~38 ~105 ~1314 gray_concrete
-fill ~39 ~105 ~1314 ~41 ~105 ~1314 light_gray_concrete
-setblock ~42 ~105 ~1314 andesite
-setblock ~43 ~105 ~1314 gray_concrete
-setblock ~37 ~105 ~1315 cracked_stone_bricks
-setblock ~38 ~105 ~1315 light_gray_concrete
-setblock ~39 ~105 ~1315 gray_concrete
-setblock ~40 ~105 ~1315 tuff
-setblock ~41 ~105 ~1315 gray_concrete
-setblock ~42 ~105 ~1315 spruce_fence
-setblock ~43 ~105 ~1315 andesite
-setblock ~37 ~105 ~1316 light_gray_concrete
-setblock ~38 ~105 ~1316 cracked_stone_bricks
-setblock ~39 ~105 ~1316 andesite
-setblock ~40 ~105 ~1316 light_gray_concrete
-fill ~41 ~105 ~1316 ~42 ~105 ~1316 gray_concrete
-setblock ~43 ~105 ~1316 cracked_stone_bricks
+fill ~23 ~105 ~1263 ~25 ~105 ~1263 gray_concrete
+fill ~19 ~105 ~1264 ~20 ~105 ~1264 light_gray_concrete
+setblock ~21 ~105 ~1264 gray_concrete
+fill ~22 ~105 ~1264 ~23 ~105 ~1264 andesite
+setblock ~24 ~105 ~1264 light_gray_concrete
+setblock ~25 ~105 ~1264 gray_concrete
+setblock ~19 ~105 ~1265 light_gray_concrete
+setblock ~20 ~105 ~1265 tuff
+fill ~21 ~105 ~1265 ~23 ~105 ~1265 light_gray_concrete
+setblock ~24 ~105 ~1265 gray_concrete
+setblock ~25 ~105 ~1265 cracked_stone_bricks
+fill ~19 ~105 ~1266 ~20 ~105 ~1266 gray_concrete
+fill ~21 ~105 ~1266 ~22 ~105 ~1266 light_gray_concrete
+fill ~23 ~105 ~1266 ~24 ~105 ~1266 gray_concrete
 setblock ~56 ~105 ~1370 gray_concrete
 setblock ~57 ~105 ~1370 andesite
 setblock ~58 ~105 ~1373 iron_bars
@@ -3081,222 +1046,103 @@ fill ~96 ~105 ~1465 ~98 ~105 ~1465 air
 fill ~99 ~105 ~1465 ~101 ~105 ~1465 white_concrete
 fill ~102 ~105 ~1465 ~104 ~105 ~1465 air
 fill ~96 ~105 ~1466 ~104 ~105 ~1466 air
-setblock ~19 ~106 ~1263 gray_concrete
-setblock ~20 ~106 ~1263 andesite
-setblock ~21 ~106 ~1263 light_gray_concrete
-setblock ~22 ~106 ~1263 cracked_stone_bricks
-fill ~23 ~106 ~1263 ~25 ~106 ~1263 light_gray_concrete
-setblock ~19 ~106 ~1264 light_gray_concrete
+setblock ~23 ~106 ~1263 andesite
+setblock ~24 ~106 ~1263 light_gray_concrete
+setblock ~25 ~106 ~1263 andesite
+setblock ~19 ~106 ~1264 tuff
 setblock ~20 ~106 ~1264 gray_concrete
-setblock ~21 ~106 ~1264 cracked_stone_bricks
-setblock ~22 ~106 ~1264 tuff
-setblock ~23 ~106 ~1264 cracked_stone_bricks
-fill ~24 ~106 ~1264 ~25 ~106 ~1264 light_gray_concrete
-setblock ~19 ~106 ~1265 tuff
-setblock ~20 ~106 ~1265 light_gray_concrete
-setblock ~21 ~106 ~1265 gray_concrete
-setblock ~22 ~106 ~1265 andesite
-setblock ~23 ~106 ~1265 tuff
+fill ~21 ~106 ~1264 ~24 ~106 ~1264 light_gray_concrete
+setblock ~25 ~106 ~1264 gray_concrete
+setblock ~19 ~106 ~1265 gray_concrete
+fill ~20 ~106 ~1265 ~22 ~106 ~1265 light_gray_concrete
+setblock ~23 ~106 ~1265 gray_concrete
 setblock ~24 ~106 ~1265 light_gray_concrete
-setblock ~25 ~106 ~1265 tuff
-fill ~19 ~106 ~1266 ~20 ~106 ~1266 light_gray_concrete
-setblock ~21 ~106 ~1266 tuff
-setblock ~22 ~106 ~1266 cracked_stone_bricks
-fill ~23 ~106 ~1266 ~25 ~106 ~1266 light_gray_concrete
-fill ~19 ~106 ~1267 ~20 ~106 ~1267 light_gray_concrete
+setblock ~25 ~106 ~1265 cracked_stone_bricks
+fill ~19 ~106 ~1266 ~24 ~106 ~1266 light_gray_concrete
+setblock ~25 ~106 ~1266 gray_concrete
+setblock ~19 ~106 ~1267 cracked_stone_bricks
+setblock ~20 ~106 ~1267 andesite
 setblock ~21 ~106 ~1267 gray_concrete
-fill ~22 ~106 ~1267 ~24 ~106 ~1267 light_gray_concrete
-fill ~19 ~106 ~1268 ~20 ~106 ~1268 light_gray_concrete
-fill ~41 ~106 ~1295 ~42 ~106 ~1295 light_gray_concrete
-fill ~41 ~106 ~1296 ~42 ~106 ~1296 light_gray_concrete
-fill ~39 ~106 ~1297 ~42 ~106 ~1297 light_gray_concrete
-fill ~33 ~106 ~1308 ~34 ~106 ~1308 gray_concrete
-setblock ~35 ~106 ~1308 cracked_stone_bricks
-fill ~36 ~106 ~1308 ~38 ~106 ~1308 light_gray_concrete
-setblock ~39 ~106 ~1308 gray_concrete
-setblock ~40 ~106 ~1308 andesite
-fill ~41 ~106 ~1308 ~42 ~106 ~1308 light_gray_concrete
-setblock ~43 ~106 ~1308 andesite
-setblock ~33 ~106 ~1309 andesite
-setblock ~34 ~106 ~1309 spruce_fence
-setblock ~35 ~106 ~1309 light_gray_concrete
-fill ~36 ~106 ~1309 ~37 ~106 ~1309 gray_concrete
-fill ~38 ~106 ~1309 ~39 ~106 ~1309 light_gray_concrete
-setblock ~40 ~106 ~1309 cracked_stone_bricks
-setblock ~41 ~106 ~1309 gray_concrete
-setblock ~42 ~106 ~1309 spruce_fence
-setblock ~43 ~106 ~1309 light_gray_concrete
-fill ~34 ~106 ~1310 ~35 ~106 ~1310 light_gray_concrete
-fill ~36 ~106 ~1310 ~37 ~106 ~1310 andesite
-setblock ~38 ~106 ~1310 cracked_stone_bricks
-setblock ~39 ~106 ~1310 light_gray_concrete
-fill ~40 ~106 ~1310 ~42 ~106 ~1310 andesite
-setblock ~43 ~106 ~1310 gray_concrete
-fill ~35 ~106 ~1311 ~36 ~106 ~1311 light_gray_concrete
-fill ~37 ~106 ~1311 ~38 ~106 ~1311 andesite
-setblock ~39 ~106 ~1311 light_gray_concrete
-setblock ~40 ~106 ~1311 gray_concrete
-setblock ~41 ~106 ~1311 andesite
-fill ~42 ~106 ~1311 ~43 ~106 ~1311 light_gray_concrete
-setblock ~37 ~106 ~1312 light_gray_concrete
-setblock ~38 ~106 ~1312 gray_concrete
-setblock ~39 ~106 ~1312 andesite
-fill ~40 ~106 ~1312 ~41 ~106 ~1312 cracked_stone_bricks
-setblock ~42 ~106 ~1312 light_gray_concrete
-setblock ~43 ~106 ~1312 cracked_stone_bricks
-fill ~37 ~106 ~1313 ~38 ~106 ~1313 light_gray_concrete
-setblock ~39 ~106 ~1313 cracked_stone_bricks
-setblock ~40 ~106 ~1313 gray_concrete
-setblock ~41 ~106 ~1313 light_gray_concrete
-setblock ~42 ~106 ~1313 gray_concrete
-setblock ~43 ~106 ~1313 light_gray_concrete
-fill ~37 ~106 ~1314 ~39 ~106 ~1314 light_gray_concrete
-fill ~40 ~106 ~1314 ~41 ~106 ~1314 gray_concrete
-setblock ~42 ~106 ~1314 light_gray_concrete
-setblock ~43 ~106 ~1314 andesite
-fill ~37 ~106 ~1315 ~38 ~106 ~1315 light_gray_concrete
-setblock ~39 ~106 ~1315 andesite
-setblock ~40 ~106 ~1315 cracked_stone_bricks
-setblock ~41 ~106 ~1315 light_gray_concrete
-setblock ~42 ~106 ~1315 spruce_fence
-setblock ~43 ~106 ~1315 andesite
-setblock ~37 ~106 ~1316 light_gray_concrete
-setblock ~38 ~106 ~1316 andesite
-fill ~39 ~106 ~1316 ~41 ~106 ~1316 light_gray_concrete
-fill ~42 ~106 ~1316 ~43 ~106 ~1316 andesite
+fill ~22 ~106 ~1267 ~23 ~106 ~1267 cracked_stone_bricks
+setblock ~24 ~106 ~1267 light_gray_concrete
+setblock ~19 ~106 ~1268 gray_concrete
+setblock ~20 ~106 ~1268 andesite
 setblock ~54 ~106 ~1370 tuff
 fill ~55 ~106 ~1370 ~56 ~106 ~1370 light_gray_concrete
 setblock ~57 ~106 ~1370 andesite
-fill ~59 ~106 ~1372 ~60 ~106 ~1372 iron_bars
+setblock ~59 ~106 ~1372 cobweb
+setblock ~60 ~106 ~1372 iron_bars
 setblock ~48 ~106 ~1376 spruce_trapdoor[half=bottom]
 setblock ~44 ~106 ~1380 polished_blackstone_slab
 setblock ~44 ~106 ~1381 polished_blackstone_slab
 fill ~96 ~106 ~1458 ~104 ~106 ~1458 air
 fill ~96 ~106 ~1459 ~98 ~106 ~1459 air
-fill ~99 ~106 ~1459 ~101 ~106 ~1459 light_gray_concrete
+fill ~99 ~106 ~1459 ~101 ~106 ~1459 white_concrete
 fill ~102 ~106 ~1459 ~104 ~106 ~1459 air
 fill ~96 ~106 ~1460 ~97 ~106 ~1460 air
-setblock ~98 ~106 ~1460 light_gray_concrete
+setblock ~98 ~106 ~1460 white_concrete
 fill ~99 ~106 ~1460 ~101 ~106 ~1460 air
-setblock ~102 ~106 ~1460 light_gray_concrete
+setblock ~102 ~106 ~1460 white_concrete
 fill ~103 ~106 ~1460 ~104 ~106 ~1460 air
 setblock ~96 ~106 ~1461 air
-setblock ~97 ~106 ~1461 light_gray_concrete
+setblock ~97 ~106 ~1461 white_concrete
 fill ~98 ~106 ~1461 ~102 ~106 ~1461 air
-setblock ~103 ~106 ~1461 light_gray_concrete
+setblock ~103 ~106 ~1461 white_concrete
 setblock ~104 ~106 ~1461 air
 setblock ~96 ~106 ~1462 air
-setblock ~97 ~106 ~1462 light_gray_concrete
+setblock ~97 ~106 ~1462 white_concrete
 fill ~98 ~106 ~1462 ~99 ~106 ~1462 air
 setblock ~100 ~106 ~1462 polished_andesite
 fill ~101 ~106 ~1462 ~102 ~106 ~1462 air
-setblock ~103 ~106 ~1462 light_gray_concrete
+setblock ~103 ~106 ~1462 white_concrete
 setblock ~104 ~106 ~1462 air
 setblock ~96 ~106 ~1463 air
-setblock ~97 ~106 ~1463 light_gray_concrete
+setblock ~97 ~106 ~1463 white_concrete
 setblock ~98 ~106 ~1463 air
 setblock ~99 ~106 ~1463 stone_brick_stairs[facing=west]
 fill ~100 ~106 ~1463 ~102 ~106 ~1463 air
-setblock ~103 ~106 ~1463 light_gray_concrete
+setblock ~103 ~106 ~1463 white_concrete
 setblock ~104 ~106 ~1463 air
 fill ~96 ~106 ~1464 ~97 ~106 ~1464 air
-setblock ~98 ~106 ~1464 light_gray_concrete
+setblock ~98 ~106 ~1464 white_concrete
 fill ~99 ~106 ~1464 ~101 ~106 ~1464 air
-setblock ~102 ~106 ~1464 light_gray_concrete
+setblock ~102 ~106 ~1464 white_concrete
 fill ~103 ~106 ~1464 ~104 ~106 ~1464 air
 fill ~96 ~106 ~1465 ~98 ~106 ~1465 air
-fill ~99 ~106 ~1465 ~101 ~106 ~1465 light_gray_concrete
+fill ~99 ~106 ~1465 ~101 ~106 ~1465 white_concrete
 fill ~102 ~106 ~1465 ~104 ~106 ~1465 air
 fill ~96 ~106 ~1466 ~104 ~106 ~1466 air
-setblock ~19 ~107 ~1263 tuff
-fill ~20 ~107 ~1263 ~21 ~107 ~1263 light_gray_concrete
-setblock ~22 ~107 ~1263 cracked_stone_bricks
-fill ~23 ~107 ~1263 ~24 ~107 ~1263 light_gray_concrete
-setblock ~25 ~107 ~1263 gray_concrete
-setblock ~19 ~107 ~1264 cracked_stone_bricks
-fill ~20 ~107 ~1264 ~21 ~107 ~1264 light_gray_concrete
-fill ~22 ~107 ~1264 ~24 ~107 ~1264 andesite
-setblock ~25 ~107 ~1264 light_gray_concrete
-fill ~19 ~107 ~1265 ~21 ~107 ~1265 light_gray_concrete
-setblock ~22 ~107 ~1265 gray_concrete
-setblock ~23 ~107 ~1265 light_gray_concrete
-setblock ~24 ~107 ~1265 tuff
-setblock ~25 ~107 ~1265 light_gray_concrete
+setblock ~23 ~107 ~1263 cracked_stone_bricks
+setblock ~24 ~107 ~1263 light_gray_concrete
+setblock ~25 ~107 ~1263 tuff
+setblock ~19 ~107 ~1264 gray_concrete
+setblock ~20 ~107 ~1264 light_gray_concrete
+setblock ~21 ~107 ~1264 tuff
+fill ~22 ~107 ~1264 ~24 ~107 ~1264 light_gray_concrete
+setblock ~25 ~107 ~1264 tuff
+fill ~19 ~107 ~1265 ~20 ~107 ~1265 light_gray_concrete
+setblock ~21 ~107 ~1265 cracked_stone_bricks
+fill ~22 ~107 ~1265 ~23 ~107 ~1265 light_gray_concrete
+setblock ~24 ~107 ~1265 cracked_stone_bricks
+setblock ~25 ~107 ~1265 gray_concrete
 setblock ~19 ~107 ~1266 gray_concrete
-fill ~20 ~107 ~1266 ~21 ~107 ~1266 cracked_stone_bricks
-setblock ~22 ~107 ~1266 gray_concrete
-setblock ~23 ~107 ~1266 light_gray_concrete
-setblock ~24 ~107 ~1266 andesite
-setblock ~25 ~107 ~1266 gray_concrete
-setblock ~19 ~107 ~1267 cracked_stone_bricks
-setblock ~20 ~107 ~1267 andesite
-setblock ~21 ~107 ~1267 light_gray_concrete
-setblock ~22 ~107 ~1267 tuff
-setblock ~23 ~107 ~1267 light_gray_concrete
-setblock ~24 ~107 ~1267 cracked_stone_bricks
+setblock ~20 ~107 ~1266 tuff
+fill ~21 ~107 ~1266 ~23 ~107 ~1266 light_gray_concrete
+setblock ~24 ~107 ~1266 cracked_stone_bricks
+setblock ~25 ~107 ~1266 light_gray_concrete
+setblock ~19 ~107 ~1267 light_gray_concrete
+setblock ~20 ~107 ~1267 cracked_stone_bricks
+fill ~21 ~107 ~1267 ~22 ~107 ~1267 light_gray_concrete
+fill ~23 ~107 ~1267 ~24 ~107 ~1267 cracked_stone_bricks
 setblock ~25 ~107 ~1267 light_gray_concrete
-fill ~19 ~107 ~1268 ~23 ~107 ~1268 light_gray_concrete
-fill ~24 ~107 ~1268 ~25 ~107 ~1268 cracked_stone_bricks
-setblock ~19 ~107 ~1269 cracked_stone_bricks
-fill ~20 ~107 ~1269 ~21 ~107 ~1269 light_gray_concrete
-setblock ~22 ~107 ~1269 gray_concrete
-fill ~23 ~107 ~1269 ~24 ~107 ~1269 light_gray_concrete
-fill ~41 ~107 ~1295 ~42 ~107 ~1295 light_gray_concrete
-setblock ~41 ~107 ~1296 light_gray_concrete
-setblock ~42 ~107 ~1296 andesite
-fill ~39 ~107 ~1297 ~40 ~107 ~1297 light_gray_concrete
-setblock ~41 ~107 ~1297 gray_concrete
-setblock ~42 ~107 ~1297 light_gray_concrete
-setblock ~33 ~107 ~1308 cracked_stone_bricks
-setblock ~34 ~107 ~1308 gray_concrete
-setblock ~35 ~107 ~1308 andesite
-fill ~36 ~107 ~1308 ~38 ~107 ~1308 light_gray_concrete
-fill ~39 ~107 ~1308 ~40 ~107 ~1308 andesite
-fill ~41 ~107 ~1308 ~43 ~107 ~1308 light_gray_concrete
-setblock ~33 ~107 ~1309 light_gray_concrete
-setblock ~34 ~107 ~1309 spruce_fence
-setblock ~35 ~107 ~1309 andesite
-setblock ~36 ~107 ~1309 gray_concrete
-setblock ~37 ~107 ~1309 cracked_stone_bricks
-fill ~38 ~107 ~1309 ~39 ~107 ~1309 gray_concrete
-fill ~40 ~107 ~1309 ~41 ~107 ~1309 light_gray_concrete
-setblock ~42 ~107 ~1309 spruce_fence
-setblock ~43 ~107 ~1309 light_gray_concrete
-setblock ~33 ~107 ~1310 light_gray_concrete
-fill ~34 ~107 ~1310 ~35 ~107 ~1310 andesite
-fill ~36 ~107 ~1310 ~37 ~107 ~1310 light_gray_concrete
-setblock ~38 ~107 ~1310 gray_concrete
-fill ~39 ~107 ~1310 ~43 ~107 ~1310 light_gray_concrete
-fill ~35 ~107 ~1311 ~36 ~107 ~1311 light_gray_concrete
-setblock ~37 ~107 ~1311 andesite
-setblock ~38 ~107 ~1311 gray_concrete
-fill ~39 ~107 ~1311 ~41 ~107 ~1311 light_gray_concrete
-setblock ~42 ~107 ~1311 andesite
-setblock ~43 ~107 ~1311 light_gray_concrete
-setblock ~37 ~107 ~1312 cracked_stone_bricks
-fill ~38 ~107 ~1312 ~42 ~107 ~1312 light_gray_concrete
-setblock ~43 ~107 ~1312 cracked_stone_bricks
-setblock ~37 ~107 ~1313 cracked_stone_bricks
-setblock ~38 ~107 ~1313 light_gray_concrete
-setblock ~39 ~107 ~1313 gray_concrete
-setblock ~40 ~107 ~1313 light_gray_concrete
-setblock ~41 ~107 ~1313 andesite
-setblock ~42 ~107 ~1313 light_gray_concrete
-setblock ~43 ~107 ~1313 andesite
-fill ~37 ~107 ~1314 ~40 ~107 ~1314 light_gray_concrete
-fill ~41 ~107 ~1314 ~42 ~107 ~1314 gray_concrete
-setblock ~43 ~107 ~1314 light_gray_concrete
-fill ~37 ~107 ~1315 ~38 ~107 ~1315 light_gray_concrete
-setblock ~39 ~107 ~1315 gray_concrete
-setblock ~40 ~107 ~1315 light_gray_concrete
-setblock ~41 ~107 ~1315 cracked_stone_bricks
-setblock ~42 ~107 ~1315 spruce_fence
-setblock ~43 ~107 ~1315 tuff
-fill ~37 ~107 ~1316 ~39 ~107 ~1316 light_gray_concrete
-setblock ~40 ~107 ~1316 andesite
-setblock ~41 ~107 ~1316 light_gray_concrete
-setblock ~42 ~107 ~1316 gray_concrete
-setblock ~43 ~107 ~1316 light_gray_concrete
+setblock ~19 ~107 ~1268 gray_concrete
+setblock ~20 ~107 ~1268 andesite
+fill ~21 ~107 ~1268 ~22 ~107 ~1268 light_gray_concrete
+setblock ~23 ~107 ~1268 andesite
+fill ~24 ~107 ~1268 ~25 ~107 ~1268 light_gray_concrete
+setblock ~19 ~107 ~1269 light_gray_concrete
+setblock ~20 ~107 ~1269 cracked_stone_bricks
+fill ~21 ~107 ~1269 ~24 ~107 ~1269 gray_concrete
 setblock ~53 ~107 ~1370 light_gray_concrete
 fill ~54 ~107 ~1370 ~55 ~107 ~1370 cracked_stone_bricks
 fill ~56 ~107 ~1370 ~57 ~107 ~1370 light_gray_concrete
@@ -3340,95 +1186,44 @@ fill ~96 ~107 ~1465 ~98 ~107 ~1465 air
 fill ~99 ~107 ~1465 ~101 ~107 ~1465 white_concrete
 fill ~102 ~107 ~1465 ~104 ~107 ~1465 air
 fill ~96 ~107 ~1466 ~104 ~107 ~1466 air
-setblock ~19 ~108 ~1263 andesite
-setblock ~20 ~108 ~1263 light_gray_concrete
-setblock ~21 ~108 ~1263 tuff
+setblock ~19 ~108 ~1263 tuff
+setblock ~20 ~108 ~1263 gray_concrete
+setblock ~21 ~108 ~1263 light_gray_concrete
 setblock ~22 ~108 ~1263 andesite
-setblock ~23 ~108 ~1263 light_gray_concrete
-setblock ~24 ~108 ~1263 cracked_stone_bricks
-setblock ~25 ~108 ~1263 light_gray_concrete
-setblock ~19 ~108 ~1264 gray_concrete
+setblock ~23 ~108 ~1263 cracked_stone_bricks
+setblock ~24 ~108 ~1263 light_gray_concrete
+setblock ~25 ~108 ~1263 andesite
+setblock ~19 ~108 ~1264 andesite
 setblock ~20 ~108 ~1264 cracked_stone_bricks
-setblock ~21 ~108 ~1264 light_gray_concrete
-fill ~22 ~108 ~1264 ~23 ~108 ~1264 gray_concrete
-fill ~24 ~108 ~1264 ~25 ~108 ~1264 light_gray_concrete
+fill ~21 ~108 ~1264 ~22 ~108 ~1264 light_gray_concrete
+setblock ~23 ~108 ~1264 andesite
+setblock ~24 ~108 ~1264 light_gray_concrete
+setblock ~25 ~108 ~1264 andesite
 setblock ~19 ~108 ~1265 light_gray_concrete
-setblock ~20 ~108 ~1265 gray_concrete
-fill ~21 ~108 ~1265 ~23 ~108 ~1265 light_gray_concrete
-setblock ~24 ~108 ~1265 andesite
+setblock ~20 ~108 ~1265 andesite
+fill ~21 ~108 ~1265 ~22 ~108 ~1265 light_gray_concrete
+fill ~23 ~108 ~1265 ~24 ~108 ~1265 cracked_stone_bricks
 setblock ~25 ~108 ~1265 light_gray_concrete
-setblock ~19 ~108 ~1266 andesite
-setblock ~20 ~108 ~1266 cracked_stone_bricks
-setblock ~21 ~108 ~1266 tuff
-fill ~22 ~108 ~1266 ~23 ~108 ~1266 light_gray_concrete
+fill ~19 ~108 ~1266 ~20 ~108 ~1266 light_gray_concrete
+setblock ~21 ~108 ~1266 gray_concrete
+setblock ~22 ~108 ~1266 andesite
+setblock ~23 ~108 ~1266 tuff
 setblock ~24 ~108 ~1266 andesite
-setblock ~25 ~108 ~1266 light_gray_concrete
-fill ~19 ~108 ~1267 ~22 ~108 ~1267 light_gray_concrete
-fill ~23 ~108 ~1267 ~24 ~108 ~1267 gray_concrete
-setblock ~25 ~108 ~1267 cracked_stone_bricks
-setblock ~19 ~108 ~1268 gray_concrete
-setblock ~20 ~108 ~1268 cracked_stone_bricks
-setblock ~21 ~108 ~1268 light_gray_concrete
-setblock ~22 ~108 ~1268 andesite
-fill ~23 ~108 ~1268 ~24 ~108 ~1268 light_gray_concrete
-setblock ~25 ~108 ~1268 cracked_stone_bricks
-setblock ~19 ~108 ~1269 andesite
-fill ~20 ~108 ~1269 ~24 ~108 ~1269 light_gray_concrete
+setblock ~25 ~108 ~1266 tuff
+setblock ~19 ~108 ~1267 andesite
+setblock ~20 ~108 ~1267 light_gray_concrete
+setblock ~21 ~108 ~1267 cracked_stone_bricks
+setblock ~22 ~108 ~1267 tuff
+setblock ~23 ~108 ~1267 light_gray_concrete
+setblock ~24 ~108 ~1267 cracked_stone_bricks
+setblock ~25 ~108 ~1267 light_gray_concrete
+fill ~19 ~108 ~1268 ~20 ~108 ~1268 light_gray_concrete
+setblock ~21 ~108 ~1268 gray_concrete
+setblock ~22 ~108 ~1268 cracked_stone_bricks
+fill ~23 ~108 ~1268 ~24 ~108 ~1268 andesite
+setblock ~25 ~108 ~1268 light_gray_concrete
+fill ~19 ~108 ~1269 ~24 ~108 ~1269 light_gray_concrete
 setblock ~25 ~108 ~1269 gray_concrete
-setblock ~41 ~108 ~1295 light_gray_concrete
-setblock ~42 ~108 ~1295 andesite
-fill ~41 ~108 ~1296 ~42 ~108 ~1296 light_gray_concrete
-setblock ~39 ~108 ~1297 andesite
-setblock ~40 ~108 ~1297 light_gray_concrete
-fill ~41 ~108 ~1297 ~42 ~108 ~1297 gray_concrete
-fill ~33 ~108 ~1308 ~37 ~108 ~1308 light_gray_concrete
-setblock ~38 ~108 ~1308 cracked_stone_bricks
-setblock ~39 ~108 ~1308 light_gray_concrete
-setblock ~40 ~108 ~1308 cracked_stone_bricks
-fill ~41 ~108 ~1308 ~43 ~108 ~1308 light_gray_concrete
-setblock ~33 ~108 ~1309 light_gray_concrete
-setblock ~34 ~108 ~1309 spruce_fence
-setblock ~35 ~108 ~1309 tuff
-fill ~36 ~108 ~1309 ~40 ~108 ~1309 light_gray_concrete
-setblock ~41 ~108 ~1309 cracked_stone_bricks
-setblock ~42 ~108 ~1309 spruce_fence
-setblock ~43 ~108 ~1309 light_gray_concrete
-setblock ~33 ~108 ~1310 andesite
-setblock ~34 ~108 ~1310 gray_concrete
-setblock ~35 ~108 ~1310 andesite
-setblock ~36 ~108 ~1310 cracked_stone_bricks
-fill ~37 ~108 ~1310 ~38 ~108 ~1310 light_gray_concrete
-setblock ~39 ~108 ~1310 gray_concrete
-fill ~40 ~108 ~1310 ~41 ~108 ~1310 light_gray_concrete
-fill ~42 ~108 ~1310 ~43 ~108 ~1310 gray_concrete
-fill ~35 ~108 ~1311 ~36 ~108 ~1311 light_gray_concrete
-setblock ~37 ~108 ~1311 cracked_stone_bricks
-fill ~38 ~108 ~1311 ~39 ~108 ~1311 light_gray_concrete
-setblock ~40 ~108 ~1311 cracked_stone_bricks
-setblock ~41 ~108 ~1311 andesite
-fill ~42 ~108 ~1311 ~43 ~108 ~1311 light_gray_concrete
-setblock ~37 ~108 ~1312 andesite
-fill ~38 ~108 ~1312 ~40 ~108 ~1312 light_gray_concrete
-setblock ~41 ~108 ~1312 tuff
-fill ~42 ~108 ~1312 ~43 ~108 ~1312 light_gray_concrete
-setblock ~37 ~108 ~1313 light_gray_concrete
-setblock ~38 ~108 ~1313 tuff
-setblock ~39 ~108 ~1313 gray_concrete
-setblock ~40 ~108 ~1313 light_gray_concrete
-setblock ~41 ~108 ~1313 andesite
-setblock ~42 ~108 ~1313 gray_concrete
-setblock ~43 ~108 ~1313 light_gray_concrete
-fill ~37 ~108 ~1314 ~39 ~108 ~1314 light_gray_concrete
-setblock ~40 ~108 ~1314 cracked_stone_bricks
-fill ~41 ~108 ~1314 ~43 ~108 ~1314 light_gray_concrete
-setblock ~37 ~108 ~1315 gray_concrete
-setblock ~38 ~108 ~1315 cracked_stone_bricks
-setblock ~39 ~108 ~1315 gray_concrete
-setblock ~40 ~108 ~1315 light_gray_concrete
-setblock ~41 ~108 ~1315 cracked_stone_bricks
-setblock ~42 ~108 ~1315 spruce_fence
-setblock ~43 ~108 ~1315 cracked_stone_bricks
-fill ~37 ~108 ~1316 ~43 ~108 ~1316 light_gray_concrete
 setblock ~52 ~108 ~1370 cracked_stone_bricks
 setblock ~53 ~108 ~1370 andesite
 setblock ~54 ~108 ~1370 cracked_stone_bricks
@@ -3441,143 +1236,77 @@ setblock ~39 ~108 ~1374 gray_concrete
 setblock ~40 ~108 ~1374 light_gray_concrete
 fill ~96 ~108 ~1458 ~104 ~108 ~1458 air
 fill ~96 ~108 ~1459 ~98 ~108 ~1459 air
-fill ~99 ~108 ~1459 ~101 ~108 ~1459 light_gray_concrete
+fill ~99 ~108 ~1459 ~101 ~108 ~1459 white_concrete
 fill ~102 ~108 ~1459 ~104 ~108 ~1459 air
 fill ~96 ~108 ~1460 ~97 ~108 ~1460 air
-setblock ~98 ~108 ~1460 light_gray_concrete
+setblock ~98 ~108 ~1460 white_concrete
 fill ~99 ~108 ~1460 ~101 ~108 ~1460 air
-setblock ~102 ~108 ~1460 light_gray_concrete
+setblock ~102 ~108 ~1460 white_concrete
 fill ~103 ~108 ~1460 ~104 ~108 ~1460 air
 setblock ~96 ~108 ~1461 air
-setblock ~97 ~108 ~1461 light_gray_concrete
+setblock ~97 ~108 ~1461 white_concrete
 setblock ~98 ~108 ~1461 air
 setblock ~99 ~108 ~1461 stone_brick_stairs[facing=north]
 fill ~100 ~108 ~1461 ~102 ~108 ~1461 air
-setblock ~103 ~108 ~1461 light_gray_concrete
+setblock ~103 ~108 ~1461 white_concrete
 setblock ~104 ~108 ~1461 air
 setblock ~96 ~108 ~1462 air
-setblock ~97 ~108 ~1462 light_gray_concrete
+setblock ~97 ~108 ~1462 white_concrete
 fill ~98 ~108 ~1462 ~99 ~108 ~1462 air
 setblock ~100 ~108 ~1462 polished_andesite
 fill ~101 ~108 ~1462 ~102 ~108 ~1462 air
-setblock ~103 ~108 ~1462 light_gray_concrete
+setblock ~103 ~108 ~1462 white_concrete
 setblock ~104 ~108 ~1462 air
 setblock ~96 ~108 ~1463 air
-setblock ~97 ~108 ~1463 light_gray_concrete
+setblock ~97 ~108 ~1463 white_concrete
 fill ~98 ~108 ~1463 ~102 ~108 ~1463 air
-setblock ~103 ~108 ~1463 light_gray_concrete
+setblock ~103 ~108 ~1463 white_concrete
 setblock ~104 ~108 ~1463 air
 fill ~96 ~108 ~1464 ~97 ~108 ~1464 air
-setblock ~98 ~108 ~1464 light_gray_concrete
+setblock ~98 ~108 ~1464 white_concrete
 fill ~99 ~108 ~1464 ~101 ~108 ~1464 air
-setblock ~102 ~108 ~1464 light_gray_concrete
+setblock ~102 ~108 ~1464 white_concrete
 fill ~103 ~108 ~1464 ~104 ~108 ~1464 air
 fill ~96 ~108 ~1465 ~98 ~108 ~1465 air
-fill ~99 ~108 ~1465 ~101 ~108 ~1465 light_gray_concrete
+fill ~99 ~108 ~1465 ~101 ~108 ~1465 white_concrete
 fill ~102 ~108 ~1465 ~104 ~108 ~1465 air
 setblock ~92 ~108 ~1466 polished_blackstone_wall
 fill ~96 ~108 ~1466 ~104 ~108 ~1466 air
-setblock ~19 ~109 ~1263 cracked_stone_bricks
+setblock ~19 ~109 ~1263 light_gray_concrete
 setblock ~20 ~109 ~1263 gray_concrete
-setblock ~21 ~109 ~1263 andesite
-setblock ~22 ~109 ~1263 light_gray_concrete
-setblock ~23 ~109 ~1263 tuff
-fill ~24 ~109 ~1263 ~25 ~109 ~1263 light_gray_concrete
-fill ~19 ~109 ~1264 ~20 ~109 ~1264 light_gray_concrete
-setblock ~21 ~109 ~1264 cracked_stone_bricks
-setblock ~22 ~109 ~1264 light_gray_concrete
-setblock ~23 ~109 ~1264 gray_concrete
-fill ~24 ~109 ~1264 ~25 ~109 ~1264 light_gray_concrete
-fill ~19 ~109 ~1265 ~20 ~109 ~1265 light_gray_concrete
-setblock ~21 ~109 ~1265 tuff
-setblock ~22 ~109 ~1265 cracked_stone_bricks
-fill ~23 ~109 ~1265 ~25 ~109 ~1265 light_gray_concrete
+fill ~21 ~109 ~1263 ~25 ~109 ~1263 light_gray_concrete
+setblock ~19 ~109 ~1264 light_gray_concrete
+setblock ~20 ~109 ~1264 andesite
+fill ~21 ~109 ~1264 ~22 ~109 ~1264 light_gray_concrete
+setblock ~23 ~109 ~1264 andesite
+setblock ~24 ~109 ~1264 gray_concrete
+setblock ~25 ~109 ~1264 light_gray_concrete
+fill ~19 ~109 ~1265 ~21 ~109 ~1265 gray_concrete
+fill ~22 ~109 ~1265 ~23 ~109 ~1265 cracked_stone_bricks
+setblock ~24 ~109 ~1265 light_gray_concrete
+setblock ~25 ~109 ~1265 gray_concrete
 setblock ~19 ~109 ~1266 light_gray_concrete
-setblock ~20 ~109 ~1266 gray_concrete
+setblock ~20 ~109 ~1266 andesite
 setblock ~21 ~109 ~1266 cracked_stone_bricks
-setblock ~22 ~109 ~1266 light_gray_concrete
-setblock ~23 ~109 ~1266 gray_concrete
-fill ~24 ~109 ~1266 ~25 ~109 ~1266 light_gray_concrete
+fill ~22 ~109 ~1266 ~23 ~109 ~1266 light_gray_concrete
+setblock ~24 ~109 ~1266 tuff
+setblock ~25 ~109 ~1266 light_gray_concrete
 setblock ~19 ~109 ~1267 light_gray_concrete
-setblock ~20 ~109 ~1267 cracked_stone_bricks
+setblock ~20 ~109 ~1267 andesite
 fill ~21 ~109 ~1267 ~22 ~109 ~1267 light_gray_concrete
 setblock ~23 ~109 ~1267 gray_concrete
-setblock ~24 ~109 ~1267 cracked_stone_bricks
-setblock ~25 ~109 ~1267 light_gray_concrete
-fill ~19 ~109 ~1268 ~20 ~109 ~1268 light_gray_concrete
-setblock ~21 ~109 ~1268 cracked_stone_bricks
-setblock ~22 ~109 ~1268 andesite
-setblock ~23 ~109 ~1268 light_gray_concrete
-setblock ~24 ~109 ~1268 tuff
-setblock ~25 ~109 ~1268 gray_concrete
-setblock ~19 ~109 ~1269 light_gray_concrete
-setblock ~20 ~109 ~1269 andesite
-setblock ~21 ~109 ~1269 light_gray_concrete
-fill ~22 ~109 ~1269 ~23 ~109 ~1269 gray_concrete
-setblock ~24 ~109 ~1269 light_gray_concrete
-setblock ~25 ~109 ~1269 gray_concrete
-fill ~41 ~109 ~1295 ~42 ~109 ~1295 gray_concrete
-setblock ~41 ~109 ~1296 cracked_stone_bricks
-setblock ~42 ~109 ~1296 light_gray_concrete
-fill ~39 ~109 ~1297 ~40 ~109 ~1297 gray_concrete
-fill ~41 ~109 ~1297 ~42 ~109 ~1297 light_gray_concrete
-setblock ~33 ~109 ~1308 andesite
-setblock ~34 ~109 ~1308 light_gray_concrete
-setblock ~35 ~109 ~1308 cracked_stone_bricks
-setblock ~36 ~109 ~1308 light_gray_concrete
-setblock ~37 ~109 ~1308 gray_concrete
-setblock ~38 ~109 ~1308 light_gray_concrete
-fill ~39 ~109 ~1308 ~40 ~109 ~1308 cracked_stone_bricks
-setblock ~41 ~109 ~1308 andesite
-fill ~42 ~109 ~1308 ~43 ~109 ~1308 light_gray_concrete
-setblock ~33 ~109 ~1309 light_gray_concrete
-setblock ~34 ~109 ~1309 spruce_fence
-setblock ~35 ~109 ~1309 andesite
-setblock ~36 ~109 ~1309 light_gray_concrete
-setblock ~37 ~109 ~1309 gray_concrete
-fill ~38 ~109 ~1309 ~41 ~109 ~1309 light_gray_concrete
-setblock ~42 ~109 ~1309 spruce_fence
-setblock ~43 ~109 ~1309 cracked_stone_bricks
-setblock ~33 ~109 ~1310 gray_concrete
-setblock ~34 ~109 ~1310 cracked_stone_bricks
-setblock ~35 ~109 ~1310 andesite
-setblock ~36 ~109 ~1310 gray_concrete
-setblock ~37 ~109 ~1310 light_gray_concrete
-fill ~38 ~109 ~1310 ~39 ~109 ~1310 andesite
-setblock ~40 ~109 ~1310 light_gray_concrete
-setblock ~41 ~109 ~1310 gray_concrete
-fill ~42 ~109 ~1310 ~43 ~109 ~1310 cracked_stone_bricks
-setblock ~35 ~109 ~1311 gray_concrete
-setblock ~36 ~109 ~1311 andesite
-fill ~37 ~109 ~1311 ~38 ~109 ~1311 light_gray_concrete
-setblock ~39 ~109 ~1311 cracked_stone_bricks
-fill ~40 ~109 ~1311 ~43 ~109 ~1311 light_gray_concrete
-setblock ~37 ~109 ~1312 light_gray_concrete
-setblock ~38 ~109 ~1312 gray_concrete
-setblock ~39 ~109 ~1312 light_gray_concrete
-setblock ~40 ~109 ~1312 andesite
-setblock ~41 ~109 ~1312 light_gray_concrete
-setblock ~42 ~109 ~1312 andesite
-setblock ~43 ~109 ~1312 tuff
-fill ~37 ~109 ~1313 ~38 ~109 ~1313 gray_concrete
-fill ~39 ~109 ~1313 ~40 ~109 ~1313 light_gray_concrete
-setblock ~41 ~109 ~1313 gray_concrete
-setblock ~42 ~109 ~1313 cracked_stone_bricks
-setblock ~43 ~109 ~1313 andesite
-setblock ~37 ~109 ~1314 tuff
-setblock ~38 ~109 ~1314 andesite
-fill ~39 ~109 ~1314 ~40 ~109 ~1314 light_gray_concrete
-setblock ~41 ~109 ~1314 gray_concrete
-setblock ~42 ~109 ~1314 andesite
-setblock ~43 ~109 ~1314 gray_concrete
-fill ~37 ~109 ~1315 ~41 ~109 ~1315 light_gray_concrete
-setblock ~42 ~109 ~1315 spruce_fence
-setblock ~43 ~109 ~1315 cracked_stone_bricks
-setblock ~37 ~109 ~1316 cracked_stone_bricks
-setblock ~38 ~109 ~1316 light_gray_concrete
-setblock ~39 ~109 ~1316 andesite
-setblock ~40 ~109 ~1316 cracked_stone_bricks
-fill ~41 ~109 ~1316 ~43 ~109 ~1316 light_gray_concrete
+fill ~24 ~109 ~1267 ~25 ~109 ~1267 light_gray_concrete
+setblock ~19 ~109 ~1268 gray_concrete
+setblock ~20 ~109 ~1268 cracked_stone_bricks
+setblock ~21 ~109 ~1268 andesite
+setblock ~22 ~109 ~1268 cracked_stone_bricks
+fill ~23 ~109 ~1268 ~24 ~109 ~1268 light_gray_concrete
+setblock ~25 ~109 ~1268 cracked_stone_bricks
+fill ~19 ~109 ~1269 ~21 ~109 ~1269 light_gray_concrete
+setblock ~22 ~109 ~1269 gray_concrete
+setblock ~23 ~109 ~1269 light_gray_concrete
+setblock ~24 ~109 ~1269 gray_concrete
+setblock ~25 ~109 ~1269 light_gray_concrete
 setblock ~54 ~109 ~1368 mud_bricks
 fill ~41 ~109 ~1370 ~47 ~109 ~1370 gravel
 setblock ~52 ~109 ~1370 tuff
@@ -3634,102 +1363,46 @@ fill ~99 ~109 ~1465 ~101 ~109 ~1465 red_concrete
 fill ~102 ~109 ~1465 ~104 ~109 ~1465 air
 setblock ~92 ~109 ~1466 polished_blackstone_wall
 fill ~96 ~109 ~1466 ~104 ~109 ~1466 air
-setblock ~19 ~110 ~1263 andesite
-fill ~20 ~110 ~1263 ~21 ~110 ~1263 cracked_stone_bricks
-fill ~22 ~110 ~1263 ~25 ~110 ~1263 light_gray_concrete
-fill ~19 ~110 ~1264 ~22 ~110 ~1264 light_gray_concrete
-setblock ~23 ~110 ~1264 gray_concrete
-setblock ~24 ~110 ~1264 cracked_stone_bricks
+setblock ~19 ~110 ~1263 gray_concrete
+setblock ~20 ~110 ~1263 tuff
+setblock ~21 ~110 ~1263 cracked_stone_bricks
+fill ~22 ~110 ~1263 ~24 ~110 ~1263 light_gray_concrete
+setblock ~25 ~110 ~1263 cracked_stone_bricks
+fill ~19 ~110 ~1264 ~20 ~110 ~1264 light_gray_concrete
+setblock ~21 ~110 ~1264 cracked_stone_bricks
+setblock ~22 ~110 ~1264 andesite
+setblock ~23 ~110 ~1264 light_gray_concrete
+setblock ~24 ~110 ~1264 andesite
 setblock ~25 ~110 ~1264 light_gray_concrete
-fill ~19 ~110 ~1265 ~23 ~110 ~1265 light_gray_concrete
-setblock ~24 ~110 ~1265 tuff
-setblock ~25 ~110 ~1265 andesite
-setblock ~19 ~110 ~1266 cracked_stone_bricks
-fill ~20 ~110 ~1266 ~22 ~110 ~1266 light_gray_concrete
-setblock ~23 ~110 ~1266 andesite
+setblock ~19 ~110 ~1265 light_gray_concrete
+setblock ~20 ~110 ~1265 gray_concrete
+setblock ~21 ~110 ~1265 light_gray_concrete
+setblock ~22 ~110 ~1265 gray_concrete
+fill ~23 ~110 ~1265 ~24 ~110 ~1265 light_gray_concrete
+setblock ~25 ~110 ~1265 cracked_stone_bricks
+setblock ~19 ~110 ~1266 light_gray_concrete
+setblock ~20 ~110 ~1266 andesite
+fill ~21 ~110 ~1266 ~22 ~110 ~1266 light_gray_concrete
+setblock ~23 ~110 ~1266 gray_concrete
 fill ~24 ~110 ~1266 ~25 ~110 ~1266 light_gray_concrete
-fill ~19 ~110 ~1267 ~24 ~110 ~1267 light_gray_concrete
-setblock ~25 ~110 ~1267 gray_concrete
-setblock ~19 ~110 ~1268 andesite
-setblock ~20 ~110 ~1268 light_gray_concrete
-setblock ~21 ~110 ~1268 gray_concrete
-setblock ~22 ~110 ~1268 cracked_stone_bricks
+fill ~19 ~110 ~1267 ~23 ~110 ~1267 light_gray_concrete
+setblock ~24 ~110 ~1267 gray_concrete
+setblock ~25 ~110 ~1267 light_gray_concrete
+setblock ~19 ~110 ~1268 cracked_stone_bricks
+setblock ~20 ~110 ~1268 andesite
+setblock ~21 ~110 ~1268 light_gray_concrete
+setblock ~22 ~110 ~1268 gray_concrete
 setblock ~23 ~110 ~1268 light_gray_concrete
-setblock ~24 ~110 ~1268 andesite
-setblock ~25 ~110 ~1268 tuff
-setblock ~19 ~110 ~1269 andesite
-setblock ~20 ~110 ~1269 cracked_stone_bricks
-fill ~21 ~110 ~1269 ~22 ~110 ~1269 light_gray_concrete
-setblock ~23 ~110 ~1269 cracked_stone_bricks
-setblock ~24 ~110 ~1269 andesite
-setblock ~25 ~110 ~1269 light_gray_concrete
-fill ~41 ~110 ~1295 ~42 ~110 ~1295 light_gray_concrete
-fill ~41 ~110 ~1296 ~42 ~110 ~1296 light_gray_concrete
-setblock ~39 ~110 ~1297 light_gray_concrete
-setblock ~40 ~110 ~1297 cracked_stone_bricks
-setblock ~41 ~110 ~1297 andesite
-setblock ~42 ~110 ~1297 light_gray_concrete
-setblock ~33 ~110 ~1308 andesite
-setblock ~34 ~110 ~1308 gray_concrete
-fill ~35 ~110 ~1308 ~36 ~110 ~1308 light_gray_concrete
-setblock ~37 ~110 ~1308 cracked_stone_bricks
-fill ~38 ~110 ~1308 ~40 ~110 ~1308 light_gray_concrete
-setblock ~41 ~110 ~1308 andesite
-setblock ~42 ~110 ~1308 gray_concrete
-setblock ~43 ~110 ~1308 light_gray_concrete
-setblock ~33 ~110 ~1309 light_gray_concrete
-setblock ~34 ~110 ~1309 spruce_fence
-fill ~35 ~110 ~1309 ~37 ~110 ~1309 light_gray_concrete
-setblock ~38 ~110 ~1309 gray_concrete
-setblock ~39 ~110 ~1309 light_gray_concrete
-setblock ~40 ~110 ~1309 cracked_stone_bricks
-setblock ~41 ~110 ~1309 light_gray_concrete
-setblock ~42 ~110 ~1309 spruce_fence
-setblock ~43 ~110 ~1309 light_gray_concrete
-setblock ~33 ~110 ~1310 andesite
-setblock ~34 ~110 ~1310 light_gray_concrete
-setblock ~35 ~110 ~1310 gray_concrete
-setblock ~36 ~110 ~1310 light_gray_concrete
-setblock ~37 ~110 ~1310 cracked_stone_bricks
-setblock ~38 ~110 ~1310 gray_concrete
-fill ~39 ~110 ~1310 ~43 ~110 ~1310 light_gray_concrete
-fill ~35 ~110 ~1311 ~38 ~110 ~1311 light_gray_concrete
-setblock ~39 ~110 ~1311 gray_concrete
-fill ~40 ~110 ~1311 ~42 ~110 ~1311 light_gray_concrete
-setblock ~43 ~110 ~1311 gray_concrete
-setblock ~37 ~110 ~1312 gray_concrete
-setblock ~38 ~110 ~1312 cracked_stone_bricks
-setblock ~39 ~110 ~1312 light_gray_concrete
-fill ~40 ~110 ~1312 ~41 ~110 ~1312 andesite
-setblock ~42 ~110 ~1312 light_gray_concrete
-setblock ~43 ~110 ~1312 cracked_stone_bricks
-fill ~37 ~110 ~1313 ~38 ~110 ~1313 light_gray_concrete
-fill ~39 ~110 ~1313 ~40 ~110 ~1313 andesite
-setblock ~41 ~110 ~1313 light_gray_concrete
-fill ~42 ~110 ~1313 ~43 ~110 ~1313 gray_concrete
-setblock ~37 ~110 ~1314 light_gray_concrete
-setblock ~38 ~110 ~1314 andesite
-setblock ~39 ~110 ~1314 light_gray_concrete
-setblock ~40 ~110 ~1314 andesite
-setblock ~41 ~110 ~1314 cracked_stone_bricks
-fill ~42 ~110 ~1314 ~43 ~110 ~1314 light_gray_concrete
-setblock ~37 ~110 ~1315 andesite
-setblock ~38 ~110 ~1315 gray_concrete
-setblock ~39 ~110 ~1315 light_gray_concrete
-setblock ~40 ~110 ~1315 gray_concrete
-setblock ~41 ~110 ~1315 light_gray_concrete
-setblock ~42 ~110 ~1315 spruce_fence
-setblock ~43 ~110 ~1315 light_gray_concrete
-setblock ~37 ~110 ~1316 gray_concrete
-fill ~38 ~110 ~1316 ~40 ~110 ~1316 light_gray_concrete
-setblock ~41 ~110 ~1316 gray_concrete
-setblock ~42 ~110 ~1316 cracked_stone_bricks
-setblock ~43 ~110 ~1316 andesite
-setblock ~50 ~110 ~1367 packed_mud
+setblock ~24 ~110 ~1268 cracked_stone_bricks
+setblock ~25 ~110 ~1268 light_gray_concrete
+fill ~19 ~110 ~1269 ~21 ~110 ~1269 light_gray_concrete
+setblock ~22 ~110 ~1269 gray_concrete
+fill ~23 ~110 ~1269 ~24 ~110 ~1269 light_gray_concrete
+setblock ~25 ~110 ~1269 gray_concrete
+setblock ~50 ~110 ~1367 mud_bricks
 setblock ~54 ~110 ~1367 packed_mud
-setblock ~50 ~110 ~1368 mud_bricks
-fill ~51 ~110 ~1368 ~52 ~110 ~1368 packed_mud
-setblock ~53 ~110 ~1368 mud_bricks
+fill ~50 ~110 ~1368 ~52 ~110 ~1368 mud_bricks
+setblock ~53 ~110 ~1368 packed_mud
 setblock ~54 ~110 ~1368 mud_brick_slab
 fill ~52 ~110 ~1370 ~53 ~110 ~1370 light_gray_concrete
 setblock ~54 ~110 ~1370 gray_concrete
@@ -3805,71 +1478,6 @@ setblock ~25 ~111 ~1268 light_gray_concrete
 fill ~19 ~111 ~1269 ~21 ~111 ~1269 light_gray_concrete
 setblock ~22 ~111 ~1269 air
 fill ~23 ~111 ~1269 ~25 ~111 ~1269 light_gray_concrete
-setblock ~41 ~111 ~1295 andesite
-setblock ~42 ~111 ~1295 gray_concrete
-fill ~41 ~111 ~1296 ~42 ~111 ~1296 light_gray_concrete
-setblock ~39 ~111 ~1297 tuff
-setblock ~40 ~111 ~1297 cracked_stone_bricks
-fill ~41 ~111 ~1297 ~42 ~111 ~1297 light_gray_concrete
-fill ~33 ~111 ~1308 ~34 ~111 ~1308 light_gray_concrete
-setblock ~35 ~111 ~1308 tuff
-fill ~36 ~111 ~1308 ~40 ~111 ~1308 light_gray_concrete
-fill ~41 ~111 ~1308 ~42 ~111 ~1308 andesite
-setblock ~43 ~111 ~1308 light_gray_concrete
-setblock ~33 ~111 ~1309 light_gray_concrete
-setblock ~34 ~111 ~1309 spruce_fence
-fill ~35 ~111 ~1309 ~37 ~111 ~1309 light_gray_concrete
-setblock ~38 ~111 ~1309 andesite
-setblock ~39 ~111 ~1309 light_gray_concrete
-setblock ~40 ~111 ~1309 andesite
-setblock ~41 ~111 ~1309 light_gray_concrete
-setblock ~42 ~111 ~1309 spruce_fence
-setblock ~43 ~111 ~1309 gray_concrete
-setblock ~33 ~111 ~1310 light_gray_concrete
-setblock ~34 ~111 ~1310 tuff
-setblock ~35 ~111 ~1310 gray_concrete
-fill ~36 ~111 ~1310 ~37 ~111 ~1310 light_gray_concrete
-setblock ~38 ~111 ~1310 gray_concrete
-setblock ~39 ~111 ~1310 light_gray_concrete
-setblock ~40 ~111 ~1310 cracked_stone_bricks
-setblock ~41 ~111 ~1310 gray_concrete
-setblock ~42 ~111 ~1310 light_gray_concrete
-setblock ~43 ~111 ~1310 gray_concrete
-fill ~35 ~111 ~1311 ~37 ~111 ~1311 light_gray_concrete
-setblock ~38 ~111 ~1311 andesite
-setblock ~39 ~111 ~1311 gray_concrete
-fill ~40 ~111 ~1311 ~41 ~111 ~1311 light_gray_concrete
-setblock ~42 ~111 ~1311 cracked_stone_bricks
-setblock ~43 ~111 ~1311 light_gray_concrete
-setblock ~37 ~111 ~1312 light_gray_concrete
-setblock ~38 ~111 ~1312 gray_concrete
-setblock ~39 ~111 ~1312 light_gray_concrete
-setblock ~40 ~111 ~1312 gray_concrete
-fill ~41 ~111 ~1312 ~42 ~111 ~1312 light_gray_concrete
-setblock ~43 ~111 ~1312 gray_concrete
-setblock ~37 ~111 ~1313 gray_concrete
-fill ~38 ~111 ~1313 ~39 ~111 ~1313 light_gray_concrete
-setblock ~40 ~111 ~1313 gray_concrete
-setblock ~41 ~111 ~1313 cracked_stone_bricks
-setblock ~42 ~111 ~1313 light_gray_concrete
-setblock ~43 ~111 ~1313 cracked_stone_bricks
-setblock ~37 ~111 ~1314 gray_concrete
-setblock ~38 ~111 ~1314 light_gray_concrete
-setblock ~39 ~111 ~1314 gray_concrete
-fill ~40 ~111 ~1314 ~41 ~111 ~1314 light_gray_concrete
-setblock ~42 ~111 ~1314 cracked_stone_bricks
-setblock ~43 ~111 ~1314 gray_concrete
-setblock ~37 ~111 ~1315 gray_concrete
-setblock ~38 ~111 ~1315 light_gray_concrete
-fill ~39 ~111 ~1315 ~40 ~111 ~1315 andesite
-setblock ~41 ~111 ~1315 light_gray_concrete
-setblock ~42 ~111 ~1315 spruce_fence
-setblock ~43 ~111 ~1315 light_gray_concrete
-setblock ~37 ~111 ~1316 light_gray_concrete
-setblock ~38 ~111 ~1316 andesite
-setblock ~39 ~111 ~1316 cracked_stone_bricks
-fill ~40 ~111 ~1316 ~42 ~111 ~1316 light_gray_concrete
-setblock ~43 ~111 ~1316 cracked_stone_bricks
 setblock ~52 ~111 ~1366 green_terracotta
 setblock ~52 ~111 ~1367 polished_blackstone_wall
 fill ~50 ~111 ~1368 ~53 ~111 ~1368 mud_brick_slab
@@ -3890,8 +1498,7 @@ setblock ~36 ~111 ~1374 tuff
 fill ~37 ~111 ~1374 ~38 ~111 ~1374 gray_concrete
 fill ~39 ~111 ~1374 ~40 ~111 ~1374 light_gray_concrete
 fill ~32 ~111 ~1376 ~35 ~111 ~1376 iron_bars
-setblock ~29 ~111 ~1377 cobweb
-fill ~30 ~111 ~1377 ~31 ~111 ~1377 iron_bars
+fill ~29 ~111 ~1377 ~31 ~111 ~1377 iron_bars
 fill ~96 ~111 ~1458 ~104 ~111 ~1458 air
 fill ~96 ~111 ~1459 ~98 ~111 ~1459 air
 fill ~99 ~111 ~1459 ~101 ~111 ~1459 calcite
@@ -3949,65 +1556,6 @@ setblock ~25 ~112 ~1268 glass_pane[north=true,south=true]
 fill ~19 ~112 ~1269 ~21 ~112 ~1269 light_gray_concrete
 setblock ~22 ~112 ~1269 air
 fill ~23 ~112 ~1269 ~25 ~112 ~1269 light_gray_concrete
-setblock ~41 ~112 ~1295 light_gray_concrete
-setblock ~42 ~112 ~1295 cracked_stone_bricks
-setblock ~41 ~112 ~1296 light_gray_concrete
-setblock ~42 ~112 ~1296 andesite
-fill ~39 ~112 ~1297 ~40 ~112 ~1297 light_gray_concrete
-setblock ~41 ~112 ~1297 gray_concrete
-setblock ~42 ~112 ~1297 light_gray_concrete
-fill ~33 ~112 ~1308 ~34 ~112 ~1308 light_gray_concrete
-setblock ~35 ~112 ~1308 gray_concrete
-fill ~36 ~112 ~1308 ~39 ~112 ~1308 light_gray_concrete
-setblock ~40 ~112 ~1308 cracked_stone_bricks
-setblock ~41 ~112 ~1308 light_gray_concrete
-setblock ~42 ~112 ~1308 gray_concrete
-setblock ~43 ~112 ~1308 light_gray_concrete
-setblock ~33 ~112 ~1309 light_gray_concrete
-setblock ~34 ~112 ~1309 spruce_fence
-fill ~35 ~112 ~1309 ~36 ~112 ~1309 light_gray_concrete
-setblock ~37 ~112 ~1309 tuff
-fill ~38 ~112 ~1309 ~40 ~112 ~1309 light_gray_concrete
-setblock ~41 ~112 ~1309 andesite
-setblock ~42 ~112 ~1309 spruce_fence
-setblock ~43 ~112 ~1309 light_gray_concrete
-fill ~33 ~112 ~1310 ~34 ~112 ~1310 andesite
-fill ~35 ~112 ~1310 ~36 ~112 ~1310 light_gray_concrete
-setblock ~37 ~112 ~1310 andesite
-setblock ~38 ~112 ~1310 gray_concrete
-fill ~39 ~112 ~1310 ~41 ~112 ~1310 light_gray_concrete
-setblock ~42 ~112 ~1310 cracked_stone_bricks
-setblock ~43 ~112 ~1310 light_gray_concrete
-setblock ~35 ~112 ~1311 light_gray_concrete
-setblock ~36 ~112 ~1311 tuff
-fill ~37 ~112 ~1311 ~40 ~112 ~1311 light_gray_concrete
-setblock ~41 ~112 ~1311 gray_concrete
-fill ~42 ~112 ~1311 ~43 ~112 ~1311 light_gray_concrete
-setblock ~37 ~112 ~1312 cracked_stone_bricks
-setblock ~38 ~112 ~1312 gray_concrete
-setblock ~39 ~112 ~1312 light_gray_concrete
-setblock ~40 ~112 ~1312 cracked_stone_bricks
-setblock ~41 ~112 ~1312 andesite
-fill ~42 ~112 ~1312 ~43 ~112 ~1312 light_gray_concrete
-fill ~37 ~112 ~1313 ~40 ~112 ~1313 light_gray_concrete
-setblock ~41 ~112 ~1313 gray_concrete
-fill ~42 ~112 ~1313 ~43 ~112 ~1313 light_gray_concrete
-setblock ~37 ~112 ~1314 light_gray_concrete
-setblock ~38 ~112 ~1314 gray_concrete
-setblock ~39 ~112 ~1314 light_gray_concrete
-fill ~40 ~112 ~1314 ~41 ~112 ~1314 gray_concrete
-setblock ~42 ~112 ~1314 light_gray_concrete
-setblock ~43 ~112 ~1314 tuff
-setblock ~37 ~112 ~1315 light_gray_concrete
-setblock ~38 ~112 ~1315 andesite
-fill ~39 ~112 ~1315 ~41 ~112 ~1315 cracked_stone_bricks
-setblock ~42 ~112 ~1315 spruce_fence
-setblock ~43 ~112 ~1315 light_gray_concrete
-setblock ~37 ~112 ~1316 andesite
-fill ~38 ~112 ~1316 ~39 ~112 ~1316 cracked_stone_bricks
-fill ~40 ~112 ~1316 ~41 ~112 ~1316 light_gray_concrete
-setblock ~42 ~112 ~1316 gray_concrete
-setblock ~43 ~112 ~1316 andesite
 setblock ~52 ~112 ~1367 iron_trapdoor[facing=south,half=bottom,open=false]
 setblock ~52 ~112 ~1370 cracked_stone_bricks
 setblock ~53 ~112 ~1370 iron_bars
@@ -4024,43 +1572,42 @@ setblock ~33 ~112 ~1373 gray_concrete
 fill ~34 ~112 ~1373 ~35 ~112 ~1373 light_gray_concrete
 fill ~36 ~112 ~1374 ~39 ~112 ~1374 light_gray_concrete
 setblock ~40 ~112 ~1374 andesite
-fill ~26 ~112 ~1377 ~27 ~112 ~1377 iron_bars
-setblock ~28 ~112 ~1377 cobweb
+fill ~26 ~112 ~1377 ~28 ~112 ~1377 iron_bars
 fill ~96 ~112 ~1458 ~104 ~112 ~1458 air
 fill ~96 ~112 ~1459 ~98 ~112 ~1459 air
-fill ~99 ~112 ~1459 ~101 ~112 ~1459 white_concrete
+fill ~99 ~112 ~1459 ~101 ~112 ~1459 light_gray_concrete
 fill ~102 ~112 ~1459 ~104 ~112 ~1459 air
 fill ~96 ~112 ~1460 ~97 ~112 ~1460 air
-setblock ~98 ~112 ~1460 white_concrete
+setblock ~98 ~112 ~1460 light_gray_concrete
 fill ~99 ~112 ~1460 ~101 ~112 ~1460 air
-setblock ~102 ~112 ~1460 white_concrete
+setblock ~102 ~112 ~1460 light_gray_concrete
 fill ~103 ~112 ~1460 ~104 ~112 ~1460 air
 setblock ~96 ~112 ~1461 air
-setblock ~97 ~112 ~1461 white_concrete
+setblock ~97 ~112 ~1461 light_gray_concrete
 fill ~98 ~112 ~1461 ~102 ~112 ~1461 air
-setblock ~103 ~112 ~1461 white_concrete
+setblock ~103 ~112 ~1461 light_gray_concrete
 setblock ~104 ~112 ~1461 air
 setblock ~96 ~112 ~1462 air
-setblock ~97 ~112 ~1462 white_concrete
+setblock ~97 ~112 ~1462 light_gray_concrete
 fill ~98 ~112 ~1462 ~99 ~112 ~1462 air
 setblock ~100 ~112 ~1462 polished_andesite
 fill ~101 ~112 ~1462 ~102 ~112 ~1462 air
-setblock ~103 ~112 ~1462 white_concrete
+setblock ~103 ~112 ~1462 light_gray_concrete
 setblock ~104 ~112 ~1462 air
 setblock ~96 ~112 ~1463 air
-setblock ~97 ~112 ~1463 white_concrete
+setblock ~97 ~112 ~1463 light_gray_concrete
 fill ~98 ~112 ~1463 ~100 ~112 ~1463 air
 setblock ~101 ~112 ~1463 stone_brick_stairs[facing=south]
 setblock ~102 ~112 ~1463 air
-setblock ~103 ~112 ~1463 white_concrete
+setblock ~103 ~112 ~1463 light_gray_concrete
 setblock ~104 ~112 ~1463 air
 fill ~96 ~112 ~1464 ~97 ~112 ~1464 air
-setblock ~98 ~112 ~1464 white_concrete
+setblock ~98 ~112 ~1464 light_gray_concrete
 fill ~99 ~112 ~1464 ~101 ~112 ~1464 air
-setblock ~102 ~112 ~1464 white_concrete
+setblock ~102 ~112 ~1464 light_gray_concrete
 fill ~103 ~112 ~1464 ~104 ~112 ~1464 air
 fill ~96 ~112 ~1465 ~98 ~112 ~1465 air
-fill ~99 ~112 ~1465 ~101 ~112 ~1465 white_concrete
+fill ~99 ~112 ~1465 ~101 ~112 ~1465 light_gray_concrete
 fill ~102 ~112 ~1465 ~104 ~112 ~1465 air
 setblock ~92 ~112 ~1466 polished_blackstone_slab
 fill ~96 ~112 ~1466 ~104 ~112 ~1466 air
@@ -4082,65 +1629,6 @@ setblock ~19 ~113 ~1268 light_gray_concrete
 fill ~20 ~113 ~1268 ~24 ~113 ~1268 air
 setblock ~25 ~113 ~1268 light_gray_concrete
 fill ~19 ~113 ~1269 ~25 ~113 ~1269 light_gray_concrete
-fill ~41 ~113 ~1295 ~42 ~113 ~1295 light_gray_concrete
-setblock ~41 ~113 ~1296 light_gray_concrete
-setblock ~42 ~113 ~1296 gray_concrete
-setblock ~39 ~113 ~1297 light_gray_concrete
-fill ~40 ~113 ~1297 ~41 ~113 ~1297 andesite
-setblock ~42 ~113 ~1297 light_gray_concrete
-fill ~33 ~113 ~1308 ~34 ~113 ~1308 light_gray_concrete
-setblock ~35 ~113 ~1308 gray_concrete
-setblock ~36 ~113 ~1308 light_gray_concrete
-setblock ~37 ~113 ~1308 gray_concrete
-fill ~38 ~113 ~1308 ~39 ~113 ~1308 light_gray_concrete
-setblock ~40 ~113 ~1308 gray_concrete
-setblock ~41 ~113 ~1308 andesite
-setblock ~42 ~113 ~1308 light_gray_concrete
-setblock ~43 ~113 ~1308 gray_concrete
-setblock ~33 ~113 ~1309 cracked_stone_bricks
-setblock ~34 ~113 ~1309 spruce_fence
-setblock ~35 ~113 ~1309 light_gray_concrete
-fill ~36 ~113 ~1309 ~37 ~113 ~1309 tuff
-fill ~38 ~113 ~1309 ~39 ~113 ~1309 light_gray_concrete
-fill ~40 ~113 ~1309 ~41 ~113 ~1309 andesite
-setblock ~42 ~113 ~1309 spruce_fence
-setblock ~43 ~113 ~1309 light_gray_concrete
-fill ~33 ~113 ~1310 ~37 ~113 ~1310 gray_concrete
-setblock ~38 ~113 ~1310 tuff
-setblock ~39 ~113 ~1310 light_gray_concrete
-setblock ~40 ~113 ~1310 andesite
-fill ~41 ~113 ~1310 ~43 ~113 ~1310 light_gray_concrete
-setblock ~35 ~113 ~1311 light_gray_concrete
-setblock ~36 ~113 ~1311 gray_concrete
-fill ~37 ~113 ~1311 ~39 ~113 ~1311 light_gray_concrete
-setblock ~40 ~113 ~1311 cracked_stone_bricks
-setblock ~41 ~113 ~1311 gray_concrete
-fill ~42 ~113 ~1311 ~43 ~113 ~1311 light_gray_concrete
-setblock ~37 ~113 ~1312 light_gray_concrete
-setblock ~38 ~113 ~1312 gray_concrete
-fill ~39 ~113 ~1312 ~40 ~113 ~1312 light_gray_concrete
-setblock ~41 ~113 ~1312 cracked_stone_bricks
-fill ~42 ~113 ~1312 ~43 ~113 ~1312 light_gray_concrete
-fill ~37 ~113 ~1313 ~39 ~113 ~1313 light_gray_concrete
-fill ~40 ~113 ~1313 ~41 ~113 ~1313 andesite
-fill ~42 ~113 ~1313 ~43 ~113 ~1313 light_gray_concrete
-setblock ~37 ~113 ~1314 cracked_stone_bricks
-fill ~38 ~113 ~1314 ~39 ~113 ~1314 andesite
-setblock ~40 ~113 ~1314 light_gray_concrete
-setblock ~41 ~113 ~1314 andesite
-fill ~42 ~113 ~1314 ~43 ~113 ~1314 light_gray_concrete
-setblock ~37 ~113 ~1315 gray_concrete
-setblock ~38 ~113 ~1315 light_gray_concrete
-setblock ~39 ~113 ~1315 andesite
-fill ~40 ~113 ~1315 ~41 ~113 ~1315 light_gray_concrete
-setblock ~42 ~113 ~1315 spruce_fence
-setblock ~43 ~113 ~1315 light_gray_concrete
-setblock ~37 ~113 ~1316 light_gray_concrete
-setblock ~38 ~113 ~1316 gray_concrete
-setblock ~39 ~113 ~1316 cracked_stone_bricks
-setblock ~40 ~113 ~1316 gray_concrete
-fill ~41 ~113 ~1316 ~42 ~113 ~1316 light_gray_concrete
-setblock ~43 ~113 ~1316 cracked_stone_bricks
 setblock ~52 ~113 ~1370 iron_bars
 setblock ~28 ~113 ~1371 light_gray_concrete
 setblock ~29 ~113 ~1371 andesite
@@ -4157,39 +1645,39 @@ fill ~38 ~113 ~1374 ~40 ~113 ~1374 iron_bars
 setblock ~25 ~113 ~1377 iron_bars
 fill ~96 ~113 ~1458 ~104 ~113 ~1458 air
 fill ~96 ~113 ~1459 ~98 ~113 ~1459 air
-fill ~99 ~113 ~1459 ~101 ~113 ~1459 white_concrete_powder
+fill ~99 ~113 ~1459 ~101 ~113 ~1459 white_concrete
 fill ~102 ~113 ~1459 ~104 ~113 ~1459 air
 fill ~96 ~113 ~1460 ~97 ~113 ~1460 air
-setblock ~98 ~113 ~1460 white_concrete_powder
+setblock ~98 ~113 ~1460 white_concrete
 fill ~99 ~113 ~1460 ~101 ~113 ~1460 air
-setblock ~102 ~113 ~1460 white_concrete_powder
+setblock ~102 ~113 ~1460 white_concrete
 fill ~103 ~113 ~1460 ~104 ~113 ~1460 air
 setblock ~96 ~113 ~1461 air
-setblock ~97 ~113 ~1461 white_concrete_powder
+setblock ~97 ~113 ~1461 white_concrete
 fill ~98 ~113 ~1461 ~102 ~113 ~1461 air
-setblock ~103 ~113 ~1461 white_concrete_powder
+setblock ~103 ~113 ~1461 white_concrete
 setblock ~104 ~113 ~1461 air
 setblock ~96 ~113 ~1462 air
-setblock ~97 ~113 ~1462 white_concrete_powder
+setblock ~97 ~113 ~1462 white_concrete
 fill ~98 ~113 ~1462 ~99 ~113 ~1462 air
 setblock ~100 ~113 ~1462 polished_andesite
 fill ~101 ~113 ~1462 ~102 ~113 ~1462 air
-setblock ~103 ~113 ~1462 white_concrete_powder
+setblock ~103 ~113 ~1462 white_concrete
 setblock ~104 ~113 ~1462 air
 setblock ~96 ~113 ~1463 air
-setblock ~97 ~113 ~1463 white_concrete_powder
+setblock ~97 ~113 ~1463 white_concrete
 fill ~98 ~113 ~1463 ~99 ~113 ~1463 air
 setblock ~100 ~113 ~1463 stone_brick_stairs[facing=south]
 fill ~101 ~113 ~1463 ~102 ~113 ~1463 air
-setblock ~103 ~113 ~1463 white_concrete_powder
+setblock ~103 ~113 ~1463 white_concrete
 setblock ~104 ~113 ~1463 air
 fill ~96 ~113 ~1464 ~97 ~113 ~1464 air
-setblock ~98 ~113 ~1464 white_concrete_powder
+setblock ~98 ~113 ~1464 white_concrete
 fill ~99 ~113 ~1464 ~101 ~113 ~1464 air
-setblock ~102 ~113 ~1464 white_concrete_powder
+setblock ~102 ~113 ~1464 white_concrete
 fill ~103 ~113 ~1464 ~104 ~113 ~1464 air
 fill ~96 ~113 ~1465 ~98 ~113 ~1465 air
-fill ~99 ~113 ~1465 ~101 ~113 ~1465 white_concrete_powder
+fill ~99 ~113 ~1465 ~101 ~113 ~1465 white_concrete
 fill ~102 ~113 ~1465 ~104 ~113 ~1465 air
 fill ~96 ~113 ~1466 ~104 ~113 ~1466 air
 fill ~19 ~114 ~1263 ~25 ~114 ~1263 gray_concrete
@@ -4199,74 +1687,6 @@ fill ~19 ~114 ~1266 ~25 ~114 ~1266 gray_concrete
 fill ~19 ~114 ~1267 ~25 ~114 ~1267 gray_concrete
 fill ~19 ~114 ~1268 ~25 ~114 ~1268 gray_concrete
 fill ~19 ~114 ~1269 ~25 ~114 ~1269 gray_concrete
-setblock ~41 ~114 ~1295 light_gray_concrete
-setblock ~42 ~114 ~1295 cracked_stone_bricks
-fill ~41 ~114 ~1296 ~42 ~114 ~1296 light_gray_concrete
-fill ~39 ~114 ~1297 ~40 ~114 ~1297 gray_concrete
-setblock ~41 ~114 ~1297 andesite
-setblock ~42 ~114 ~1297 light_gray_concrete
-setblock ~33 ~114 ~1308 cracked_stone_bricks
-setblock ~34 ~114 ~1308 andesite
-setblock ~35 ~114 ~1308 cracked_stone_bricks
-setblock ~36 ~114 ~1308 gray_concrete
-setblock ~37 ~114 ~1308 light_gray_concrete
-setblock ~38 ~114 ~1308 gray_concrete
-fill ~39 ~114 ~1308 ~40 ~114 ~1308 light_gray_concrete
-fill ~41 ~114 ~1308 ~42 ~114 ~1308 andesite
-setblock ~43 ~114 ~1308 light_gray_concrete
-setblock ~33 ~114 ~1309 andesite
-setblock ~34 ~114 ~1309 spruce_fence
-fill ~35 ~114 ~1309 ~37 ~114 ~1309 light_gray_concrete
-setblock ~38 ~114 ~1309 cracked_stone_bricks
-setblock ~39 ~114 ~1309 light_gray_concrete
-setblock ~40 ~114 ~1309 gray_concrete
-setblock ~41 ~114 ~1309 light_gray_concrete
-setblock ~42 ~114 ~1309 spruce_fence
-setblock ~43 ~114 ~1309 gray_concrete
-fill ~33 ~114 ~1310 ~36 ~114 ~1310 light_gray_concrete
-setblock ~37 ~114 ~1310 tuff
-setblock ~38 ~114 ~1310 gray_concrete
-setblock ~39 ~114 ~1310 light_gray_concrete
-setblock ~40 ~114 ~1310 cracked_stone_bricks
-setblock ~41 ~114 ~1310 light_gray_concrete
-setblock ~42 ~114 ~1310 andesite
-setblock ~43 ~114 ~1310 cracked_stone_bricks
-setblock ~35 ~114 ~1311 tuff
-setblock ~36 ~114 ~1311 cracked_stone_bricks
-setblock ~37 ~114 ~1311 gray_concrete
-setblock ~38 ~114 ~1311 light_gray_concrete
-setblock ~39 ~114 ~1311 gray_concrete
-setblock ~40 ~114 ~1311 light_gray_concrete
-setblock ~41 ~114 ~1311 gray_concrete
-setblock ~42 ~114 ~1311 light_gray_concrete
-setblock ~43 ~114 ~1311 gray_concrete
-setblock ~37 ~114 ~1312 gray_concrete
-setblock ~38 ~114 ~1312 light_gray_concrete
-setblock ~39 ~114 ~1312 gray_concrete
-setblock ~40 ~114 ~1312 andesite
-fill ~41 ~114 ~1312 ~42 ~114 ~1312 light_gray_concrete
-setblock ~43 ~114 ~1312 gray_concrete
-setblock ~37 ~114 ~1313 andesite
-setblock ~38 ~114 ~1313 light_gray_concrete
-setblock ~39 ~114 ~1313 andesite
-fill ~40 ~114 ~1313 ~42 ~114 ~1313 light_gray_concrete
-setblock ~43 ~114 ~1313 andesite
-setblock ~37 ~114 ~1314 light_gray_concrete
-setblock ~38 ~114 ~1314 gray_concrete
-setblock ~39 ~114 ~1314 light_gray_concrete
-setblock ~40 ~114 ~1314 andesite
-setblock ~41 ~114 ~1314 gray_concrete
-setblock ~42 ~114 ~1314 light_gray_concrete
-setblock ~43 ~114 ~1314 andesite
-setblock ~37 ~114 ~1315 andesite
-fill ~38 ~114 ~1315 ~41 ~114 ~1315 light_gray_concrete
-setblock ~42 ~114 ~1315 spruce_fence
-setblock ~43 ~114 ~1315 light_gray_concrete
-setblock ~37 ~114 ~1316 gray_concrete
-setblock ~38 ~114 ~1316 cracked_stone_bricks
-fill ~39 ~114 ~1316 ~41 ~114 ~1316 light_gray_concrete
-setblock ~42 ~114 ~1316 cracked_stone_bricks
-setblock ~43 ~114 ~1316 gray_concrete
 setblock ~37 ~114 ~1368 packed_mud
 setblock ~38 ~114 ~1368 mud_bricks
 setblock ~26 ~114 ~1370 andesite
@@ -4285,39 +1705,39 @@ fill ~36 ~114 ~1374 ~37 ~114 ~1374 iron_bars
 setblock ~24 ~114 ~1377 iron_bars
 fill ~96 ~114 ~1458 ~104 ~114 ~1458 air
 fill ~96 ~114 ~1459 ~98 ~114 ~1459 air
-fill ~99 ~114 ~1459 ~101 ~114 ~1459 light_gray_concrete
+fill ~99 ~114 ~1459 ~101 ~114 ~1459 white_concrete
 fill ~102 ~114 ~1459 ~104 ~114 ~1459 air
 fill ~96 ~114 ~1460 ~97 ~114 ~1460 air
-setblock ~98 ~114 ~1460 light_gray_concrete
+setblock ~98 ~114 ~1460 white_concrete
 fill ~99 ~114 ~1460 ~101 ~114 ~1460 air
-setblock ~102 ~114 ~1460 light_gray_concrete
+setblock ~102 ~114 ~1460 white_concrete
 fill ~103 ~114 ~1460 ~104 ~114 ~1460 air
 setblock ~96 ~114 ~1461 air
-setblock ~97 ~114 ~1461 light_gray_concrete
+setblock ~97 ~114 ~1461 white_concrete
 fill ~98 ~114 ~1461 ~102 ~114 ~1461 air
-setblock ~103 ~114 ~1461 light_gray_concrete
+setblock ~103 ~114 ~1461 white_concrete
 setblock ~104 ~114 ~1461 air
 setblock ~96 ~114 ~1462 air
-setblock ~97 ~114 ~1462 light_gray_concrete
+setblock ~97 ~114 ~1462 white_concrete
 fill ~98 ~114 ~1462 ~99 ~114 ~1462 air
 setblock ~100 ~114 ~1462 polished_andesite
 fill ~101 ~114 ~1462 ~102 ~114 ~1462 air
-setblock ~103 ~114 ~1462 light_gray_concrete
+setblock ~103 ~114 ~1462 white_concrete
 setblock ~104 ~114 ~1462 air
 setblock ~96 ~114 ~1463 air
-setblock ~97 ~114 ~1463 light_gray_concrete
+setblock ~97 ~114 ~1463 white_concrete
 setblock ~98 ~114 ~1463 air
 setblock ~99 ~114 ~1463 stone_brick_stairs[facing=west]
 fill ~100 ~114 ~1463 ~102 ~114 ~1463 air
-setblock ~103 ~114 ~1463 light_gray_concrete
+setblock ~103 ~114 ~1463 white_concrete
 setblock ~104 ~114 ~1463 air
 fill ~96 ~114 ~1464 ~97 ~114 ~1464 air
-setblock ~98 ~114 ~1464 light_gray_concrete
+setblock ~98 ~114 ~1464 white_concrete
 fill ~99 ~114 ~1464 ~101 ~114 ~1464 air
-setblock ~102 ~114 ~1464 light_gray_concrete
+setblock ~102 ~114 ~1464 white_concrete
 fill ~103 ~114 ~1464 ~104 ~114 ~1464 air
 fill ~96 ~114 ~1465 ~98 ~114 ~1465 air
-fill ~99 ~114 ~1465 ~101 ~114 ~1465 light_gray_concrete
+fill ~99 ~114 ~1465 ~101 ~114 ~1465 white_concrete
 fill ~102 ~114 ~1465 ~104 ~114 ~1465 air
 fill ~96 ~114 ~1466 ~104 ~114 ~1466 air
 fill ~19 ~115 ~1263 ~25 ~115 ~1263 air
@@ -4329,67 +1749,8 @@ fill ~19 ~115 ~1266 ~25 ~115 ~1266 air
 fill ~19 ~115 ~1267 ~25 ~115 ~1267 air
 fill ~19 ~115 ~1268 ~25 ~115 ~1268 air
 fill ~19 ~115 ~1269 ~25 ~115 ~1269 air
-setblock ~32 ~115 ~1292 andesite
-setblock ~41 ~115 ~1295 andesite
-setblock ~42 ~115 ~1295 light_gray_concrete
-fill ~41 ~115 ~1296 ~42 ~115 ~1296 light_gray_concrete
-fill ~39 ~115 ~1297 ~42 ~115 ~1297 light_gray_concrete
-setblock ~33 ~115 ~1308 light_gray_concrete
-setblock ~34 ~115 ~1308 cracked_stone_bricks
-setblock ~35 ~115 ~1308 andesite
-setblock ~36 ~115 ~1308 gray_concrete
-fill ~37 ~115 ~1308 ~38 ~115 ~1308 light_gray_concrete
-setblock ~39 ~115 ~1308 gray_concrete
-fill ~40 ~115 ~1308 ~41 ~115 ~1308 light_gray_concrete
-setblock ~42 ~115 ~1308 andesite
-setblock ~43 ~115 ~1308 light_gray_concrete
-setblock ~33 ~115 ~1309 light_gray_concrete
-setblock ~34 ~115 ~1309 spruce_fence
-setblock ~35 ~115 ~1309 gray_concrete
-fill ~36 ~115 ~1309 ~37 ~115 ~1309 light_gray_concrete
-setblock ~38 ~115 ~1309 andesite
-fill ~39 ~115 ~1309 ~41 ~115 ~1309 light_gray_concrete
-setblock ~42 ~115 ~1309 spruce_fence
-setblock ~43 ~115 ~1309 light_gray_concrete
-setblock ~33 ~115 ~1310 light_gray_concrete
-setblock ~34 ~115 ~1310 andesite
-setblock ~35 ~115 ~1310 gray_concrete
-setblock ~36 ~115 ~1310 andesite
-fill ~37 ~115 ~1310 ~39 ~115 ~1310 light_gray_concrete
-setblock ~40 ~115 ~1310 cracked_stone_bricks
-fill ~41 ~115 ~1310 ~43 ~115 ~1310 light_gray_concrete
-setblock ~35 ~115 ~1311 andesite
-fill ~36 ~115 ~1311 ~37 ~115 ~1311 light_gray_concrete
-setblock ~38 ~115 ~1311 andesite
-setblock ~39 ~115 ~1311 light_gray_concrete
-setblock ~40 ~115 ~1311 gray_concrete
-setblock ~41 ~115 ~1311 cracked_stone_bricks
-fill ~42 ~115 ~1311 ~43 ~115 ~1311 light_gray_concrete
-fill ~37 ~115 ~1312 ~39 ~115 ~1312 light_gray_concrete
-setblock ~40 ~115 ~1312 cracked_stone_bricks
-fill ~41 ~115 ~1312 ~43 ~115 ~1312 light_gray_concrete
-setblock ~37 ~115 ~1313 gray_concrete
-setblock ~38 ~115 ~1313 light_gray_concrete
-setblock ~39 ~115 ~1313 tuff
-setblock ~40 ~115 ~1313 light_gray_concrete
-setblock ~41 ~115 ~1313 tuff
-setblock ~42 ~115 ~1313 cracked_stone_bricks
-setblock ~43 ~115 ~1313 light_gray_concrete
-setblock ~37 ~115 ~1314 gray_concrete
-setblock ~38 ~115 ~1314 cracked_stone_bricks
-fill ~39 ~115 ~1314 ~40 ~115 ~1314 light_gray_concrete
-fill ~41 ~115 ~1314 ~42 ~115 ~1314 gray_concrete
-setblock ~43 ~115 ~1314 light_gray_concrete
-fill ~37 ~115 ~1315 ~41 ~115 ~1315 light_gray_concrete
-setblock ~42 ~115 ~1315 spruce_fence
-setblock ~43 ~115 ~1315 light_gray_concrete
-fill ~37 ~115 ~1316 ~38 ~115 ~1316 light_gray_concrete
-setblock ~39 ~115 ~1316 andesite
-setblock ~40 ~115 ~1316 light_gray_concrete
-setblock ~41 ~115 ~1316 andesite
-fill ~42 ~115 ~1316 ~43 ~115 ~1316 light_gray_concrete
-setblock ~38 ~115 ~1367 packed_mud
-setblock ~36 ~115 ~1368 mud_bricks
+setblock ~38 ~115 ~1367 mud_bricks
+setblock ~36 ~115 ~1368 packed_mud
 fill ~37 ~115 ~1368 ~38 ~115 ~1368 mud_brick_slab
 fill ~24 ~115 ~1370 ~25 ~115 ~1370 light_gray_concrete
 setblock ~26 ~115 ~1370 gray_concrete
@@ -4401,7 +1762,7 @@ setblock ~31 ~115 ~1372 andesite
 setblock ~32 ~115 ~1372 light_gray_concrete
 fill ~40 ~115 ~1372 ~48 ~115 ~1372 polished_blackstone_bricks
 fill ~33 ~115 ~1373 ~34 ~115 ~1373 iron_bars
-setblock ~23 ~115 ~1377 iron_bars
+setblock ~23 ~115 ~1377 cobweb
 fill ~96 ~115 ~1458 ~104 ~115 ~1458 air
 fill ~96 ~115 ~1459 ~98 ~115 ~1459 air
 fill ~99 ~115 ~1459 ~101 ~115 ~1459 white_concrete
@@ -4447,73 +1808,8 @@ fill ~19 ~116 ~1266 ~25 ~116 ~1266 air
 fill ~19 ~116 ~1267 ~25 ~116 ~1267 air
 fill ~19 ~116 ~1268 ~25 ~116 ~1268 air
 fill ~19 ~116 ~1269 ~25 ~116 ~1269 air
-setblock ~32 ~116 ~1292 andesite
-fill ~41 ~116 ~1295 ~42 ~116 ~1295 gray_concrete
-setblock ~41 ~116 ~1296 light_gray_concrete
-setblock ~42 ~116 ~1296 tuff
-setblock ~39 ~116 ~1297 andesite
-setblock ~40 ~116 ~1297 gray_concrete
-setblock ~41 ~116 ~1297 cracked_stone_bricks
-setblock ~42 ~116 ~1297 light_gray_concrete
-setblock ~33 ~116 ~1308 cracked_stone_bricks
-fill ~34 ~116 ~1308 ~37 ~116 ~1308 light_gray_concrete
-setblock ~38 ~116 ~1308 andesite
-fill ~39 ~116 ~1308 ~40 ~116 ~1308 light_gray_concrete
-setblock ~41 ~116 ~1308 tuff
-setblock ~42 ~116 ~1308 light_gray_concrete
-setblock ~43 ~116 ~1308 andesite
-setblock ~33 ~116 ~1309 light_gray_concrete
-setblock ~34 ~116 ~1309 spruce_fence
-setblock ~35 ~116 ~1309 light_gray_concrete
-setblock ~36 ~116 ~1309 andesite
-fill ~37 ~116 ~1309 ~39 ~116 ~1309 light_gray_concrete
-setblock ~40 ~116 ~1309 andesite
-setblock ~41 ~116 ~1309 light_gray_concrete
-setblock ~42 ~116 ~1309 spruce_fence
-setblock ~43 ~116 ~1309 light_gray_concrete
-fill ~33 ~116 ~1310 ~34 ~116 ~1310 andesite
-fill ~35 ~116 ~1310 ~40 ~116 ~1310 light_gray_concrete
-setblock ~41 ~116 ~1310 gray_concrete
-setblock ~42 ~116 ~1310 andesite
-setblock ~43 ~116 ~1310 light_gray_concrete
-setblock ~35 ~116 ~1311 light_gray_concrete
-setblock ~36 ~116 ~1311 cracked_stone_bricks
-setblock ~37 ~116 ~1311 light_gray_concrete
-setblock ~38 ~116 ~1311 cracked_stone_bricks
-setblock ~39 ~116 ~1311 andesite
-setblock ~40 ~116 ~1311 gray_concrete
-fill ~41 ~116 ~1311 ~42 ~116 ~1311 light_gray_concrete
-setblock ~43 ~116 ~1311 gray_concrete
-setblock ~37 ~116 ~1312 tuff
-fill ~38 ~116 ~1312 ~39 ~116 ~1312 light_gray_concrete
-setblock ~40 ~116 ~1312 andesite
-fill ~41 ~116 ~1312 ~42 ~116 ~1312 light_gray_concrete
-setblock ~43 ~116 ~1312 andesite
-fill ~37 ~116 ~1313 ~38 ~116 ~1313 light_gray_concrete
-setblock ~39 ~116 ~1313 gray_concrete
-setblock ~40 ~116 ~1313 light_gray_concrete
-setblock ~41 ~116 ~1313 andesite
-fill ~42 ~116 ~1313 ~43 ~116 ~1313 light_gray_concrete
-fill ~37 ~116 ~1314 ~39 ~116 ~1314 light_gray_concrete
-setblock ~40 ~116 ~1314 andesite
-setblock ~41 ~116 ~1314 tuff
-setblock ~42 ~116 ~1314 gray_concrete
-setblock ~43 ~116 ~1314 andesite
-setblock ~37 ~116 ~1315 cracked_stone_bricks
-setblock ~38 ~116 ~1315 andesite
-setblock ~39 ~116 ~1315 gray_concrete
-setblock ~40 ~116 ~1315 light_gray_concrete
-setblock ~41 ~116 ~1315 tuff
-setblock ~42 ~116 ~1315 spruce_fence
-setblock ~43 ~116 ~1315 andesite
-setblock ~37 ~116 ~1316 light_gray_concrete
-setblock ~38 ~116 ~1316 gray_concrete
-setblock ~39 ~116 ~1316 light_gray_concrete
-setblock ~40 ~116 ~1316 cracked_stone_bricks
-setblock ~41 ~116 ~1316 light_gray_concrete
-setblock ~42 ~116 ~1316 andesite
-setblock ~43 ~116 ~1316 cracked_stone_bricks
-fill ~34 ~116 ~1368 ~35 ~116 ~1368 mud_bricks
+setblock ~34 ~116 ~1368 mud_bricks
+setblock ~35 ~116 ~1368 packed_mud
 setblock ~36 ~116 ~1368 mud_brick_slab
 fill ~23 ~116 ~1370 ~25 ~116 ~1370 light_gray_concrete
 setblock ~26 ~116 ~1370 andesite
@@ -4523,27 +1819,27 @@ setblock ~29 ~116 ~1371 cracked_stone_bricks
 setblock ~30 ~116 ~1371 gray_concrete
 fill ~31 ~116 ~1372 ~32 ~116 ~1372 iron_bars
 setblock ~22 ~116 ~1378 iron_bars
-fill ~99 ~116 ~1459 ~101 ~116 ~1459 calcite
-setblock ~98 ~116 ~1460 calcite
+fill ~99 ~116 ~1459 ~101 ~116 ~1459 white_concrete
+setblock ~98 ~116 ~1460 white_concrete
 fill ~99 ~116 ~1460 ~101 ~116 ~1460 air
-setblock ~102 ~116 ~1460 calcite
-setblock ~97 ~116 ~1461 calcite
+setblock ~102 ~116 ~1460 white_concrete
+setblock ~97 ~116 ~1461 white_concrete
 setblock ~98 ~116 ~1461 air
 setblock ~99 ~116 ~1461 stone_brick_stairs[facing=north]
 fill ~100 ~116 ~1461 ~102 ~116 ~1461 air
-setblock ~103 ~116 ~1461 calcite
-setblock ~97 ~116 ~1462 calcite
+setblock ~103 ~116 ~1461 white_concrete
+setblock ~97 ~116 ~1462 white_concrete
 fill ~98 ~116 ~1462 ~99 ~116 ~1462 air
 setblock ~100 ~116 ~1462 polished_andesite
 fill ~101 ~116 ~1462 ~102 ~116 ~1462 air
-setblock ~103 ~116 ~1462 calcite
-setblock ~97 ~116 ~1463 calcite
+setblock ~103 ~116 ~1462 white_concrete
+setblock ~97 ~116 ~1463 white_concrete
 fill ~98 ~116 ~1463 ~102 ~116 ~1463 air
-setblock ~103 ~116 ~1463 calcite
-setblock ~98 ~116 ~1464 calcite
+setblock ~103 ~116 ~1463 white_concrete
+setblock ~98 ~116 ~1464 white_concrete
 fill ~99 ~116 ~1464 ~101 ~116 ~1464 air
-setblock ~102 ~116 ~1464 calcite
-fill ~99 ~116 ~1465 ~101 ~116 ~1465 calcite
+setblock ~102 ~116 ~1464 white_concrete
+fill ~99 ~116 ~1465 ~101 ~116 ~1465 white_concrete
 fill ~19 ~117 ~1263 ~25 ~117 ~1263 air
 fill ~19 ~117 ~1264 ~23 ~117 ~1264 air
 setblock ~24 ~117 ~1264 iron_bars
@@ -4553,73 +1849,6 @@ fill ~19 ~117 ~1266 ~25 ~117 ~1266 air
 fill ~19 ~117 ~1267 ~25 ~117 ~1267 air
 fill ~19 ~117 ~1268 ~25 ~117 ~1268 air
 fill ~19 ~117 ~1269 ~25 ~117 ~1269 air
-setblock ~26 ~117 ~1286 light_gray_concrete
-setblock ~32 ~117 ~1292 light_gray_concrete
-setblock ~41 ~117 ~1295 andesite
-setblock ~42 ~117 ~1295 cracked_stone_bricks
-setblock ~41 ~117 ~1296 light_gray_concrete
-setblock ~42 ~117 ~1296 gray_concrete
-fill ~39 ~117 ~1297 ~42 ~117 ~1297 light_gray_concrete
-setblock ~33 ~117 ~1308 cracked_stone_bricks
-fill ~34 ~117 ~1308 ~37 ~117 ~1308 light_gray_concrete
-setblock ~38 ~117 ~1308 andesite
-setblock ~39 ~117 ~1308 light_gray_concrete
-setblock ~40 ~117 ~1308 gray_concrete
-fill ~41 ~117 ~1308 ~42 ~117 ~1308 light_gray_concrete
-setblock ~43 ~117 ~1308 gray_concrete
-setblock ~33 ~117 ~1309 andesite
-setblock ~34 ~117 ~1309 spruce_fence
-setblock ~35 ~117 ~1309 light_gray_concrete
-fill ~36 ~117 ~1309 ~37 ~117 ~1309 cracked_stone_bricks
-setblock ~38 ~117 ~1309 light_gray_concrete
-setblock ~39 ~117 ~1309 tuff
-fill ~40 ~117 ~1309 ~41 ~117 ~1309 light_gray_concrete
-setblock ~42 ~117 ~1309 spruce_fence
-setblock ~43 ~117 ~1309 light_gray_concrete
-setblock ~33 ~117 ~1310 andesite
-setblock ~34 ~117 ~1310 gray_concrete
-setblock ~35 ~117 ~1310 cracked_stone_bricks
-setblock ~36 ~117 ~1310 light_gray_concrete
-setblock ~37 ~117 ~1310 andesite
-fill ~38 ~117 ~1310 ~42 ~117 ~1310 light_gray_concrete
-setblock ~43 ~117 ~1310 cracked_stone_bricks
-setblock ~35 ~117 ~1311 cracked_stone_bricks
-setblock ~36 ~117 ~1311 tuff
-setblock ~37 ~117 ~1311 andesite
-fill ~38 ~117 ~1311 ~40 ~117 ~1311 light_gray_concrete
-setblock ~41 ~117 ~1311 gray_concrete
-setblock ~42 ~117 ~1311 andesite
-setblock ~43 ~117 ~1311 light_gray_concrete
-setblock ~37 ~117 ~1312 cracked_stone_bricks
-setblock ~38 ~117 ~1312 andesite
-setblock ~39 ~117 ~1312 light_gray_concrete
-fill ~40 ~117 ~1312 ~41 ~117 ~1312 andesite
-setblock ~42 ~117 ~1312 gray_concrete
-setblock ~43 ~117 ~1312 light_gray_concrete
-setblock ~37 ~117 ~1313 light_gray_concrete
-setblock ~38 ~117 ~1313 cracked_stone_bricks
-setblock ~39 ~117 ~1313 light_gray_concrete
-setblock ~40 ~117 ~1313 gray_concrete
-fill ~41 ~117 ~1313 ~42 ~117 ~1313 light_gray_concrete
-setblock ~43 ~117 ~1313 gray_concrete
-setblock ~37 ~117 ~1314 andesite
-setblock ~38 ~117 ~1314 tuff
-setblock ~39 ~117 ~1314 cracked_stone_bricks
-fill ~40 ~117 ~1314 ~43 ~117 ~1314 light_gray_concrete
-setblock ~37 ~117 ~1315 andesite
-fill ~38 ~117 ~1315 ~41 ~117 ~1315 light_gray_concrete
-setblock ~42 ~117 ~1315 spruce_fence
-setblock ~43 ~117 ~1315 cracked_stone_bricks
-setblock ~37 ~117 ~1316 light_gray_concrete
-setblock ~38 ~117 ~1316 andesite
-setblock ~39 ~117 ~1316 light_gray_concrete
-setblock ~40 ~117 ~1316 gray_concrete
-setblock ~41 ~117 ~1316 light_gray_concrete
-setblock ~42 ~117 ~1316 gray_concrete
-setblock ~43 ~117 ~1316 tuff
-setblock ~41 ~117 ~1343 tuff
-fill ~39 ~117 ~1344 ~40 ~117 ~1344 light_gray_concrete
-setblock ~41 ~117 ~1344 tuff
 setblock ~36 ~117 ~1366 green_terracotta
 setblock ~34 ~117 ~1367 mud_bricks
 setblock ~36 ~117 ~1367 polished_blackstone_wall
@@ -4632,7 +1861,7 @@ setblock ~26 ~117 ~1370 tuff
 setblock ~27 ~117 ~1370 light_gray_concrete
 setblock ~19 ~117 ~1371 cracked_stone_bricks
 fill ~28 ~117 ~1371 ~30 ~117 ~1371 iron_bars
-setblock ~21 ~117 ~1378 iron_bars
+setblock ~21 ~117 ~1378 cobweb
 fill ~99 ~117 ~1459 ~101 ~117 ~1459 red_concrete
 setblock ~98 ~117 ~1460 red_concrete
 fill ~99 ~117 ~1460 ~101 ~117 ~1460 air
@@ -4663,87 +1892,27 @@ fill ~19 ~118 ~1266 ~25 ~118 ~1266 air
 fill ~19 ~118 ~1267 ~25 ~118 ~1267 air
 fill ~19 ~118 ~1268 ~25 ~118 ~1268 air
 fill ~19 ~118 ~1269 ~25 ~118 ~1269 air
-setblock ~26 ~118 ~1286 andesite
-fill ~27 ~118 ~1286 ~28 ~118 ~1286 light_gray_concrete
-fill ~32 ~118 ~1292 ~34 ~118 ~1292 light_gray_concrete
-fill ~32 ~118 ~1293 ~33 ~118 ~1293 cracked_stone_bricks
-setblock ~41 ~118 ~1295 cracked_stone_bricks
-setblock ~42 ~118 ~1295 gray_concrete
-fill ~41 ~118 ~1296 ~42 ~118 ~1296 light_gray_concrete
-fill ~39 ~118 ~1297 ~41 ~118 ~1297 light_gray_concrete
-setblock ~42 ~118 ~1297 tuff
-setblock ~33 ~118 ~1308 light_gray_concrete
-setblock ~34 ~118 ~1308 gray_concrete
-setblock ~35 ~118 ~1308 light_gray_concrete
-setblock ~36 ~118 ~1308 tuff
-setblock ~37 ~118 ~1308 light_gray_concrete
-setblock ~38 ~118 ~1308 gray_concrete
-fill ~39 ~118 ~1308 ~42 ~118 ~1308 light_gray_concrete
-setblock ~43 ~118 ~1308 gray_concrete
-setblock ~33 ~118 ~1309 light_gray_concrete
-setblock ~34 ~118 ~1309 spruce_fence
-setblock ~35 ~118 ~1309 light_gray_concrete
-setblock ~36 ~118 ~1309 andesite
-setblock ~37 ~118 ~1309 light_gray_concrete
-setblock ~38 ~118 ~1309 gray_concrete
-setblock ~39 ~118 ~1309 andesite
-setblock ~40 ~118 ~1309 tuff
-setblock ~41 ~118 ~1309 light_gray_concrete
-setblock ~42 ~118 ~1309 spruce_fence
-setblock ~43 ~118 ~1309 light_gray_concrete
-setblock ~33 ~118 ~1310 cracked_stone_bricks
-fill ~34 ~118 ~1310 ~35 ~118 ~1310 light_gray_concrete
-setblock ~36 ~118 ~1310 cracked_stone_bricks
-setblock ~37 ~118 ~1310 gray_concrete
-fill ~38 ~118 ~1310 ~40 ~118 ~1310 light_gray_concrete
-fill ~41 ~118 ~1310 ~42 ~118 ~1310 cracked_stone_bricks
-setblock ~43 ~118 ~1310 light_gray_concrete
-fill ~34 ~118 ~1311 ~38 ~118 ~1311 light_gray_concrete
-setblock ~39 ~118 ~1311 andesite
-setblock ~40 ~118 ~1311 cracked_stone_bricks
-setblock ~41 ~118 ~1311 andesite
-fill ~42 ~118 ~1311 ~43 ~118 ~1311 light_gray_concrete
-setblock ~37 ~118 ~1312 light_gray_concrete
-setblock ~38 ~118 ~1312 gray_concrete
-setblock ~39 ~118 ~1312 andesite
-setblock ~40 ~118 ~1312 light_gray_concrete
-fill ~41 ~118 ~1312 ~43 ~118 ~1312 gray_concrete
-setblock ~37 ~118 ~1313 gray_concrete
-setblock ~38 ~118 ~1313 cracked_stone_bricks
-setblock ~39 ~118 ~1313 andesite
-setblock ~40 ~118 ~1313 light_gray_concrete
-fill ~41 ~118 ~1313 ~42 ~118 ~1313 cracked_stone_bricks
-setblock ~43 ~118 ~1313 gray_concrete
-fill ~37 ~118 ~1314 ~38 ~118 ~1314 light_gray_concrete
-setblock ~39 ~118 ~1314 gray_concrete
-setblock ~40 ~118 ~1314 light_gray_concrete
-setblock ~41 ~118 ~1314 gray_concrete
-setblock ~42 ~118 ~1314 cracked_stone_bricks
-setblock ~43 ~118 ~1314 light_gray_concrete
-setblock ~37 ~118 ~1315 cracked_stone_bricks
-setblock ~38 ~118 ~1315 andesite
-setblock ~39 ~118 ~1315 light_gray_concrete
-setblock ~40 ~118 ~1315 cracked_stone_bricks
-setblock ~41 ~118 ~1315 light_gray_concrete
-setblock ~42 ~118 ~1315 spruce_fence
-setblock ~43 ~118 ~1315 andesite
-setblock ~37 ~118 ~1316 andesite
-setblock ~38 ~118 ~1316 light_gray_concrete
-setblock ~39 ~118 ~1316 cracked_stone_bricks
-fill ~40 ~118 ~1316 ~42 ~118 ~1316 light_gray_concrete
-setblock ~43 ~118 ~1316 cracked_stone_bricks
-setblock ~41 ~118 ~1342 light_gray_concrete
-setblock ~39 ~118 ~1343 cracked_stone_bricks
-fill ~40 ~118 ~1343 ~41 ~118 ~1343 light_gray_concrete
-setblock ~31 ~118 ~1344 andesite
-setblock ~32 ~118 ~1344 gray_concrete
-fill ~33 ~118 ~1344 ~35 ~118 ~1344 light_gray_concrete
-setblock ~36 ~118 ~1344 gray_concrete
-setblock ~37 ~118 ~1344 light_gray_concrete
-setblock ~38 ~118 ~1344 cracked_stone_bricks
-setblock ~39 ~118 ~1344 andesite
-setblock ~40 ~118 ~1344 light_gray_concrete
-setblock ~41 ~118 ~1344 cracked_stone_bricks
+setblock ~34 ~118 ~1311 light_gray_concrete
+setblock ~28 ~118 ~1344 light_gray_concrete
+setblock ~29 ~118 ~1344 cracked_stone_bricks
+setblock ~30 ~118 ~1344 tuff
+setblock ~31 ~118 ~1344 gray_concrete
+setblock ~32 ~118 ~1344 tuff
+setblock ~33 ~118 ~1344 light_gray_concrete
+setblock ~34 ~118 ~1344 cracked_stone_bricks
+setblock ~28 ~118 ~1345 andesite
+setblock ~29 ~118 ~1345 gray_concrete
+setblock ~30 ~118 ~1345 light_gray_concrete
+fill ~31 ~118 ~1345 ~32 ~118 ~1345 cracked_stone_bricks
+setblock ~33 ~118 ~1345 light_gray_concrete
+setblock ~34 ~118 ~1345 cracked_stone_bricks
+setblock ~27 ~118 ~1346 light_gray_concrete
+fill ~28 ~118 ~1346 ~29 ~118 ~1346 gray_concrete
+setblock ~30 ~118 ~1346 light_gray_concrete
+setblock ~31 ~118 ~1346 andesite
+setblock ~32 ~118 ~1346 light_gray_concrete
+setblock ~33 ~118 ~1346 tuff
+setblock ~34 ~118 ~1346 cracked_stone_bricks
 fill ~25 ~118 ~1348 ~26 ~118 ~1348 gravel
 fill ~25 ~118 ~1349 ~26 ~118 ~1349 spruce_planks
 fill ~25 ~118 ~1350 ~26 ~118 ~1350 gravel
@@ -4758,28 +1927,29 @@ fill ~24 ~118 ~1370 ~25 ~118 ~1370 gray_concrete
 setblock ~26 ~118 ~1370 cracked_stone_bricks
 setblock ~27 ~118 ~1370 tuff
 fill ~18 ~118 ~1371 ~19 ~118 ~1371 light_gray_concrete
-fill ~19 ~118 ~1378 ~20 ~118 ~1378 iron_bars
-fill ~99 ~118 ~1459 ~101 ~118 ~1459 red_terracotta
-setblock ~98 ~118 ~1460 red_terracotta
+setblock ~19 ~118 ~1378 cobweb
+setblock ~20 ~118 ~1378 iron_bars
+fill ~99 ~118 ~1459 ~101 ~118 ~1459 red_concrete
+setblock ~98 ~118 ~1460 red_concrete
 fill ~99 ~118 ~1460 ~101 ~118 ~1460 air
-setblock ~102 ~118 ~1460 red_terracotta
-setblock ~97 ~118 ~1461 red_terracotta
+setblock ~102 ~118 ~1460 red_concrete
+setblock ~97 ~118 ~1461 red_concrete
 fill ~98 ~118 ~1461 ~100 ~118 ~1461 air
 setblock ~101 ~118 ~1461 stone_brick_stairs[facing=east]
 setblock ~102 ~118 ~1461 air
-setblock ~103 ~118 ~1461 red_terracotta
-setblock ~97 ~118 ~1462 red_terracotta
+setblock ~103 ~118 ~1461 red_concrete
+setblock ~97 ~118 ~1462 red_concrete
 fill ~98 ~118 ~1462 ~99 ~118 ~1462 air
 setblock ~100 ~118 ~1462 polished_andesite
 fill ~101 ~118 ~1462 ~102 ~118 ~1462 air
-setblock ~103 ~118 ~1462 red_terracotta
-setblock ~97 ~118 ~1463 red_terracotta
+setblock ~103 ~118 ~1462 red_concrete
+setblock ~97 ~118 ~1463 red_concrete
 fill ~98 ~118 ~1463 ~102 ~118 ~1463 air
-setblock ~103 ~118 ~1463 red_terracotta
-setblock ~98 ~118 ~1464 red_terracotta
+setblock ~103 ~118 ~1463 red_concrete
+setblock ~98 ~118 ~1464 red_concrete
 fill ~99 ~118 ~1464 ~101 ~118 ~1464 air
-setblock ~102 ~118 ~1464 red_terracotta
-fill ~99 ~118 ~1465 ~101 ~118 ~1465 red_terracotta
+setblock ~102 ~118 ~1464 red_concrete
+fill ~99 ~118 ~1465 ~101 ~118 ~1465 red_concrete
 fill ~19 ~119 ~1263 ~25 ~119 ~1263 air
 fill ~19 ~119 ~1264 ~23 ~119 ~1264 air
 setblock ~24 ~119 ~1264 iron_bars
@@ -4789,109 +1959,41 @@ fill ~19 ~119 ~1266 ~25 ~119 ~1266 air
 fill ~19 ~119 ~1267 ~25 ~119 ~1267 air
 fill ~19 ~119 ~1268 ~25 ~119 ~1268 air
 fill ~19 ~119 ~1269 ~25 ~119 ~1269 air
-setblock ~26 ~119 ~1286 gray_concrete
-fill ~27 ~119 ~1286 ~29 ~119 ~1286 light_gray_concrete
-setblock ~26 ~119 ~1287 andesite
-setblock ~32 ~119 ~1291 tuff
-setblock ~33 ~119 ~1291 cracked_stone_bricks
-setblock ~31 ~119 ~1292 gray_concrete
-fill ~32 ~119 ~1292 ~34 ~119 ~1292 light_gray_concrete
-fill ~32 ~119 ~1293 ~34 ~119 ~1293 light_gray_concrete
-setblock ~32 ~119 ~1294 andesite
-setblock ~33 ~119 ~1294 tuff
-setblock ~34 ~119 ~1294 light_gray_concrete
 setblock ~39 ~119 ~1295 light_gray_concrete
-setblock ~40 ~119 ~1295 gray_concrete
+setblock ~40 ~119 ~1295 andesite
 setblock ~41 ~119 ~1295 cracked_stone_bricks
 setblock ~42 ~119 ~1295 light_gray_concrete
-fill ~39 ~119 ~1296 ~41 ~119 ~1296 light_gray_concrete
-setblock ~42 ~119 ~1296 tuff
+setblock ~39 ~119 ~1296 light_gray_concrete
+setblock ~40 ~119 ~1296 cracked_stone_bricks
+fill ~41 ~119 ~1296 ~42 ~119 ~1296 light_gray_concrete
 fill ~39 ~119 ~1297 ~42 ~119 ~1297 light_gray_concrete
-fill ~33 ~119 ~1308 ~36 ~119 ~1308 light_gray_concrete
-setblock ~37 ~119 ~1308 gray_concrete
-fill ~38 ~119 ~1308 ~39 ~119 ~1308 light_gray_concrete
-setblock ~40 ~119 ~1308 gray_concrete
-setblock ~41 ~119 ~1308 tuff
-setblock ~42 ~119 ~1308 andesite
-setblock ~43 ~119 ~1308 light_gray_concrete
-setblock ~33 ~119 ~1309 light_gray_concrete
-setblock ~34 ~119 ~1309 spruce_fence
-setblock ~35 ~119 ~1309 gray_concrete
-fill ~36 ~119 ~1309 ~37 ~119 ~1309 tuff
-fill ~38 ~119 ~1309 ~39 ~119 ~1309 light_gray_concrete
-setblock ~40 ~119 ~1309 cracked_stone_bricks
-setblock ~41 ~119 ~1309 light_gray_concrete
-setblock ~42 ~119 ~1309 spruce_fence
-setblock ~43 ~119 ~1309 andesite
-fill ~33 ~119 ~1310 ~34 ~119 ~1310 light_gray_concrete
-setblock ~35 ~119 ~1310 cracked_stone_bricks
-setblock ~36 ~119 ~1310 light_gray_concrete
-setblock ~37 ~119 ~1310 andesite
-setblock ~38 ~119 ~1310 gray_concrete
-setblock ~39 ~119 ~1310 cracked_stone_bricks
-setblock ~40 ~119 ~1310 andesite
-fill ~41 ~119 ~1310 ~42 ~119 ~1310 light_gray_concrete
-setblock ~43 ~119 ~1310 gray_concrete
+setblock ~32 ~119 ~1308 cracked_stone_bricks
 setblock ~34 ~119 ~1311 light_gray_concrete
-fill ~35 ~119 ~1311 ~36 ~119 ~1311 cracked_stone_bricks
-fill ~37 ~119 ~1311 ~41 ~119 ~1311 light_gray_concrete
-setblock ~42 ~119 ~1311 andesite
-setblock ~43 ~119 ~1311 tuff
-setblock ~37 ~119 ~1312 gray_concrete
-setblock ~38 ~119 ~1312 cracked_stone_bricks
-fill ~39 ~119 ~1312 ~41 ~119 ~1312 light_gray_concrete
-setblock ~42 ~119 ~1312 andesite
-setblock ~43 ~119 ~1312 light_gray_concrete
-setblock ~37 ~119 ~1313 tuff
-fill ~38 ~119 ~1313 ~40 ~119 ~1313 light_gray_concrete
-setblock ~41 ~119 ~1313 cracked_stone_bricks
-fill ~42 ~119 ~1313 ~43 ~119 ~1313 light_gray_concrete
-setblock ~37 ~119 ~1314 gray_concrete
-fill ~38 ~119 ~1314 ~40 ~119 ~1314 light_gray_concrete
-setblock ~41 ~119 ~1314 tuff
-setblock ~42 ~119 ~1314 gray_concrete
-setblock ~43 ~119 ~1314 andesite
-setblock ~37 ~119 ~1315 gray_concrete
-setblock ~38 ~119 ~1315 andesite
-fill ~39 ~119 ~1315 ~40 ~119 ~1315 light_gray_concrete
-setblock ~41 ~119 ~1315 gray_concrete
-setblock ~42 ~119 ~1315 spruce_fence
-setblock ~43 ~119 ~1315 andesite
-fill ~37 ~119 ~1316 ~38 ~119 ~1316 light_gray_concrete
-setblock ~39 ~119 ~1316 gray_concrete
-setblock ~40 ~119 ~1316 light_gray_concrete
-setblock ~41 ~119 ~1316 cracked_stone_bricks
-fill ~42 ~119 ~1316 ~43 ~119 ~1316 light_gray_concrete
 setblock ~4 ~119 ~1324 iron_bars
 setblock ~8 ~119 ~1326 tuff
 setblock ~8 ~119 ~1327 light_gray_concrete
 setblock ~9 ~119 ~1327 tuff
 fill ~8 ~119 ~1328 ~9 ~119 ~1328 light_gray_concrete
-setblock ~41 ~119 ~1336 light_gray_concrete
-setblock ~41 ~119 ~1337 light_gray_concrete
-setblock ~41 ~119 ~1338 light_gray_concrete
-setblock ~41 ~119 ~1339 gray_concrete
-setblock ~41 ~119 ~1340 gray_concrete
-setblock ~40 ~119 ~1341 gray_concrete
-setblock ~41 ~119 ~1341 light_gray_concrete
-fill ~39 ~119 ~1342 ~41 ~119 ~1342 light_gray_concrete
-setblock ~31 ~119 ~1343 light_gray_concrete
-fill ~32 ~119 ~1343 ~33 ~119 ~1343 gray_concrete
-setblock ~34 ~119 ~1343 andesite
-setblock ~35 ~119 ~1343 gray_concrete
-setblock ~37 ~119 ~1343 tuff
-setblock ~38 ~119 ~1343 light_gray_concrete
-setblock ~39 ~119 ~1343 andesite
-setblock ~40 ~119 ~1343 light_gray_concrete
-setblock ~41 ~119 ~1343 gray_concrete
-fill ~31 ~119 ~1344 ~32 ~119 ~1344 light_gray_concrete
-setblock ~33 ~119 ~1344 cracked_stone_bricks
-setblock ~34 ~119 ~1344 light_gray_concrete
-fill ~35 ~119 ~1344 ~36 ~119 ~1344 cracked_stone_bricks
-fill ~37 ~119 ~1344 ~38 ~119 ~1344 light_gray_concrete
-setblock ~39 ~119 ~1344 tuff
-setblock ~40 ~119 ~1344 light_gray_concrete
-setblock ~41 ~119 ~1344 cracked_stone_bricks
+fill ~28 ~119 ~1343 ~29 ~119 ~1343 light_gray_concrete
+setblock ~30 ~119 ~1343 cracked_stone_bricks
+fill ~31 ~119 ~1343 ~33 ~119 ~1343 light_gray_concrete
+setblock ~34 ~119 ~1343 tuff
+setblock ~27 ~119 ~1344 gray_concrete
+setblock ~28 ~119 ~1344 tuff
+setblock ~29 ~119 ~1344 gray_concrete
+setblock ~30 ~119 ~1344 cracked_stone_bricks
+setblock ~31 ~119 ~1344 light_gray_concrete
+setblock ~32 ~119 ~1344 andesite
+fill ~33 ~119 ~1344 ~34 ~119 ~1344 light_gray_concrete
+fill ~27 ~119 ~1345 ~33 ~119 ~1345 light_gray_concrete
+setblock ~34 ~119 ~1345 cracked_stone_bricks
+setblock ~26 ~119 ~1346 light_gray_concrete
+fill ~27 ~119 ~1346 ~28 ~119 ~1346 gray_concrete
+fill ~29 ~119 ~1346 ~30 ~119 ~1346 light_gray_concrete
+setblock ~31 ~119 ~1346 gray_concrete
+setblock ~32 ~119 ~1346 light_gray_concrete
+setblock ~33 ~119 ~1346 andesite
+setblock ~34 ~119 ~1346 light_gray_concrete
 fill ~25 ~119 ~1347 ~26 ~119 ~1347 spruce_planks
 fill ~25 ~119 ~1348 ~26 ~119 ~1348 air
 fill ~25 ~119 ~1349 ~26 ~119 ~1349 air
@@ -4909,26 +2011,26 @@ setblock ~25 ~119 ~1370 light_gray_concrete
 fill ~26 ~119 ~1370 ~27 ~119 ~1370 iron_bars
 fill ~18 ~119 ~1371 ~19 ~119 ~1371 andesite
 setblock ~18 ~119 ~1378 iron_bars
-fill ~99 ~119 ~1459 ~101 ~119 ~1459 calcite
-setblock ~98 ~119 ~1460 calcite
+fill ~99 ~119 ~1459 ~101 ~119 ~1459 white_concrete
+setblock ~98 ~119 ~1460 white_concrete
 fill ~99 ~119 ~1460 ~101 ~119 ~1460 air
-setblock ~102 ~119 ~1460 calcite
-setblock ~97 ~119 ~1461 calcite
+setblock ~102 ~119 ~1460 white_concrete
+setblock ~97 ~119 ~1461 white_concrete
 fill ~98 ~119 ~1461 ~102 ~119 ~1461 air
-setblock ~103 ~119 ~1461 calcite
-setblock ~97 ~119 ~1462 calcite
+setblock ~103 ~119 ~1461 white_concrete
+setblock ~97 ~119 ~1462 white_concrete
 fill ~98 ~119 ~1462 ~99 ~119 ~1462 air
 setblock ~100 ~119 ~1462 polished_andesite
 setblock ~101 ~119 ~1462 stone_brick_stairs[facing=east]
 setblock ~102 ~119 ~1462 air
-setblock ~103 ~119 ~1462 calcite
-setblock ~97 ~119 ~1463 calcite
+setblock ~103 ~119 ~1462 white_concrete
+setblock ~97 ~119 ~1463 white_concrete
 fill ~98 ~119 ~1463 ~102 ~119 ~1463 air
-setblock ~103 ~119 ~1463 calcite
-setblock ~98 ~119 ~1464 calcite
+setblock ~103 ~119 ~1463 white_concrete
+setblock ~98 ~119 ~1464 white_concrete
 fill ~99 ~119 ~1464 ~101 ~119 ~1464 air
-setblock ~102 ~119 ~1464 calcite
-fill ~99 ~119 ~1465 ~101 ~119 ~1465 calcite
+setblock ~102 ~119 ~1464 white_concrete
+fill ~99 ~119 ~1465 ~101 ~119 ~1465 white_concrete
 fill ~19 ~120 ~1263 ~25 ~120 ~1263 air
 fill ~19 ~120 ~1264 ~23 ~120 ~1264 air
 setblock ~24 ~120 ~1264 iron_bars
@@ -4939,90 +2041,30 @@ fill ~19 ~120 ~1267 ~25 ~120 ~1267 air
 fill ~19 ~120 ~1268 ~25 ~120 ~1268 air
 fill ~19 ~120 ~1269 ~25 ~120 ~1269 air
 setblock ~30 ~120 ~1276 polished_blackstone_wall
-setblock ~26 ~120 ~1286 light_gray_concrete
-setblock ~27 ~120 ~1286 andesite
-fill ~28 ~120 ~1286 ~29 ~120 ~1286 light_gray_concrete
-setblock ~30 ~120 ~1286 andesite
-fill ~26 ~120 ~1287 ~27 ~120 ~1287 light_gray_concrete
-setblock ~28 ~120 ~1287 andesite
-setblock ~32 ~120 ~1290 andesite
-fill ~31 ~120 ~1291 ~32 ~120 ~1291 light_gray_concrete
-setblock ~33 ~120 ~1291 tuff
-setblock ~34 ~120 ~1291 light_gray_concrete
-fill ~31 ~120 ~1292 ~34 ~120 ~1292 light_gray_concrete
-setblock ~31 ~120 ~1293 andesite
-setblock ~32 ~120 ~1293 light_gray_concrete
-setblock ~33 ~120 ~1293 gray_concrete
-setblock ~34 ~120 ~1293 light_gray_concrete
-setblock ~31 ~120 ~1294 andesite
-setblock ~32 ~120 ~1294 cracked_stone_bricks
-setblock ~33 ~120 ~1294 light_gray_concrete
-setblock ~34 ~120 ~1294 andesite
-setblock ~39 ~120 ~1295 cracked_stone_bricks
-fill ~40 ~120 ~1295 ~42 ~120 ~1295 light_gray_concrete
-fill ~39 ~120 ~1296 ~40 ~120 ~1296 gray_concrete
-fill ~41 ~120 ~1296 ~42 ~120 ~1296 light_gray_concrete
-setblock ~39 ~120 ~1297 cracked_stone_bricks
-fill ~40 ~120 ~1297 ~42 ~120 ~1297 light_gray_concrete
-setblock ~33 ~120 ~1308 light_gray_concrete
-fill ~34 ~120 ~1308 ~35 ~120 ~1308 andesite
-setblock ~36 ~120 ~1308 light_gray_concrete
-setblock ~37 ~120 ~1308 andesite
-setblock ~38 ~120 ~1308 cracked_stone_bricks
-setblock ~39 ~120 ~1308 light_gray_concrete
-setblock ~40 ~120 ~1308 andesite
-setblock ~41 ~120 ~1308 light_gray_concrete
-setblock ~42 ~120 ~1308 andesite
-setblock ~43 ~120 ~1308 gray_concrete
-setblock ~33 ~120 ~1309 light_gray_concrete
-setblock ~34 ~120 ~1309 spruce_fence
-setblock ~35 ~120 ~1309 cracked_stone_bricks
-setblock ~36 ~120 ~1309 light_gray_concrete
-setblock ~37 ~120 ~1309 gray_concrete
-setblock ~38 ~120 ~1309 light_gray_concrete
-setblock ~39 ~120 ~1309 gray_concrete
-setblock ~40 ~120 ~1309 light_gray_concrete
-setblock ~41 ~120 ~1309 cracked_stone_bricks
-setblock ~42 ~120 ~1309 spruce_fence
-setblock ~43 ~120 ~1309 light_gray_concrete
-setblock ~33 ~120 ~1310 andesite
-fill ~34 ~120 ~1310 ~36 ~120 ~1310 light_gray_concrete
-setblock ~37 ~120 ~1310 gray_concrete
-fill ~38 ~120 ~1310 ~41 ~120 ~1310 light_gray_concrete
-setblock ~42 ~120 ~1310 cracked_stone_bricks
-setblock ~43 ~120 ~1310 gray_concrete
-setblock ~33 ~120 ~1311 light_gray_concrete
-setblock ~34 ~120 ~1311 andesite
-setblock ~35 ~120 ~1311 light_gray_concrete
-setblock ~36 ~120 ~1311 tuff
-setblock ~37 ~120 ~1311 andesite
-setblock ~38 ~120 ~1311 light_gray_concrete
-setblock ~39 ~120 ~1311 andesite
-fill ~40 ~120 ~1311 ~43 ~120 ~1311 light_gray_concrete
-setblock ~37 ~120 ~1312 light_gray_concrete
-fill ~38 ~120 ~1312 ~40 ~120 ~1312 andesite
-setblock ~41 ~120 ~1312 gray_concrete
-fill ~42 ~120 ~1312 ~43 ~120 ~1312 light_gray_concrete
-fill ~37 ~120 ~1313 ~39 ~120 ~1313 light_gray_concrete
-setblock ~40 ~120 ~1313 gray_concrete
-setblock ~41 ~120 ~1313 light_gray_concrete
-setblock ~42 ~120 ~1313 gray_concrete
-setblock ~43 ~120 ~1313 light_gray_concrete
-fill ~37 ~120 ~1314 ~39 ~120 ~1314 light_gray_concrete
-setblock ~40 ~120 ~1314 gray_concrete
-fill ~41 ~120 ~1314 ~43 ~120 ~1314 light_gray_concrete
-fill ~37 ~120 ~1315 ~38 ~120 ~1315 light_gray_concrete
-setblock ~39 ~120 ~1315 gray_concrete
-setblock ~40 ~120 ~1315 andesite
-setblock ~41 ~120 ~1315 tuff
-setblock ~42 ~120 ~1315 spruce_fence
-setblock ~43 ~120 ~1315 light_gray_concrete
-fill ~37 ~120 ~1316 ~38 ~120 ~1316 light_gray_concrete
-setblock ~39 ~120 ~1316 gray_concrete
-fill ~40 ~120 ~1316 ~41 ~120 ~1316 light_gray_concrete
-setblock ~42 ~120 ~1316 gray_concrete
-setblock ~43 ~120 ~1316 light_gray_concrete
-setblock ~4 ~120 ~1325 iron_bars
+setblock ~30 ~120 ~1286 light_gray_concrete
+setblock ~27 ~120 ~1287 light_gray_concrete
+setblock ~28 ~120 ~1287 gray_concrete
+setblock ~32 ~120 ~1290 gray_concrete
+setblock ~31 ~120 ~1291 light_gray_concrete
+setblock ~34 ~120 ~1291 andesite
+setblock ~31 ~120 ~1293 light_gray_concrete
+setblock ~31 ~120 ~1294 light_gray_concrete
+fill ~39 ~120 ~1295 ~40 ~120 ~1295 cracked_stone_bricks
+fill ~41 ~120 ~1295 ~42 ~120 ~1295 gray_concrete
+setblock ~39 ~120 ~1296 cracked_stone_bricks
+fill ~40 ~120 ~1296 ~42 ~120 ~1296 light_gray_concrete
+setblock ~39 ~120 ~1297 light_gray_concrete
+setblock ~40 ~120 ~1297 andesite
+setblock ~41 ~120 ~1297 light_gray_concrete
+setblock ~42 ~120 ~1297 cracked_stone_bricks
+setblock ~29 ~120 ~1308 cracked_stone_bricks
+fill ~30 ~120 ~1308 ~31 ~120 ~1308 light_gray_concrete
+setblock ~32 ~120 ~1308 andesite
+setblock ~31 ~120 ~1309 gray_concrete
+setblock ~32 ~120 ~1309 light_gray_concrete
+setblock ~33 ~120 ~1311 gray_concrete
+setblock ~34 ~120 ~1311 light_gray_concrete
+setblock ~4 ~120 ~1325 cobweb
 setblock ~4 ~120 ~1326 iron_bars
 setblock ~8 ~120 ~1326 light_gray_concrete
 fill ~9 ~120 ~1326 ~10 ~120 ~1326 cracked_stone_bricks
@@ -5031,51 +2073,56 @@ setblock ~8 ~120 ~1327 light_gray_concrete
 setblock ~9 ~120 ~1327 andesite
 setblock ~10 ~120 ~1327 light_gray_concrete
 setblock ~11 ~120 ~1327 cracked_stone_bricks
-setblock ~4 ~120 ~1328 iron_bars
+setblock ~4 ~120 ~1328 cobweb
 setblock ~8 ~120 ~1328 gray_concrete
 fill ~9 ~120 ~1328 ~11 ~120 ~1328 light_gray_concrete
 setblock ~4 ~120 ~1329 iron_bars
-setblock ~11 ~120 ~1329 light_gray_concrete
-fill ~12 ~120 ~1329 ~14 ~120 ~1329 gray_concrete
+fill ~11 ~120 ~1329 ~12 ~120 ~1329 gray_concrete
+setblock ~13 ~120 ~1329 light_gray_concrete
+setblock ~14 ~120 ~1329 andesite
 setblock ~4 ~120 ~1330 iron_bars
-fill ~11 ~120 ~1330 ~13 ~120 ~1330 light_gray_concrete
-setblock ~14 ~120 ~1330 gray_concrete
+fill ~11 ~120 ~1330 ~12 ~120 ~1330 light_gray_concrete
+setblock ~13 ~120 ~1330 andesite
+setblock ~14 ~120 ~1330 light_gray_concrete
 setblock ~4 ~120 ~1331 iron_bars
-setblock ~11 ~120 ~1331 light_gray_concrete
-setblock ~12 ~120 ~1331 cracked_stone_bricks
-setblock ~13 ~120 ~1331 gray_concrete
-setblock ~14 ~120 ~1331 light_gray_concrete
-setblock ~4 ~120 ~1332 cobweb
-setblock ~4 ~120 ~1333 iron_bars
+setblock ~11 ~120 ~1331 tuff
+setblock ~12 ~120 ~1331 andesite
+fill ~13 ~120 ~1331 ~14 ~120 ~1331 light_gray_concrete
+setblock ~4 ~120 ~1332 iron_bars
+setblock ~4 ~120 ~1333 cobweb
 setblock ~4 ~120 ~1334 iron_bars
-setblock ~41 ~120 ~1336 andesite
-setblock ~41 ~120 ~1337 cracked_stone_bricks
-setblock ~41 ~120 ~1338 light_gray_concrete
-setblock ~40 ~120 ~1339 tuff
-setblock ~41 ~120 ~1339 cracked_stone_bricks
-setblock ~39 ~120 ~1340 tuff
-fill ~40 ~120 ~1340 ~41 ~120 ~1340 light_gray_concrete
-fill ~31 ~120 ~1341 ~32 ~120 ~1341 light_gray_concrete
-setblock ~38 ~120 ~1341 light_gray_concrete
-setblock ~39 ~120 ~1341 gray_concrete
-setblock ~40 ~120 ~1341 cracked_stone_bricks
-setblock ~41 ~120 ~1341 gray_concrete
+setblock ~28 ~120 ~1341 light_gray_concrete
+fill ~29 ~120 ~1341 ~30 ~120 ~1341 andesite
+setblock ~31 ~120 ~1341 light_gray_concrete
+setblock ~32 ~120 ~1341 gray_concrete
+fill ~28 ~120 ~1342 ~30 ~120 ~1342 light_gray_concrete
 setblock ~31 ~120 ~1342 gray_concrete
-fill ~32 ~120 ~1342 ~40 ~120 ~1342 light_gray_concrete
-setblock ~41 ~120 ~1342 cracked_stone_bricks
-setblock ~31 ~120 ~1343 andesite
-fill ~32 ~120 ~1343 ~35 ~120 ~1343 gray_concrete
-fill ~36 ~120 ~1343 ~37 ~120 ~1343 light_gray_concrete
-setblock ~38 ~120 ~1343 gray_concrete
-setblock ~39 ~120 ~1343 light_gray_concrete
-setblock ~40 ~120 ~1343 andesite
-setblock ~41 ~120 ~1343 gray_concrete
-fill ~31 ~120 ~1344 ~33 ~120 ~1344 light_gray_concrete
-fill ~34 ~120 ~1344 ~35 ~120 ~1344 cracked_stone_bricks
-setblock ~36 ~120 ~1344 light_gray_concrete
-setblock ~37 ~120 ~1344 tuff
-fill ~38 ~120 ~1344 ~41 ~120 ~1344 light_gray_concrete
+setblock ~32 ~120 ~1342 light_gray_concrete
+setblock ~33 ~120 ~1342 cracked_stone_bricks
+setblock ~34 ~120 ~1342 light_gray_concrete
+setblock ~27 ~120 ~1343 tuff
+fill ~28 ~120 ~1343 ~29 ~120 ~1343 light_gray_concrete
+fill ~30 ~120 ~1343 ~31 ~120 ~1343 gray_concrete
+setblock ~32 ~120 ~1343 cracked_stone_bricks
+fill ~33 ~120 ~1343 ~34 ~120 ~1343 light_gray_concrete
+setblock ~27 ~120 ~1344 tuff
+fill ~28 ~120 ~1344 ~33 ~120 ~1344 light_gray_concrete
+setblock ~34 ~120 ~1344 andesite
+fill ~26 ~120 ~1345 ~27 ~120 ~1345 light_gray_concrete
+setblock ~28 ~120 ~1345 tuff
+setblock ~29 ~120 ~1345 gray_concrete
+fill ~30 ~120 ~1345 ~32 ~120 ~1345 light_gray_concrete
+setblock ~33 ~120 ~1345 andesite
+setblock ~34 ~120 ~1345 light_gray_concrete
+fill ~24 ~120 ~1346 ~25 ~120 ~1346 light_gray_concrete
 setblock ~26 ~120 ~1346 gravel
+fill ~27 ~120 ~1346 ~28 ~120 ~1346 cracked_stone_bricks
+setblock ~29 ~120 ~1346 light_gray_concrete
+setblock ~30 ~120 ~1346 gray_concrete
+setblock ~31 ~120 ~1346 andesite
+setblock ~32 ~120 ~1346 light_gray_concrete
+setblock ~33 ~120 ~1346 andesite
+setblock ~34 ~120 ~1346 tuff
 fill ~25 ~120 ~1347 ~26 ~120 ~1347 air
 fill ~25 ~120 ~1348 ~26 ~120 ~1348 air
 fill ~25 ~120 ~1349 ~26 ~120 ~1349 air
@@ -5085,7 +2132,7 @@ fill ~25 ~120 ~1351 ~26 ~120 ~1351 air
 fill ~25 ~120 ~1352 ~26 ~120 ~1352 air
 fill ~25 ~120 ~1353 ~26 ~120 ~1353 air
 fill ~25 ~120 ~1354 ~26 ~120 ~1354 air
-setblock ~24 ~120 ~1355 packed_mud
+setblock ~24 ~120 ~1355 mud_bricks
 fill ~25 ~120 ~1355 ~26 ~120 ~1355 air
 fill ~20 ~120 ~1370 ~23 ~120 ~1370 light_gray_concrete
 fill ~24 ~120 ~1370 ~25 ~120 ~1370 iron_bars
@@ -5122,100 +2169,42 @@ fill ~19 ~121 ~1267 ~25 ~121 ~1267 air
 fill ~19 ~121 ~1268 ~25 ~121 ~1268 air
 fill ~19 ~121 ~1269 ~25 ~121 ~1269 air
 setblock ~30 ~121 ~1276 polished_blackstone_wall
-setblock ~26 ~121 ~1286 andesite
-fill ~27 ~121 ~1286 ~28 ~121 ~1286 cracked_stone_bricks
-setblock ~29 ~121 ~1286 gray_concrete
 setblock ~30 ~121 ~1286 light_gray_concrete
 setblock ~31 ~121 ~1286 andesite
-fill ~26 ~121 ~1287 ~28 ~121 ~1287 light_gray_concrete
-setblock ~29 ~121 ~1287 andesite
-setblock ~26 ~121 ~1288 light_gray_concrete
+fill ~27 ~121 ~1287 ~28 ~121 ~1287 light_gray_concrete
+setblock ~29 ~121 ~1287 gray_concrete
+setblock ~26 ~121 ~1288 cracked_stone_bricks
 setblock ~31 ~121 ~1290 light_gray_concrete
-setblock ~32 ~121 ~1290 tuff
-setblock ~33 ~121 ~1290 andesite
-setblock ~31 ~121 ~1291 andesite
-setblock ~32 ~121 ~1291 light_gray_concrete
-setblock ~33 ~121 ~1291 gray_concrete
-setblock ~34 ~121 ~1291 light_gray_concrete
-fill ~30 ~121 ~1292 ~31 ~121 ~1292 light_gray_concrete
-setblock ~32 ~121 ~1292 gray_concrete
-fill ~33 ~121 ~1292 ~34 ~121 ~1292 light_gray_concrete
+setblock ~32 ~121 ~1290 gray_concrete
+setblock ~33 ~121 ~1290 light_gray_concrete
+setblock ~31 ~121 ~1291 tuff
+setblock ~34 ~121 ~1291 andesite
+setblock ~30 ~121 ~1292 andesite
 setblock ~31 ~121 ~1293 cracked_stone_bricks
-setblock ~32 ~121 ~1293 andesite
-setblock ~33 ~121 ~1293 cracked_stone_bricks
-setblock ~34 ~121 ~1293 andesite
-setblock ~31 ~121 ~1294 light_gray_concrete
-setblock ~32 ~121 ~1294 cracked_stone_bricks
-setblock ~33 ~121 ~1294 gray_concrete
-setblock ~34 ~121 ~1294 light_gray_concrete
-setblock ~39 ~121 ~1295 tuff
-setblock ~40 ~121 ~1295 andesite
+setblock ~31 ~121 ~1294 andesite
+setblock ~39 ~121 ~1295 andesite
+setblock ~40 ~121 ~1295 gray_concrete
 fill ~41 ~121 ~1295 ~42 ~121 ~1295 light_gray_concrete
-fill ~39 ~121 ~1296 ~41 ~121 ~1296 andesite
-setblock ~42 ~121 ~1296 tuff
-setblock ~39 ~121 ~1297 gray_concrete
-setblock ~40 ~121 ~1297 cracked_stone_bricks
-fill ~41 ~121 ~1297 ~42 ~121 ~1297 andesite
-setblock ~33 ~121 ~1308 cracked_stone_bricks
-setblock ~34 ~121 ~1308 light_gray_concrete
-setblock ~35 ~121 ~1308 andesite
-setblock ~36 ~121 ~1308 gray_concrete
-fill ~37 ~121 ~1308 ~38 ~121 ~1308 light_gray_concrete
-setblock ~39 ~121 ~1308 andesite
-fill ~40 ~121 ~1308 ~42 ~121 ~1308 light_gray_concrete
-setblock ~43 ~121 ~1308 andesite
-setblock ~33 ~121 ~1309 gray_concrete
-setblock ~34 ~121 ~1309 spruce_fence
-setblock ~35 ~121 ~1309 andesite
-setblock ~36 ~121 ~1309 gray_concrete
-fill ~37 ~121 ~1309 ~38 ~121 ~1309 light_gray_concrete
-setblock ~39 ~121 ~1309 gray_concrete
-fill ~40 ~121 ~1309 ~41 ~121 ~1309 light_gray_concrete
-setblock ~42 ~121 ~1309 spruce_fence
-setblock ~43 ~121 ~1309 andesite
-setblock ~33 ~121 ~1310 cracked_stone_bricks
-setblock ~34 ~121 ~1310 light_gray_concrete
-setblock ~35 ~121 ~1310 tuff
-setblock ~36 ~121 ~1310 gray_concrete
-setblock ~37 ~121 ~1310 light_gray_concrete
-setblock ~38 ~121 ~1310 cracked_stone_bricks
-setblock ~39 ~121 ~1310 gray_concrete
-setblock ~40 ~121 ~1310 light_gray_concrete
-fill ~41 ~121 ~1310 ~43 ~121 ~1310 andesite
-setblock ~33 ~121 ~1311 andesite
-fill ~34 ~121 ~1311 ~35 ~121 ~1311 light_gray_concrete
-setblock ~36 ~121 ~1311 cracked_stone_bricks
-fill ~37 ~121 ~1311 ~38 ~121 ~1311 light_gray_concrete
-setblock ~39 ~121 ~1311 andesite
-setblock ~40 ~121 ~1311 light_gray_concrete
-setblock ~41 ~121 ~1311 gray_concrete
-setblock ~42 ~121 ~1311 andesite
-setblock ~43 ~121 ~1311 gray_concrete
-setblock ~37 ~121 ~1312 light_gray_concrete
-fill ~38 ~121 ~1312 ~39 ~121 ~1312 gray_concrete
-setblock ~40 ~121 ~1312 light_gray_concrete
-setblock ~41 ~121 ~1312 tuff
-setblock ~42 ~121 ~1312 light_gray_concrete
-setblock ~43 ~121 ~1312 cracked_stone_bricks
-fill ~37 ~121 ~1313 ~39 ~121 ~1313 light_gray_concrete
-setblock ~40 ~121 ~1313 gray_concrete
-fill ~41 ~121 ~1313 ~43 ~121 ~1313 light_gray_concrete
-setblock ~37 ~121 ~1314 tuff
-setblock ~38 ~121 ~1314 andesite
-fill ~39 ~121 ~1314 ~42 ~121 ~1314 light_gray_concrete
-setblock ~43 ~121 ~1314 andesite
-fill ~37 ~121 ~1315 ~38 ~121 ~1315 light_gray_concrete
-setblock ~39 ~121 ~1315 andesite
-setblock ~40 ~121 ~1315 cracked_stone_bricks
-setblock ~41 ~121 ~1315 light_gray_concrete
-setblock ~42 ~121 ~1315 spruce_fence
-setblock ~43 ~121 ~1315 light_gray_concrete
-setblock ~37 ~121 ~1316 gray_concrete
-fill ~38 ~121 ~1316 ~39 ~121 ~1316 light_gray_concrete
-setblock ~40 ~121 ~1316 tuff
-setblock ~41 ~121 ~1316 andesite
-setblock ~42 ~121 ~1316 tuff
-setblock ~43 ~121 ~1316 light_gray_concrete
+setblock ~39 ~121 ~1296 andesite
+fill ~40 ~121 ~1296 ~41 ~121 ~1296 light_gray_concrete
+setblock ~42 ~121 ~1296 cracked_stone_bricks
+setblock ~39 ~121 ~1297 andesite
+fill ~40 ~121 ~1297 ~42 ~121 ~1297 light_gray_concrete
+setblock ~27 ~121 ~1308 gray_concrete
+setblock ~28 ~121 ~1308 tuff
+setblock ~29 ~121 ~1308 cracked_stone_bricks
+setblock ~30 ~121 ~1308 light_gray_concrete
+setblock ~31 ~121 ~1308 gray_concrete
+setblock ~32 ~121 ~1308 light_gray_concrete
+fill ~27 ~121 ~1309 ~30 ~121 ~1309 light_gray_concrete
+setblock ~31 ~121 ~1309 gray_concrete
+setblock ~32 ~121 ~1309 light_gray_concrete
+setblock ~28 ~121 ~1310 gray_concrete
+fill ~29 ~121 ~1310 ~30 ~121 ~1310 light_gray_concrete
+setblock ~31 ~121 ~1310 andesite
+setblock ~32 ~121 ~1310 cracked_stone_bricks
+setblock ~33 ~121 ~1311 light_gray_concrete
+setblock ~34 ~121 ~1311 tuff
 fill ~8 ~121 ~1326 ~10 ~121 ~1326 light_gray_concrete
 setblock ~11 ~121 ~1326 andesite
 setblock ~12 ~121 ~1326 light_gray_concrete
@@ -5228,60 +2217,62 @@ setblock ~9 ~121 ~1328 andesite
 setblock ~10 ~121 ~1328 gray_concrete
 setblock ~11 ~121 ~1328 cracked_stone_bricks
 fill ~12 ~121 ~1328 ~13 ~121 ~1328 light_gray_concrete
-fill ~11 ~121 ~1329 ~12 ~121 ~1329 andesite
-setblock ~13 ~121 ~1329 tuff
-setblock ~14 ~121 ~1329 light_gray_concrete
-fill ~11 ~121 ~1330 ~13 ~121 ~1330 light_gray_concrete
-setblock ~14 ~121 ~1330 andesite
-setblock ~11 ~121 ~1331 tuff
-setblock ~12 ~121 ~1331 andesite
-setblock ~13 ~121 ~1331 light_gray_concrete
-setblock ~14 ~121 ~1331 andesite
-setblock ~41 ~121 ~1336 gray_concrete
-setblock ~41 ~121 ~1337 gray_concrete
-fill ~39 ~121 ~1338 ~40 ~121 ~1338 light_gray_concrete
-setblock ~41 ~121 ~1338 gray_concrete
-fill ~31 ~121 ~1339 ~32 ~121 ~1339 light_gray_concrete
-setblock ~33 ~121 ~1339 cracked_stone_bricks
-setblock ~38 ~121 ~1339 gray_concrete
-setblock ~39 ~121 ~1339 tuff
-fill ~40 ~121 ~1339 ~41 ~121 ~1339 light_gray_concrete
-setblock ~31 ~121 ~1340 andesite
-fill ~32 ~121 ~1340 ~33 ~121 ~1340 light_gray_concrete
+fill ~11 ~121 ~1329 ~12 ~121 ~1329 light_gray_concrete
+setblock ~13 ~121 ~1329 gray_concrete
+setblock ~14 ~121 ~1329 cracked_stone_bricks
+setblock ~11 ~121 ~1330 andesite
+setblock ~12 ~121 ~1330 light_gray_concrete
+setblock ~13 ~121 ~1330 gray_concrete
+setblock ~14 ~121 ~1330 cracked_stone_bricks
+setblock ~11 ~121 ~1331 andesite
+fill ~12 ~121 ~1331 ~13 ~121 ~1331 light_gray_concrete
+setblock ~14 ~121 ~1331 gray_concrete
+setblock ~28 ~121 ~1339 andesite
+setblock ~29 ~121 ~1339 light_gray_concrete
+setblock ~30 ~121 ~1339 andesite
+setblock ~31 ~121 ~1339 light_gray_concrete
+setblock ~32 ~121 ~1339 tuff
+setblock ~33 ~121 ~1339 light_gray_concrete
+setblock ~28 ~121 ~1340 light_gray_concrete
+setblock ~29 ~121 ~1340 gray_concrete
+fill ~30 ~121 ~1340 ~33 ~121 ~1340 light_gray_concrete
 setblock ~34 ~121 ~1340 gray_concrete
-setblock ~37 ~121 ~1340 andesite
-fill ~38 ~121 ~1340 ~41 ~121 ~1340 light_gray_concrete
-setblock ~31 ~121 ~1341 light_gray_concrete
-setblock ~32 ~121 ~1341 gray_concrete
-fill ~33 ~121 ~1341 ~34 ~121 ~1341 andesite
-fill ~35 ~121 ~1341 ~36 ~121 ~1341 light_gray_concrete
-setblock ~37 ~121 ~1341 tuff
-fill ~38 ~121 ~1341 ~39 ~121 ~1341 light_gray_concrete
-setblock ~40 ~121 ~1341 cracked_stone_bricks
-setblock ~41 ~121 ~1341 light_gray_concrete
-fill ~31 ~121 ~1342 ~32 ~121 ~1342 light_gray_concrete
-setblock ~33 ~121 ~1342 cracked_stone_bricks
-setblock ~34 ~121 ~1342 light_gray_concrete
-setblock ~35 ~121 ~1342 gray_concrete
-fill ~36 ~121 ~1342 ~38 ~121 ~1342 light_gray_concrete
-setblock ~39 ~121 ~1342 andesite
-fill ~40 ~121 ~1342 ~41 ~121 ~1342 light_gray_concrete
-setblock ~31 ~121 ~1343 light_gray_concrete
-setblock ~32 ~121 ~1343 gray_concrete
-fill ~33 ~121 ~1343 ~34 ~121 ~1343 light_gray_concrete
-fill ~35 ~121 ~1343 ~36 ~121 ~1343 tuff
-setblock ~37 ~121 ~1343 cracked_stone_bricks
-fill ~38 ~121 ~1343 ~39 ~121 ~1343 light_gray_concrete
-setblock ~40 ~121 ~1343 spruce_fence
-setblock ~41 ~121 ~1343 light_gray_concrete
-fill ~31 ~121 ~1344 ~32 ~121 ~1344 light_gray_concrete
-setblock ~33 ~121 ~1344 gray_concrete
-fill ~34 ~121 ~1344 ~38 ~121 ~1344 light_gray_concrete
-fill ~39 ~121 ~1344 ~40 ~121 ~1344 andesite
-setblock ~41 ~121 ~1344 gray_concrete
+setblock ~27 ~121 ~1341 gray_concrete
+setblock ~28 ~121 ~1341 andesite
+setblock ~29 ~121 ~1341 light_gray_concrete
+setblock ~30 ~121 ~1341 gray_concrete
+setblock ~31 ~121 ~1341 andesite
+setblock ~32 ~121 ~1341 cracked_stone_bricks
+fill ~33 ~121 ~1341 ~34 ~121 ~1341 light_gray_concrete
+setblock ~27 ~121 ~1342 gray_concrete
+setblock ~28 ~121 ~1342 andesite
+fill ~29 ~121 ~1342 ~30 ~121 ~1342 light_gray_concrete
+setblock ~31 ~121 ~1342 cracked_stone_bricks
+setblock ~32 ~121 ~1342 andesite
+fill ~33 ~121 ~1342 ~34 ~121 ~1342 light_gray_concrete
+fill ~26 ~121 ~1343 ~28 ~121 ~1343 gray_concrete
+fill ~29 ~121 ~1343 ~30 ~121 ~1343 light_gray_concrete
+setblock ~31 ~121 ~1343 gray_concrete
+fill ~32 ~121 ~1343 ~34 ~121 ~1343 light_gray_concrete
+setblock ~26 ~121 ~1344 light_gray_concrete
+fill ~27 ~121 ~1344 ~28 ~121 ~1344 cracked_stone_bricks
+setblock ~29 ~121 ~1344 andesite
+setblock ~30 ~121 ~1344 cracked_stone_bricks
+fill ~31 ~121 ~1344 ~34 ~121 ~1344 light_gray_concrete
+setblock ~25 ~121 ~1345 light_gray_concrete
 setblock ~26 ~121 ~1345 spruce_planks
+fill ~27 ~121 ~1345 ~28 ~121 ~1345 cracked_stone_bricks
+fill ~29 ~121 ~1345 ~30 ~121 ~1345 light_gray_concrete
+setblock ~31 ~121 ~1345 gray_concrete
+fill ~32 ~121 ~1345 ~33 ~121 ~1345 light_gray_concrete
+setblock ~34 ~121 ~1345 andesite
+setblock ~24 ~121 ~1346 light_gray_concrete
 setblock ~25 ~121 ~1346 gravel
 setblock ~26 ~121 ~1346 air
+setblock ~27 ~121 ~1346 light_gray_concrete
+setblock ~28 ~121 ~1346 andesite
+fill ~29 ~121 ~1346 ~32 ~121 ~1346 light_gray_concrete
+fill ~33 ~121 ~1346 ~34 ~121 ~1346 andesite
 fill ~25 ~121 ~1347 ~26 ~121 ~1347 air
 fill ~20 ~121 ~1370 ~21 ~121 ~1370 light_gray_concrete
 setblock ~22 ~121 ~1370 andesite
@@ -5316,44 +2307,29 @@ fill ~19 ~122 ~1267 ~25 ~122 ~1267 air
 fill ~19 ~122 ~1268 ~25 ~122 ~1268 air
 fill ~19 ~122 ~1269 ~25 ~122 ~1269 air
 setblock ~30 ~122 ~1276 polished_blackstone_wall
-setblock ~26 ~122 ~1286 light_gray_concrete
-setblock ~27 ~122 ~1286 cracked_stone_bricks
-setblock ~28 ~122 ~1286 gray_concrete
-setblock ~29 ~122 ~1286 light_gray_concrete
 setblock ~30 ~122 ~1286 andesite
-setblock ~31 ~122 ~1286 gray_concrete
-setblock ~32 ~122 ~1286 andesite
-fill ~26 ~122 ~1287 ~27 ~122 ~1287 light_gray_concrete
-setblock ~28 ~122 ~1287 tuff
-setblock ~29 ~122 ~1287 cracked_stone_bricks
+setblock ~31 ~122 ~1286 cracked_stone_bricks
+setblock ~32 ~122 ~1286 light_gray_concrete
+fill ~27 ~122 ~1287 ~29 ~122 ~1287 light_gray_concrete
 setblock ~30 ~122 ~1287 tuff
 setblock ~31 ~122 ~1287 light_gray_concrete
-setblock ~26 ~122 ~1288 cracked_stone_bricks
-fill ~27 ~122 ~1288 ~28 ~122 ~1288 light_gray_concrete
-fill ~26 ~122 ~1289 ~27 ~122 ~1289 light_gray_concrete
+setblock ~26 ~122 ~1288 andesite
+setblock ~27 ~122 ~1288 light_gray_concrete
+setblock ~28 ~122 ~1288 andesite
+setblock ~26 ~122 ~1289 gray_concrete
+setblock ~27 ~122 ~1289 andesite
 setblock ~30 ~122 ~1290 light_gray_concrete
-setblock ~31 ~122 ~1290 andesite
+setblock ~31 ~122 ~1290 gray_concrete
 setblock ~32 ~122 ~1290 cracked_stone_bricks
-fill ~33 ~122 ~1290 ~34 ~122 ~1290 light_gray_concrete
-setblock ~30 ~122 ~1291 light_gray_concrete
-setblock ~31 ~122 ~1291 cracked_stone_bricks
-setblock ~32 ~122 ~1291 andesite
-setblock ~33 ~122 ~1291 gray_concrete
-setblock ~34 ~122 ~1291 light_gray_concrete
-setblock ~30 ~122 ~1292 gray_concrete
-setblock ~31 ~122 ~1292 andesite
-setblock ~32 ~122 ~1292 light_gray_concrete
-setblock ~33 ~122 ~1292 gray_concrete
-setblock ~34 ~122 ~1292 light_gray_concrete
+setblock ~33 ~122 ~1290 gray_concrete
+setblock ~34 ~122 ~1290 light_gray_concrete
+fill ~30 ~122 ~1291 ~31 ~122 ~1291 light_gray_concrete
+setblock ~34 ~122 ~1291 gray_concrete
+setblock ~30 ~122 ~1292 andesite
 setblock ~30 ~122 ~1293 light_gray_concrete
-setblock ~31 ~122 ~1293 andesite
-setblock ~32 ~122 ~1293 gray_concrete
-fill ~33 ~122 ~1293 ~34 ~122 ~1293 light_gray_concrete
-setblock ~30 ~122 ~1294 light_gray_concrete
-setblock ~31 ~122 ~1294 gray_concrete
-setblock ~32 ~122 ~1294 andesite
-setblock ~33 ~122 ~1294 light_gray_concrete
-setblock ~34 ~122 ~1294 cracked_stone_bricks
+setblock ~31 ~122 ~1293 cracked_stone_bricks
+setblock ~30 ~122 ~1294 andesite
+setblock ~31 ~122 ~1294 light_gray_concrete
 fill ~39 ~122 ~1295 ~42 ~122 ~1295 air
 setblock ~39 ~122 ~1296 red_concrete
 fill ~40 ~122 ~1296 ~41 ~122 ~1296 iron_block
@@ -5362,70 +2338,40 @@ fill ~39 ~122 ~1297 ~42 ~122 ~1297 air
 setblock ~27 ~122 ~1300 gravel
 setblock ~27 ~122 ~1301 spruce_planks
 setblock ~27 ~122 ~1302 gravel
-setblock ~33 ~122 ~1308 light_gray_concrete
-setblock ~34 ~122 ~1308 cracked_stone_bricks
-fill ~35 ~122 ~1308 ~43 ~122 ~1308 light_gray_concrete
-setblock ~33 ~122 ~1309 andesite
-setblock ~34 ~122 ~1309 spruce_fence
-setblock ~35 ~122 ~1309 light_gray_concrete
-setblock ~36 ~122 ~1309 gray_concrete
-fill ~37 ~122 ~1309 ~38 ~122 ~1309 light_gray_concrete
-fill ~39 ~122 ~1309 ~40 ~122 ~1309 cracked_stone_bricks
-setblock ~41 ~122 ~1309 tuff
-setblock ~42 ~122 ~1309 spruce_fence
-setblock ~43 ~122 ~1309 light_gray_concrete
-fill ~33 ~122 ~1310 ~34 ~122 ~1310 light_gray_concrete
-setblock ~35 ~122 ~1310 gray_concrete
-setblock ~36 ~122 ~1310 light_gray_concrete
-setblock ~37 ~122 ~1310 cracked_stone_bricks
-setblock ~38 ~122 ~1310 gray_concrete
-setblock ~39 ~122 ~1310 light_gray_concrete
-setblock ~40 ~122 ~1310 cracked_stone_bricks
-fill ~41 ~122 ~1310 ~43 ~122 ~1310 light_gray_concrete
-setblock ~33 ~122 ~1311 gray_concrete
-fill ~34 ~122 ~1311 ~36 ~122 ~1311 light_gray_concrete
-setblock ~37 ~122 ~1311 cracked_stone_bricks
-setblock ~38 ~122 ~1311 gray_concrete
-setblock ~39 ~122 ~1311 andesite
-setblock ~40 ~122 ~1311 gray_concrete
-fill ~41 ~122 ~1311 ~42 ~122 ~1311 light_gray_concrete
-setblock ~43 ~122 ~1311 gray_concrete
-fill ~33 ~122 ~1312 ~36 ~122 ~1312 light_gray_concrete
-setblock ~37 ~122 ~1312 andesite
-fill ~38 ~122 ~1312 ~39 ~122 ~1312 light_gray_concrete
-setblock ~40 ~122 ~1312 gray_concrete
-setblock ~41 ~122 ~1312 andesite
-setblock ~42 ~122 ~1312 light_gray_concrete
-setblock ~43 ~122 ~1312 andesite
-setblock ~33 ~122 ~1313 cracked_stone_bricks
-setblock ~34 ~122 ~1313 gray_concrete
-setblock ~35 ~122 ~1313 light_gray_concrete
-setblock ~36 ~122 ~1313 cracked_stone_bricks
-fill ~37 ~122 ~1313 ~38 ~122 ~1313 light_gray_concrete
-setblock ~39 ~122 ~1313 cracked_stone_bricks
-fill ~40 ~122 ~1313 ~41 ~122 ~1313 light_gray_concrete
-setblock ~42 ~122 ~1313 gray_concrete
-setblock ~43 ~122 ~1313 light_gray_concrete
-fill ~36 ~122 ~1314 ~37 ~122 ~1314 gray_concrete
-fill ~38 ~122 ~1314 ~39 ~122 ~1314 light_gray_concrete
-setblock ~40 ~122 ~1314 gray_concrete
-setblock ~41 ~122 ~1314 light_gray_concrete
-setblock ~42 ~122 ~1314 cracked_stone_bricks
-setblock ~43 ~122 ~1314 light_gray_concrete
-setblock ~37 ~122 ~1315 light_gray_concrete
-fill ~38 ~122 ~1315 ~39 ~122 ~1315 cracked_stone_bricks
-setblock ~40 ~122 ~1315 gray_concrete
-setblock ~41 ~122 ~1315 light_gray_concrete
-setblock ~42 ~122 ~1315 spruce_fence
-setblock ~43 ~122 ~1315 light_gray_concrete
+setblock ~26 ~122 ~1308 light_gray_concrete
+fill ~27 ~122 ~1308 ~28 ~122 ~1308 andesite
+fill ~29 ~122 ~1308 ~31 ~122 ~1308 light_gray_concrete
+setblock ~32 ~122 ~1308 andesite
+setblock ~26 ~122 ~1309 light_gray_concrete
+setblock ~27 ~122 ~1309 gray_concrete
+setblock ~28 ~122 ~1309 andesite
+fill ~29 ~122 ~1309 ~31 ~122 ~1309 light_gray_concrete
+setblock ~32 ~122 ~1309 cracked_stone_bricks
+fill ~26 ~122 ~1310 ~30 ~122 ~1310 light_gray_concrete
+setblock ~31 ~122 ~1310 andesite
+setblock ~32 ~122 ~1310 light_gray_concrete
+setblock ~26 ~122 ~1311 andesite
+fill ~27 ~122 ~1311 ~28 ~122 ~1311 light_gray_concrete
+setblock ~29 ~122 ~1311 andesite
+fill ~30 ~122 ~1311 ~31 ~122 ~1311 light_gray_concrete
+setblock ~32 ~122 ~1311 andesite
+fill ~33 ~122 ~1311 ~34 ~122 ~1311 cracked_stone_bricks
+fill ~26 ~122 ~1312 ~32 ~122 ~1312 light_gray_concrete
+setblock ~33 ~122 ~1312 cracked_stone_bricks
+fill ~34 ~122 ~1312 ~36 ~122 ~1312 light_gray_concrete
+fill ~26 ~122 ~1313 ~27 ~122 ~1313 light_gray_concrete
+setblock ~28 ~122 ~1313 cracked_stone_bricks
+setblock ~29 ~122 ~1313 andesite
+fill ~30 ~122 ~1313 ~31 ~122 ~1313 light_gray_concrete
+setblock ~32 ~122 ~1313 gray_concrete
+setblock ~33 ~122 ~1313 light_gray_concrete
+setblock ~34 ~122 ~1313 andesite
+fill ~35 ~122 ~1313 ~36 ~122 ~1313 light_gray_concrete
+fill ~26 ~122 ~1314 ~27 ~122 ~1314 light_gray_concrete
+setblock ~36 ~122 ~1314 cracked_stone_bricks
+setblock ~26 ~122 ~1315 light_gray_concrete
 fill ~23 ~122 ~1316 ~24 ~122 ~1316 light_gray_concrete
 setblock ~25 ~122 ~1316 andesite
-setblock ~37 ~122 ~1316 cracked_stone_bricks
-setblock ~38 ~122 ~1316 light_gray_concrete
-setblock ~39 ~122 ~1316 gray_concrete
-fill ~40 ~122 ~1316 ~41 ~122 ~1316 light_gray_concrete
-setblock ~42 ~122 ~1316 cracked_stone_bricks
-setblock ~43 ~122 ~1316 gray_concrete
 setblock ~24 ~122 ~1317 gray_concrete
 setblock ~8 ~122 ~1326 light_gray_concrete
 fill ~9 ~122 ~1326 ~10 ~122 ~1326 gray_concrete
@@ -5437,172 +2383,140 @@ setblock ~12 ~122 ~1327 gray_concrete
 setblock ~13 ~122 ~1327 light_gray_concrete
 fill ~8 ~122 ~1328 ~12 ~122 ~1328 light_gray_concrete
 setblock ~13 ~122 ~1328 gray_concrete
-setblock ~11 ~122 ~1329 light_gray_concrete
-setblock ~12 ~122 ~1329 andesite
-fill ~13 ~122 ~1329 ~14 ~122 ~1329 light_gray_concrete
-setblock ~11 ~122 ~1330 light_gray_concrete
-setblock ~12 ~122 ~1330 gray_concrete
-setblock ~13 ~122 ~1330 light_gray_concrete
-setblock ~14 ~122 ~1330 andesite
-fill ~11 ~122 ~1331 ~12 ~122 ~1331 light_gray_concrete
-setblock ~13 ~122 ~1331 cracked_stone_bricks
-setblock ~14 ~122 ~1331 andesite
-setblock ~31 ~122 ~1336 tuff
-setblock ~32 ~122 ~1336 andesite
-setblock ~33 ~122 ~1336 light_gray_concrete
-setblock ~34 ~122 ~1336 gray_concrete
-setblock ~35 ~122 ~1336 tuff
-setblock ~36 ~122 ~1336 andesite
-setblock ~37 ~122 ~1336 gray_concrete
-fill ~38 ~122 ~1336 ~39 ~122 ~1336 light_gray_concrete
-setblock ~40 ~122 ~1336 gray_concrete
-setblock ~41 ~122 ~1336 light_gray_concrete
-fill ~31 ~122 ~1337 ~32 ~122 ~1337 light_gray_concrete
-setblock ~33 ~122 ~1337 cracked_stone_bricks
-setblock ~34 ~122 ~1337 light_gray_concrete
-setblock ~35 ~122 ~1337 gray_concrete
-setblock ~36 ~122 ~1337 light_gray_concrete
-setblock ~37 ~122 ~1337 andesite
-setblock ~38 ~122 ~1337 light_gray_concrete
-setblock ~39 ~122 ~1337 gray_concrete
-fill ~40 ~122 ~1337 ~41 ~122 ~1337 light_gray_concrete
-fill ~31 ~122 ~1338 ~32 ~122 ~1338 light_gray_concrete
-setblock ~33 ~122 ~1338 cracked_stone_bricks
+setblock ~11 ~122 ~1329 andesite
+setblock ~12 ~122 ~1329 cracked_stone_bricks
+setblock ~13 ~122 ~1329 light_gray_concrete
+setblock ~14 ~122 ~1329 andesite
+setblock ~11 ~122 ~1330 cracked_stone_bricks
+fill ~12 ~122 ~1330 ~13 ~122 ~1330 light_gray_concrete
+setblock ~14 ~122 ~1330 gray_concrete
+setblock ~11 ~122 ~1331 tuff
+setblock ~12 ~122 ~1331 andesite
+setblock ~13 ~122 ~1331 light_gray_concrete
+setblock ~14 ~122 ~1331 tuff
+setblock ~27 ~122 ~1338 tuff
+setblock ~28 ~122 ~1338 light_gray_concrete
+setblock ~29 ~122 ~1338 andesite
+setblock ~30 ~122 ~1338 light_gray_concrete
+setblock ~31 ~122 ~1338 gray_concrete
+setblock ~32 ~122 ~1338 tuff
+setblock ~33 ~122 ~1338 light_gray_concrete
 setblock ~34 ~122 ~1338 gray_concrete
-setblock ~35 ~122 ~1338 andesite
-fill ~36 ~122 ~1338 ~37 ~122 ~1338 light_gray_concrete
-setblock ~38 ~122 ~1338 cracked_stone_bricks
-fill ~39 ~122 ~1338 ~40 ~122 ~1338 gray_concrete
-setblock ~41 ~122 ~1338 light_gray_concrete
-fill ~31 ~122 ~1339 ~32 ~122 ~1339 light_gray_concrete
-setblock ~33 ~122 ~1339 andesite
-setblock ~34 ~122 ~1339 tuff
-fill ~35 ~122 ~1339 ~36 ~122 ~1339 light_gray_concrete
-setblock ~37 ~122 ~1339 tuff
-setblock ~38 ~122 ~1339 gray_concrete
-fill ~39 ~122 ~1339 ~41 ~122 ~1339 light_gray_concrete
-setblock ~8 ~122 ~1340 iron_bars
-setblock ~31 ~122 ~1340 light_gray_concrete
-setblock ~32 ~122 ~1340 gray_concrete
-setblock ~33 ~122 ~1340 andesite
-setblock ~34 ~122 ~1340 light_gray_concrete
-setblock ~35 ~122 ~1340 cracked_stone_bricks
-setblock ~36 ~122 ~1340 light_gray_concrete
-setblock ~37 ~122 ~1340 tuff
-fill ~38 ~122 ~1340 ~39 ~122 ~1340 cracked_stone_bricks
-fill ~40 ~122 ~1340 ~41 ~122 ~1340 light_gray_concrete
-setblock ~8 ~122 ~1341 iron_bars
-fill ~31 ~122 ~1341 ~32 ~122 ~1341 light_gray_concrete
-setblock ~33 ~122 ~1341 gray_concrete
-setblock ~34 ~122 ~1341 light_gray_concrete
-setblock ~35 ~122 ~1341 tuff
-setblock ~36 ~122 ~1341 light_gray_concrete
-fill ~37 ~122 ~1341 ~38 ~122 ~1341 tuff
-fill ~39 ~122 ~1341 ~41 ~122 ~1341 light_gray_concrete
+setblock ~27 ~122 ~1339 light_gray_concrete
+setblock ~28 ~122 ~1339 andesite
+fill ~29 ~122 ~1339 ~33 ~122 ~1339 light_gray_concrete
+setblock ~34 ~122 ~1339 andesite
+setblock ~8 ~122 ~1340 cobweb
+fill ~27 ~122 ~1340 ~32 ~122 ~1340 light_gray_concrete
+setblock ~33 ~122 ~1340 gray_concrete
+setblock ~34 ~122 ~1340 cracked_stone_bricks
+setblock ~8 ~122 ~1341 cobweb
+setblock ~26 ~122 ~1341 cracked_stone_bricks
+fill ~27 ~122 ~1341 ~29 ~122 ~1341 light_gray_concrete
+setblock ~30 ~122 ~1341 andesite
+fill ~31 ~122 ~1341 ~34 ~122 ~1341 cracked_stone_bricks
 setblock ~8 ~122 ~1342 iron_bars
-fill ~31 ~122 ~1342 ~32 ~122 ~1342 light_gray_concrete
+setblock ~26 ~122 ~1342 andesite
+fill ~27 ~122 ~1342 ~30 ~122 ~1342 light_gray_concrete
+setblock ~31 ~122 ~1342 tuff
+setblock ~32 ~122 ~1342 light_gray_concrete
 setblock ~33 ~122 ~1342 gray_concrete
 setblock ~34 ~122 ~1342 light_gray_concrete
-setblock ~35 ~122 ~1342 cracked_stone_bricks
-setblock ~36 ~122 ~1342 light_gray_concrete
-setblock ~37 ~122 ~1342 andesite
-fill ~38 ~122 ~1342 ~41 ~122 ~1342 light_gray_concrete
 setblock ~26 ~122 ~1343 spruce_planks
-setblock ~31 ~122 ~1343 andesite
-setblock ~32 ~122 ~1343 spruce_fence
+setblock ~27 ~122 ~1343 light_gray_concrete
+setblock ~28 ~122 ~1343 gray_concrete
+setblock ~29 ~122 ~1343 light_gray_concrete
+setblock ~30 ~122 ~1343 gray_concrete
+setblock ~31 ~122 ~1343 light_gray_concrete
+setblock ~32 ~122 ~1343 andesite
 setblock ~33 ~122 ~1343 cracked_stone_bricks
-setblock ~34 ~122 ~1343 gray_concrete
-fill ~35 ~122 ~1343 ~37 ~122 ~1343 light_gray_concrete
-setblock ~38 ~122 ~1343 gray_concrete
-setblock ~39 ~122 ~1343 light_gray_concrete
-setblock ~40 ~122 ~1343 spruce_fence
-setblock ~41 ~122 ~1343 gray_concrete
+setblock ~34 ~122 ~1343 andesite
 setblock ~26 ~122 ~1344 gravel
-fill ~31 ~122 ~1344 ~32 ~122 ~1344 light_gray_concrete
-fill ~33 ~122 ~1344 ~36 ~122 ~1344 andesite
-setblock ~37 ~122 ~1344 light_gray_concrete
-setblock ~38 ~122 ~1344 andesite
-fill ~39 ~122 ~1344 ~40 ~122 ~1344 light_gray_concrete
-setblock ~41 ~122 ~1344 andesite
+fill ~27 ~122 ~1344 ~28 ~122 ~1344 light_gray_concrete
+setblock ~29 ~122 ~1344 andesite
+setblock ~30 ~122 ~1344 light_gray_concrete
+setblock ~31 ~122 ~1344 gray_concrete
+setblock ~32 ~122 ~1344 light_gray_concrete
+fill ~33 ~122 ~1344 ~34 ~122 ~1344 andesite
+setblock ~24 ~122 ~1345 light_gray_concrete
 setblock ~25 ~122 ~1345 spruce_planks
 setblock ~26 ~122 ~1345 air
+setblock ~27 ~122 ~1345 light_gray_concrete
+setblock ~28 ~122 ~1345 andesite
+setblock ~29 ~122 ~1345 cracked_stone_bricks
+setblock ~30 ~122 ~1345 gray_concrete
+setblock ~31 ~122 ~1345 light_gray_concrete
+setblock ~32 ~122 ~1345 gray_concrete
+fill ~33 ~122 ~1345 ~34 ~122 ~1345 light_gray_concrete
+setblock ~24 ~122 ~1346 gray_concrete
 fill ~25 ~122 ~1346 ~26 ~122 ~1346 air
+fill ~27 ~122 ~1346 ~32 ~122 ~1346 light_gray_concrete
+setblock ~33 ~122 ~1346 gray_concrete
+setblock ~34 ~122 ~1346 light_gray_concrete
 fill ~20 ~122 ~1370 ~22 ~122 ~1370 iron_bars
 setblock ~18 ~122 ~1371 light_gray_concrete
 setblock ~19 ~122 ~1371 iron_bars
-fill ~99 ~122 ~1459 ~101 ~122 ~1459 white_concrete
-setblock ~98 ~122 ~1460 white_concrete
+fill ~99 ~122 ~1459 ~101 ~122 ~1459 white_concrete_powder
+setblock ~98 ~122 ~1460 white_concrete_powder
 fill ~99 ~122 ~1460 ~101 ~122 ~1460 air
-setblock ~102 ~122 ~1460 white_concrete
-setblock ~97 ~122 ~1461 white_concrete
+setblock ~102 ~122 ~1460 white_concrete_powder
+setblock ~97 ~122 ~1461 white_concrete_powder
 fill ~98 ~122 ~1461 ~102 ~122 ~1461 air
-setblock ~103 ~122 ~1461 white_concrete
-setblock ~97 ~122 ~1462 white_concrete
+setblock ~103 ~122 ~1461 white_concrete_powder
+setblock ~97 ~122 ~1462 white_concrete_powder
 fill ~98 ~122 ~1462 ~99 ~122 ~1462 air
 setblock ~100 ~122 ~1462 polished_andesite
 fill ~101 ~122 ~1462 ~102 ~122 ~1462 air
-setblock ~103 ~122 ~1462 white_concrete
-setblock ~97 ~122 ~1463 white_concrete
+setblock ~103 ~122 ~1462 white_concrete_powder
+setblock ~97 ~122 ~1463 white_concrete_powder
 setblock ~98 ~122 ~1463 air
 setblock ~99 ~122 ~1463 stone_brick_stairs[facing=west]
 fill ~100 ~122 ~1463 ~102 ~122 ~1463 air
-setblock ~103 ~122 ~1463 white_concrete
-setblock ~98 ~122 ~1464 white_concrete
+setblock ~103 ~122 ~1463 white_concrete_powder
+setblock ~98 ~122 ~1464 white_concrete_powder
 fill ~99 ~122 ~1464 ~101 ~122 ~1464 air
-setblock ~102 ~122 ~1464 white_concrete
-fill ~99 ~122 ~1465 ~101 ~122 ~1465 white_concrete
+setblock ~102 ~122 ~1464 white_concrete_powder
+fill ~99 ~122 ~1465 ~101 ~122 ~1465 white_concrete_powder
 setblock ~30 ~123 ~1276 polished_blackstone_wall
 setblock ~30 ~123 ~1277 lantern[hanging=true]
-fill ~26 ~123 ~1286 ~30 ~123 ~1286 light_gray_concrete
+setblock ~30 ~123 ~1286 light_gray_concrete
 setblock ~31 ~123 ~1286 gray_concrete
-fill ~32 ~123 ~1286 ~33 ~123 ~1286 andesite
-setblock ~26 ~123 ~1287 cracked_stone_bricks
-setblock ~27 ~123 ~1287 andesite
-setblock ~28 ~123 ~1287 cracked_stone_bricks
-setblock ~29 ~123 ~1287 light_gray_concrete
-setblock ~30 ~123 ~1287 cracked_stone_bricks
-setblock ~31 ~123 ~1287 tuff
-setblock ~32 ~123 ~1287 light_gray_concrete
-fill ~26 ~123 ~1288 ~27 ~123 ~1288 andesite
-setblock ~28 ~123 ~1288 gray_concrete
-fill ~29 ~123 ~1288 ~30 ~123 ~1288 light_gray_concrete
-setblock ~26 ~123 ~1289 light_gray_concrete
-setblock ~27 ~123 ~1289 cracked_stone_bricks
-setblock ~28 ~123 ~1289 andesite
-setblock ~29 ~123 ~1289 gray_concrete
-setblock ~30 ~123 ~1289 andesite
-setblock ~31 ~123 ~1289 light_gray_concrete
-setblock ~32 ~123 ~1289 gray_concrete
-setblock ~33 ~123 ~1289 light_gray_concrete
-setblock ~26 ~123 ~1290 gray_concrete
-setblock ~27 ~123 ~1290 light_gray_concrete
-setblock ~29 ~123 ~1290 andesite
-setblock ~30 ~123 ~1290 light_gray_concrete
-setblock ~31 ~123 ~1290 andesite
-setblock ~32 ~123 ~1290 cracked_stone_bricks
-setblock ~33 ~123 ~1290 andesite
-setblock ~34 ~123 ~1290 gray_concrete
+setblock ~32 ~123 ~1286 andesite
+setblock ~33 ~123 ~1286 light_gray_concrete
+setblock ~27 ~123 ~1287 gray_concrete
+setblock ~28 ~123 ~1287 light_gray_concrete
+fill ~29 ~123 ~1287 ~30 ~123 ~1287 andesite
+fill ~31 ~123 ~1287 ~32 ~123 ~1287 light_gray_concrete
+setblock ~26 ~123 ~1288 cracked_stone_bricks
+setblock ~27 ~123 ~1288 andesite
+fill ~28 ~123 ~1288 ~29 ~123 ~1288 light_gray_concrete
+setblock ~30 ~123 ~1288 cracked_stone_bricks
+setblock ~26 ~123 ~1289 cracked_stone_bricks
+fill ~27 ~123 ~1289 ~28 ~123 ~1289 light_gray_concrete
+fill ~29 ~123 ~1289 ~30 ~123 ~1289 gray_concrete
+setblock ~31 ~123 ~1289 andesite
+fill ~32 ~123 ~1289 ~33 ~123 ~1289 light_gray_concrete
+setblock ~26 ~123 ~1290 cracked_stone_bricks
+setblock ~27 ~123 ~1290 tuff
+setblock ~29 ~123 ~1290 light_gray_concrete
+fill ~30 ~123 ~1290 ~31 ~123 ~1290 andesite
+fill ~32 ~123 ~1290 ~34 ~123 ~1290 light_gray_concrete
 setblock ~26 ~123 ~1291 light_gray_concrete
 fill ~29 ~123 ~1291 ~30 ~123 ~1291 light_gray_concrete
-setblock ~31 ~123 ~1291 gray_concrete
-fill ~32 ~123 ~1291 ~33 ~123 ~1291 light_gray_concrete
-setblock ~34 ~123 ~1291 cracked_stone_bricks
-setblock ~30 ~123 ~1292 light_gray_concrete
-setblock ~31 ~123 ~1292 gray_concrete
-fill ~32 ~123 ~1292 ~33 ~123 ~1292 light_gray_concrete
-setblock ~34 ~123 ~1292 andesite
-fill ~30 ~123 ~1293 ~34 ~123 ~1293 light_gray_concrete
-fill ~30 ~123 ~1294 ~31 ~123 ~1294 andesite
-setblock ~32 ~123 ~1294 light_gray_concrete
-setblock ~33 ~123 ~1294 gray_concrete
-setblock ~34 ~123 ~1294 light_gray_concrete
+setblock ~31 ~123 ~1291 cracked_stone_bricks
+setblock ~34 ~123 ~1291 light_gray_concrete
+setblock ~30 ~123 ~1292 tuff
+setblock ~30 ~123 ~1293 andesite
+setblock ~31 ~123 ~1293 light_gray_concrete
+setblock ~30 ~123 ~1294 light_gray_concrete
+setblock ~31 ~123 ~1294 andesite
 fill ~39 ~123 ~1295 ~42 ~123 ~1295 air
 setblock ~39 ~123 ~1296 heavy_weighted_pressure_plate
 setblock ~40 ~123 ~1296 smoker[facing=south,lit=true]
 setblock ~41 ~123 ~1296 iron_trapdoor[half=bottom]
 setblock ~42 ~123 ~1296 air
 fill ~39 ~123 ~1297 ~42 ~123 ~1297 air
-setblock ~32 ~123 ~1298 mud_bricks
+setblock ~32 ~123 ~1298 packed_mud
 setblock ~32 ~123 ~1299 mud_bricks
 setblock ~26 ~123 ~1300 gravel
 setblock ~27 ~123 ~1300 air
@@ -5613,84 +2527,82 @@ setblock ~27 ~123 ~1301 air
 setblock ~32 ~123 ~1301 packed_mud
 setblock ~26 ~123 ~1302 gravel
 setblock ~27 ~123 ~1302 air
-setblock ~31 ~123 ~1302 packed_mud
-setblock ~32 ~123 ~1302 mud_bricks
+fill ~31 ~123 ~1302 ~32 ~123 ~1302 mud_bricks
 setblock ~26 ~123 ~1303 spruce_planks
 setblock ~26 ~123 ~1304 gravel
 setblock ~26 ~123 ~1305 spruce_planks
 setblock ~26 ~123 ~1306 gravel
 setblock ~26 ~123 ~1307 spruce_planks
 setblock ~26 ~123 ~1308 gravel
-setblock ~33 ~123 ~1308 light_gray_concrete
-setblock ~34 ~123 ~1308 andesite
-setblock ~35 ~123 ~1308 gray_concrete
-fill ~36 ~123 ~1308 ~37 ~123 ~1308 light_gray_concrete
-setblock ~38 ~123 ~1308 gray_concrete
-fill ~39 ~123 ~1308 ~41 ~123 ~1308 light_gray_concrete
-setblock ~42 ~123 ~1308 andesite
-setblock ~43 ~123 ~1308 gray_concrete
+setblock ~27 ~123 ~1308 light_gray_concrete
+setblock ~28 ~123 ~1308 andesite
+setblock ~29 ~123 ~1308 gray_concrete
+setblock ~30 ~123 ~1308 tuff
+fill ~31 ~123 ~1308 ~33 ~123 ~1308 light_gray_concrete
+fill ~34 ~123 ~1308 ~35 ~123 ~1308 gray_concrete
+setblock ~36 ~123 ~1308 light_gray_concrete
 setblock ~26 ~123 ~1309 spruce_planks
-setblock ~33 ~123 ~1309 andesite
-setblock ~34 ~123 ~1309 spruce_fence
-setblock ~35 ~123 ~1309 light_gray_concrete
-setblock ~36 ~123 ~1309 cracked_stone_bricks
-fill ~37 ~123 ~1309 ~38 ~123 ~1309 light_gray_concrete
-setblock ~39 ~123 ~1309 cracked_stone_bricks
-setblock ~40 ~123 ~1309 light_gray_concrete
-setblock ~41 ~123 ~1309 gray_concrete
-setblock ~42 ~123 ~1309 spruce_fence
-setblock ~43 ~123 ~1309 andesite
+setblock ~27 ~123 ~1309 gray_concrete
+setblock ~28 ~123 ~1309 light_gray_concrete
+setblock ~29 ~123 ~1309 cracked_stone_bricks
+setblock ~30 ~123 ~1309 andesite
+setblock ~31 ~123 ~1309 light_gray_concrete
+setblock ~32 ~123 ~1309 tuff
+setblock ~33 ~123 ~1309 light_gray_concrete
+setblock ~34 ~123 ~1309 tuff
+setblock ~35 ~123 ~1309 gray_concrete
+setblock ~36 ~123 ~1309 andesite
 fill ~25 ~123 ~1310 ~26 ~123 ~1310 gravel
-fill ~33 ~123 ~1310 ~34 ~123 ~1310 andesite
-fill ~35 ~123 ~1310 ~43 ~123 ~1310 light_gray_concrete
+setblock ~27 ~123 ~1310 gray_concrete
+fill ~28 ~123 ~1310 ~29 ~123 ~1310 light_gray_concrete
+setblock ~30 ~123 ~1310 andesite
+fill ~31 ~123 ~1310 ~34 ~123 ~1310 light_gray_concrete
+setblock ~35 ~123 ~1310 andesite
+setblock ~36 ~123 ~1310 light_gray_concrete
 fill ~25 ~123 ~1311 ~26 ~123 ~1311 spruce_planks
-fill ~33 ~123 ~1311 ~34 ~123 ~1311 light_gray_concrete
+fill ~27 ~123 ~1311 ~28 ~123 ~1311 cracked_stone_bricks
+fill ~29 ~123 ~1311 ~34 ~123 ~1311 light_gray_concrete
 setblock ~35 ~123 ~1311 gray_concrete
-fill ~36 ~123 ~1311 ~37 ~123 ~1311 light_gray_concrete
-setblock ~38 ~123 ~1311 andesite
-fill ~39 ~123 ~1311 ~41 ~123 ~1311 light_gray_concrete
-setblock ~42 ~123 ~1311 andesite
-setblock ~43 ~123 ~1311 light_gray_concrete
+setblock ~36 ~123 ~1311 light_gray_concrete
 fill ~25 ~123 ~1312 ~26 ~123 ~1312 gravel
+setblock ~27 ~123 ~1312 light_gray_concrete
+fill ~28 ~123 ~1312 ~29 ~123 ~1312 andesite
+setblock ~30 ~123 ~1312 gray_concrete
+setblock ~31 ~123 ~1312 cracked_stone_bricks
+setblock ~32 ~123 ~1312 andesite
 setblock ~33 ~123 ~1312 light_gray_concrete
 fill ~34 ~123 ~1312 ~35 ~123 ~1312 andesite
-fill ~36 ~123 ~1312 ~39 ~123 ~1312 light_gray_concrete
-setblock ~40 ~123 ~1312 tuff
-fill ~41 ~123 ~1312 ~42 ~123 ~1312 light_gray_concrete
-setblock ~43 ~123 ~1312 gray_concrete
+setblock ~36 ~123 ~1312 light_gray_concrete
 fill ~25 ~123 ~1313 ~26 ~123 ~1313 spruce_planks
-fill ~33 ~123 ~1313 ~35 ~123 ~1313 light_gray_concrete
-setblock ~36 ~123 ~1313 cracked_stone_bricks
-setblock ~37 ~123 ~1313 andesite
-setblock ~38 ~123 ~1313 cracked_stone_bricks
-setblock ~39 ~123 ~1313 light_gray_concrete
-setblock ~40 ~123 ~1313 andesite
-setblock ~41 ~123 ~1313 light_gray_concrete
-setblock ~42 ~123 ~1313 cracked_stone_bricks
-setblock ~43 ~123 ~1313 andesite
+setblock ~27 ~123 ~1313 andesite
+setblock ~28 ~123 ~1313 gray_concrete
+fill ~29 ~123 ~1313 ~32 ~123 ~1313 light_gray_concrete
+fill ~33 ~123 ~1313 ~34 ~123 ~1313 andesite
+fill ~35 ~123 ~1313 ~36 ~123 ~1313 light_gray_concrete
 fill ~25 ~123 ~1314 ~26 ~123 ~1314 gravel
-fill ~33 ~123 ~1314 ~40 ~123 ~1314 light_gray_concrete
-setblock ~41 ~123 ~1314 tuff
-setblock ~42 ~123 ~1314 andesite
-setblock ~43 ~123 ~1314 light_gray_concrete
+fill ~27 ~123 ~1314 ~28 ~123 ~1314 light_gray_concrete
+setblock ~29 ~123 ~1314 tuff
+setblock ~30 ~123 ~1314 light_gray_concrete
+setblock ~31 ~123 ~1314 andesite
+fill ~32 ~123 ~1314 ~35 ~123 ~1314 light_gray_concrete
+setblock ~36 ~123 ~1314 andesite
 fill ~25 ~123 ~1315 ~26 ~123 ~1315 spruce_planks
-setblock ~33 ~123 ~1315 light_gray_concrete
-fill ~34 ~123 ~1315 ~35 ~123 ~1315 cracked_stone_bricks
-fill ~36 ~123 ~1315 ~38 ~123 ~1315 light_gray_concrete
-setblock ~39 ~123 ~1315 gray_concrete
-fill ~40 ~123 ~1315 ~41 ~123 ~1315 cracked_stone_bricks
-setblock ~42 ~123 ~1315 spruce_fence
-setblock ~43 ~123 ~1315 andesite
+setblock ~27 ~123 ~1315 gray_concrete
+setblock ~28 ~123 ~1315 light_gray_concrete
+setblock ~29 ~123 ~1315 andesite
+fill ~30 ~123 ~1315 ~32 ~123 ~1315 light_gray_concrete
+setblock ~33 ~123 ~1315 andesite
+fill ~34 ~123 ~1315 ~36 ~123 ~1315 light_gray_concrete
 fill ~20 ~123 ~1316 ~23 ~123 ~1316 light_gray_concrete
 setblock ~24 ~123 ~1316 andesite
 setblock ~25 ~123 ~1316 gravel
-setblock ~26 ~123 ~1316 light_gray_concrete
-setblock ~27 ~123 ~1316 tuff
-setblock ~28 ~123 ~1316 light_gray_concrete
-fill ~33 ~123 ~1316 ~34 ~123 ~1316 andesite
-fill ~35 ~123 ~1316 ~39 ~123 ~1316 light_gray_concrete
-setblock ~40 ~123 ~1316 andesite
-fill ~41 ~123 ~1316 ~43 ~123 ~1316 light_gray_concrete
+fill ~26 ~123 ~1316 ~30 ~123 ~1316 light_gray_concrete
+setblock ~31 ~123 ~1316 andesite
+setblock ~32 ~123 ~1316 light_gray_concrete
+setblock ~33 ~123 ~1316 cracked_stone_bricks
+setblock ~34 ~123 ~1316 gray_concrete
+setblock ~35 ~123 ~1316 light_gray_concrete
+setblock ~36 ~123 ~1316 cracked_stone_bricks
 setblock ~19 ~123 ~1317 gray_concrete
 fill ~20 ~123 ~1317 ~21 ~123 ~1317 light_gray_concrete
 setblock ~22 ~123 ~1317 andesite
@@ -5768,88 +2680,79 @@ fill ~12 ~123 ~1330 ~13 ~123 ~1330 iron_block
 setblock ~14 ~123 ~1330 barrel[facing=up]
 fill ~11 ~123 ~1331 ~14 ~123 ~1331 air
 setblock ~28 ~123 ~1336 gravel
-fill ~31 ~123 ~1336 ~34 ~123 ~1336 light_gray_concrete
-setblock ~35 ~123 ~1336 gray_concrete
-fill ~36 ~123 ~1336 ~37 ~123 ~1336 light_gray_concrete
-setblock ~38 ~123 ~1336 tuff
-setblock ~39 ~123 ~1336 gray_concrete
-setblock ~40 ~123 ~1336 light_gray_concrete
-setblock ~41 ~123 ~1336 gray_concrete
-fill ~31 ~123 ~1337 ~35 ~123 ~1337 light_gray_concrete
-fill ~36 ~123 ~1337 ~38 ~123 ~1337 gray_concrete
-setblock ~39 ~123 ~1337 light_gray_concrete
-setblock ~40 ~123 ~1337 cracked_stone_bricks
-setblock ~41 ~123 ~1337 light_gray_concrete
+setblock ~26 ~123 ~1338 andesite
 setblock ~27 ~123 ~1338 gravel
-setblock ~31 ~123 ~1338 andesite
+setblock ~28 ~123 ~1338 tuff
+fill ~29 ~123 ~1338 ~31 ~123 ~1338 light_gray_concrete
 setblock ~32 ~123 ~1338 gray_concrete
-setblock ~33 ~123 ~1338 cracked_stone_bricks
-fill ~34 ~123 ~1338 ~36 ~123 ~1338 light_gray_concrete
-setblock ~37 ~123 ~1338 cracked_stone_bricks
-setblock ~38 ~123 ~1338 light_gray_concrete
-setblock ~39 ~123 ~1338 andesite
-setblock ~40 ~123 ~1338 light_gray_concrete
-setblock ~41 ~123 ~1338 gray_concrete
+setblock ~33 ~123 ~1338 light_gray_concrete
+setblock ~34 ~123 ~1338 cracked_stone_bricks
+setblock ~26 ~123 ~1339 andesite
 setblock ~27 ~123 ~1339 spruce_planks
-setblock ~31 ~123 ~1339 andesite
+fill ~28 ~123 ~1339 ~29 ~123 ~1339 gray_concrete
+setblock ~30 ~123 ~1339 cracked_stone_bricks
+setblock ~31 ~123 ~1339 light_gray_concrete
 setblock ~32 ~123 ~1339 cracked_stone_bricks
-setblock ~33 ~123 ~1339 andesite
-fill ~34 ~123 ~1339 ~41 ~123 ~1339 light_gray_concrete
+fill ~33 ~123 ~1339 ~34 ~123 ~1339 light_gray_concrete
+setblock ~26 ~123 ~1340 light_gray_concrete
 setblock ~27 ~123 ~1340 gravel
-setblock ~31 ~123 ~1340 gray_concrete
-setblock ~32 ~123 ~1340 cracked_stone_bricks
-setblock ~33 ~123 ~1340 tuff
-setblock ~34 ~123 ~1340 gray_concrete
-setblock ~35 ~123 ~1340 cracked_stone_bricks
-setblock ~36 ~123 ~1340 andesite
-setblock ~37 ~123 ~1340 light_gray_concrete
-setblock ~38 ~123 ~1340 cracked_stone_bricks
-setblock ~39 ~123 ~1340 gray_concrete
-setblock ~40 ~123 ~1340 light_gray_concrete
-setblock ~41 ~123 ~1340 andesite
+setblock ~28 ~123 ~1340 andesite
+setblock ~29 ~123 ~1340 light_gray_concrete
+setblock ~30 ~123 ~1340 gray_concrete
+setblock ~31 ~123 ~1340 light_gray_concrete
+fill ~32 ~123 ~1340 ~33 ~123 ~1340 cracked_stone_bricks
+setblock ~34 ~123 ~1340 light_gray_concrete
 setblock ~26 ~123 ~1341 spruce_planks
-setblock ~31 ~123 ~1341 light_gray_concrete
-setblock ~32 ~123 ~1341 andesite
-setblock ~33 ~123 ~1341 cracked_stone_bricks
-setblock ~34 ~123 ~1341 andesite
-setblock ~35 ~123 ~1341 gray_concrete
-setblock ~36 ~123 ~1341 andesite
-fill ~37 ~123 ~1341 ~39 ~123 ~1341 light_gray_concrete
-setblock ~40 ~123 ~1341 gray_concrete
-setblock ~41 ~123 ~1341 light_gray_concrete
+setblock ~27 ~123 ~1341 andesite
+fill ~28 ~123 ~1341 ~30 ~123 ~1341 light_gray_concrete
+setblock ~31 ~123 ~1341 andesite
+setblock ~32 ~123 ~1341 light_gray_concrete
+setblock ~33 ~123 ~1341 gray_concrete
+setblock ~34 ~123 ~1341 light_gray_concrete
+setblock ~25 ~123 ~1342 light_gray_concrete
 setblock ~26 ~123 ~1342 gravel
-setblock ~30 ~123 ~1342 mud_bricks
-fill ~31 ~123 ~1342 ~34 ~123 ~1342 light_gray_concrete
-setblock ~35 ~123 ~1342 tuff
-fill ~36 ~123 ~1342 ~37 ~123 ~1342 light_gray_concrete
-setblock ~38 ~123 ~1342 tuff
-fill ~39 ~123 ~1342 ~40 ~123 ~1342 light_gray_concrete
-setblock ~41 ~123 ~1342 andesite
-setblock ~8 ~123 ~1343 iron_bars
+setblock ~27 ~123 ~1342 light_gray_concrete
+setblock ~28 ~123 ~1342 cracked_stone_bricks
+setblock ~29 ~123 ~1342 gray_concrete
+setblock ~30 ~123 ~1342 cracked_stone_bricks
+setblock ~31 ~123 ~1342 light_gray_concrete
+setblock ~32 ~123 ~1342 gray_concrete
+setblock ~33 ~123 ~1342 light_gray_concrete
+setblock ~34 ~123 ~1342 cracked_stone_bricks
+setblock ~8 ~123 ~1343 cobweb
+setblock ~25 ~123 ~1343 light_gray_concrete
 setblock ~26 ~123 ~1343 air
-setblock ~31 ~123 ~1343 light_gray_concrete
-setblock ~32 ~123 ~1343 spruce_fence
-setblock ~33 ~123 ~1343 gray_concrete
-setblock ~34 ~123 ~1343 light_gray_concrete
-setblock ~35 ~123 ~1343 tuff
-fill ~36 ~123 ~1343 ~38 ~123 ~1343 light_gray_concrete
-setblock ~39 ~123 ~1343 andesite
-setblock ~40 ~123 ~1343 spruce_fence
-setblock ~41 ~123 ~1343 light_gray_concrete
+setblock ~27 ~123 ~1343 light_gray_concrete
+setblock ~28 ~123 ~1343 cracked_stone_bricks
+fill ~29 ~123 ~1343 ~31 ~123 ~1343 light_gray_concrete
+setblock ~32 ~123 ~1343 andesite
+setblock ~33 ~123 ~1343 light_gray_concrete
+setblock ~34 ~123 ~1343 gray_concrete
 setblock ~8 ~123 ~1344 iron_bars
+setblock ~25 ~123 ~1344 light_gray_concrete
 setblock ~26 ~123 ~1344 air
-setblock ~31 ~123 ~1344 light_gray_concrete
-fill ~32 ~123 ~1344 ~33 ~123 ~1344 gray_concrete
-setblock ~34 ~123 ~1344 andesite
-setblock ~35 ~123 ~1344 light_gray_concrete
-setblock ~36 ~123 ~1344 andesite
-fill ~37 ~123 ~1344 ~38 ~123 ~1344 light_gray_concrete
-setblock ~39 ~123 ~1344 andesite
-fill ~40 ~123 ~1344 ~41 ~123 ~1344 light_gray_concrete
+setblock ~27 ~123 ~1344 light_gray_concrete
+setblock ~28 ~123 ~1344 gray_concrete
+setblock ~29 ~123 ~1344 andesite
+fill ~30 ~123 ~1344 ~32 ~123 ~1344 light_gray_concrete
+setblock ~33 ~123 ~1344 tuff
+setblock ~34 ~123 ~1344 light_gray_concrete
 setblock ~8 ~123 ~1345 iron_bars
+setblock ~24 ~123 ~1345 light_gray_concrete
 fill ~25 ~123 ~1345 ~26 ~123 ~1345 air
+setblock ~27 ~123 ~1345 tuff
+fill ~28 ~123 ~1345 ~29 ~123 ~1345 light_gray_concrete
+setblock ~30 ~123 ~1345 gray_concrete
+setblock ~31 ~123 ~1345 light_gray_concrete
+setblock ~32 ~123 ~1345 cracked_stone_bricks
+fill ~33 ~123 ~1345 ~34 ~123 ~1345 light_gray_concrete
 setblock ~8 ~123 ~1346 iron_bars
+setblock ~24 ~123 ~1346 cracked_stone_bricks
 setblock ~25 ~123 ~1346 air
+setblock ~26 ~123 ~1346 andesite
+fill ~27 ~123 ~1346 ~31 ~123 ~1346 light_gray_concrete
+setblock ~32 ~123 ~1346 gray_concrete
+fill ~33 ~123 ~1346 ~34 ~123 ~1346 light_gray_concrete
 setblock ~18 ~123 ~1371 iron_bars
 fill ~99 ~123 ~1459 ~101 ~123 ~1459 white_concrete
 setblock ~98 ~123 ~1460 white_concrete
@@ -5873,51 +2776,49 @@ setblock ~102 ~123 ~1464 white_concrete
 fill ~99 ~123 ~1465 ~101 ~123 ~1465 white_concrete
 setblock ~30 ~124 ~1276 polished_blackstone_slab
 setblock ~30 ~124 ~1277 polished_blackstone_slab
-fill ~26 ~124 ~1286 ~30 ~124 ~1286 light_gray_concrete
+setblock ~30 ~124 ~1286 light_gray_concrete
 setblock ~31 ~124 ~1286 cracked_stone_bricks
 setblock ~32 ~124 ~1286 light_gray_concrete
-setblock ~33 ~124 ~1286 gray_concrete
-setblock ~26 ~124 ~1287 gray_concrete
+setblock ~33 ~124 ~1286 cracked_stone_bricks
 setblock ~27 ~124 ~1287 tuff
-fill ~28 ~124 ~1287 ~33 ~124 ~1287 light_gray_concrete
-fill ~26 ~124 ~1288 ~28 ~124 ~1288 light_gray_concrete
-setblock ~29 ~124 ~1288 gray_concrete
-setblock ~30 ~124 ~1288 andesite
+setblock ~28 ~124 ~1287 gray_concrete
+fill ~29 ~124 ~1287 ~30 ~124 ~1287 light_gray_concrete
+setblock ~31 ~124 ~1287 gray_concrete
+setblock ~32 ~124 ~1287 cracked_stone_bricks
+setblock ~33 ~124 ~1287 light_gray_concrete
+setblock ~26 ~124 ~1288 light_gray_concrete
+setblock ~27 ~124 ~1288 cracked_stone_bricks
+setblock ~28 ~124 ~1288 light_gray_concrete
+setblock ~29 ~124 ~1288 andesite
+setblock ~30 ~124 ~1288 gray_concrete
 setblock ~31 ~124 ~1288 light_gray_concrete
-setblock ~26 ~124 ~1289 andesite
-fill ~27 ~124 ~1289 ~28 ~124 ~1289 light_gray_concrete
-setblock ~29 ~124 ~1289 gray_concrete
-fill ~30 ~124 ~1289 ~31 ~124 ~1289 light_gray_concrete
-setblock ~32 ~124 ~1289 cracked_stone_bricks
-setblock ~33 ~124 ~1289 light_gray_concrete
-setblock ~34 ~124 ~1289 andesite
-setblock ~26 ~124 ~1290 light_gray_concrete
-setblock ~27 ~124 ~1290 andesite
-setblock ~28 ~124 ~1290 light_gray_concrete
-setblock ~29 ~124 ~1290 andesite
-setblock ~30 ~124 ~1290 gray_concrete
+setblock ~26 ~124 ~1289 gray_concrete
+setblock ~27 ~124 ~1289 andesite
+setblock ~28 ~124 ~1289 light_gray_concrete
+setblock ~29 ~124 ~1289 andesite
+setblock ~30 ~124 ~1289 cracked_stone_bricks
+fill ~31 ~124 ~1289 ~32 ~124 ~1289 light_gray_concrete
+setblock ~33 ~124 ~1289 tuff
+setblock ~34 ~124 ~1289 light_gray_concrete
+setblock ~26 ~124 ~1290 gray_concrete
+setblock ~27 ~124 ~1290 tuff
+fill ~28 ~124 ~1290 ~30 ~124 ~1290 light_gray_concrete
 setblock ~31 ~124 ~1290 andesite
-fill ~32 ~124 ~1290 ~34 ~124 ~1290 light_gray_concrete
-setblock ~26 ~124 ~1291 tuff
-setblock ~27 ~124 ~1291 light_gray_concrete
-fill ~29 ~124 ~1291 ~30 ~124 ~1291 light_gray_concrete
-setblock ~31 ~124 ~1291 gray_concrete
-setblock ~32 ~124 ~1291 andesite
-setblock ~33 ~124 ~1291 light_gray_concrete
-setblock ~34 ~124 ~1291 gray_concrete
+setblock ~32 ~124 ~1290 tuff
+fill ~33 ~124 ~1290 ~34 ~124 ~1290 light_gray_concrete
+fill ~26 ~124 ~1291 ~27 ~124 ~1291 light_gray_concrete
+setblock ~29 ~124 ~1291 andesite
+setblock ~30 ~124 ~1291 light_gray_concrete
+setblock ~31 ~124 ~1291 andesite
+setblock ~34 ~124 ~1291 cracked_stone_bricks
 setblock ~26 ~124 ~1292 light_gray_concrete
-setblock ~29 ~124 ~1292 tuff
+setblock ~29 ~124 ~1292 gray_concrete
 setblock ~30 ~124 ~1292 light_gray_concrete
-setblock ~31 ~124 ~1292 cracked_stone_bricks
-fill ~32 ~124 ~1292 ~34 ~124 ~1292 light_gray_concrete
-setblock ~29 ~124 ~1293 andesite
-fill ~30 ~124 ~1293 ~32 ~124 ~1293 light_gray_concrete
-setblock ~33 ~124 ~1293 gray_concrete
-setblock ~34 ~124 ~1293 cracked_stone_bricks
-setblock ~29 ~124 ~1294 cracked_stone_bricks
-setblock ~30 ~124 ~1294 andesite
-fill ~31 ~124 ~1294 ~33 ~124 ~1294 light_gray_concrete
-setblock ~34 ~124 ~1294 gray_concrete
+setblock ~29 ~124 ~1293 cracked_stone_bricks
+fill ~30 ~124 ~1293 ~31 ~124 ~1293 light_gray_concrete
+setblock ~29 ~124 ~1294 gray_concrete
+setblock ~30 ~124 ~1294 light_gray_concrete
+setblock ~31 ~124 ~1294 andesite
 fill ~39 ~124 ~1295 ~42 ~124 ~1295 air
 fill ~39 ~124 ~1296 ~40 ~124 ~1296 air
 setblock ~41 ~124 ~1296 lightning_rod
@@ -5941,84 +2842,72 @@ setblock ~25 ~124 ~1307 spruce_planks
 setblock ~26 ~124 ~1307 air
 setblock ~25 ~124 ~1308 gravel
 setblock ~26 ~124 ~1308 air
-setblock ~33 ~124 ~1308 light_gray_concrete
-setblock ~34 ~124 ~1308 gray_concrete
-fill ~35 ~124 ~1308 ~37 ~124 ~1308 light_gray_concrete
-setblock ~38 ~124 ~1308 andesite
-setblock ~39 ~124 ~1308 cracked_stone_bricks
-setblock ~40 ~124 ~1308 andesite
-fill ~41 ~124 ~1308 ~42 ~124 ~1308 light_gray_concrete
-setblock ~43 ~124 ~1308 cracked_stone_bricks
+setblock ~27 ~124 ~1308 tuff
+fill ~28 ~124 ~1308 ~29 ~124 ~1308 andesite
+setblock ~30 ~124 ~1308 light_gray_concrete
+setblock ~31 ~124 ~1308 andesite
+setblock ~32 ~124 ~1308 light_gray_concrete
+setblock ~33 ~124 ~1308 gray_concrete
+setblock ~34 ~124 ~1308 light_gray_concrete
+setblock ~35 ~124 ~1308 cracked_stone_bricks
+setblock ~36 ~124 ~1308 andesite
 setblock ~25 ~124 ~1309 spruce_planks
 setblock ~26 ~124 ~1309 air
-setblock ~33 ~124 ~1309 light_gray_concrete
-setblock ~34 ~124 ~1309 spruce_fence
-setblock ~35 ~124 ~1309 light_gray_concrete
-setblock ~36 ~124 ~1309 tuff
-fill ~37 ~124 ~1309 ~39 ~124 ~1309 light_gray_concrete
-setblock ~40 ~124 ~1309 cracked_stone_bricks
-setblock ~41 ~124 ~1309 andesite
-setblock ~42 ~124 ~1309 spruce_fence
-setblock ~43 ~124 ~1309 light_gray_concrete
+setblock ~27 ~124 ~1309 spruce_fence
+setblock ~28 ~124 ~1309 light_gray_concrete
+setblock ~29 ~124 ~1309 gray_concrete
+setblock ~30 ~124 ~1309 light_gray_concrete
+setblock ~31 ~124 ~1309 gray_concrete
+setblock ~32 ~124 ~1309 cracked_stone_bricks
+fill ~33 ~124 ~1309 ~34 ~124 ~1309 light_gray_concrete
+setblock ~35 ~124 ~1309 spruce_fence
+setblock ~36 ~124 ~1309 light_gray_concrete
 fill ~25 ~124 ~1310 ~26 ~124 ~1310 air
-setblock ~32 ~124 ~1310 packed_mud
-setblock ~33 ~124 ~1310 andesite
-setblock ~34 ~124 ~1310 tuff
-setblock ~35 ~124 ~1310 light_gray_concrete
+setblock ~27 ~124 ~1310 andesite
+fill ~28 ~124 ~1310 ~29 ~124 ~1310 cracked_stone_bricks
+fill ~30 ~124 ~1310 ~31 ~124 ~1310 light_gray_concrete
+setblock ~32 ~124 ~1310 andesite
+fill ~33 ~124 ~1310 ~34 ~124 ~1310 light_gray_concrete
+setblock ~35 ~124 ~1310 gray_concrete
 setblock ~36 ~124 ~1310 cracked_stone_bricks
-setblock ~37 ~124 ~1310 andesite
-setblock ~38 ~124 ~1310 gray_concrete
-setblock ~39 ~124 ~1310 light_gray_concrete
-setblock ~40 ~124 ~1310 cracked_stone_bricks
-fill ~41 ~124 ~1310 ~42 ~124 ~1310 light_gray_concrete
-setblock ~43 ~124 ~1310 andesite
 fill ~25 ~124 ~1311 ~26 ~124 ~1311 air
-setblock ~33 ~124 ~1311 light_gray_concrete
-setblock ~34 ~124 ~1311 cracked_stone_bricks
-fill ~35 ~124 ~1311 ~37 ~124 ~1311 light_gray_concrete
-setblock ~38 ~124 ~1311 andesite
-fill ~39 ~124 ~1311 ~40 ~124 ~1311 gray_concrete
-setblock ~41 ~124 ~1311 light_gray_concrete
-setblock ~42 ~124 ~1311 andesite
-setblock ~43 ~124 ~1311 light_gray_concrete
+setblock ~27 ~124 ~1311 light_gray_concrete
+setblock ~28 ~124 ~1311 andesite
+setblock ~29 ~124 ~1311 tuff
+fill ~30 ~124 ~1311 ~31 ~124 ~1311 light_gray_concrete
+setblock ~32 ~124 ~1311 andesite
+fill ~33 ~124 ~1311 ~34 ~124 ~1311 light_gray_concrete
+setblock ~35 ~124 ~1311 cracked_stone_bricks
+setblock ~36 ~124 ~1311 light_gray_concrete
 fill ~25 ~124 ~1312 ~26 ~124 ~1312 air
-fill ~33 ~124 ~1312 ~34 ~124 ~1312 light_gray_concrete
-setblock ~35 ~124 ~1312 gray_concrete
+setblock ~27 ~124 ~1312 light_gray_concrete
+fill ~28 ~124 ~1312 ~29 ~124 ~1312 gray_concrete
+fill ~30 ~124 ~1312 ~34 ~124 ~1312 light_gray_concrete
+setblock ~35 ~124 ~1312 cracked_stone_bricks
 setblock ~36 ~124 ~1312 light_gray_concrete
-setblock ~37 ~124 ~1312 andesite
-fill ~38 ~124 ~1312 ~40 ~124 ~1312 light_gray_concrete
-setblock ~41 ~124 ~1312 gray_concrete
-setblock ~42 ~124 ~1312 light_gray_concrete
-setblock ~43 ~124 ~1312 andesite
 fill ~25 ~124 ~1313 ~26 ~124 ~1313 air
-setblock ~33 ~124 ~1313 gray_concrete
-setblock ~34 ~124 ~1313 light_gray_concrete
-setblock ~35 ~124 ~1313 andesite
-fill ~36 ~124 ~1313 ~37 ~124 ~1313 light_gray_concrete
-setblock ~38 ~124 ~1313 tuff
-setblock ~39 ~124 ~1313 light_gray_concrete
-setblock ~40 ~124 ~1313 cracked_stone_bricks
-fill ~41 ~124 ~1313 ~42 ~124 ~1313 light_gray_concrete
-setblock ~43 ~124 ~1313 tuff
+setblock ~27 ~124 ~1313 cracked_stone_bricks
+setblock ~28 ~124 ~1313 light_gray_concrete
+setblock ~29 ~124 ~1313 gray_concrete
+fill ~30 ~124 ~1313 ~31 ~124 ~1313 cracked_stone_bricks
+setblock ~32 ~124 ~1313 light_gray_concrete
+fill ~33 ~124 ~1313 ~35 ~124 ~1313 andesite
+setblock ~36 ~124 ~1313 light_gray_concrete
 fill ~25 ~124 ~1314 ~26 ~124 ~1314 air
-setblock ~33 ~124 ~1314 andesite
-setblock ~34 ~124 ~1314 gray_concrete
-fill ~35 ~124 ~1314 ~38 ~124 ~1314 light_gray_concrete
-setblock ~39 ~124 ~1314 tuff
-setblock ~40 ~124 ~1314 light_gray_concrete
-setblock ~41 ~124 ~1314 cracked_stone_bricks
-fill ~42 ~124 ~1314 ~43 ~124 ~1314 light_gray_concrete
+fill ~27 ~124 ~1314 ~28 ~124 ~1314 light_gray_concrete
+fill ~29 ~124 ~1314 ~30 ~124 ~1314 andesite
+fill ~31 ~124 ~1314 ~33 ~124 ~1314 gray_concrete
+setblock ~34 ~124 ~1314 cracked_stone_bricks
+setblock ~35 ~124 ~1314 gray_concrete
+setblock ~36 ~124 ~1314 andesite
 fill ~25 ~124 ~1315 ~26 ~124 ~1315 air
-setblock ~33 ~124 ~1315 gray_concrete
-setblock ~34 ~124 ~1315 light_gray_concrete
-setblock ~35 ~124 ~1315 tuff
-setblock ~36 ~124 ~1315 gray_concrete
-fill ~37 ~124 ~1315 ~38 ~124 ~1315 light_gray_concrete
-setblock ~39 ~124 ~1315 gray_concrete
-setblock ~40 ~124 ~1315 light_gray_concrete
-setblock ~41 ~124 ~1315 cracked_stone_bricks
-setblock ~42 ~124 ~1315 spruce_fence
-setblock ~43 ~124 ~1315 light_gray_concrete
+fill ~27 ~124 ~1315 ~28 ~124 ~1315 light_gray_concrete
+setblock ~29 ~124 ~1315 andesite
+fill ~30 ~124 ~1315 ~31 ~124 ~1315 light_gray_concrete
+fill ~32 ~124 ~1315 ~33 ~124 ~1315 gray_concrete
+setblock ~34 ~124 ~1315 andesite
+setblock ~35 ~124 ~1315 gray_concrete
+setblock ~36 ~124 ~1315 andesite
 fill ~16 ~124 ~1316 ~20 ~124 ~1316 light_gray_concrete
 setblock ~21 ~124 ~1316 tuff
 setblock ~22 ~124 ~1316 light_gray_concrete
@@ -6027,14 +2916,13 @@ setblock ~24 ~124 ~1316 light_gray_concrete
 setblock ~25 ~124 ~1316 air
 setblock ~26 ~124 ~1316 gravel
 setblock ~27 ~124 ~1316 light_gray_concrete
-setblock ~28 ~124 ~1316 gray_concrete
-fill ~33 ~124 ~1316 ~34 ~124 ~1316 light_gray_concrete
-setblock ~35 ~124 ~1316 cracked_stone_bricks
-fill ~36 ~124 ~1316 ~38 ~124 ~1316 light_gray_concrete
-setblock ~39 ~124 ~1316 andesite
-setblock ~40 ~124 ~1316 tuff
-setblock ~41 ~124 ~1316 cracked_stone_bricks
-fill ~42 ~124 ~1316 ~43 ~124 ~1316 light_gray_concrete
+setblock ~28 ~124 ~1316 tuff
+fill ~29 ~124 ~1316 ~30 ~124 ~1316 light_gray_concrete
+setblock ~31 ~124 ~1316 gray_concrete
+fill ~32 ~124 ~1316 ~33 ~124 ~1316 light_gray_concrete
+setblock ~34 ~124 ~1316 gray_concrete
+setblock ~35 ~124 ~1316 andesite
+setblock ~36 ~124 ~1316 cracked_stone_bricks
 setblock ~16 ~124 ~1317 andesite
 setblock ~17 ~124 ~1317 gray_concrete
 setblock ~18 ~124 ~1317 light_gray_concrete
@@ -6175,128 +3063,145 @@ setblock ~28 ~124 ~1334 gravel
 fill ~27 ~124 ~1335 ~28 ~124 ~1335 spruce_planks
 setblock ~27 ~124 ~1336 gravel
 setblock ~28 ~124 ~1336 air
-setblock ~31 ~124 ~1336 polished_andesite
-setblock ~32 ~124 ~1336 light_gray_concrete
-fill ~33 ~124 ~1336 ~34 ~124 ~1336 gray_concrete
-fill ~35 ~124 ~1336 ~36 ~124 ~1336 light_gray_concrete
-setblock ~37 ~124 ~1336 cracked_stone_bricks
-setblock ~38 ~124 ~1336 andesite
-fill ~39 ~124 ~1336 ~40 ~124 ~1336 gray_concrete
-setblock ~41 ~124 ~1336 polished_andesite
 setblock ~27 ~124 ~1337 spruce_planks
-setblock ~31 ~124 ~1337 light_gray_concrete
-fill ~32 ~124 ~1337 ~40 ~124 ~1337 polished_andesite
-setblock ~41 ~124 ~1337 gray_concrete
+setblock ~24 ~124 ~1338 andesite
+setblock ~25 ~124 ~1338 light_gray_concrete
 setblock ~26 ~124 ~1338 gravel
 setblock ~27 ~124 ~1338 air
-setblock ~31 ~124 ~1338 andesite
-fill ~32 ~124 ~1338 ~40 ~124 ~1338 polished_andesite
-setblock ~41 ~124 ~1338 andesite
+setblock ~28 ~124 ~1338 andesite
+setblock ~29 ~124 ~1338 gray_concrete
+setblock ~30 ~124 ~1338 light_gray_concrete
+fill ~31 ~124 ~1338 ~32 ~124 ~1338 cracked_stone_bricks
+fill ~33 ~124 ~1338 ~34 ~124 ~1338 light_gray_concrete
+setblock ~24 ~124 ~1339 light_gray_concrete
+setblock ~25 ~124 ~1339 cracked_stone_bricks
 setblock ~26 ~124 ~1339 spruce_planks
 setblock ~27 ~124 ~1339 air
-setblock ~31 ~124 ~1339 light_gray_concrete
-fill ~32 ~124 ~1339 ~40 ~124 ~1339 polished_andesite
-setblock ~41 ~124 ~1339 light_gray_concrete
+fill ~28 ~124 ~1339 ~30 ~124 ~1339 light_gray_concrete
+setblock ~31 ~124 ~1339 gray_concrete
+setblock ~32 ~124 ~1339 tuff
+fill ~33 ~124 ~1339 ~34 ~124 ~1339 light_gray_concrete
+setblock ~24 ~124 ~1340 light_gray_concrete
+setblock ~25 ~124 ~1340 cracked_stone_bricks
 setblock ~26 ~124 ~1340 gravel
 setblock ~27 ~124 ~1340 air
-fill ~31 ~124 ~1340 ~41 ~124 ~1340 polished_andesite
+setblock ~28 ~124 ~1340 tuff
+fill ~29 ~124 ~1340 ~32 ~124 ~1340 light_gray_concrete
+setblock ~33 ~124 ~1340 andesite
+setblock ~34 ~124 ~1340 light_gray_concrete
+fill ~24 ~124 ~1341 ~25 ~124 ~1341 light_gray_concrete
 setblock ~26 ~124 ~1341 air
-setblock ~31 ~124 ~1341 light_gray_concrete
-fill ~32 ~124 ~1341 ~40 ~124 ~1341 polished_andesite
-setblock ~41 ~124 ~1341 light_gray_concrete
+fill ~27 ~124 ~1341 ~30 ~124 ~1341 light_gray_concrete
+setblock ~31 ~124 ~1341 tuff
+fill ~32 ~124 ~1341 ~33 ~124 ~1341 light_gray_concrete
+setblock ~34 ~124 ~1341 andesite
+setblock ~24 ~124 ~1342 light_gray_concrete
 setblock ~25 ~124 ~1342 gravel
 setblock ~26 ~124 ~1342 air
-setblock ~31 ~124 ~1342 cracked_stone_bricks
-fill ~32 ~124 ~1342 ~40 ~124 ~1342 polished_andesite
-setblock ~41 ~124 ~1342 light_gray_concrete
+setblock ~27 ~124 ~1342 andesite
+setblock ~28 ~124 ~1342 gray_concrete
+setblock ~29 ~124 ~1342 cracked_stone_bricks
+setblock ~30 ~124 ~1342 tuff
+setblock ~31 ~124 ~1342 light_gray_concrete
+setblock ~32 ~124 ~1342 gray_concrete
+fill ~33 ~124 ~1342 ~34 ~124 ~1342 light_gray_concrete
+setblock ~24 ~124 ~1343 light_gray_concrete
 setblock ~25 ~124 ~1343 spruce_planks
 setblock ~26 ~124 ~1343 air
-setblock ~31 ~124 ~1343 light_gray_concrete
-setblock ~32 ~124 ~1343 spruce_fence
-fill ~33 ~124 ~1343 ~39 ~124 ~1343 polished_andesite
-setblock ~40 ~124 ~1343 spruce_fence
-setblock ~41 ~124 ~1343 andesite
+fill ~27 ~124 ~1343 ~28 ~124 ~1343 light_gray_concrete
+setblock ~29 ~124 ~1343 andesite
+setblock ~30 ~124 ~1343 light_gray_concrete
+setblock ~31 ~124 ~1343 andesite
+setblock ~32 ~124 ~1343 cracked_stone_bricks
+setblock ~33 ~124 ~1343 tuff
+setblock ~34 ~124 ~1343 andesite
+setblock ~24 ~124 ~1344 gray_concrete
 setblock ~25 ~124 ~1344 gravel
 setblock ~26 ~124 ~1344 air
-setblock ~31 ~124 ~1344 polished_andesite
-fill ~32 ~124 ~1344 ~36 ~124 ~1344 light_gray_concrete
-setblock ~37 ~124 ~1344 gray_concrete
-setblock ~38 ~124 ~1344 andesite
-fill ~39 ~124 ~1344 ~40 ~124 ~1344 gray_concrete
-setblock ~41 ~124 ~1344 polished_andesite
+setblock ~27 ~124 ~1344 andesite
+setblock ~28 ~124 ~1344 light_gray_concrete
+setblock ~29 ~124 ~1344 gray_concrete
+setblock ~30 ~124 ~1344 light_gray_concrete
+fill ~31 ~124 ~1344 ~32 ~124 ~1344 andesite
+setblock ~33 ~124 ~1344 gray_concrete
+setblock ~34 ~124 ~1344 light_gray_concrete
+setblock ~24 ~124 ~1345 light_gray_concrete
 setblock ~25 ~124 ~1345 air
+setblock ~26 ~124 ~1345 gray_concrete
+setblock ~27 ~124 ~1345 andesite
+fill ~28 ~124 ~1345 ~29 ~124 ~1345 cracked_stone_bricks
+setblock ~30 ~124 ~1345 light_gray_concrete
+setblock ~31 ~124 ~1345 cracked_stone_bricks
+fill ~32 ~124 ~1345 ~33 ~124 ~1345 light_gray_concrete
+setblock ~34 ~124 ~1345 andesite
+setblock ~24 ~124 ~1346 light_gray_concrete
+setblock ~25 ~124 ~1346 andesite
+setblock ~26 ~124 ~1346 light_gray_concrete
+setblock ~27 ~124 ~1346 andesite
+fill ~28 ~124 ~1346 ~30 ~124 ~1346 light_gray_concrete
+fill ~31 ~124 ~1346 ~32 ~124 ~1346 andesite
+fill ~33 ~124 ~1346 ~34 ~124 ~1346 light_gray_concrete
 setblock ~8 ~124 ~1347 iron_bars
 setblock ~8 ~124 ~1348 cobweb
 setblock ~8 ~124 ~1349 iron_bars
 setblock ~8 ~124 ~1350 iron_bars
-fill ~99 ~124 ~1459 ~101 ~124 ~1459 white_concrete_powder
-setblock ~98 ~124 ~1460 white_concrete_powder
+fill ~99 ~124 ~1459 ~101 ~124 ~1459 white_concrete
+setblock ~98 ~124 ~1460 white_concrete
 fill ~99 ~124 ~1460 ~101 ~124 ~1460 air
-setblock ~102 ~124 ~1460 white_concrete_powder
-setblock ~97 ~124 ~1461 white_concrete_powder
+setblock ~102 ~124 ~1460 white_concrete
+setblock ~97 ~124 ~1461 white_concrete
 setblock ~98 ~124 ~1461 air
 setblock ~99 ~124 ~1461 stone_brick_stairs[facing=north]
 fill ~100 ~124 ~1461 ~102 ~124 ~1461 air
-setblock ~103 ~124 ~1461 white_concrete_powder
-setblock ~97 ~124 ~1462 white_concrete_powder
+setblock ~103 ~124 ~1461 white_concrete
+setblock ~97 ~124 ~1462 white_concrete
 fill ~98 ~124 ~1462 ~99 ~124 ~1462 air
 setblock ~100 ~124 ~1462 polished_andesite
 fill ~101 ~124 ~1462 ~102 ~124 ~1462 air
-setblock ~103 ~124 ~1462 white_concrete_powder
-setblock ~97 ~124 ~1463 white_concrete_powder
+setblock ~103 ~124 ~1462 white_concrete
+setblock ~97 ~124 ~1463 white_concrete
 fill ~98 ~124 ~1463 ~102 ~124 ~1463 air
-setblock ~103 ~124 ~1463 white_concrete_powder
-setblock ~98 ~124 ~1464 white_concrete_powder
+setblock ~103 ~124 ~1463 white_concrete
+setblock ~98 ~124 ~1464 white_concrete
 fill ~99 ~124 ~1464 ~101 ~124 ~1464 air
-setblock ~102 ~124 ~1464 white_concrete_powder
-fill ~99 ~124 ~1465 ~101 ~124 ~1465 white_concrete_powder
-fill ~26 ~125 ~1286 ~32 ~125 ~1286 light_gray_concrete
-setblock ~33 ~125 ~1286 andesite
-setblock ~34 ~125 ~1286 gray_concrete
-fill ~26 ~125 ~1287 ~28 ~125 ~1287 andesite
+setblock ~102 ~124 ~1464 white_concrete
+fill ~99 ~124 ~1465 ~101 ~124 ~1465 white_concrete
+setblock ~30 ~125 ~1286 light_gray_concrete
+setblock ~31 ~125 ~1286 tuff
+fill ~32 ~125 ~1286 ~34 ~125 ~1286 light_gray_concrete
+setblock ~27 ~125 ~1287 gray_concrete
+setblock ~28 ~125 ~1287 andesite
 setblock ~29 ~125 ~1287 light_gray_concrete
-setblock ~30 ~125 ~1287 cracked_stone_bricks
-fill ~31 ~125 ~1287 ~33 ~125 ~1287 light_gray_concrete
+setblock ~30 ~125 ~1287 andesite
+fill ~31 ~125 ~1287 ~32 ~125 ~1287 light_gray_concrete
+setblock ~33 ~125 ~1287 andesite
 fill ~26 ~125 ~1288 ~27 ~125 ~1288 light_gray_concrete
-setblock ~28 ~125 ~1288 tuff
-fill ~29 ~125 ~1288 ~31 ~125 ~1288 light_gray_concrete
-setblock ~32 ~125 ~1288 cracked_stone_bricks
-fill ~26 ~125 ~1289 ~30 ~125 ~1289 light_gray_concrete
-setblock ~31 ~125 ~1289 tuff
-setblock ~32 ~125 ~1289 andesite
-fill ~33 ~125 ~1289 ~34 ~125 ~1289 light_gray_concrete
-setblock ~26 ~125 ~1290 andesite
-setblock ~27 ~125 ~1290 gray_concrete
-fill ~28 ~125 ~1290 ~31 ~125 ~1290 light_gray_concrete
-setblock ~32 ~125 ~1290 gray_concrete
-fill ~33 ~125 ~1290 ~34 ~125 ~1290 light_gray_concrete
-setblock ~26 ~125 ~1291 light_gray_concrete
-setblock ~27 ~125 ~1291 gray_concrete
-fill ~28 ~125 ~1291 ~33 ~125 ~1291 light_gray_concrete
+setblock ~28 ~125 ~1288 gray_concrete
+fill ~29 ~125 ~1288 ~32 ~125 ~1288 light_gray_concrete
+setblock ~26 ~125 ~1289 light_gray_concrete
+setblock ~27 ~125 ~1289 gray_concrete
+fill ~28 ~125 ~1289 ~30 ~125 ~1289 light_gray_concrete
+setblock ~31 ~125 ~1289 cracked_stone_bricks
+fill ~32 ~125 ~1289 ~34 ~125 ~1289 gray_concrete
+setblock ~26 ~125 ~1290 cracked_stone_bricks
+fill ~27 ~125 ~1290 ~29 ~125 ~1290 light_gray_concrete
+setblock ~30 ~125 ~1290 andesite
+fill ~31 ~125 ~1290 ~32 ~125 ~1290 light_gray_concrete
+setblock ~33 ~125 ~1290 gray_concrete
+setblock ~34 ~125 ~1290 andesite
+fill ~26 ~125 ~1291 ~31 ~125 ~1291 light_gray_concrete
 setblock ~34 ~125 ~1291 gray_concrete
-setblock ~26 ~125 ~1292 andesite
-setblock ~27 ~125 ~1292 light_gray_concrete
-setblock ~29 ~125 ~1292 light_gray_concrete
-setblock ~30 ~125 ~1292 andesite
-setblock ~31 ~125 ~1292 gray_concrete
-setblock ~32 ~125 ~1292 cracked_stone_bricks
-setblock ~33 ~125 ~1292 gray_concrete
-setblock ~34 ~125 ~1292 andesite
-setblock ~26 ~125 ~1293 gray_concrete
-setblock ~27 ~125 ~1293 tuff
-setblock ~29 ~125 ~1293 gray_concrete
-setblock ~30 ~125 ~1293 cracked_stone_bricks
-setblock ~31 ~125 ~1293 andesite
-setblock ~32 ~125 ~1293 light_gray_concrete
-setblock ~33 ~125 ~1293 andesite
-setblock ~34 ~125 ~1293 light_gray_concrete
-setblock ~26 ~125 ~1294 light_gray_concrete
-setblock ~29 ~125 ~1294 andesite
+setblock ~26 ~125 ~1292 light_gray_concrete
+setblock ~27 ~125 ~1292 tuff
+fill ~29 ~125 ~1292 ~30 ~125 ~1292 light_gray_concrete
+setblock ~26 ~125 ~1293 light_gray_concrete
+setblock ~27 ~125 ~1293 gray_concrete
+setblock ~29 ~125 ~1293 andesite
+fill ~30 ~125 ~1293 ~31 ~125 ~1293 light_gray_concrete
+setblock ~26 ~125 ~1294 gray_concrete
+setblock ~29 ~125 ~1294 light_gray_concrete
 setblock ~30 ~125 ~1294 cracked_stone_bricks
-setblock ~31 ~125 ~1294 andesite
-setblock ~32 ~125 ~1294 tuff
-setblock ~33 ~125 ~1294 light_gray_concrete
-setblock ~34 ~125 ~1294 gray_concrete
+setblock ~31 ~125 ~1294 light_gray_concrete
 fill ~39 ~125 ~1295 ~42 ~125 ~1295 air
 fill ~39 ~125 ~1296 ~42 ~125 ~1296 air
 fill ~39 ~125 ~1297 ~42 ~125 ~1297 air
@@ -6314,45 +3219,38 @@ setblock ~25 ~125 ~1306 gravel
 setblock ~26 ~125 ~1306 air
 fill ~25 ~125 ~1307 ~26 ~125 ~1307 air
 fill ~25 ~125 ~1308 ~26 ~125 ~1308 air
-setblock ~33 ~125 ~1308 polished_andesite
-setblock ~34 ~125 ~1308 light_gray_concrete
-setblock ~35 ~125 ~1308 cracked_stone_bricks
-fill ~36 ~125 ~1308 ~38 ~125 ~1308 light_gray_concrete
-setblock ~39 ~125 ~1308 gray_concrete
-fill ~40 ~125 ~1308 ~41 ~125 ~1308 light_gray_concrete
-setblock ~42 ~125 ~1308 andesite
-setblock ~43 ~125 ~1308 polished_andesite
+setblock ~27 ~125 ~1308 light_gray_concrete
+setblock ~28 ~125 ~1308 tuff
+setblock ~29 ~125 ~1308 light_gray_concrete
+setblock ~30 ~125 ~1308 gray_concrete
+fill ~31 ~125 ~1308 ~32 ~125 ~1308 light_gray_concrete
+setblock ~33 ~125 ~1308 tuff
+fill ~34 ~125 ~1308 ~35 ~125 ~1308 light_gray_concrete
+setblock ~36 ~125 ~1308 polished_andesite
 fill ~25 ~125 ~1309 ~26 ~125 ~1309 air
-setblock ~33 ~125 ~1309 andesite
-setblock ~34 ~125 ~1309 spruce_fence
-fill ~35 ~125 ~1309 ~41 ~125 ~1309 polished_andesite
-setblock ~42 ~125 ~1309 spruce_fence
-setblock ~43 ~125 ~1309 andesite
+setblock ~27 ~125 ~1309 spruce_fence
+fill ~28 ~125 ~1309 ~34 ~125 ~1309 polished_andesite
+setblock ~35 ~125 ~1309 spruce_fence
+setblock ~36 ~125 ~1309 light_gray_concrete
 fill ~25 ~125 ~1310 ~26 ~125 ~1310 air
-setblock ~33 ~125 ~1310 gray_concrete
-fill ~34 ~125 ~1310 ~42 ~125 ~1310 polished_andesite
-setblock ~43 ~125 ~1310 light_gray_concrete
+fill ~27 ~125 ~1310 ~35 ~125 ~1310 polished_andesite
+setblock ~36 ~125 ~1310 light_gray_concrete
 fill ~25 ~125 ~1311 ~26 ~125 ~1311 air
-setblock ~33 ~125 ~1311 gray_concrete
-fill ~34 ~125 ~1311 ~42 ~125 ~1311 polished_andesite
-setblock ~43 ~125 ~1311 cracked_stone_bricks
+fill ~27 ~125 ~1311 ~35 ~125 ~1311 polished_andesite
+setblock ~36 ~125 ~1311 light_gray_concrete
 fill ~25 ~125 ~1312 ~26 ~125 ~1312 air
-fill ~33 ~125 ~1312 ~43 ~125 ~1312 polished_andesite
+fill ~27 ~125 ~1312 ~36 ~125 ~1312 polished_andesite
 fill ~25 ~125 ~1313 ~26 ~125 ~1313 air
-setblock ~33 ~125 ~1313 light_gray_concrete
-fill ~34 ~125 ~1313 ~42 ~125 ~1313 polished_andesite
-setblock ~43 ~125 ~1313 light_gray_concrete
+fill ~27 ~125 ~1313 ~35 ~125 ~1313 polished_andesite
+setblock ~36 ~125 ~1313 gray_concrete
 setblock ~14 ~125 ~1314 mud_bricks
 fill ~25 ~125 ~1314 ~26 ~125 ~1314 air
-setblock ~33 ~125 ~1314 light_gray_concrete
-fill ~34 ~125 ~1314 ~42 ~125 ~1314 polished_andesite
-setblock ~43 ~125 ~1314 light_gray_concrete
-setblock ~24 ~125 ~1315 mud_bricks
+fill ~27 ~125 ~1314 ~35 ~125 ~1314 polished_andesite
+setblock ~36 ~125 ~1314 andesite
+setblock ~24 ~125 ~1315 packed_mud
 fill ~25 ~125 ~1315 ~26 ~125 ~1315 air
-setblock ~33 ~125 ~1315 light_gray_concrete
-fill ~34 ~125 ~1315 ~41 ~125 ~1315 polished_andesite
-setblock ~42 ~125 ~1315 spruce_fence
-setblock ~43 ~125 ~1315 andesite
+fill ~27 ~125 ~1315 ~35 ~125 ~1315 polished_andesite
+setblock ~36 ~125 ~1315 tuff
 setblock ~16 ~125 ~1316 andesite
 setblock ~17 ~125 ~1316 cracked_stone_bricks
 setblock ~18 ~125 ~1316 light_gray_concrete
@@ -6363,18 +3261,11 @@ setblock ~22 ~125 ~1316 light_gray_concrete
 setblock ~23 ~125 ~1316 tuff
 setblock ~24 ~125 ~1316 light_gray_concrete
 fill ~25 ~125 ~1316 ~26 ~125 ~1316 air
-fill ~27 ~125 ~1316 ~28 ~125 ~1316 light_gray_concrete
-setblock ~33 ~125 ~1316 polished_andesite
-setblock ~34 ~125 ~1316 tuff
-setblock ~35 ~125 ~1316 gray_concrete
-setblock ~36 ~125 ~1316 light_gray_concrete
-setblock ~37 ~125 ~1316 andesite
-setblock ~38 ~125 ~1316 gray_concrete
-setblock ~39 ~125 ~1316 light_gray_concrete
-setblock ~40 ~125 ~1316 andesite
-setblock ~41 ~125 ~1316 light_gray_concrete
-setblock ~42 ~125 ~1316 tuff
-setblock ~43 ~125 ~1316 polished_andesite
+setblock ~27 ~125 ~1316 andesite
+fill ~28 ~125 ~1316 ~30 ~125 ~1316 light_gray_concrete
+setblock ~31 ~125 ~1316 tuff
+fill ~32 ~125 ~1316 ~35 ~125 ~1316 light_gray_concrete
+setblock ~36 ~125 ~1316 polished_andesite
 fill ~16 ~125 ~1317 ~17 ~125 ~1317 light_gray_concrete
 setblock ~18 ~125 ~1317 andesite
 setblock ~19 ~125 ~1317 light_gray_concrete
@@ -6500,68 +3391,80 @@ setblock ~27 ~125 ~1334 gravel
 setblock ~28 ~125 ~1334 air
 fill ~27 ~125 ~1335 ~28 ~125 ~1335 air
 fill ~27 ~125 ~1336 ~28 ~125 ~1336 air
-setblock ~31 ~125 ~1336 polished_andesite
-fill ~32 ~125 ~1336 ~40 ~125 ~1336 air
-setblock ~41 ~125 ~1336 polished_andesite
 setblock ~26 ~125 ~1337 spruce_planks
 setblock ~27 ~125 ~1337 air
-setblock ~31 ~125 ~1337 air
-setblock ~32 ~125 ~1337 spruce_fence
-setblock ~33 ~125 ~1337 light_gray_concrete
-setblock ~34 ~125 ~1337 andesite
-setblock ~35 ~125 ~1337 cracked_stone_bricks
-fill ~36 ~125 ~1337 ~37 ~125 ~1337 light_gray_concrete
-setblock ~38 ~125 ~1337 stone
-setblock ~39 ~125 ~1337 cracked_stone_bricks
-setblock ~40 ~125 ~1337 spruce_fence
-setblock ~41 ~125 ~1337 air
+setblock ~24 ~125 ~1338 gray_concrete
+setblock ~25 ~125 ~1338 light_gray_concrete
 fill ~26 ~125 ~1338 ~27 ~125 ~1338 air
-setblock ~30 ~125 ~1338 mud_bricks
-setblock ~31 ~125 ~1338 air
-setblock ~32 ~125 ~1338 tuff
-fill ~33 ~125 ~1338 ~39 ~125 ~1338 air
-setblock ~40 ~125 ~1338 light_gray_concrete
-setblock ~41 ~125 ~1338 air
+setblock ~28 ~125 ~1338 gray_concrete
+fill ~29 ~125 ~1338 ~32 ~125 ~1338 light_gray_concrete
+setblock ~33 ~125 ~1338 gray_concrete
+setblock ~34 ~125 ~1338 light_gray_concrete
+setblock ~24 ~125 ~1339 gray_concrete
+setblock ~25 ~125 ~1339 light_gray_concrete
 fill ~26 ~125 ~1339 ~27 ~125 ~1339 air
-setblock ~31 ~125 ~1339 air
-setblock ~32 ~125 ~1339 andesite
-fill ~33 ~125 ~1339 ~39 ~125 ~1339 air
-setblock ~40 ~125 ~1339 cracked_stone_bricks
-setblock ~41 ~125 ~1339 air
+fill ~28 ~125 ~1339 ~29 ~125 ~1339 light_gray_concrete
+setblock ~30 ~125 ~1339 cracked_stone_bricks
+setblock ~31 ~125 ~1339 gray_concrete
+setblock ~32 ~125 ~1339 cracked_stone_bricks
+setblock ~33 ~125 ~1339 spruce_fence
+setblock ~34 ~125 ~1339 gray_concrete
+setblock ~24 ~125 ~1340 andesite
+setblock ~25 ~125 ~1340 light_gray_concrete
 fill ~26 ~125 ~1340 ~27 ~125 ~1340 air
-fill ~31 ~125 ~1340 ~39 ~125 ~1340 air
-setblock ~40 ~125 ~1340 stone
-setblock ~41 ~125 ~1340 polished_andesite
+setblock ~28 ~125 ~1340 tuff
+setblock ~29 ~125 ~1340 andesite
+setblock ~30 ~125 ~1340 light_gray_concrete
+setblock ~31 ~125 ~1340 tuff
+setblock ~32 ~125 ~1340 light_gray_concrete
+setblock ~33 ~125 ~1340 cracked_stone_bricks
+setblock ~34 ~125 ~1340 gray_concrete
+setblock ~24 ~125 ~1341 light_gray_concrete
 setblock ~25 ~125 ~1341 spruce_planks
 setblock ~26 ~125 ~1341 air
-setblock ~31 ~125 ~1341 air
-setblock ~32 ~125 ~1341 andesite
-fill ~33 ~125 ~1341 ~39 ~125 ~1341 air
-setblock ~40 ~125 ~1341 stone
-setblock ~41 ~125 ~1341 air
+fill ~27 ~125 ~1341 ~28 ~125 ~1341 cracked_stone_bricks
+setblock ~29 ~125 ~1341 light_gray_concrete
+setblock ~30 ~125 ~1341 andesite
+setblock ~31 ~125 ~1341 light_gray_concrete
+setblock ~32 ~125 ~1341 gray_concrete
+setblock ~33 ~125 ~1341 tuff
+setblock ~34 ~125 ~1341 andesite
+setblock ~24 ~125 ~1342 light_gray_concrete
 fill ~25 ~125 ~1342 ~26 ~125 ~1342 air
-setblock ~31 ~125 ~1342 air
-setblock ~32 ~125 ~1342 andesite
-fill ~33 ~125 ~1342 ~39 ~125 ~1342 air
-setblock ~40 ~125 ~1342 andesite
-setblock ~41 ~125 ~1342 air
+fill ~27 ~125 ~1342 ~28 ~125 ~1342 light_gray_concrete
+setblock ~29 ~125 ~1342 andesite
+fill ~30 ~125 ~1342 ~32 ~125 ~1342 light_gray_concrete
+setblock ~33 ~125 ~1342 tuff
+setblock ~34 ~125 ~1342 andesite
+setblock ~24 ~125 ~1343 light_gray_concrete
 setblock ~25 ~125 ~1343 air
-setblock ~31 ~125 ~1343 air
-setblock ~32 ~125 ~1343 spruce_fence
-setblock ~33 ~125 ~1343 andesite
-setblock ~34 ~125 ~1343 tuff
-setblock ~35 ~125 ~1343 cracked_stone_bricks
-setblock ~36 ~125 ~1343 light_gray_concrete
-setblock ~37 ~125 ~1343 tuff
-setblock ~38 ~125 ~1343 light_gray_concrete
-setblock ~39 ~125 ~1343 cracked_stone_bricks
-setblock ~40 ~125 ~1343 spruce_fence
-setblock ~41 ~125 ~1343 air
+fill ~26 ~125 ~1343 ~27 ~125 ~1343 light_gray_concrete
+setblock ~28 ~125 ~1343 andesite
+setblock ~29 ~125 ~1343 light_gray_concrete
+setblock ~30 ~125 ~1343 cracked_stone_bricks
+setblock ~31 ~125 ~1343 light_gray_concrete
+setblock ~32 ~125 ~1343 andesite
+fill ~33 ~125 ~1343 ~34 ~125 ~1343 gray_concrete
+setblock ~24 ~125 ~1344 gray_concrete
 setblock ~25 ~125 ~1344 air
-setblock ~31 ~125 ~1344 polished_andesite
-fill ~32 ~125 ~1344 ~40 ~125 ~1344 air
-setblock ~41 ~125 ~1344 polished_andesite
+setblock ~26 ~125 ~1344 gray_concrete
+fill ~27 ~125 ~1344 ~28 ~125 ~1344 light_gray_concrete
+setblock ~29 ~125 ~1344 gray_concrete
+fill ~30 ~125 ~1344 ~33 ~125 ~1344 light_gray_concrete
+setblock ~34 ~125 ~1344 cracked_stone_bricks
 setblock ~24 ~125 ~1345 mud_bricks
+setblock ~25 ~125 ~1345 spruce_fence
+setblock ~26 ~125 ~1345 light_gray_concrete
+setblock ~27 ~125 ~1345 gray_concrete
+fill ~28 ~125 ~1345 ~32 ~125 ~1345 light_gray_concrete
+setblock ~33 ~125 ~1345 spruce_fence
+setblock ~34 ~125 ~1345 light_gray_concrete
+fill ~24 ~125 ~1346 ~25 ~125 ~1346 andesite
+setblock ~26 ~125 ~1346 light_gray_concrete
+setblock ~27 ~125 ~1346 gray_concrete
+fill ~28 ~125 ~1346 ~32 ~125 ~1346 light_gray_concrete
+setblock ~33 ~125 ~1346 tuff
+setblock ~34 ~125 ~1346 light_gray_concrete
 fill ~97 ~125 ~1459 ~103 ~125 ~1459 polished_andesite
 fill ~97 ~125 ~1460 ~103 ~125 ~1460 polished_andesite
 fill ~97 ~125 ~1461 ~98 ~125 ~1461 polished_andesite
@@ -6575,54 +3478,58 @@ fill ~99 ~125 ~1463 ~101 ~125 ~1463 air
 fill ~102 ~125 ~1463 ~103 ~125 ~1463 polished_andesite
 fill ~97 ~125 ~1464 ~103 ~125 ~1464 polished_andesite
 fill ~97 ~125 ~1465 ~103 ~125 ~1465 polished_andesite
-setblock ~26 ~126 ~1286 light_gray_concrete
-setblock ~27 ~126 ~1286 andesite
-setblock ~28 ~126 ~1286 light_gray_concrete
-setblock ~29 ~126 ~1286 cracked_stone_bricks
-fill ~30 ~126 ~1286 ~33 ~126 ~1286 light_gray_concrete
-setblock ~34 ~126 ~1286 cracked_stone_bricks
-setblock ~26 ~126 ~1287 light_gray_concrete
-setblock ~27 ~126 ~1287 andesite
-setblock ~28 ~126 ~1287 gray_concrete
-fill ~29 ~126 ~1287 ~34 ~126 ~1287 light_gray_concrete
-fill ~26 ~126 ~1288 ~27 ~126 ~1288 light_gray_concrete
-setblock ~28 ~126 ~1288 andesite
-setblock ~29 ~126 ~1288 light_gray_concrete
-setblock ~30 ~126 ~1288 andesite
+setblock ~26 ~126 ~1286 andesite
+setblock ~27 ~126 ~1286 light_gray_concrete
+setblock ~28 ~126 ~1286 cracked_stone_bricks
+fill ~29 ~126 ~1286 ~32 ~126 ~1286 light_gray_concrete
+setblock ~33 ~126 ~1286 andesite
+setblock ~34 ~126 ~1286 gray_concrete
+setblock ~26 ~126 ~1287 gray_concrete
+fill ~27 ~126 ~1287 ~30 ~126 ~1287 light_gray_concrete
+setblock ~31 ~126 ~1287 gray_concrete
+setblock ~32 ~126 ~1287 andesite
+setblock ~33 ~126 ~1287 tuff
+setblock ~34 ~126 ~1287 light_gray_concrete
+setblock ~26 ~126 ~1288 andesite
+setblock ~27 ~126 ~1288 gray_concrete
+fill ~28 ~126 ~1288 ~30 ~126 ~1288 andesite
 fill ~31 ~126 ~1288 ~32 ~126 ~1288 light_gray_concrete
-setblock ~33 ~126 ~1288 andesite
-setblock ~34 ~126 ~1288 tuff
-setblock ~26 ~126 ~1289 light_gray_concrete
-setblock ~27 ~126 ~1289 cracked_stone_bricks
-fill ~28 ~126 ~1289 ~29 ~126 ~1289 light_gray_concrete
-setblock ~30 ~126 ~1289 gray_concrete
-setblock ~31 ~126 ~1289 light_gray_concrete
-setblock ~32 ~126 ~1289 andesite
-setblock ~33 ~126 ~1289 cracked_stone_bricks
+setblock ~33 ~126 ~1288 gray_concrete
+setblock ~34 ~126 ~1288 cracked_stone_bricks
+fill ~26 ~126 ~1289 ~29 ~126 ~1289 light_gray_concrete
+setblock ~30 ~126 ~1289 cracked_stone_bricks
+fill ~31 ~126 ~1289 ~32 ~126 ~1289 light_gray_concrete
+setblock ~33 ~126 ~1289 tuff
 setblock ~34 ~126 ~1289 light_gray_concrete
-setblock ~26 ~126 ~1290 andesite
-fill ~27 ~126 ~1290 ~28 ~126 ~1290 tuff
-fill ~29 ~126 ~1290 ~31 ~126 ~1290 light_gray_concrete
-setblock ~32 ~126 ~1290 tuff
-setblock ~33 ~126 ~1290 gray_concrete
+setblock ~26 ~126 ~1290 gray_concrete
+fill ~27 ~126 ~1290 ~29 ~126 ~1290 light_gray_concrete
+setblock ~30 ~126 ~1290 tuff
+setblock ~31 ~126 ~1290 light_gray_concrete
+setblock ~32 ~126 ~1290 andesite
+setblock ~33 ~126 ~1290 cracked_stone_bricks
 setblock ~34 ~126 ~1290 light_gray_concrete
-fill ~26 ~126 ~1291 ~29 ~126 ~1291 light_gray_concrete
-fill ~30 ~126 ~1291 ~31 ~126 ~1291 gray_concrete
-fill ~32 ~126 ~1291 ~34 ~126 ~1291 light_gray_concrete
+fill ~26 ~126 ~1291 ~27 ~126 ~1291 light_gray_concrete
+fill ~28 ~126 ~1291 ~29 ~126 ~1291 andesite
+setblock ~30 ~126 ~1291 cracked_stone_bricks
+setblock ~31 ~126 ~1291 andesite
+setblock ~32 ~126 ~1291 light_gray_concrete
+setblock ~33 ~126 ~1291 tuff
+setblock ~34 ~126 ~1291 light_gray_concrete
 fill ~26 ~126 ~1292 ~27 ~126 ~1292 light_gray_concrete
-setblock ~28 ~126 ~1292 gray_concrete
-setblock ~29 ~126 ~1292 light_gray_concrete
-setblock ~30 ~126 ~1292 gray_concrete
-setblock ~31 ~126 ~1292 cracked_stone_bricks
-setblock ~32 ~126 ~1292 andesite
-setblock ~33 ~126 ~1292 light_gray_concrete
-setblock ~34 ~126 ~1292 andesite
-fill ~26 ~126 ~1293 ~27 ~126 ~1293 light_gray_concrete
-setblock ~28 ~126 ~1293 andesite
-fill ~29 ~126 ~1293 ~34 ~126 ~1293 light_gray_concrete
-fill ~26 ~126 ~1294 ~28 ~126 ~1294 light_gray_concrete
+setblock ~28 ~126 ~1292 andesite
+setblock ~29 ~126 ~1292 gray_concrete
+fill ~30 ~126 ~1292 ~34 ~126 ~1292 light_gray_concrete
+setblock ~26 ~126 ~1293 gray_concrete
+fill ~27 ~126 ~1293 ~29 ~126 ~1293 light_gray_concrete
+setblock ~30 ~126 ~1293 gray_concrete
+fill ~31 ~126 ~1293 ~34 ~126 ~1293 light_gray_concrete
+setblock ~26 ~126 ~1294 light_gray_concrete
+setblock ~27 ~126 ~1294 tuff
+setblock ~28 ~126 ~1294 light_gray_concrete
 setblock ~29 ~126 ~1294 gray_concrete
-fill ~30 ~126 ~1294 ~34 ~126 ~1294 light_gray_concrete
+fill ~30 ~126 ~1294 ~31 ~126 ~1294 andesite
+fill ~32 ~126 ~1294 ~33 ~126 ~1294 gray_concrete
+setblock ~34 ~126 ~1294 cracked_stone_bricks
 fill ~39 ~126 ~1295 ~42 ~126 ~1295 air
 fill ~39 ~126 ~1296 ~42 ~126 ~1296 air
 fill ~39 ~126 ~1297 ~42 ~126 ~1297 air
@@ -6632,68 +3539,68 @@ setblock ~25 ~126 ~1305 air
 setblock ~25 ~126 ~1306 air
 setblock ~25 ~126 ~1307 air
 setblock ~25 ~126 ~1308 air
-setblock ~33 ~126 ~1308 polished_andesite
-fill ~34 ~126 ~1308 ~42 ~126 ~1308 air
-setblock ~43 ~126 ~1308 polished_andesite
+setblock ~26 ~126 ~1308 polished_andesite
+fill ~27 ~126 ~1308 ~35 ~126 ~1308 air
+setblock ~36 ~126 ~1308 polished_andesite
 setblock ~25 ~126 ~1309 air
-setblock ~33 ~126 ~1309 air
-setblock ~34 ~126 ~1309 spruce_fence
-setblock ~35 ~126 ~1309 cracked_stone_bricks
-setblock ~36 ~126 ~1309 andesite
-setblock ~37 ~126 ~1309 stone
-fill ~38 ~126 ~1309 ~39 ~126 ~1309 andesite
-setblock ~40 ~126 ~1309 light_gray_concrete
-setblock ~41 ~126 ~1309 cracked_stone_bricks
-setblock ~42 ~126 ~1309 spruce_fence
-setblock ~43 ~126 ~1309 air
+setblock ~26 ~126 ~1309 orange_terracotta
+setblock ~27 ~126 ~1309 spruce_fence
+setblock ~28 ~126 ~1309 light_gray_concrete
+setblock ~29 ~126 ~1309 tuff
+setblock ~30 ~126 ~1309 light_gray_concrete
+setblock ~31 ~126 ~1309 andesite
+setblock ~32 ~126 ~1309 stone
+setblock ~33 ~126 ~1309 andesite
+setblock ~34 ~126 ~1309 light_gray_concrete
+setblock ~35 ~126 ~1309 spruce_fence
+setblock ~36 ~126 ~1309 air
 setblock ~24 ~126 ~1310 mud_bricks
-setblock ~33 ~126 ~1310 air
-setblock ~34 ~126 ~1310 cracked_stone_bricks
-fill ~35 ~126 ~1310 ~41 ~126 ~1310 air
-setblock ~42 ~126 ~1310 light_gray_concrete
-setblock ~43 ~126 ~1310 air
-setblock ~33 ~126 ~1311 air
-setblock ~34 ~126 ~1311 light_gray_concrete
-fill ~35 ~126 ~1311 ~41 ~126 ~1311 air
-setblock ~42 ~126 ~1311 light_gray_concrete
-setblock ~43 ~126 ~1311 air
-fill ~33 ~126 ~1312 ~41 ~126 ~1312 air
-setblock ~42 ~126 ~1312 light_gray_concrete
-setblock ~43 ~126 ~1312 polished_andesite
-setblock ~33 ~126 ~1313 air
-setblock ~34 ~126 ~1313 light_gray_concrete
-fill ~35 ~126 ~1313 ~41 ~126 ~1313 air
-setblock ~42 ~126 ~1313 cracked_stone_bricks
-setblock ~43 ~126 ~1313 air
+setblock ~26 ~126 ~1310 air
+setblock ~27 ~126 ~1310 stone
+fill ~28 ~126 ~1310 ~34 ~126 ~1310 air
+setblock ~35 ~126 ~1310 andesite
+setblock ~36 ~126 ~1310 air
+setblock ~26 ~126 ~1311 orange_terracotta
+setblock ~27 ~126 ~1311 light_gray_concrete
+fill ~28 ~126 ~1311 ~34 ~126 ~1311 air
+setblock ~35 ~126 ~1311 light_gray_concrete
+setblock ~36 ~126 ~1311 air
+fill ~26 ~126 ~1312 ~34 ~126 ~1312 air
+setblock ~35 ~126 ~1312 cracked_stone_bricks
+setblock ~36 ~126 ~1312 polished_andesite
+setblock ~26 ~126 ~1313 air
+setblock ~27 ~126 ~1313 stone
+fill ~28 ~126 ~1313 ~34 ~126 ~1313 air
+setblock ~35 ~126 ~1313 light_gray_concrete
+setblock ~36 ~126 ~1313 air
 setblock ~14 ~126 ~1314 mud_brick_slab
 setblock ~15 ~126 ~1314 mud_bricks
-setblock ~32 ~126 ~1314 packed_mud
-setblock ~33 ~126 ~1314 air
-setblock ~34 ~126 ~1314 cracked_stone_bricks
-fill ~35 ~126 ~1314 ~41 ~126 ~1314 air
-setblock ~42 ~126 ~1314 andesite
-setblock ~43 ~126 ~1314 air
+setblock ~26 ~126 ~1314 air
+setblock ~27 ~126 ~1314 light_gray_concrete
+fill ~28 ~126 ~1314 ~34 ~126 ~1314 air
+setblock ~35 ~126 ~1314 cracked_stone_bricks
+setblock ~36 ~126 ~1314 air
 setblock ~14 ~126 ~1315 mud_bricks
-setblock ~33 ~126 ~1315 air
-setblock ~34 ~126 ~1315 spruce_fence
-setblock ~35 ~126 ~1315 light_gray_concrete
-setblock ~36 ~126 ~1315 andesite
-setblock ~37 ~126 ~1315 light_gray_concrete
-fill ~38 ~126 ~1315 ~41 ~126 ~1315 andesite
-setblock ~42 ~126 ~1315 spruce_fence
-setblock ~43 ~126 ~1315 air
+setblock ~26 ~126 ~1315 air
+setblock ~27 ~126 ~1315 spruce_fence
+setblock ~28 ~126 ~1315 light_gray_concrete
+setblock ~29 ~126 ~1315 cracked_stone_bricks
+setblock ~30 ~126 ~1315 andesite
+setblock ~31 ~126 ~1315 cracked_stone_bricks
+setblock ~32 ~126 ~1315 andesite
+fill ~33 ~126 ~1315 ~34 ~126 ~1315 light_gray_concrete
+setblock ~35 ~126 ~1315 spruce_fence
+setblock ~36 ~126 ~1315 air
 setblock ~14 ~126 ~1316 mud_bricks
 fill ~16 ~126 ~1316 ~19 ~126 ~1316 light_gray_concrete
 setblock ~20 ~126 ~1316 gray_concrete
 fill ~21 ~126 ~1316 ~22 ~126 ~1316 andesite
 fill ~23 ~126 ~1316 ~24 ~126 ~1316 light_gray_concrete
 setblock ~25 ~126 ~1316 cracked_stone_bricks
-setblock ~26 ~126 ~1316 spruce_planks
-setblock ~27 ~126 ~1316 green_terracotta
+fill ~26 ~126 ~1316 ~27 ~126 ~1316 green_terracotta
 setblock ~28 ~126 ~1316 light_gray_concrete
-setblock ~33 ~126 ~1316 polished_andesite
-fill ~34 ~126 ~1316 ~42 ~126 ~1316 air
-setblock ~43 ~126 ~1316 polished_andesite
+fill ~29 ~126 ~1316 ~35 ~126 ~1316 air
+setblock ~36 ~126 ~1316 polished_andesite
 setblock ~14 ~126 ~1317 mud_bricks
 setblock ~16 ~126 ~1317 light_gray_concrete
 setblock ~17 ~126 ~1317 gray_concrete
@@ -6703,7 +3610,7 @@ setblock ~21 ~126 ~1317 cracked_stone_bricks
 setblock ~22 ~126 ~1317 andesite
 fill ~23 ~126 ~1317 ~24 ~126 ~1317 light_gray_concrete
 setblock ~25 ~126 ~1317 air
-setblock ~26 ~126 ~1317 barrel[facing=up]
+setblock ~26 ~126 ~1317 spruce_planks
 setblock ~27 ~126 ~1317 andesite
 setblock ~28 ~126 ~1317 tuff
 setblock ~14 ~126 ~1318 packed_mud
@@ -6812,58 +3719,62 @@ fill ~11 ~126 ~1331 ~14 ~126 ~1331 air
 fill ~27 ~126 ~1331 ~28 ~126 ~1331 air
 setblock ~18 ~126 ~1332 barrel[facing=up]
 fill ~27 ~126 ~1332 ~28 ~126 ~1332 air
-setblock ~18 ~126 ~1333 spruce_planks
+setblock ~18 ~126 ~1333 green_terracotta
 fill ~27 ~126 ~1333 ~28 ~126 ~1333 air
 fill ~27 ~126 ~1334 ~28 ~126 ~1334 air
 fill ~27 ~126 ~1335 ~28 ~126 ~1335 air
 setblock ~27 ~126 ~1336 air
-setblock ~31 ~126 ~1336 polished_andesite
-fill ~32 ~126 ~1336 ~40 ~126 ~1336 air
-setblock ~41 ~126 ~1336 polished_andesite
 fill ~26 ~126 ~1337 ~27 ~126 ~1337 air
-setblock ~31 ~126 ~1337 air
-setblock ~32 ~126 ~1337 spruce_fence
-setblock ~33 ~126 ~1337 andesite
-setblock ~34 ~126 ~1337 cracked_stone_bricks
-setblock ~35 ~126 ~1337 stone
-setblock ~36 ~126 ~1337 light_gray_concrete
-fill ~37 ~126 ~1337 ~38 ~126 ~1337 tuff
-setblock ~39 ~126 ~1337 andesite
-setblock ~40 ~126 ~1337 spruce_fence
-setblock ~41 ~126 ~1337 air
+setblock ~24 ~126 ~1338 polished_andesite
+setblock ~25 ~126 ~1338 light_gray_concrete
 setblock ~26 ~126 ~1338 air
-setblock ~31 ~126 ~1338 air
-setblock ~32 ~126 ~1338 andesite
-fill ~33 ~126 ~1338 ~41 ~126 ~1338 air
+setblock ~27 ~126 ~1338 gray_concrete
+setblock ~28 ~126 ~1338 light_gray_concrete
+setblock ~29 ~126 ~1338 cracked_stone_bricks
+setblock ~30 ~126 ~1338 tuff
+setblock ~31 ~126 ~1338 light_gray_concrete
+setblock ~32 ~126 ~1338 cracked_stone_bricks
+setblock ~33 ~126 ~1338 light_gray_concrete
+setblock ~34 ~126 ~1338 polished_andesite
+setblock ~24 ~126 ~1339 cracked_stone_bricks
+setblock ~25 ~126 ~1339 polished_andesite
 setblock ~26 ~126 ~1339 air
-setblock ~31 ~126 ~1339 air
-setblock ~32 ~126 ~1339 cracked_stone_bricks
-fill ~33 ~126 ~1339 ~41 ~126 ~1339 air
+fill ~27 ~126 ~1339 ~32 ~126 ~1339 polished_andesite
+setblock ~33 ~126 ~1339 spruce_fence
+setblock ~34 ~126 ~1339 light_gray_concrete
+setblock ~24 ~126 ~1340 light_gray_concrete
+setblock ~25 ~126 ~1340 polished_andesite
 setblock ~26 ~126 ~1340 air
-fill ~31 ~126 ~1340 ~36 ~126 ~1340 air
-fill ~37 ~126 ~1340 ~43 ~126 ~1340 polished_basalt[axis=x]
+fill ~27 ~126 ~1340 ~33 ~126 ~1340 polished_andesite
+setblock ~34 ~126 ~1340 light_gray_concrete
+setblock ~24 ~126 ~1341 light_gray_concrete
 setblock ~25 ~126 ~1341 air
-setblock ~31 ~126 ~1341 air
-setblock ~32 ~126 ~1341 light_gray_concrete
-fill ~33 ~126 ~1341 ~41 ~126 ~1341 air
+fill ~26 ~126 ~1341 ~33 ~126 ~1341 polished_andesite
+setblock ~34 ~126 ~1341 andesite
+setblock ~24 ~126 ~1342 polished_andesite
 setblock ~25 ~126 ~1342 air
-setblock ~31 ~126 ~1342 air
-setblock ~32 ~126 ~1342 light_gray_concrete
-fill ~33 ~126 ~1342 ~41 ~126 ~1342 air
+fill ~26 ~126 ~1342 ~34 ~126 ~1342 polished_andesite
+setblock ~24 ~126 ~1343 light_gray_concrete
 setblock ~25 ~126 ~1343 air
-setblock ~31 ~126 ~1343 air
-setblock ~32 ~126 ~1343 spruce_fence
-setblock ~33 ~126 ~1343 tuff
-fill ~34 ~126 ~1343 ~35 ~126 ~1343 stone
-fill ~36 ~126 ~1343 ~37 ~126 ~1343 light_gray_concrete
-setblock ~38 ~126 ~1343 stone
-setblock ~39 ~126 ~1343 light_gray_concrete
-setblock ~40 ~126 ~1343 spruce_fence
-setblock ~41 ~126 ~1343 air
+fill ~26 ~126 ~1343 ~33 ~126 ~1343 polished_andesite
+setblock ~34 ~126 ~1343 light_gray_concrete
+setblock ~24 ~126 ~1344 light_gray_concrete
 setblock ~25 ~126 ~1344 air
-setblock ~31 ~126 ~1344 polished_andesite
-fill ~32 ~126 ~1344 ~40 ~126 ~1344 air
-setblock ~41 ~126 ~1344 polished_andesite
+fill ~26 ~126 ~1344 ~33 ~126 ~1344 polished_andesite
+setblock ~34 ~126 ~1344 light_gray_concrete
+setblock ~24 ~126 ~1345 andesite
+setblock ~25 ~126 ~1345 spruce_fence
+fill ~26 ~126 ~1345 ~32 ~126 ~1345 polished_andesite
+setblock ~33 ~126 ~1345 spruce_fence
+setblock ~34 ~126 ~1345 andesite
+setblock ~24 ~126 ~1346 polished_andesite
+fill ~25 ~126 ~1346 ~26 ~126 ~1346 light_gray_concrete
+setblock ~27 ~126 ~1346 cracked_stone_bricks
+setblock ~28 ~126 ~1346 andesite
+fill ~29 ~126 ~1346 ~30 ~126 ~1346 gray_concrete
+fill ~31 ~126 ~1346 ~32 ~126 ~1346 light_gray_concrete
+setblock ~33 ~126 ~1346 andesite
+setblock ~34 ~126 ~1346 polished_andesite
 setblock ~97 ~126 ~1459 polished_basalt
 fill ~98 ~126 ~1459 ~102 ~126 ~1459 iron_bars
 setblock ~103 ~126 ~1459 polished_basalt
@@ -6888,141 +3799,115 @@ setblock ~103 ~126 ~1464 iron_bars
 setblock ~97 ~126 ~1465 polished_basalt
 fill ~98 ~126 ~1465 ~102 ~126 ~1465 iron_bars
 setblock ~103 ~126 ~1465 polished_basalt
-setblock ~26 ~127 ~1286 light_gray_concrete
-setblock ~27 ~127 ~1286 gray_concrete
-setblock ~28 ~127 ~1286 cracked_stone_bricks
-setblock ~29 ~127 ~1286 gray_concrete
-setblock ~30 ~127 ~1286 light_gray_concrete
-setblock ~31 ~127 ~1286 gray_concrete
-setblock ~32 ~127 ~1286 cracked_stone_bricks
-setblock ~33 ~127 ~1286 light_gray_concrete
-setblock ~34 ~127 ~1286 gray_concrete
-setblock ~26 ~127 ~1287 gray_concrete
+fill ~26 ~127 ~1286 ~28 ~127 ~1286 light_gray_concrete
+setblock ~29 ~127 ~1286 tuff
+fill ~30 ~127 ~1286 ~33 ~127 ~1286 light_gray_concrete
+setblock ~34 ~127 ~1286 andesite
+setblock ~26 ~127 ~1287 light_gray_concrete
 setblock ~27 ~127 ~1287 andesite
-fill ~28 ~127 ~1287 ~33 ~127 ~1287 light_gray_concrete
+setblock ~28 ~127 ~1287 light_gray_concrete
+setblock ~29 ~127 ~1287 cracked_stone_bricks
+setblock ~30 ~127 ~1287 andesite
+setblock ~31 ~127 ~1287 light_gray_concrete
+fill ~32 ~127 ~1287 ~33 ~127 ~1287 andesite
 setblock ~34 ~127 ~1287 cracked_stone_bricks
-fill ~26 ~127 ~1288 ~27 ~127 ~1288 gray_concrete
-setblock ~28 ~127 ~1288 light_gray_concrete
-setblock ~29 ~127 ~1288 andesite
-setblock ~30 ~127 ~1288 gray_concrete
-setblock ~31 ~127 ~1288 tuff
-setblock ~32 ~127 ~1288 light_gray_concrete
-setblock ~33 ~127 ~1288 gray_concrete
-setblock ~34 ~127 ~1288 andesite
-setblock ~26 ~127 ~1289 light_gray_concrete
-setblock ~27 ~127 ~1289 andesite
-setblock ~28 ~127 ~1289 light_gray_concrete
-setblock ~29 ~127 ~1289 gray_concrete
-setblock ~30 ~127 ~1289 light_gray_concrete
-fill ~31 ~127 ~1289 ~32 ~127 ~1289 andesite
-setblock ~33 ~127 ~1289 light_gray_concrete
-setblock ~34 ~127 ~1289 andesite
-setblock ~26 ~127 ~1290 gray_concrete
-setblock ~27 ~127 ~1290 cracked_stone_bricks
-fill ~28 ~127 ~1290 ~29 ~127 ~1290 light_gray_concrete
+setblock ~26 ~127 ~1288 gray_concrete
+setblock ~27 ~127 ~1288 light_gray_concrete
+setblock ~28 ~127 ~1288 cracked_stone_bricks
+fill ~29 ~127 ~1288 ~30 ~127 ~1288 light_gray_concrete
+setblock ~31 ~127 ~1288 andesite
+fill ~32 ~127 ~1288 ~34 ~127 ~1288 light_gray_concrete
+fill ~26 ~127 ~1289 ~30 ~127 ~1289 light_gray_concrete
+fill ~31 ~127 ~1289 ~32 ~127 ~1289 gray_concrete
+fill ~33 ~127 ~1289 ~34 ~127 ~1289 light_gray_concrete
+fill ~26 ~127 ~1290 ~29 ~127 ~1290 light_gray_concrete
 setblock ~30 ~127 ~1290 gray_concrete
-setblock ~31 ~127 ~1290 cracked_stone_bricks
-fill ~32 ~127 ~1290 ~34 ~127 ~1290 light_gray_concrete
-setblock ~26 ~127 ~1291 gray_concrete
-setblock ~27 ~127 ~1291 light_gray_concrete
-setblock ~28 ~127 ~1291 andesite
-setblock ~29 ~127 ~1291 cracked_stone_bricks
+setblock ~31 ~127 ~1290 light_gray_concrete
+setblock ~32 ~127 ~1290 gray_concrete
+fill ~33 ~127 ~1290 ~34 ~127 ~1290 light_gray_concrete
+setblock ~26 ~127 ~1291 light_gray_concrete
+fill ~27 ~127 ~1291 ~28 ~127 ~1291 gray_concrete
+setblock ~29 ~127 ~1291 light_gray_concrete
 setblock ~30 ~127 ~1291 tuff
-setblock ~31 ~127 ~1291 cracked_stone_bricks
+setblock ~31 ~127 ~1291 light_gray_concrete
 setblock ~32 ~127 ~1291 andesite
 setblock ~33 ~127 ~1291 light_gray_concrete
 setblock ~34 ~127 ~1291 andesite
-setblock ~26 ~127 ~1292 gray_concrete
-setblock ~27 ~127 ~1292 andesite
-setblock ~28 ~127 ~1292 light_gray_concrete
-setblock ~29 ~127 ~1292 cracked_stone_bricks
-setblock ~30 ~127 ~1292 light_gray_concrete
-setblock ~31 ~127 ~1292 cracked_stone_bricks
-setblock ~32 ~127 ~1292 light_gray_concrete
-setblock ~33 ~127 ~1292 gray_concrete
-setblock ~34 ~127 ~1292 andesite
-fill ~26 ~127 ~1293 ~27 ~127 ~1293 cracked_stone_bricks
-fill ~28 ~127 ~1293 ~31 ~127 ~1293 light_gray_concrete
-setblock ~32 ~127 ~1293 gray_concrete
-setblock ~33 ~127 ~1293 tuff
-setblock ~34 ~127 ~1293 andesite
+fill ~26 ~127 ~1292 ~30 ~127 ~1292 light_gray_concrete
+setblock ~31 ~127 ~1292 gray_concrete
+fill ~32 ~127 ~1292 ~34 ~127 ~1292 light_gray_concrete
+setblock ~26 ~127 ~1293 gray_concrete
+fill ~27 ~127 ~1293 ~34 ~127 ~1293 light_gray_concrete
 setblock ~26 ~127 ~1294 light_gray_concrete
 setblock ~27 ~127 ~1294 gray_concrete
 setblock ~28 ~127 ~1294 light_gray_concrete
-setblock ~29 ~127 ~1294 tuff
-setblock ~30 ~127 ~1294 gray_concrete
-fill ~31 ~127 ~1294 ~32 ~127 ~1294 light_gray_concrete
-setblock ~33 ~127 ~1294 andesite
-setblock ~34 ~127 ~1294 light_gray_concrete
+setblock ~29 ~127 ~1294 andesite
+setblock ~30 ~127 ~1294 light_gray_concrete
+setblock ~31 ~127 ~1294 cracked_stone_bricks
+setblock ~32 ~127 ~1294 gray_concrete
+fill ~33 ~127 ~1294 ~34 ~127 ~1294 cracked_stone_bricks
 fill ~39 ~127 ~1295 ~42 ~127 ~1295 air
 fill ~39 ~127 ~1296 ~42 ~127 ~1296 air
 fill ~39 ~127 ~1297 ~42 ~127 ~1297 air
-setblock ~25 ~127 ~1300 mud_bricks
+setblock ~25 ~127 ~1300 packed_mud
 setblock ~25 ~127 ~1303 air
 setblock ~25 ~127 ~1304 air
 setblock ~25 ~127 ~1305 air
 setblock ~25 ~127 ~1306 air
-setblock ~33 ~127 ~1308 polished_andesite
-fill ~34 ~127 ~1308 ~42 ~127 ~1308 air
-setblock ~43 ~127 ~1308 polished_andesite
-setblock ~33 ~127 ~1309 air
-setblock ~34 ~127 ~1309 spruce_fence
-setblock ~35 ~127 ~1309 light_gray_concrete
-setblock ~36 ~127 ~1309 stone
-setblock ~37 ~127 ~1309 light_gray_concrete
-fill ~38 ~127 ~1309 ~39 ~127 ~1309 cracked_stone_bricks
-fill ~40 ~127 ~1309 ~41 ~127 ~1309 tuff
-setblock ~42 ~127 ~1309 spruce_fence
-setblock ~43 ~127 ~1309 air
-setblock ~33 ~127 ~1310 air
-setblock ~34 ~127 ~1310 stone
-fill ~35 ~127 ~1310 ~43 ~127 ~1310 air
-setblock ~33 ~127 ~1311 air
-setblock ~34 ~127 ~1311 cracked_stone_bricks
-fill ~35 ~127 ~1311 ~43 ~127 ~1311 air
-fill ~33 ~127 ~1312 ~38 ~127 ~1312 air
-fill ~39 ~127 ~1312 ~45 ~127 ~1312 polished_basalt[axis=x]
+setblock ~26 ~127 ~1308 polished_andesite
+fill ~27 ~127 ~1308 ~35 ~127 ~1308 air
+setblock ~36 ~127 ~1308 polished_andesite
+setblock ~26 ~127 ~1309 orange_terracotta
+setblock ~27 ~127 ~1309 spruce_fence
+fill ~28 ~127 ~1309 ~30 ~127 ~1309 light_gray_concrete
+setblock ~31 ~127 ~1309 cracked_stone_bricks
+fill ~32 ~127 ~1309 ~33 ~127 ~1309 light_gray_concrete
+setblock ~34 ~127 ~1309 andesite
+setblock ~35 ~127 ~1309 spruce_fence
+setblock ~36 ~127 ~1309 air
+setblock ~26 ~127 ~1310 orange_terracotta
+setblock ~27 ~127 ~1310 light_gray_concrete
+fill ~28 ~127 ~1310 ~36 ~127 ~1310 air
+setblock ~26 ~127 ~1311 orange_terracotta
+setblock ~27 ~127 ~1311 andesite
+fill ~28 ~127 ~1311 ~36 ~127 ~1311 air
+fill ~26 ~127 ~1312 ~31 ~127 ~1312 air
+fill ~32 ~127 ~1312 ~38 ~127 ~1312 polished_basalt[axis=x]
 setblock ~20 ~127 ~1313 packed_mud
 setblock ~21 ~127 ~1313 mud_bricks
 setblock ~22 ~127 ~1313 packed_mud
 fill ~23 ~127 ~1313 ~24 ~127 ~1313 mud_bricks
 setblock ~25 ~127 ~1313 packed_mud
-setblock ~33 ~127 ~1313 air
-setblock ~34 ~127 ~1313 tuff
-fill ~35 ~127 ~1313 ~43 ~127 ~1313 air
+setblock ~26 ~127 ~1313 air
+setblock ~27 ~127 ~1313 light_gray_concrete
+fill ~28 ~127 ~1313 ~36 ~127 ~1313 air
 setblock ~17 ~127 ~1314 mud_bricks
 setblock ~18 ~127 ~1314 packed_mud
 setblock ~19 ~127 ~1314 mud_bricks
-fill ~25 ~127 ~1314 ~27 ~127 ~1314 mud_bricks
-setblock ~33 ~127 ~1314 air
-setblock ~34 ~127 ~1314 andesite
-fill ~35 ~127 ~1314 ~43 ~127 ~1314 air
+fill ~25 ~127 ~1314 ~26 ~127 ~1314 mud_bricks
+setblock ~27 ~127 ~1314 andesite
+fill ~28 ~127 ~1314 ~36 ~127 ~1314 air
 setblock ~14 ~127 ~1315 mud_brick_slab
 fill ~16 ~127 ~1315 ~17 ~127 ~1315 packed_mud
-setblock ~27 ~127 ~1315 packed_mud
-setblock ~28 ~127 ~1315 mud_bricks
-setblock ~33 ~127 ~1315 air
-setblock ~34 ~127 ~1315 spruce_fence
-setblock ~35 ~127 ~1315 tuff
-setblock ~36 ~127 ~1315 stone
-setblock ~37 ~127 ~1315 tuff
-setblock ~38 ~127 ~1315 light_gray_concrete
-setblock ~39 ~127 ~1315 tuff
-setblock ~40 ~127 ~1315 light_gray_concrete
-setblock ~41 ~127 ~1315 cracked_stone_bricks
-setblock ~42 ~127 ~1315 spruce_fence
-setblock ~43 ~127 ~1315 air
+setblock ~26 ~127 ~1315 air
+setblock ~27 ~127 ~1315 spruce_fence
+setblock ~28 ~127 ~1315 cracked_stone_bricks
+fill ~29 ~127 ~1315 ~30 ~127 ~1315 light_gray_concrete
+fill ~31 ~127 ~1315 ~32 ~127 ~1315 tuff
+setblock ~33 ~127 ~1315 light_gray_concrete
+setblock ~34 ~127 ~1315 andesite
+setblock ~35 ~127 ~1315 spruce_fence
+setblock ~36 ~127 ~1315 air
 setblock ~14 ~127 ~1316 mud_brick_slab
 setblock ~15 ~127 ~1316 mud_bricks
 setblock ~16 ~127 ~1316 light_gray_concrete
 fill ~17 ~127 ~1316 ~25 ~127 ~1316 air
-setblock ~26 ~127 ~1316 green_terracotta
+setblock ~26 ~127 ~1316 barrel[facing=up]
 setblock ~27 ~127 ~1316 air
 setblock ~28 ~127 ~1316 light_gray_concrete
 setblock ~29 ~127 ~1316 mud_bricks
-setblock ~33 ~127 ~1316 polished_andesite
-fill ~34 ~127 ~1316 ~42 ~127 ~1316 air
-setblock ~43 ~127 ~1316 polished_andesite
+fill ~30 ~127 ~1316 ~35 ~127 ~1316 air
+setblock ~36 ~127 ~1316 polished_andesite
 setblock ~14 ~127 ~1317 mud_brick_slab
 setblock ~15 ~127 ~1317 mud_bricks
 fill ~16 ~127 ~1317 ~28 ~127 ~1317 air
@@ -7079,7 +3964,7 @@ fill ~12 ~127 ~1325 ~13 ~127 ~1325 white_concrete
 setblock ~14 ~127 ~1325 air
 fill ~15 ~127 ~1325 ~16 ~127 ~1325 white_concrete
 fill ~17 ~127 ~1325 ~25 ~127 ~1325 air
-setblock ~26 ~127 ~1325 mud_bricks
+setblock ~26 ~127 ~1325 packed_mud
 fill ~27 ~127 ~1325 ~28 ~127 ~1325 air
 setblock ~30 ~127 ~1325 mud_bricks
 setblock ~31 ~127 ~1325 packed_mud
@@ -7107,192 +3992,188 @@ setblock ~26 ~127 ~1330 mud_bricks
 fill ~27 ~127 ~1330 ~28 ~127 ~1330 air
 fill ~11 ~127 ~1331 ~14 ~127 ~1331 air
 fill ~27 ~127 ~1331 ~28 ~127 ~1331 air
-setblock ~18 ~127 ~1332 barrel[facing=up]
-setblock ~19 ~127 ~1332 green_terracotta
+fill ~18 ~127 ~1332 ~19 ~127 ~1332 spruce_planks
 setblock ~27 ~127 ~1332 air
 setblock ~27 ~127 ~1333 air
 setblock ~27 ~127 ~1334 air
 setblock ~26 ~127 ~1335 packed_mud
-setblock ~31 ~127 ~1336 polished_andesite
-fill ~32 ~127 ~1336 ~40 ~127 ~1336 air
-setblock ~41 ~127 ~1336 polished_andesite
 setblock ~26 ~127 ~1337 air
-setblock ~31 ~127 ~1337 lightning_rod[facing=south]
-setblock ~32 ~127 ~1337 spruce_fence
-setblock ~33 ~127 ~1337 cracked_stone_bricks
-fill ~34 ~127 ~1337 ~35 ~127 ~1337 light_gray_concrete
-setblock ~36 ~127 ~1337 andesite
-setblock ~37 ~127 ~1337 stone
-fill ~38 ~127 ~1337 ~39 ~127 ~1337 andesite
-setblock ~40 ~127 ~1337 spruce_fence
-setblock ~41 ~127 ~1337 air
-setblock ~31 ~127 ~1338 lightning_rod[facing=south]
-setblock ~32 ~127 ~1338 stone
-fill ~33 ~127 ~1338 ~39 ~127 ~1338 air
-setblock ~40 ~127 ~1338 stone
-setblock ~41 ~127 ~1338 iron_trapdoor[facing=east,half=top,open=true]
-setblock ~31 ~127 ~1339 lightning_rod[facing=south]
-setblock ~32 ~127 ~1339 tuff
-fill ~33 ~127 ~1339 ~39 ~127 ~1339 air
-setblock ~40 ~127 ~1339 light_gray_concrete
-setblock ~41 ~127 ~1339 iron_trapdoor[facing=east,half=top,open=true]
-setblock ~25 ~127 ~1340 packed_mud
-setblock ~31 ~127 ~1340 polished_andesite
-setblock ~32 ~127 ~1340 light_gray_concrete
-setblock ~33 ~127 ~1340 air
-setblock ~34 ~127 ~1340 lantern[hanging=true]
-fill ~35 ~127 ~1340 ~39 ~127 ~1340 air
-setblock ~40 ~127 ~1340 cracked_stone_bricks
-setblock ~41 ~127 ~1340 polished_andesite
-setblock ~25 ~127 ~1341 air
-setblock ~31 ~127 ~1341 lightning_rod[facing=south]
-setblock ~32 ~127 ~1341 stone
-fill ~33 ~127 ~1341 ~39 ~127 ~1341 air
-setblock ~40 ~127 ~1341 light_gray_concrete
-setblock ~41 ~127 ~1341 iron_trapdoor[facing=east,half=top,open=true]
-setblock ~31 ~127 ~1342 lightning_rod[facing=south]
-setblock ~32 ~127 ~1342 stone
-fill ~33 ~127 ~1342 ~39 ~127 ~1342 air
-setblock ~40 ~127 ~1342 light_gray_concrete
-setblock ~41 ~127 ~1342 iron_trapdoor[facing=east,half=top,open=true]
-setblock ~31 ~127 ~1343 lightning_rod[facing=south]
-setblock ~32 ~127 ~1343 spruce_fence
-fill ~33 ~127 ~1343 ~36 ~127 ~1343 light_gray_concrete
-setblock ~37 ~127 ~1343 andesite
-setblock ~38 ~127 ~1343 light_gray_concrete
-setblock ~39 ~127 ~1343 andesite
-setblock ~40 ~127 ~1343 spruce_fence
-setblock ~41 ~127 ~1343 air
-setblock ~31 ~127 ~1344 polished_andesite
-fill ~32 ~127 ~1344 ~40 ~127 ~1344 air
-setblock ~41 ~127 ~1344 polished_andesite
+setblock ~24 ~127 ~1338 polished_andesite
+fill ~25 ~127 ~1338 ~33 ~127 ~1338 air
+setblock ~34 ~127 ~1338 polished_andesite
+setblock ~24 ~127 ~1339 air
+setblock ~25 ~127 ~1339 spruce_fence
+setblock ~26 ~127 ~1339 andesite
+fill ~27 ~127 ~1339 ~28 ~127 ~1339 light_gray_concrete
+setblock ~29 ~127 ~1339 cracked_stone_bricks
+setblock ~30 ~127 ~1339 andesite
+setblock ~31 ~127 ~1339 light_gray_concrete
+setblock ~32 ~127 ~1339 andesite
+setblock ~33 ~127 ~1339 spruce_fence
+setblock ~34 ~127 ~1339 air
+setblock ~24 ~127 ~1340 air
+setblock ~25 ~127 ~1340 mud_bricks
+fill ~26 ~127 ~1340 ~32 ~127 ~1340 air
+setblock ~33 ~127 ~1340 light_gray_concrete
+setblock ~34 ~127 ~1340 air
+fill ~24 ~127 ~1341 ~32 ~127 ~1341 air
+setblock ~33 ~127 ~1341 cracked_stone_bricks
+setblock ~34 ~127 ~1341 air
+fill ~24 ~127 ~1342 ~32 ~127 ~1342 air
+setblock ~33 ~127 ~1342 tuff
+setblock ~34 ~127 ~1342 polished_andesite
+setblock ~24 ~127 ~1343 air
+setblock ~25 ~127 ~1343 light_gray_concrete
+fill ~26 ~127 ~1343 ~32 ~127 ~1343 air
+setblock ~33 ~127 ~1343 cracked_stone_bricks
+setblock ~34 ~127 ~1343 air
+setblock ~23 ~127 ~1344 mud_bricks
+setblock ~24 ~127 ~1344 air
+setblock ~25 ~127 ~1344 andesite
+fill ~26 ~127 ~1344 ~32 ~127 ~1344 air
+setblock ~33 ~127 ~1344 tuff
+setblock ~34 ~127 ~1344 air
+setblock ~24 ~127 ~1345 air
+setblock ~25 ~127 ~1345 spruce_fence
+fill ~26 ~127 ~1345 ~28 ~127 ~1345 andesite
+setblock ~29 ~127 ~1345 light_gray_concrete
+setblock ~30 ~127 ~1345 cracked_stone_bricks
+setblock ~31 ~127 ~1345 light_gray_concrete
+setblock ~32 ~127 ~1345 andesite
+setblock ~33 ~127 ~1345 spruce_fence
+setblock ~34 ~127 ~1345 air
+setblock ~24 ~127 ~1346 polished_andesite
+fill ~25 ~127 ~1346 ~33 ~127 ~1346 air
+setblock ~34 ~127 ~1346 polished_andesite
 setblock ~97 ~127 ~1459 polished_basalt
 setblock ~103 ~127 ~1459 polished_basalt
 setblock ~101 ~127 ~1462 heavy_weighted_pressure_plate
 setblock ~97 ~127 ~1465 polished_basalt
 setblock ~103 ~127 ~1465 polished_basalt
-setblock ~26 ~128 ~1286 gray_concrete
-setblock ~27 ~128 ~1286 light_gray_concrete
-setblock ~28 ~128 ~1286 andesite
-setblock ~29 ~128 ~1286 light_gray_concrete
-setblock ~30 ~128 ~1286 cracked_stone_bricks
-fill ~31 ~128 ~1286 ~33 ~128 ~1286 light_gray_concrete
-setblock ~34 ~128 ~1286 green_terracotta
-setblock ~26 ~128 ~1287 light_gray_concrete
-setblock ~27 ~128 ~1287 tuff
-setblock ~28 ~128 ~1287 andesite
-setblock ~29 ~128 ~1287 light_gray_concrete
-setblock ~30 ~128 ~1287 andesite
+setblock ~26 ~128 ~1286 cracked_stone_bricks
+setblock ~27 ~128 ~1286 andesite
+setblock ~28 ~128 ~1286 light_gray_concrete
+setblock ~29 ~128 ~1286 andesite
+fill ~30 ~128 ~1286 ~31 ~128 ~1286 light_gray_concrete
+setblock ~32 ~128 ~1286 andesite
+setblock ~33 ~128 ~1286 light_gray_concrete
+setblock ~34 ~128 ~1286 spruce_planks
+setblock ~26 ~128 ~1287 andesite
+setblock ~27 ~128 ~1287 gray_concrete
+fill ~28 ~128 ~1287 ~30 ~128 ~1287 light_gray_concrete
 setblock ~31 ~128 ~1287 gray_concrete
-setblock ~32 ~128 ~1287 light_gray_concrete
-setblock ~33 ~128 ~1287 andesite
-setblock ~34 ~128 ~1287 light_gray_concrete
-fill ~26 ~128 ~1288 ~27 ~128 ~1288 light_gray_concrete
-setblock ~28 ~128 ~1288 andesite
-fill ~29 ~128 ~1288 ~30 ~128 ~1288 light_gray_concrete
-setblock ~31 ~128 ~1288 cracked_stone_bricks
-fill ~32 ~128 ~1288 ~33 ~128 ~1288 light_gray_concrete
-setblock ~34 ~128 ~1288 gray_concrete
-setblock ~26 ~128 ~1289 andesite
-fill ~27 ~128 ~1289 ~28 ~128 ~1289 light_gray_concrete
-setblock ~29 ~128 ~1289 tuff
-fill ~30 ~128 ~1289 ~32 ~128 ~1289 light_gray_concrete
-setblock ~33 ~128 ~1289 gray_concrete
+fill ~32 ~128 ~1287 ~33 ~128 ~1287 light_gray_concrete
+setblock ~34 ~128 ~1287 andesite
+setblock ~26 ~128 ~1288 cracked_stone_bricks
+setblock ~27 ~128 ~1288 gray_concrete
+setblock ~28 ~128 ~1288 cracked_stone_bricks
+setblock ~29 ~128 ~1288 light_gray_concrete
+setblock ~30 ~128 ~1288 gray_concrete
+fill ~31 ~128 ~1288 ~32 ~128 ~1288 light_gray_concrete
+setblock ~33 ~128 ~1288 gray_concrete
+setblock ~34 ~128 ~1288 light_gray_concrete
+setblock ~26 ~128 ~1289 light_gray_concrete
+fill ~27 ~128 ~1289 ~28 ~128 ~1289 gray_concrete
+setblock ~29 ~128 ~1289 cracked_stone_bricks
+setblock ~30 ~128 ~1289 light_gray_concrete
+setblock ~31 ~128 ~1289 gray_concrete
+setblock ~32 ~128 ~1289 light_gray_concrete
+setblock ~33 ~128 ~1289 andesite
 setblock ~34 ~128 ~1289 light_gray_concrete
 setblock ~26 ~128 ~1290 andesite
-fill ~27 ~128 ~1290 ~28 ~128 ~1290 gray_concrete
-fill ~29 ~128 ~1290 ~32 ~128 ~1290 light_gray_concrete
-setblock ~33 ~128 ~1290 andesite
-setblock ~34 ~128 ~1290 light_gray_concrete
-setblock ~26 ~128 ~1291 gray_concrete
-fill ~27 ~128 ~1291 ~33 ~128 ~1291 light_gray_concrete
+fill ~27 ~128 ~1290 ~29 ~128 ~1290 light_gray_concrete
+setblock ~30 ~128 ~1290 gray_concrete
+fill ~31 ~128 ~1290 ~34 ~128 ~1290 light_gray_concrete
+setblock ~26 ~128 ~1291 light_gray_concrete
+setblock ~27 ~128 ~1291 andesite
+setblock ~28 ~128 ~1291 gray_concrete
+fill ~29 ~128 ~1291 ~33 ~128 ~1291 light_gray_concrete
 setblock ~34 ~128 ~1291 gray_concrete
-setblock ~26 ~128 ~1292 andesite
-fill ~27 ~128 ~1292 ~29 ~128 ~1292 light_gray_concrete
-setblock ~30 ~128 ~1292 cracked_stone_bricks
-setblock ~31 ~128 ~1292 light_gray_concrete
-setblock ~32 ~128 ~1292 gray_concrete
-setblock ~33 ~128 ~1292 tuff
-setblock ~34 ~128 ~1292 light_gray_concrete
-setblock ~26 ~128 ~1293 light_gray_concrete
-setblock ~27 ~128 ~1293 cracked_stone_bricks
-setblock ~28 ~128 ~1293 gray_concrete
-fill ~29 ~128 ~1293 ~30 ~128 ~1293 light_gray_concrete
-setblock ~31 ~128 ~1293 gray_concrete
-setblock ~32 ~128 ~1293 andesite
-fill ~33 ~128 ~1293 ~34 ~128 ~1293 light_gray_concrete
+setblock ~26 ~128 ~1292 gray_concrete
+setblock ~27 ~128 ~1292 light_gray_concrete
+setblock ~28 ~128 ~1292 andesite
+fill ~29 ~128 ~1292 ~30 ~128 ~1292 light_gray_concrete
+setblock ~31 ~128 ~1292 cracked_stone_bricks
+fill ~32 ~128 ~1292 ~34 ~128 ~1292 light_gray_concrete
+setblock ~26 ~128 ~1293 gray_concrete
+setblock ~27 ~128 ~1293 andesite
+fill ~28 ~128 ~1293 ~29 ~128 ~1293 light_gray_concrete
+setblock ~30 ~128 ~1293 gray_concrete
+fill ~31 ~128 ~1293 ~32 ~128 ~1293 light_gray_concrete
+setblock ~33 ~128 ~1293 gray_concrete
+setblock ~34 ~128 ~1293 light_gray_concrete
 setblock ~26 ~128 ~1294 light_gray_concrete
-setblock ~27 ~128 ~1294 andesite
-setblock ~28 ~128 ~1294 light_gray_concrete
-setblock ~29 ~128 ~1294 cracked_stone_bricks
-setblock ~30 ~128 ~1294 tuff
-fill ~31 ~128 ~1294 ~32 ~128 ~1294 andesite
+fill ~27 ~128 ~1294 ~28 ~128 ~1294 tuff
+setblock ~29 ~128 ~1294 gray_concrete
+setblock ~30 ~128 ~1294 light_gray_concrete
+setblock ~31 ~128 ~1294 tuff
+setblock ~32 ~128 ~1294 gray_concrete
 setblock ~33 ~128 ~1294 cracked_stone_bricks
 setblock ~34 ~128 ~1294 light_gray_concrete
 fill ~39 ~128 ~1295 ~42 ~128 ~1295 air
 fill ~39 ~128 ~1296 ~42 ~128 ~1296 air
 fill ~39 ~128 ~1297 ~42 ~128 ~1297 air
-setblock ~33 ~128 ~1308 polished_andesite
-fill ~34 ~128 ~1308 ~42 ~128 ~1308 air
-setblock ~43 ~128 ~1308 polished_andesite
-setblock ~33 ~128 ~1309 lightning_rod[facing=south]
-setblock ~34 ~128 ~1309 spruce_fence
-setblock ~35 ~128 ~1309 light_gray_concrete
-setblock ~36 ~128 ~1309 tuff
-setblock ~37 ~128 ~1309 light_gray_concrete
-setblock ~38 ~128 ~1309 stone
-setblock ~39 ~128 ~1309 light_gray_concrete
-setblock ~40 ~128 ~1309 andesite
-setblock ~41 ~128 ~1309 light_gray_concrete
-setblock ~42 ~128 ~1309 spruce_fence
-setblock ~43 ~128 ~1309 air
-setblock ~33 ~128 ~1310 lightning_rod[facing=south]
-setblock ~34 ~128 ~1310 andesite
-fill ~35 ~128 ~1310 ~41 ~128 ~1310 air
-setblock ~42 ~128 ~1310 tuff
-setblock ~43 ~128 ~1310 iron_trapdoor[facing=east,half=top,open=true]
-setblock ~33 ~128 ~1311 lightning_rod[facing=south]
-setblock ~34 ~128 ~1311 stone
-fill ~35 ~128 ~1311 ~41 ~128 ~1311 air
-setblock ~42 ~128 ~1311 stone
-setblock ~43 ~128 ~1311 iron_trapdoor[facing=east,half=top,open=true]
-setblock ~33 ~128 ~1312 polished_andesite
-setblock ~34 ~128 ~1312 tuff
-setblock ~35 ~128 ~1312 air
-setblock ~36 ~128 ~1312 lantern[hanging=true]
-fill ~37 ~128 ~1312 ~41 ~128 ~1312 air
-setblock ~42 ~128 ~1312 tuff
-setblock ~43 ~128 ~1312 polished_andesite
+setblock ~26 ~128 ~1308 polished_andesite
+fill ~27 ~128 ~1308 ~35 ~128 ~1308 air
+setblock ~36 ~128 ~1308 polished_andesite
+setblock ~26 ~128 ~1309 lightning_rod[facing=south]
+setblock ~27 ~128 ~1309 spruce_fence
+setblock ~28 ~128 ~1309 andesite
+setblock ~29 ~128 ~1309 tuff
+setblock ~30 ~128 ~1309 cracked_stone_bricks
+setblock ~31 ~128 ~1309 light_gray_concrete
+setblock ~32 ~128 ~1309 andesite
+setblock ~33 ~128 ~1309 light_gray_concrete
+setblock ~34 ~128 ~1309 tuff
+setblock ~35 ~128 ~1309 spruce_fence
+setblock ~36 ~128 ~1309 air
+setblock ~26 ~128 ~1310 lightning_rod[facing=south]
+setblock ~27 ~128 ~1310 andesite
+fill ~28 ~128 ~1310 ~34 ~128 ~1310 air
+setblock ~35 ~128 ~1310 stone
+setblock ~36 ~128 ~1310 iron_trapdoor[facing=east,half=top,open=true]
+setblock ~26 ~128 ~1311 lightning_rod[facing=south]
+setblock ~27 ~128 ~1311 light_gray_concrete
+fill ~28 ~128 ~1311 ~34 ~128 ~1311 air
+setblock ~35 ~128 ~1311 tuff
+setblock ~36 ~128 ~1311 iron_trapdoor[facing=east,half=top,open=true]
+setblock ~26 ~128 ~1312 polished_andesite
+setblock ~27 ~128 ~1312 light_gray_concrete
+setblock ~28 ~128 ~1312 air
+setblock ~29 ~128 ~1312 lantern[hanging=true]
+fill ~30 ~128 ~1312 ~34 ~128 ~1312 air
+setblock ~35 ~128 ~1312 cracked_stone_bricks
+setblock ~36 ~128 ~1312 polished_andesite
 setblock ~20 ~128 ~1313 mud_brick_slab
 setblock ~21 ~128 ~1313 packed_mud
 setblock ~22 ~128 ~1313 mud_brick_slab
 setblock ~23 ~128 ~1313 packed_mud
 fill ~24 ~128 ~1313 ~25 ~128 ~1313 mud_brick_slab
-setblock ~33 ~128 ~1313 lightning_rod[facing=south]
-setblock ~34 ~128 ~1313 andesite
-fill ~35 ~128 ~1313 ~41 ~128 ~1313 air
-setblock ~42 ~128 ~1313 light_gray_concrete
-setblock ~43 ~128 ~1313 iron_trapdoor[facing=east,half=top,open=true]
+setblock ~26 ~128 ~1313 lightning_rod[facing=south]
+setblock ~27 ~128 ~1313 light_gray_concrete
+fill ~28 ~128 ~1313 ~34 ~128 ~1313 air
+setblock ~35 ~128 ~1313 light_gray_concrete
+setblock ~36 ~128 ~1313 iron_trapdoor[facing=east,half=top,open=true]
 fill ~17 ~128 ~1314 ~18 ~128 ~1314 mud_brick_slab
 setblock ~19 ~128 ~1314 mud_bricks
 setblock ~25 ~128 ~1314 mud_brick_slab
-setblock ~26 ~128 ~1314 mud_bricks
-setblock ~27 ~128 ~1314 mud_brick_slab
-setblock ~33 ~128 ~1314 lightning_rod[facing=south]
-setblock ~34 ~128 ~1314 light_gray_concrete
-fill ~35 ~128 ~1314 ~41 ~128 ~1314 air
-setblock ~42 ~128 ~1314 tuff
-setblock ~43 ~128 ~1314 iron_trapdoor[facing=east,half=top,open=true]
+setblock ~26 ~128 ~1314 lightning_rod[facing=south]
+setblock ~27 ~128 ~1314 light_gray_concrete
+fill ~28 ~128 ~1314 ~34 ~128 ~1314 air
+setblock ~35 ~128 ~1314 light_gray_concrete
+setblock ~36 ~128 ~1314 iron_trapdoor[facing=east,half=top,open=true]
 setblock ~16 ~128 ~1315 mud_brick_slab
 setblock ~17 ~128 ~1315 packed_mud
-fill ~27 ~128 ~1315 ~28 ~128 ~1315 mud_brick_slab
-setblock ~33 ~128 ~1315 lightning_rod[facing=south]
-setblock ~34 ~128 ~1315 spruce_fence
-fill ~35 ~128 ~1315 ~37 ~128 ~1315 light_gray_concrete
-setblock ~38 ~128 ~1315 andesite
-fill ~39 ~128 ~1315 ~41 ~128 ~1315 light_gray_concrete
-setblock ~42 ~128 ~1315 spruce_fence
-setblock ~43 ~128 ~1315 air
+setblock ~26 ~128 ~1315 lightning_rod[facing=south]
+setblock ~27 ~128 ~1315 spruce_fence
+setblock ~28 ~128 ~1315 light_gray_concrete
+setblock ~29 ~128 ~1315 tuff
+setblock ~30 ~128 ~1315 andesite
+setblock ~31 ~128 ~1315 light_gray_concrete
+setblock ~32 ~128 ~1315 tuff
+fill ~33 ~128 ~1315 ~34 ~128 ~1315 andesite
+setblock ~35 ~128 ~1315 spruce_fence
+setblock ~36 ~128 ~1315 air
 setblock ~15 ~128 ~1316 polished_blackstone_wall
 setblock ~16 ~128 ~1316 green_terracotta
 fill ~17 ~128 ~1316 ~25 ~128 ~1316 air
@@ -7300,9 +4181,8 @@ setblock ~26 ~128 ~1316 spruce_trapdoor[half=bottom]
 setblock ~27 ~128 ~1316 air
 setblock ~28 ~128 ~1316 light_gray_concrete
 setblock ~29 ~128 ~1316 mud_brick_slab
-setblock ~33 ~128 ~1316 polished_andesite
-fill ~34 ~128 ~1316 ~42 ~128 ~1316 air
-setblock ~43 ~128 ~1316 polished_andesite
+fill ~30 ~128 ~1316 ~35 ~128 ~1316 air
+setblock ~36 ~128 ~1316 polished_andesite
 setblock ~14 ~128 ~1317 packed_mud
 setblock ~15 ~128 ~1317 mud_brick_slab
 fill ~16 ~128 ~1317 ~28 ~128 ~1317 air
@@ -7375,70 +4255,47 @@ fill ~17 ~128 ~1330 ~18 ~128 ~1330 mud_brick_slab
 fill ~26 ~128 ~1330 ~27 ~128 ~1330 mud_brick_slab
 fill ~11 ~128 ~1331 ~14 ~128 ~1331 air
 setblock ~18 ~128 ~1332 spruce_trapdoor[half=bottom]
-setblock ~31 ~128 ~1336 polished_andesite
-fill ~32 ~128 ~1336 ~40 ~128 ~1336 air
-setblock ~41 ~128 ~1336 polished_andesite
-setblock ~31 ~128 ~1337 air
-setblock ~32 ~128 ~1337 spruce_fence
-setblock ~33 ~128 ~1337 light_gray_concrete
-setblock ~34 ~128 ~1337 stone
-fill ~35 ~128 ~1337 ~39 ~128 ~1337 light_gray_concrete
-setblock ~40 ~128 ~1337 spruce_fence
-setblock ~41 ~128 ~1337 air
-setblock ~31 ~128 ~1338 air
-setblock ~32 ~128 ~1338 tuff
-setblock ~33 ~128 ~1338 light_gray_concrete
-setblock ~34 ~128 ~1338 andesite
-setblock ~35 ~128 ~1338 light_gray_concrete
-setblock ~36 ~128 ~1338 stone
-setblock ~37 ~128 ~1338 cracked_stone_bricks
-setblock ~38 ~128 ~1338 light_gray_concrete
-fill ~39 ~128 ~1338 ~40 ~128 ~1338 cracked_stone_bricks
-setblock ~41 ~128 ~1338 air
-setblock ~31 ~128 ~1339 air
-setblock ~32 ~128 ~1339 tuff
-fill ~33 ~128 ~1339 ~34 ~128 ~1339 light_gray_concrete
-fill ~35 ~128 ~1339 ~36 ~128 ~1339 cracked_stone_bricks
-fill ~37 ~128 ~1339 ~38 ~128 ~1339 stone
-setblock ~39 ~128 ~1339 cracked_stone_bricks
-setblock ~40 ~128 ~1339 light_gray_concrete
-setblock ~41 ~128 ~1339 air
-setblock ~31 ~128 ~1340 polished_andesite
-fill ~32 ~128 ~1340 ~33 ~128 ~1340 andesite
-fill ~34 ~128 ~1340 ~36 ~128 ~1340 light_gray_concrete
-fill ~37 ~128 ~1340 ~39 ~128 ~1340 andesite
-setblock ~40 ~128 ~1340 light_gray_concrete
-setblock ~41 ~128 ~1340 polished_andesite
-setblock ~31 ~128 ~1341 air
-setblock ~32 ~128 ~1341 andesite
-fill ~33 ~128 ~1341 ~35 ~128 ~1341 light_gray_concrete
-setblock ~36 ~128 ~1341 stone
-setblock ~37 ~128 ~1341 tuff
-setblock ~38 ~128 ~1341 cracked_stone_bricks
-fill ~39 ~128 ~1341 ~40 ~128 ~1341 light_gray_concrete
-setblock ~41 ~128 ~1341 air
-setblock ~31 ~128 ~1342 air
-fill ~32 ~128 ~1342 ~33 ~128 ~1342 cracked_stone_bricks
-fill ~34 ~128 ~1342 ~35 ~128 ~1342 light_gray_concrete
-setblock ~36 ~128 ~1342 andesite
-setblock ~37 ~128 ~1342 stone
-fill ~38 ~128 ~1342 ~39 ~128 ~1342 light_gray_concrete
-setblock ~40 ~128 ~1342 tuff
-setblock ~41 ~128 ~1342 air
-setblock ~31 ~128 ~1343 air
-setblock ~32 ~128 ~1343 spruce_fence
-setblock ~33 ~128 ~1343 light_gray_concrete
-setblock ~34 ~128 ~1343 tuff
-setblock ~35 ~128 ~1343 light_gray_concrete
-setblock ~36 ~128 ~1343 stone
-setblock ~37 ~128 ~1343 andesite
-setblock ~38 ~128 ~1343 tuff
-setblock ~39 ~128 ~1343 stone
-setblock ~40 ~128 ~1343 spruce_fence
-setblock ~41 ~128 ~1343 air
-setblock ~31 ~128 ~1344 polished_andesite
-fill ~32 ~128 ~1344 ~40 ~128 ~1344 air
-setblock ~41 ~128 ~1344 polished_andesite
+setblock ~24 ~128 ~1338 polished_andesite
+fill ~25 ~128 ~1338 ~33 ~128 ~1338 air
+setblock ~34 ~128 ~1338 polished_andesite
+setblock ~24 ~128 ~1339 air
+setblock ~25 ~128 ~1339 spruce_fence
+setblock ~26 ~128 ~1339 andesite
+setblock ~27 ~128 ~1339 light_gray_concrete
+setblock ~28 ~128 ~1339 andesite
+fill ~29 ~128 ~1339 ~30 ~128 ~1339 light_gray_concrete
+setblock ~31 ~128 ~1339 tuff
+setblock ~32 ~128 ~1339 andesite
+setblock ~33 ~128 ~1339 spruce_fence
+setblock ~34 ~128 ~1339 air
+setblock ~23 ~128 ~1340 mud_bricks
+setblock ~24 ~128 ~1340 air
+setblock ~25 ~128 ~1340 tuff
+fill ~26 ~128 ~1340 ~34 ~128 ~1340 air
+setblock ~24 ~128 ~1341 air
+setblock ~25 ~128 ~1341 tuff
+fill ~26 ~128 ~1341 ~34 ~128 ~1341 air
+fill ~24 ~128 ~1342 ~29 ~128 ~1342 air
+fill ~30 ~128 ~1342 ~36 ~128 ~1342 polished_basalt[axis=x]
+setblock ~24 ~128 ~1343 air
+setblock ~25 ~128 ~1343 tuff
+fill ~26 ~128 ~1343 ~34 ~128 ~1343 air
+setblock ~24 ~128 ~1344 air
+setblock ~25 ~128 ~1344 cracked_stone_bricks
+fill ~26 ~128 ~1344 ~34 ~128 ~1344 air
+setblock ~24 ~128 ~1345 air
+setblock ~25 ~128 ~1345 spruce_fence
+setblock ~26 ~128 ~1345 tuff
+fill ~27 ~128 ~1345 ~28 ~128 ~1345 light_gray_concrete
+setblock ~29 ~128 ~1345 andesite
+setblock ~30 ~128 ~1345 tuff
+setblock ~31 ~128 ~1345 cracked_stone_bricks
+setblock ~32 ~128 ~1345 andesite
+setblock ~33 ~128 ~1345 spruce_fence
+setblock ~34 ~128 ~1345 air
+setblock ~24 ~128 ~1346 polished_andesite
+fill ~25 ~128 ~1346 ~33 ~128 ~1346 air
+setblock ~34 ~128 ~1346 polished_andesite
 setblock ~97 ~128 ~1459 polished_basalt
 setblock ~103 ~128 ~1459 polished_basalt
 setblock ~97 ~128 ~1465 polished_basalt
@@ -7446,15 +4303,15 @@ setblock ~103 ~128 ~1465 polished_basalt
 fill ~28 ~129 ~1284 ~30 ~129 ~1284 mud_bricks
 setblock ~31 ~129 ~1284 packed_mud
 setblock ~32 ~129 ~1284 mud_bricks
-fill ~26 ~129 ~1285 ~27 ~129 ~1285 mud_bricks
-setblock ~33 ~129 ~1285 packed_mud
+fill ~26 ~129 ~1285 ~27 ~129 ~1285 packed_mud
+setblock ~33 ~129 ~1285 mud_bricks
 fill ~25 ~129 ~1286 ~26 ~129 ~1286 mud_bricks
 fill ~27 ~129 ~1286 ~33 ~129 ~1286 air
 setblock ~34 ~129 ~1286 green_terracotta
 setblock ~35 ~129 ~1286 spruce_planks
 setblock ~25 ~129 ~1287 mud_bricks
 fill ~26 ~129 ~1287 ~33 ~129 ~1287 air
-setblock ~34 ~129 ~1287 green_terracotta
+setblock ~34 ~129 ~1287 barrel[facing=up]
 setblock ~35 ~129 ~1287 mud_bricks
 fill ~26 ~129 ~1288 ~34 ~129 ~1288 air
 setblock ~36 ~129 ~1288 mud_bricks
@@ -7469,101 +4326,108 @@ setblock ~28 ~129 ~1290 iron_block
 setblock ~29 ~129 ~1290 air
 setblock ~30 ~129 ~1290 chain[axis=y]
 fill ~31 ~129 ~1290 ~34 ~129 ~1290 air
-setblock ~36 ~129 ~1290 mud_bricks
+setblock ~36 ~129 ~1290 packed_mud
 fill ~26 ~129 ~1291 ~28 ~129 ~1291 air
 setblock ~29 ~129 ~1291 polished_basalt[axis=y]
 setblock ~30 ~129 ~1291 air
 setblock ~31 ~129 ~1291 polished_basalt[axis=y]
 fill ~32 ~129 ~1291 ~34 ~129 ~1291 air
-setblock ~36 ~129 ~1291 packed_mud
+setblock ~36 ~129 ~1291 mud_bricks
 fill ~26 ~129 ~1292 ~34 ~129 ~1292 air
-setblock ~36 ~129 ~1292 mud_bricks
+setblock ~36 ~129 ~1292 packed_mud
 setblock ~25 ~129 ~1293 mud_bricks
 fill ~26 ~129 ~1293 ~34 ~129 ~1293 air
-setblock ~35 ~129 ~1293 mud_bricks
-setblock ~25 ~129 ~1294 mud_bricks
-setblock ~26 ~129 ~1294 packed_mud
+setblock ~35 ~129 ~1293 packed_mud
+fill ~25 ~129 ~1294 ~26 ~129 ~1294 mud_bricks
 fill ~27 ~129 ~1294 ~33 ~129 ~1294 air
 setblock ~34 ~129 ~1294 mud_bricks
 setblock ~35 ~129 ~1294 packed_mud
-setblock ~26 ~129 ~1295 packed_mud
-fill ~27 ~129 ~1295 ~28 ~129 ~1295 mud_bricks
-fill ~33 ~129 ~1295 ~34 ~129 ~1295 mud_bricks
+setblock ~26 ~129 ~1295 mud_bricks
+setblock ~27 ~129 ~1295 packed_mud
+setblock ~28 ~129 ~1295 mud_bricks
+setblock ~33 ~129 ~1295 mud_bricks
+setblock ~34 ~129 ~1295 packed_mud
 fill ~39 ~129 ~1295 ~42 ~129 ~1295 air
-fill ~28 ~129 ~1296 ~31 ~129 ~1296 mud_bricks
-setblock ~32 ~129 ~1296 packed_mud
+setblock ~28 ~129 ~1296 mud_bricks
+setblock ~29 ~129 ~1296 packed_mud
+fill ~30 ~129 ~1296 ~32 ~129 ~1296 mud_bricks
 fill ~39 ~129 ~1296 ~42 ~129 ~1296 air
 fill ~39 ~129 ~1297 ~42 ~129 ~1297 air
-setblock ~24 ~129 ~1305 packed_mud
+setblock ~24 ~129 ~1305 mud_bricks
 setblock ~24 ~129 ~1306 polished_blackstone_wall
-setblock ~33 ~129 ~1308 polished_andesite
-fill ~34 ~129 ~1308 ~42 ~129 ~1308 air
-setblock ~43 ~129 ~1308 polished_andesite
-setblock ~33 ~129 ~1309 air
-setblock ~34 ~129 ~1309 spruce_fence
-setblock ~35 ~129 ~1309 light_gray_concrete
-fill ~36 ~129 ~1309 ~39 ~129 ~1309 andesite
-fill ~40 ~129 ~1309 ~41 ~129 ~1309 light_gray_concrete
-setblock ~42 ~129 ~1309 spruce_fence
-setblock ~43 ~129 ~1309 air
-setblock ~33 ~129 ~1310 air
+setblock ~26 ~129 ~1308 polished_andesite
+fill ~27 ~129 ~1308 ~35 ~129 ~1308 air
+setblock ~36 ~129 ~1308 polished_andesite
+setblock ~26 ~129 ~1309 air
+setblock ~27 ~129 ~1309 spruce_fence
+fill ~28 ~129 ~1309 ~29 ~129 ~1309 cracked_stone_bricks
+setblock ~30 ~129 ~1309 tuff
+setblock ~31 ~129 ~1309 light_gray_concrete
+setblock ~32 ~129 ~1309 tuff
+setblock ~33 ~129 ~1309 stone
+setblock ~34 ~129 ~1309 light_gray_concrete
+setblock ~35 ~129 ~1309 spruce_fence
+setblock ~36 ~129 ~1309 air
+setblock ~26 ~129 ~1310 air
+fill ~27 ~129 ~1310 ~30 ~129 ~1310 light_gray_concrete
+fill ~31 ~129 ~1310 ~32 ~129 ~1310 cracked_stone_bricks
+setblock ~33 ~129 ~1310 tuff
 setblock ~34 ~129 ~1310 light_gray_concrete
-fill ~35 ~129 ~1310 ~36 ~129 ~1310 cracked_stone_bricks
-setblock ~37 ~129 ~1310 tuff
-fill ~38 ~129 ~1310 ~40 ~129 ~1310 cracked_stone_bricks
-fill ~41 ~129 ~1310 ~42 ~129 ~1310 andesite
-setblock ~43 ~129 ~1310 air
-setblock ~33 ~129 ~1311 air
-setblock ~34 ~129 ~1311 tuff
+setblock ~35 ~129 ~1310 andesite
+setblock ~36 ~129 ~1310 air
+setblock ~26 ~129 ~1311 air
+setblock ~27 ~129 ~1311 light_gray_concrete
+setblock ~28 ~129 ~1311 andesite
+setblock ~29 ~129 ~1311 cracked_stone_bricks
+setblock ~30 ~129 ~1311 stone
+setblock ~31 ~129 ~1311 light_gray_concrete
+fill ~32 ~129 ~1311 ~34 ~129 ~1311 tuff
 setblock ~35 ~129 ~1311 light_gray_concrete
-setblock ~36 ~129 ~1311 andesite
-setblock ~37 ~129 ~1311 cracked_stone_bricks
-setblock ~38 ~129 ~1311 light_gray_concrete
-fill ~39 ~129 ~1311 ~40 ~129 ~1311 andesite
-setblock ~41 ~129 ~1311 light_gray_concrete
-setblock ~42 ~129 ~1311 tuff
-setblock ~43 ~129 ~1311 air
-setblock ~33 ~129 ~1312 polished_andesite
+setblock ~36 ~129 ~1311 air
+setblock ~26 ~129 ~1312 polished_andesite
+setblock ~27 ~129 ~1312 light_gray_concrete
+setblock ~28 ~129 ~1312 cracked_stone_bricks
+setblock ~29 ~129 ~1312 stone
+setblock ~30 ~129 ~1312 andesite
+fill ~31 ~129 ~1312 ~32 ~129 ~1312 light_gray_concrete
+setblock ~33 ~129 ~1312 andesite
 fill ~34 ~129 ~1312 ~35 ~129 ~1312 light_gray_concrete
-setblock ~36 ~129 ~1312 cracked_stone_bricks
-fill ~37 ~129 ~1312 ~38 ~129 ~1312 light_gray_concrete
-setblock ~39 ~129 ~1312 andesite
-setblock ~40 ~129 ~1312 light_gray_concrete
-setblock ~41 ~129 ~1312 andesite
-setblock ~42 ~129 ~1312 light_gray_concrete
-setblock ~43 ~129 ~1312 polished_andesite
-setblock ~33 ~129 ~1313 air
-setblock ~34 ~129 ~1313 andesite
-fill ~35 ~129 ~1313 ~39 ~129 ~1313 light_gray_concrete
-setblock ~40 ~129 ~1313 cracked_stone_bricks
-fill ~41 ~129 ~1313 ~42 ~129 ~1313 andesite
-setblock ~43 ~129 ~1313 air
-setblock ~33 ~129 ~1314 air
-setblock ~34 ~129 ~1314 tuff
-fill ~35 ~129 ~1314 ~36 ~129 ~1314 light_gray_concrete
-setblock ~37 ~129 ~1314 tuff
-fill ~38 ~129 ~1314 ~39 ~129 ~1314 light_gray_concrete
-setblock ~40 ~129 ~1314 tuff
-setblock ~41 ~129 ~1314 andesite
-setblock ~42 ~129 ~1314 light_gray_concrete
-setblock ~43 ~129 ~1314 air
-setblock ~33 ~129 ~1315 air
-setblock ~34 ~129 ~1315 spruce_fence
-setblock ~35 ~129 ~1315 andesite
-setblock ~36 ~129 ~1315 tuff
-setblock ~37 ~129 ~1315 light_gray_concrete
-fill ~38 ~129 ~1315 ~39 ~129 ~1315 andesite
-setblock ~40 ~129 ~1315 cracked_stone_bricks
-setblock ~41 ~129 ~1315 andesite
-setblock ~42 ~129 ~1315 spruce_fence
-setblock ~43 ~129 ~1315 air
+setblock ~36 ~129 ~1312 polished_andesite
+setblock ~26 ~129 ~1313 air
+fill ~27 ~129 ~1313 ~29 ~129 ~1313 light_gray_concrete
+setblock ~30 ~129 ~1313 stone
+fill ~31 ~129 ~1313 ~34 ~129 ~1313 light_gray_concrete
+setblock ~35 ~129 ~1313 cracked_stone_bricks
+setblock ~36 ~129 ~1313 air
+setblock ~26 ~129 ~1314 air
+setblock ~27 ~129 ~1314 light_gray_concrete
+setblock ~28 ~129 ~1314 tuff
+setblock ~29 ~129 ~1314 light_gray_concrete
+setblock ~30 ~129 ~1314 andesite
+setblock ~31 ~129 ~1314 tuff
+setblock ~32 ~129 ~1314 cracked_stone_bricks
+setblock ~33 ~129 ~1314 andesite
+setblock ~34 ~129 ~1314 light_gray_concrete
+setblock ~35 ~129 ~1314 cracked_stone_bricks
+setblock ~36 ~129 ~1314 air
+setblock ~26 ~129 ~1315 air
+setblock ~27 ~129 ~1315 spruce_fence
+setblock ~28 ~129 ~1315 stone
+fill ~29 ~129 ~1315 ~30 ~129 ~1315 tuff
+setblock ~31 ~129 ~1315 cracked_stone_bricks
+setblock ~32 ~129 ~1315 light_gray_concrete
+setblock ~33 ~129 ~1315 tuff
+setblock ~34 ~129 ~1315 light_gray_concrete
+setblock ~35 ~129 ~1315 spruce_fence
+setblock ~36 ~129 ~1315 air
 setblock ~15 ~129 ~1316 iron_trapdoor[facing=west,half=bottom,open=false]
 setblock ~16 ~129 ~1316 light_gray_concrete
-fill ~17 ~129 ~1316 ~27 ~129 ~1316 air
+fill ~17 ~129 ~1316 ~25 ~129 ~1316 air
+setblock ~26 ~129 ~1316 polished_andesite
+setblock ~27 ~129 ~1316 air
 setblock ~28 ~129 ~1316 light_gray_concrete
-setblock ~33 ~129 ~1316 polished_andesite
-fill ~34 ~129 ~1316 ~42 ~129 ~1316 air
-setblock ~43 ~129 ~1316 polished_andesite
+fill ~29 ~129 ~1316 ~35 ~129 ~1316 air
+setblock ~36 ~129 ~1316 polished_andesite
 fill ~16 ~129 ~1317 ~28 ~129 ~1317 air
 fill ~16 ~129 ~1318 ~28 ~129 ~1318 air
 fill ~16 ~129 ~1319 ~28 ~129 ~1319 air
@@ -7613,39 +4477,75 @@ setblock ~28 ~129 ~1328 gray_concrete
 fill ~11 ~129 ~1329 ~14 ~129 ~1329 air
 fill ~11 ~129 ~1330 ~14 ~129 ~1330 air
 fill ~11 ~129 ~1331 ~14 ~129 ~1331 air
-fill ~31 ~129 ~1336 ~41 ~129 ~1336 stone_slab
-setblock ~31 ~129 ~1337 stone_slab
-setblock ~32 ~129 ~1337 spruce_fence
-fill ~33 ~129 ~1337 ~39 ~129 ~1337 stone_slab
-setblock ~40 ~129 ~1337 spruce_fence
-setblock ~41 ~129 ~1337 stone_slab
 setblock ~24 ~129 ~1338 polished_blackstone_wall
-fill ~31 ~129 ~1338 ~41 ~129 ~1338 stone_slab
-fill ~31 ~129 ~1339 ~41 ~129 ~1339 stone_slab
-fill ~31 ~129 ~1340 ~41 ~129 ~1340 stone_slab
-fill ~31 ~129 ~1341 ~41 ~129 ~1341 stone_slab
-fill ~31 ~129 ~1342 ~41 ~129 ~1342 stone_slab
-setblock ~31 ~129 ~1343 stone_slab
-setblock ~32 ~129 ~1343 spruce_fence
-fill ~33 ~129 ~1343 ~39 ~129 ~1343 stone_slab
-setblock ~40 ~129 ~1343 spruce_fence
-setblock ~41 ~129 ~1343 stone_slab
-fill ~31 ~129 ~1344 ~41 ~129 ~1344 stone_slab
+fill ~25 ~129 ~1338 ~33 ~129 ~1338 air
+setblock ~34 ~129 ~1338 polished_andesite
+setblock ~24 ~129 ~1339 lightning_rod[facing=south]
+setblock ~25 ~129 ~1339 spruce_fence
+fill ~26 ~129 ~1339 ~27 ~129 ~1339 cracked_stone_bricks
+setblock ~28 ~129 ~1339 tuff
+fill ~29 ~129 ~1339 ~30 ~129 ~1339 light_gray_concrete
+setblock ~31 ~129 ~1339 andesite
+setblock ~32 ~129 ~1339 light_gray_concrete
+setblock ~33 ~129 ~1339 spruce_fence
+setblock ~34 ~129 ~1339 air
+setblock ~24 ~129 ~1340 lightning_rod[facing=south]
+setblock ~25 ~129 ~1340 light_gray_concrete
+fill ~26 ~129 ~1340 ~32 ~129 ~1340 air
+setblock ~33 ~129 ~1340 light_gray_concrete
+setblock ~34 ~129 ~1340 iron_trapdoor[facing=east,half=top,open=true]
+setblock ~24 ~129 ~1341 lightning_rod[facing=south]
+setblock ~25 ~129 ~1341 light_gray_concrete
+fill ~26 ~129 ~1341 ~32 ~129 ~1341 air
+setblock ~33 ~129 ~1341 light_gray_concrete
+setblock ~34 ~129 ~1341 iron_trapdoor[facing=east,half=top,open=true]
+setblock ~24 ~129 ~1342 polished_andesite
+setblock ~25 ~129 ~1342 andesite
+setblock ~26 ~129 ~1342 air
+setblock ~27 ~129 ~1342 lantern[hanging=true]
+fill ~28 ~129 ~1342 ~32 ~129 ~1342 air
+setblock ~33 ~129 ~1342 tuff
+setblock ~34 ~129 ~1342 polished_andesite
+setblock ~24 ~129 ~1343 lightning_rod[facing=south]
+setblock ~25 ~129 ~1343 andesite
+fill ~26 ~129 ~1343 ~32 ~129 ~1343 air
+setblock ~33 ~129 ~1343 cracked_stone_bricks
+setblock ~34 ~129 ~1343 iron_trapdoor[facing=east,half=top,open=true]
+setblock ~24 ~129 ~1344 lightning_rod[facing=south]
+setblock ~25 ~129 ~1344 cracked_stone_bricks
+fill ~26 ~129 ~1344 ~32 ~129 ~1344 air
+setblock ~33 ~129 ~1344 tuff
+setblock ~34 ~129 ~1344 iron_trapdoor[facing=east,half=top,open=true]
+setblock ~24 ~129 ~1345 lightning_rod[facing=south]
+setblock ~25 ~129 ~1345 spruce_fence
+setblock ~26 ~129 ~1345 andesite
+fill ~27 ~129 ~1345 ~28 ~129 ~1345 light_gray_concrete
+setblock ~29 ~129 ~1345 andesite
+setblock ~30 ~129 ~1345 light_gray_concrete
+setblock ~31 ~129 ~1345 cracked_stone_bricks
+setblock ~32 ~129 ~1345 light_gray_concrete
+setblock ~33 ~129 ~1345 spruce_fence
+setblock ~34 ~129 ~1345 air
+setblock ~24 ~129 ~1346 polished_andesite
+fill ~25 ~129 ~1346 ~33 ~129 ~1346 air
+setblock ~34 ~129 ~1346 polished_andesite
 setblock ~97 ~129 ~1459 polished_basalt
 setblock ~103 ~129 ~1459 polished_basalt
 setblock ~97 ~129 ~1465 polished_basalt
 setblock ~103 ~129 ~1465 polished_basalt
 fill ~28 ~130 ~1284 ~32 ~130 ~1284 mud_brick_slab
-fill ~26 ~130 ~1285 ~27 ~130 ~1285 mud_brick_slab
-setblock ~33 ~130 ~1285 mud_bricks
-fill ~25 ~130 ~1286 ~26 ~130 ~1286 mud_brick_slab
+setblock ~26 ~130 ~1285 packed_mud
+setblock ~27 ~130 ~1285 mud_brick_slab
+setblock ~33 ~130 ~1285 mud_brick_slab
+setblock ~25 ~130 ~1286 mud_bricks
+setblock ~26 ~130 ~1286 packed_mud
 fill ~27 ~130 ~1286 ~33 ~130 ~1286 air
 setblock ~34 ~130 ~1286 spruce_trapdoor[half=bottom]
 setblock ~25 ~130 ~1287 mud_brick_slab
 fill ~26 ~130 ~1287 ~34 ~130 ~1287 air
-setblock ~35 ~130 ~1287 mud_brick_slab
+setblock ~35 ~130 ~1287 packed_mud
 fill ~26 ~130 ~1288 ~34 ~130 ~1288 air
-setblock ~36 ~130 ~1288 packed_mud
+setblock ~36 ~130 ~1288 mud_bricks
 fill ~26 ~130 ~1289 ~28 ~130 ~1289 air
 setblock ~29 ~130 ~1289 iron_bars
 setblock ~30 ~130 ~1289 air
@@ -7657,50 +4557,49 @@ setblock ~28 ~130 ~1290 heavy_weighted_pressure_plate
 setblock ~29 ~130 ~1290 air
 setblock ~30 ~130 ~1290 chain[axis=y]
 fill ~31 ~130 ~1290 ~34 ~130 ~1290 air
-setblock ~36 ~130 ~1290 mud_bricks
+setblock ~36 ~130 ~1290 mud_brick_slab
 fill ~26 ~130 ~1291 ~28 ~130 ~1291 air
 setblock ~29 ~130 ~1291 iron_bars
 setblock ~30 ~130 ~1291 air
 setblock ~31 ~130 ~1291 iron_bars
 fill ~32 ~130 ~1291 ~34 ~130 ~1291 air
-setblock ~36 ~130 ~1291 mud_bricks
+setblock ~36 ~130 ~1291 mud_brick_slab
 fill ~26 ~130 ~1292 ~34 ~130 ~1292 air
 setblock ~36 ~130 ~1292 mud_brick_slab
-setblock ~25 ~130 ~1293 mud_bricks
+setblock ~25 ~130 ~1293 mud_brick_slab
 fill ~26 ~130 ~1293 ~34 ~130 ~1293 air
-setblock ~35 ~130 ~1293 mud_bricks
-fill ~25 ~130 ~1294 ~26 ~130 ~1294 mud_brick_slab
+setblock ~35 ~130 ~1293 mud_brick_slab
+fill ~25 ~130 ~1294 ~26 ~130 ~1294 mud_bricks
 fill ~27 ~130 ~1294 ~33 ~130 ~1294 air
-setblock ~34 ~130 ~1294 packed_mud
-setblock ~35 ~130 ~1294 mud_brick_slab
-fill ~26 ~130 ~1295 ~28 ~130 ~1295 mud_brick_slab
-setblock ~33 ~130 ~1295 mud_bricks
-setblock ~34 ~130 ~1295 mud_brick_slab
+fill ~34 ~130 ~1294 ~35 ~130 ~1294 mud_brick_slab
+fill ~26 ~130 ~1295 ~27 ~130 ~1295 packed_mud
+setblock ~28 ~130 ~1295 mud_brick_slab
+setblock ~33 ~130 ~1295 mud_brick_slab
+setblock ~34 ~130 ~1295 mud_bricks
 fill ~39 ~130 ~1295 ~42 ~130 ~1295 air
-setblock ~28 ~130 ~1296 mud_brick_slab
-setblock ~29 ~130 ~1296 packed_mud
+fill ~28 ~130 ~1296 ~29 ~130 ~1296 mud_bricks
 fill ~30 ~130 ~1296 ~32 ~130 ~1296 mud_brick_slab
 fill ~39 ~130 ~1296 ~42 ~130 ~1296 air
 fill ~39 ~130 ~1297 ~42 ~130 ~1297 air
 setblock ~24 ~130 ~1306 polished_blackstone_wall
-fill ~33 ~130 ~1308 ~43 ~130 ~1308 stone_slab
-setblock ~33 ~130 ~1309 stone_slab
-setblock ~34 ~130 ~1309 spruce_fence
-fill ~35 ~130 ~1309 ~41 ~130 ~1309 stone_slab
-setblock ~42 ~130 ~1309 spruce_fence
-setblock ~43 ~130 ~1309 stone_slab
-fill ~33 ~130 ~1310 ~43 ~130 ~1310 stone_slab
-fill ~33 ~130 ~1311 ~43 ~130 ~1311 stone_slab
-fill ~33 ~130 ~1312 ~43 ~130 ~1312 stone_slab
-fill ~33 ~130 ~1313 ~43 ~130 ~1313 stone_slab
-fill ~33 ~130 ~1314 ~43 ~130 ~1314 stone_slab
-setblock ~33 ~130 ~1315 stone_slab
-setblock ~34 ~130 ~1315 spruce_fence
-fill ~35 ~130 ~1315 ~41 ~130 ~1315 stone_slab
-setblock ~42 ~130 ~1315 spruce_fence
-setblock ~43 ~130 ~1315 stone_slab
-fill ~16 ~130 ~1316 ~28 ~130 ~1316 air
-fill ~33 ~130 ~1316 ~43 ~130 ~1316 stone_slab
+fill ~26 ~130 ~1308 ~36 ~130 ~1308 stone_slab
+setblock ~26 ~130 ~1309 stone_slab
+setblock ~27 ~130 ~1309 spruce_fence
+fill ~28 ~130 ~1309 ~34 ~130 ~1309 stone_slab
+setblock ~35 ~130 ~1309 spruce_fence
+setblock ~36 ~130 ~1309 stone_slab
+fill ~26 ~130 ~1310 ~36 ~130 ~1310 stone_slab
+fill ~26 ~130 ~1311 ~36 ~130 ~1311 stone_slab
+fill ~26 ~130 ~1312 ~36 ~130 ~1312 stone_slab
+fill ~26 ~130 ~1313 ~36 ~130 ~1313 stone_slab
+fill ~26 ~130 ~1314 ~36 ~130 ~1314 stone_slab
+setblock ~26 ~130 ~1315 stone_slab
+setblock ~27 ~130 ~1315 spruce_fence
+fill ~28 ~130 ~1315 ~34 ~130 ~1315 stone_slab
+setblock ~35 ~130 ~1315 spruce_fence
+setblock ~36 ~130 ~1315 stone_slab
+fill ~16 ~130 ~1316 ~25 ~130 ~1316 air
+fill ~26 ~130 ~1316 ~36 ~130 ~1316 stone_slab
 fill ~16 ~130 ~1317 ~28 ~130 ~1317 air
 fill ~16 ~130 ~1318 ~28 ~130 ~1318 air
 fill ~16 ~130 ~1319 ~28 ~130 ~1319 air
@@ -7741,66 +4640,73 @@ fill ~16 ~130 ~1328 ~28 ~130 ~1328 air
 fill ~11 ~130 ~1329 ~14 ~130 ~1329 air
 fill ~11 ~130 ~1330 ~14 ~130 ~1330 air
 fill ~11 ~130 ~1331 ~14 ~130 ~1331 air
-fill ~31 ~130 ~1336 ~41 ~130 ~1336 air
-fill ~31 ~130 ~1337 ~32 ~130 ~1337 air
-setblock ~33 ~130 ~1337 green_carpet
-fill ~34 ~130 ~1337 ~35 ~130 ~1337 moss_carpet
-setblock ~36 ~130 ~1337 brown_carpet
-setblock ~37 ~130 ~1337 green_carpet
-setblock ~38 ~130 ~1337 moss_carpet
-setblock ~39 ~130 ~1337 green_carpet
-setblock ~40 ~130 ~1337 brown_carpet
-setblock ~41 ~130 ~1337 air
 setblock ~24 ~130 ~1338 polished_blackstone_wall
-setblock ~31 ~130 ~1338 air
-fill ~32 ~130 ~1338 ~33 ~130 ~1338 green_carpet
-setblock ~34 ~130 ~1338 brown_carpet
-setblock ~35 ~130 ~1338 moss_carpet
-fill ~36 ~130 ~1338 ~37 ~130 ~1338 green_carpet
-setblock ~38 ~130 ~1338 air
-fill ~39 ~130 ~1338 ~40 ~130 ~1338 brown_carpet
-setblock ~41 ~130 ~1338 air
-setblock ~31 ~130 ~1339 air
-fill ~32 ~130 ~1339 ~34 ~130 ~1339 green_carpet
-setblock ~35 ~130 ~1339 brown_carpet
-setblock ~36 ~130 ~1339 green_carpet
-setblock ~37 ~130 ~1339 air
-fill ~38 ~130 ~1339 ~39 ~130 ~1339 green_carpet
-fill ~40 ~130 ~1339 ~41 ~130 ~1339 air
-setblock ~31 ~130 ~1340 air
-fill ~32 ~130 ~1340 ~34 ~130 ~1340 green_carpet
-setblock ~35 ~130 ~1340 moss_carpet
-setblock ~36 ~130 ~1340 air
-setblock ~37 ~130 ~1340 brown_carpet
-fill ~38 ~130 ~1340 ~39 ~130 ~1340 green_carpet
-setblock ~40 ~130 ~1340 brown_carpet
-setblock ~41 ~130 ~1340 air
-setblock ~31 ~130 ~1341 air
-setblock ~32 ~130 ~1341 brown_carpet
-setblock ~33 ~130 ~1341 air
-setblock ~34 ~130 ~1341 green_carpet
-setblock ~35 ~130 ~1341 air
-setblock ~36 ~130 ~1341 green_carpet
-setblock ~37 ~130 ~1341 moss_carpet
-fill ~38 ~130 ~1341 ~40 ~130 ~1341 green_carpet
-setblock ~41 ~130 ~1341 air
-setblock ~31 ~130 ~1342 air
-setblock ~32 ~130 ~1342 brown_carpet
-setblock ~33 ~130 ~1342 green_carpet
-fill ~34 ~130 ~1342 ~35 ~130 ~1342 moss_carpet
-setblock ~36 ~130 ~1342 green_carpet
-fill ~37 ~130 ~1342 ~38 ~130 ~1342 brown_carpet
-setblock ~39 ~130 ~1342 green_carpet
-fill ~40 ~130 ~1342 ~41 ~130 ~1342 air
-setblock ~31 ~130 ~1343 air
-fill ~32 ~130 ~1343 ~35 ~130 ~1343 moss_carpet
-setblock ~36 ~130 ~1343 green_carpet
-setblock ~37 ~130 ~1343 brown_carpet
-setblock ~38 ~130 ~1343 green_carpet
-setblock ~39 ~130 ~1343 brown_carpet
-setblock ~40 ~130 ~1343 green_carpet
-setblock ~41 ~130 ~1343 air
-fill ~31 ~130 ~1344 ~41 ~130 ~1344 air
+fill ~25 ~130 ~1338 ~33 ~130 ~1338 air
+setblock ~34 ~130 ~1338 polished_andesite
+setblock ~24 ~130 ~1339 air
+setblock ~25 ~130 ~1339 spruce_fence
+setblock ~26 ~130 ~1339 andesite
+setblock ~27 ~130 ~1339 light_gray_concrete
+fill ~28 ~130 ~1339 ~29 ~130 ~1339 tuff
+setblock ~30 ~130 ~1339 stone
+setblock ~31 ~130 ~1339 tuff
+setblock ~32 ~130 ~1339 cracked_stone_bricks
+setblock ~33 ~130 ~1339 spruce_fence
+setblock ~34 ~130 ~1339 air
+setblock ~24 ~130 ~1340 air
+setblock ~25 ~130 ~1340 cracked_stone_bricks
+setblock ~26 ~130 ~1340 light_gray_concrete
+setblock ~27 ~130 ~1340 stone
+setblock ~28 ~130 ~1340 andesite
+setblock ~29 ~130 ~1340 tuff
+setblock ~30 ~130 ~1340 light_gray_concrete
+setblock ~31 ~130 ~1340 andesite
+fill ~32 ~130 ~1340 ~33 ~130 ~1340 light_gray_concrete
+setblock ~34 ~130 ~1340 air
+setblock ~24 ~130 ~1341 air
+setblock ~25 ~130 ~1341 stone
+setblock ~26 ~130 ~1341 tuff
+setblock ~27 ~130 ~1341 stone
+setblock ~28 ~130 ~1341 tuff
+setblock ~29 ~130 ~1341 andesite
+setblock ~30 ~130 ~1341 light_gray_concrete
+setblock ~31 ~130 ~1341 andesite
+fill ~32 ~130 ~1341 ~33 ~130 ~1341 light_gray_concrete
+setblock ~34 ~130 ~1341 air
+setblock ~24 ~130 ~1342 polished_andesite
+setblock ~25 ~130 ~1342 tuff
+setblock ~26 ~130 ~1342 light_gray_concrete
+fill ~27 ~130 ~1342 ~28 ~130 ~1342 andesite
+fill ~29 ~130 ~1342 ~30 ~130 ~1342 light_gray_concrete
+setblock ~31 ~130 ~1342 cracked_stone_bricks
+fill ~32 ~130 ~1342 ~33 ~130 ~1342 light_gray_concrete
+setblock ~34 ~130 ~1342 polished_andesite
+setblock ~24 ~130 ~1343 air
+setblock ~25 ~130 ~1343 cracked_stone_bricks
+setblock ~26 ~130 ~1343 stone
+setblock ~27 ~130 ~1343 tuff
+setblock ~28 ~130 ~1343 stone
+fill ~29 ~130 ~1343 ~32 ~130 ~1343 light_gray_concrete
+setblock ~33 ~130 ~1343 stone
+setblock ~34 ~130 ~1343 air
+setblock ~24 ~130 ~1344 air
+fill ~25 ~130 ~1344 ~29 ~130 ~1344 light_gray_concrete
+setblock ~30 ~130 ~1344 cracked_stone_bricks
+setblock ~31 ~130 ~1344 light_gray_concrete
+setblock ~32 ~130 ~1344 tuff
+setblock ~33 ~130 ~1344 light_gray_concrete
+setblock ~34 ~130 ~1344 air
+setblock ~24 ~130 ~1345 air
+setblock ~25 ~130 ~1345 spruce_fence
+setblock ~26 ~130 ~1345 tuff
+fill ~27 ~130 ~1345 ~28 ~130 ~1345 light_gray_concrete
+setblock ~29 ~130 ~1345 stone
+fill ~30 ~130 ~1345 ~32 ~130 ~1345 light_gray_concrete
+setblock ~33 ~130 ~1345 spruce_fence
+setblock ~34 ~130 ~1345 air
+setblock ~24 ~130 ~1346 polished_andesite
+fill ~25 ~130 ~1346 ~33 ~130 ~1346 air
+setblock ~34 ~130 ~1346 polished_andesite
 fill ~97 ~130 ~1459 ~103 ~130 ~1459 dark_prismarine_slab
 fill ~97 ~130 ~1460 ~103 ~130 ~1460 dark_prismarine_slab
 fill ~97 ~130 ~1461 ~103 ~130 ~1461 dark_prismarine_slab
@@ -7831,62 +4737,67 @@ fill ~39 ~131 ~1295 ~42 ~131 ~1295 air
 fill ~39 ~131 ~1296 ~42 ~131 ~1296 air
 fill ~39 ~131 ~1297 ~42 ~131 ~1297 air
 setblock ~24 ~131 ~1306 polished_blackstone_wall
-fill ~33 ~131 ~1308 ~43 ~131 ~1308 air
-setblock ~33 ~131 ~1309 air
-setblock ~34 ~131 ~1309 moss_carpet
-setblock ~35 ~131 ~1309 green_carpet
+fill ~26 ~131 ~1308 ~36 ~131 ~1308 air
+setblock ~26 ~131 ~1309 air
+fill ~27 ~131 ~1309 ~29 ~131 ~1309 green_carpet
+setblock ~30 ~131 ~1309 brown_carpet
+setblock ~31 ~131 ~1309 green_carpet
+setblock ~32 ~131 ~1309 brown_carpet
+setblock ~33 ~131 ~1309 green_carpet
+fill ~34 ~131 ~1309 ~35 ~131 ~1309 brown_carpet
 setblock ~36 ~131 ~1309 air
-setblock ~37 ~131 ~1309 moss_carpet
-fill ~38 ~131 ~1309 ~41 ~131 ~1309 green_carpet
-setblock ~42 ~131 ~1309 brown_carpet
-setblock ~43 ~131 ~1309 air
-setblock ~33 ~131 ~1310 air
-setblock ~34 ~131 ~1310 brown_carpet
-setblock ~35 ~131 ~1310 air
-fill ~36 ~131 ~1310 ~37 ~131 ~1310 green_carpet
-setblock ~38 ~131 ~1310 air
-fill ~39 ~131 ~1310 ~41 ~131 ~1310 green_carpet
-setblock ~42 ~131 ~1310 moss_carpet
-setblock ~43 ~131 ~1310 air
-setblock ~33 ~131 ~1311 air
-fill ~34 ~131 ~1311 ~35 ~131 ~1311 green_carpet
-setblock ~36 ~131 ~1311 brown_carpet
-setblock ~37 ~131 ~1311 green_carpet
-fill ~38 ~131 ~1311 ~41 ~131 ~1311 brown_carpet
-setblock ~42 ~131 ~1311 green_carpet
-setblock ~43 ~131 ~1311 air
-setblock ~33 ~131 ~1312 air
-setblock ~34 ~131 ~1312 green_carpet
-fill ~35 ~131 ~1312 ~36 ~131 ~1312 brown_carpet
-fill ~37 ~131 ~1312 ~38 ~131 ~1312 green_carpet
-setblock ~39 ~131 ~1312 air
-setblock ~40 ~131 ~1312 green_carpet
-setblock ~41 ~131 ~1312 moss_carpet
-fill ~42 ~131 ~1312 ~43 ~131 ~1312 air
-fill ~33 ~131 ~1313 ~34 ~131 ~1313 air
-fill ~35 ~131 ~1313 ~36 ~131 ~1313 brown_carpet
-fill ~37 ~131 ~1313 ~38 ~131 ~1313 green_carpet
-setblock ~39 ~131 ~1313 brown_carpet
-setblock ~40 ~131 ~1313 green_carpet
-setblock ~41 ~131 ~1313 air
-setblock ~42 ~131 ~1313 brown_carpet
-setblock ~43 ~131 ~1313 air
+setblock ~26 ~131 ~1310 air
+setblock ~27 ~131 ~1310 green_carpet
+fill ~28 ~131 ~1310 ~30 ~131 ~1310 brown_carpet
+fill ~31 ~131 ~1310 ~32 ~131 ~1310 green_carpet
+setblock ~33 ~131 ~1310 brown_carpet
+setblock ~34 ~131 ~1310 moss_carpet
+setblock ~35 ~131 ~1310 green_carpet
+setblock ~36 ~131 ~1310 air
+setblock ~26 ~131 ~1311 air
+setblock ~27 ~131 ~1311 green_carpet
+fill ~28 ~131 ~1311 ~29 ~131 ~1311 moss_carpet
+setblock ~30 ~131 ~1311 green_carpet
+setblock ~31 ~131 ~1311 moss_carpet
+setblock ~32 ~131 ~1311 green_carpet
+fill ~33 ~131 ~1311 ~34 ~131 ~1311 brown_carpet
+setblock ~35 ~131 ~1311 green_carpet
+setblock ~36 ~131 ~1311 air
+setblock ~26 ~131 ~1312 air
+setblock ~27 ~131 ~1312 brown_carpet
+setblock ~28 ~131 ~1312 air
+fill ~29 ~131 ~1312 ~30 ~131 ~1312 green_carpet
+setblock ~31 ~131 ~1312 moss_carpet
+setblock ~32 ~131 ~1312 air
+setblock ~33 ~131 ~1312 green_carpet
+setblock ~34 ~131 ~1312 moss_carpet
+setblock ~35 ~131 ~1312 green_carpet
+setblock ~36 ~131 ~1312 air
+setblock ~26 ~131 ~1313 air
+fill ~27 ~131 ~1313 ~31 ~131 ~1313 green_carpet
+setblock ~32 ~131 ~1313 brown_carpet
+fill ~33 ~131 ~1313 ~35 ~131 ~1313 green_carpet
+setblock ~36 ~131 ~1313 air
+setblock ~26 ~131 ~1314 air
+setblock ~27 ~131 ~1314 moss_carpet
+setblock ~28 ~131 ~1314 air
+setblock ~29 ~131 ~1314 green_carpet
+setblock ~30 ~131 ~1314 brown_carpet
+setblock ~31 ~131 ~1314 green_carpet
+setblock ~32 ~131 ~1314 moss_carpet
 setblock ~33 ~131 ~1314 air
-fill ~34 ~131 ~1314 ~35 ~131 ~1314 moss_carpet
-setblock ~36 ~131 ~1314 brown_carpet
-setblock ~37 ~131 ~1314 green_carpet
-setblock ~38 ~131 ~1314 brown_carpet
-fill ~39 ~131 ~1314 ~41 ~131 ~1314 green_carpet
-fill ~42 ~131 ~1314 ~43 ~131 ~1314 air
-setblock ~33 ~131 ~1315 air
-fill ~34 ~131 ~1315 ~36 ~131 ~1315 green_carpet
-setblock ~37 ~131 ~1315 brown_carpet
-fill ~38 ~131 ~1315 ~40 ~131 ~1315 moss_carpet
-setblock ~41 ~131 ~1315 green_carpet
-setblock ~42 ~131 ~1315 moss_carpet
-setblock ~43 ~131 ~1315 air
-fill ~16 ~131 ~1316 ~28 ~131 ~1316 air
-fill ~33 ~131 ~1316 ~43 ~131 ~1316 air
+setblock ~34 ~131 ~1314 brown_carpet
+setblock ~35 ~131 ~1314 green_carpet
+setblock ~36 ~131 ~1314 air
+setblock ~26 ~131 ~1315 air
+setblock ~27 ~131 ~1315 moss_carpet
+setblock ~28 ~131 ~1315 air
+fill ~29 ~131 ~1315 ~31 ~131 ~1315 green_carpet
+setblock ~32 ~131 ~1315 brown_carpet
+fill ~33 ~131 ~1315 ~34 ~131 ~1315 moss_carpet
+setblock ~35 ~131 ~1315 green_carpet
+setblock ~36 ~131 ~1315 air
+fill ~16 ~131 ~1316 ~36 ~131 ~1316 air
 fill ~16 ~131 ~1317 ~28 ~131 ~1317 air
 fill ~16 ~131 ~1318 ~28 ~131 ~1318 air
 fill ~16 ~131 ~1319 ~28 ~131 ~1319 air
@@ -7920,16 +4831,24 @@ fill ~16 ~131 ~1328 ~28 ~131 ~1328 air
 fill ~11 ~131 ~1329 ~14 ~131 ~1329 air
 fill ~11 ~131 ~1330 ~14 ~131 ~1330 air
 fill ~11 ~131 ~1331 ~14 ~131 ~1331 air
-fill ~31 ~131 ~1336 ~41 ~131 ~1336 air
-fill ~31 ~131 ~1337 ~41 ~131 ~1337 air
 setblock ~24 ~131 ~1338 polished_blackstone_wall
-fill ~31 ~131 ~1338 ~41 ~131 ~1338 air
-fill ~31 ~131 ~1339 ~41 ~131 ~1339 air
-fill ~31 ~131 ~1340 ~41 ~131 ~1340 air
-fill ~31 ~131 ~1341 ~41 ~131 ~1341 air
-fill ~31 ~131 ~1342 ~41 ~131 ~1342 air
-fill ~31 ~131 ~1343 ~41 ~131 ~1343 air
-fill ~31 ~131 ~1344 ~41 ~131 ~1344 air
+fill ~25 ~131 ~1338 ~34 ~131 ~1338 stone_slab
+setblock ~24 ~131 ~1339 stone_slab
+setblock ~25 ~131 ~1339 spruce_fence
+fill ~26 ~131 ~1339 ~32 ~131 ~1339 stone_slab
+setblock ~33 ~131 ~1339 spruce_fence
+setblock ~34 ~131 ~1339 stone_slab
+fill ~24 ~131 ~1340 ~34 ~131 ~1340 stone_slab
+fill ~24 ~131 ~1341 ~34 ~131 ~1341 stone_slab
+fill ~24 ~131 ~1342 ~34 ~131 ~1342 stone_slab
+fill ~24 ~131 ~1343 ~34 ~131 ~1343 stone_slab
+fill ~24 ~131 ~1344 ~34 ~131 ~1344 stone_slab
+setblock ~24 ~131 ~1345 stone_slab
+setblock ~25 ~131 ~1345 spruce_fence
+fill ~26 ~131 ~1345 ~32 ~131 ~1345 stone_slab
+setblock ~33 ~131 ~1345 spruce_fence
+setblock ~34 ~131 ~1345 stone_slab
+fill ~24 ~131 ~1346 ~34 ~131 ~1346 stone_slab
 setblock ~99 ~131 ~1461 iron_bars
 setblock ~101 ~131 ~1461 iron_bars
 setblock ~100 ~131 ~1462 chain[axis=y]
@@ -7957,16 +4876,15 @@ fill ~39 ~132 ~1296 ~42 ~132 ~1296 air
 fill ~39 ~132 ~1297 ~42 ~132 ~1297 air
 setblock ~24 ~132 ~1306 polished_blackstone_wall
 setblock ~24 ~132 ~1307 lantern[hanging=true]
-fill ~33 ~132 ~1308 ~43 ~132 ~1308 air
-fill ~33 ~132 ~1309 ~43 ~132 ~1309 air
-fill ~33 ~132 ~1310 ~43 ~132 ~1310 air
-fill ~33 ~132 ~1311 ~43 ~132 ~1311 air
-fill ~33 ~132 ~1312 ~43 ~132 ~1312 air
-fill ~33 ~132 ~1313 ~43 ~132 ~1313 air
-fill ~33 ~132 ~1314 ~43 ~132 ~1314 air
-fill ~33 ~132 ~1315 ~43 ~132 ~1315 air
-fill ~16 ~132 ~1316 ~28 ~132 ~1316 air
-fill ~33 ~132 ~1316 ~43 ~132 ~1316 air
+fill ~26 ~132 ~1308 ~36 ~132 ~1308 air
+fill ~26 ~132 ~1309 ~36 ~132 ~1309 air
+fill ~26 ~132 ~1310 ~36 ~132 ~1310 air
+fill ~26 ~132 ~1311 ~36 ~132 ~1311 air
+fill ~26 ~132 ~1312 ~36 ~132 ~1312 air
+fill ~26 ~132 ~1313 ~36 ~132 ~1313 air
+fill ~26 ~132 ~1314 ~36 ~132 ~1314 air
+fill ~26 ~132 ~1315 ~36 ~132 ~1315 air
+fill ~16 ~132 ~1316 ~36 ~132 ~1316 air
 fill ~16 ~132 ~1317 ~28 ~132 ~1317 air
 fill ~16 ~132 ~1318 ~28 ~132 ~1318 air
 fill ~16 ~132 ~1319 ~28 ~132 ~1319 air
@@ -7992,17 +4910,65 @@ fill ~16 ~132 ~1328 ~28 ~132 ~1328 air
 fill ~11 ~132 ~1329 ~14 ~132 ~1329 air
 fill ~11 ~132 ~1330 ~14 ~132 ~1330 air
 fill ~11 ~132 ~1331 ~14 ~132 ~1331 air
-fill ~31 ~132 ~1336 ~41 ~132 ~1336 air
-fill ~31 ~132 ~1337 ~41 ~132 ~1337 air
 setblock ~24 ~132 ~1338 polished_blackstone_wall
-fill ~31 ~132 ~1338 ~41 ~132 ~1338 air
+fill ~25 ~132 ~1338 ~34 ~132 ~1338 air
 setblock ~24 ~132 ~1339 lantern[hanging=true]
-fill ~31 ~132 ~1339 ~41 ~132 ~1339 air
-fill ~31 ~132 ~1340 ~41 ~132 ~1340 air
-fill ~31 ~132 ~1341 ~41 ~132 ~1341 air
-fill ~31 ~132 ~1342 ~41 ~132 ~1342 air
-fill ~31 ~132 ~1343 ~41 ~132 ~1343 air
-fill ~31 ~132 ~1344 ~41 ~132 ~1344 air
+setblock ~25 ~132 ~1339 green_carpet
+setblock ~26 ~132 ~1339 brown_carpet
+setblock ~27 ~132 ~1339 moss_carpet
+fill ~28 ~132 ~1339 ~29 ~132 ~1339 brown_carpet
+setblock ~30 ~132 ~1339 green_carpet
+setblock ~31 ~132 ~1339 brown_carpet
+setblock ~32 ~132 ~1339 green_carpet
+setblock ~33 ~132 ~1339 brown_carpet
+setblock ~34 ~132 ~1339 air
+setblock ~24 ~132 ~1340 air
+setblock ~25 ~132 ~1340 green_carpet
+setblock ~26 ~132 ~1340 moss_carpet
+fill ~27 ~132 ~1340 ~30 ~132 ~1340 green_carpet
+fill ~31 ~132 ~1340 ~32 ~132 ~1340 brown_carpet
+setblock ~33 ~132 ~1340 moss_carpet
+setblock ~34 ~132 ~1340 air
+setblock ~24 ~132 ~1341 air
+setblock ~25 ~132 ~1341 brown_carpet
+setblock ~26 ~132 ~1341 green_carpet
+setblock ~27 ~132 ~1341 moss_carpet
+setblock ~28 ~132 ~1341 green_carpet
+fill ~29 ~132 ~1341 ~30 ~132 ~1341 moss_carpet
+fill ~31 ~132 ~1341 ~33 ~132 ~1341 green_carpet
+setblock ~34 ~132 ~1341 air
+setblock ~24 ~132 ~1342 air
+fill ~25 ~132 ~1342 ~27 ~132 ~1342 brown_carpet
+fill ~28 ~132 ~1342 ~29 ~132 ~1342 green_carpet
+setblock ~30 ~132 ~1342 air
+setblock ~31 ~132 ~1342 brown_carpet
+setblock ~32 ~132 ~1342 green_carpet
+fill ~33 ~132 ~1342 ~34 ~132 ~1342 air
+setblock ~24 ~132 ~1343 air
+setblock ~25 ~132 ~1343 brown_carpet
+setblock ~26 ~132 ~1343 moss_carpet
+fill ~27 ~132 ~1343 ~28 ~132 ~1343 green_carpet
+setblock ~29 ~132 ~1343 air
+fill ~30 ~132 ~1343 ~31 ~132 ~1343 green_carpet
+setblock ~32 ~132 ~1343 moss_carpet
+setblock ~33 ~132 ~1343 green_carpet
+setblock ~34 ~132 ~1343 air
+fill ~24 ~132 ~1344 ~25 ~132 ~1344 air
+setblock ~26 ~132 ~1344 brown_carpet
+setblock ~27 ~132 ~1344 moss_carpet
+setblock ~28 ~132 ~1344 brown_carpet
+fill ~29 ~132 ~1344 ~33 ~132 ~1344 green_carpet
+setblock ~34 ~132 ~1344 air
+setblock ~24 ~132 ~1345 air
+setblock ~25 ~132 ~1345 brown_carpet
+setblock ~26 ~132 ~1345 green_carpet
+fill ~27 ~132 ~1345 ~28 ~132 ~1345 moss_carpet
+setblock ~29 ~132 ~1345 green_carpet
+setblock ~30 ~132 ~1345 brown_carpet
+setblock ~31 ~132 ~1345 air
+setblock ~32 ~132 ~1345 brown_carpet
+fill ~33 ~132 ~1345 ~34 ~132 ~1345 air
+fill ~24 ~132 ~1346 ~34 ~132 ~1346 air
 fill ~99 ~132 ~1461 ~101 ~132 ~1461 iron_block
 setblock ~99 ~132 ~1462 iron_block
 setblock ~100 ~132 ~1462 chain[axis=y]
@@ -8032,16 +4998,15 @@ fill ~39 ~133 ~1296 ~42 ~133 ~1296 air
 fill ~39 ~133 ~1297 ~42 ~133 ~1297 air
 setblock ~24 ~133 ~1306 polished_blackstone_slab
 setblock ~24 ~133 ~1307 polished_blackstone_slab
-fill ~33 ~133 ~1308 ~43 ~133 ~1308 air
-fill ~33 ~133 ~1309 ~43 ~133 ~1309 air
-fill ~33 ~133 ~1310 ~43 ~133 ~1310 air
-fill ~33 ~133 ~1311 ~43 ~133 ~1311 air
-fill ~33 ~133 ~1312 ~43 ~133 ~1312 air
-fill ~33 ~133 ~1313 ~43 ~133 ~1313 air
-fill ~33 ~133 ~1314 ~43 ~133 ~1314 air
-fill ~33 ~133 ~1315 ~43 ~133 ~1315 air
-fill ~16 ~133 ~1316 ~28 ~133 ~1316 air
-fill ~33 ~133 ~1316 ~43 ~133 ~1316 air
+fill ~26 ~133 ~1308 ~36 ~133 ~1308 air
+fill ~26 ~133 ~1309 ~36 ~133 ~1309 air
+fill ~26 ~133 ~1310 ~36 ~133 ~1310 air
+fill ~26 ~133 ~1311 ~36 ~133 ~1311 air
+fill ~26 ~133 ~1312 ~36 ~133 ~1312 air
+fill ~26 ~133 ~1313 ~36 ~133 ~1313 air
+fill ~26 ~133 ~1314 ~36 ~133 ~1314 air
+fill ~26 ~133 ~1315 ~36 ~133 ~1315 air
+fill ~16 ~133 ~1316 ~36 ~133 ~1316 air
 fill ~16 ~133 ~1317 ~28 ~133 ~1317 air
 fill ~16 ~133 ~1318 ~28 ~133 ~1318 air
 fill ~16 ~133 ~1319 ~28 ~133 ~1319 air
@@ -8062,17 +5027,17 @@ fill ~16 ~133 ~1328 ~28 ~133 ~1328 air
 fill ~11 ~133 ~1329 ~14 ~133 ~1329 air
 fill ~11 ~133 ~1330 ~14 ~133 ~1330 air
 fill ~11 ~133 ~1331 ~14 ~133 ~1331 air
-fill ~31 ~133 ~1336 ~41 ~133 ~1336 air
-fill ~31 ~133 ~1337 ~41 ~133 ~1337 air
 setblock ~24 ~133 ~1338 polished_blackstone_slab
-fill ~31 ~133 ~1338 ~41 ~133 ~1338 air
+fill ~25 ~133 ~1338 ~34 ~133 ~1338 air
 setblock ~24 ~133 ~1339 polished_blackstone_slab
-fill ~31 ~133 ~1339 ~41 ~133 ~1339 air
-fill ~31 ~133 ~1340 ~41 ~133 ~1340 air
-fill ~31 ~133 ~1341 ~41 ~133 ~1341 air
-fill ~31 ~133 ~1342 ~41 ~133 ~1342 air
-fill ~31 ~133 ~1343 ~41 ~133 ~1343 air
-fill ~31 ~133 ~1344 ~41 ~133 ~1344 air
+fill ~25 ~133 ~1339 ~34 ~133 ~1339 air
+fill ~24 ~133 ~1340 ~34 ~133 ~1340 air
+fill ~24 ~133 ~1341 ~34 ~133 ~1341 air
+fill ~24 ~133 ~1342 ~34 ~133 ~1342 air
+fill ~24 ~133 ~1343 ~34 ~133 ~1343 air
+fill ~24 ~133 ~1344 ~34 ~133 ~1344 air
+fill ~24 ~133 ~1345 ~34 ~133 ~1345 air
+fill ~24 ~133 ~1346 ~34 ~133 ~1346 air
 setblock ~99 ~133 ~1461 iron_bars
 setblock ~101 ~133 ~1461 iron_bars
 setblock ~100 ~133 ~1462 chain[axis=y]
@@ -8097,16 +5062,15 @@ fill ~32 ~134 ~1291 ~34 ~134 ~1291 air
 fill ~26 ~134 ~1292 ~34 ~134 ~1292 air
 fill ~26 ~134 ~1293 ~34 ~134 ~1293 air
 fill ~26 ~134 ~1294 ~34 ~134 ~1294 air
-fill ~33 ~134 ~1308 ~43 ~134 ~1308 air
-fill ~33 ~134 ~1309 ~43 ~134 ~1309 air
-fill ~33 ~134 ~1310 ~43 ~134 ~1310 air
-fill ~33 ~134 ~1311 ~43 ~134 ~1311 air
-fill ~33 ~134 ~1312 ~43 ~134 ~1312 air
-fill ~33 ~134 ~1313 ~43 ~134 ~1313 air
-fill ~33 ~134 ~1314 ~43 ~134 ~1314 air
-fill ~33 ~134 ~1315 ~43 ~134 ~1315 air
-fill ~16 ~134 ~1316 ~28 ~134 ~1316 air
-fill ~33 ~134 ~1316 ~43 ~134 ~1316 air
+fill ~26 ~134 ~1308 ~36 ~134 ~1308 air
+fill ~26 ~134 ~1309 ~36 ~134 ~1309 air
+fill ~26 ~134 ~1310 ~36 ~134 ~1310 air
+fill ~26 ~134 ~1311 ~36 ~134 ~1311 air
+fill ~26 ~134 ~1312 ~36 ~134 ~1312 air
+fill ~26 ~134 ~1313 ~36 ~134 ~1313 air
+fill ~26 ~134 ~1314 ~36 ~134 ~1314 air
+fill ~26 ~134 ~1315 ~36 ~134 ~1315 air
+fill ~16 ~134 ~1316 ~36 ~134 ~1316 air
 fill ~16 ~134 ~1317 ~28 ~134 ~1317 air
 fill ~16 ~134 ~1318 ~28 ~134 ~1318 air
 fill ~16 ~134 ~1319 ~28 ~134 ~1319 air
@@ -8136,15 +5100,15 @@ fill ~16 ~134 ~1328 ~28 ~134 ~1328 air
 fill ~11 ~134 ~1329 ~14 ~134 ~1329 air
 fill ~11 ~134 ~1330 ~14 ~134 ~1330 air
 fill ~11 ~134 ~1331 ~14 ~134 ~1331 air
-fill ~31 ~134 ~1336 ~41 ~134 ~1336 air
-fill ~31 ~134 ~1337 ~41 ~134 ~1337 air
-fill ~31 ~134 ~1338 ~41 ~134 ~1338 air
-fill ~31 ~134 ~1339 ~41 ~134 ~1339 air
-fill ~31 ~134 ~1340 ~41 ~134 ~1340 air
-fill ~31 ~134 ~1341 ~41 ~134 ~1341 air
-fill ~31 ~134 ~1342 ~41 ~134 ~1342 air
-fill ~31 ~134 ~1343 ~41 ~134 ~1343 air
-fill ~31 ~134 ~1344 ~41 ~134 ~1344 air
+fill ~24 ~134 ~1338 ~34 ~134 ~1338 air
+fill ~24 ~134 ~1339 ~34 ~134 ~1339 air
+fill ~24 ~134 ~1340 ~34 ~134 ~1340 air
+fill ~24 ~134 ~1341 ~34 ~134 ~1341 air
+fill ~24 ~134 ~1342 ~34 ~134 ~1342 air
+fill ~24 ~134 ~1343 ~34 ~134 ~1343 air
+fill ~24 ~134 ~1344 ~34 ~134 ~1344 air
+fill ~24 ~134 ~1345 ~34 ~134 ~1345 air
+fill ~24 ~134 ~1346 ~34 ~134 ~1346 air
 fill ~99 ~134 ~1461 ~101 ~134 ~1461 polished_deepslate
 fill ~99 ~134 ~1462 ~101 ~134 ~1462 polished_deepslate
 fill ~99 ~134 ~1463 ~101 ~134 ~1463 polished_deepslate
@@ -8167,16 +5131,15 @@ fill ~32 ~135 ~1291 ~34 ~135 ~1291 air
 fill ~26 ~135 ~1292 ~34 ~135 ~1292 air
 fill ~26 ~135 ~1293 ~34 ~135 ~1293 air
 fill ~26 ~135 ~1294 ~34 ~135 ~1294 air
-fill ~33 ~135 ~1308 ~43 ~135 ~1308 air
-fill ~33 ~135 ~1309 ~43 ~135 ~1309 air
-fill ~33 ~135 ~1310 ~43 ~135 ~1310 air
-fill ~33 ~135 ~1311 ~43 ~135 ~1311 air
-fill ~33 ~135 ~1312 ~43 ~135 ~1312 air
-fill ~33 ~135 ~1313 ~43 ~135 ~1313 air
-fill ~33 ~135 ~1314 ~43 ~135 ~1314 air
-fill ~33 ~135 ~1315 ~43 ~135 ~1315 air
-fill ~16 ~135 ~1316 ~28 ~135 ~1316 air
-fill ~33 ~135 ~1316 ~43 ~135 ~1316 air
+fill ~26 ~135 ~1308 ~36 ~135 ~1308 air
+fill ~26 ~135 ~1309 ~36 ~135 ~1309 air
+fill ~26 ~135 ~1310 ~36 ~135 ~1310 air
+fill ~26 ~135 ~1311 ~36 ~135 ~1311 air
+fill ~26 ~135 ~1312 ~36 ~135 ~1312 air
+fill ~26 ~135 ~1313 ~36 ~135 ~1313 air
+fill ~26 ~135 ~1314 ~36 ~135 ~1314 air
+fill ~26 ~135 ~1315 ~36 ~135 ~1315 air
+fill ~16 ~135 ~1316 ~36 ~135 ~1316 air
 fill ~16 ~135 ~1317 ~28 ~135 ~1317 air
 fill ~16 ~135 ~1318 ~28 ~135 ~1318 air
 fill ~16 ~135 ~1319 ~22 ~135 ~1319 air
@@ -8206,15 +5169,15 @@ fill ~8 ~135 ~1327 ~13 ~135 ~1327 air
 fill ~16 ~135 ~1327 ~28 ~135 ~1327 air
 fill ~8 ~135 ~1328 ~13 ~135 ~1328 air
 fill ~16 ~135 ~1328 ~28 ~135 ~1328 air
-fill ~31 ~135 ~1336 ~41 ~135 ~1336 air
-fill ~31 ~135 ~1337 ~41 ~135 ~1337 air
-fill ~31 ~135 ~1338 ~41 ~135 ~1338 air
-fill ~31 ~135 ~1339 ~41 ~135 ~1339 air
-fill ~31 ~135 ~1340 ~41 ~135 ~1340 air
-fill ~31 ~135 ~1341 ~41 ~135 ~1341 air
-fill ~31 ~135 ~1342 ~41 ~135 ~1342 air
-fill ~31 ~135 ~1343 ~41 ~135 ~1343 air
-fill ~31 ~135 ~1344 ~41 ~135 ~1344 air
+fill ~24 ~135 ~1338 ~34 ~135 ~1338 air
+fill ~24 ~135 ~1339 ~34 ~135 ~1339 air
+fill ~24 ~135 ~1340 ~34 ~135 ~1340 air
+fill ~24 ~135 ~1341 ~34 ~135 ~1341 air
+fill ~24 ~135 ~1342 ~34 ~135 ~1342 air
+fill ~24 ~135 ~1343 ~34 ~135 ~1343 air
+fill ~24 ~135 ~1344 ~34 ~135 ~1344 air
+fill ~24 ~135 ~1345 ~34 ~135 ~1345 air
+fill ~24 ~135 ~1346 ~34 ~135 ~1346 air
 setblock ~100 ~135 ~1462 polished_basalt[axis=y]
 fill ~26 ~136 ~1286 ~34 ~136 ~1286 air
 fill ~26 ~136 ~1287 ~34 ~136 ~1287 air
@@ -8231,16 +5194,15 @@ fill ~32 ~136 ~1291 ~34 ~136 ~1291 air
 fill ~26 ~136 ~1292 ~34 ~136 ~1292 air
 fill ~26 ~136 ~1293 ~34 ~136 ~1293 air
 fill ~26 ~136 ~1294 ~34 ~136 ~1294 air
-fill ~33 ~136 ~1308 ~43 ~136 ~1308 air
-fill ~33 ~136 ~1309 ~43 ~136 ~1309 air
-fill ~33 ~136 ~1310 ~43 ~136 ~1310 air
-fill ~33 ~136 ~1311 ~43 ~136 ~1311 air
-fill ~33 ~136 ~1312 ~43 ~136 ~1312 air
-fill ~33 ~136 ~1313 ~43 ~136 ~1313 air
-fill ~33 ~136 ~1314 ~43 ~136 ~1314 air
-fill ~33 ~136 ~1315 ~43 ~136 ~1315 air
-fill ~16 ~136 ~1316 ~28 ~136 ~1316 air
-fill ~33 ~136 ~1316 ~43 ~136 ~1316 air
+fill ~26 ~136 ~1308 ~36 ~136 ~1308 air
+fill ~26 ~136 ~1309 ~36 ~136 ~1309 air
+fill ~26 ~136 ~1310 ~36 ~136 ~1310 air
+fill ~26 ~136 ~1311 ~36 ~136 ~1311 air
+fill ~26 ~136 ~1312 ~36 ~136 ~1312 air
+fill ~26 ~136 ~1313 ~36 ~136 ~1313 air
+fill ~26 ~136 ~1314 ~36 ~136 ~1314 air
+fill ~26 ~136 ~1315 ~36 ~136 ~1315 air
+fill ~16 ~136 ~1316 ~36 ~136 ~1316 air
 fill ~16 ~136 ~1317 ~28 ~136 ~1317 air
 fill ~16 ~136 ~1318 ~23 ~136 ~1318 air
 setblock ~24 ~136 ~1318 quartz_bricks
@@ -8274,15 +5236,15 @@ fill ~8 ~136 ~1327 ~13 ~136 ~1327 air
 fill ~16 ~136 ~1327 ~28 ~136 ~1327 air
 fill ~8 ~136 ~1328 ~13 ~136 ~1328 air
 fill ~16 ~136 ~1328 ~28 ~136 ~1328 air
-fill ~31 ~136 ~1336 ~41 ~136 ~1336 air
-fill ~31 ~136 ~1337 ~41 ~136 ~1337 air
-fill ~31 ~136 ~1338 ~41 ~136 ~1338 air
-fill ~31 ~136 ~1339 ~41 ~136 ~1339 air
-fill ~31 ~136 ~1340 ~41 ~136 ~1340 air
-fill ~31 ~136 ~1341 ~41 ~136 ~1341 air
-fill ~31 ~136 ~1342 ~41 ~136 ~1342 air
-fill ~31 ~136 ~1343 ~41 ~136 ~1343 air
-fill ~31 ~136 ~1344 ~41 ~136 ~1344 air
+fill ~24 ~136 ~1338 ~34 ~136 ~1338 air
+fill ~24 ~136 ~1339 ~34 ~136 ~1339 air
+fill ~24 ~136 ~1340 ~34 ~136 ~1340 air
+fill ~24 ~136 ~1341 ~34 ~136 ~1341 air
+fill ~24 ~136 ~1342 ~34 ~136 ~1342 air
+fill ~24 ~136 ~1343 ~34 ~136 ~1343 air
+fill ~24 ~136 ~1344 ~34 ~136 ~1344 air
+fill ~24 ~136 ~1345 ~34 ~136 ~1345 air
+fill ~24 ~136 ~1346 ~34 ~136 ~1346 air
 setblock ~100 ~136 ~1460 air
 setblock ~101 ~136 ~1460 quartz_bricks
 setblock ~100 ~136 ~1461 iron_bars
@@ -8304,16 +5266,15 @@ fill ~26 ~137 ~1291 ~34 ~137 ~1291 air
 fill ~26 ~137 ~1292 ~34 ~137 ~1292 air
 fill ~26 ~137 ~1293 ~34 ~137 ~1293 air
 fill ~26 ~137 ~1294 ~34 ~137 ~1294 air
-fill ~33 ~137 ~1308 ~43 ~137 ~1308 air
-fill ~33 ~137 ~1309 ~43 ~137 ~1309 air
-fill ~33 ~137 ~1310 ~43 ~137 ~1310 air
-fill ~33 ~137 ~1311 ~43 ~137 ~1311 air
-fill ~33 ~137 ~1312 ~43 ~137 ~1312 air
-fill ~33 ~137 ~1313 ~43 ~137 ~1313 air
-fill ~33 ~137 ~1314 ~43 ~137 ~1314 air
-fill ~33 ~137 ~1315 ~43 ~137 ~1315 air
-fill ~16 ~137 ~1316 ~28 ~137 ~1316 air
-fill ~33 ~137 ~1316 ~43 ~137 ~1316 air
+fill ~26 ~137 ~1308 ~36 ~137 ~1308 air
+fill ~26 ~137 ~1309 ~36 ~137 ~1309 air
+fill ~26 ~137 ~1310 ~36 ~137 ~1310 air
+fill ~26 ~137 ~1311 ~36 ~137 ~1311 air
+fill ~26 ~137 ~1312 ~36 ~137 ~1312 air
+fill ~26 ~137 ~1313 ~36 ~137 ~1313 air
+fill ~26 ~137 ~1314 ~36 ~137 ~1314 air
+fill ~26 ~137 ~1315 ~36 ~137 ~1315 air
+fill ~16 ~137 ~1316 ~36 ~137 ~1316 air
 fill ~16 ~137 ~1317 ~28 ~137 ~1317 air
 fill ~16 ~137 ~1318 ~23 ~137 ~1318 air
 setblock ~24 ~137 ~1318 white_concrete
@@ -8346,6 +5307,15 @@ setblock ~24 ~137 ~1326 white_concrete
 fill ~25 ~137 ~1326 ~28 ~137 ~1326 air
 fill ~16 ~137 ~1327 ~28 ~137 ~1327 air
 fill ~16 ~137 ~1328 ~28 ~137 ~1328 air
+fill ~24 ~137 ~1338 ~34 ~137 ~1338 air
+fill ~24 ~137 ~1339 ~34 ~137 ~1339 air
+fill ~24 ~137 ~1340 ~34 ~137 ~1340 air
+fill ~24 ~137 ~1341 ~34 ~137 ~1341 air
+fill ~24 ~137 ~1342 ~34 ~137 ~1342 air
+fill ~24 ~137 ~1343 ~34 ~137 ~1343 air
+fill ~24 ~137 ~1344 ~34 ~137 ~1344 air
+fill ~24 ~137 ~1345 ~34 ~137 ~1345 air
+fill ~24 ~137 ~1346 ~34 ~137 ~1346 air
 setblock ~100 ~137 ~1459 iron_bars
 setblock ~101 ~137 ~1459 quartz_bricks
 setblock ~100 ~137 ~1460 air
@@ -8411,6 +5381,15 @@ setblock ~24 ~138 ~1326 quartz_bricks
 fill ~25 ~138 ~1326 ~28 ~138 ~1326 air
 fill ~16 ~138 ~1327 ~28 ~138 ~1327 air
 fill ~16 ~138 ~1328 ~28 ~138 ~1328 air
+fill ~24 ~138 ~1338 ~34 ~138 ~1338 air
+fill ~24 ~138 ~1339 ~34 ~138 ~1339 air
+fill ~24 ~138 ~1340 ~34 ~138 ~1340 air
+fill ~24 ~138 ~1341 ~34 ~138 ~1341 air
+fill ~24 ~138 ~1342 ~34 ~138 ~1342 air
+fill ~24 ~138 ~1343 ~34 ~138 ~1343 air
+fill ~24 ~138 ~1344 ~34 ~138 ~1344 air
+fill ~24 ~138 ~1345 ~34 ~138 ~1345 air
+fill ~24 ~138 ~1346 ~34 ~138 ~1346 air
 setblock ~101 ~138 ~1458 air
 setblock ~102 ~138 ~1458 quartz_bricks
 setblock ~100 ~138 ~1459 iron_bars
