@@ -385,13 +385,13 @@ public final class CutscenePlayer {
                 g.pose().pushPose();
                 g.pose().translate(w / 2f, h * 0.42f, 0);
                 g.pose().scale(2.6f, 2.6f, 1);
-                Hud.text(g, ti.text, 0, -4, alpha | 0xF2F0EA, true);
+                Hud.text(g, ti.text, 0, -4, alpha | 0xF2F0EA, true, false);
                 g.pose().popPose();
                 if (!ti.sub.isEmpty()) {
                     g.pose().pushPose();
                     g.pose().translate(w / 2f, h * 0.42f + 22, 0);
                     g.pose().scale(1.2f, 1.2f, 1);
-                    Hud.text(g, ti.sub, 0, -4, alpha | 0xC8D0D8, true);
+                    Hud.text(g, ti.sub, 0, -4, alpha | 0xC8D0D8, true, false);
                     g.pose().popPose();
                 }
             }

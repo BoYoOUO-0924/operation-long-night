@@ -1,0 +1,1689 @@
+{
+ "letterbox": 0.11,
+ "fade_in": 15,
+ "fade_out": 40,
+ "protect": true,
+ "freeze": [
+  "ln_ally"
+ ],
+ "camera": [
+  {
+   "t": 0,
+   "pos": [
+    20.7,
+    112.9,
+    1267.6
+   ],
+   "look_at": [
+    24,
+    112.0,
+    1264.4
+   ],
+   "fov": 62,
+   "handheld": 0.6
+  },
+  {
+   "t": 140,
+   "pos": [
+    21.1,
+    112.8,
+    1267.1
+   ],
+   "look_at": [
+    24,
+    112.0,
+    1264.4
+   ],
+   "fov": 58
+  },
+  {
+   "t": 140,
+   "pos": [
+    24.2,
+    112.6,
+    1266
+   ],
+   "look_at": [
+    115,
+    80,
+    1400
+   ],
+   "cut": true,
+   "fov": 66,
+   "handheld": 0.4
+  },
+  {
+   "t": 210,
+   "pos": [
+    36,
+    118,
+    1263
+   ],
+   "look_at": [
+    115,
+    80,
+    1400
+   ],
+   "fov": 66
+  },
+  {
+   "t": 280,
+   "pos": [
+    54,
+    124,
+    1256
+   ],
+   "look_at": [
+    115,
+    80,
+    1400
+   ],
+   "fov": 62
+  },
+  {
+   "t": 280,
+   "pos": [
+    190,
+    76,
+    1336
+   ],
+   "look_at": [
+    10,
+    136,
+    1415
+   ],
+   "cut": true,
+   "fov": 50,
+   "handheld": 0.25
+  },
+  {
+   "t": 480,
+   "pos": [
+    184,
+    79,
+    1339
+   ],
+   "look_at": [
+    10,
+    139,
+    1415
+   ],
+   "fov": 44
+  }
+ ],
+ "shakes": [
+  {
+   "at": 312,
+   "dur": 24,
+   "amp": 0.6
+  }
+ ],
+ "subtitles": [
+  {
+   "at": 12,
+   "dur": 80,
+   "who": "戰車",
+   "color": "#FFAA00",
+   "text": "線路是通的! 海神、海神, 這裡是獵犬, 聽得到嗎? "
+  },
+  {
+   "at": 92,
+   "dur": 80,
+   "who": "海神",
+   "color": "#00AAAA",
+   "text": "（雜訊）……獵犬……有線線路……收到。說吧。"
+  },
+  {
+   "at": 176,
+   "dur": 100,
+   "who": "白鴉",
+   "color": "#55FFFF",
+   "text": "山裡藏著東西, 剛才的干擾就是它。艦隊還在它的射程裡。"
+  },
+  {
+   "at": 284,
+   "dur": 84,
+   "who": "海神",
+   "color": "#00AAAA",
+   "text": "我需要座標。給我一個目標, 獵犬。"
+  },
+  {
+   "at": 372,
+   "dur": 72,
+   "who": "狐狸",
+   "color": "#55FF55",
+   "text": "天亮之前……我們會找到它。"
+  }
+ ],
+ "moves": [],
+ "commands": [
+  {
+   "at": 0,
+   "run": "tp @a[gamemode=adventure] 22 111 1271.5 180 0"
+  },
+  {
+   "at": 0,
+   "run": "tp @e[tag=ln_tank] 23.4 111 1264.6 -135 10"
+  },
+  {
+   "at": 0,
+   "run": "tp @e[tag=ln_fox] 21.2 111 1264.8 -110 20"
+  },
+  {
+   "at": 0,
+   "run": "tp @e[tag=ln_baiya] 24.3 111 1267.3 -90 0"
+  },
+  {
+   "at": 0,
+   "run": "lnhud anim @e[tag=ln_ally] stop"
+  },
+  {
+   "at": 0,
+   "run": "effect clear @e[tag=ln_ally] glowing"
+  },
+  {
+   "at": 0,
+   "run": "lnhud anim @e[tag=ln_fox] wrist_tap"
+  },
+  {
+   "at": 0,
+   "run": "lnhud anim @e[tag=ln_baiya] guard"
+  },
+  {
+   "at": 0,
+   "run": "lnhud music @a ch05_after 60"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 8,
+   "run": "playsound lnai:sfx.radio_on master @a 24.0 112.0 1264.0 1.5 0.8"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 84,
+   "run": "playsound lnai:sfx.radio_on master @a 24.0 112.0 1264.0 1.5 0.6"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 200,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 230,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 240,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 270,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 270,
+   "run": "tp @a[gamemode=adventure] 175.5 60 1350.5"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 280,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 282,
+   "run": "playsound minecraft:weather.rain master @a 189.9 76.0 1336.0 6 0.8"
+  },
+  {
+   "at": 308,
+   "run": "playsound minecraft:entity.warden.heartbeat master @a 189.2 76.4 1336.4 10 0.5"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 310,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 312,
+   "run": "summon block_display 4 150 1430 {Tags:[\"ln\",\"c1_glow\"],brightness:{sky:15,block:15},block_state:{Name:\"minecraft:light_blue_stained_glass\"},Glowing:1b,glow_color_override:6737151,view_range:12f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-1f,-6f,-3f],scale:[2f,12f,6f]}}"
+  },
+  {
+   "at": 312,
+   "run": "particle minecraft:electric_spark 4 150 1430 2 6 3 0.4 200 force @a"
+  },
+  {
+   "at": 312,
+   "run": "playsound minecraft:block.beacon.ambient master @a 189.0 76.5 1336.5 10 0.5"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 320,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 332,
+   "run": "playsound minecraft:entity.warden.heartbeat master @a 188.4 76.8 1336.8 10 0.5"
+  },
+  {
+   "at": 338,
+   "run": "kill @e[tag=c1_glow]"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 350,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 360,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 390,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 400,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 430,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:campfire_signal_smoke 22 128 1300 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:flame 22 128 1300 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:lava 22 128 1300 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:campfire_signal_smoke 12 123 1340 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:flame 12 123 1340 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:lava 12 123 1340 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:campfire_signal_smoke 18 127 1318 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:flame 18 127 1318 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:lava 18 127 1318 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:campfire_signal_smoke 50 109 1372 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:flame 50 109 1372 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:lava 50 109 1372 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:campfire_signal_smoke 66 88 1430 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:flame 66 88 1430 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 440,
+   "run": "particle minecraft:lava 66 88 1430 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:campfire_signal_smoke 30 127 1330 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:flame 30 127 1330 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:lava 30 127 1330 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:campfire_signal_smoke 40 127 1290 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:flame 40 127 1290 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:lava 40 127 1290 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:campfire_signal_smoke 36 120 1350 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:flame 36 120 1350 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:lava 36 120 1350 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:campfire_signal_smoke 60 88 1400 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:flame 60 88 1400 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:lava 60 88 1400 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:campfire_signal_smoke 98 96 1450 1 0.5 1 0.02 4 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:flame 98 96 1450 1.2 0.4 1.2 0.02 12 force @a"
+  },
+  {
+   "at": 470,
+   "run": "particle minecraft:lava 98 96 1450 1 0.3 1 0 2 force @a"
+  },
+  {
+   "at": 472,
+   "run": "function ln:ch01/outro_end"
+  }
+ ],
+ "titles": [
+  {
+   "at": 380,
+   "dur": 92,
+   "text": "第一章　雷霆空降",
+   "sub": "任務完成"
+  }
+ ]
+}

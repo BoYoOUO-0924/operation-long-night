@@ -1,7 +1,7 @@
 # 由 tools/build_ch01.py 自動產生，請勿手動修改
-summon tacznpcs:npc 98 280 1410 {template:"blue_sniper",CustomName:'{"text": "白鴉", "color": "aqua", "font": "lnai:ui"}',CustomNameVisible:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["ln","ln_ally","ln_baiya","ln_new","ln_dress"],ForgeData:{ln_side:"blue",ln_follow:1b,ln_slot:1,ln_hunt:24}}
-summon tacznpcs:npc 101 280 1414 {template:"blue_support",CustomName:'{"text": "戰車", "color": "gold", "font": "lnai:ui"}',CustomNameVisible:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["ln","ln_ally","ln_tank","ln_new","ln_dress"],ForgeData:{ln_side:"blue",ln_follow:1b,ln_slot:2,ln_hunt:24}}
-summon tacznpcs:npc 104 280 1418 {template:"blue_assault",CustomName:'{"text": "狐狸", "color": "green", "font": "lnai:ui"}',CustomNameVisible:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["ln","ln_ally","ln_fox","ln_new","ln_dress"],ForgeData:{ln_side:"blue",ln_follow:1b,ln_slot:3,ln_hunt:24}}
+summon tacznpcs:npc 134 309 1408 {template:"blue_sniper",CustomName:'{"text": "白鴉", "color": "aqua", "font": "lnai:ui"}',CustomNameVisible:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["ln","ln_ally","ln_baiya","ln_new","ln_dress"],ForgeData:{ln_side:"blue",ln_follow:1b,ln_slot:1,ln_hunt:24}}
+summon tacznpcs:npc 137 311 1418 {template:"blue_support",CustomName:'{"text": "戰車", "color": "gold", "font": "lnai:ui"}',CustomNameVisible:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["ln","ln_ally","ln_tank","ln_new","ln_dress"],ForgeData:{ln_side:"blue",ln_follow:1b,ln_slot:2,ln_hunt:24}}
+summon tacznpcs:npc 133 307 1426 {template:"blue_assault",CustomName:'{"text": "狐狸", "color": "green", "font": "lnai:ui"}',CustomNameVisible:1b,Invulnerable:1b,PersistenceRequired:1b,Tags:["ln","ln_ally","ln_fox","ln_new","ln_dress"],ForgeData:{ln_side:"blue",ln_follow:1b,ln_slot:3,ln_hunt:24}}
 team join ln_blue @e[tag=ln_new]
 effect give @e[tag=ln_new] glowing infinite 0 true
 effect give @e[tag=ln_new] slow_falling 120 0 true

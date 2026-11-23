@@ -1,4 +1,9 @@
 # 由 tools/build_ch01.py 自動產生，請勿手動修改
+setblock 122 299 1406 air
+setblock 126 299 1414 air
+setblock 122 299 1422 air
+setblock 128 299 1428 air
+schedule clear ln:ch01/outro
 lnhud music @a stop 60
 lnhud ambient @a stop 60
 kill @e[tag=ln]

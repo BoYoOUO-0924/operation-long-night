@@ -150,7 +150,8 @@ def summon_ally(tag, name, color, template, slot, pos):
     return f"summon tacznpcs:npc {pos} {nbt}"
 
 
-fn("spawn_allies", [summon_ally(*a, pos=f"{BEACON[0] + 6 + 3 * i} 280 {BEACON[2] - 4 + 4 * i}") for i, a in enumerate(ALLIES)] + [
+ALLY_START = ["134 309 1408", "137 311 1418", "133 307 1426"]     # 同 tools/make_ch01_cuts.py 的 FALL
+fn("spawn_allies", [summon_ally(*a, pos=ALLY_START[i]) for i, a in enumerate(ALLIES)] + [
     "team join ln_blue @e[tag=ln_new]",
     "effect give @e[tag=ln_new] glowing infinite 0 true",
     "effect give @e[tag=ln_new] slow_falling 120 0 true",
@@ -291,6 +292,8 @@ fn("land", [
 
 # ================================================================== 流程
 fn("cleanup", [
+    *[f"setblock {d[0]} {d[1] - 1} {d[2]} air" for d in DROP],
+    f"schedule clear {NS}/outro",
     "lnhud music @a stop 60",
     "lnhud ambient @a stop 60",
     "kill @e[tag=ln]",
@@ -345,10 +348,9 @@ fn("start", [
     f"tag {P} add c1_nopid",
     *[f"execute as @a[tag=c1_nopid,limit=1,sort=random] run function {NS}/pid_{k}" for k in range(1, 5)],
     "tag @a remove c1_nopid",
-    *[f"tp @a[scores={{ln_pid={k}}}] {xyz(DROP[k - 1])} 90 20" for k in range(1, 5)],
-    *[f"execute if entity @a[scores={{ln_pid={k}}}] run summon block_display {xyz(DROP[k - 1])} " + CHUTE.format(k=k) for k in range(1, 5)],
-    f"tag {P} add c1_chute",
-    f"effect give {P} slow_falling infinite 0 true",
+    *[f"setblock {d[0]} {d[1] - 1} {d[2]} barrier" for d in DROP],
+    *[f"tp @a[scores={{ln_pid={k}}}] {DROP[k - 1][0] + 0.5} {DROP[k - 1][1]} {DROP[k - 1][2] + 0.5} 90 20" for k in range(1, 5)],
+    f"function {NS}/fleet",
     f"spawnpoint @a {xyz(BEACON)}",
     beam(0, LAMP1), beam(1, LAMP2),
     f"function {NS}/spawn_allies",
@@ -365,11 +367,59 @@ fn("start", [
     "scoreboard players set #c1lt ln 0",
     "scoreboard players set #sk ln 0",
     "scoreboard players set #run ln 1",
-    *goto(1),
+    *goto(9),                                   # 9 = 開場過場（只跑探照燈）；過場最後 ln:ch01/jump 切到 1
     "lnhud tint @a 00000000 30",
+    "lnhud cutscene @a ln:ch01_intro",
     "lnhud ambient @a stop 20",
 ])
 fn("stop", [f"function {NS}/cleanup", "gamemode creative @a", f"tellraw @a {jtext({'text': '[長夜] 已中止第一章。', 'color': 'red'})}"])
+
+fn("jump", [
+    *[f"setblock {d[0]} {d[1] - 1} {d[2]} air" for d in DROP],
+    *[f"execute if entity @a[scores={{ln_pid={k}}}] run summon block_display {xyz(DROP[k - 1])} " + CHUTE.format(k=k) for k in range(1, 5)],
+    f"tag {P} add c1_chute",
+    f"effect give {P} slow_falling infinite 0 true",
+    "effect give @e[tag=ln_ally] slow_falling 120 0 true",
+    "effect give @e[tag=ln_ally] glowing infinite 0 true",
+    "kill @e[tag=c1_bcn]",
+    *goto(1),
+])
+fn("s9", [f"function {NS}/sl1/tick"])
+
+# ---- 艦隊（海平線上的燈光剪影；開場、撤離、結尾都看得到）
+SHIPS = [(165, 1300), (175, 1350), (168, 1405), (178, 1455)]   # 同 tools/make_ch01_cuts.py
+
+
+def ship(cx, cz, L=28):
+    h = L // 2
+    out = [
+        f"fill {cx - 2} 58 {cz - h + 3} {cx + 2} 63 {cz + h} blackstone",                     # 船殼
+        f"fill {cx - 1} 59 {cz - h + 1} {cx + 1} 63 {cz - h + 2} blackstone",                 # 船首收窄
+        f"fill {cx} 60 {cz - h} {cx} 63 {cz - h} blackstone",
+        f"fill {cx - 2} 64 {cz - h + 3} {cx + 2} 64 {cz + h} deepslate_tile_slab",            # 甲板
+        f"fill {cx - 1} 64 {cz - h + 1} {cx + 1} 64 {cz - h + 2} deepslate_tile_slab",
+        f"fill {cx - 1} 65 {cz - 2} {cx + 1} 68 {cz + 4} deepslate_bricks",                    # 艦橋
+        f"fill {cx - 1} 67 {cz - 2} {cx + 1} 67 {cz - 2} ochre_froglight",                     # 艦橋窗
+        *[f"setblock {cx - 1} 67 {z} ochre_froglight" for z in (cz, cz + 2)],
+        *[f"setblock {cx + 1} 67 {z} ochre_froglight" for z in (cz + 1, cz + 3)],
+        f"fill {cx - 1} 69 {cz - 1} {cx + 1} 69 {cz + 3} polished_blackstone_slab",
+        f"fill {cx} 69 {cz + 5} {cx} 71 {cz + 6} polished_deepslate",                          # 煙囪
+        f"fill {cx} 69 {cz} {cx} 73 {cz} iron_bars",                                          # 桅杆＋桅燈
+        f"setblock {cx} 74 {cz} redstone_block",
+        f"setblock {cx} 75 {cz} redstone_lamp[lit=true]",
+        f"fill {cx - 1} 65 {cz - 8} {cx + 1} 66 {cz - 6} blackstone",                         # 前後砲塔
+        f"fill {cx} 66 {cz - 11} {cx} 66 {cz - 9} polished_basalt[axis=z]",
+        f"fill {cx - 1} 65 {cz + 8} {cx + 1} 66 {cz + 10} blackstone",
+        f"fill {cx} 66 {cz + 11} {cx} 66 {cz + 13} polished_basalt[axis=z]",
+        f"setblock {cx} 65 {cz - h + 1} sea_lantern",                                         # 航行燈
+        f"setblock {cx} 65 {cz + h} shroomlight",
+    ]
+    return out
+
+
+fn("fleet", [c for (x, z) in SHIPS for c in ship(x, z)] + [
+    f"fill {SHIPS[1][0]} 60 {SHIPS[1][1]} {SHIPS[1][0]} 61 {SHIPS[1][1]} air",               # 結尾過場玩家躲的位置
+])
 
 # ---- 1 降落
 dialogue("drop")
@@ -689,6 +739,9 @@ for i, (x, z) in enumerate(STRIKES):
 s5 += [
     f"execute if score #t ln matches 60 as @a at @s run playsound minecraft:entity.firework_rocket.launch master @s ~40 ~30 ~ 4 0.5",
     "execute if score #t ln matches 130 run kill @e[tag=ln_enemy]",
+    *[f"execute if score #t ln matches {30 + 9 * i} run particle minecraft:flash {x} 67 {z - 10} 0 0 0 0 1 force @a" for i, (x, z) in enumerate(SHIPS)],
+    *[f"execute if score #t ln matches {30 + 9 * i} run particle minecraft:large_smoke {x} 67 {z - 11} 1 0.5 1 0.05 30 force @a" for i, (x, z) in enumerate(SHIPS)],
+    *[f"execute if score #t ln matches {30 + 9 * i} run playsound lnai:sfx.boom master @a {x} 67 {z} 12 0.6" for i, (x, z) in enumerate(SHIPS)],
     f"execute if score #t ln matches 120 run lnhud waypoint @a {xyz(OBS)}",
     # 山體異變：低頻震動、嗡鳴、裂縫一瞬間的藍光（看不到巨砲本體）
     "scoreboard players operation #tm ln = #t ln",
@@ -711,7 +764,18 @@ s5 += [
 fn("s5", s5)
 fn("strike_fx", [*boom(("~", "~1", "~")), "particle minecraft:flash ~ ~2 ~ 0 0 0 0 1 force @a",
                  "execute as @a[distance=..40] run lnhud tint @s 50FFD0A0 14 flash"])
-fn("arrive", [*goto(6), event("arrive"), f"schedule function {NS}/finish 60t replace"])
+fn("arrive", [*goto(6), event("arrive"), f"schedule function {NS}/outro 50t replace"])
+fn("outro", ["lnhud cutscene @a ln:ch01_outro"])
+fn("outro_end", [
+    "lnhud tint @a FF000000 0",                  # 過場淡出到黑，這裡接住，回大廳時 enter_one 再拿掉
+    f"function {NS}/cleanup",
+    "scoreboard players set #done1 ln 1",
+    "scoreboard players set #run ln 0",
+    "bossbar set ln:obj visible false",
+    "lnhud objective @a",
+    "lnhud waypoint @a clear",
+    "schedule function ln:lobby/enter 40t replace",
+])
 fn("finish", [
     "scoreboard players set #stage ln 0",
     "scoreboard players set #done1 ln 1",
@@ -745,7 +809,7 @@ fn("wipe", [
 ])
 fn("tick", [
     "scoreboard players add #t ln 1",
-    *[f"execute if score #stage ln matches {i} run function {NS}/s{i}" for i in (1, 2, 3, 4, 5)],
+    *[f"execute if score #stage ln matches {i} run function {NS}/s{i}" for i in (1, 2, 3, 4, 5, 9)],
 ])
 # 雷達階段第一次進入時才設定 12 分鐘；失敗重來時不會再被蓋掉
 files["to_s4"] = files["to_s4"].replace(

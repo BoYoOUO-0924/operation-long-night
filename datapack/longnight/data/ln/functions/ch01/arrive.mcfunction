@@ -2,4 +2,4 @@
 scoreboard players set #stage ln 6
 scoreboard players set #t ln 0
 function ln:ch01/evdlg/arrive
-schedule function ln:ch01/finish 60t replace
+schedule function ln:ch01/outro 50t replace

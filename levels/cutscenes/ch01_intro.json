@@ -1,0 +1,779 @@
+{
+ "_說明": "第一章過場（由 tools/make_ch01_cuts.py 產生，請改腳本）",
+ "letterbox": 0.11,
+ "fade_in": 25,
+ "fade_out": 0,
+ "protect": true,
+ "freeze": [
+  "ln_ally"
+ ],
+ "camera": [
+  {
+   "t": 0,
+   "pos": [
+    192,
+    207,
+    1450
+   ],
+   "look_at": [
+    150,
+    64,
+    1405
+   ],
+   "fov": 60,
+   "handheld": 0.9
+  },
+  {
+   "t": 80,
+   "pos": [
+    188,
+    201,
+    1444
+   ],
+   "look_at": [
+    140,
+    70,
+    1405
+   ],
+   "fov": 60
+  },
+  {
+   "t": 160,
+   "pos": [
+    182,
+    193,
+    1436
+   ],
+   "look_at": [
+    100,
+    100,
+    1395
+   ],
+   "fov": 62,
+   "handheld": 0.6
+  },
+  {
+   "t": 260,
+   "pos": [
+    168,
+    178,
+    1420
+   ],
+   "look_at": [
+    55,
+    125,
+    1370
+   ],
+   "fov": 58,
+   "handheld": 0.3
+  },
+  {
+   "t": 360,
+   "pos": [
+    152,
+    166,
+    1408
+   ],
+   "look_at": [
+    45,
+    125,
+    1375
+   ],
+   "fov": 54
+  },
+  {
+   "t": 360,
+   "pos": [
+    148,
+    314,
+    1432
+   ],
+   "look_at": [
+    134,
+    307,
+    1416
+   ],
+   "cut": true,
+   "fov": 64,
+   "handheld": 0.5
+  },
+  {
+   "t": 460,
+   "pos": [
+    146,
+    309.5,
+    1430
+   ],
+   "look_at": [
+    130,
+    296,
+    1416
+   ],
+   "fov": 64
+  },
+  {
+   "t": 560,
+   "pos": [
+    142,
+    305,
+    1426
+   ],
+   "look_at": [
+    92,
+    64,
+    1414
+   ],
+   "fov": 60
+  },
+  {
+   "t": 630,
+   "pos": [
+    134,
+    302.5,
+    1418
+   ],
+   "look_at": [
+    100,
+    262,
+    1414
+   ],
+   "fov": 66,
+   "ease": "linear"
+  },
+  {
+   "t": 700,
+   "pos": "player",
+   "ease": "linear",
+   "handheld": 0
+  }
+ ],
+ "shakes": [
+  {
+   "at": 16,
+   "dur": 6,
+   "amp": 1.3
+  },
+  {
+   "at": 40,
+   "dur": 6,
+   "amp": 1.3
+  },
+  {
+   "at": 62,
+   "dur": 6,
+   "amp": 1.3
+  },
+  {
+   "at": 88,
+   "dur": 6,
+   "amp": 1.3
+  },
+  {
+   "at": 112,
+   "dur": 6,
+   "amp": 1.3
+  },
+  {
+   "at": 138,
+   "dur": 6,
+   "amp": 1.3
+  },
+  {
+   "at": 190,
+   "dur": 6,
+   "amp": 0.7
+  },
+  {
+   "at": 236,
+   "dur": 6,
+   "amp": 0.7
+  }
+ ],
+ "subtitles": [
+  {
+   "at": 40,
+   "dur": 92,
+   "who": "海神",
+   "color": "#00AAAA",
+   "text": "獵犬小隊，這裡是海神。你們已經進入黑石海岸上空。"
+  },
+  {
+   "at": 140,
+   "dur": 88,
+   "who": "海神",
+   "color": "#00AAAA",
+   "text": "艦隊正在接近。那三座雷達不倒，我們就是瞎子。"
+  },
+  {
+   "at": 232,
+   "dur": 104,
+   "who": "狐狸",
+   "color": "#55FF55",
+   "text": "三座雷達都標進你們的目鏡了：北崖、砲台中央、燈塔頂上。"
+  },
+  {
+   "at": 390,
+   "dur": 100,
+   "who": "狐狸",
+   "color": "#55FF55",
+   "text": "看到沙灘上的綠點了嗎？那是紅外線信標，只有我們的目鏡看得到。"
+  },
+  {
+   "at": 500,
+   "dur": 88,
+   "who": "白鴉",
+   "color": "#55FFFF",
+   "text": "探照燈在掃。別讓光照到你，會引來高射砲。"
+  }
+ ],
+ "moves": [
+  {
+   "at": 360,
+   "dur": 340,
+   "tag": "ln_baiya",
+   "path": [
+    [
+     134,
+     309,
+     1408
+    ],
+    [
+     131,
+     289,
+     1409
+    ]
+   ],
+   "ground": false
+  },
+  {
+   "at": 360,
+   "dur": 340,
+   "tag": "ln_tank",
+   "path": [
+    [
+     137,
+     311,
+     1418
+    ],
+    [
+     134,
+     291,
+     1419
+    ]
+   ],
+   "ground": false
+  },
+  {
+   "at": 360,
+   "dur": 340,
+   "tag": "ln_fox",
+   "path": [
+    [
+     133,
+     307,
+     1426
+    ],
+    [
+     130,
+     287,
+     1426
+    ]
+   ],
+   "ground": false
+  }
+ ],
+ "commands": [
+  {
+   "at": 0,
+   "run": "lnhud anim @e[tag=ln_ally] stop"
+  },
+  {
+   "at": 0,
+   "run": "effect clear @e[tag=ln_ally] glowing"
+  },
+  {
+   "at": 0,
+   "run": "particle minecraft:cloud 187.0 203.0 1447.0 7 3 7 0.01 60 force @a"
+  },
+  {
+   "at": 0,
+   "run": "playsound minecraft:item.elytra.flying master @a 192.0 207.0 1450.0 10 0.55"
+  },
+  {
+   "at": 5,
+   "run": "particle minecraft:cloud 186.8 202.6 1446.6 7 3 7 0.01 58 force @a"
+  },
+  {
+   "at": 10,
+   "run": "particle minecraft:cloud 186.5 202.2 1446.2 7 3 7 0.01 56 force @a"
+  },
+  {
+   "at": 15,
+   "run": "particle minecraft:cloud 186.2 201.9 1445.9 7 3 7 0.01 55 force @a"
+  },
+  {
+   "at": 16,
+   "run": "particle minecraft:explosion 205.2 197.8 1432.8 2 2 2 0 5 force @a"
+  },
+  {
+   "at": 16,
+   "run": "particle minecraft:flash 205.2 197.8 1432.8 0 0 0 0 1 force @a"
+  },
+  {
+   "at": 16,
+   "run": "particle minecraft:large_smoke 205.2 197.8 1432.8 2.5 2.5 2.5 0.03 40 force @a"
+  },
+  {
+   "at": 16,
+   "run": "playsound lnai:sfx.boom master @a 191.2 205.8 1448.8 10 1.15"
+  },
+  {
+   "at": 17,
+   "run": "playsound minecraft:entity.generic.explode master @a 191.2 205.7 1448.7 10 0.9"
+  },
+  {
+   "at": 20,
+   "run": "particle minecraft:cloud 186.0 201.5 1445.5 7 3 7 0.01 53 force @a"
+  },
+  {
+   "at": 25,
+   "run": "particle minecraft:cloud 185.8 201.1 1445.1 7 3 7 0.01 51 force @a"
+  },
+  {
+   "at": 30,
+   "run": "particle minecraft:cloud 185.5 200.8 1444.8 7 3 7 0.01 50 force @a"
+  },
+  {
+   "at": 32,
+   "run": "playsound lnai:sfx.radio_on master @a 190.4 204.6 1447.6 10 1.0"
+  },
+  {
+   "at": 35,
+   "run": "particle minecraft:cloud 185.2 200.4 1444.4 7 3 7 0.01 48 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:cloud 185.0 200.0 1444.0 7 3 7 0.01 46 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:explosion 174.0 199.0 1437.0 2 2 2 0 5 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:flash 174.0 199.0 1437.0 0 0 0 0 1 force @a"
+  },
+  {
+   "at": 40,
+   "run": "particle minecraft:large_smoke 174.0 199.0 1437.0 2.5 2.5 2.5 0.03 40 force @a"
+  },
+  {
+   "at": 40,
+   "run": "playsound lnai:sfx.boom master @a 190.0 204.0 1447.0 10 1.15"
+  },
+  {
+   "at": 41,
+   "run": "playsound minecraft:entity.generic.explode master @a 189.9 203.9 1446.9 10 0.9"
+  },
+  {
+   "at": 45,
+   "run": "particle minecraft:cloud 184.8 199.6 1443.6 7 3 7 0.01 45 force @a"
+  },
+  {
+   "at": 50,
+   "run": "particle minecraft:cloud 184.5 199.2 1443.2 7 3 7 0.01 43 force @a"
+  },
+  {
+   "at": 55,
+   "run": "particle minecraft:cloud 184.2 198.9 1442.9 7 3 7 0.01 41 force @a"
+  },
+  {
+   "at": 60,
+   "run": "particle minecraft:cloud 184.0 198.5 1442.5 7 3 7 0.01 40 force @a"
+  },
+  {
+   "at": 62,
+   "run": "particle minecraft:explosion 196.9 190.3 1457.3 2 2 2 0 5 force @a"
+  },
+  {
+   "at": 62,
+   "run": "particle minecraft:flash 196.9 190.3 1457.3 0 0 0 0 1 force @a"
+  },
+  {
+   "at": 62,
+   "run": "particle minecraft:large_smoke 196.9 190.3 1457.3 2.5 2.5 2.5 0.03 40 force @a"
+  },
+  {
+   "at": 62,
+   "run": "playsound lnai:sfx.boom master @a 188.9 202.3 1445.3 10 1.15"
+  },
+  {
+   "at": 63,
+   "run": "playsound minecraft:entity.generic.explode master @a 188.8 202.3 1445.3 10 0.9"
+  },
+  {
+   "at": 65,
+   "run": "particle minecraft:cloud 183.8 198.1 1442.1 7 3 7 0.01 38 force @a"
+  },
+  {
+   "at": 70,
+   "run": "particle minecraft:cloud 183.5 197.8 1441.8 7 3 7 0.01 36 force @a"
+  },
+  {
+   "at": 75,
+   "run": "particle minecraft:cloud 183.2 197.4 1441.4 7 3 7 0.01 34 force @a"
+  },
+  {
+   "at": 80,
+   "run": "particle minecraft:cloud 183.0 197.0 1441.0 7 3 7 0.01 33 force @a"
+  },
+  {
+   "at": 85,
+   "run": "particle minecraft:cloud 182.6 196.5 1440.5 7 3 7 0.01 31 force @a"
+  },
+  {
+   "at": 88,
+   "run": "particle minecraft:explosion 177.4 191.2 1423.2 2 2 2 0 5 force @a"
+  },
+  {
+   "at": 88,
+   "run": "particle minecraft:flash 177.4 191.2 1423.2 0 0 0 0 1 force @a"
+  },
+  {
+   "at": 88,
+   "run": "particle minecraft:large_smoke 177.4 191.2 1423.2 2.5 2.5 2.5 0.03 40 force @a"
+  },
+  {
+   "at": 88,
+   "run": "playsound lnai:sfx.boom master @a 187.4 200.2 1443.2 10 1.15"
+  },
+  {
+   "at": 89,
+   "run": "playsound minecraft:entity.generic.explode master @a 187.3 200.1 1443.1 10 0.9"
+  },
+  {
+   "at": 90,
+   "run": "particle minecraft:cloud 182.2 196.0 1440.0 7 3 7 0.01 30 force @a"
+  },
+  {
+   "at": 95,
+   "run": "particle minecraft:cloud 181.9 195.5 1439.5 7 3 7 0.01 28 force @a"
+  },
+  {
+   "at": 100,
+   "run": "particle minecraft:cloud 181.5 195.0 1439.0 7 3 7 0.01 26 force @a"
+  },
+  {
+   "at": 105,
+   "run": "particle minecraft:cloud 181.1 194.5 1438.5 7 3 7 0.01 24 force @a"
+  },
+  {
+   "at": 110,
+   "run": "particle minecraft:cloud 180.8 194.0 1438.0 7 3 7 0.01 23 force @a"
+  },
+  {
+   "at": 112,
+   "run": "particle minecraft:explosion 203.6 183.8 1444.8 2 2 2 0 5 force @a"
+  },
+  {
+   "at": 112,
+   "run": "particle minecraft:flash 203.6 183.8 1444.8 0 0 0 0 1 force @a"
+  },
+  {
+   "at": 112,
+   "run": "particle minecraft:large_smoke 203.6 183.8 1444.8 2.5 2.5 2.5 0.03 40 force @a"
+  },
+  {
+   "at": 112,
+   "run": "playsound lnai:sfx.boom master @a 185.6 197.8 1440.8 10 1.15"
+  },
+  {
+   "at": 112,
+   "run": "playsound minecraft:entity.generic.explode master @a 185.5 197.7 1440.7 10 0.9"
+  },
+  {
+   "at": 115,
+   "run": "particle minecraft:cloud 180.4 193.5 1437.5 7 3 7 0.01 21 force @a"
+  },
+  {
+   "at": 120,
+   "run": "particle minecraft:cloud 180.0 193.0 1437.0 7 3 7 0.01 20 force @a"
+  },
+  {
+   "at": 125,
+   "run": "particle minecraft:cloud 179.6 192.5 1436.5 7 3 7 0.01 18 force @a"
+  },
+  {
+   "at": 130,
+   "run": "particle minecraft:cloud 179.2 192.0 1436.0 7 3 7 0.01 16 force @a"
+  },
+  {
+   "at": 135,
+   "run": "particle minecraft:cloud 178.9 191.5 1435.5 7 3 7 0.01 15 force @a"
+  },
+  {
+   "at": 138,
+   "run": "particle minecraft:explosion 177.7 179.2 1424.2 2 2 2 0 5 force @a"
+  },
+  {
+   "at": 138,
+   "run": "particle minecraft:flash 177.7 179.2 1424.2 0 0 0 0 1 force @a"
+  },
+  {
+   "at": 138,
+   "run": "particle minecraft:large_smoke 177.7 179.2 1424.2 2.5 2.5 2.5 0.03 40 force @a"
+  },
+  {
+   "at": 138,
+   "run": "playsound lnai:sfx.boom master @a 183.7 195.2 1438.2 10 1.15"
+  },
+  {
+   "at": 139,
+   "run": "playsound minecraft:entity.generic.explode master @a 183.6 195.1 1438.1 10 0.9"
+  },
+  {
+   "at": 140,
+   "run": "particle minecraft:cloud 178.5 191.0 1435.0 7 3 7 0.01 13 force @a"
+  },
+  {
+   "at": 145,
+   "run": "particle minecraft:cloud 178.1 190.5 1434.5 7 3 7 0.01 11 force @a"
+  },
+  {
+   "at": 150,
+   "run": "particle minecraft:cloud 177.8 190.0 1434.0 7 3 7 0.01 9 force @a"
+  },
+  {
+   "at": 155,
+   "run": "particle minecraft:cloud 177.4 189.5 1433.5 7 3 7 0.01 8 force @a"
+  },
+  {
+   "at": 160,
+   "run": "particle minecraft:cloud 177.0 189.0 1433.0 7 3 7 0.01 6 force @a"
+  },
+  {
+   "at": 165,
+   "run": "particle minecraft:cloud 176.3 188.2 1432.2 7 3 7 0.01 5 force @a"
+  },
+  {
+   "at": 170,
+   "run": "particle minecraft:cloud 175.6 187.5 1431.4 7 3 7 0.01 3 force @a"
+  },
+  {
+   "at": 175,
+   "run": "particle minecraft:cloud 174.9 186.8 1430.6 7 3 7 0.01 1 force @a"
+  },
+  {
+   "at": 180,
+   "run": "playsound minecraft:item.elytra.flying master @a 179.2 190.0 1432.8 10 0.6"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:explosion 155.8 178.5 1413.2 2 2 2 0 5 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:flash 155.8 178.5 1413.2 0 0 0 0 1 force @a"
+  },
+  {
+   "at": 190,
+   "run": "particle minecraft:large_smoke 155.8 178.5 1413.2 2.5 2.5 2.5 0.03 40 force @a"
+  },
+  {
+   "at": 190,
+   "run": "playsound lnai:sfx.boom master @a 177.8 188.5 1431.2 10 1.15"
+  },
+  {
+   "at": 191,
+   "run": "playsound minecraft:entity.generic.explode master @a 177.7 188.3 1431.0 10 0.9"
+  },
+  {
+   "at": 236,
+   "run": "particle minecraft:explosion 141.4 175.6 1433.8 2 2 2 0 5 force @a"
+  },
+  {
+   "at": 236,
+   "run": "particle minecraft:flash 141.4 175.6 1433.8 0 0 0 0 1 force @a"
+  },
+  {
+   "at": 236,
+   "run": "particle minecraft:large_smoke 141.4 175.6 1433.8 2.5 2.5 2.5 0.03 40 force @a"
+  },
+  {
+   "at": 236,
+   "run": "playsound lnai:sfx.boom master @a 171.4 181.6 1423.8 10 1.15"
+  },
+  {
+   "at": 237,
+   "run": "playsound minecraft:entity.generic.explode master @a 171.2 181.4 1423.7 10 0.9"
+  },
+  {
+   "at": 240,
+   "run": "summon block_display 28 129 1285 {Tags:[\"ln\",\"c1_framea\"],Glowing:1b,glow_color_override:16726832,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:red_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[10f,17f,11f]}}"
+  },
+  {
+   "at": 240,
+   "run": "playsound lnai:sfx.scanner_pulse master @a 170.8 181.0 1423.2 10 1.2"
+  },
+  {
+   "at": 247,
+   "run": "kill @e[tag=c1_framea]"
+  },
+  {
+   "at": 252,
+   "run": "summon block_display 28 129 1285 {Tags:[\"ln\",\"c1_framea\"],Glowing:1b,glow_color_override:16726832,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:red_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[10f,17f,11f]}}"
+  },
+  {
+   "at": 270,
+   "run": "summon block_display 20 127 1317 {Tags:[\"ln\",\"c1_frameb\"],Glowing:1b,glow_color_override:16726832,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:red_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[10f,15f,11f]}}"
+  },
+  {
+   "at": 270,
+   "run": "playsound lnai:sfx.scanner_pulse master @a 166.4 176.8 1418.8 10 1.3"
+  },
+  {
+   "at": 277,
+   "run": "kill @e[tag=c1_frameb]"
+  },
+  {
+   "at": 282,
+   "run": "summon block_display 20 127 1317 {Tags:[\"ln\",\"c1_frameb\"],Glowing:1b,glow_color_override:16726832,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:red_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[10f,15f,11f]}}"
+  },
+  {
+   "at": 300,
+   "run": "summon block_display 98 131 1457 {Tags:[\"ln\",\"c1_framec\"],Glowing:1b,glow_color_override:16726832,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:red_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[10f,13f,11f]}}"
+  },
+  {
+   "at": 300,
+   "run": "playsound lnai:sfx.scanner_pulse master @a 161.6 173.2 1415.2 10 1.4"
+  },
+  {
+   "at": 307,
+   "run": "kill @e[tag=c1_framec]"
+  },
+  {
+   "at": 312,
+   "run": "summon block_display 98 131 1457 {Tags:[\"ln\",\"c1_framec\"],Glowing:1b,glow_color_override:16726832,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:red_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[10f,13f,11f]}}"
+  },
+  {
+   "at": 360,
+   "run": "playsound minecraft:item.elytra.flying master @a 152.0 166.0 1408.0 10 0.7"
+  },
+  {
+   "at": 360,
+   "run": "kill @e[tag=c1_framea]"
+  },
+  {
+   "at": 360,
+   "run": "kill @e[tag=c1_frameb]"
+  },
+  {
+   "at": 360,
+   "run": "kill @e[tag=c1_framec]"
+  },
+  {
+   "at": 400,
+   "run": "summon block_display 92 64 1414 {Tags:[\"ln\",\"c1_bcn\"],Glowing:1b,glow_color_override:4259680,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:lime_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,2f,1f]}}"
+  },
+  {
+   "at": 414,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 428,
+   "run": "summon block_display 92 64 1414 {Tags:[\"ln\",\"c1_bcn\"],Glowing:1b,glow_color_override:4259680,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:lime_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,2f,1f]}}"
+  },
+  {
+   "at": 442,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 456,
+   "run": "summon block_display 92 64 1414 {Tags:[\"ln\",\"c1_bcn\"],Glowing:1b,glow_color_override:4259680,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:lime_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,2f,1f]}}"
+  },
+  {
+   "at": 470,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 484,
+   "run": "summon block_display 92 64 1414 {Tags:[\"ln\",\"c1_bcn\"],Glowing:1b,glow_color_override:4259680,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:lime_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,2f,1f]}}"
+  },
+  {
+   "at": 498,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 512,
+   "run": "summon block_display 92 64 1414 {Tags:[\"ln\",\"c1_bcn\"],Glowing:1b,glow_color_override:4259680,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:lime_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,2f,1f]}}"
+  },
+  {
+   "at": 520,
+   "run": "playsound minecraft:item.elytra.flying master @a 143.6 306.8 1427.6 10 0.75"
+  },
+  {
+   "at": 526,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 540,
+   "run": "summon block_display 92 64 1414 {Tags:[\"ln\",\"c1_bcn\"],Glowing:1b,glow_color_override:4259680,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:lime_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,2f,1f]}}"
+  },
+  {
+   "at": 554,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 568,
+   "run": "summon block_display 92 64 1414 {Tags:[\"ln\",\"c1_bcn\"],Glowing:1b,glow_color_override:4259680,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:lime_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,2f,1f]}}"
+  },
+  {
+   "at": 582,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 590,
+   "run": "playsound minecraft:item.elytra.flying master @a 138.6 303.9 1422.6 10 0.9"
+  },
+  {
+   "at": 596,
+   "run": "summon block_display 92 64 1414 {Tags:[\"ln\",\"c1_bcn\"],Glowing:1b,glow_color_override:4259680,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:lime_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,2f,1f]}}"
+  },
+  {
+   "at": 610,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 624,
+   "run": "summon block_display 92 64 1414 {Tags:[\"ln\",\"c1_bcn\"],Glowing:1b,glow_color_override:4259680,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:lime_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,2f,1f]}}"
+  },
+  {
+   "at": 638,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 652,
+   "run": "summon block_display 92 64 1414 {Tags:[\"ln\",\"c1_bcn\"],Glowing:1b,glow_color_override:4259680,view_range:12f,brightness:{sky:15,block:15},block_state:{Name:\"minecraft:lime_stained_glass\"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,2f,1f]}}"
+  },
+  {
+   "at": 666,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 690,
+   "run": "kill @e[tag=c1_bcn]"
+  },
+  {
+   "at": 698,
+   "run": "function ln:ch01/jump"
+  }
+ ],
+ "titles": [
+  {
+   "at": 30,
+   "dur": 110,
+   "text": "第一章　雷霆空降",
+   "sub": "黑石海岸"
+  }
+ ]
+}

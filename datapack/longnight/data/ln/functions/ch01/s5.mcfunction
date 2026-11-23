@@ -17,6 +17,18 @@ execute if score #t ln matches 226 positioned 14 118 1296 unless entity @a[dista
 execute if score #t ln matches 238 positioned 34 125 1312 unless entity @a[distance=..10] run function ln:ch01/strike_fx
 execute if score #t ln matches 60 as @a at @s run playsound minecraft:entity.firework_rocket.launch master @s ~40 ~30 ~ 4 0.5
 execute if score #t ln matches 130 run kill @e[tag=ln_enemy]
+execute if score #t ln matches 30 run particle minecraft:flash 165 67 1290 0 0 0 0 1 force @a
+execute if score #t ln matches 39 run particle minecraft:flash 175 67 1340 0 0 0 0 1 force @a
+execute if score #t ln matches 48 run particle minecraft:flash 168 67 1395 0 0 0 0 1 force @a
+execute if score #t ln matches 57 run particle minecraft:flash 178 67 1445 0 0 0 0 1 force @a
+execute if score #t ln matches 30 run particle minecraft:large_smoke 165 67 1289 1 0.5 1 0.05 30 force @a
+execute if score #t ln matches 39 run particle minecraft:large_smoke 175 67 1339 1 0.5 1 0.05 30 force @a
+execute if score #t ln matches 48 run particle minecraft:large_smoke 168 67 1394 1 0.5 1 0.05 30 force @a
+execute if score #t ln matches 57 run particle minecraft:large_smoke 178 67 1444 1 0.5 1 0.05 30 force @a
+execute if score #t ln matches 30 run playsound lnai:sfx.boom master @a 165 67 1300 12 0.6
+execute if score #t ln matches 39 run playsound lnai:sfx.boom master @a 175 67 1350 12 0.6
+execute if score #t ln matches 48 run playsound lnai:sfx.boom master @a 168 67 1405 12 0.6
+execute if score #t ln matches 57 run playsound lnai:sfx.boom master @a 178 67 1455 12 0.6
 execute if score #t ln matches 120 run lnhud waypoint @a 22 111 1266
 scoreboard players operation #tm ln = #t ln
 scoreboard players set #k ln 30

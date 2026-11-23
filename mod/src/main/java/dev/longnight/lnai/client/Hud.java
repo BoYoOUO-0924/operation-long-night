@@ -59,9 +59,14 @@ public final class Hud {
     }
 
     static void text(GuiGraphics g, String s, int x, int y, int color, boolean centered) {
+        text(g, s, x, y, color, centered, true);
+    }
+
+    /** shadow = false：放大的字（標題、過場字幕）不畫陰影，否則陰影會跟著放大變成重影 */
+    static void text(GuiGraphics g, String s, int x, int y, int color, boolean centered, boolean shadow) {
         Font f = Minecraft.getInstance().font;
         MutableComponent c = t(s);
-        g.drawString(f, c, centered ? x - f.width(c) / 2 : x, y, color, true);
+        g.drawString(f, c, centered ? x - f.width(c) / 2 : x, y, color, shadow);
     }
 
     static void right(GuiGraphics g, String s, int x, int y, int color) { text(g, s, x - width(s), y, color, false); }
