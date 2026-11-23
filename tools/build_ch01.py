@@ -150,7 +150,7 @@ def summon_ally(tag, name, color, template, slot, pos):
     return f"summon tacznpcs:npc {pos} {nbt}"
 
 
-ALLY_START = ["134 309 1408", "137 311 1418", "133 307 1426"]     # 同 tools/make_ch01_cuts.py 的 FALL
+ALLY_START = ["131 299.5 1413", "135 301 1417", "132 298 1421"]   # y304 以上（世界最頂層區段）的實體不會被畫出來     # 同 tools/make_ch01_cuts.py 的 FALL
 fn("spawn_allies", [summon_ally(*a, pos=ALLY_START[i]) for i, a in enumerate(ALLIES)] + [
     "team join ln_blue @e[tag=ln_new]",
     "effect give @e[tag=ln_new] glowing infinite 0 true",
@@ -248,10 +248,16 @@ for mode in (1, 2):
                           f"execute as @a[scores={{ln_lit=40..}}] at @s run function {NS}/flak"])
 
 
+# 光束 = 一串越來越細、越來越暗的玻璃段（同一個 tag，tp 時一起轉），看起來像往外漸弱的光錐
+BEAM_SEG = [(0, 14, 0.9, 15, "white"), (14, 16, 0.75, 12, "white"), (30, 16, 0.6, 9, "light_gray"),
+            (46, 14, 0.45, 6, "light_gray"), (60, 10, 0.3, 4, "gray")]
+
+
 def beam(i, o):
-    return (f'summon block_display {o[0]} {o[1]} {o[2]} {{Tags:["ln","c1_beam{i}"],brightness:{{sky:15,block:15}},view_range:4f,'
-            f'block_state:{{Name:"minecraft:white_stained_glass"}},'
-            f'transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.45f,-0.45f,0f],scale:[0.9f,0.9f,70f]}}}}')
+    return [f'summon block_display {o[0]} {o[1]} {o[2]} {{Tags:["ln","c1_beam{i}"],brightness:{{sky:{br},block:{br}}},view_range:4f,'
+            f'block_state:{{Name:"minecraft:{col}_stained_glass"}},'
+            f'transformation:{{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[{-w / 2:.3f}f,{-w / 2:.3f}f,{z0}f],scale:[{w}f,{w}f,{ln}f]}}}}'
+            for z0, ln, w, br, col in BEAM_SEG]
 
 
 fn("flak", [
@@ -341,6 +347,7 @@ fn("start", [
     "scoreboard players set #k ln 0",
     "gamemode adventure @a",
     "gamerule naturalRegeneration false",
+    "effect give @a instant_health 1 9 true",
     "team join ln_blue @a",
     "clear @a",
     f"function {NS}/loadout",
@@ -352,7 +359,7 @@ fn("start", [
     *[f"tp @a[scores={{ln_pid={k}}}] {DROP[k - 1][0] + 0.5} {DROP[k - 1][1]} {DROP[k - 1][2] + 0.5} 90 20" for k in range(1, 5)],
     f"function {NS}/fleet",
     f"spawnpoint @a {xyz(BEACON)}",
-    beam(0, LAMP1), beam(1, LAMP2),
+    *beam(0, LAMP1), *beam(1, LAMP2),
     f"function {NS}/spawn_allies",
     "bossbar set ln:obj players @a",
     "bossbar set ln:obj visible true",
@@ -379,12 +386,13 @@ fn("jump", [
     *[f"execute if entity @a[scores={{ln_pid={k}}}] run summon block_display {xyz(DROP[k - 1])} " + CHUTE.format(k=k) for k in range(1, 5)],
     f"tag {P} add c1_chute",
     f"effect give {P} slow_falling infinite 0 true",
+    f"effect give {P} instant_health 1 9 true",
     "effect give @e[tag=ln_ally] slow_falling 120 0 true",
     "effect give @e[tag=ln_ally] glowing infinite 0 true",
     "kill @e[tag=c1_bcn]",
     *goto(1),
 ])
-fn("s9", [f"function {NS}/sl1/tick"])
+fn("s9", [f"function {NS}/sl1/tick", "scoreboard players set @a ln_lit 0"])   # 開場動畫期間探照燈只做樣子，不招來高射砲
 
 # ---- 艦隊（海平線上的燈光剪影；開場、撤離、結尾都看得到）
 SHIPS = [(165, 1300), (175, 1350), (168, 1405), (178, 1455)]   # 同 tools/make_ch01_cuts.py

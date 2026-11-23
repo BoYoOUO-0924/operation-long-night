@@ -339,7 +339,13 @@ public final class CutscenePlayer {
     public static void hideSelf(net.minecraftforge.client.event.RenderPlayerEvent.Pre e) {
         Minecraft mc = Minecraft.getInstance();
         if (!playing || cam == null) return;
-        if (e.getEntity() != mc.player || cam.position().distanceTo(mc.player.getEyePosition()) < 2.5) e.setCanceled(true);
+        if (e.getEntity() == mc.player) {
+            if (cam.position().distanceTo(mc.player.getEyePosition()) < 2.5) e.setCanceled(true);
+            return;
+        }
+        // 隊友 NPC（tacznpcs）也是用假玩家走 PlayerRenderer 畫的：只藏真的連線玩家（在玩家清單裡的），不然隊友會在過場中消失
+        var conn = mc.getConnection();
+        if (conn != null && conn.getPlayerInfo(e.getEntity().getUUID()) != null) e.setCanceled(true);
     }
 
     // ---------------- 畫面：黑邊、字幕、淡入淡出 ----------------

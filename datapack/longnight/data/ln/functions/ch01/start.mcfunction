@@ -13,6 +13,7 @@ scoreboard players reset @a ln_pid
 scoreboard players set #k ln 0
 gamemode adventure @a
 gamerule naturalRegeneration false
+effect give @a instant_health 1 9 true
 team join ln_blue @a
 clear @a
 function ln:ch01/loadout
@@ -32,8 +33,16 @@ tp @a[scores={ln_pid=3}] 122.5 300 1422.5 90 20
 tp @a[scores={ln_pid=4}] 128.5 300 1428.5 90 20
 function ln:ch01/fleet
 spawnpoint @a 92 64 1414
-summon block_display 74.5 96.5 1406.5 {Tags:["ln","c1_beam0"],brightness:{sky:15,block:15},view_range:4f,block_state:{Name:"minecraft:white_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.45f,-0.45f,0f],scale:[0.9f,0.9f,70f]}}
-summon block_display 100.5 127.5 1462.5 {Tags:["ln","c1_beam1"],brightness:{sky:15,block:15},view_range:4f,block_state:{Name:"minecraft:white_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.45f,-0.45f,0f],scale:[0.9f,0.9f,70f]}}
+summon block_display 74.5 96.5 1406.5 {Tags:["ln","c1_beam0"],brightness:{sky:15,block:15},view_range:4f,block_state:{Name:"minecraft:white_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.450f,-0.450f,0f],scale:[0.9f,0.9f,14f]}}
+summon block_display 74.5 96.5 1406.5 {Tags:["ln","c1_beam0"],brightness:{sky:12,block:12},view_range:4f,block_state:{Name:"minecraft:white_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.375f,-0.375f,14f],scale:[0.75f,0.75f,16f]}}
+summon block_display 74.5 96.5 1406.5 {Tags:["ln","c1_beam0"],brightness:{sky:9,block:9},view_range:4f,block_state:{Name:"minecraft:light_gray_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.300f,-0.300f,30f],scale:[0.6f,0.6f,16f]}}
+summon block_display 74.5 96.5 1406.5 {Tags:["ln","c1_beam0"],brightness:{sky:6,block:6},view_range:4f,block_state:{Name:"minecraft:light_gray_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.225f,-0.225f,46f],scale:[0.45f,0.45f,14f]}}
+summon block_display 74.5 96.5 1406.5 {Tags:["ln","c1_beam0"],brightness:{sky:4,block:4},view_range:4f,block_state:{Name:"minecraft:gray_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.150f,-0.150f,60f],scale:[0.3f,0.3f,10f]}}
+summon block_display 100.5 127.5 1462.5 {Tags:["ln","c1_beam1"],brightness:{sky:15,block:15},view_range:4f,block_state:{Name:"minecraft:white_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.450f,-0.450f,0f],scale:[0.9f,0.9f,14f]}}
+summon block_display 100.5 127.5 1462.5 {Tags:["ln","c1_beam1"],brightness:{sky:12,block:12},view_range:4f,block_state:{Name:"minecraft:white_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.375f,-0.375f,14f],scale:[0.75f,0.75f,16f]}}
+summon block_display 100.5 127.5 1462.5 {Tags:["ln","c1_beam1"],brightness:{sky:9,block:9},view_range:4f,block_state:{Name:"minecraft:light_gray_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.300f,-0.300f,30f],scale:[0.6f,0.6f,16f]}}
+summon block_display 100.5 127.5 1462.5 {Tags:["ln","c1_beam1"],brightness:{sky:6,block:6},view_range:4f,block_state:{Name:"minecraft:light_gray_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.225f,-0.225f,46f],scale:[0.45f,0.45f,14f]}}
+summon block_display 100.5 127.5 1462.5 {Tags:["ln","c1_beam1"],brightness:{sky:4,block:4},view_range:4f,block_state:{Name:"minecraft:gray_stained_glass"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.150f,-0.150f,60f],scale:[0.3f,0.3f,10f]}}
 function ln:ch01/spawn_allies
 bossbar set ln:obj players @a
 bossbar set ln:obj visible true
