@@ -41,13 +41,16 @@ public final class Voice {
         }
     }
 
+    private static final java.util.Set<String> RADIO_ONLY = java.util.Set.of("海神");
+
     public static void play(String who, String text, boolean cutscene) {
         if (who == null || who.isEmpty()) return;
         Minecraft mc = Minecraft.getInstance();
         if (mc.level == null || mc.player == null) return;
         String id = id(who, text);
         Entity speaker = cutscene ? null : find(who);
-        boolean radioLine = text.contains("（無線電）") || text.contains("(無線電)");   // 劇本標明是無線電
+        boolean radioLine = text.contains("（無線電）") || text.contains("(無線電)")   // 劇本標明是無線電
+                || RADIO_ONLY.contains(who);                                       // 只在無線電出現的角色（過場裡也一樣）
         boolean near = !radioLine && (cutscene || (speaker != null && speaker.distanceTo(mc.player) <= NEAR));
         ResourceLocation rl = new ResourceLocation(LnAi.MODID, "voice." + id + (near ? "" : ".radio"));
         if (mc.getSoundManager().getSoundEvent(rl) == null) {   // 這句還沒有語音

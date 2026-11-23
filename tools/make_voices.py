@@ -62,13 +62,14 @@ def collect():
         if who in chars and text.strip():
             out[line_id(who, text)] = {"who": who, "text": text.strip(), "style": style_of(who, text)}
 
-    L = json.loads((ROOT / "levels/ch05_trial.json").read_text(encoding="utf-8"))
-    for lines in L["dialogue"].values():
-        for d in lines:
-            add(d["who"], d["text"])
-    for route, lines in L["callouts"].items():
-        for t in lines:
-            add(L["callout_speakers"][route], t)
+    for name in ("ch01", "ch05_trial"):          # 各章關卡對白與戰鬥喊話
+        L = json.loads((ROOT / f"levels/{name}.json").read_text(encoding="utf-8"))
+        for lines in L["dialogue"].values():
+            for d in lines:
+                add(d["who"], d["text"])
+        for route, lines in L["callouts"].items():
+            for t in lines:
+                add(L["callout_speakers"][route], t)
     for f in sorted((ROOT / "levels/cutscenes").glob("*.json")):
         for s in json.loads(f.read_text(encoding="utf-8")).get("subtitles", []):
             add(s.get("who", ""), s.get("text", ""))

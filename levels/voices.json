@@ -1,97 +1,112 @@
 {
-  "_說明": "角色聲音設定。tools/make_voices.py 用 voice_en（英文描述，AI 比較聽得懂）設計每個角色的參考音檔，再用 Base 模型照參考音檔念所有台詞；voice 是給人看的中文說明。每段參考音檔做 6 次、每句台詞最多做 4 次，用本機語音辨識挑最清楚的一次。要重做某個角色的聲音：刪掉 voice/ref/ 裡該角色的檔案再執行。台詞會先轉成簡體再交給 AI（繁體字會被念成粵語腔），遊戲字幕仍是繁體。括號裡的舞台說明（例如（無線電））不念；speak_replace 是只改「念出來的字」、不改字幕的替換表（例如俄文改成中文音譯）。標了（無線電）的台詞在遊戲裡一律用對講機音質播放。",
-  "characters": {
-    "戰車": {
-      "voice": "三十多歲的男性軍人，聲音低沉沙啞、粗獷有力，說話快、脾氣暴躁、不耐煩",
-      "ref_text": "少廢話，動作快一點，不想死在這裡就給我跟上。",
-      "styles": {
-        "normal": "語氣不耐煩、粗聲粗氣",
-        "shout": "在槍聲中大聲吼叫、急促緊張"
-      },
-      "voice_en": "A male soldier in his thirties with a deep, rough, gravelly voice. Impatient and gruff.",
-      "styles_en": {
-        "normal": "Annoyed and gruff.",
-        "shout": "Shouting loudly over gunfire, urgent and tense."
-      }
-    },
-    "白鴉": {
-      "voice": "三十歲左右的男性狙擊手，聲音中低音、冷靜平穩、話少，語速偏慢，非常沉著",
-      "ref_text": "保持安靜，我在高處盯著，有動靜我會先告訴你們。",
-      "styles": {
-        "normal": "冷靜、低聲、平穩",
-        "shout": "壓低聲音但很急迫地警告隊友"
-      },
-      "voice_en": "A calm male sniper around thirty with a low, steady voice. Speaks little, slow and composed.",
-      "styles_en": {
-        "normal": "Calm, quiet and steady.",
-        "shout": "Urgent warning to teammates, tense but controlled."
-      }
-    },
-    "狐狸": {
-      "voice": "二十多歲的年輕女性技術兵，聲音清亮、語速快、聰明自信，帶一點俏皮",
-      "ref_text": "訊號又斷了，給我兩分鐘，我把這台破機器修好給你們看。",
-      "styles": {
-        "normal": "自信、輕快、語速快",
-        "shout": "緊張地大聲喊、上氣不接下氣"
-      },
-      "voice_en": "A young woman in her twenties, a confident tech specialist with a bright, clear voice. Quick and a little playful.",
-      "styles_en": {
-        "normal": "Confident and light.",
-        "shout": "Nervous, shouting loudly and out of breath."
-      }
-    },
-    "情報官": {
-      "voice": "四十多歲的男性文職軍官，聲音偏高、虛弱，緊張到發抖，說話斷斷續續帶著喘氣",
-      "ref_text": "拜託……先停一下好嗎，我的腳已經凍得沒有知覺了。",
-      "styles": {
-        "normal": "又冷又累、發抖、喘氣",
-        "shout": "驚慌失措、拚命求饒地大喊"
-      },
-      "voice_en": "A nervous middle-aged male officer in his forties, slightly high-pitched and tired, shivering from the cold.",
-      "styles_en": {
-        "normal": "Cold, exhausted and trembling, slightly out of breath.",
-        "shout": "Panicked, desperately pleading at the top of his voice."
-      }
-    },
-    "守夜人": {
-      "voice": "五十歲左右的男性反派指揮官，聲音非常低沉、緩慢、冰冷，有威嚴和壓迫感",
-      "ref_text": "你們走不出這座山的，雪會替我把你們全部埋起來。",
-      "styles": {
-        "normal": "冰冷、緩慢、帶著嘲諷",
-        "shout": "低沉而憤怒地下令"
-      },
-      "voice_en": "A villainous male commander around fifty with a very deep, slow, cold and commanding voice.",
-      "styles_en": {
-        "normal": "Cold, slow and mocking.",
-        "shout": "Deep and furious, giving orders."
-      }
-    }
+ "_說明": "角色聲音設定。tools/make_voices.py 用 voice_en（英文描述，AI 比較聽得懂）設計每個角色的參考音檔，再用 Base 模型照參考音檔念所有台詞；voice 是給人看的中文說明。每段參考音檔做 6 次、每句台詞最多做 4 次，用本機語音辨識挑最清楚的一次。要重做某個角色的聲音：刪掉 voice/ref/ 裡該角色的檔案再執行。台詞會先轉成簡體再交給 AI（繁體字會被念成粵語腔），遊戲字幕仍是繁體。括號裡的舞台說明（例如（無線電））不念；speak_replace 是只改「念出來的字」、不改字幕的替換表（例如俄文改成中文音譯）。標了（無線電）的台詞在遊戲裡一律用對講機音質播放。",
+ "characters": {
+  "戰車": {
+   "voice": "三十多歲的男性軍人，聲音低沉沙啞、粗獷有力，說話快、脾氣暴躁、不耐煩",
+   "ref_text": "少廢話，動作快一點，不想死在這裡就給我跟上。",
+   "styles": {
+    "normal": "語氣不耐煩、粗聲粗氣",
+    "shout": "在槍聲中大聲吼叫、急促緊張"
+   },
+   "voice_en": "A male soldier in his thirties with a deep, rough, gravelly voice. Impatient and gruff.",
+   "styles_en": {
+    "normal": "Annoyed and gruff.",
+    "shout": "Shouting loudly over gunfire, urgent and tense."
+   }
   },
-  "extra_lines": [
-    {
-      "who": "白鴉",
-      "text": "皮卡停了，槍手下車了！東邊車庫外！"
-    },
-    {
-      "who": "戰車",
-      "text": "我和狐狸跟著你，你往哪打我們就往哪打。白鴉在塔上掩護。"
-    },
-    {
-      "who": "白鴉",
-      "text": "撐住！我過來了！"
-    },
-    {
-      "who": "戰車",
-      "text": "撐住！我過來了！"
-    },
-    {
-      "who": "狐狸",
-      "text": "撐住！我過來了！"
-    }
-  ],
-  "style_override": {},
-  "accent_en": "Speaks Mandarin Chinese with a Taiwanese accent (Taiwan Guoyu), every word clearly articulated.",
-  "speak_replace": {
-    "МЕТЕОСТАНЦИЯ №7": "梅捷奧斯坦齊亞，七號"
+  "白鴉": {
+   "voice": "三十歲左右的男性狙擊手，聲音中低音、冷靜平穩、話少，語速偏慢，非常沉著",
+   "ref_text": "保持安靜，我在高處盯著，有動靜我會先告訴你們。",
+   "styles": {
+    "normal": "冷靜、低聲、平穩",
+    "shout": "壓低聲音但很急迫地警告隊友"
+   },
+   "voice_en": "A calm male sniper around thirty with a low, steady voice. Speaks little, slow and composed.",
+   "styles_en": {
+    "normal": "Calm, quiet and steady.",
+    "shout": "Urgent warning to teammates, tense but controlled."
+   }
+  },
+  "狐狸": {
+   "voice": "二十多歲的年輕女性技術兵，聲音清亮、語速快、聰明自信，帶一點俏皮",
+   "ref_text": "訊號又斷了，給我兩分鐘，我把這台破機器修好給你們看。",
+   "styles": {
+    "normal": "自信、輕快、語速快",
+    "shout": "緊張地大聲喊、上氣不接下氣"
+   },
+   "voice_en": "A young woman in her twenties, a confident tech specialist with a bright, clear voice. Quick and a little playful.",
+   "styles_en": {
+    "normal": "Confident and light.",
+    "shout": "Nervous, shouting loudly and out of breath."
+   }
+  },
+  "情報官": {
+   "voice": "四十多歲的男性文職軍官，聲音偏高、虛弱，緊張到發抖，說話斷斷續續帶著喘氣",
+   "ref_text": "拜託……先停一下好嗎，我的腳已經凍得沒有知覺了。",
+   "styles": {
+    "normal": "又冷又累、發抖、喘氣",
+    "shout": "驚慌失措、拚命求饒地大喊"
+   },
+   "voice_en": "A nervous middle-aged male officer in his forties, slightly high-pitched and tired, shivering from the cold.",
+   "styles_en": {
+    "normal": "Cold, exhausted and trembling, slightly out of breath.",
+    "shout": "Panicked, desperately pleading at the top of his voice."
+   }
+  },
+  "守夜人": {
+   "voice": "五十歲左右的男性反派指揮官，聲音非常低沉、緩慢、冰冷，有威嚴和壓迫感",
+   "ref_text": "你們走不出這座山的，雪會替我把你們全部埋起來。",
+   "styles": {
+    "normal": "冰冷、緩慢、帶著嘲諷",
+    "shout": "低沉而憤怒地下令"
+   },
+   "voice_en": "A villainous male commander around fifty with a very deep, slow, cold and commanding voice.",
+   "styles_en": {
+    "normal": "Cold, slow and mocking.",
+    "shout": "Deep and furious, giving orders."
+   }
+  },
+  "海神": {
+   "voice": "五十多歲的男性艦隊指揮官，老菸槍，聲音非常沙啞粗糙、每個字都帶著砂礫感，語氣沉穩有威嚴",
+   "ref_text": "獵犬小隊，這裡是海神。艦隊已經就位，等你們的消息。",
+   "styles": {
+    "normal": "沉穩、冷靜、簡潔下令",
+    "shout": "在砲火聲中加重語氣、急迫但不慌亂"
+   },
+   "voice_en": "A male naval fleet commander in his fifties, a heavy smoker with a very raspy, gravelly, hoarse voice, rough texture on every word, calm and authoritative.",
+   "styles_en": {
+    "normal": "Calm, steady and concise, like giving orders over the radio.",
+    "shout": "Urgent and forceful over the sound of artillery, but never panicked."
+   }
   }
+ },
+ "extra_lines": [
+  {
+   "who": "白鴉",
+   "text": "皮卡停了，槍手下車了！東邊車庫外！"
+  },
+  {
+   "who": "戰車",
+   "text": "我和狐狸跟著你，你往哪打我們就往哪打。白鴉在塔上掩護。"
+  },
+  {
+   "who": "白鴉",
+   "text": "撐住！我過來了！"
+  },
+  {
+   "who": "戰車",
+   "text": "撐住！我過來了！"
+  },
+  {
+   "who": "狐狸",
+   "text": "撐住！我過來了！"
+  }
+ ],
+ "style_override": {},
+ "accent_en": "Speaks Mandarin Chinese with a Taiwanese accent (Taiwan Guoyu), every word clearly articulated.",
+ "speak_replace": {
+  "МЕТЕОСТАНЦИЯ №7": "梅捷奧斯坦齊亞，七號",
+  "南岬": "南甲",
+  "療癒": "療育"
+ }
 }
