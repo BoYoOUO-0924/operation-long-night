@@ -26,7 +26,7 @@ execute if score #t ln matches 340..900 if score #tm ln matches 15 as @a at @s r
 execute if score #t ln matches 330..900 as @a at @s run particle minecraft:ash ~ ~1 ~ 6 2 6 0 4 normal @s
 execute if score #t ln matches 420 run summon block_display 4 150 1430 {Tags:["ln","c1_glow"],brightness:{sky:15,block:15},block_state:{Name:"minecraft:light_blue_stained_glass"},Glowing:1b,glow_color_override:6737151,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-1f,-6f,-3f],scale:[2f,12f,6f]}}
 execute if score #t ln matches 420 run particle minecraft:electric_spark 4 150 1430 2 6 3 0.4 200 force @a
-execute if score #t ln matches 420 run lnhud tint @a 3060C0FF 8 pulse
+execute if score #t ln matches 420 run lnhud tint @a 8060C0FF 30 flash
 execute if score #t ln matches 450 run kill @e[tag=c1_glow]
 execute if score #t ln matches 600 as @a at @s run playsound lnai:sfx.radio_off master @s ~ ~ ~ 1 0.8
 execute if score #t ln matches 735 as @a at @s run playsound lnai:sfx.radio_on master @s ~ ~ ~ 1 0.7

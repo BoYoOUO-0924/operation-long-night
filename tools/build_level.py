@@ -436,6 +436,8 @@ fn("stop", ["function ln:ch05/cleanup", "gamemode creative @a",
             f"tellraw @a {jtext({'text': '[長夜] 已中止關卡。', 'color': 'red'})}"])
 # 全隊倒地／陣亡（lnai 模組呼叫 ln:wipe）：清掉敵人，從目前階段的開頭重來
 fn("wipe", ["kill @e[tag=ln_enemy]",
+            f"clear {P}", "function ln:ch05/loadout", f"effect give {P} instant_health 1 9 true",   # 重來時補滿物資
+            f"tellraw @a {jtext({'text': '[長夜] 補給已重新發放。', 'color': 'gray'})}",
             *[f"execute if score #stage ln matches {i} run function ln:ch05/to_s{i}" for i in (2, 3, 4, 5, 7)]])
 
 # 1 上山（隊友跟著玩家走）
@@ -572,9 +574,7 @@ fn("finish", [
     "scoreboard players set #done5 ln 1",
     "bossbar set ln:obj visible false",
     "lnhud objective @a",
-    "title @a times 20 100 30",
-    f"title @a subtitle {jtext({'text': '任務完成・返回運輸機', 'color': 'gray'})}",
-    f"title @a title {jtext({'text': '第五章　寒霜陷阱', 'color': 'gold', 'bold': True})}",
+    "lnhud title @a 100 FFFFB020 第五章　寒霜陷阱|任務完成・返回運輸機",
     "schedule function ln:ch05/to_lobby 140t replace",
 ])
 fn("to_lobby", [

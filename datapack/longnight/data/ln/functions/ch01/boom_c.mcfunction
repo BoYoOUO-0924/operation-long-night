@@ -19,7 +19,7 @@ setblock 100 131 1465 iron_bars
 setblock 101 131 1464 campfire[lit=true]
 setblock 102 131 1462 campfire[lit=true]
 execute positioned 102 131 1462 run kill @e[tag=ln_enemy,distance=..6]
-lnhud tint @a 50FFE0B0 10 pulse
+lnhud tint @a 70FFE0B0 20 flash
 scoreboard players add #count ln 1
 function ln:ch01/evdlg/evt_boom_c
 execute if score #count ln matches 1 run function ln:ch01/evdlg/evt_count_1

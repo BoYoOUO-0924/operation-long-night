@@ -5,4 +5,4 @@ particle minecraft:lava ~ ~1 ~ 1 1 1 0 20 force @a
 playsound lnai:sfx.boom master @a ~ ~1 ~ 6 0.9
 playsound minecraft:entity.generic.explode master @a ~ ~1 ~ 4 0.7
 particle minecraft:flash ~ ~2 ~ 0 0 0 0 1 force @a
-execute as @a[distance=..40] run lnhud tint @s 40FFD0A0 6 pulse
+execute as @a[distance=..40] run lnhud tint @s 50FFD0A0 14 flash

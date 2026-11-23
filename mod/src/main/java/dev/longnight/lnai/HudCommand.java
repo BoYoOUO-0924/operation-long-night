@@ -84,16 +84,31 @@ final class HudCommand {
                 .then(Commands.literal("gundebug").then(Commands.argument("e", EntityArgument.entities())
                         .executes(c -> { for (Entity ent : EntityArgument.getEntities(c, "e")) { String s = gunDebug(ent); LOG.info("[lnai] gundebug {}", s);
                             c.getSource().sendSuccess(() -> Component.literal(s), false); } return 1; })))
-                // /lnhud tint <玩家> <AARRGGBB> [淡入淡出 tick] [pulse]：全螢幕色調（00000000 = 關閉）
+                // /lnhud title <玩家> <停留 tick> <AARRGGBB> <標題|副標>：章節標題卡（無陰影，取代原版 /title）
+                .then(Commands.literal("title").then(Commands.argument("targets", EntityArgument.players())
+                        .then(Commands.argument("stay", com.mojang.brigadier.arguments.IntegerArgumentType.integer(0, 1200))
+                                .then(Commands.argument("argb", StringArgumentType.word())
+                                        .then(Commands.argument("text", StringArgumentType.greedyString())
+                                                .executes(c -> {
+                                                    String cue = "title:" + com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "stay") + ":"
+                                                            + StringArgumentType.getString(c, "argb") + ":" + StringArgumentType.getString(c, "text");
+                                                    for (ServerPlayer p : EntityArgument.getPlayers(c, "targets")) Net.to(p, new Net.Music(cue, 0));
+                                                    return 1;
+                                                }))))))
+                // /lnhud tint <玩家> <AARRGGBB> [淡入淡出 tick] [pulse|flash]：全螢幕色調（00000000 = 關閉）
                 .then(Commands.literal("tint").then(Commands.argument("targets", EntityArgument.players())
                         .then(Commands.argument("argb", StringArgumentType.word())
-                                .executes(c -> tint(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "argb"), 20, false))
+                                .executes(c -> tint(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "argb"), 20, 0))
                                 .then(Commands.argument("fade", com.mojang.brigadier.arguments.IntegerArgumentType.integer(0, 400))
                                         .executes(c -> tint(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "argb"),
-                                                com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade"), false))
+                                                com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade"), 0))
                                         .then(Commands.literal("pulse")
                                                 .executes(c -> tint(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "argb"),
-                                                        com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade"), true)))))))
+                                                        com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade"), 1)))
+                                        // flash：瞬間亮起、在 fade tick 內自己淡掉（不會蓋掉原本的持續色調）
+                                        .then(Commands.literal("flash")
+                                                .executes(c -> tint(EntityArgument.getPlayers(c, "targets"), StringArgumentType.getString(c, "argb"),
+                                                        com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(c, "fade"), 2)))))))
                 .then(Commands.literal("dmgdebug").then(Commands.argument("on", com.mojang.brigadier.arguments.BoolArgumentType.bool())
                         .executes(c -> { DamageTuning.debug = com.mojang.brigadier.arguments.BoolArgumentType.getBool(c, "on"); return 1; })))
                 .then(Commands.literal("teamdebug").then(Commands.argument("on", com.mojang.brigadier.arguments.BoolArgumentType.bool())
@@ -189,8 +204,8 @@ final class HudCommand {
         return sb.toString();
     }
 
-    private static int tint(Collection<ServerPlayer> ps, String argb, int fade, boolean pulse) {
-        for (ServerPlayer p : ps) Net.to(p, new Net.Music("tint:" + argb + ":" + fade + ":" + (pulse ? 1 : 0), fade));
+    private static int tint(Collection<ServerPlayer> ps, String argb, int fade, int mode) {
+        for (ServerPlayer p : ps) Net.to(p, new Net.Music("tint:" + argb + ":" + fade + ":" + mode, fade));
         return ps.size();
     }
 

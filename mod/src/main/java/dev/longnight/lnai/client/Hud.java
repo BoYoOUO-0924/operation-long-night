@@ -124,6 +124,7 @@ public final class Hud {
             e.registerAboveAll("ln_revive", (gui, g, pt, w, h) -> { if (active()) Revive.draw(g, w, h, pt); });
             e.registerBelowAll("ln_tint", (gui, g, pt, w, h) -> ScreenTint.draw(g, w, h, pt));
             e.registerBelowAll("ln_mates", (gui, g, pt, w, h) -> { if (active()) MateMarkers.draw(g, w, h, pt); });
+            e.registerAboveAll("ln_title", (gui, g, pt, w, h) -> TitleCard.draw(g, w, h, pt));
             e.registerAboveAll("ln_say", (gui, g, pt, w, h) -> DialogSubs.draw(g, w, h, pt));
         }
     }

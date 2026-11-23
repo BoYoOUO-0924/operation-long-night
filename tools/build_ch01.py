@@ -260,7 +260,7 @@ fn("flak", [
     "particle minecraft:explosion ~ ~1 ~ 4 3 4 0 5 force @a",
     "particle minecraft:large_smoke ~ ~1 ~ 4 3 4 0.02 30 force @a",
     "playsound minecraft:entity.generic.explode master @a ~ ~ ~ 3 0.8",
-    "lnhud tint @s 60FFFFFF 6 pulse",
+    "lnhud tint @s 60FFFFFF 12 flash",
     "damage @s 2 minecraft:explosion",
     f"execute if score #litsaid ln matches 0 run {event('evt_lit')}",
     "scoreboard players set #litsaid ln 1",
@@ -650,7 +650,7 @@ for i, (r, (c4, bx, _)) in enumerate(RADARS.items()):
         f"setblock {x1 + 3} {y1} {z2 - 3} campfire[lit=true]",
         f"setblock {(x1 + x2) // 2} {y1} {(z1 + z2) // 2} campfire[lit=true]",
         f"execute positioned {(x1 + x2) // 2} {y1} {(z1 + z2) // 2} run kill @e[tag=ln_enemy,distance=..6]",
-        "lnhud tint @a 50FFE0B0 10 pulse",
+        "lnhud tint @a 70FFE0B0 20 flash",
         "scoreboard players add #count ln 1",
         event(f"evt_boom_{r}"),
         f"execute if score #count ln matches 1 run {event('evt_count_1')}",
@@ -701,7 +701,7 @@ s5 += [
     '{Tags:["ln","c1_glow"],brightness:{sky:15,block:15},block_state:{Name:"minecraft:light_blue_stained_glass"},Glowing:1b,glow_color_override:6737151,'
     "transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-1f,-6f,-3f],scale:[2f,12f,6f]}}",
     f"execute if score #t ln matches 420 run particle minecraft:electric_spark {xyz(CRACK)} 2 6 3 0.4 200 force @a",
-    "execute if score #t ln matches 420 run lnhud tint @a 3060C0FF 8 pulse",
+    "execute if score #t ln matches 420 run lnhud tint @a 8060C0FF 30 flash",
     "execute if score #t ln matches 450 run kill @e[tag=c1_glow]",
     "execute if score #t ln matches 600 as @a at @s run playsound lnai:sfx.radio_off master @s ~ ~ ~ 1 0.8",
     "execute if score #t ln matches 735 as @a at @s run playsound lnai:sfx.radio_on master @s ~ ~ ~ 1 0.7",
@@ -710,7 +710,7 @@ s5 += [
 ]
 fn("s5", s5)
 fn("strike_fx", [*boom(("~", "~1", "~")), "particle minecraft:flash ~ ~2 ~ 0 0 0 0 1 force @a",
-                 "execute as @a[distance=..40] run lnhud tint @s 40FFD0A0 6 pulse"])
+                 "execute as @a[distance=..40] run lnhud tint @s 50FFD0A0 14 flash"])
 fn("arrive", [*goto(6), event("arrive"), f"schedule function {NS}/finish 60t replace"])
 fn("finish", [
     "scoreboard players set #stage ln 0",
@@ -718,9 +718,7 @@ fn("finish", [
     "bossbar set ln:obj visible false",
     "lnhud objective @a",
     "lnhud waypoint @a clear",
-    "title @a times 20 100 30",
-    f"title @a subtitle {jtext({'text': '任務完成・返回運輸機', 'color': 'gray'})}",
-    f"title @a title {jtext({'text': '第一章　雷霆空降', 'color': 'gold', 'bold': True})}",
+    "lnhud title @a 100 FFFFB020 第一章　雷霆空降|任務完成・返回運輸機",
     "lnhud music @a ch05_after 60",
     f"schedule function {NS}/to_lobby 140t replace",
 ])
@@ -732,8 +730,11 @@ fn("to_lobby", [
     "schedule function ln:lobby/enter 50t replace",
 ])
 # 全隊倒地：清敵人，從目前階段開頭重來（雷達階段倒數不重設，但至少留 3 分鐘）
+REFILL = [f"clear {P}", f"function {NS}/loadout", f"effect give {P} instant_health 1 9 true",
+          f"tellraw @a {jtext({'text': '[長夜] 補給已重新發放。', 'color': 'gray'})}"]
 fn("wipe", [
     "kill @e[tag=ln_enemy]",
+    *REFILL,
     f"execute if score #stage ln matches 2 run tp {P} {xyz(A['path_bottom'])}",
     f"execute if score #stage ln matches 2 run function {NS}/to_s2",
     f"execute if score #stage ln matches 3 run tp {P} {PANEL[0]} {PANEL[1] - 1} {PANEL[2] + 4}",
